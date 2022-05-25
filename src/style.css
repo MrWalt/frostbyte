@@ -1,0 +1,16 @@
+.hover-cursor {
+  cursor: pointer;
+}
+
+.hover-style--1 {
+  border-bottom: 3px solid transparent;
+  display: block;
+}
+
+.hover-style--1:hover {
+  font-weight: bold;
+}
+
+.hover-style--2:hover {
+  border-bottom: 3px solid #ffffff;
+}

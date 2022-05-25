@@ -1,0 +1,84 @@
+include includes/mixins.pug
+
+doctype html
+html(lang='en')
+    head
+        
+        meta(charset="UTF-8")
+        title Frostbyte
+        link(rel="icon", href="/src/img/favicon.ico", type = "image/png/svg")
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+        link(href="/src/style.css" rel="stylesheet")
+        script(defer src="scripts/script.js")
+
+    body(style="font-family: sans-serif")
+
+        // Top part of site
+        header(class="d-flex justify-content-between align-items-center bg-dark position-relative" id="section--nav" style="width: 100%; height: 80px")
+            nav(class="d-flex p-3 fs-6 position-relative nav__links")
+                div(class="align-items-end")
+                    div(class="d-inline p-2 pe-4")
+                        img(class="user-select-none" style="width: 4em" src="/src/img/favicon.ico" alt="Frostbyte logo" draggable="false")
+                    div(class="d-inline p-2 ps-4 pe-4 p-2 hover-style--3 user-select-none nav__link")
+                        a(class="text-light m-0 text-decoration-none fw-bold me-2 about--us-btn hover-cursor" style="max-width: 30%") About us
+                    div(class="d-inline p-2 ps-4 pe-4 p-2 user-select-none nav__link")
+                        a(class="text-light m-0 text-decoration-none fw-bold me-2 contact--us-btn hover-cursor") Contact us
+            div(class="d-flex me-3 justify-content-between ps-4 pe-4 p-2 hover-cursor user-select-none clickable--btn catalogue--btn" style="width: 160px")
+                a(class="text-light text-decoration-none fw-bold border-none") Catalogue 
+                img(class="dropdown--indicator inactive" draggable="false" src="/node_modules/bootstrap-icons/icons/arrow-down-square.svg" alt="PC Icon" style="width: 25px; height: 25px;")
+
+        // Starting view
+        div(class="d-flex justify-content-center align-items-around position-relative section--1")
+
+            // Dropdown menu --Hidden--
+            div(class="position-absolute bg-light top-0 end-0 border-bottom border-5 border-dark rounded-bottom d-none dropdown--menu" style="width: 200px; min-height: 110px")
+                div(class="d-flex justify-content-center")
+                    div(class="d-block mt-2 d-flex justify-content-center align-items-center rounded-1" style="width: 80%")
+                        a(class="text-dark fs-5 text-decoration-none hover-style--1 low--end" href="/src/low-end.html") Low-end
+                div(class="d-flex justify-content-center")
+                    div(class="d-block mt-1 d-flex justify-content-center align-items-center rounded-1" style="width: 80%")
+                        a(class="text-dark fs-5 text-decoration-none hover-style--1 medium--end" href="/src/med-end.html") Medium-end
+                div(class="d-flex justify-content-center")
+                    div(class="d-block mt-1 mb-2 d-flex justify-content-center align-items-center rounded-1" style="width: 80%")
+                        a(class="text-dark fs-5 text-decoration-none hover-style--1" href="/src/high-end.html") High-end
+
+            // Introduction            
+            section(class="d-flex justify-content-center" style="width: 1200px; height: 800px")
+                div(class="d-flex justify-conter-center align-items-center")
+                    div(class="d-flex pt-2 ms-4 pb-2 ps-4 border-dark bg-light rounded-2 border-start border-5 align-items-center" style="max-width: 95%")
+                        h1(class="text-dark m-0") Looking for a High-end prebuilt gaming computer? 
+                            div(class="d-inline bg-dark pe-3 ps-3 pb-1 rounded")
+                                strong(class="text-light") We got you covered
+                div(class="d-flex align-items-center justify-content-center")
+                    img(class="me-4" style="width: 400px" src="/src/img/gaming-computer.png" alt="High end gaming computer")
+
+        // About us section
+        div(class="d-flex justify-content-center align-items-center")
+            section(class="d-flex justify-content-end align-items-center position-relative" id="section--about" style="width: 1200px; height: 1100px;")
+                img(class="position-absolute bottom-0 start-0" style="width: 250px" src="/src/img/side-computer-1.png" alt="High end gaming computer")
+                div(class="position-relative")
+                    div(class="bg-light d-flex justify-content-center rounded-1 border-start border-5 border-dark" style="width: 900px; height: 400px")
+                        div(class="position-relative fs-5 main--tab" style="width: 60%; height: 20%")
+                            div(class="position-absolute d-flex align-items-center justify-content-center top-0 start-0 translate-middle bg-dark p-2 ps-3 pe-3 rounded-pill hover-cursor operation--tab clickable--btn" data-tab="1" style="width: 160px")
+                                p(class="text-light mb-0 fw-bold about_us--btn user-select-none") About us
+                            div(class="position-absolute d-flex align-items-center justify-content-center top-50 start-50 translate-middle bg-dark p-2 ps-3 pe-3 rounded-pill hover-cursor hover-style--2 operation--tab clickable--btn" data-tab="2" style="width: 160px")
+                                p(class="text-light mb-0 fw-bold why_us--btn user-select-none") Why us
+                            div(class="position-absolute d-flex align-items-center justify-content-center top-50 start-100 translate-middle bg-dark p-2 ps-3 pe-3 rounded-pill hover-cursor hover-style--2 operation--tab clickable--btn" data-tab="3" style="width: 160px")
+                                p(class="text-light mb-0 fw-bold our_work--btn user-select-none") Our work
+                        p(class="text-dark position-absolute top-50 start-50 translate-middle m-0 mt-3 fs-4 pt-3 pb-3 border-5 border-end rounded-1 border-dark about_us--paragraph operation--paragraph operation--display-1" style="width: 85%") We are a small company based in North Macedonia. We focus on building quality computers for the common user that does not wish to hassle with computer building
+                        p(class="text-dark position-absolute top-50 start-50 translate-middle m-0 mt-3 fs-4 pt-3 pb-3 border-5 border-end rounded-1 border-dark why_us--paragraph operation--paragraph operation--display-2 d-none" style="width: 85%") We offer a variety of custom made computers. Our goal is your satisfaction and the computers performance. Dont believe us? Check out our 
+                            a(class="text-decoration-none bg-dark text-light p-1 rounded-1 button-reviews hover-cursor reviews--btn fw-bold") reviews
+                        p(class="text-dark position-absolute top-50 start-50 translate-middle m-0 mt-3 fs-4 pt-3 pb-3 border-5 border-end rounded-1 border-dark our_work--paragraph operation--paragraph operation--display-3 d-none" style="width: 85%") Carefully picked parts, built to perform, designed to win. Quality and performance are our priorities. You can check out our 
+                            a(class="text-decoration-none bg-dark text-light p-1 rounded-1 button-reviews hover-cursor fw-bold catalogue--scroll-btn") catalogue
+            
+        // Reviews --Hidden-- 
+        div(class="d-flex justify-content-center align-items-center d-none user--reviews" id="section--reviews" style="height: 1000px")
+            section
+                // Reviews using mixins
+                - const reviews = [{ user: "matthew5512", review: "Very good service, I have to recommend this guys, computer very good and beautiful fast and no noise"}, { user: "NewUser3081", review: "yes"}, { user: "ShoeThrower42", review: "Good computer, looks cool, runs very smooth, arrived very fast. Even has cool rgb"}, { user: "霜字節", review: "你為什麼要谷歌翻譯這個. 現在去買霜字節電腦吧!"}]
+                each el in reviews
+                    +review(el)
+
+        // Contact us section
+        include includes/contact-us.pug
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")

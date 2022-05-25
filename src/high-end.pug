@@ -1,0 +1,43 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        link(rel="icon", href="/src/img/favicon.ico", type = "image/png/svg")
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+        link(rel="stylesheet" href="style.css")
+        script(defer src="scripts/computers.js")
+        script(defer src="scripts/pcscript.js")
+        title Frostbyte | High-End
+    body
+        // Header and Nav bar
+        include includes/nav.pug
+
+        div(class="d-flex align-items-center justify-content-center hide--later")
+            div(class="bg-light text-dark mt-5 border-dark ps-5 pe-5 pt-2 pb-2 border-start border-5 rounded-1") 
+                h1(class="border-dark m-0 p-1 ps-4 pe-4 fw-bold computer--type") High-End Builds
+        
+            // Modal View Window
+        include includes/more-info.pug
+
+            // Computers section
+        div(class="d-flex align-items-center justify-content-center hide--later")
+            section(class="p-5 position-relative" style="width: 1000px")
+                div(class="position-absolute top-50 start-50 translate-middle")
+                div(class="bg-light p-4 border-start border-5 border-dark rounded-1")
+                    div(class="d-flex justify-content-evenly")
+                        - const computersFirstRow = [{image: "img/prebuild-13.png", price: "1599.99$", specs: "RTX 2080 | Ryzen 9 3900", imgWidth: "width: 88%", data: 12}, {image: "img/prebuild-14.png", specs: "RTX 3070 | Intel I9 11300", price: "1799.99$", imgWidth: "width: 80%", data: 13}, {image: "img/prebuild-15.png", price: "1999.99$", specs: "RTX 2080 S | Ryzen 9 3900", imgWidth: "width: 78%", data: 14}]
+                        each el in computersFirstRow
+                            +computerDisplay(el)
+                    div(class="d-flex justify-content-evenly mt-3")
+                        - const computersSecondRow = [{image: "img/prebuild-16.png", price: "2199.99$", specs: "RTX 2080 Ti | Ryzen 9 3950", imgWidth: "width: 83%", data: 15}, {image: "img/prebuild-17.png", price: "2999.99$", specs: "RTX 3080 | Ryzen 9 5900", imgWidth: "width: 80%", data: 16}, {image: "img/prebuild-18.png", price: "3999.99$", specs: "RTX 3090 | Threadripper", imgWidth: "width: 83%", data: 17}]
+                        each el in computersSecondRow
+                            +computerDisplay(el)
+
+        // Featured Slider
+        include includes/featured-slider.pug
+
+        // Contact us
+        include includes/contact-us.pug
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")

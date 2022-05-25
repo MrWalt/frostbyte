@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/src/img/favicon.ico" type="image/png/svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="scripts/computers.js"></script>
+    <script defer src="scripts/pcscript.js"></script>
+    <title>Frostbyte | Low-End</title>
+  </head>
+  <body>
+    <!-- Header and Nav bar-->
+    <header class="bg-dark d-flex align-items-center" style="height: 80px; width: 100%">
+      <nav class="p-3">
+        <div class="d-inline p-2 pe-4"><img class="user-select-none" draggable="false" src="/src/img/favicon.ico" alt="Frostbyte Logo" style="width: 4em"></div>
+        <div class="p-2 ps-4 pe-4 d-inline "><a class="text-decoration-none text-light fw-bold user-select-none" href="index.html">Home</a></div>
+        <div class="p-2 ps-4 d-inline"><a class="text-decoration-none text-light fw-bold user-select-none contact--us-btn hover-cursor">Contact us</a></div>
+      </nav>
+    </header>
+    <div class="d-flex align-items-center justify-content-center hide--later">
+      <div class="bg-light text-dark mt-5 border-dark ps-5 pe-5 pt-2 pb-2 border-start border-5 rounded-1"> 
+        <h1 class="border-dark m-0 p-1 ps-4 pe-4 fw-bold computer--type">Low-End Builds</h1>
+      </div>
+      <!-- Modal View Window-->
+    </div>
+    <div class="d-flex justify-content-center mt-3 align-items-center more--info d-none" style="width: 100%; height: 900px">
+      <div class="position-relative" id="more--info" style="width: 900px; height: 900px">
+        <div class="border-5 border-dark position-absolute top-50 start-50 translate-middle border-bottom border-top rounded-1 bg-light p-5" style="width: 700px; height: 800px">
+          <div class="d-flex justify-content-center position-relative">
+            <h1 class="text-dark position-absolute fw-bold top-100 end-0 translate-middle-y computer--price">299.99$</h1>
+            <p class="text-dark position-absolute fs-1 fw-bold top-0 end-0 translate-middle-y hover-cursor close--btn user-select-none">X</p><img class="computer--img user-select-none" src="img/prebuild-1.png" style="width: 40%; height: 40%" draggable="false">
+          </div>
+          <div class="mt-5 p-5 position-relative text-center border-top border-5 border-dark">
+            <p class="fs-4 fw-bold computer--cpu">Intel I3-3100 @ 3.1GHz</p>
+            <p class="fs-4 fw-bold computer--gpu">NVidia GTX 970</p>
+            <p class="fs-4 fw-bold computer--ram">4 GB DDR4 2666MHz</p>
+            <p class="fs-4 fw-bold computer--psu">450Watt Be Quiet!</p>
+            <p class="fs-4 fw-bold computer--storage">500GB HDD</p>
+            <div class="d-flex justify-content-center mt-4">
+              <div class="clickable--btn d-flex justify-content-center" style="width: 100%; height: 100%">
+                <div class="bg-dark rounded-pill mb-5 p-1 hover-cursor buy--btn" style="width: 40%">
+                  <h1 class="fw-bold fs-2 text-light buy--text">Buy
+                    <!-- Computers section-->
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center hide--later">
+      <section class="p-5 position-relative" style="width: 1000px">
+        <div class="position-absolute top-50 start-50 translate-middle"></div>
+        <div class="bg-light p-4 border-start border-5 border-dark rounded-1">
+          <div class="d-flex justify-content-evenly">
+            <div style="width: 30%">
+              <div class="d-flex align-items-center justify-content-center p-3"><img src="img/prebuild-1.png" style="width: 68%" draggable="false"/></div>
+              <div class="d-flex align-items-center justify-content-center border-top border-2 border-dark">
+                <p class="fs-5 m-0 mt-2">GTX 970 | Intel I3 3100</p>
+              </div>
+              <div class="d-flex justify-content-center mt-3 mb-3">
+                <div class="d-flex align-items-center justify-content-evenly view--btn__div" style="width: 100%">
+                  <p class="text-dark fs-4 fw-bold m-0 dummy--no-click">299.99$</p>
+                  <div class="d-flex align-items-center justify-content-center bg-dark border border-1 rounded-pill border-dark hover-cursor view--btn" data-view="0" style="width: 50%">
+                    <p class="text-light m-1 fw-bold fs-5">View</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 30%">
+              <div class="d-flex align-items-center justify-content-center p-3"><img src="img/prebuild-2.png" style="width: 80%" draggable="false"/></div>
+              <div class="d-flex align-items-center justify-content-center border-top border-2 border-dark">
+                <p class="fs-5 m-0 mt-2">GTX 980 | Ryzen 3 2100</p>
+              </div>
+              <div class="d-flex justify-content-center mt-3 mb-3">
+                <div class="d-flex align-items-center justify-content-evenly view--btn__div" style="width: 100%">
+                  <p class="text-dark fs-4 fw-bold m-0 dummy--no-click">349.99$</p>
+                  <div class="d-flex align-items-center justify-content-center bg-dark border border-1 rounded-pill border-dark hover-cursor view--btn" data-view="1" style="width: 50%">
+                    <p class="text-light m-1 fw-bold fs-5">View</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 30%">
+              <div class="d-flex align-items-center justify-content-center p-3"><img src="img/prebuild-3.png" style="width: 80%" draggable="false"/></div>
+              <div class="d-flex align-items-center justify-content-center border-top border-2 border-dark">
+                <p class="fs-5 m-0 mt-2">GTX 1050 | Ryzen 3 2900</p>
+              </div>
+              <div class="d-flex justify-content-center mt-3 mb-3">
+                <div class="d-flex align-items-center justify-content-evenly view--btn__div" style="width: 100%">
+                  <p class="text-dark fs-4 fw-bold m-0 dummy--no-click">399.99$</p>
+                  <div class="d-flex align-items-center justify-content-center bg-dark border border-1 rounded-pill border-dark hover-cursor view--btn" data-view="2" style="width: 50%">
+                    <p class="text-light m-1 fw-bold fs-5">View</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-evenly mt-3">
+            <div style="width: 30%">
+              <div class="d-flex align-items-center justify-content-center p-3"><img src="img/prebuild-4.png" style="width: 68%" draggable="false"/></div>
+              <div class="d-flex align-items-center justify-content-center border-top border-2 border-dark">
+                <p class="fs-5 m-0 mt-2">GTX 1050Ti | Intel I3 6300</p>
+              </div>
+              <div class="d-flex justify-content-center mt-3 mb-3">
+                <div class="d-flex align-items-center justify-content-evenly view--btn__div" style="width: 100%">
+                  <p class="text-dark fs-4 fw-bold m-0 dummy--no-click">439.99$</p>
+                  <div class="d-flex align-items-center justify-content-center bg-dark border border-1 rounded-pill border-dark hover-cursor view--btn" data-view="3" style="width: 50%">
+                    <p class="text-light m-1 fw-bold fs-5">View</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 30%">
+              <div class="d-flex align-items-center justify-content-center p-3"><img src="img/prebuild-5.png" style="width: 80%" draggable="false"/></div>
+              <div class="d-flex align-items-center justify-content-center border-top border-2 border-dark">
+                <p class="fs-5 m-0 mt-2">GTX 1060 | Ryzen 3 2900</p>
+              </div>
+              <div class="d-flex justify-content-center mt-3 mb-3">
+                <div class="d-flex align-items-center justify-content-evenly view--btn__div" style="width: 100%">
+                  <p class="text-dark fs-4 fw-bold m-0 dummy--no-click">469.99$</p>
+                  <div class="d-flex align-items-center justify-content-center bg-dark border border-1 rounded-pill border-dark hover-cursor view--btn" data-view="4" style="width: 50%">
+                    <p class="text-light m-1 fw-bold fs-5">View</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 30%">
+              <div class="d-flex align-items-center justify-content-center p-3"><img src="img/prebuild-6.png" style="width: 70.5%" draggable="false"/></div>
+              <div class="d-flex align-items-center justify-content-center border-top border-2 border-dark">
+                <p class="fs-5 m-0 mt-2">GTX 1070 | Ryzen 3 3900</p>
+              </div>
+              <div class="d-flex justify-content-center mt-3 mb-3">
+                <div class="d-flex align-items-center justify-content-evenly view--btn__div" style="width: 100%">
+                  <p class="text-dark fs-4 fw-bold m-0 dummy--no-click">499.99$</p>
+                  <div class="d-flex align-items-center justify-content-center bg-dark border border-1 rounded-pill border-dark hover-cursor view--btn" data-view="5" style="width: 50%">
+                    <p class="text-light m-1 fw-bold fs-5">View</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Featured Builds-->
+    <div class="d-flex align-items-center justify-content-center featured--btn__div hide--later" draggable="false">
+      <div class="bg-dark d-flex p-3 ps-4 pe-4 justify-content-evenly rounded-pill hover-cursor featured--btn" style="width: 250px" draggable="false">
+        <p class="text-light m-0 fs-5 user-select-none text-decoration-none" draggable="false">Featured Builds</p><img class="user-select-none" src="/node_modules/bootstrap-icons/icons/arrow-down.svg" draggable="false" style="width: 25px">
+      </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mt-5 mb-5 featured--slider d-none" id="featured" style="height: 750px">
+      <section class="bg-light border-dark border-5 border-top rounded-1 position-relative" id="#featured--slider" style="width: 600px; height: 350px">
+        <h1 class="position-absolute bottom-0 end-0 fw-bold fs-1 me-4 mb-3 border-bottom border-5 rounded-1 user-select-none border-dark img--name img--name-1">Sienna</h1>
+        <h1 class="position-absolute bottom-0 end-0 fw-bold fs-1 me-4 mb-3 border-bottom border-5 rounded-1 user-select-none border-dark img--name img--name-2 d-none">Galaxy</h1>
+        <h1 class="position-absolute bottom-0 end-0 fw-bold fs-1 me-4 mb-3 border-bottom border-5 rounded-1 user-select-none border-dark img--name img--name-3 d-none">The Void</h1>
+        <h1 class="position-absolute bottom-0 end-0 fw-bold fs-1 me-4 mb-3 border-bottom border-5 rounded-1 user-select-none border-dark img--name img--name-4 d-none">Blizzard</h1>
+        <h1 class="position-absolute bottom-0 end-0 fw-bold fs-1 me-4 mb-3 border-bottom border-5 rounded-1 user-select-none border-dark img--name img--name-5 d-none">Rarri</h1>
+        <div class="position-absolute top-50 start-0 translate-middle bg-dark user-select-none p-3 rounded-circle hover-cursor left--btn"><img class="clickable--btn" src="/node_modules/bootstrap-icons/icons/arrow-left.svg" style="width: 25px" draggable="false"></div>
+        <div class="position-absolute top-50 start-100 translate-middle bg-dark user-select-none p-3 rounded-circle hover-cursor right--btn"><img class="clickable--btn" src="/node_modules/bootstrap-icons/icons/arrow-right.svg" style="width: 25px" draggable="false"></div>
+        <div class="d-flex justify-content-center align-items-center p-3" style="height: 100%"><img class="user-select-none slider--img img--1" src="img/burned.png" style="width: 18em" draggable="false"><img class="user-select-none slider--img img--2 d-none" src="img/calamity.png" style="width: 15em" draggable="false"><img class="user-select-none slider--img img--3 d-none" src="img/the-void.png" style="width: 17em" draggable="false"><img class="user-select-none slider--img img--4 d-none" src="img/blizzard.png" style="width: 15em" draggable="false"><img class="user-select-none slider--img img--5 d-none" src="img/ferrari.png" style="width: 21.5em" draggable="false"></div>
+      </section>
+    </div>
+    <!-- Contact us-->
+    <section class="d-flex bg-dark mt-5 border-top border-5 border-secondary justify-content-center align-items-center position-relative" id="section--contact" style="width: 100%; height: 350px">
+      <div class="d-flex align-items-center justify-content-center" style="width: 30%; height: 100px">
+        <div class="d-flex justify-content-evenly align-items-center position-relative" style="width: 40%; height: 100%">
+          <p class="text-light fst-italic position-absolute fs-5 top-0 start-50 translate-middle" style="width: 165px">You can find us at</p><a href="https://github.com/MrWalt" target="blank"> <img src="/node_modules/bootstrap-icons/icons/github.svg" alt="Github logo" style="width: 30px"></a><a href="https://facebook.com" target="blank"><img src="/node_modules/bootstrap-icons/icons/facebook.svg" alt="Facebook logo" style="width: 30px"></a><a href="https://twitter.com" target="blank"><img src="/node_modules/bootstrap-icons/icons/twitter.svg" alt="Twitter logo" style="width: 30px"></a>
+          <p class="position-absolute text-secondary fst-italic fs-6 bottom-0 start-50 mb-0 translate-middle-x" style="width: 130px">Or you can call us</p>
+          <p class="position-absolute top-100 start-50 translate-middle mt-3 text-light fst-italic fw-bold fs-5">+38971387179</p>
+        </div>
+      </div>
+      <footer class="text-secondary fs-6 fst-italic position-absolute bottom-0 start-0 ms-1">&copy; Copyright Frostbyte Inc. 520BC - 2022. All rights and lefts reserved.</footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

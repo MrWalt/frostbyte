@@ -134,7 +134,7 @@ const computer14 = {
 };
 
 const computer15 = {
-  cpu: "AMD Ryzen 9 3590 @ 4.2GHz",
+  cpu: "AMD Ryzen 9 3950 @ 4.2GHz",
   gpu: "NVidia RTX 2080 Ti",
   ram: "32 GB DDR4 3600MHz",
   psu: "750Watt Be Quiet!",
@@ -143,7 +143,7 @@ const computer15 = {
 };
 
 const computer16 = {
-  cpu: "AMD Ryzen 9 3590 @ 4.2GHz",
+  cpu: "AMD Ryzen 9 5900 @ 4.2GHz",
   gpu: "NVidia RTX 3080",
   ram: "128 GB DDR4 4000MHz",
   psu: "800Watt Be Quiet!",

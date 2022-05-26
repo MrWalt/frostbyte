@@ -28,7 +28,7 @@ html(lang="en")
                 div(class="position-absolute top-50 start-50 translate-middle")
                 div(class="bg-light p-4 border-start border-5 border-dark rounded-1")
                     div(class="d-flex justify-content-evenly")
-                        - const computersFirstRow = [{image: "img/prebuild-7.png", price: "699.99$", specs: "GTX 1070 | Intel I5 7400", imgWidth: "width: 80%", data: 6}, {image: "img/prebuild-8.png", specs: "GTX 1070Ti | Intel I5 7500", price: "749.99$", imgWidth: "width: 54.5%", data: 7}, {image: "img/prebuild-9.png", price: "799.99$", specs: "GTX 1070Ti | Intel I5 8300", imgWidth: "width: 80%", data: 8}]
+                        - const computersFirstRow = [{image: "img/prebuild-7.png", price: "699.99$", specs: "GTX 1070 | Intel I5 7400", imgWidth: "width: 80%", data: 6}, {image: "img/prebuild-8.png", specs: "GTX 1070Ti | Intel I5 7500", price: "749.99$", imgWidth: "width: 54.5%", data: 7}, {image: "img/prebuild-9.png", price: "799.99$", specs: "GTX 1070Ti | Intel I5 8300", imgWidth: "width: 64%", data: 8}]
                         each el in computersFirstRow
                             +computerDisplay(el)
                     div(class="d-flex justify-content-evenly mt-3")

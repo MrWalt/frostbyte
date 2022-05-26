@@ -112,7 +112,7 @@ const computer12 = {
   ram: "16 GB DDR4 3200MHz",
   psu: "650Watt Be Quiet!",
   storage: "1TB HDD | 250GB SSD",
-  price: "1799.99$",
+  price: "1599.99$",
 };
 
 const computer13 = {

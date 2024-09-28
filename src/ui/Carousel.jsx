@@ -23,7 +23,7 @@ const AccordionContainer = styled.div`
   align-items: center;
   gap: 3.6rem;
 
-  max-width: 50%;
+  max-width: 100%;
 
   background-color: var(--color-grey-100);
   /* border: 1px solid var(--color-brand-200); */
@@ -84,6 +84,11 @@ const PriceContainer = styled.div`
   color: var(--color-grey-100);
   transform: translate(-25%, -50%);
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+
   padding: 1.4rem 1.8rem;
   background-color: var(--color-brand-900);
 
@@ -94,8 +99,8 @@ const PriceContainer = styled.div`
   }
 
   p:last-of-type {
-    margin-top: 0.4rem;
-    text-align: center;
+    /* margin-top: 0.4rem; */
+    /* text-align: center; */
     font-size: 1.4rem;
     color: var(--color-brand-200);
     text-decoration: line-through;

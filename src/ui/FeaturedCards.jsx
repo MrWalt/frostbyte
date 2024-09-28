@@ -4,10 +4,10 @@ import PrimaryHeading from "../components/PrimaryHeading";
 const Container = styled.div`
   margin: 0 auto;
   height: 42rem;
-  width: 60rem;
+  max-width: 100%;
 `;
 
-const Cards = styled.div`
+const CardsContainer = styled.div`
   display: flex;
   gap: 0.4rem;
   width: 100%;
@@ -45,13 +45,13 @@ export default function FeaturedCard() {
   return (
     <>
       <Container>
-        <Cards>
-          <div>PREBUILT PC 1</div>
-          <div>PREBUILT PC 2</div>
-          <div>PREBUILT PC 3</div>
-          <div>PREBUILT PC 4</div>
-          <div>PREBUILT PC 5</div>
-        </Cards>
+        <CardsContainer>
+          <div>Product</div>
+          <div>Product</div>
+          <div>Product</div>
+          <div>Product</div>
+          <div>Product</div>
+        </CardsContainer>
       </Container>
     </>
   );

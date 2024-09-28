@@ -27,7 +27,7 @@ const StyledHeader = styled.header`
 
   span {
     font-size: 1.2rem;
-    /* font-style: italic; */
+
     padding: 0.4rem 3.2rem;
     margin-top: 1.2rem;
 
@@ -37,7 +37,6 @@ const StyledHeader = styled.header`
 
 const StyledLink = styled(Link)`
   padding: 0 2.4rem;
-  /* width: 14rem; */
   height: 100%;
 
   display: flex;
@@ -119,10 +118,16 @@ const DropDownMenu = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const ProductLink = styled(NavLink)`
-  padding: 0.8rem 2.4rem;
+  padding: 0.6rem 2.4rem;
   transition: var(--animation-default);
 
   &:hover {
@@ -144,6 +149,7 @@ export default function Header() {
           <HiOutlineBars3 />
           Products
         </ProductsLink>
+        {/* <StyledLink to="/">LOGO</StyledLink> */}
         <DropDownMenu className="dropdown-menu">
           <span>&mdash; Desktop Computers</span>
           {desktopComputerParts.map((item) => (

@@ -35,6 +35,8 @@ export const GlobalStyles = createGlobalStyle`
     --color-red-800: #991b1b;
 
     --animation-default: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --border-r-sm: 2px;
 }
 
 html {
@@ -49,7 +51,6 @@ html {
 
 body {
     font-family: "Rubik", sans-serif;
-    height: 200vh;
 }
 
 a:link, a:visited {
@@ -70,5 +71,4 @@ a:link, a:visited {
     border-left: 8px solid var(--color-brand-800);
     padding-left: 3.2rem;
 }
-
 `;

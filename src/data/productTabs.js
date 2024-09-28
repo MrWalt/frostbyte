@@ -1,7 +1,7 @@
 const desktopComputerParts = [
   { title: "Processors", link: "processors" },
   { title: "Memory", link: "memory" },
-  { title: "Monitors", link: "monitors" },
+
   {
     title: "Graphics Cards",
     link: "graphics-cards",
@@ -23,6 +23,7 @@ const desktopComputerParts = [
 ];
 
 const computerPeripherals = [
+  { title: "Monitors", link: "monitors" },
   {
     title: "Mice",
     link: "mice",
@@ -46,18 +47,18 @@ const other = [
     title: "Accessories",
     link: "accessories",
   },
-  { title: "Printers", link: "printers" },
-
   {
     title: "Laptops",
     link: "laptops",
   },
-
-  { title: "Multimedia", link: "multimedia" },
+  { title: "Consoles", link: "consoles" },
+  { title: "Games", link: "games" },
   { title: "Phones", link: "phones" },
+  { title: "Multimedia", link: "multimedia" },
   { title: "Tablets", link: "tablets" },
   { title: "Cameras", link: "cameras" },
   { title: "Networking", link: "networking" },
+  { title: "Printers", link: "printers" },
 ];
 
 export { other, desktopComputerParts, computerPeripherals };

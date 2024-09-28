@@ -5,7 +5,7 @@ import Header from "./Header";
 
 const Main = styled.main`
   width: 100%;
-  padding: 96px 48px 0px 48px;
+  padding-top: 6.4rem;
 `;
 
 export default function AppLayout() {

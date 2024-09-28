@@ -44,7 +44,6 @@ const Cards = styled.div`
 export default function FeaturedCard() {
   return (
     <>
-      <PrimaryHeading text={"Check out our latest pre-built computers"} />
       <Container>
         <Cards>
           <div>PREBUILT PC 1</div>

@@ -19,12 +19,12 @@ const StyledHeader = styled.header`
   width: 100%;
   padding-right: 7.2rem;
 
-  background-color: var(--color-grey-200);
-  border-bottom: 1px solid var(--color-brand-400);
+  background-color: var(--color-brand-700);
+  /* border-bottom: 1px solid var(--color-brand-400); */
   backdrop-filter: blur(12px);
 
   font-size: 1.6rem;
-
+  color: var(--color-grey-100);
   span {
     font-size: 1.2rem;
 
@@ -43,13 +43,13 @@ const StyledLink = styled(Link)`
   justify-content: center;
   align-items: center;
 
-  border-right: 1px solid var(--color-grey-200);
-  border-left: 1px solid var(--color-grey-200);
+  border-right: 1px solid var(--color-brand-700);
+  border-left: 1px solid var(--color-brand-700);
   transition: var(--animation-default);
 
   &:hover {
     border-color: var(--color-brand-400);
-    background-color: var(--color-brand-200);
+    background-color: var(--color-brand-800);
   }
 
   & svg {
@@ -61,7 +61,7 @@ const StyledLink = styled(Link)`
 
 const ProductsLink = styled(Link)`
   width: 28rem;
-  border-right: 1px solid var(--color-grey-200);
+  border-right: 1px solid var(--color-brand-700);
 
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@ const ProductsLink = styled(Link)`
 
   &:hover {
     border-color: var(--color-brand-400);
-    background-color: var(--color-brand-200);
+    background-color: var(--color-brand-800);
   }
 
   & svg {
@@ -102,8 +102,10 @@ const DropDownMenu = styled.div`
   width: 28rem;
   height: calc(100vh - 6.4rem);
   background-color: var(--color-grey-200);
-  border-top: 1px solid var(--color-brand-400);
-  border-right: 1px solid var(--color-brand-400);
+  /* border-top: 1px solid var(--color-brand-400); */
+  border-right: 1px solid var(--color-brand-700);
+
+  color: var(--color-grey-900);
 
   position: absolute;
   bottom: 0;

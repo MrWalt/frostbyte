@@ -4,7 +4,25 @@ import PrimaryHeading from "../components/PrimaryHeading";
 const Container = styled.div`
   margin: 0 auto;
   height: 42rem;
-  max-width: 100%;
+  width: 100%;
+
+  /* padding: 1.2rem 0; */
+`;
+
+const StyledH1 = styled.h1`
+  font-size: 4.2rem;
+  font-weight: 600;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+  line-height: 0.8;
+  text-align: center;
+  color: var(--color-brand-900);
+
+  width: 100%;
+
+  padding: 3.2rem 2rem;
+  background-color: var(--color-brand-100);
+  border: 1px solid var(--color-brand-300);
 `;
 
 const CardsContainer = styled.div`
@@ -12,45 +30,72 @@ const CardsContainer = styled.div`
   gap: 0.4rem;
   width: 100%;
   height: 100%;
+  margin-top: 3.2rem;
+`;
 
-  div {
-    width: 20%;
-    height: 100%;
+const Card = styled.div`
+  width: 20%;
+  height: 100%;
+  border: 1px solid var(--color-brand-500);
+  background-color: var(--color-grey-50);
 
-    transition: var(--animation-default);
-    /* border-radius: var(--border-r-sm); */
-    border: 1px solid var(--color-brand-400);
-    /* border-top: 2px solid var(--color-brand-400);
-    border-bottom: 2px solid var(--color-brand-400); */
+  /* transition: var(--animation-default);*/
+  transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
-    cursor: pointer;
+  cursor: pointer;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    &:hover {
-      width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-      border-top: 6px solid var(--color-brand-400);
-      border-bottom: 6px solid var(--color-brand-400);
-    }
+  &:hover {
+    width: 100%;
+    transform: scale(1.05);
   }
 
-  &:hover div:not(:hover) {
-    transform: scale(0.95);
-    /* width: 8rem; */
+  &:hover div {
+    transform: translateY(0);
   }
+`;
+
+const ProductInfo = styled.div`
+  background-color: var(--color-brand-800);
+  width: 100%;
+  height: 7.2rem;
+
+  transform: translateY(100%);
+
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 `;
 
 export default function FeaturedCard() {
   return (
     <>
       <Container>
+        <StyledH1>Our top sellers!</StyledH1>
         <CardsContainer>
-          <div>Product</div>
-          <div>Product</div>
-          <div>Product</div>
-          <div>Product</div>
-          <div>Product</div>
+          <Card>
+            <p>Product</p>
+            <ProductInfo>Some Product Info</ProductInfo>
+          </Card>
+          <Card>
+            <p>Product</p>
+            <ProductInfo>Some Product Info</ProductInfo>
+          </Card>{" "}
+          <Card>
+            <p>Product</p>
+            <ProductInfo>Some Product Info</ProductInfo>
+          </Card>{" "}
+          <Card>
+            <p>Product</p>
+            <ProductInfo>Some Product Info</ProductInfo>
+          </Card>{" "}
+          <Card>
+            <p>Product</p>
+            <ProductInfo>Some Product Info</ProductInfo>
+          </Card>
         </CardsContainer>
       </Container>
     </>

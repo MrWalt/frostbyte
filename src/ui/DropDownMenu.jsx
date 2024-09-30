@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 const StyledDiv = styled.div`
   width: 28rem;
   height: calc(100vh - 6.4rem);
-  background-color: var(--color-grey-200);
+  background-color: var(--color-grey-100);
 
   /* border-top: 1px solid var(--color-brand-400); */
   border-right: 1px solid var(--color-brand-400);

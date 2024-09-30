@@ -10,14 +10,7 @@ const Container = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 8rem 1fr;
-  /* align-items: center; */
-  /* justify-items: center; */
-  /* align-items: stretch; */
-  /* display: flex;
-  justify-content: space-between;
-  align-items: start; */
   gap: 4.8rem;
-  /* padding: 4.8rem 12.8rem; */
 `;
 
 const StyledSpan = styled.span`
@@ -31,7 +24,7 @@ const StyledSpan = styled.span`
   align-self: start;
 
   font-size: 1.8rem;
-  color: var(--color-grey-100);
+  color: var(--color-grey-0);
   background-color: var(--color-brand-900);
 `;
 

@@ -29,7 +29,7 @@ const AccordionContainer = styled.div`
   /* border: 1px solid var(--color-brand-200); */
 `;
 
-const AccordionHeading = styled.h1`
+const StyledH1 = styled.h1`
   font-size: 4.2rem;
   font-weight: 600;
   letter-spacing: -4px;
@@ -110,7 +110,7 @@ const PriceContainer = styled.div`
 export default function Accordion() {
   return (
     <AccordionContainer>
-      <AccordionHeading>Check out our best deals!</AccordionHeading>
+      <StyledH1>Check out our best deals!</StyledH1>
       <ImageContainer>
         <Image src="../../public/computer-1.png" />
       </ImageContainer>

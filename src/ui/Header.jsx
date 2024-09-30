@@ -16,6 +16,8 @@ const StyledHeader = styled.header`
   width: 100%;
   padding-right: 7.2rem;
 
+  z-index: 999;
+
   background-color: var(--color-brand-700);
   /* border-bottom: 1px solid var(--color-brand-400); */
   backdrop-filter: blur(12px);

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import Accordion from "../ui/Carousel";
 import FeaturedCard from "../ui/FeaturedCards";
+import Giveaways from "../ui/Giveaways";
 
-const Container = styled.div`
+const Section = styled.section`
   height: 100%;
   width: 120rem;
 
-  margin: 4.8rem auto;
+  margin: 4.8rem auto 9.6rem auto;
 
   display: grid;
   grid-template-columns: 1fr 8rem 1fr;
@@ -30,10 +31,13 @@ const StyledSpan = styled.span`
 
 export default function Home() {
   return (
-    <Container>
-      <Accordion />
-      <StyledSpan>Or</StyledSpan>
-      <FeaturedCard />
-    </Container>
+    <>
+      <Section>
+        <Accordion />
+        <StyledSpan>Or</StyledSpan>
+        <FeaturedCard />
+      </Section>
+      <Giveaways />
+    </>
   );
 }

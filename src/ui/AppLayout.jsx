@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 const Main = styled.main`
   width: 100%;
@@ -15,6 +16,7 @@ export default function AppLayout() {
       <Main>
         <Outlet />
       </Main>
+      <Footer />
     </>
   );
 }

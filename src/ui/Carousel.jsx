@@ -1,56 +1,48 @@
 import { HiArrowLongRight } from "react-icons/hi2";
 import styled from "styled-components";
+import Heading from "./Heading";
 
 const ImageContainer = styled.div`
   height: 100%;
-  max-width: 40%;
+  max-width: 85%;
+  padding: 3.6rem 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-left: 1px solid var(--color-grey-200);
+  border-right: 1px solid var(--color-grey-200);
+
+  background-color: var(--color-grey-100);
 `;
 
 const Image = styled.img`
   display: inline-block;
-  max-width: 100%;
-  height: 100%;
+  max-width: 50%;
+  height: auto;
 `;
 
-const AccordionContainer = styled.div`
+const Carousel = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3.6rem;
+  /* gap: 3.6rem; */
 
   max-width: 100%;
 
-  background-color: var(--color-grey-100);
+  /* background-color: var(--color-grey-100); */
   /* border: 1px solid var(--color-brand-200); */
 `;
 
-const StyledH1 = styled.h1`
-  font-size: 4.2rem;
-  font-weight: 600;
-  letter-spacing: -4px;
-  text-transform: uppercase;
-  line-height: 0.8;
-  text-align: center;
-
-  width: 100%;
-
-  padding: 3.2rem 2rem;
-  background-color: var(--color-brand-100);
-  color: var(--color-brand-900);
-  border: 1px solid var(--color-brand-300);
-`;
-
-const AccordionSpecs = styled.div`
+const CarouselSpecs = styled.div`
   background-color: var(--color-brand-100);
   padding: 1.6rem 3.2rem;
   width: 100%;
 
   position: relative;
+  z-index: 0;
 
   border: 1px solid var(--color-brand-500);
 
@@ -109,12 +101,13 @@ const PriceContainer = styled.div`
 
 export default function Accordion() {
   return (
-    <AccordionContainer>
-      <StyledH1>Check out our best deals!</StyledH1>
+    <Carousel>
+      {/* <StyledH1>Check out our best deals!</StyledH1> */}
+      <Heading variation="primary">Check out our best deals!</Heading>
       <ImageContainer>
-        <Image src="../../public/computer-1.png" />
+        <Image src="/computer-1.png" />
       </ImageContainer>
-      <AccordionSpecs>
+      <CarouselSpecs>
         <p>
           <HiArrowLongRight /> RTX 4090
         </p>
@@ -136,7 +129,7 @@ export default function Accordion() {
           </p>
           <p>$4,999</p>
         </PriceContainer>
-      </AccordionSpecs>
-    </AccordionContainer>
+      </CarouselSpecs>
+    </Carousel>
   );
 }

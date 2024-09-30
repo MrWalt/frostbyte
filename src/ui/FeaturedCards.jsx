@@ -1,35 +1,16 @@
 import styled from "styled-components";
-import PrimaryHeading from "../components/PrimaryHeading";
+import Heading from "./Heading";
 
 const Container = styled.div`
   margin: 0 auto;
-  height: 42rem;
   width: 100%;
-
-  /* padding: 1.2rem 0; */
-`;
-
-const StyledH1 = styled.h1`
-  font-size: 4.2rem;
-  font-weight: 600;
-  letter-spacing: -4px;
-  text-transform: uppercase;
-  line-height: 0.8;
-  text-align: center;
-  color: var(--color-brand-900);
-
-  width: 100%;
-
-  padding: 3.2rem 2rem;
-  background-color: var(--color-brand-100);
-  border: 1px solid var(--color-brand-300);
 `;
 
 const CardsContainer = styled.div`
   display: flex;
   gap: 0.4rem;
   width: 100%;
-  height: 100%;
+  height: 70%;
   margin-top: 3.2rem;
 `;
 
@@ -39,8 +20,8 @@ const Card = styled.div`
   border: 1px solid var(--color-brand-500);
   background-color: var(--color-grey-50);
 
-  /* transition: var(--animation-default);*/
-  transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
   cursor: pointer;
 
@@ -74,7 +55,7 @@ export default function FeaturedCard() {
   return (
     <>
       <Container>
-        <StyledH1>Our top sellers!</StyledH1>
+        <Heading variation="primary">Our top sellers!</Heading>
         <CardsContainer>
           <Card>
             <p>Product</p>

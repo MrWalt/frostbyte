@@ -102,7 +102,6 @@ const PriceContainer = styled.div`
 export default function Accordion() {
   return (
     <Carousel>
-      {/* <StyledH1>Check out our best deals!</StyledH1> */}
       <Heading variation="primary">Check out our best deals!</Heading>
       <ImageContainer>
         <Image src="/computer-1.png" />

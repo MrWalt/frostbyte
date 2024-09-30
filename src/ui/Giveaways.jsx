@@ -32,7 +32,19 @@ const Card = styled.div`
   border: 1px solid var(--color-brand-200);
 `;
 
-const Image = styled.div``;
+const StyledSpan = styled.span`
+  font-size: 1.8rem;
+  display: inline-block;
+
+  color: var(--color-grey-0);
+
+  padding: 0.8rem 1.2rem;
+  background-color: var(--color-brand-900);
+`;
+
+const Image = styled.div`
+  height: 100%;
+`;
 
 export default function Giveaways() {
   return (
@@ -40,15 +52,18 @@ export default function Giveaways() {
       <Heading variation="secondary">Monthly Giveaways</Heading>
       <Container>
         <Card>
-          <Image></Image>
+          <StyledSpan>Macbook Pro 21</StyledSpan>
+          <Image>Some Product Image</Image>
           <Button>Enter</Button>
         </Card>
         <Card>
-          <Image></Image>
+          <StyledSpan>Ryzen 5 5600X</StyledSpan>
+          <Image>Some Product Image</Image>
           <Button>Enter</Button>
         </Card>
         <Card>
-          <Image></Image>
+          <StyledSpan>$100 Coupon Code</StyledSpan>
+          <Image>Some Product Image</Image>
           <Button>Enter</Button>
         </Card>
       </Container>

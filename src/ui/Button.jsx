@@ -15,6 +15,8 @@ const Button = styled.button`
   color: var(--color-grey-0);
   background-color: var(--color-brand-900);
 
+  border: 1px solid var(--color-brand-900);
+
   transition: var(--animation-default);
 
   &:hover {

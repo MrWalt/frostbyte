@@ -134,7 +134,8 @@ export default function DropDownMenu() {
     <StyledDiv className="dropdown-menu">
       <StyledCheckbox type="checkbox" id="desktop" />
       <StyledLabel htmlFor="desktop" onClick={() => toggleDropDown("desktop")}>
-        <HiBarsArrowDown /> Desktop Computers
+        {isToggledDesktop ? <HiBarsArrowUp /> : <HiBarsArrowDown />}
+        Desktop Computers
       </StyledLabel>
 
       {isToggledDesktop && (
@@ -152,7 +153,8 @@ export default function DropDownMenu() {
         htmlFor="peripherals"
         onClick={() => toggleDropDown("peripherals")}
       >
-        <HiBarsArrowDown /> Computer Peripherals
+        {isToggledPeripherals ? <HiBarsArrowUp /> : <HiBarsArrowDown />}{" "}
+        Computer Peripherals
       </StyledLabel>
 
       {isToggledPeripherals && (
@@ -167,7 +169,7 @@ export default function DropDownMenu() {
 
       <StyledCheckbox type="checkbox" id="other" />
       <StyledLabel htmlFor="other" onClick={() => toggleDropDown("other")}>
-        <HiBarsArrowDown /> Other
+        {isToggledOther ? <HiBarsArrowUp /> : <HiBarsArrowDown />} Other
       </StyledLabel>
 
       {isToggledOther && (

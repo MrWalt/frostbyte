@@ -4,10 +4,26 @@ import FeaturedCard from "../ui/FeaturedCards";
 import Giveaways from "../ui/Giveaways";
 
 const Section = styled.section`
+  width: 100%;
   height: 100%;
+  background-image: url("/background.png");
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+
+  /* border-bottom: 1px solid var(--color-brand-200); */
+
+  padding: 4.8rem 0 9.6rem 0;
+`;
+
+const StyledDiv = styled.div`
+  /* height: 100%; */
   width: 120rem;
 
-  margin: 4.8rem auto 9.6rem auto;
+  /* margin: 4.8rem auto 9.6rem auto; */
 
   display: grid;
   grid-template-columns: 1fr 8rem 1fr;
@@ -33,9 +49,11 @@ export default function Home() {
   return (
     <>
       <Section>
-        <Accordion />
-        <StyledSpan>Or</StyledSpan>
-        <FeaturedCard />
+        <StyledDiv>
+          <Accordion />
+          <StyledSpan>Or</StyledSpan>
+          <FeaturedCard />
+        </StyledDiv>
       </Section>
       <Giveaways />
     </>

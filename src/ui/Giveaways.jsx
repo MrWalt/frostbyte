@@ -10,11 +10,11 @@ const Section = styled.section`
 
 const StyledDiv = styled.div`
   background-color: var(--color-brand-100);
-  border-top: 1px solid var(--color-brand-200);
+  /* border-top: 1px solid var(--color-brand-200); */
 
   padding: 3.2rem 1.2rem 6.4rem 1.2rem;
 
-  margin-top: 2.4rem;
+  /* margin-top: 2.4rem; */
 
   & > span {
     display: inline-block;

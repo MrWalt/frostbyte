@@ -22,6 +22,10 @@ const variations = {
     text-transform: uppercase;
     font-size: 2.4rem;
     color: var(--color-brand-900);
+
+    border-bottom: 1px solid var(--color-brand-200);
+    border-top: 1px solid var(--color-brand-200);
+    padding: 1.2rem;
   `,
 };
 

@@ -8,7 +8,7 @@ const Main = styled.main`
   width: 100%;
   padding-top: 6.4rem;
 
-  /* background-color: var(--color-grey-900); */
+  background-color: var(--color-grey-900);
 `;
 
 export default function AppLayout() {

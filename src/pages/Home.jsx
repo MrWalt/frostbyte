@@ -6,13 +6,14 @@ import Giveaways from "../ui/Giveaways";
 const Section = styled.section`
   width: 100%;
   height: 100%;
+
   background-image: url("/background.png");
+  background-size: cover;
+  background-position: center;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
 
   /* border-bottom: 1px solid var(--color-brand-200); */
 

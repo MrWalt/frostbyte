@@ -24,14 +24,6 @@ const StyledHeader = styled.header`
 
   font-size: 1.6rem;
   color: var(--color-grey-100);
-  span {
-    font-size: 1.2rem;
-
-    padding: 0.4rem 3.2rem;
-    margin-top: 1.2rem;
-
-    color: var(--color-grey-700);
-  }
 `;
 
 const StyledLink = styled(Link)`

@@ -4,7 +4,7 @@ import Heading from "./Heading";
 
 const ImageContainer = styled.div`
   height: 100%;
-  max-width: 85%;
+  max-width: 100%;
   padding: 3.6rem 0;
 
   display: flex;
@@ -14,7 +14,8 @@ const ImageContainer = styled.div`
   border-left: 1px solid var(--color-grey-200);
   border-right: 1px solid var(--color-grey-200);
 
-  background-color: var(--color-grey-100);
+  background-color: var(--color-grey-0);
+  /* background: transparent; */
 `;
 
 const Image = styled.img`

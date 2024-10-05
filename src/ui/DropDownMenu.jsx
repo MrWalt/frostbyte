@@ -41,7 +41,13 @@ const StyledDiv = styled.div`
   }
 
   div {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-5%);
+    /* animation: drop-in 0.4s linear; */
+
+    transition: var(--animation-default);
   }
 `;
 
@@ -68,7 +74,7 @@ const StyledLabel = styled.label`
     top: 0;
     left: 0;
     position: absolute;
-    background-color: var(--color-brand-900);
+    background-color: var(--color-brand-800);
     width: 0%;
     height: 100%;
     z-index: -1;
@@ -78,6 +84,7 @@ const StyledLabel = styled.label`
 
   &:hover {
     color: var(--color-grey-0);
+
     &::before {
       width: 100%;
       border-left: 8px solid var(--color-brand-500);
@@ -94,19 +101,32 @@ const StyledCheckbox = styled.input`
   display: none;
 
   &:checked + label {
-    background-color: var(--color-brand-900);
     color: var(--color-grey-0);
+    padding-left: 3.2rem;
+
+    &::before {
+      background-color: var(--color-brand-800);
+      border-left: 24px solid var(--color-brand-500);
+
+      width: 100%;
+    }
   }
 
   &:checked ~ div {
     display: flex;
     flex-direction: column;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 `;
 
 const ProductLink = styled(NavLink)`
   padding: 0.6rem 2.4rem;
   transition: var(--animation-default);
+  font-size: 1.4rem;
 
   &:hover {
     background-color: var(--color-brand-200);

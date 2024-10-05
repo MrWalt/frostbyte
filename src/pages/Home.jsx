@@ -8,8 +8,8 @@ const Section = styled.section`
   height: 100%;
 
   background-image: url("/background.png");
-  background-size: cover;
-  background-position: center;
+  /* background-size: cover;
+  background-position: center; */
 
   display: flex;
   align-items: center;

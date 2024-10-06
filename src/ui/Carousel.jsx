@@ -119,7 +119,7 @@ const PriceContainer = styled.div`
 const StyledH1 = styled.h1`
   font-size: 2.4rem;
   font-weight: 500;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
   color: var(--color-brand-100);
 
   padding: 1.2rem 1.2rem;

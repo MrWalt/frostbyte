@@ -47,13 +47,13 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   display: inline-block;
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
 
   position: absolute;
-  bottom: 0;
+  bottom: 50%;
   right: 0;
-  transform: translate(-5%, 20%);
+  transform: translate(-25%, 50%);
 `;
 
 const CarouselSpecs = styled.div`
@@ -66,7 +66,7 @@ const CarouselSpecs = styled.div`
 
   transform: translate(25%, -25%);
 
-  color: var(--color-brand-200);
+  color: var(--color-brand-100);
   font-size: 2rem;
 
   p:not(:last-of-type) {

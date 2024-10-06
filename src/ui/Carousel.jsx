@@ -1,6 +1,12 @@
-import { HiArrowLongRight } from "react-icons/hi2";
+import {
+  HiArrowLongRight,
+  HiArrowRight,
+  HiArrowLeft,
+  HiFire,
+} from "react-icons/hi2";
 import styled from "styled-components";
 import Heading from "./Heading";
+import Button from "./Button";
 
 const Carousel = styled.div`
   display: flex;
@@ -14,10 +20,16 @@ const Carousel = styled.div`
   align-self: stretch;
 
   overflow: hidden;
-  /* background-color: var(--color-grey-100); */
-  border: 1px solid var(--color-grey-800);
+
+  border-left: 1px solid var(--color-grey-800);
+  border-top: 1px solid var(--color-grey-800);
+  border-right: 2px solid var(--color-brand-600);
+  border-bottom: 2px solid var(--color-brand-600);
+
+  background-color: rgb(17, 24, 39, 0.95);
 
   position: relative;
+  backdrop-filter: blur(4px);
 `;
 
 const ImageContainer = styled.div`
@@ -30,8 +42,7 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color: rgb(17, 24, 39, 0.98);
+  overflow: hidden;
 `;
 
 const Image = styled.img`
@@ -39,26 +50,24 @@ const Image = styled.img`
   max-width: 50%;
   height: auto;
 
-  border-right: 2px solid var(--color-brand-600);
-
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(0%, 25%);
+  transform: translate(-5%, 20%);
 `;
 
 const CarouselSpecs = styled.div`
-  background-color: var(--color-brand-100);
   padding: 1.6rem 3.2rem;
-  width: 100%;
 
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   z-index: 0;
 
-  border: 1px solid var(--color-brand-500);
+  transform: translate(25%, -25%);
 
-  font-size: 1.6rem;
-  color: var(--color-grey-900);
+  color: var(--color-brand-200);
+  font-size: 2rem;
 
   p:not(:last-of-type) {
     margin-bottom: 0.8rem;
@@ -69,10 +78,10 @@ const CarouselSpecs = styled.div`
     align-items: center;
 
     svg {
-      color: var(--color-brand-900);
+      /* color: var(--color-brand-900); */
       margin-right: 0.4rem;
-      width: 2rem;
-      height: 2rem;
+      width: 2.4rem;
+      height: 2.4rem;
     }
   }
 `;
@@ -80,23 +89,22 @@ const CarouselSpecs = styled.div`
 const PriceContainer = styled.div`
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 1;
 
-  font-size: 2.4rem;
+  font-size: 6.4rem;
   color: var(--color-grey-100);
-  transform: translate(-25%, -50%);
+  transform: translate(75%, 25%);
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 0.2rem;
 
   padding: 1.4rem 1.8rem;
-  background-color: var(--color-brand-900);
+  /* background-color: var(--color-brand-900); */
 
   span {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--color-brand-200);
     margin-right: 0.2rem;
   }
@@ -108,30 +116,76 @@ const PriceContainer = styled.div`
   }
 `;
 
-const TempHeading = styled.h1`
-  font-size: 6.2rem;
+const StyledH1 = styled.h1`
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: -4px;
-  /* text-transform: uppercase; */
-  color: var(--color-brand-600);
-  /* color: var(--color-grey-100); */
+  color: var(--color-brand-100);
+
+  padding: 1.2rem 1.2rem;
+  background-color: var(--color-brand-900);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(10%, 50%);
+  transform: translate(50%, 50%);
   z-index: 1;
+
+  & svg {
+    font-size: 6.4rem;
+  }
+`;
+
+const StyledButton = styled(Button)`
+  position: absolute;
+  padding: 1.6rem 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2.4rem;
+
+  &:first-of-type {
+    top: 50%;
+    left: 0;
+    width: 6.4rem;
+    transform: translate(50%, -50%);
+
+    z-index: 99;
+  }
+
+  &:last-of-type {
+    top: 50%;
+    right: 0;
+    width: 6.4rem;
+    transform: translate(-50%, -50%);
+
+    z-index: 99;
+  }
 `;
 
 export default function Accordion() {
   return (
     <Carousel>
+      <StyledButton>
+        <HiArrowLeft />
+      </StyledButton>
+      <StyledButton>
+        <HiArrowRight />
+      </StyledButton>
       {/* <Heading variation="primary">Check out our best deals!</Heading> */}
-      <TempHeading>Check out our best deals</TempHeading>
+      <StyledH1>
+        <HiFire /> DEALS
+      </StyledH1>
       <ImageContainer>
         <Image src="/computer-1.png" />
       </ImageContainer>
-      {/* <CarouselSpecs>
+      <CarouselSpecs>
         <p>
           <HiArrowLongRight /> RTX 4090
         </p>
@@ -147,13 +201,13 @@ export default function Accordion() {
         <p>
           <HiArrowLongRight /> Custom Liquid Cooling
         </p>
-        <PriceContainer>
-          <p>
-            <span>$</span>3,999
-          </p>
-          <p>$4,999</p>
-        </PriceContainer>
-      </CarouselSpecs> */}
+      </CarouselSpecs>
+      <PriceContainer>
+        <p>
+          <span>$</span>3,999
+        </p>
+        <p>$4,999</p>
+      </PriceContainer>
     </Carousel>
   );
 }

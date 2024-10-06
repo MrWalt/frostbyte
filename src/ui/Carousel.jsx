@@ -2,28 +2,6 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import styled from "styled-components";
 import Heading from "./Heading";
 
-const ImageContainer = styled.div`
-  height: 100%;
-  max-width: 100%;
-  padding: 3.6rem 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-left: 1px solid var(--color-grey-200);
-  border-right: 1px solid var(--color-grey-200);
-
-  background-color: var(--color-grey-0);
-  /* background: transparent; */
-`;
-
-const Image = styled.img`
-  display: inline-block;
-  max-width: 50%;
-  height: auto;
-`;
-
 const Carousel = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,9 +10,41 @@ const Carousel = styled.div`
   /* gap: 3.6rem; */
 
   max-width: 100%;
+  height: 72rem;
+  align-self: stretch;
 
+  overflow: hidden;
   /* background-color: var(--color-grey-100); */
-  /* border: 1px solid var(--color-brand-200); */
+  border: 1px solid var(--color-grey-800);
+
+  position: relative;
+`;
+
+const ImageContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 3.6rem 0;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(17, 24, 39, 0.98);
+`;
+
+const Image = styled.img`
+  display: inline-block;
+  max-width: 50%;
+  height: auto;
+
+  border-right: 2px solid var(--color-brand-600);
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(0%, 25%);
 `;
 
 const CarouselSpecs = styled.div`
@@ -92,22 +102,36 @@ const PriceContainer = styled.div`
   }
 
   p:last-of-type {
-    /* margin-top: 0.4rem; */
-    /* text-align: center; */
     font-size: 1.4rem;
     color: var(--color-brand-200);
     text-decoration: line-through;
   }
 `;
 
+const TempHeading = styled.h1`
+  font-size: 6.2rem;
+  font-weight: 500;
+  letter-spacing: -4px;
+  /* text-transform: uppercase; */
+  color: var(--color-brand-600);
+  /* color: var(--color-grey-100); */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10%, 50%);
+  z-index: 1;
+`;
+
 export default function Accordion() {
   return (
     <Carousel>
-      <Heading variation="primary">Check out our best deals!</Heading>
+      {/* <Heading variation="primary">Check out our best deals!</Heading> */}
+      <TempHeading>Check out our best deals</TempHeading>
       <ImageContainer>
         <Image src="/computer-1.png" />
       </ImageContainer>
-      <CarouselSpecs>
+      {/* <CarouselSpecs>
         <p>
           <HiArrowLongRight /> RTX 4090
         </p>
@@ -129,7 +153,7 @@ export default function Accordion() {
           </p>
           <p>$4,999</p>
         </PriceContainer>
-      </CarouselSpecs>
+      </CarouselSpecs> */}
     </Carousel>
   );
 }

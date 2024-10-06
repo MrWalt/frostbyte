@@ -8,8 +8,8 @@ const Section = styled.section`
   height: 100%;
 
   background-image: url("/background.png");
-  /* background-size: cover;
-  background-position: center; */
+  /* background-size: cover; */
+  /* background-position: center; */
 
   display: flex;
   align-items: center;
@@ -22,27 +22,30 @@ const Section = styled.section`
 
 const StyledDiv = styled.div`
   /* height: 100%; */
-  width: 120rem;
+  width: 140rem;
 
   /* margin: 4.8rem auto 9.6rem auto; */
 
-  display: grid;
-  grid-template-columns: 1fr 8rem 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 4.8rem;
 `;
 
 const StyledSpan = styled.span`
   text-transform: uppercase;
-  padding: 1.8rem 2.4rem;
+  padding: 1.8rem 3.2rem;
   margin-top: 3.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  align-self: start;
+  /* align-self: start; */
 
   font-size: 1.8rem;
   color: var(--color-grey-0);
+  border: 1px solid var(--color-brand-700);
   background-color: var(--color-brand-900);
 `;
 

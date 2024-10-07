@@ -5,7 +5,6 @@ import {
   HiFire,
 } from "react-icons/hi2";
 import styled from "styled-components";
-import Heading from "./Heading";
 import Button from "./Button";
 
 const Carousel = styled.div`

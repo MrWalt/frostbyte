@@ -13,12 +13,12 @@ import { useState } from "react";
 const StyledDiv = styled.div`
   width: 28rem;
   height: calc(100vh - 6.4rem);
-  background-color: var(--color-grey-100);
+  background-color: var(--color-grey-900);
 
   /* border-top: 1px solid var(--color-brand-400); */
   border-right: 1px solid var(--color-brand-400);
 
-  color: var(--color-grey-900);
+  color: var(--color-grey-0);
 
   position: absolute;
   bottom: 0;
@@ -63,18 +63,16 @@ const StyledLabel = styled.label`
   width: 100%;
 
   font-size: 1.6rem;
-  color: var(--color-grey-900);
 
   cursor: pointer;
   transition: var(--animation-default);
-  /* z-index: 999; */
 
   &::before {
     content: "";
     top: 0;
     left: 0;
     position: absolute;
-    background-color: var(--color-brand-800);
+    background-color: var(--color-brand-900);
     width: 0%;
     height: 100%;
     z-index: -1;
@@ -87,7 +85,7 @@ const StyledLabel = styled.label`
 
     &::before {
       width: 100%;
-      border-left: 8px solid var(--color-brand-500);
+      border-left: 8px solid var(--color-brand-700);
     }
   }
 
@@ -105,8 +103,8 @@ const StyledCheckbox = styled.input`
     padding-left: 3.2rem;
 
     &::before {
-      background-color: var(--color-brand-800);
-      border-left: 24px solid var(--color-brand-500);
+      background-color: var(--color-brand-900);
+      border-left: 24px solid var(--color-brand-700);
 
       width: 100%;
     }
@@ -129,13 +127,13 @@ const ProductLink = styled(NavLink)`
   font-size: 1.4rem;
 
   &:hover {
-    background-color: var(--color-brand-200);
+    background-color: var(--color-grey-800);
     border-left: 8px solid var(--color-brand-800);
     padding-left: 3.2rem;
   }
 
   &:active {
-    border-left: 64px solid var(--color-brand-800);
+    border-left: 64px solid var(--color-grey-800);
   }
 `;
 

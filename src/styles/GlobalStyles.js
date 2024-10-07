@@ -67,7 +67,7 @@ a:link, a:visited {
 }
 
 .active {
-    background-color: var(--color-brand-200);
+    background-color: var(--color-grey-800);
     border-left: 8px solid var(--color-brand-800);
     padding-left: 3.2rem;
 }

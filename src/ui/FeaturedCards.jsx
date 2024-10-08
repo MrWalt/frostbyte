@@ -7,6 +7,8 @@ const Container = styled.div`
 
   display: flex;
   gap: 0.4rem;
+
+  margin-bottom: 4.8rem;
 `;
 
 const StyledDiv = styled.div`

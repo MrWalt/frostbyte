@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Accordion from "../ui/Carousel";
 import FeaturedCards from "../ui/FeaturedCards";
 import Giveaways from "../ui/Giveaways";
+import Heading from "../ui/Heading";
 
 const Section = styled.section`
   width: 100%;
@@ -48,9 +49,12 @@ export default function Home() {
           <Accordion />
           <StyledSpan>Or</StyledSpan>
           <FeaturedCards />
+          <Heading variation="secondary" decoration="dashed">
+            Join our giveaways
+          </Heading>
+          <Giveaways />
         </StyledDiv>
       </Section>
-      <Giveaways />
     </>
   );
 }

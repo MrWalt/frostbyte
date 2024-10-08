@@ -1,91 +1,88 @@
 import styled from "styled-components";
-import Heading from "./Heading";
 import Button from "./Button";
 
-const Section = styled.section`
-  grid-column: 1 / -1;
+const Container = styled.div`
+  width: 100%;
+  height: 52rem;
+  /* background-color: var(--color-grey-900); */
+  background-color: rgb(17, 24, 39, 0.95);
+  backdrop-filter: blur(4px);
 
-  text-align: center;
-`;
+  border-bottom: 2px solid var(--color-brand-500);
+  border-right: 2px solid var(--color-brand-500);
+  border-left: 1px solid var(--color-grey-800);
+  border-top: 1px solid var(--color-grey-800);
 
-const StyledDiv = styled.div`
-  background-color: var(--color-brand-100);
-  /* border-top: 1px solid var(--color-brand-200); */
+  padding: 2.4rem 26rem;
+  padding-bottom: 6.4rem;
 
-  padding: 3.2rem 1.2rem 6.4rem 1.2rem;
-
-  /* margin-top: 2.4rem; */
-
-  & > span {
-    display: inline-block;
-
-    color: var(--color-brand-900);
-
-    margin-top: 1.2rem;
-    font-size: 1.2rem;
-  }
-`;
-
-const CardsContainer = styled.div`
-  display: flex;
-  gap: 1.8rem;
-  align-items: center;
-  justify-content: center;
+  color: var(--color-grey-0);
 `;
 
 const Card = styled.div`
-  width: 22rem;
-  height: 28rem;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+
+  border-left: 2px solid var(--color-brand-500);
+  border-top: 2px solid var(--color-brand-500);
+  border-left: 1px solid var(--color-grey-800);
+  border-bottom: 1px solid var(--color-grey-800);
+  border-right: 1px solid var(--color-grey-800);
 
   display: flex;
   flex-direction: column;
 
-  background-color: var(--color-grey-50);
-  border: 1px solid var(--color-brand-200);
+  p {
+    height: 100%;
+  }
+`;
+
+const StyledDiv = styled.div`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
 `;
 
 const StyledSpan = styled.span`
-  font-size: 1.8rem;
   display: inline-block;
+  text-align: center;
 
-  color: var(--color-grey-0);
+  margin-top: 0.8rem;
+  width: 100%;
 
-  padding: 0.8rem 1.2rem;
-  background-color: var(--color-brand-900);
-`;
-
-const Image = styled.div`
-  height: 100%;
+  color: var(--color-grey-500);
+  font-size: 1.2rem;
 `;
 
 export default function Giveaways() {
   return (
-    <Section>
-      <Heading variation="secondary">Monthly Giveaways</Heading>
+    <Container>
       <StyledDiv>
-        <CardsContainer>
-          <Card>
-            <StyledSpan>Macbook Pro 21</StyledSpan>
-            <Image>Some Product Image</Image>
-            <Button>Enter</Button>
-          </Card>
-          <Card>
-            <StyledSpan>Ryzen 5 5600X</StyledSpan>
-            <Image>Some Product Image</Image>
-            <Button>Enter</Button>
-          </Card>
-          <Card>
-            <StyledSpan>$100 Coupon Code</StyledSpan>
-            <Image>Some Product Image</Image>
-            <Button>Enter</Button>
-          </Card>
-        </CardsContainer>
-        <span>
-          &mdash; We host monthly giveaways on various products. If you are the
-          winner you will be contacted via email with further instructions on
-          how to claim your winnings &mdash;
-        </span>
+        <Card>
+          <p>Product Title</p>
+          <p>Product Image</p>
+          <Button>Enter</Button>
+        </Card>
+        <Card>
+          <p>Product Title</p>
+          <p>Product Image</p>
+          <Button>Enter</Button>
+        </Card>{" "}
+        <Card>
+          <p>Product Title</p>
+          <p>Product Image</p>
+          <Button>Enter</Button>
+        </Card>
       </StyledDiv>
-    </Section>
+      <StyledSpan>
+        &mdash; All giveaway winners will be contacted via email with further
+        instructions on how to claim their winnings &mdash;
+      </StyledSpan>
+    </Container>
   );
 }

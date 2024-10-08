@@ -14,7 +14,7 @@ const Carousel = styled.div`
   align-items: center;
   /* gap: 3.6rem; */
 
-  max-width: 100%;
+  width: 100%;
   height: 72rem;
   align-self: stretch;
 
@@ -65,7 +65,7 @@ const CarouselSpecs = styled.div`
 
   transform: translate(25%, -25%);
 
-  color: var(--color-brand-100);
+  color: var(--color-grey-0);
   font-size: 2rem;
 
   p:not(:last-of-type) {

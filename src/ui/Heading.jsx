@@ -8,6 +8,10 @@ const variations = {
   secondary: css`
     font-size: 2.8rem;
   `,
+
+  tertiary: css`
+    font-size: 2.2rem;
+  `,
 };
 
 const decorations = {

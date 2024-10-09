@@ -7,8 +7,11 @@ const variations = {
 
   secondary: css`
     font-size: 2.8rem;
-    text-transform: uppercase;
+  `,
+};
 
+const decorations = {
+  box: css`
     padding: 1.2rem 6.4rem;
 
     background-color: rgb(17, 24, 39, 0.95);
@@ -18,6 +21,8 @@ const variations = {
     border-left: 2px solid var(--color-brand-500);
 
     backdrop-filter: blur(2px);
+
+    text-transform: uppercase;
   `,
 };
 
@@ -25,6 +30,7 @@ const Heading = styled.h1`
   color: var(--color-grey-0);
 
   ${(props) => variations[props.variation]};
+  ${(props) => decorations[props.decoration]};
 `;
 
 export default Heading;

@@ -3,27 +3,21 @@ import Carousel from "../ui/Carousel";
 import FeaturedCards from "../ui/FeaturedCards";
 import Giveaways from "../ui/Giveaways";
 import Heading from "../ui/Heading";
+import Section from "../ui/Section";
 
-const Section = styled.section`
-  width: 100%;
-  height: 100%;
-
+const StyledSection = styled(Section)`
   background-image: url("/background.png");
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 4.8rem 0 9.6rem 0;
 `;
 
 const StyledDiv = styled.div`
   width: 140rem;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   gap: 3.2rem;
 `;
 
@@ -44,17 +38,17 @@ const StyledSpan = styled.span`
 export default function Home() {
   return (
     <>
-      <Section>
+      <StyledSection>
         <StyledDiv>
           <Carousel />
           <StyledSpan>Or</StyledSpan>
           <FeaturedCards />
-          <Heading variation="secondary" decoration="dashed">
+          <Heading variation="secondary" decoration="box">
             Join our giveaways
           </Heading>
           <Giveaways />
         </StyledDiv>
-      </Section>
+      </StyledSection>
     </>
   );
 }

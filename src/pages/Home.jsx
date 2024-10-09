@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Accordion from "../ui/Carousel";
+import Carousel from "../ui/Carousel";
 import FeaturedCards from "../ui/FeaturedCards";
 import Giveaways from "../ui/Giveaways";
 import Heading from "../ui/Heading";
@@ -46,7 +46,7 @@ export default function Home() {
     <>
       <Section>
         <StyledDiv>
-          <Accordion />
+          <Carousel />
           <StyledSpan>Or</StyledSpan>
           <FeaturedCards />
           <Heading variation="secondary" decoration="dashed">

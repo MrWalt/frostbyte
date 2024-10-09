@@ -81,7 +81,8 @@ export default function Giveaways() {
       </StyledDiv>
       <StyledSpan>
         &mdash; All giveaway winners will be contacted via email with further
-        instructions on how to claim their winnings &mdash;
+        instructions on how to claim their winnings. If you have any issues with
+        this process please contact our support &mdash;
       </StyledSpan>
     </Container>
   );

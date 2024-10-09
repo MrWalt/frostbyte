@@ -7,7 +7,7 @@ import {
 import styled from "styled-components";
 import Button from "./Button";
 
-const Carousel = styled.div`
+const CarouselContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,9 +168,9 @@ const StyledButton = styled(Button)`
   }
 `;
 
-export default function Accordion() {
+export default function Carousel() {
   return (
-    <Carousel>
+    <CarouselContainer>
       <StyledButton>
         <HiArrowLeft />
       </StyledButton>
@@ -207,6 +207,6 @@ export default function Accordion() {
         </p>
         <p>$4,999</p>
       </PriceContainer>
-    </Carousel>
+    </CarouselContainer>
   );
 }

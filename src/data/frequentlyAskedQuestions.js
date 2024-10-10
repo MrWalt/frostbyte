@@ -37,7 +37,7 @@ const questions = [
   {
     question: "My package was stolen off my porch.",
     answer:
-      "Please file a report with your local authorities and contact our support team and send them the report. If everything is accurate we will send you a replacement item free of charge.",
+      "Please file a report with your local authorities and contact our support team with the report attached. If everything is accurate and well we will send you a replacement item free of charge.",
   },
   {
     question: "My discount code does not work.",

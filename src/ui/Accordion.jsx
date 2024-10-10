@@ -11,6 +11,9 @@ const StyledDiv = styled.div`
   padding-right: 9.2rem;
   margin-top: 1.8rem;
 
+  display: flex;
+  flex-direction: column;
+
   border: 1px solid var(--color-grey-700);
   border-top: 2px solid var(--color-brand-500);
 
@@ -30,11 +33,6 @@ const StyledDiv = styled.div`
     margin-top: 2.4rem;
   }
 
-  & span {
-    color: var(--color-brand-600);
-    font-size: 3.2rem;
-  }
-
   svg {
     position: absolute;
     top: 50%;
@@ -48,9 +46,15 @@ const StyledDiv = styled.div`
 
 const Question = styled.p`
   display: inline-block;
-  margin-left: 1.2rem;
 
   font-size: 1.8rem;
+
+  & span {
+    color: var(--color-brand-600);
+    font-size: 3.2rem;
+
+    margin-right: 1.2rem;
+  }
 `;
 
 const Answer = styled.p`
@@ -75,9 +79,10 @@ export default function Accordion({ question, answer }) {
   return (
     <StyledDiv onClick={handleToggle}>
       {isToggled ? <HiChevronUp /> : <HiChevronDown />}
-
-      <span>Q.</span>
-      <Question>{question}</Question>
+      <Question>
+        <span>Q.</span>
+        {question}
+      </Question>
       {isToggled && <Answer>{answer}</Answer>}
     </StyledDiv>
   );

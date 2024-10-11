@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import Products from "./pages/Products";
 import SpecificProducts from "./pages/SpecificProducts";
 import Login from "./pages/Login";
+import ProtectedRoute from "./ui/ProtectedRoute";
 
 export default function App() {
   return (
@@ -19,7 +20,14 @@ export default function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="account" element={<Account />} />
+            <Route
+              path="account"
+              element={
+                <ProtectedRoute>
+                  <Account />
+                </ProtectedRoute>
+              }
+            />
             <Route path="cart" element={<Cart />} />
             <Route path="products" element={<Products />} />
             <Route path="products/:product" element={<SpecificProducts />} />

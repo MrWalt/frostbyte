@@ -58,6 +58,12 @@ a:link, a:visited {
     color: inherit;
 }
 
+input {
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
 .dropdown:hover + .dropdown-menu, .dropdown-menu:hover {
     transform: translate(0, 100%);
 

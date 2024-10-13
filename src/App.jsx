@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Cart from "./pages/Cart";
 import Products from "./pages/Products";
-import SpecificProducts from "./pages/SpecificProducts";
+import Product from "./pages/Product";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import PageNotFound from "./pages/PageNotFound";
@@ -31,7 +31,8 @@ export default function App() {
             />
             <Route path="cart" element={<Cart />} />
             <Route path="products" element={<Products />} />
-            <Route path="products/:product" element={<SpecificProducts />} />
+            <Route path="products/:category" element={<Products />} />
+            {/* <Route path="products/:product" element={<Product />} /> */}
             <Route path="login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Button from "./Button";
-import Card from "./Card";
+// import Card from "./Card";
 
 const Container = styled.div`
   width: 100%;
@@ -20,24 +20,24 @@ const Container = styled.div`
   color: var(--color-grey-0);
 `;
 
-// const Card = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   /* background-color: red; */
+const Card = styled.div`
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
 
-//   border-left: 2px solid var(--color-brand-500);
-//   border-top: 2px solid var(--color-brand-500);
-//   border-left: 1px solid var(--color-grey-800);
-//   border-bottom: 1px solid var(--color-grey-800);
-//   border-right: 1px solid var(--color-grey-800);
+  border-left: 2px solid var(--color-brand-500);
+  border-top: 2px solid var(--color-brand-500);
+  border-left: 1px solid var(--color-grey-800);
+  border-bottom: 1px solid var(--color-grey-800);
+  border-right: 1px solid var(--color-grey-800);
 
-//   display: flex;
-//   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-//   p {
-//     height: 100%;
-//   }
-// `;
+  p {
+    height: 100%;
+  }
+`;
 
 const StyledDiv = styled.div`
   width: 100%;
@@ -64,17 +64,20 @@ export default function Giveaways() {
   return (
     <Container>
       <StyledDiv>
-        <Card buttonText="Enter">
+        <Card>
           <p>Product Title</p>
           <p>Product Image</p>
+          <Button>Enter</Button>
         </Card>
-        <Card buttonText="Enter">
+        <Card>
           <p>Product Title</p>
           <p>Product Image</p>
+          <Button>Enter</Button>
         </Card>
-        <Card buttonText="Enter">
+        <Card>
           <p>Product Title</p>
           <p>Product Image</p>
+          <Button>Enter</Button>
         </Card>
       </StyledDiv>
       <StyledSpan>

@@ -132,7 +132,7 @@ export default function FeaturedCards() {
               <p>Product Info</p>
             </InformationBubble>
           </Card>
-        </StyledDiv>{" "}
+        </StyledDiv>
         <StyledDiv>
           <Card>
             <ProductTitle>Product Title</ProductTitle>
@@ -141,7 +141,7 @@ export default function FeaturedCards() {
               <p>Product Info</p>
             </InformationBubble>
           </Card>
-        </StyledDiv>{" "}
+        </StyledDiv>
         <StyledDiv>
           <Card>
             <ProductTitle>Product Title</ProductTitle>
@@ -150,7 +150,7 @@ export default function FeaturedCards() {
               <p>Product Info</p>
             </InformationBubble>
           </Card>
-        </StyledDiv>{" "}
+        </StyledDiv>
         <StyledDiv>
           <Card>
             <ProductTitle>Product Title</ProductTitle>

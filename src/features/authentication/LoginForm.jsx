@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import Heading from "../../ui/Heading";
 import { Link } from "react-router-dom";
+import Button from "../../ui/Button";
 
 const Container = styled.div`
   margin: 0 auto;
   width: 40rem;
   height: 54rem;
 
-  padding: 4.8rem 2.8rem 9.6rem 2.8rem;
+  padding: 4.8rem 2.8rem 3.6rem 2.8rem;
 
   background-color: rgb(17, 24, 39, 0.95);
   border: 1px solid var(--color-grey-800);
@@ -26,6 +27,10 @@ const Container = styled.div`
   div {
     align-self: stretch;
   }
+`;
+
+const StyledDiv = styled.div`
+  margin-top: 1.8rem;
 `;
 
 const StyledInput = styled.input`
@@ -73,7 +78,7 @@ const StyledSpan = styled.span`
 
   text-align: center;
 
-  margin-top: -0.2rem;
+  margin-top: 1.2rem;
 
   font-size: 1.4rem;
   color: var(--color-grey-300);
@@ -110,9 +115,13 @@ export default function LoginForm() {
           spellCheck="false"
         />
         <StyledLabel htmlFor="password">Password</StyledLabel>
-        <StyledSpan>
-          Don't have an account? <Link to="/signup">Create an account</Link>
-        </StyledSpan>
+
+        <StyledDiv>
+          <Button>Login</Button>
+          <StyledSpan>
+            Don't have an account? <Link to="/signup">Create an account</Link>
+          </StyledSpan>
+        </StyledDiv>
       </div>
     </Container>
   );

@@ -7,7 +7,7 @@ export default function ProtectedRoute({ children }) {
 
   useEffect(
     function () {
-      if (!isAuthenticated) navigate("/login");
+      if (!isAuthenticated) navigate("/login", { replace: true });
     },
     [isAuthenticated, navigate]
   );

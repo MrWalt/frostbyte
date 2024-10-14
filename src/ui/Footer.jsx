@@ -29,7 +29,7 @@ const StyledLink = styled(Link)`
     width: 0%;
     height: 2px;
 
-    transition: var(--animation-default);
+    transition: var(--animation-fast);
 
     background-color: var(--color-grey-0);
 

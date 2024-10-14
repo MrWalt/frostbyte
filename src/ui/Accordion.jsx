@@ -23,7 +23,7 @@ const StyledDiv = styled.div`
 
   cursor: pointer;
 
-  transition: var(--animation-default);
+  transition: var(--animation-fast);
 
   &:hover {
     background-color: var(--color-grey-700);

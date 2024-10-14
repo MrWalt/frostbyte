@@ -44,7 +44,7 @@ const StyledInput = styled.input`
   border-bottom: 3px solid var(--color-grey-0);
 
   font-size: 1.6rem;
-  transition: var(--animation-default);
+  transition: var(--animation-fast);
 
   &:focus {
     border-bottom: 3px solid var(--color-brand-500);
@@ -67,7 +67,7 @@ const StyledLabel = styled.label`
   color: var(--color-grey-400);
   font-size: 1.4rem;
 
-  transition: var(--animation-default);
+  transition: var(--animation-fast);
 
   transform: translateY(-7rem);
   display: block;
@@ -86,7 +86,7 @@ const StyledSpan = styled.span`
   a:link,
   a:visited {
     color: var(--color-brand-400);
-    transition: var(--animation-default);
+    transition: var(--animation-fast);
 
     &:hover {
       color: var(--color-brand-600);

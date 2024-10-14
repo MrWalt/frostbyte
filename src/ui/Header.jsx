@@ -36,7 +36,8 @@ const StyledLink = styled(Link)`
 
   border-right: 1px solid var(--color-brand-700);
   border-left: 1px solid var(--color-brand-700);
-  transition: var(--animation-default);
+
+  transition: var(--animation-fast);
 
   &:hover {
     border-color: var(--color-brand-400);
@@ -58,7 +59,7 @@ const ProductsLink = styled(Link)`
   justify-content: center;
   align-items: center;
 
-  transition: var(--animation-default);
+  transition: var(--animation-fast);
 
   &:hover {
     border-color: var(--color-brand-400);

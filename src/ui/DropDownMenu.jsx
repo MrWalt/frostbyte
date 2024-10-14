@@ -47,7 +47,7 @@ const StyledDiv = styled.div`
     transform: translateY(-5%);
     /* animation: drop-in 0.4s linear; */
 
-    transition: var(--animation-default);
+    transition: var(--animation-fast);
   }
 `;
 
@@ -65,7 +65,7 @@ const StyledLabel = styled.label`
   font-size: 1.6rem;
 
   cursor: pointer;
-  transition: var(--animation-default);
+  transition: var(--animation-fast);
 
   &::before {
     content: "";
@@ -77,7 +77,7 @@ const StyledLabel = styled.label`
     height: 100%;
     z-index: -1;
 
-    transition: var(--animation-default);
+    transition: var(--animation-fast);
   }
 
   &:hover {
@@ -123,7 +123,7 @@ const StyledCheckbox = styled.input`
 
 const ProductLink = styled(NavLink)`
   padding: 0.6rem 2.4rem;
-  transition: var(--animation-default);
+  transition: var(--animation-fast);
   font-size: 1.4rem;
 
   &:hover {

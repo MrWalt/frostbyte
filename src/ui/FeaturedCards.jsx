@@ -22,7 +22,7 @@ const StyledDiv = styled.div`
   background-color: var(--color-grey-900);
   padding: 2px;
 
-  transition: var(--animation-default);
+  transition: var(--animation-fast);
 
   border: 1px solid var(--color-grey-800);
 

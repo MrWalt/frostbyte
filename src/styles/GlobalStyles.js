@@ -34,7 +34,9 @@ export const GlobalStyles = createGlobalStyle`
     --color-red-700: #b91c1c;
     --color-red-800: #991b1b;
 
-    --animation-default: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-medium: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --border-r-sm: 2px;
 }

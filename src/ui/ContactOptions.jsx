@@ -70,7 +70,7 @@ export default function ContactOptions() {
           <StyledP>
             Available <HoursSpan>24</HoursSpan>/<DaysSpan>7</DaysSpan>
           </StyledP>
-          <ResponseParagraph>Reply within 24 hours</ResponseParagraph>
+          <ResponseParagraph>Reply within 36 hours</ResponseParagraph>
         </div>
         <Button>Email Us</Button>
       </Card>
@@ -82,7 +82,6 @@ export default function ContactOptions() {
             <DaysSpan>AM</DaysSpan> to <HoursSpan>8</HoursSpan>
             <DaysSpan>PM</DaysSpan>
           </StyledP>
-          <ResponseParagraph>Immediate reply</ResponseParagraph>
         </div>
         <Button>+389 71 387 179</Button>
       </Card>

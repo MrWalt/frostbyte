@@ -2,70 +2,95 @@ import styled from "styled-components";
 import Button from "./Button";
 
 const Box = styled.div`
-  height: 32rem;
+  height: 36rem;
 
   color: var(--color-grey-0);
 
   display: flex;
   flex-direction: column;
 
-  cursor: pointer;
+  border: 1px solid var(--color-grey-800);
+
+  overflow: hidden;
+
+  transition: var(--animation-fast);
+
+  &:hover {
+    background-color: var(--color-grey-800);
+    /* border-bottom: 1px solid var(--color-brand-900); */
+  }
 `;
 
 const ImageBox = styled.div`
   height: 75%;
   width: 100%;
 
-  border: 1px solid var(--color-grey-800);
-  border-bottom: none;
+  cursor: pointer;
 `;
 
 const Image = styled.img`
   /* height: 75%; */
 `;
 
-const Title = styled.p`
-  padding: 0.8rem 1.6rem;
-  font-size: 1.6rem;
-
-  border-left: 1px solid var(--color-grey-800);
-  border-right: 1px solid var(--color-grey-800);
+const InformationBox = styled.div`
+  height: 25%;
 `;
 
-const StyledButton = styled(Button)`
+const Title = styled.p`
+  padding: 0.4rem 1.6rem;
+  font-size: 1.6rem;
+
+  height: 50%;
+  /* padding-bottom: 0; */
+
+  /* border-bottom: 1px solid var(--color-grey-800); */
+`;
+
+const PriceBox = styled.div`
   position: relative;
-  height: 4.8rem;
 
-  flex-shrink: 0;
+  height: 4rem;
 
-  overflow: hidden;
+  display: flex;
+  align-items: center;
 
-  background-color: var(--color-grey-900);
+  flex-grow: 1;
+  padding: 0.4rem 3.2rem;
 
-  span {
+  &::before {
+    content: "";
+
     position: absolute;
-    display: inline-block;
-
-    width: 100%;
-
     top: 50%;
-    left: 50%;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+
     transform: translate(-50%, -50%);
 
-    transition: var(--animation-medium);
-  }
+    background-color: var(--color-brand-500);
 
-  span:first-of-type {
-    transform: translate(-150%, -50%);
+    border-radius: 50%;
   }
+`;
 
-  &:hover span:first-of-type {
-    transform: translate(-50%, -50%);
-  }
+const Price = styled.span`
+  display: inline-block;
+  font-size: 2.8rem;
+`;
 
-  &:hover span:last-of-type {
-    transform: translate(150%, -50%);
-  }
+const Currency = styled.span`
+  display: inline-block;
+
+  margin-right: 0.2rem;
+
+  font-size: 1.4rem;
+  color: var(--color-grey-300);
+`;
+
+const Cents = styled.span`
+  font-size: 1.4rem;
+  color: var(--color-brand-600);
 `;
 
 export default function Card({ title, price }) {
@@ -74,11 +99,15 @@ export default function Card({ title, price }) {
       <ImageBox>
         <Image />
       </ImageBox>
-      <Title>{title}</Title>
-      <StyledButton>
-        <span>Add To Cart</span>
-        <span>${price}</span>
-      </StyledButton>
+      <InformationBox>
+        <Title>{title}</Title>
+        <PriceBox>
+          <Price>
+            <Currency>$</Currency>
+            {price},<Cents>99</Cents>
+          </Price>
+        </PriceBox>
+      </InformationBox>
     </Box>
   );
 }

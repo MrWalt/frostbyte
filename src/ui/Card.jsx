@@ -1,7 +1,6 @@
 import { HiOutlineHeart, HiOutlineShoppingCart } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Button from "./Button";
 
 const Box = styled.div`
   height: 36rem;
@@ -18,11 +17,6 @@ const Box = styled.div`
   transition: var(--animation-fast);
 
   position: relative;
-
-  /* &:hover {
-    background-color: var(--color-grey-800);
-    border-bottom: 1px solid var(--color-brand-900);
-  } */
 
   &:hover button {
     transform: scale(1);
@@ -93,9 +87,6 @@ const Title = styled.p`
   font-size: 1.6rem;
 
   height: 50%;
-  /* padding-bottom: 0; */
-
-  /* border-bottom: 1px solid var(--color-grey-800); */
 `;
 
 const PriceBox = styled.div`

@@ -1,3 +1,5 @@
+import { HiOutlineHeart, HiOutlineShoppingCart } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./Button";
 
@@ -15,9 +17,59 @@ const Box = styled.div`
 
   transition: var(--animation-fast);
 
-  &:hover {
+  position: relative;
+
+  /* &:hover {
     background-color: var(--color-grey-800);
-    /* border-bottom: 1px solid var(--color-brand-900); */
+    border-bottom: 1px solid var(--color-brand-900);
+  } */
+
+  &:hover button {
+    transform: scale(1);
+  }
+
+  & button:first-of-type {
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+
+  & button:last-of-type {
+    bottom: 1.2rem;
+    right: 1.2rem;
+
+    transform: scale(1);
+  }
+`;
+
+const StyledButton = styled.button`
+  border: 1px solid var(--color-grey-800);
+
+  width: 3.2rem;
+  height: 3.2rem;
+
+  background-color: transparent;
+
+  position: absolute;
+
+  cursor: pointer;
+
+  transition: var(--animation-fast);
+
+  transform: scale(0);
+
+  &:hover svg {
+    fill: var(--color-grey-0);
+  }
+
+  &:active svg {
+    animation: jumpUp 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  svg {
+    font-size: 2rem;
+    stroke: var(--color-grey-0);
+
+    transition: var(--animation-fast);
   }
 `;
 
@@ -63,6 +115,7 @@ const PriceBox = styled.div`
     position: absolute;
     top: 50%;
     left: 0;
+
     width: 3rem;
     height: 3rem;
 
@@ -93,11 +146,17 @@ const Cents = styled.span`
   color: var(--color-brand-600);
 `;
 
-export default function Card({ title, price }) {
+export default function Card({ title, price, id }) {
   return (
     <Box>
+      <StyledButton>
+        <HiOutlineHeart />
+      </StyledButton>
+
       <ImageBox>
-        <Image />
+        <Link to={`/products/product/${id}`}>
+          <Image />
+        </Link>
       </ImageBox>
       <InformationBox>
         <Title>{title}</Title>
@@ -108,6 +167,10 @@ export default function Card({ title, price }) {
           </Price>
         </PriceBox>
       </InformationBox>
+
+      <StyledButton>
+        <HiOutlineShoppingCart />
+      </StyledButton>
     </Box>
   );
 }

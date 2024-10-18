@@ -2,6 +2,7 @@ import styled from "styled-components";
 import FilterOption from "./FilterOption";
 
 import { HiOutlineFunnel } from "react-icons/hi2";
+import Button from "./Button";
 
 const Box = styled.div`
   display: flex;
@@ -43,6 +44,7 @@ export default function FilterMenu() {
         options={["In Stock", "Out of Stock"]}
         key="Availability"
       />
+      <Button>Apply</Button>
     </Box>
   );
 }

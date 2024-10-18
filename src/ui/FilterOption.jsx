@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
@@ -7,6 +7,10 @@ import Filter from "./Filter";
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
+
+  &:last-of-type {
+    margin-bottom: 1.8rem;
+  }
 `;
 
 const StyledSpan = styled.span`

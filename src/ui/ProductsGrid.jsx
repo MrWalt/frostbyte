@@ -7,7 +7,7 @@ const CardBox = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
 
-  gap: 0.8rem;
+  gap: 2.4rem;
   row-gap: 2.4rem;
 `;
 
@@ -17,11 +17,21 @@ export default function ProductsGrid({ category }) {
       {category
         ? products.map((item) => {
             return item.category === category ? (
-              <Card title={item.title} price={item.price} key={item.title} />
+              <Card
+                title={item.title}
+                price={item.price}
+                key={item.title}
+                id={item.id}
+              />
             ) : null;
           })
         : products.map((item) => (
-            <Card title={item.title} price={item.price} key={item.title} />
+            <Card
+              title={item.title}
+              price={item.price}
+              key={item.title}
+              id={item.id}
+            />
           ))}
     </CardBox>
   );

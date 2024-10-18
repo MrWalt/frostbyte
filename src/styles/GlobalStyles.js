@@ -60,7 +60,7 @@ a:link, a:visited {
     color: inherit;
 }
 
-input {
+input, button {
     border: none;
     outline: none;
     font-family: inherit;
@@ -78,5 +78,21 @@ input {
     background-color: var(--color-grey-800);
     border-left: 8px solid var(--color-brand-800);
     padding-left: 3.2rem;
+}
+
+@keyframes jumpUp {
+    0% {
+        transform: scale(1) translateY(0) rotate(0);
+    }
+    33% {
+        transform: scale(1.1) translateY(-2px) rotate(6deg);
+    }
+    66% {
+        transform: scale(1.1) translateY(-4px) rotate(-6deg);
+    }
+    
+    100% {
+        transform: scale(1) translateY(0) rotate(0);
+    }
 }
 `;

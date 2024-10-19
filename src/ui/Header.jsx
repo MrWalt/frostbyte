@@ -3,18 +3,19 @@ import styled from "styled-components";
 
 import {
   HiOutlineBars3,
-  HiOutlineChatBubbleLeftRight,
+  HiOutlineHeart,
   HiOutlineUserCircle,
   HiOutlineShoppingCart,
 } from "react-icons/hi2";
 
 import DropDownMenu from "./DropDownMenu";
+import Cart from "../features/cart/Cart";
 
 const StyledHeader = styled.header`
   position: fixed;
   height: 6.4rem;
   width: 100%;
-  padding-right: 7.2rem;
+  /* padding-right: 7.2rem; */
 
   z-index: 999;
 
@@ -51,15 +52,17 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const ProductsLink = styled(Link)`
+const ProductsDropDownLink = styled(Link)`
   width: 28rem;
-  border-right: 1px solid var(--color-brand-700);
+  height: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   transition: var(--animation-fast);
+
+  border-right: 1px solid var(--color-brand-700);
 
   &:hover {
     border-color: var(--color-brand-400);
@@ -70,6 +73,21 @@ const ProductsLink = styled(Link)`
     width: 2.4rem;
     height: 2.4rem;
     margin-right: 0.4rem;
+  }
+`;
+
+const Box = styled.div`
+  width: 28rem;
+  height: 100%;
+
+  display: flex;
+
+  a {
+    width: 50%;
+
+    &:last-of-type {
+      border-right: none;
+    }
   }
 `;
 
@@ -94,24 +112,37 @@ export default function Header() {
   return (
     <StyledHeader>
       <Container>
-        <ProductsLink to={"products"} className="dropdown">
+        <ProductsDropDownLink to={"products"} className="dropdown">
           <HiOutlineBars3 />
           Products
-        </ProductsLink>
-        <DropDownMenu />
+        </ProductsDropDownLink>
+        <DropDownMenu align="left">
+          <DropDownMenu.Products />
+        </DropDownMenu>
         <LinkContainer>
-          <StyledLink to={`contact`}>
-            <HiOutlineChatBubbleLeftRight />
-            Contact
-          </StyledLink>
           <StyledLink to={`account`}>
             <HiOutlineUserCircle />
             Account
           </StyledLink>
-          <StyledLink to={`cart`}>
-            <HiOutlineShoppingCart />
-            Cart
-          </StyledLink>
+
+          <Box>
+            <StyledLink className="dropdown">
+              <HiOutlineHeart />
+              Wishlist
+            </StyledLink>
+            <DropDownMenu align="right">
+              <p>This is wishlist</p>
+            </DropDownMenu>
+
+            <StyledLink to={`checkout`} className="dropdown">
+              <HiOutlineShoppingCart />
+              Cart
+            </StyledLink>
+
+            <DropDownMenu align="right">
+              <Cart />
+            </DropDownMenu>
+          </Box>
         </LinkContainer>
       </Container>
     </StyledHeader>

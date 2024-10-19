@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {
   computerPeripherals,
   desktopComputerParts,
@@ -16,15 +16,15 @@ const StyledDiv = styled.div`
   background-color: var(--color-grey-900);
 
   /* border-top: 1px solid var(--color-brand-400); */
-  border-right: 1px solid var(--color-brand-400);
 
   color: var(--color-grey-0);
 
   position: absolute;
   bottom: 0;
+  /* bottom: 0;
   left: 0;
 
-  transform: translate(-150%, 100%);
+  transform: translate(-150%, 100%); */
   transition: all 0.3s ease-out;
 
   opacity: 0;
@@ -36,18 +36,33 @@ const StyledDiv = styled.div`
 
   overflow-y: scroll;
 
+  ${(props) =>
+    props.align === "left"
+      ? css`
+          left: 0;
+
+          transform: translate(-150%, 100%);
+          border-right: 1px solid var(--color-brand-400);
+
+          div {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(-5%);
+            /* animation: drop-in 0.4s linear; */
+
+            transition: var(--animation-fast);
+          }
+        `
+      : css`
+          right: 0;
+
+          transform: translate(150%, 100%);
+          border-left: 1px solid var(--color-brand-400);
+        `}
+
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  div {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(-5%);
-    /* animation: drop-in 0.4s linear; */
-
-    transition: var(--animation-fast);
   }
 `;
 
@@ -137,7 +152,17 @@ const ProductLink = styled(NavLink)`
   }
 `;
 
-export default function DropDownMenu() {
+export default function DropDownMenu({ children, align }) {
+  return (
+    <StyledDiv align={align} className="dropdown-menu">
+      {children}
+    </StyledDiv>
+  );
+}
+
+// HOC Components
+
+function Products() {
   const [isToggledDesktop, setIsToggledDesktop] = useState(false);
   const [isToggledPeripherals, setIsToggledPeripherals] = useState(false);
   const [isToggledOther, setIsToggledOther] = useState(false);
@@ -149,13 +174,12 @@ export default function DropDownMenu() {
   }
 
   return (
-    <StyledDiv className="dropdown-menu">
+    <>
       <StyledCheckbox type="checkbox" id="desktop" />
       <StyledLabel htmlFor="desktop" onClick={() => toggleDropDown("desktop")}>
         {isToggledDesktop ? <HiBarsArrowUp /> : <HiBarsArrowDown />}
         Desktop Computers
       </StyledLabel>
-
       {isToggledDesktop && (
         <div>
           {desktopComputerParts.map((item) => (
@@ -165,7 +189,6 @@ export default function DropDownMenu() {
           ))}
         </div>
       )}
-
       <StyledCheckbox type="checkbox" id="peripherals" />
       <StyledLabel
         htmlFor="peripherals"
@@ -174,7 +197,6 @@ export default function DropDownMenu() {
         {isToggledPeripherals ? <HiBarsArrowUp /> : <HiBarsArrowDown />}{" "}
         Computer Peripherals
       </StyledLabel>
-
       {isToggledPeripherals && (
         <div>
           {computerPeripherals.map((item) => (
@@ -184,12 +206,10 @@ export default function DropDownMenu() {
           ))}
         </div>
       )}
-
       <StyledCheckbox type="checkbox" id="other" />
       <StyledLabel htmlFor="other" onClick={() => toggleDropDown("other")}>
         {isToggledOther ? <HiBarsArrowUp /> : <HiBarsArrowDown />} Other
       </StyledLabel>
-
       {isToggledOther && (
         <div>
           {other.map((item) => (
@@ -199,6 +219,8 @@ export default function DropDownMenu() {
           ))}
         </div>
       )}
-    </StyledDiv>
+    </>
   );
 }
+
+DropDownMenu.Products = Products;

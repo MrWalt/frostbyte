@@ -5,7 +5,7 @@ import AppLayout from "./ui/AppLayout";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Account from "./pages/Account";
-import Cart from "./pages/Cart";
+import CheckOut from "./pages/CheckOut";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
@@ -29,7 +29,7 @@ export default function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="cart" element={<Cart />} />
+            <Route path="checkout" element={<CheckOut />} />
             <Route path="products" element={<Products />} />
             <Route path="products/:category" element={<Products />} />
             {/* <Route path="products/:product" element={<Product />} /> */}

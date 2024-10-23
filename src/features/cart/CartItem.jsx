@@ -26,6 +26,10 @@ const Box = styled.div`
   margin-bottom: 1.2rem;
 
   position: relative;
+
+  &:first-of-type {
+    margin-top: 1.2rem;
+  }
 `;
 
 const Image = styled.div`
@@ -105,7 +109,9 @@ const StyledSpan = styled.span`
   display: inline-block;
   width: 1.2rem;
 
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const DeleteButton = styled.button`

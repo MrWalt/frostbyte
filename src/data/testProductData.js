@@ -27,13 +27,13 @@ const products = [
     title: "Ryzen 9 5900X 4.6GHz",
     price: "399,98",
     category: "processors",
-    id: 376162783312312,
+    id: 3761627312,
   },
   {
     title: "Gigabyte RTX 3070 Eagle OC 8GB",
     price: "699,99",
     category: "graphics-cards",
-    id: 3761627833123124123412,
+    id: 37616,
   },
   {
     title: "Kingston USB Flash Drive 512GB",
@@ -45,12 +45,13 @@ const products = [
     title: "GTX 1080 Ti Founders Edition 11GB",
     price: "899,99",
     category: "graphics-cards",
+    id: 37616276738162,
   },
   {
     title: "Glorious Model O Wireless",
     price: "89,22",
     category: "mice",
-    id: 376162721312313124,
+    id: 3761627213,
   },
 ];
 

@@ -84,13 +84,15 @@ input, button {
     0% {
         transform: scale(1) translateY(0) rotate(0);
     }
+    
     33% {
         transform: scale(1.1) translateY(-2px) rotate(6deg);
     }
+
     66% {
         transform: scale(1.1) translateY(-4px) rotate(-6deg);
     }
-    
+
     100% {
         transform: scale(1) translateY(0) rotate(0);
     }

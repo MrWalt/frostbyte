@@ -1,6 +1,7 @@
 import { HiOutlineHeart, HiOutlineShoppingCart } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useCart } from "../features/cart/CartContext";
 
 const Box = styled.div`
   height: 36rem;
@@ -138,6 +139,10 @@ const Cents = styled.span`
 `;
 
 export default function Card({ title, price, id }) {
+  const { handleAddToCart } = useCart();
+
+  const formattedPrice = price.split(",");
+
   return (
     <Box>
       <StyledButton>
@@ -154,12 +159,14 @@ export default function Card({ title, price, id }) {
         <PriceBox>
           <Price>
             <Currency>$</Currency>
-            {price},<Cents>99</Cents>
+            {formattedPrice.at(0)},<Cents> {formattedPrice.at(1)}</Cents>
           </Price>
         </PriceBox>
       </InformationBox>
 
-      <StyledButton>
+      <StyledButton
+        onClick={() => handleAddToCart({ title, price, id, quantity: 1 })}
+      >
         <HiOutlineShoppingCart />
       </StyledButton>
     </Box>

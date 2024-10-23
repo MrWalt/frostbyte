@@ -11,10 +11,11 @@ import Product from "./pages/Product";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import PageNotFound from "./pages/PageNotFound";
+import { CartProvider } from "./features/cart/CartContext";
 
 export default function App() {
   return (
-    <>
+    <CartProvider>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
@@ -38,6 +39,6 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </CartProvider>
   );
 }

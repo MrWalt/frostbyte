@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import CartItem from "./CartItem";
-import { useCart } from "./CartContext";
+import { useSelector } from "react-redux";
+import { getCart } from "./cartSlice";
 
 const Container = styled.div`
   padding: 1rem;
@@ -18,7 +19,8 @@ const StyledSpan = styled.span`
 `;
 
 export default function Cart() {
-  const { cart } = useCart();
+  const cart = useSelector(getCart);
+
   return (
     <Container>
       {!cart?.length && <StyledSpan>Your cart is empty</StyledSpan>}
@@ -27,6 +29,8 @@ export default function Cart() {
           title={item.title}
           price={item.price}
           quantity={item.quantity}
+          id={item.id}
+          key={item.id}
         />
       ))}
     </Container>

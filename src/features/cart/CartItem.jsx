@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { HiMinus, HiPlus } from "react-icons/hi2";
+import { HiMinus, HiPlus, HiXMark } from "react-icons/hi2";
+import { useDispatch } from "react-redux";
+import {
+  decreaseItemQuantity,
+  deleteItem,
+  increaseItemQuantity,
+} from "./cartSlice";
 
 const Box = styled.div`
   height: 28rem;
@@ -16,7 +22,6 @@ const Box = styled.div`
   gap: 1.2rem;
 
   padding: 1.6rem;
-  padding-bottom: 2rem;
 
   margin-bottom: 1.2rem;
 
@@ -25,8 +30,8 @@ const Box = styled.div`
 
 const Image = styled.div`
   height: 100%;
-
-  border: 1px solid var(--color-grey-700);
+  text-align: center;
+  /* border: 1px solid var(--color-grey-700); */
 `;
 
 const InfoBox = styled.div`
@@ -46,7 +51,7 @@ const ItemName = styled.span`
 
   font-size: 1.8rem;
 
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 `;
 
 const Price = styled.span`
@@ -88,16 +93,62 @@ const ButtonBox = styled.div`
 
     cursor: pointer;
 
+    transition: var(--animation-fast);
+
     &:hover {
-      background-color: var(--color-grey-800);
+      background-color: var(--color-grey-700);
     }
   }
 `;
 
-export default function CartItem({ title, price, quantity }) {
+const StyledSpan = styled.span`
+  display: inline-block;
+  width: 1.2rem;
+
+  text-align: center;
+`;
+
+const DeleteButton = styled.button`
+  width: 2.8rem;
+  height: 2.8rem;
+
+  position: absolute;
+
+  top: 1.2rem;
+  right: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-grey-900);
+  border: 1px solid var(--color-grey-700);
+
+  cursor: pointer;
+
+  transition: var(--animation-fast);
+
+  &:hover {
+    background-color: var(--color-grey-700);
+  }
+
+  svg {
+    font-size: 1.8rem;
+
+    color: var(--color-grey-0);
+  }
+`;
+
+export default function CartItem({ title, price, quantity, id }) {
+  const dispatch = useDispatch();
+
   const formattedPrice = price.split(",");
+
   return (
     <Box>
+      <DeleteButton onClick={() => dispatch(deleteItem(id))}>
+        <HiXMark />
+      </DeleteButton>
       <Image>IMAGE</Image>
       <InfoBox>
         <ItemName>{title}</ItemName>
@@ -108,9 +159,9 @@ export default function CartItem({ title, price, quantity }) {
         </div>
       </InfoBox>
       <ButtonBox>
-        <HiMinus />
-        {quantity}
-        <HiPlus />
+        <HiMinus onClick={() => dispatch(decreaseItemQuantity(id))} />
+        <StyledSpan>{quantity}</StyledSpan>
+        <HiPlus onClick={() => dispatch(increaseItemQuantity(id))} />
       </ButtonBox>
     </Box>
   );

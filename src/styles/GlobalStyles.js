@@ -80,6 +80,14 @@ input, button {
     padding-left: 3.2rem;
 }
 
+.in-cart {
+    font-size: 2rem;
+    stroke: var(--color-grey-0);
+    fill: var(--color-grey-0);
+
+    animation: jumpUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @keyframes jumpUp {
     0% {
         transform: scale(1) translateY(0) rotate(0);

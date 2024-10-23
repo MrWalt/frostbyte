@@ -11,11 +11,12 @@ import Product from "./pages/Product";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import PageNotFound from "./pages/PageNotFound";
-import { CartProvider } from "./features/cart/CartContext";
+import { Provider } from "react-redux";
+import store from "./store";
 
 export default function App() {
   return (
-    <CartProvider>
+    <Provider store={store}>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
@@ -39,6 +40,6 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </CartProvider>
+    </Provider>
   );
 }

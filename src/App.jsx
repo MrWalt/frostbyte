@@ -11,10 +11,12 @@ import Product from "./pages/Product";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import PageNotFound from "./pages/PageNotFound";
+import { Provider } from "react-redux";
+import store from "./store";
 
 export default function App() {
   return (
-    <>
+    <Provider store={store}>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
@@ -38,6 +40,6 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </Provider>
   );
 }

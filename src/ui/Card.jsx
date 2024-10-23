@@ -1,6 +1,12 @@
-import { HiOutlineHeart, HiOutlineShoppingCart } from "react-icons/hi2";
+import {
+  HiOutlineHeart,
+  HiOutlineShoppingCart,
+  HiShoppingCart,
+} from "react-icons/hi2";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { addItem, deleteItem, getCart } from "../features/cart/cartSlice";
 
 const Box = styled.div`
   height: 36rem;
@@ -55,15 +61,13 @@ const StyledButton = styled.button`
     fill: var(--color-grey-0);
   }
 
-  &:active svg {
+  /* &:active svg {
     animation: jumpUp 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  } */
 
   svg {
     font-size: 2rem;
     stroke: var(--color-grey-0);
-
-    transition: var(--animation-fast);
   }
 `;
 
@@ -138,6 +142,29 @@ const Cents = styled.span`
 `;
 
 export default function Card({ title, price, id }) {
+  const dispatch = useDispatch();
+
+  const cart = useSelector(getCart);
+  const isInCart = cart.find((item) => item.id === id) ? true : false;
+
+  const formattedPrice = price.split(",");
+
+  function handleAddItem() {
+    const newItem = {
+      title,
+      price,
+      id,
+      quantity: 1,
+      totalPrice: price,
+    };
+
+    dispatch(addItem(newItem));
+  }
+
+  function handleDeleteItem() {
+    dispatch(deleteItem(id));
+  }
+
   return (
     <Box>
       <StyledButton>
@@ -154,14 +181,20 @@ export default function Card({ title, price, id }) {
         <PriceBox>
           <Price>
             <Currency>$</Currency>
-            {price},<Cents>99</Cents>
+            {formattedPrice.at(0)},<Cents> {formattedPrice.at(1)}</Cents>
           </Price>
         </PriceBox>
       </InformationBox>
 
-      <StyledButton>
-        <HiOutlineShoppingCart />
-      </StyledButton>
+      {isInCart ? (
+        <StyledButton onClick={handleDeleteItem}>
+          <HiShoppingCart className="in-cart" />
+        </StyledButton>
+      ) : (
+        <StyledButton onClick={handleAddItem}>
+          <HiOutlineShoppingCart />
+        </StyledButton>
+      )}
     </Box>
   );
 }

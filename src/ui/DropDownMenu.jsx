@@ -56,7 +56,6 @@ const StyledDiv = styled.div`
         `
       : css`
           right: 0;
-
           transform: translate(150%, 100%);
           border-left: 1px solid var(--color-brand-400);
         `}
@@ -123,9 +122,19 @@ const StyledCheckbox = styled.input`
 
       width: 100%;
     }
+
+    & + div {
+      display: flex;
+      flex-direction: column;
+
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
   }
 
-  &:checked ~ div {
+  /* &:checked ~ div {
     display: flex;
     flex-direction: column;
 
@@ -133,7 +142,7 @@ const StyledCheckbox = styled.input`
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
-  }
+  } */
 `;
 
 const ProductLink = styled(NavLink)`
@@ -189,6 +198,7 @@ function Products() {
           ))}
         </div>
       )}
+
       <StyledCheckbox type="checkbox" id="peripherals" />
       <StyledLabel
         htmlFor="peripherals"
@@ -206,6 +216,7 @@ function Products() {
           ))}
         </div>
       )}
+
       <StyledCheckbox type="checkbox" id="other" />
       <StyledLabel htmlFor="other" onClick={() => toggleDropDown("other")}>
         {isToggledOther ? <HiBarsArrowUp /> : <HiBarsArrowDown />} Other

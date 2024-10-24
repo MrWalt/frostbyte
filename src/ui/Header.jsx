@@ -160,7 +160,7 @@ export default function Header() {
               <p>This is wishlist</p>
             </DropDownMenu>
 
-            <StyledLink to={`checkout`} className="dropdown cart">
+            <StyledLink to={`cart-summary`} className="dropdown cart">
               <HiOutlineShoppingCart />
               Cart
               {itemsInCart ? <span>{itemsInCart}</span> : null}

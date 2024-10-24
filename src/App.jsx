@@ -7,12 +7,12 @@ import Home from "./pages/Home";
 import Account from "./pages/Account";
 import CheckOut from "./pages/CheckOut";
 import Products from "./pages/Products";
-import Product from "./pages/Product";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import PageNotFound from "./pages/PageNotFound";
 import { Provider } from "react-redux";
 import store from "./store";
+import CartSummary from "./pages/CartSummary";
 
 export default function App() {
   return (
@@ -34,7 +34,7 @@ export default function App() {
             <Route path="checkout" element={<CheckOut />} />
             <Route path="products" element={<Products />} />
             <Route path="products/:category" element={<Products />} />
-            {/* <Route path="products/:product" element={<Product />} /> */}
+            <Route path="cart-summary" element={<CartSummary />} />
             <Route path="login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>

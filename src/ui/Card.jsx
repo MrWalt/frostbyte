@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { addItem, deleteItem, getCart } from "../features/cart/cartSlice";
+import Price from "./Price";
 
 const Box = styled.div`
   height: 36rem;
@@ -122,32 +123,11 @@ const PriceBox = styled.div`
   }
 `;
 
-const Price = styled.span`
-  display: inline-block;
-  font-size: 2.8rem;
-`;
-
-const Currency = styled.span`
-  display: inline-block;
-
-  margin-right: 0.2rem;
-
-  font-size: 1.4rem;
-  color: var(--color-grey-300);
-`;
-
-const Cents = styled.span`
-  font-size: 1.4rem;
-  color: var(--color-brand-600);
-`;
-
 export default function Card({ title, price, id }) {
   const dispatch = useDispatch();
 
   const cart = useSelector(getCart);
   const isInCart = cart.find((item) => item.id === id) ? true : false;
-
-  const formattedPrice = price.split(",");
 
   function handleAddItem() {
     const newItem = {
@@ -179,10 +159,7 @@ export default function Card({ title, price, id }) {
       <InformationBox>
         <Title>{title}</Title>
         <PriceBox>
-          <Price>
-            <Currency>$</Currency>
-            {formattedPrice.at(0)},<Cents> {formattedPrice.at(1)}</Cents>
-          </Price>
+          <Price price={price} size="large" />
         </PriceBox>
       </InformationBox>
 

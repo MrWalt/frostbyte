@@ -6,6 +6,7 @@ import {
   deleteItem,
   increaseItemQuantity,
 } from "./cartSlice";
+import Price from "../../ui/Price";
 
 const Box = styled.div`
   height: 28rem;
@@ -56,20 +57,6 @@ const ItemName = styled.span`
   font-size: 1.8rem;
 
   margin-bottom: 0.8rem;
-`;
-
-const Price = styled.span`
-  font-size: 1.6rem;
-`;
-
-const Currency = styled.span`
-  font-size: 1.2rem;
-  color: var(--color-brand-500);
-  margin-right: 0.2rem;
-`;
-
-const Cents = styled.span`
-  font-size: 1.2rem;
 `;
 
 const ButtonBox = styled.div`
@@ -148,8 +135,6 @@ const DeleteButton = styled.button`
 export default function CartItem({ title, price, quantity, id }) {
   const dispatch = useDispatch();
 
-  const formattedPrice = price.split(",");
-
   return (
     <Box>
       <DeleteButton onClick={() => dispatch(deleteItem(id))}>
@@ -158,11 +143,7 @@ export default function CartItem({ title, price, quantity, id }) {
       <Image>IMAGE</Image>
       <InfoBox>
         <ItemName>{title}</ItemName>
-        <div>
-          <Currency>$</Currency>
-          <Price>{formattedPrice.at(0)},</Price>
-          <Cents>{formattedPrice.at(1)}</Cents>
-        </div>
+        <Price price={price} size="small" />
       </InfoBox>
       <ButtonBox>
         <HiMinus onClick={() => dispatch(decreaseItemQuantity(id))} />

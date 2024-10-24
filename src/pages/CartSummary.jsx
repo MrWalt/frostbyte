@@ -92,7 +92,7 @@ export default function CartSummary() {
       <Container>
         {cartItems !== 0 ? (
           <>
-            <StyledHeading variation="secondary">Order Summary</StyledHeading>
+            <StyledHeading variation="secondary">Cart Summary</StyledHeading>
             <SummaryList />
             <SummaryDetails />
             <Box onClick={moveBack}>

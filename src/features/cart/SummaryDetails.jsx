@@ -3,6 +3,7 @@ import Button from "../../ui/Button";
 import { useSelector } from "react-redux";
 import { getTotalItemsInCart, getTotalPrice } from "./cartSlice";
 import Price from "../../ui/Price";
+import { Link } from "react-router-dom";
 
 const Box = styled.div`
   background-color: var(--color-grey-transparent);
@@ -12,12 +13,14 @@ const Box = styled.div`
 
   align-self: start;
 
-  padding: 1.2rem 2.4rem;
+  padding: 1.2rem 1.2rem;
 `;
 
 const StyledTitle = styled.h3`
   font-size: 2rem;
   font-weight: 500;
+
+  margin-left: 1.2rem;
 `;
 
 const InfoBox = styled.div`
@@ -45,19 +48,21 @@ export default function SummaryDetails() {
 
   return (
     <Box>
-      <StyledTitle>Order Details</StyledTitle>
+      <StyledTitle>Cart Details</StyledTitle>
       <InfoBox>
         <div>
           <ItemCount>{totalItems} </ItemCount>
-          <span>item{totalItems > 1 ? "s" : ""} to be purchased</span>
+          <span>item{totalItems > 1 ? "s" : ""} in cart</span>
         </div>
         <PriceBox>
           <Price price={String(totalPrice)} size="medium" />
 
-          <span>to be paid</span>
+          <span>in total</span>
         </PriceBox>
       </InfoBox>
-      <Button>Checkout</Button>
+      <Link to="/checkout">
+        <Button>Continue to payment</Button>
+      </Link>
     </Box>
   );
 }

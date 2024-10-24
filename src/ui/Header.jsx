@@ -67,6 +67,7 @@ const StyledLink = styled(Link)`
       height: 2rem;
 
       background-color: var(--color-grey-800);
+      border: 1px solid var(--color-brand-100);
       border-radius: 50%;
 
       display: flex;

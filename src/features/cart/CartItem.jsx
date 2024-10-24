@@ -29,7 +29,11 @@ const Box = styled.div`
   position: relative;
 
   &:first-of-type {
-    margin-top: 1.2rem;
+    margin-top: 0.8rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0.4rem;
   }
 `;
 

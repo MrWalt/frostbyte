@@ -8,9 +8,10 @@ import Button from "../ui/Button";
 import { Link } from "react-router-dom";
 import { useMoveBack } from "../hooks/useMoveBack";
 import { HiArrowLongLeft } from "react-icons/hi2";
+import SummaryDetails from "../features/cart/SummaryDetails";
 
 const StyledSection = styled(Section)`
-  background-image: url("./public/background.png");
+  background-image: url("/background.png");
 
   min-height: calc(100vh - 6.4rem - 10rem);
 `;
@@ -91,8 +92,9 @@ export default function CartSummary() {
       <Container>
         {cartItems !== 0 ? (
           <>
-            <StyledHeading variation="secondary">Cart Summary</StyledHeading>
+            <StyledHeading variation="secondary">Order Summary</StyledHeading>
             <SummaryList />
+            <SummaryDetails />
             <Box onClick={moveBack}>
               <HiArrowLongLeft />
               <BackToShopLink>Continue Shopping</BackToShopLink>

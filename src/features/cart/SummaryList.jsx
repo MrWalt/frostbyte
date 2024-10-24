@@ -8,6 +8,8 @@ const Container = styled.div`
 
   background-color: var(--color-grey-transparent);
   backdrop-filter: blur(4px);
+
+  align-self: start;
 `;
 
 export default function SummaryList() {

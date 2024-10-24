@@ -6,6 +6,7 @@ import Section from "../ui/Section";
 import FilterMenu from "../ui/FilterMenu";
 import Heading from "../ui/Heading";
 import ProductsGrid from "../ui/ProductsGrid";
+import formatCategoryTitle from "../utils/formatCategoryTitle";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -19,18 +20,18 @@ const Container = styled.div`
 `;
 
 const StyledHeading = styled(Heading)`
-  grid-column: 1 / -1;
-  justify-self: center;
+  grid-column: 2 / -1;
+  justify-self: start;
 `;
 
 export default function Products() {
   const params = useParams();
-
+  const category = formatCategoryTitle(params?.category ?? "");
   return (
     <Section>
       <Container>
         <StyledHeading variation="secondary">
-          {params?.category ? params.category : "All Products"}
+          {params?.category ? category : "All Products"}
         </StyledHeading>
         <FilterMenu />
         <ProductsGrid category={params?.category ? params.category : null} />

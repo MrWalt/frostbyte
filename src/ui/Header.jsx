@@ -10,6 +10,8 @@ import {
 
 import DropDownMenu from "./DropDownMenu";
 import Cart from "../features/cart/Cart";
+import { useSelector } from "react-redux";
+import { getTotalItemsInCart } from "../features/cart/cartSlice";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -49,6 +51,28 @@ const StyledLink = styled(Link)`
     width: 2.4rem;
     height: 2.4rem;
     margin-right: 0.4rem;
+  }
+
+  &.cart {
+    position: relative;
+
+    span {
+      display: inline-block;
+      position: absolute;
+      top: 1.2rem;
+      right: 2.8rem;
+
+      font-size: 1.2rem;
+      width: 2rem;
+      height: 2rem;
+
+      background-color: var(--color-grey-800);
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 
@@ -109,6 +133,8 @@ const LinkContainer = styled.div`
 `;
 
 export default function Header() {
+  const itemsInCart = useSelector(getTotalItemsInCart);
+
   return (
     <StyledHeader>
       <Container>
@@ -134,9 +160,10 @@ export default function Header() {
               <p>This is wishlist</p>
             </DropDownMenu>
 
-            <StyledLink to={`checkout`} className="dropdown">
+            <StyledLink to={`cart-summary`} className="dropdown cart">
               <HiOutlineShoppingCart />
               Cart
+              {itemsInCart ? <span>{itemsInCart}</span> : null}
             </StyledLink>
 
             <DropDownMenu align="right">

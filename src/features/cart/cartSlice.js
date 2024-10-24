@@ -26,6 +26,9 @@ const cartSlice = createSlice({
 
       if (item.quantity === 0) cartSlice.caseReducers.deleteItem(state, action);
     },
+    clearCart(state) {
+      state.cart = [];
+    },
   },
 });
 
@@ -33,11 +36,22 @@ export function getCart(state) {
   return state.cart.cart;
 }
 
+export function getTotalItemsInCart(state) {
+  return state.cart.cart.reduce((acc, cur) => (acc += cur.quantity), 0);
+}
+
+export function getTotalPrice(state) {
+  return state.cart.cart
+    .reduce((acc, cur) => (acc += cur.price * cur.quantity), 0)
+    .toFixed(2);
+}
+
 export const {
   addItem,
   increaseItemQuantity,
   decreaseItemQuantity,
   deleteItem,
+  clearCart,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

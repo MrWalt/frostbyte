@@ -12,7 +12,7 @@ const desktopComputerParts = [
   },
   {
     title: "Computer Cases",
-    link: "computers-cases",
+    link: "computer-cases",
   },
   { title: "Cooling", link: "cooling" },
   {

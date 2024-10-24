@@ -26,6 +26,8 @@ export const GlobalStyles = createGlobalStyle`
     --color-grey-700: #374151;
     --color-grey-800: #1f2937;
     --color-grey-900: #111827;
+
+    --color-grey-transparent: rgb(17, 24, 39, 0.95);
     
     --color-green-100: #dcfce7;
     --color-green-700: #15803d;
@@ -37,8 +39,6 @@ export const GlobalStyles = createGlobalStyle`
     --animation-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     --animation-medium: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --animation-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --border-r-sm: 2px;
 }
 
 html {
@@ -64,6 +64,7 @@ input, button {
     border: none;
     outline: none;
     font-family: inherit;
+    background: none;
 }
 
 .dropdown:hover + .dropdown-menu, .dropdown-menu:hover {

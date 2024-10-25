@@ -10,7 +10,7 @@ const Container = styled.div`
 
   padding: 4.8rem 2.8rem 3.6rem 2.8rem;
 
-  background-color: rgb(17, 24, 39, 0.95);
+  background-color: rgb(17, 24, 39, 0.7);
   border: 1px solid var(--color-grey-800);
   backdrop-filter: blur(8px);
 

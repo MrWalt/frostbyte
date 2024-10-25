@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     --color-grey-800: #1f2937;
     --color-grey-900: #111827;
 
-    --color-grey-transparent: rgb(17, 24, 39, 0.95);
+    --color-grey-transparent: rgb(17, 24, 39, 0.9);
     
     --color-green-100: #dcfce7;
     --color-green-700: #15803d;
@@ -81,13 +81,22 @@ input, button {
     padding-left: 3.2rem;
 }
 
-.in-cart {
+.in-cart, .wishlisted {
     font-size: 2rem;
     stroke: var(--color-grey-0);
     fill: var(--color-grey-0);
 
     animation: jumpUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.wishlisted {
+    transform: scale(1);
+}
+
+.not-wishlisted {
+    transform: scale(0);
+}
+
 
 @keyframes jumpUp {
     0% {

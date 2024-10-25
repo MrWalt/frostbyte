@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Price from "../../ui/Price";
 import { useDispatch } from "react-redux";
-import { deleteItem } from "./cartSlice";
+import { deleteCartItem } from "./cartSlice";
 
 const Box = styled.div`
   width: 100%;
@@ -84,7 +84,7 @@ export default function SummaryItem({ title, price, quantity, id }) {
 
       <RemoveItemButton
         className="clear-cart"
-        onClick={() => dispatch(deleteItem(id))}
+        onClick={() => dispatch(deleteCartItem(id))}
       >
         Remove Item
       </RemoveItemButton>

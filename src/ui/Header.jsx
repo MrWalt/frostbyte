@@ -12,6 +12,7 @@ import DropDownMenu from "./DropDownMenu";
 import Cart from "../features/cart/Cart";
 import { useSelector } from "react-redux";
 import { getTotalItemsInCart } from "../features/cart/cartSlice";
+import WishList from "../features/wishlist/WishList";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -173,7 +174,7 @@ export default function Header() {
               Wishlist
             </StyledLink>
             <DropDownMenu align="right">
-              <p>This is wishlist</p>
+              <WishList />
             </DropDownMenu>
 
             <StyledLink to={`cart-summary`} className="dropdown cart">

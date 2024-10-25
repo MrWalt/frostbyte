@@ -1,4 +1,5 @@
 import {
+  HiHeart,
   HiOutlineHeart,
   HiOutlineShoppingCart,
   HiShoppingCart,
@@ -6,8 +7,18 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { addItem, deleteItem, getCart } from "../features/cart/cartSlice";
+import {
+  addCartItem,
+  deleteCartItem,
+  getCart,
+} from "../features/cart/cartSlice";
 import Price from "./Price";
+import {
+  addWishlistItem,
+  getWishlist,
+  deleteWishlistItem,
+} from "../features/wishlist/wishlistSlice";
+import { format } from "date-fns";
 
 const Box = styled.div`
   height: 36rem;
@@ -56,15 +67,9 @@ const StyledButton = styled.button`
 
   transition: var(--animation-fast);
 
-  transform: scale(0);
-
   &:hover svg {
     fill: var(--color-grey-0);
   }
-
-  /* &:active svg {
-    animation: jumpUp 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  } */
 
   svg {
     font-size: 2rem;
@@ -127,29 +132,55 @@ export default function Card({ title, price, id }) {
   const dispatch = useDispatch();
 
   const cart = useSelector(getCart);
+  const wishlist = useSelector(getWishlist);
+
+  const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
   const isInCart = cart.find((item) => item.id === id) ? true : false;
 
-  function handleAddItem() {
+  function handleAddCartItem() {
     const newItem = {
       title,
       price,
       id,
       quantity: 1,
-      totalPrice: price,
     };
 
-    dispatch(addItem(newItem));
+    dispatch(addCartItem(newItem));
   }
 
-  function handleDeleteItem() {
-    dispatch(deleteItem(id));
+  function handleDeleteCartItem() {
+    dispatch(deleteCartItem(id));
+  }
+
+  function handleAddWishlistItem() {
+    const newItem = {
+      title,
+      price,
+      id,
+      dateAdded: format(new Date(), "dd/MM/yyyy"),
+    };
+
+    dispatch(addWishlistItem(newItem));
+  }
+
+  function handleDeleteWishlistItem() {
+    dispatch(deleteWishlistItem(id));
   }
 
   return (
     <Box>
-      <StyledButton>
-        <HiOutlineHeart />
-      </StyledButton>
+      {isInWishlist ? (
+        <StyledButton onClick={handleDeleteWishlistItem}>
+          <HiHeart className="wishlisted" />
+        </StyledButton>
+      ) : (
+        <StyledButton
+          className="not-wishlisted"
+          onClick={handleAddWishlistItem}
+        >
+          <HiOutlineHeart />
+        </StyledButton>
+      )}
 
       <ImageBox>
         <Link to={`/products/product/${id}`}>
@@ -164,11 +195,11 @@ export default function Card({ title, price, id }) {
       </InformationBox>
 
       {isInCart ? (
-        <StyledButton onClick={handleDeleteItem}>
+        <StyledButton onClick={handleDeleteCartItem}>
           <HiShoppingCart className="in-cart" />
         </StyledButton>
       ) : (
-        <StyledButton onClick={handleAddItem}>
+        <StyledButton onClick={handleAddCartItem}>
           <HiOutlineShoppingCart />
         </StyledButton>
       )}

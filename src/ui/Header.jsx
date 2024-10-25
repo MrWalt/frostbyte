@@ -17,16 +17,26 @@ const StyledHeader = styled.header`
   position: fixed;
   height: 6.4rem;
   width: 100%;
-  /* padding-right: 7.2rem; */
 
   z-index: 999;
 
   background-color: var(--color-brand-700);
-  /* border-bottom: 1px solid var(--color-brand-400); */
   backdrop-filter: blur(12px);
 
   font-size: 1.6rem;
   color: var(--color-grey-100);
+`;
+
+const ImageLink = styled(Link)`
+  padding: 1.6rem;
+  height: 100%;
+
+  width: 20rem;
+  padding: 1.6rem;
+`;
+
+const Image = styled.img`
+  width: 100%;
 `;
 
 const StyledLink = styled(Link)`
@@ -146,6 +156,11 @@ export default function Header() {
         <DropDownMenu align="left">
           <DropDownMenu.Products />
         </DropDownMenu>
+
+        <ImageLink to="/">
+          <Image src="/logo.png" />
+        </ImageLink>
+
         <LinkContainer>
           <StyledLink to={`account`}>
             <HiOutlineUserCircle />

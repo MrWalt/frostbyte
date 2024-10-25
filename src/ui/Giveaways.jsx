@@ -1,35 +1,30 @@
 import styled from "styled-components";
 import Button from "./Button";
+import Heading from "./Heading";
 // import Card from "./Card";
 
 const Container = styled.div`
   width: 100%;
-  height: 52rem;
-  /* background-color: var(--color-grey-900); */
-  background-color: rgb(17, 24, 39, 0.95);
+
+  background-color: var(--color-grey-transparent);
   backdrop-filter: blur(4px);
 
-  border-bottom: 2px solid var(--color-brand-500);
-  border-right: 2px solid var(--color-brand-500);
-  border-left: 1px solid var(--color-grey-800);
-  border-top: 1px solid var(--color-grey-800);
-
-  padding: 2.4rem 26rem;
-  padding-bottom: 6.4rem;
+  padding: 6.4rem;
+  padding-top: 2.4rem;
 
   color: var(--color-grey-0);
 `;
 
-const Card = styled.div`
-  width: 100%;
-  height: 100%;
-  /* background-color: red; */
+const StyledHeading = styled(Heading)`
+  text-align: center;
+  margin-bottom: 3.2rem;
+`;
 
-  border-left: 2px solid var(--color-brand-500);
-  border-top: 2px solid var(--color-brand-500);
-  border-left: 1px solid var(--color-grey-800);
-  border-bottom: 1px solid var(--color-grey-800);
-  border-right: 1px solid var(--color-grey-800);
+const Card = styled.div`
+  width: 28rem;
+  height: 36rem;
+
+  border: 1px solid var(--color-grey-800);
 
   display: flex;
   flex-direction: column;
@@ -63,6 +58,9 @@ const StyledSpan = styled.span`
 export default function Giveaways() {
   return (
     <Container>
+      <StyledHeading variation="secondary">
+        Check Out Our Giveaways
+      </StyledHeading>
       <StyledDiv>
         <Card>
           <p>Product Title</p>

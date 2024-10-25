@@ -2,18 +2,27 @@ import styled from "styled-components";
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 90rem;
-  height: 52rem;
+  width: 100%;
 
-  display: flex;
-  gap: 0.4rem;
+  border-top: 1px solid var(--color-brand-500);
+  border-bottom: 1px solid var(--color-brand-500);
+  background-color: var(--color-grey-900);
 
-  margin-bottom: 4.8rem;
+  padding: 6.4rem;
+`;
+
+const CardBox = styled.div`
+  display: grid;
+
+  max-width: 140rem;
+  margin: 0 auto;
+
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem;
 `;
 
 const StyledDiv = styled.div`
-  width: 20%;
-  height: 100%;
+  height: 36rem;
 
   position: relative;
 
@@ -22,7 +31,7 @@ const StyledDiv = styled.div`
   background-color: var(--color-grey-900);
   padding: 2px;
 
-  transition: var(--animation-fast);
+  transition: var(--animation-medium);
 
   border: 1px solid var(--color-grey-800);
 
@@ -31,7 +40,7 @@ const StyledDiv = styled.div`
   &:before {
     content: "";
 
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--animation-slow);
     background-color: var(--color-brand-500);
 
     width: 5rem;
@@ -45,10 +54,8 @@ const StyledDiv = styled.div`
   }
 
   &:hover {
-    width: 80%;
-
     &:before {
-      transform: translate(100%, 100%) scale(30);
+      transform: translate(100%, 100%) scale(20);
     }
   }
 `;
@@ -71,11 +78,11 @@ const Card = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: rgb(17, 24, 39, 0.99);
+  background-color: var(--color-grey-transparent);
   backdrop-filter: blur(12px);
 
   &:hover div:last-child {
-    transform: translate(15%, 55%);
+    transform: translate(0%, 40%);
   }
 `;
 
@@ -100,66 +107,64 @@ const InformationBubble = styled.div`
   height: 50rem;
   border-radius: 50%;
 
-  transform: translate(100%, 100%);
+  transform: translate(0%, 100%);
 
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--animation-medium);
 
   background-color: var(--color-brand-500);
-
-  &:hover {
-    transform: translate(15%, 55%);
-  }
 `;
 
 export default function FeaturedCards() {
   return (
     <>
       <Container>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
+        <CardBox>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+        </CardBox>
       </Container>
     </>
   );

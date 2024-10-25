@@ -9,14 +9,12 @@ const Container = styled.div`
   background-color: var(--color-grey-900);
 
   padding: 6.4rem;
-
-  margin-bottom: 4.8rem;
 `;
 
 const CardBox = styled.div`
   display: grid;
 
-  width: 140rem;
+  max-width: 140rem;
   margin: 0 auto;
 
   grid-template-columns: repeat(5, 1fr);

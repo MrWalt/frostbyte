@@ -7,64 +7,58 @@ import {
 import styled from "styled-components";
 import Button from "./Button";
 
-const CarouselContainer = styled.div`
+const Container = styled.div`
+  height: calc(100vh - 6.4rem - 2px);
+  width: 100%;
+
+  background-color: var(--color-grey-transparent);
+
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 3.6rem; */
-
-  width: 100%;
-  height: 72rem;
-  align-self: stretch;
-
-  overflow: hidden;
-
-  border-left: 1px solid var(--color-grey-800);
-  border-top: 1px solid var(--color-grey-800);
-  border-right: 2px solid var(--color-brand-600);
-  border-bottom: 2px solid var(--color-brand-600);
-
-  background-color: rgb(17, 24, 39, 0.95);
 
   position: relative;
   backdrop-filter: blur(4px);
 `;
 
+const CarouselContainer = styled.div`
+  width: 140rem;
+  height: 100%;
+
+  padding: 9.6rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100%;
+  justify-content: center;
+`;
+
 const ImageContainer = styled.div`
   height: 100%;
   width: 100%;
-  padding: 3.6rem 0;
-
-  position: relative;
 
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  overflow: hidden;
 `;
 
 const Image = styled.img`
   display: inline-block;
-  max-width: 40%;
-  height: auto;
-
-  position: absolute;
-  bottom: 50%;
-  right: 0;
-  transform: translate(-25%, 50%);
+  max-width: 100%;
+  height: 100%;
 `;
 
-const CarouselSpecs = styled.div`
-  padding: 1.6rem 3.2rem;
+const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
+  /* justify-self: center; */
 
-  transform: translate(25%, -25%);
+  padding: 4.8rem 3.6rem;
+`;
 
+const Specs = styled.div`
   color: var(--color-grey-0);
   font-size: 2rem;
 
@@ -86,21 +80,14 @@ const CarouselSpecs = styled.div`
 `;
 
 const PriceContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
   font-size: 6.4rem;
   color: var(--color-grey-100);
-  transform: translate(75%, 25%);
 
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 
-  padding: 1.4rem 1.8rem;
-  /* background-color: var(--color-brand-900); */
+  padding-left: 2.4rem;
 
   span {
     font-size: 1.8rem;
@@ -128,12 +115,6 @@ const StyledH1 = styled.h1`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(50%, 50%);
-  z-index: 1;
 
   & svg {
     font-size: 6.4rem;
@@ -168,45 +149,57 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const IconBox = styled.div`
+  display: flex;
+`;
+
 export default function Carousel() {
   return (
-    <CarouselContainer>
-      <StyledButton>
-        <HiArrowLeft />
-      </StyledButton>
-      <StyledButton>
-        <HiArrowRight />
-      </StyledButton>
-      {/* <Heading variation="primary">Check out our best deals!</Heading> */}
-      <StyledH1>
-        <HiFire /> DEALS
-      </StyledH1>
-      <ImageContainer>
-        <Image src="/computer-1.png" />
-      </ImageContainer>
-      <CarouselSpecs>
-        <p>
-          <HiArrowLongRight /> RTX 4090
-        </p>
-        <p>
-          <HiArrowLongRight /> Intel I9-14990K
-        </p>
-        <p>
-          <HiArrowLongRight /> 4TB SSD Storage
-        </p>
-        <p>
-          <HiArrowLongRight /> 128GB DDR5 6400MHz
-        </p>
-        <p>
-          <HiArrowLongRight /> Custom Liquid Cooling
-        </p>
-      </CarouselSpecs>
-      <PriceContainer>
-        <p>
-          <span>$</span>3,999
-        </p>
-        <p>$4,999</p>
-      </PriceContainer>
-    </CarouselContainer>
+    <Container>
+      <CarouselContainer>
+        <StyledButton>
+          <HiArrowLeft />
+        </StyledButton>
+        <StyledButton>
+          <HiArrowRight />
+        </StyledButton>
+        <InfoBox>
+          <IconBox>
+            <StyledH1>
+              <HiFire />
+              <span>DEALS</span>
+            </StyledH1>
+
+            <PriceContainer>
+              <p>
+                <span>$</span>3,999
+              </p>
+              <p>$4,999</p>
+            </PriceContainer>
+          </IconBox>
+          <Specs>
+            <p>
+              <HiArrowLongRight /> NVidia RTX 4090
+            </p>
+            <p>
+              <HiArrowLongRight /> Intel I9-14990K
+            </p>
+            <p>
+              <HiArrowLongRight /> 4TB SSD Storage
+            </p>
+            <p>
+              <HiArrowLongRight /> 128GB DDR5 6400MHz
+            </p>
+            <p>
+              <HiArrowLongRight /> Custom Liquid Cooling
+            </p>
+          </Specs>
+        </InfoBox>
+
+        <ImageContainer>
+          <Image src="/computer-1.png" />
+        </ImageContainer>
+      </CarouselContainer>
+    </Container>
   );
 }

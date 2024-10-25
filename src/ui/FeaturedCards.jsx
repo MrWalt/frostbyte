@@ -2,18 +2,30 @@ import styled from "styled-components";
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 90rem;
-  height: 52rem;
+  width: 100%;
 
   display: flex;
   gap: 0.4rem;
 
+  border-top: 2px solid var(--color-brand-500);
+  background-color: var(--color-grey-900);
+
+  padding: 4.8rem;
+
   margin-bottom: 4.8rem;
 `;
 
+const CardBox = styled.div`
+  display: grid;
+
+  width: 140rem;
+  margin: 0 auto;
+
+  grid-template-columns: repeat(5, 1fr);
+`;
+
 const StyledDiv = styled.div`
-  width: 20%;
-  height: 100%;
+  height: 36rem;
 
   position: relative;
 
@@ -22,7 +34,7 @@ const StyledDiv = styled.div`
   background-color: var(--color-grey-900);
   padding: 2px;
 
-  transition: var(--animation-fast);
+  transition: var(--animation-medium);
 
   border: 1px solid var(--color-grey-800);
 
@@ -45,8 +57,6 @@ const StyledDiv = styled.div`
   }
 
   &:hover {
-    width: 80%;
-
     &:before {
       transform: translate(100%, 100%) scale(30);
     }
@@ -115,51 +125,53 @@ export default function FeaturedCards() {
   return (
     <>
       <Container>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
-        <StyledDiv>
-          <Card>
-            <ProductTitle>Product Title</ProductTitle>
-            <ImageContainer>Product Image</ImageContainer>
-            <InformationBubble>
-              <p>Product Info</p>
-            </InformationBubble>
-          </Card>
-        </StyledDiv>
+        <CardBox>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+          <StyledDiv>
+            <Card>
+              <ProductTitle>Product Title</ProductTitle>
+              <ImageContainer>Product Image</ImageContainer>
+              <InformationBubble>
+                <p>Product Info</p>
+              </InformationBubble>
+            </Card>
+          </StyledDiv>
+        </CardBox>
       </Container>
     </>
   );

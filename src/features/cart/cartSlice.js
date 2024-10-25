@@ -8,10 +8,10 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addItem(state, action) {
+    addCartItem(state, action) {
       state.cart.push(action.payload);
     },
-    deleteItem(state, action) {
+    deleteCartItem(state, action) {
       state.cart = state.cart.filter((item) => item.id !== action.payload);
     },
     increaseItemQuantity(state, action) {
@@ -24,7 +24,8 @@ const cartSlice = createSlice({
 
       item.quantity--;
 
-      if (item.quantity === 0) cartSlice.caseReducers.deleteItem(state, action);
+      if (item.quantity === 0)
+        cartSlice.caseReducers.deleteCartItem(state, action);
     },
     clearCart(state) {
       state.cart = [];
@@ -47,10 +48,10 @@ export function getTotalPrice(state) {
 }
 
 export const {
-  addItem,
+  addCartItem,
   increaseItemQuantity,
   decreaseItemQuantity,
-  deleteItem,
+  deleteCartItem,
   clearCart,
 } = cartSlice.actions;
 

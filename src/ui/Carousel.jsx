@@ -22,7 +22,7 @@ const Container = styled.div`
 `;
 
 const CarouselContainer = styled.div`
-  width: 140rem;
+  width: 160rem;
   height: 100%;
 
   padding: 9.6rem 0;
@@ -40,6 +40,8 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
+
+  padding: 2.4rem 0;
 `;
 
 const Image = styled.img`
@@ -53,7 +55,7 @@ const InfoBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  /* justify-self: center; */
+  justify-self: center;
 
   padding: 4.8rem 3.6rem;
 `;
@@ -131,19 +133,21 @@ const StyledButton = styled(Button)`
   font-size: 2.4rem;
 
   &:first-of-type {
-    top: 50%;
-    left: 0;
+    bottom: 2.4rem;
+    right: 50%;
     width: 6.4rem;
-    transform: translate(50%, -50%);
+
+    transform: translateX(-5%);
 
     z-index: 99;
   }
 
   &:last-of-type {
-    top: 50%;
-    right: 0;
+    bottom: 2.4rem;
+    left: 50%;
     width: 6.4rem;
-    transform: translate(-50%, -50%);
+
+    transform: translateX(5%);
 
     z-index: 99;
   }
@@ -163,6 +167,7 @@ export default function Carousel() {
         <StyledButton>
           <HiArrowRight />
         </StyledButton>
+
         <InfoBox>
           <IconBox>
             <StyledH1>
@@ -177,6 +182,7 @@ export default function Carousel() {
               <p>$4,999</p>
             </PriceContainer>
           </IconBox>
+
           <Specs>
             <p>
               <HiArrowLongRight /> NVidia RTX 4090

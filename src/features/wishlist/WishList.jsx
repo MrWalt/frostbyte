@@ -7,6 +7,17 @@ const Box = styled.div`
   padding: 0.8rem;
 `;
 
+const StyledSpan = styled.span`
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  text-align: center;
+
+  display: inline-block;
+
+  width: 100%;
+  margin-top: 2.4rem;
+`;
+
 export default function WishList() {
   const wishlist = useSelector(getWishlist);
 
@@ -23,7 +34,7 @@ export default function WishList() {
           />
         ))
       ) : (
-        <p>Your Wishlist Is Empty</p>
+        <StyledSpan>Your Wishlist Is Empty</StyledSpan>
       )}
     </Box>
   );

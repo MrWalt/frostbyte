@@ -12,8 +12,8 @@ const Box = styled.div`
   height: 28rem;
   width: 100%;
 
-  background-color: var(--color-grey-800);
-  border: 1px solid var(--color-grey-700);
+  background-color: var(--color-grey-900);
+  border: 1px solid var(--color-grey-800);
 
   font-size: 1.6rem;
   color: var(--color-grey-0);
@@ -79,7 +79,7 @@ const ButtonBox = styled.div`
 
   svg {
     background-color: var(--color-grey-900);
-    border: 1px solid var(--color-grey-700);
+    border: 1px solid var(--color-grey-800);
 
     width: 2.8rem;
     height: 2.8rem;
@@ -93,7 +93,7 @@ const ButtonBox = styled.div`
     transition: var(--animation-fast);
 
     &:hover {
-      background-color: var(--color-grey-700);
+      background-color: var(--color-grey-800);
     }
   }
 `;
@@ -121,14 +121,14 @@ const DeleteButton = styled.button`
   align-items: center;
 
   background-color: var(--color-grey-900);
-  border: 1px solid var(--color-grey-700);
+  border: 1px solid var(--color-grey-800);
 
   cursor: pointer;
 
   transition: var(--animation-fast);
 
   &:hover {
-    background-color: var(--color-grey-700);
+    background-color: var(--color-grey-800);
   }
 
   svg {

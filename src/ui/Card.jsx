@@ -183,7 +183,8 @@ export default function Card({ title, price, id }) {
       )}
 
       <ImageBox>
-        <Link to={`/products/product/${id}`}>
+        <Link to={`/product/${id}`}>
+          IMAGE
           <Image />
         </Link>
       </ImageBox>

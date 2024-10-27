@@ -15,6 +15,7 @@ import PageNotFound from "./pages/PageNotFound";
 import CartSummary from "./pages/CartSummary";
 import About from "./pages/About";
 import Legal from "./pages/Legal";
+import Product from "./pages/Product";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="products" element={<Products />} />
             <Route path="products/:category" element={<Products />} />
             <Route path="cart-summary" element={<CartSummary />} />
+            <Route path="product/:id" element={<Product />} />
             <Route path="login" element={<Login />} />
             <Route path="about" element={<About />} />
             <Route path="legal" element={<Legal />} />

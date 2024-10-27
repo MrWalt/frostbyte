@@ -17,6 +17,7 @@ import About from "./pages/About";
 import Legal from "./pages/Legal";
 import Product from "./pages/Product";
 import Settings from "./features/account/Settings";
+import Profile from "./features/account/Profile";
 
 export default function App() {
   return (
@@ -35,12 +36,9 @@ export default function App() {
                 </ProtectedRoute>
               }
             >
-              <Route path="/account/profile" element={<p>This is profile</p>} />
+              <Route path="/account/profile" element={<Profile />} />
               <Route path="/account/orders" element={<p>This is Orders</p>} />
-              <Route
-                path="/account/settings"
-                element={<Settings>This is settings</Settings>}
-              />
+              <Route path="/account/settings" element={<Settings />} />
             </Route>
             <Route path="checkout" element={<CheckOut />} />
             <Route path="products" element={<Products />} />

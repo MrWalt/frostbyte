@@ -13,7 +13,7 @@ const StyledSection = styled(Section)`
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 140rem;
+  width: 120rem;
   border: 1px solid var(--color-grey-800);
   height: 56rem;
 
@@ -32,7 +32,6 @@ export default function Account() {
         <AccountHeader />
         <Outlet />
       </Container>
-      ;
     </StyledSection>
   );
 }

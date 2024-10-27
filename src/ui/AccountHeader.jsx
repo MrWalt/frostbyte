@@ -12,6 +12,8 @@ const Box = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  flex-shrink: 0;
 `;
 
 const StyledLink = styled(NavLink)`

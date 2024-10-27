@@ -11,23 +11,27 @@ const StyledDiv = styled.div`
   margin: 0 auto;
 `;
 
+const StyledSpan = styled.span`
+  color: var(--color-brand-500);
+`;
+
 export default function Contact() {
   return (
     <Section id="contact">
       <StyledDiv>
         <Heading variation="secondary">Contact us</Heading>
         <TextArea>
-          Before you submit a ticket or call us, please take a look at our FAQ
-          below, you may find your answer there. If you require further
-          assistance, please contact our support team by any means.
+          Before reaching out to our support team, please take a look at our
+          <StyledSpan> Frequently Asked Questions</StyledSpan> below. You may
+          find answers to your questions there, saving you time and effort.
         </TextArea>
         <FrequentlyAskedQuestions />
         <Heading variation="secondary">Still need help?</Heading>
         <TextArea>
-          You may select one or more options, we recommend just chosing one as
-          it will become very difficult for our support team to organize your
-          ticket and provide you the best support possible. Please do not send
-          tickets repeatedly, this only increases the wait.
+          If you've tried our troubleshooting tips and still need assistance,
+          please contact our dedicated support team. We're committed to
+          providing prompt and effective solutions to your technical issues. You
+          can reach us through the following methods.
         </TextArea>
         <ContactOptions />
       </StyledDiv>

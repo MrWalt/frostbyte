@@ -11,7 +11,7 @@ const Container = styled.div`
 export default function FrequentlyAskedQuestions() {
   return (
     <Container>
-      <Heading variation="tertiary">F.A.Q</Heading>
+      <Heading variation="tertiary">Frequently Asked Questions</Heading>
       {questions.map((item) => (
         <Accordion
           question={item.question}

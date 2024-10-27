@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalStyles } from "./styles/GlobalStyles";
+import { Provider } from "react-redux";
+import store from "./store";
 
 import AppLayout from "./ui/AppLayout";
 import Contact from "./pages/Contact";
@@ -10,9 +12,9 @@ import Products from "./pages/Products";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import PageNotFound from "./pages/PageNotFound";
-import { Provider } from "react-redux";
-import store from "./store";
 import CartSummary from "./pages/CartSummary";
+import About from "./pages/About";
+import Legal from "./pages/Legal";
 
 export default function App() {
   return (
@@ -36,6 +38,8 @@ export default function App() {
             <Route path="products/:category" element={<Products />} />
             <Route path="cart-summary" element={<CartSummary />} />
             <Route path="login" element={<Login />} />
+            <Route path="about" element={<About />} />
+            <Route path="legal" element={<Legal />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>

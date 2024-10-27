@@ -21,6 +21,8 @@ const StyledLink = styled(Link)`
   position: relative;
   padding: 0.2rem;
 
+  transition: var(--animation-fast);
+
   &::before {
     content: "";
     position: absolute;
@@ -49,11 +51,9 @@ export default function Footer() {
   return (
     <StyledFooter>
       <StyledLink href="#">Terms of Service</StyledLink>
-      <StyledLink href="#">Support</StyledLink>
-      <StyledLink href="#">About</StyledLink>
-      <StyledLink href="#">Professional</StyledLink>
-      <StyledLink href="#">Legal</StyledLink>
-      <StyledLink href="#">Advertising</StyledLink>
+      <StyledLink to="/contact">Support</StyledLink>
+      <StyledLink to="/about">About</StyledLink>
+      <StyledLink to="/legal">Legal</StyledLink>
     </StyledFooter>
   );
 }

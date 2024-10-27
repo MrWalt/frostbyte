@@ -1,47 +1,58 @@
 const questions = [
   {
-    question: "My order says its delivered but I have not received it.",
+    question: "How can I track my order?",
     answer:
-      "Your parcel may have been held up in customs, if you do not hear anything regarding your parcel in 24 hours, please contact us.",
+      "Once your order is shipped, you will receive a tracking number via email and on the order summary page. You can use this tracking number to monitor the progress of your shipment on our website or the carrier's website.",
   },
   {
-    question: "My item arrived in a damaged package.",
+    question: "What is your warranty policy?",
     answer:
-      "Contact our support team and provide images of the damaged package. Do not open it as this will forfeit any right to return a damaged parcel.",
+      "We offer a 4-year warranty on most of our products. Please refer to the specific product page or contact our customer support team for more details.",
   },
   {
-    question: "I purchased the wrong item.",
+    question: "What if my package is lost or stolen?",
     answer:
-      "Check the status of your package, if it still says pending, you may find a cancel order button in Account > My Orders. You will get a full refund in 5-9 business days.",
+      "If your package is lost or stolen, please contact our customer support team immediately. We will work with the shipping carrier to investigate the issue and resolve it as quickly as possible.",
   },
   {
-    question: "I provided wrong information such as address, name, phone.",
+    question: "What if my order arrives damaged?",
     answer:
-      "Contact our support team before the package is sent out as there is not much we can do after it is sent.",
+      "If your order arrives damaged, please contact our customer support team within 7 days of receiving the package. We will provide you with instructions on how to return the damaged item and receive a replacement or refund.",
   },
   {
-    question: "I was charged the wrong amount.",
+    question: "What is your return policy?",
     answer:
-      "Please wait 1-2 days, you should be refunded automatically, if that does not happen please contact our support.",
+      "We offer a 14-day return policy for most products. To be eligible for a return, the product must be in its original condition and packaging. Please refer to our return policy for more details. ",
   },
   {
-    question: "My item does not work as intended.",
+    question: "Can I cancel or modify my order?",
     answer:
-      "Please contact our support immediately and provide images and proof the item is not working as intended and was not caused by you. You will need to send the item back to us, after confirming it is not working we will offer you a refund or a replacement.",
+      "You may be able to cancel or modify your order if it has not yet been shipped. Please contact our customer support team as soon as possible to request a cancellation or modification.",
   },
   {
-    question: "Warranty expired on my malfunctioning item.",
+    question: "What are your shipping costs and delivery times?",
     answer:
-      "Per our policy, we do not offer refunds or replacements for malfunctioning items after warranty has expired.",
+      "Shipping costs and delivery times vary depending on your location and the shipping method you choose. Please refer to our shipping policy for more details.",
   },
   {
-    question: "My package was stolen off my porch.",
+    question: "Can I use a coupon code?",
     answer:
-      "Please file a report with your local authorities and contact our support team with the report attached. If everything is accurate and well we will send you a replacement item free of charge.",
+      'Yes, you can use a coupon code during checkout. Please enter the coupon code in the designated field and click "Apply."',
   },
   {
-    question: "My discount code does not work.",
-    answer: "Freshly given discount codes need 1-2 hours to become active.",
+    question: "What is your refund policy?",
+    answer:
+      "Our refund policy varies depending on the specific product and reason for return. Please refer to our return policy for more details.",
+  },
+  {
+    question: "Can I return a product I purchased as a gift?",
+    answer:
+      "Yes, you can return a product purchased as a gift. However, the refund will be issued to the original purchaser.",
+  },
+  {
+    question: "Can I pick up my order in person?",
+    answer:
+      "We currently do not offer in-store pickup. All orders are shipped directly to your address.",
   },
 ];
 

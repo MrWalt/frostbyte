@@ -63,6 +63,12 @@ const StyledDiv = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  .active {
+    background-color: var(--color-grey-800);
+    border-left: 8px solid var(--color-brand-800);
+    padding-left: 3.2rem;
+  }
 `;
 
 const StyledLabel = styled.label`

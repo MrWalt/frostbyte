@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Heading from "../../ui/Heading";
 import { Link } from "react-router-dom";
 import Button from "../../ui/Button";
+import Input from "../../ui/Input";
+import Label from "../../ui/Label";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -33,45 +35,23 @@ const StyledDiv = styled.div`
   margin-top: 1.8rem;
 `;
 
-const StyledInput = styled.input`
-  display: block;
-
-  width: 100%;
-
-  padding: 1.2rem 1.8rem;
-
-  background-color: var(--color-grey-0);
-  border-bottom: 3px solid var(--color-grey-0);
-
-  font-size: 1.6rem;
-  transition: var(--animation-fast);
-
-  &:focus {
-    border-bottom: 3px solid var(--color-brand-500);
-  }
-
-  &:placeholder-shown + label {
-    transform: translateY(-4rem);
-    opacity: 0;
-    visibility: hidden;
-  }
-
+const StyledInput = styled(Input)`
   &:last-of-type {
     margin-top: 1.8rem;
   }
 `;
 
-const StyledLabel = styled.label`
-  margin-left: 1.8rem;
+// const StyledLabel = styled.label`
+//   margin-left: 1.8rem;
 
-  color: var(--color-grey-400);
-  font-size: 1.4rem;
+//   color: var(--color-grey-400);
+//   font-size: 1.4rem;
 
-  transition: var(--animation-fast);
+//   transition: var(--animation-fast);
 
-  transform: translateY(-7rem);
-  display: block;
-`;
+//   transform: translateY(-7rem);
+//   display: block;
+// `;
 
 const StyledSpan = styled.span`
   display: block;
@@ -106,7 +86,7 @@ export default function LoginForm() {
           id="email"
           spellCheck="false"
         />
-        <StyledLabel htmlFor="email">E-Mail Address</StyledLabel>
+        <Label htmlFor="email">E-Mail Address</Label>
 
         <StyledInput
           type="password"
@@ -114,7 +94,7 @@ export default function LoginForm() {
           id="password"
           spellCheck="false"
         />
-        <StyledLabel htmlFor="password">Password</StyledLabel>
+        <Label htmlFor="password">Password</Label>
 
         <StyledDiv>
           <Button>Login</Button>

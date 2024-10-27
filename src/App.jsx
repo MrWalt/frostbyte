@@ -16,6 +16,7 @@ import CartSummary from "./pages/CartSummary";
 import About from "./pages/About";
 import Legal from "./pages/Legal";
 import Product from "./pages/Product";
+import Settings from "./features/account/Settings";
 
 export default function App() {
   return (
@@ -33,7 +34,14 @@ export default function App() {
                   <Account />
                 </ProtectedRoute>
               }
-            />
+            >
+              <Route path="/account/profile" element={<p>This is profile</p>} />
+              <Route path="/account/orders" element={<p>This is Orders</p>} />
+              <Route
+                path="/account/settings"
+                element={<Settings>This is settings</Settings>}
+              />
+            </Route>
             <Route path="checkout" element={<CheckOut />} />
             <Route path="products" element={<Products />} />
             <Route path="products/:category" element={<Products />} />

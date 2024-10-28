@@ -75,12 +75,6 @@ input, button {
     pointer-events: auto;
 }
 
-.active {
-    background-color: var(--color-grey-800);
-    border-left: 8px solid var(--color-brand-800);
-    padding-left: 3.2rem;
-}
-
 .in-cart, .wishlisted {
     font-size: 2rem;
     stroke: var(--color-grey-0);

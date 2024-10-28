@@ -13,6 +13,7 @@ import Cart from "../features/cart/Cart";
 import { useSelector } from "react-redux";
 import { getTotalItemsInCart } from "../features/cart/cartSlice";
 import WishList from "../features/wishlist/WishList";
+import useUser from "../features/authentication/useUser";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -146,6 +147,7 @@ const LinkContainer = styled.div`
 
 export default function Header() {
   const itemsInCart = useSelector(getTotalItemsInCart);
+  const { isAuthenticated } = useUser();
 
   return (
     <StyledHeader>
@@ -165,7 +167,7 @@ export default function Header() {
         <LinkContainer>
           <StyledLink to={`account`}>
             <HiOutlineUserCircle />
-            Account
+            {isAuthenticated ? "Account" : "Login"}
           </StyledLink>
 
           <Box>

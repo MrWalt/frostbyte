@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useUser from "../authentication/useUser";
 import { HiOutlinePencil } from "react-icons/hi2";
+import Button from "../../ui/Button";
 
 const Box = styled.div`
   width: 100%;
@@ -11,19 +12,50 @@ const StyledP = styled.p`
   font-size: 2rem;
 `;
 
-const StyledButton = styled.button`
-  display: inline-block;
+const InfoBox = styled.div`
+  margin-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
 
+  padding-left: 2.4rem;
+
+  width: 36rem;
+
+  svg {
+    font-size: 1.6rem;
+    margin-left: 0.4rem;
+
+    flex-shrink: 0;
+  }
+`;
+
+const StyledInput = styled.input`
   font-size: 1.6rem;
-
-  position: relative;
+  width: 100%;
 
   margin-top: 0.4rem;
-  margin-left: 2.4rem;
-
-  padding: 0.4rem 3.2rem 0.4rem 0.4rem;
 
   color: var(--color-brand-500);
+
+  cursor: pointer;
+
+  &::placeholder {
+    color: var(--color-brand-500);
+  }
+`;
+
+const StyledSpan = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 0.4rem;
+
+  padding: 0.2rem 0.4rem;
+
+  width: 100%;
+
+  border-bottom: 1px solid var(--color-grey-800);
 
   transition: var(--animation-fast);
 
@@ -32,21 +64,20 @@ const StyledButton = styled.button`
   &:hover {
     background-color: var(--color-grey-800);
   }
-
-  svg {
-    font-size: 1.6rem;
-    margin-left: 0.4rem;
-
-    position: absolute;
-    right: 6px;
-    top: 50%;
-
-    transform: translateY(-50%);
-  }
 `;
 
-const InfoBox = styled.div`
-  margin-bottom: 2.4rem;
+const Email = styled.span`
+  display: inline-block;
+
+  color: var(--color-brand-500);
+
+  width: 100%;
+
+  padding: 0.2rem 0.4rem;
+
+  margin-top: 0.8rem;
+
+  border-bottom: 1px solid var(--color-grey-800);
 `;
 
 export default function Profile() {
@@ -54,33 +85,37 @@ export default function Profile() {
   const shippingAddress = address.concat(`, ${country}, ${city}`);
   return (
     <Box>
+      <StyledP>Full Name</StyledP>
       <InfoBox>
-        <StyledP>Full Name</StyledP>
-
-        <StyledButton>
-          {userName} <HiOutlinePencil />
-        </StyledButton>
+        <StyledSpan>
+          <StyledInput type="text" placeholder={userName} spellCheck="false" />
+          <HiOutlinePencil />
+        </StyledSpan>
       </InfoBox>
 
+      <StyledP>E-Mail</StyledP>
       <InfoBox>
-        <StyledP>E-Mail</StyledP>
-        <StyledButton>
-          {email} <HiOutlinePencil />
-        </StyledButton>
+        <Email>{email}</Email>
       </InfoBox>
 
+      <StyledP>Address</StyledP>
       <InfoBox>
-        <StyledP>Phone Number</StyledP>
-        <StyledButton>
-          {phone} <HiOutlinePencil />
-        </StyledButton>
+        <StyledSpan>
+          <StyledInput
+            type="text"
+            placeholder={shippingAddress}
+            spellCheck="false"
+          />
+          <HiOutlinePencil />
+        </StyledSpan>
       </InfoBox>
 
+      <StyledP>Phone</StyledP>
       <InfoBox>
-        <StyledP>Address</StyledP>
-        <StyledButton>
-          {shippingAddress} <HiOutlinePencil />
-        </StyledButton>
+        <StyledSpan>
+          <StyledInput type="text" placeholder={phone} spellCheck="false" />
+          <HiOutlinePencil />
+        </StyledSpan>
       </InfoBox>
     </Box>
   );

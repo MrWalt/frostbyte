@@ -15,7 +15,7 @@ const Container = styled.div`
   margin: 0 auto;
   width: 120rem;
   border: 1px solid var(--color-grey-800);
-  height: 56rem;
+  /* height: 56rem; */
 
   background-color: var(--color-grey-transparent);
   backdrop-filter: blur(4px);

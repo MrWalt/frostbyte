@@ -65,7 +65,9 @@ export default function Price({ price, size }) {
     <div>
       <Currency size={size}>$</Currency>
       <StyledPrice size={size}>{formattedPrice.at(0)},</StyledPrice>
-      <Cents size={size}>{formattedPrice.at(1)}</Cents>
+      <Cents size={size}>
+        {formattedPrice.at(1) > 0 ? formattedPrice.at(1) : "00"}
+      </Cents>
     </div>
   );
 }

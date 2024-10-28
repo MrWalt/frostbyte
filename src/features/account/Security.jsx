@@ -15,9 +15,6 @@ const Container = styled.div`
 const Box = styled.div`
   width: 100%;
 
-  display: flex;
-  justify-content: center;
-
   input {
     margin-top: 2.4rem;
     width: 32rem;
@@ -34,7 +31,7 @@ const Box = styled.div`
   }
 `;
 
-export default function Settings() {
+export default function Security() {
   return (
     <Container>
       <Box>
@@ -46,14 +43,7 @@ export default function Settings() {
           <Label>New Password</Label>
           <Input type="password" placeholder="Confirm Password" />
           <Label>Confirm Password</Label>
-          <Button>Update</Button>
-        </div>
-      </Box>
-      <Box>
-        <div>
-          <Heading variation="tertiary">Update Your Name</Heading>
-          <Input type="text" placeholder="Full Name" />
-          <Label>Full Name</Label>
+          <Button>Update Password</Button>
         </div>
       </Box>
     </Container>

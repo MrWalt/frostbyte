@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import useUser from "../authentication/useUser";
 import { HiOutlinePencil } from "react-icons/hi2";
-import Button from "../../ui/Button";
 
 const Box = styled.div`
   width: 100%;

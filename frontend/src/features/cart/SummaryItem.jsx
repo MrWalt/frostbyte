@@ -25,6 +25,8 @@ const Box = styled.div`
 const Image = styled.div`
   width: 25%;
 
+  flex-shrink: 0;
+
   text-align: center;
 `;
 

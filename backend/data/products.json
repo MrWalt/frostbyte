@@ -1,0 +1,442 @@
+[
+  {
+    "title": "NVIDIA GeForce RTX 4090 Ti 24GB",
+    "manufacturer": "NVIDIA",
+    "specifications": [
+      "NVIDIA Ada Lovelace Chipset",
+      "2520MHz Core Clock Speed",
+      "2895MHz Boost Clock Speed",
+      "450W Power Consumption",
+      "24GB GDDR6X Memory (384-bit Bus)",
+      "DLSS 3",
+      "Ray Tracing",
+      "AI Acceleration",
+      "PCIe Gen 5.0"
+    ],
+    "priceUSD": 1999.99,
+    "priceEUR": 2199.99,
+    "category": "graphics-cards"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 4090 24GB",
+    "manufacturer": "NVIDIA",
+    "specifications": [
+      "NVIDIA Ada Lovelace Chipset",
+      "2235MHz Core Clock Speed",
+      "2520MHz Boost Clock Speed",
+      "450W Power Consumption",
+      "24GB GDDR6X Memory (384-bit Bus)",
+      "DLSS 3",
+      "Ray Tracing",
+      "AI Acceleration",
+      "PCIe Gen 5.0"
+    ],
+    "priceUSD": 1599.99,
+    "priceEUR": 1799.99,
+    "category": "graphics-cards"
+  },
+  {
+    "title": "AMD Radeon RX 7900 XTX 24GB",
+    "manufacturer": "AMD",
+    "specifications": [
+      "AMD RDNA 3 Chipset",
+      "2300MHz Core Clock Speed",
+      "2500MHz Boost Clock Speed",
+      "355W Power Consumption",
+      "24GB GDDR6 Memory (384-bit Bus)",
+      "FSR 3",
+      "Ray Tracing",
+      "AI Acceleration",
+      "PCIe Gen 4.0"
+    ],
+    "priceUSD": 999.99,
+    "priceEUR": 1099.99,
+    "category": "graphics-cards"
+  },
+  {
+    "title": "AMD Radeon RX 7900 XT 20GB",
+    "manufacturer": "AMD",
+    "specifications": [
+      "AMD RDNA 3 Chipset",
+      "2000MHz Core Clock Speed",
+      "2400MHz Boost Clock Speed",
+      "300W Power Consumption",
+      "20GB GDDR6 Memory (320-bit Bus)",
+      "FSR 3",
+      "Ray Tracing",
+      "AI Acceleration",
+      "PCIe Gen 4.0"
+    ],
+    "priceUSD": 899.99,
+    "priceEUR": 999.99,
+    "category": "graphics-cards"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 4080 Ti 12GB",
+    "manufacturer": "NVIDIA",
+    "specifications": [
+      "NVIDIA Ada Lovelace Chipset",
+      "2610MHz Core Clock Speed",
+      "2925MHz Boost Clock Speed",
+      "355W Power Consumption",
+      "12GB GDDR6X Memory (192-bit Bus)",
+      "DLSS 3",
+      "Ray Tracing",
+      "AI Acceleration",
+      "PCIe Gen 5.0"
+    ],
+    "priceUSD": 1199.99,
+    "priceEUR": 1399.99,
+    "category": "graphics-cards"
+  },
+  {
+    "title": "Intel Core i9-13900K 5.8GHz",
+    "manufacturer": "Intel",
+    "specifications": [
+      "Intel Raptor Lake Architecture",
+      "8 Performance Cores, 16 Efficient Cores",
+      "24 Threads",
+      "3.2 GHz Base Clock Speed",
+      "30MB Intel Smart Cache"
+    ],
+    "priceUSD": 589.99,
+    "priceEUR": 699.99,
+    "category": "processors"
+  },
+  {
+    "title": "AMD Ryzen 9 7950X 5.7GHz",
+    "manufacturer": "AMD",
+    "specifications": [
+      "AMD Zen 4 Architecture",
+      "16 Cores, 32 Threads",
+      "4.5 GHz Base Clock Speed",
+      "80MB L3 Cache"
+    ],
+    "priceUSD": 549.99,
+    "priceEUR": 649.99,
+    "category": "processors"
+  },
+  {
+    "title": "Intel Core i7-13700K 5.4GHz",
+    "manufacturer": "Intel",
+    "specifications": [
+      "Intel Raptor Lake Architecture",
+      "8 Performance Cores, 8 Efficient Cores",
+      "16 Threads",
+      "3.4 GHz Base Clock Speed",
+      "25MB Intel Smart Cache"
+    ],
+    "priceUSD": 409.99,
+    "priceEUR": 499.99,
+    "category": "processors"
+  },
+  {
+    "title": "AMD Ryzen 9 7900X 5.6GHz",
+    "manufacturer": "AMD",
+    "specifications": [
+      "AMD Zen 4 Architecture",
+      "12 Cores, 24 Threads",
+      "4.7 GHz Base Clock Speed",
+      "70MB L3 Cache"
+    ],
+    "priceUSD": 429.99,
+    "priceEUR": 499.99,
+    "category": "processors"
+  },
+  {
+    "title": "Intel Core i5-13600K 5.1GHz",
+    "manufacturer": "Intel",
+    "specifications": [
+      "Intel Raptor Lake Architecture",
+      "6 Performance Cores, 8 Efficient Cores",
+      "14 Threads",
+      "3.5 GHz Base Clock Speed",
+      "20MB Intel Smart Cache"
+    ],
+    "priceUSD": 319.99,
+    "priceEUR": 379.99,
+    "category": "processors"
+  },
+  {
+    "title": "Corsair Vengeance RGB DDR5 32GB (2x16GB) 5200MHz CL39",
+    "manufacturer": "Corsair",
+    "specifications": [
+      "DDR5-5200MHz CL39-39-39-79",
+      "Intel XMP 3.0",
+      "RGB Lighting"
+    ],
+    "priceUSD": 139.99,
+    "priceEUR": 159.99,
+    "category": "memory"
+  },
+  {
+    "title": "G.Skill Trident Z5 RGB DDR5 32GB (2x16GB) 5600MHz CL36",
+    "manufacturer": "G.Skill",
+    "specifications": [
+      "DDR5-5600MHz CL36-36-36-76",
+      "Intel XMP 3.0",
+      "RGB Lighting"
+    ],
+    "priceUSD": 179.99,
+    "priceEUR": 199.99,
+    "category": "memory"
+  },
+  {
+    "title": "Kingston Fury Beast DDR5 32GB (2x16GB) 5200MHz CL40",
+    "manufacturer": "Kingston",
+    "specifications": ["DDR5-5200MHz CL40-40-40-78", "Intel XMP 3.0"],
+    "priceUSD": 129.99,
+    "priceEUR": 149.99,
+    "category": "memory"
+  },
+  {
+    "title": "TeamGroup T-Force Delta RGB DDR5 32GB (2x16GB) 5200MHz CL40",
+    "manufacturer": "TeamGroup",
+    "specifications": [
+      "DDR5-5200MHz CL40-40-40-78",
+      "Intel XMP 3.0",
+      "RGB Lighting"
+    ],
+    "priceUSD": 134.99,
+    "priceEUR": 154.99,
+    "category": "memory"
+  },
+  {
+    "title": "Patriot Viper DDR5 32GB (2x16GB) 5200MHz CL40",
+    "manufacturer": "Patriot",
+    "specifications": ["DDR5-5200MHz CL40-40-40-78", "Intel XMP 3.0"],
+    "priceUSD": 124.99,
+    "priceEUR": 144.99,
+    "category": "memory"
+  },
+  {
+    "title": "Samsung 990 Pro 1TB PCIe Gen 4 NVMe M.2 SSD",
+    "manufacturer": "Samsung",
+    "specifications": [
+      "PCIe Gen 4 NVMe",
+      "Sequential Read Speeds: Up to 7450 MB/s",
+      "Sequential Write Speeds: Up to 7000 MB/s"
+    ],
+    "priceUSD": 169.99,
+    "priceEUR": 199.99,
+    "category": "storage"
+  },
+  {
+    "title": "WD Black SN850X 1TB NVMe SSD",
+    "manufacturer": "Western Digital",
+    "specifications": [
+      "PCIe Gen 4 NVMe",
+      "Sequential Read Speeds: Up to 7300 MB/s",
+      "Sequential Write Speeds: Up to 5300 MB/s"
+    ],
+    "priceUSD": 149.99,
+    "priceEUR": 179.99,
+    "category": "storage"
+  },
+  {
+    "title": "Crucial P5 Plus 1TB NVMe SSD",
+    "manufacturer": "Crucial",
+    "specifications": [
+      "PCIe Gen 4 NVMe",
+      "Sequential Read Speeds: Up to 6600 MB/s",
+      "Sequential Write Speeds: Up to 5000 MB/s"
+    ],
+    "priceUSD": 119.99,
+    "priceEUR": 139.99,
+    "category": "storage"
+  },
+  {
+    "title": "Sabrent Rocket 4 Plus 1TB NVMe SSD",
+    "manufacturer": "Sabrent",
+    "specifications": [
+      "PCIe Gen 4 NVMe",
+      "Sequential Read Speeds: Up to 7000 MB/s",
+      "Sequential Write Speeds: Up to 5300 MB/s"
+    ],
+    "priceUSD": 139.99,
+    "priceEUR": 159.99,
+    "category": "storage"
+  },
+  {
+    "title": "Kingston NV2 NVMe SSD 1TB",
+    "manufacturer": "Kingston",
+    "specifications": [
+      "PCIe Gen 4 NVMe",
+      "Sequential Read Speeds: Up to 3500 MB/s",
+      "Sequential Write Speeds: Up to 3000 MB/s"
+    ],
+    "priceUSD": 99.99,
+    "priceEUR": 119.99,
+    "category": "storage"
+  },
+  {
+    "title": "Seagate BarraCuda 2TB HDD",
+    "manufacturer": "Seagate",
+    "specifications": ["7200 RPM", "256MB Cache"],
+    "priceUSD": 59.99,
+    "priceEUR": 69.99,
+    "category": "storage"
+  },
+  {
+    "title": "Western Digital Blue 2TB HDD",
+    "manufacturer": "Western Digital",
+    "specifications": ["7200 RPM", "256MB Cache"],
+    "priceUSD": 59.99,
+    "priceEUR": 69.99,
+    "category": "storage"
+  },
+  {
+    "title": "Toshiba X300 2TB HDD",
+    "manufacturer": "Toshiba",
+    "specifications": ["7200 RPM", "256MB Cache"],
+    "priceUSD": 59.99,
+    "priceEUR": 69.99,
+    "category": "storage"
+  },
+  {
+    "title": "Seagate IronWolf Pro 10TB NAS HDD",
+    "manufacturer": "Seagate",
+    "specifications": ["7200 RPM", "256MB Cache"],
+    "priceUSD": 299.99,
+    "priceEUR": 349.99,
+    "category": "storage"
+  },
+  {
+    "title": "Western Digital Red Pro 10TB NAS HDD",
+    "manufacturer": "Western Digital",
+    "specifications": ["7200 RPM", "256MB Cache"],
+    "priceUSD": 299.99,
+    "priceEUR": 349.99,
+    "category": "storage"
+  },
+  {
+    "title": "Corsair RMx Series RM850x 850W 80+ Gold Fully Modular PSU",
+    "manufacturer": "Corsair",
+    "specifications": [
+      "850W Continuous Power Output",
+      "80+ Gold Certified",
+      "Fully Modular Design"
+    ],
+    "priceUSD": 139.99,
+    "priceEUR": 159.99,
+    "category": "power-supplies"
+  },
+  {
+    "title": "EVGA SuperNOVA 850 G3 850W 80+ Gold Fully Modular PSU",
+    "manufacturer": "EVGA",
+    "specifications": [
+      "850W Continuous Power Output",
+      "80+ Gold Certified",
+      "Fully Modular Design"
+    ],
+    "priceUSD": 139.99,
+    "priceEUR": 159.99,
+    "category": "power-supplies"
+  },
+  {
+    "title": "Seasonic Focus GX-750 750W 80+ Gold Fully Modular PSU",
+    "manufacturer": "Seasonic",
+    "specifications": [
+      "750W Continuous Power Output",
+      "80+ Gold Certified",
+      "Fully Modular Design"
+    ],
+    "priceUSD": 119.99,
+    "priceEUR": 139.99,
+    "category": "power-supplies"
+  },
+  {
+    "title": "Cooler Master MasterWatt ToughPower GF 750W 80+ Gold Fully Modular PSU",
+    "manufacturer": "Cooler Master",
+    "specifications": [
+      "750W Continuous Power Output",
+      "80+ Gold Certified",
+      "Fully Modular Design"
+    ],
+    "priceUSD": 109.99,
+    "priceEUR": 129.99,
+    "category": "power-supplies"
+  },
+  {
+    "title": "be quiet! System Power 9 750W 80+ Gold Fully Modular PSU",
+    "manufacturer": "be quiet!",
+    "specifications": [
+      "750W Continuous Power Output",
+      "80+ Gold Certified",
+      "Fully Modular Design"
+    ],
+    "priceUSD": 129.99,
+    "priceEUR": 149.99,
+    "category": "power-supplies"
+  },
+  {
+    "title": "Apple iPhone 15 Pro Max 256GB",
+    "manufacturer": "Apple",
+    "specifications": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "48MP Main camera",
+      "Periscope telephoto lens",
+      "256GB Storage"
+    ],
+    "priceUSD": 1099.99,
+    "priceEUR": 1299.99,
+    "category": "phones"
+  },
+  {
+    "title": "Samsung Galaxy S24 Ultra 512GB",
+    "manufacturer": "Samsung",
+    "specifications": [
+      "6.8-inch Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 3",
+      "200MP Main camera",
+      "100x Space Zoom",
+      "512GB Storage"
+    ],
+    "priceUSD": 1199.99,
+    "priceEUR": 1399.99,
+    "category": "phones"
+  },
+  {
+    "title": "Google Pixel 8 Pro 256GB",
+    "manufacturer": "Google",
+    "specifications": [
+      "6.7-inch OLED display",
+      "Google Tensor G3",
+      "48MP Main camera",
+      "48MP Ultrawide camera",
+      "256GB Storage"
+    ],
+    "priceUSD": 999.99,
+    "priceEUR": 1199.99,
+    "category": "phones"
+  },
+  {
+    "title": "OnePlus 12 256GB",
+    "manufacturer": "OnePlus",
+    "specifications": [
+      "6.7-inch Fluid AMOLED display",
+      "Snapdragon 8 Gen 3",
+      "50MP Main camera",
+      "50MP Ultrawide camera",
+      "256GB Storage"
+    ],
+    "priceUSD": 899.99,
+    "priceEUR": 1099.99,
+    "category": "phones"
+  },
+  {
+    "title": "Xiaomi 14 Pro 512GB",
+    "manufacturer": "Xiaomi",
+    "specifications": [
+      "6.7-inch AMOLED display",
+      "Snapdragon 8 Gen 3",
+      "50MP Main camera",
+      "50MP Ultrawide camera",
+      "512GB Storage"
+    ],
+    "priceUSD": 899.99,
+    "priceEUR": 1099.99,
+    "category": "phones"
+  }
+]

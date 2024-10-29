@@ -1,13 +1,16 @@
 const Product = require("../models/productModel");
+const { getAll } = require("./handlerFactory");
 
-async function getAllProducts(req, res) {
-  const products = await Product.find();
+const getAllProducts = getAll(Product);
 
-  res.status(200).json({
-    status: "success",
-    data: { products },
-  });
-}
+// async function getAllProducts(req, res) {
+//   const products = await Product.find();
+
+//   res.status(200).json({
+//     status: "success",
+//     data: { products },
+//   });
+// }
 
 async function createProduct(req, res) {
   const newProduct = await Product.create(req.body);

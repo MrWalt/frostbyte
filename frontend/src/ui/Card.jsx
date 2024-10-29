@@ -130,6 +130,8 @@ const PriceBox = styled.div`
 
 export default function Card({ title, price, id }) {
   const dispatch = useDispatch();
+  let filteredTitle = title;
+  if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
 
   const cart = useSelector(getCart);
   const wishlist = useSelector(getWishlist);
@@ -189,7 +191,7 @@ export default function Card({ title, price, id }) {
         </Link>
       </ImageBox>
       <InformationBox>
-        <Title>{title}</Title>
+        <Title>{filteredTitle}</Title>
         <PriceBox>
           <Price price={price} size="large" />
         </PriceBox>

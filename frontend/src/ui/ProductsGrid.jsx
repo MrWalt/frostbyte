@@ -22,8 +22,7 @@ export default function ProductsGrid({ category }) {
       const res = await fetch("http://localhost:8000/api/v1/products");
 
       const data = await res.json();
-      // console.log(data.data.products);
-      setProducts(data.data.products);
+      setProducts(data.data);
       setIsLoading(false);
     }
 
@@ -38,19 +37,19 @@ export default function ProductsGrid({ category }) {
         ? products.map((item) => {
             return item.category === category ? (
               <Card
-                title={item.name}
+                title={item.title}
                 price={item.priceUSD}
-                key={item._id}
-                id={item._id}
+                key={item.id}
+                id={item.id}
               />
             ) : null;
           })
         : products.map((item) => (
             <Card
-              title={item.name}
+              title={item.title}
               price={item.priceUSD}
-              key={item._id}
-              id={item._id}
+              key={item.id}
+              id={item.id}
             />
           ))}
     </CardBox>

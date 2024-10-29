@@ -59,7 +59,7 @@ const Cents = styled.span`
 `;
 
 export default function Price({ price, size }) {
-  const formattedPrice = price.split(".");
+  const formattedPrice = String(price).split(".");
 
   return (
     <div>

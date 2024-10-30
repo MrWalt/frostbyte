@@ -1,24 +1,29 @@
 const Product = require("../models/productModel");
-const { getAll } = require("./handlerFactory");
+const {
+  getAll,
+  createOne,
+  getOne,
+  updateOne,
+  deleteOne,
+} = require("./handlerFactory");
 
+// READ
 const getAllProducts = getAll(Product);
+const getProduct = getOne(Product);
 
-// async function getAllProducts(req, res) {
-//   const products = await Product.find();
+// CREATE
+const createProduct = createOne(Product);
 
-//   res.status(200).json({
-//     status: "success",
-//     data: { products },
-//   });
-// }
+// UPDATE
+const updateProduct = updateOne(Product);
 
-async function createProduct(req, res) {
-  const newProduct = await Product.create(req.body);
+// DELETE
+const deleteProduct = deleteOne(Product);
 
-  res.status(201).json({
-    status: "succes",
-    data: { product: newProduct },
-  });
-}
-
-module.exports = { getAllProducts, createProduct };
+module.exports = {
+  getAllProducts,
+  createProduct,
+  getProduct,
+  updateProduct,
+  deleteProduct,
+};

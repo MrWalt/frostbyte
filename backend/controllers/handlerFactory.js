@@ -16,13 +16,13 @@ function getOne(Model) {
     try {
       const data = await Model.findById(req.params.id);
 
-      if (!data)
-        res
-          .status(404)
-          .json({
-            status: "error",
-            message: "Could not find document with that ID",
-          });
+      if (!data) {
+        res.status(404).json({
+          status: "error",
+          message: "Could not find document with that ID",
+        });
+        return;
+      }
 
       res.status(200).json({ status: "success", data });
     } catch (err) {

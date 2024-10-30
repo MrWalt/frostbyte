@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import Price from "../../ui/Price";
 import { HiXMark } from "react-icons/hi2";
-import { useDispatch } from "react-redux";
-import { deleteWishlistItem } from "./wishlistSlice";
 
 const Box = styled.div`
   width: 100%;
@@ -71,10 +69,9 @@ const DeleteButton = styled.button`
 `;
 
 export default function WishListItem({ title, price, dateAdded, id }) {
-  const dispatch = useDispatch();
   return (
     <Box>
-      <DeleteButton onClick={() => dispatch(deleteWishlistItem(id))}>
+      <DeleteButton>
         <HiXMark />
       </DeleteButton>
       <Image>IMAGE</Image>

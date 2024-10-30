@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import WishListItem from "./WishListItem";
-import { useSelector } from "react-redux";
-import { getWishlist } from "./wishlistSlice";
 
 const Box = styled.div`
   padding: 0.8rem;
@@ -19,11 +17,9 @@ const StyledSpan = styled.span`
 `;
 
 export default function WishList() {
-  const wishlist = useSelector(getWishlist);
-
   return (
     <Box>
-      {wishlist?.length ? (
+      {/* {wishlist?.length ? (
         wishlist.map((item) => (
           <WishListItem
             title={item.title}
@@ -35,7 +31,7 @@ export default function WishList() {
         ))
       ) : (
         <StyledSpan>Your Wishlist Is Empty</StyledSpan>
-      )}
+      )} */}
     </Box>
   );
 }

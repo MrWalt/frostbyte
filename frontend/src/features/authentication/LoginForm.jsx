@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import Button from "../../ui/Button";
 import Input from "../../ui/Input";
 import Label from "../../ui/Label";
+import { useState } from "react";
+import { login } from "../../../services/apiAuth";
+import { useLogin } from "./useLogin";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -26,7 +29,7 @@ const Container = styled.div`
   color: var(--color-grey-0);
   font-size: 1.6rem;
 
-  div {
+  form {
     align-self: stretch;
   }
 `;
@@ -75,16 +78,30 @@ const StyledSpan = styled.span`
 `;
 
 export default function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login, isLoading } = useLogin();
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!email || !password) return;
+    login({ email, password });
+  }
+
   return (
     <Container>
       <Heading variation="primary">Login</Heading>
 
-      <div>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <StyledInput
           type="email"
           placeholder="E-Mail Address"
           id="email"
           spellCheck="false"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          disabled={isLoading}
         />
         <Label htmlFor="email">E-Mail Address</Label>
 
@@ -93,16 +110,19 @@ export default function LoginForm() {
           placeholder="Password"
           id="password"
           spellCheck="false"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          disabled={isLoading}
         />
         <Label htmlFor="password">Password</Label>
 
         <StyledDiv>
-          <Button>Login</Button>
+          <Button disabled={isLoading}>Login</Button>
           <StyledSpan>
             Don't have an account? <Link to="/signup">Create an account</Link>
           </StyledSpan>
         </StyledDiv>
-      </div>
+      </form>
     </Container>
   );
 }

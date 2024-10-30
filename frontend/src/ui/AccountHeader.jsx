@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import useUser from "../features/authentication/useUser";
 import {
   HiOutlineIdentification,
   HiOutlineRectangleStack,
@@ -58,7 +57,6 @@ const StyledLink = styled(NavLink)`
 `;
 
 export default function AccountHeader() {
-  const { role } = useUser();
   return (
     <Box>
       <StyledLink to="profile">
@@ -74,12 +72,12 @@ export default function AccountHeader() {
         <HiOutlineShieldCheck />
         Security
       </StyledLink>
-      {role === "admin" && (
+      {/* {role === "admin" && (
         <StyledLink to="dashboard">
           <HiOutlineTableCells />
           Admin
         </StyledLink>
-      )}
+      )} */}
     </Box>
   );
 }

@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import Section from "../ui/Section";
 import FilterMenu from "../ui/FilterMenu";
 import Heading from "../ui/Heading";
-import ProductsGrid from "../ui/ProductsGrid";
+import ProductsGrid from "../features/product/ProductsGrid";
 import formatCategoryTitle from "../utils/formatCategoryTitle";
 
 const Container = styled.div`

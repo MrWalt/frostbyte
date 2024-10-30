@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import products from "../data/testProductData";
 import Card from "./Card";
-import { useEffect, useState } from "react";
+import { useProducts } from "./useProducts";
 
 const CardBox = styled.div`
   display: grid;
@@ -13,23 +13,9 @@ const CardBox = styled.div`
 `;
 
 export default function ProductsGrid({ category }) {
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const { isLoading, products } = useProducts();
 
-  useEffect(function () {
-    setIsLoading(true);
-    async function getData() {
-      const res = await fetch("http://localhost:8000/api/v1/products");
-
-      const data = await res.json();
-      setProducts(data.data);
-      setIsLoading(false);
-    }
-
-    getData();
-  }, []);
-
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <p>Is Loading</p>;
 
   return (
     <CardBox>

@@ -4,21 +4,10 @@ import {
   HiOutlineShoppingCart,
   HiShoppingCart,
 } from "react-icons/hi2";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import {
-  addCartItem,
-  deleteCartItem,
-  getCart,
-} from "../features/cart/cartSlice";
-import Price from "./Price";
-import {
-  addWishlistItem,
-  getWishlist,
-  deleteWishlistItem,
-} from "../features/wishlist/wishlistSlice";
 import { format } from "date-fns";
+import Price from "../../ui/Price";
 
 const Box = styled.div`
   height: 36rem;
@@ -129,60 +118,23 @@ const PriceBox = styled.div`
 `;
 
 export default function Card({ title, price, id }) {
-  const dispatch = useDispatch();
-  let filteredTitle = title;
-  if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
+  // let filteredTitle = title;
+  // if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
 
-  const cart = useSelector(getCart);
-  const wishlist = useSelector(getWishlist);
-
-  const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
-  const isInCart = cart.find((item) => item.id === id) ? true : false;
-
-  function handleAddCartItem() {
-    const newItem = {
-      title,
-      price,
-      id,
-      quantity: 1,
-    };
-
-    dispatch(addCartItem(newItem));
-  }
-
-  function handleDeleteCartItem() {
-    dispatch(deleteCartItem(id));
-  }
-
-  function handleAddWishlistItem() {
-    const newItem = {
-      title,
-      price,
-      id,
-      dateAdded: format(new Date(), "dd/MM/yyyy"),
-    };
-
-    dispatch(addWishlistItem(newItem));
-  }
-
-  function handleDeleteWishlistItem() {
-    dispatch(deleteWishlistItem(id));
-  }
+  // const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
+  // const isInCart = cart.find((item) => item.id === id) ? true : false;
 
   return (
     <Box>
-      {isInWishlist ? (
-        <StyledButton onClick={handleDeleteWishlistItem}>
+      {/* {isInWishlist ? (
+        <StyledButton>
           <HiHeart className="wishlisted" />
         </StyledButton>
       ) : (
-        <StyledButton
-          className="not-wishlisted"
-          onClick={handleAddWishlistItem}
-        >
+        <StyledButton className="not-wishlisted">
           <HiOutlineHeart />
         </StyledButton>
-      )}
+      )} */}
 
       <ImageBox>
         <Link to={`/product/${id}`}>
@@ -191,21 +143,21 @@ export default function Card({ title, price, id }) {
         </Link>
       </ImageBox>
       <InformationBox>
-        <Title>{filteredTitle}</Title>
+        {/* <Title>{filteredTitle}</Title> */}
         <PriceBox>
           <Price price={price} size="large" />
         </PriceBox>
       </InformationBox>
 
-      {isInCart ? (
-        <StyledButton onClick={handleDeleteCartItem}>
+      {/* {isInCart ? (
+        <StyledButton>
           <HiShoppingCart className="in-cart" />
         </StyledButton>
       ) : (
-        <StyledButton onClick={handleAddCartItem}>
+        <StyledButton>
           <HiOutlineShoppingCart />
         </StyledButton>
-      )}
+      )} */}
     </Box>
   );
 }

@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import CartItem from "./CartItem";
-import { useDispatch, useSelector } from "react-redux";
-import { clearCart, getCart } from "./cartSlice";
 import Button from "../../ui/Button";
 import { Link } from "react-router-dom";
 
@@ -34,13 +32,9 @@ const ClearCartText = styled.span`
 `;
 
 export default function Cart() {
-  const dispatch = useDispatch();
-
-  const cart = useSelector(getCart);
-
   return (
     <Container>
-      {!cart.length ? (
+      {/* {!cart.length ? (
         <StyledSpan>Your cart is empty</StyledSpan>
       ) : (
         <>
@@ -62,7 +56,7 @@ export default function Cart() {
             Clear Cart
           </ClearCartText>
         </>
-      )}
+      )} */}
     </Container>
   );
 }

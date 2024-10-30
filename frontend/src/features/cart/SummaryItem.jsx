@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import Price from "../../ui/Price";
-import { useDispatch } from "react-redux";
-import { deleteCartItem } from "./cartSlice";
 
 const Box = styled.div`
   width: 100%;
@@ -70,7 +68,6 @@ const RemoveItemButton = styled.span`
 `;
 
 export default function SummaryItem({ title, price, quantity, id }) {
-  const dispatch = useDispatch();
   return (
     <Box>
       <Image>IMAGE</Image>
@@ -84,12 +81,7 @@ export default function SummaryItem({ title, price, quantity, id }) {
         </span>
       </ProductInfoBox>
 
-      <RemoveItemButton
-        className="clear-cart"
-        onClick={() => dispatch(deleteCartItem(id))}
-      >
-        Remove Item
-      </RemoveItemButton>
+      <RemoveItemButton className="clear-cart">Remove Item</RemoveItemButton>
     </Box>
   );
 }

@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { HiMinus, HiPlus, HiXMark } from "react-icons/hi2";
-import { useDispatch } from "react-redux";
-import {
-  decreaseItemQuantity,
-  deleteCartItem,
-  increaseItemQuantity,
-} from "./cartSlice";
+
 import Price from "../../ui/Price";
 
 const Box = styled.div`
@@ -139,11 +134,9 @@ const DeleteButton = styled.button`
 `;
 
 export default function CartItem({ title, price, quantity, id }) {
-  const dispatch = useDispatch();
-
   return (
     <Box>
-      <DeleteButton onClick={() => dispatch(deleteCartItem(id))}>
+      <DeleteButton>
         <HiXMark />
       </DeleteButton>
       <Image>IMAGE</Image>
@@ -153,11 +146,11 @@ export default function CartItem({ title, price, quantity, id }) {
       </InfoBox>
       <ButtonBox>
         <button>
-          <HiMinus onClick={() => dispatch(decreaseItemQuantity(id))} />
+          <HiMinus />
         </button>
         <StyledSpan>{quantity}</StyledSpan>
         <button>
-          <HiPlus onClick={() => dispatch(increaseItemQuantity(id))} />
+          <HiPlus />
         </button>
       </ButtonBox>
     </Box>

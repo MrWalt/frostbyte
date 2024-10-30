@@ -1,6 +1,5 @@
-import { useSelector } from "react-redux";
 import styled from "styled-components";
-import { getCart } from "./cartSlice";
+
 import SummaryItem from "./SummaryItem";
 
 const Container = styled.div`
@@ -13,11 +12,9 @@ const Container = styled.div`
 `;
 
 export default function SummaryList() {
-  const cart = useSelector(getCart);
-
   return (
     <Container>
-      {cart.map((item) => (
+      {/* {cart.map((item) => (
         <SummaryItem
           title={item.title}
           price={item.price}
@@ -25,7 +22,7 @@ export default function SummaryList() {
           id={item.id}
           key={item.id}
         />
-      ))}
+      ))} */}
     </Container>
   );
 }

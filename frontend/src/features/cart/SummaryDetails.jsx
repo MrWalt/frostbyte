@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import Button from "../../ui/Button";
-import { useSelector } from "react-redux";
-import { getTotalItemsInCart, getTotalPrice } from "./cartSlice";
 import Price from "../../ui/Price";
 import { Link } from "react-router-dom";
 
@@ -43,19 +41,16 @@ const ItemCount = styled.span`
 `;
 
 export default function SummaryDetails() {
-  const totalItems = useSelector(getTotalItemsInCart);
-  const totalPrice = useSelector(getTotalPrice);
-
   return (
     <Box>
       <StyledTitle>Cart Details</StyledTitle>
       <InfoBox>
         <div>
-          <ItemCount>{totalItems} </ItemCount>
-          <span>item{totalItems > 1 ? "s" : ""} in cart</span>
+          {/* <ItemCount>{totalItems} </ItemCount>
+          <span>item{totalItems > 1 ? "s" : ""} in cart</span> */}
         </div>
         <PriceBox>
-          <Price price={String(totalPrice)} size="medium" />
+          {/* <Price price={String(totalPrice)} size="medium" /> */}
 
           <span>in total</span>
         </PriceBox>

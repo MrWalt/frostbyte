@@ -10,10 +10,8 @@ import {
 
 import DropDownMenu from "./DropDownMenu";
 import Cart from "../features/cart/Cart";
-import { useSelector } from "react-redux";
-import { getTotalItemsInCart } from "../features/cart/cartSlice";
 import WishList from "../features/wishlist/WishList";
-import useUser from "../features/authentication/useUser";
+import { useUser } from "../features/authentication/UserContext";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -146,9 +144,7 @@ const LinkContainer = styled.div`
 `;
 
 export default function Header() {
-  const itemsInCart = useSelector(getTotalItemsInCart);
   const { isAuthenticated } = useUser();
-
   return (
     <StyledHeader>
       <Container>
@@ -182,7 +178,7 @@ export default function Header() {
             <StyledLink to={`cart-summary`} className="dropdown cart">
               <HiOutlineShoppingCart />
               Cart
-              {itemsInCart ? <span>{itemsInCart}</span> : null}
+              {/* {itemsInCart ? <span>{itemsInCart}</span> : null} */}
             </StyledLink>
 
             <DropDownMenu align="right">

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import useUser from "../authentication/useUser";
 import { HiOutlinePencil } from "react-icons/hi2";
 
 const Box = styled.div`
@@ -80,14 +79,15 @@ const Email = styled.span`
 `;
 
 export default function Profile() {
-  const { userName, email, address, country, city, phone } = useUser();
-  const shippingAddress = address.concat(`, ${country}, ${city}`);
+  // const { user } = useUser();
+  // const { name, email, address, country, city, phone } = user;
+  // const shippingAddress = address.concat(`, ${country}, ${city}`);
   return (
     <Box>
-      <StyledP>Full Name</StyledP>
+      {/* <StyledP>Full Name</StyledP>
       <InfoBox>
         <StyledSpan>
-          <StyledInput type="text" placeholder={userName} spellCheck="false" />
+          <StyledInput type="text" placeholder={name} spellCheck="false" />
           <HiOutlinePencil />
         </StyledSpan>
       </InfoBox>
@@ -115,7 +115,7 @@ export default function Profile() {
           <StyledInput type="text" placeholder={phone} spellCheck="false" />
           <HiOutlinePencil />
         </StyledSpan>
-      </InfoBox>
+      </InfoBox> */}
     </Box>
   );
 }

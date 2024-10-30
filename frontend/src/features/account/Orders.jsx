@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Heading from "../../ui/Heading";
 import Order from "./Order";
-import useUser from "../authentication/useUser";
 
 const Box = styled.div`
   width: 100%;
@@ -14,11 +13,10 @@ const Box = styled.div`
 `;
 
 export default function Orders() {
-  const { orders } = useUser();
   return (
     <Box>
       <Heading variation="tertiary">Orders</Heading>
-      {orders.map((order) => (
+      {/* {orders.map((order) => (
         <Order
           orderId={order.orderId}
           orderItems={order.items}
@@ -27,7 +25,7 @@ export default function Orders() {
           date={order.date}
           key={order.orderId}
         />
-      ))}
+      ))} */}
     </Box>
   );
 }

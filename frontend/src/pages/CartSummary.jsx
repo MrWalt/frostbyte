@@ -2,8 +2,6 @@ import styled from "styled-components";
 import Section from "../ui/Section";
 import SummaryList from "../features/cart/SummaryList";
 import Heading from "../ui/Heading";
-import { useSelector } from "react-redux";
-import { getTotalItemsInCart } from "../features/cart/cartSlice";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
 import { useMoveBack } from "../hooks/useMoveBack";
@@ -85,12 +83,11 @@ const BackToShopLink = styled.button`
 `;
 
 export default function CartSummary() {
-  const cartItems = useSelector(getTotalItemsInCart);
   const moveBack = useMoveBack();
   return (
     <StyledSection>
       <Container>
-        {cartItems !== 0 ? (
+        {/* {cartItems !== 0 ? (
           <>
             <StyledHeading variation="secondary">Cart Summary</StyledHeading>
             <SummaryList />
@@ -107,7 +104,7 @@ export default function CartSummary() {
               <StyledButton>Go To Products</StyledButton>
             </Link>
           </>
-        )}
+        )} */}
       </Container>
     </StyledSection>
   );

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useMoveBack } from "../hooks/useMoveBack";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import SummaryDetails from "../features/cart/SummaryDetails";
+import { useCart } from "../features/cart/CartContext";
 
 const StyledSection = styled(Section)`
   background-image: url("/background.png");
@@ -84,10 +85,13 @@ const BackToShopLink = styled.button`
 
 export default function CartSummary() {
   const moveBack = useMoveBack();
+  const { cart } = useCart();
+  const itemsInCart = cart.length;
+
   return (
     <StyledSection>
       <Container>
-        {/* {cartItems !== 0 ? (
+        {itemsInCart !== 0 ? (
           <>
             <StyledHeading variation="secondary">Cart Summary</StyledHeading>
             <SummaryList />
@@ -104,7 +108,7 @@ export default function CartSummary() {
               <StyledButton>Go To Products</StyledButton>
             </Link>
           </>
-        )} */}
+        )}
       </Container>
     </StyledSection>
   );

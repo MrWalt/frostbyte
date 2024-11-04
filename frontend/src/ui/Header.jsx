@@ -12,6 +12,7 @@ import DropDownMenu from "./DropDownMenu";
 import Cart from "../features/cart/Cart";
 import WishList from "../features/wishlist/WishList";
 import { useUser } from "../features/authentication/UserContext";
+import { useCart } from "../features/cart/CartContext";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -145,6 +146,10 @@ const LinkContainer = styled.div`
 
 export default function Header() {
   const { isAuthenticated } = useUser();
+  const { cart } = useCart();
+
+  const itemsInCart = cart.reduce((acc, cur) => (acc += cur.quantity), 0);
+
   return (
     <StyledHeader>
       <Container>
@@ -178,7 +183,7 @@ export default function Header() {
             <StyledLink to={`cart-summary`} className="dropdown cart">
               <HiOutlineShoppingCart />
               Cart
-              {/* {itemsInCart ? <span>{itemsInCart}</span> : null} */}
+              {itemsInCart ? <span>{itemsInCart}</span> : null}
             </StyledLink>
 
             <DropDownMenu align="right">

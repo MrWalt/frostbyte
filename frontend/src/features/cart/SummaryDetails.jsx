@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Button from "../../ui/Button";
 import Price from "../../ui/Price";
 import { Link } from "react-router-dom";
+import { useCart } from "./CartContext";
 
 const Box = styled.div`
   background-color: var(--color-grey-transparent);
@@ -22,7 +23,7 @@ const StyledTitle = styled.h3`
 `;
 
 const InfoBox = styled.div`
-  padding: 1.8rem;
+  padding: 1.2rem 1.8rem;
 `;
 
 const PriceBox = styled.div`
@@ -31,8 +32,6 @@ const PriceBox = styled.div`
   gap: 0.6rem;
   display: flex;
   align-items: center;
-
-  margin-bottom: 1.2rem;
 `;
 
 const ItemCount = styled.span`
@@ -40,20 +39,34 @@ const ItemCount = styled.span`
   color: var(--color-brand-500);
 `;
 
+const Disclaimer = styled.span`
+  display: inline-block;
+  font-size: 1.4rem;
+  color: var(--color-grey-500);
+
+  margin-top: 1.6rem;
+`;
+
 export default function SummaryDetails() {
+  const { cart } = useCart();
+  const itemsInCart = cart.reduce((acc, cur) => (acc += cur.quantity), 0);
+  const totalPrice = cart
+    .reduce((acc, cur) => (acc += cur.price * cur.quantity), 0)
+    .toFixed(2);
+
   return (
     <Box>
       <StyledTitle>Cart Details</StyledTitle>
       <InfoBox>
         <div>
-          {/* <ItemCount>{totalItems} </ItemCount>
-          <span>item{totalItems > 1 ? "s" : ""} in cart</span> */}
+          <ItemCount>{itemsInCart} </ItemCount>
+          <span>item{itemsInCart > 1 ? "s" : ""} in cart</span>
         </div>
         <PriceBox>
-          {/* <Price price={String(totalPrice)} size="medium" /> */}
-
+          <Price price={String(totalPrice)} size="medium" />
           <span>in total</span>
         </PriceBox>
+        <Disclaimer>Shipping cost calculated at checkout</Disclaimer>
       </InfoBox>
       <Link to="/checkout">
         <Button>Continue to payment</Button>

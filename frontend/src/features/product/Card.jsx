@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { format } from "date-fns";
 import Price from "../../ui/Price";
+import { useCart } from "../cart/CartContext";
 
 const Box = styled.div`
   height: 36rem;
@@ -118,11 +119,13 @@ const PriceBox = styled.div`
 `;
 
 export default function Card({ title, price, id }) {
-  // let filteredTitle = title;
-  // if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
+  let filteredTitle = title;
+  if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
+
+  const { cart, addItem, removeItem } = useCart();
 
   // const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
-  // const isInCart = cart.find((item) => item.id === id) ? true : false;
+  const isInCart = cart.find((item) => item.id === id) ? true : false;
 
   return (
     <Box>
@@ -136,6 +139,10 @@ export default function Card({ title, price, id }) {
         </StyledButton>
       )} */}
 
+      <StyledButton className="not-wishlisted">
+        <HiOutlineHeart />
+      </StyledButton>
+
       <ImageBox>
         <Link to={`/product/${id}`}>
           IMAGE
@@ -143,21 +150,33 @@ export default function Card({ title, price, id }) {
         </Link>
       </ImageBox>
       <InformationBox>
-        {/* <Title>{filteredTitle}</Title> */}
+        <Title>{filteredTitle}</Title>
         <PriceBox>
           <Price price={price} size="large" />
         </PriceBox>
       </InformationBox>
 
-      {/* {isInCart ? (
-        <StyledButton>
+      {isInCart ? (
+        <StyledButton onClick={() => removeItem(id)}>
           <HiShoppingCart className="in-cart" />
         </StyledButton>
       ) : (
-        <StyledButton>
+        <StyledButton
+          onClick={() => addItem({ title, price, id, quantity: 1 })}
+        >
           <HiOutlineShoppingCart />
         </StyledButton>
-      )} */}
+      )}
+      {/* <StyledButton
+        onClick={() =>
+          dispatch({
+            type: "cart/add",
+            payload: { title, price, id, quantity: 1 },
+          })
+        }
+      >
+        <HiOutlineShoppingCart />
+      </StyledButton> */}
     </Box>
   );
 }

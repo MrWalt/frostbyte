@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { HiMinus, HiPlus, HiXMark } from "react-icons/hi2";
 
 import Price from "../../ui/Price";
+import { useCart } from "./CartContext";
 
 const Box = styled.div`
   height: 28rem;
@@ -134,9 +135,10 @@ const DeleteButton = styled.button`
 `;
 
 export default function CartItem({ title, price, quantity, id }) {
+  const { removeItem, increaseQuantity, decreaseQuantity } = useCart();
   return (
     <Box>
-      <DeleteButton>
+      <DeleteButton onClick={() => removeItem(id)}>
         <HiXMark />
       </DeleteButton>
       <Image>IMAGE</Image>
@@ -145,11 +147,11 @@ export default function CartItem({ title, price, quantity, id }) {
         <Price price={price} size="small" />
       </InfoBox>
       <ButtonBox>
-        <button>
+        <button onClick={() => decreaseQuantity({ id, quantity })}>
           <HiMinus />
         </button>
         <StyledSpan>{quantity}</StyledSpan>
-        <button>
+        <button onClick={() => increaseQuantity(id)}>
           <HiPlus />
         </button>
       </ButtonBox>

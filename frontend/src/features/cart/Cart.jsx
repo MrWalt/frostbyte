@@ -2,6 +2,7 @@ import styled from "styled-components";
 import CartItem from "./CartItem";
 import Button from "../../ui/Button";
 import { Link } from "react-router-dom";
+import { useCart } from "./CartContext";
 
 const Container = styled.div`
   padding: 0.8rem;
@@ -9,8 +10,8 @@ const Container = styled.div`
 
 const StyledSpan = styled.span`
   font-size: 1.6rem;
-  text-transform: capitalize;
   text-align: center;
+  font-weight: 500;
 
   display: inline-block;
 
@@ -18,7 +19,7 @@ const StyledSpan = styled.span`
   margin-top: 2.4rem;
 `;
 
-const ClearCartText = styled.span`
+const ClearCartButton = styled.button`
   color: var(--color-grey-0);
   font-size: 1.4rem;
 
@@ -32,9 +33,10 @@ const ClearCartText = styled.span`
 `;
 
 export default function Cart() {
+  const { cart, clearCart } = useCart();
   return (
     <Container>
-      {/* {!cart.length ? (
+      {!cart.length ? (
         <StyledSpan>Your cart is empty</StyledSpan>
       ) : (
         <>
@@ -52,11 +54,9 @@ export default function Cart() {
             />
           ))}
 
-          <ClearCartText onClick={() => dispatch(clearCart())}>
-            Clear Cart
-          </ClearCartText>
+          <ClearCartButton onClick={clearCart}>Clear Cart</ClearCartButton>
         </>
-      )} */}
+      )}
     </Container>
   );
 }

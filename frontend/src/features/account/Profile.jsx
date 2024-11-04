@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { HiOutlinePencil } from "react-icons/hi2";
+import { useUser } from "../authentication/UserContext";
 
 const Box = styled.div`
   width: 100%;
@@ -79,12 +80,12 @@ const Email = styled.span`
 `;
 
 export default function Profile() {
-  // const { user } = useUser();
-  // const { name, email, address, country, city, phone } = user;
-  // const shippingAddress = address.concat(`, ${country}, ${city}`);
+  const { user } = useUser();
+  const { name, email, address, country, city, phone } = user;
+
   return (
     <Box>
-      {/* <StyledP>Full Name</StyledP>
+      <StyledP>Full Name</StyledP>
       <InfoBox>
         <StyledSpan>
           <StyledInput type="text" placeholder={name} spellCheck="false" />
@@ -100,22 +101,34 @@ export default function Profile() {
       <StyledP>Address</StyledP>
       <InfoBox>
         <StyledSpan>
-          <StyledInput
-            type="text"
-            placeholder={shippingAddress}
-            spellCheck="false"
-          />
+          <StyledInput type="text" placeholder={address} spellCheck="false" />
           <HiOutlinePencil />
         </StyledSpan>
       </InfoBox>
 
-      <StyledP>Phone</StyledP>
+      <StyledP>Country</StyledP>
+      <InfoBox>
+        <StyledSpan>
+          <StyledInput type="text" placeholder={country} spellCheck="false" />
+          <HiOutlinePencil />
+        </StyledSpan>
+      </InfoBox>
+
+      <StyledP>City</StyledP>
+      <InfoBox>
+        <StyledSpan>
+          <StyledInput type="text" placeholder={city} spellCheck="false" />
+          <HiOutlinePencil />
+        </StyledSpan>
+      </InfoBox>
+
+      <StyledP>Phone Number</StyledP>
       <InfoBox>
         <StyledSpan>
           <StyledInput type="text" placeholder={phone} spellCheck="false" />
           <HiOutlinePencil />
         </StyledSpan>
-      </InfoBox> */}
+      </InfoBox>
     </Box>
   );
 }

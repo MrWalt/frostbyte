@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import SummaryItem from "./SummaryItem";
+import { useCart } from "./CartContext";
 
 const Container = styled.div`
   border: 1px solid var(--color-grey-800);
@@ -12,9 +13,11 @@ const Container = styled.div`
 `;
 
 export default function SummaryList() {
+  const { cart } = useCart();
+
   return (
     <Container>
-      {/* {cart.map((item) => (
+      {cart.map((item) => (
         <SummaryItem
           title={item.title}
           price={item.price}
@@ -22,7 +25,7 @@ export default function SummaryList() {
           id={item.id}
           key={item.id}
         />
-      ))} */}
+      ))}
     </Container>
   );
 }

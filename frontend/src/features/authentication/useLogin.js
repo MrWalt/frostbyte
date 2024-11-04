@@ -6,13 +6,14 @@ import { useUser } from "./UserContext";
 export function useLogin() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const { handleSetIsAuth } = useUser();
+  const { handleSetIsAuth, handleSetUser } = useUser();
 
   const { mutate: login, isLoading } = useMutation({
     mutationFn: ({ email, password }) => loginApi({ email, password }),
     onSuccess: (user) => {
       queryClient.setQueryData(["user"], user.data.user);
       handleSetIsAuth();
+      handleSetUser(user.data.user);
       navigate("/account");
     },
     onError: () => {

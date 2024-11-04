@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import WishListItem from "./WishListItem";
+import { useWishlist } from "./WishlistContext";
 
 const Box = styled.div`
   padding: 0.8rem;
@@ -7,8 +8,8 @@ const Box = styled.div`
 
 const StyledSpan = styled.span`
   font-size: 1.6rem;
-  text-transform: capitalize;
   text-align: center;
+  font-weight: 500;
 
   display: inline-block;
 
@@ -17,9 +18,11 @@ const StyledSpan = styled.span`
 `;
 
 export default function WishList() {
+  const { wishlist } = useWishlist();
+
   return (
     <Box>
-      {/* {wishlist?.length ? (
+      {wishlist?.length ? (
         wishlist.map((item) => (
           <WishListItem
             title={item.title}
@@ -30,8 +33,8 @@ export default function WishList() {
           />
         ))
       ) : (
-        <StyledSpan>Your Wishlist Is Empty</StyledSpan>
-      )} */}
+        <StyledSpan>Your wishlist is empty</StyledSpan>
+      )}
     </Box>
   );
 }

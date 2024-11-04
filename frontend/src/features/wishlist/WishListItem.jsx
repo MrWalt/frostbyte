@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Price from "../../ui/Price";
 import { HiXMark } from "react-icons/hi2";
+import { useWishlist } from "./WishlistContext";
 
 const Box = styled.div`
   width: 100%;
@@ -32,7 +33,9 @@ const Title = styled.p`
 `;
 
 const DateAdded = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+
+  color: var(--color-grey-400);
 
   position: absolute;
   bottom: 1.2rem;
@@ -69,14 +72,19 @@ const DeleteButton = styled.button`
 `;
 
 export default function WishListItem({ title, price, dateAdded, id }) {
+  const { removeItem } = useWishlist();
+
+  let filteredTitle = title;
+  if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
+
   return (
     <Box>
-      <DeleteButton>
+      <DeleteButton onClick={() => removeItem(id)}>
         <HiXMark />
       </DeleteButton>
       <Image>IMAGE</Image>
 
-      <Title>{title}</Title>
+      <Title>{filteredTitle}</Title>
       <Price size="small" price={price} />
 
       <DateAdded>Added on {dateAdded}</DateAdded>

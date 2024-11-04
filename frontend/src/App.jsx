@@ -22,6 +22,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import UserProvider from "./features/authentication/UserContext";
 import CartProvider from "./features/cart/CartContext";
+import WishlistProvider from "./features/wishlist/WishlistContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,46 +36,48 @@ export default function App() {
   return (
     <UserProvider>
       <CartProvider>
-        <QueryClientProvider client={queryClient}>
-          <div style={{ fontSize: "16px" }}>
-            <ReactQueryDevtools initialIsOpen={false} />
-          </div>
-          <GlobalStyles />
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<AppLayout />}>
-                <Route index element={<Home />} />
-                <Route path="contact" element={<Contact />} />
-                <Route
-                  path="account"
-                  element={
-                    <ProtectedRoute>
-                      <Account />
-                    </ProtectedRoute>
-                  }
-                >
+        <WishlistProvider>
+          <QueryClientProvider client={queryClient}>
+            <div style={{ fontSize: "16px" }}>
+              <ReactQueryDevtools initialIsOpen={false} />
+            </div>
+            <GlobalStyles />
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<AppLayout />}>
+                  <Route index element={<Home />} />
+                  <Route path="contact" element={<Contact />} />
                   <Route
-                    index
-                    element={<Navigate replace to="/account/profile" />}
-                  />
-                  <Route path="/account/profile" element={<Profile />} />
-                  <Route path="/account/orders" element={<Orders />} />
-                  <Route path="/account/security" element={<Security />} />
-                  <Route path="/account/dashboard" element={<Dashboard />} />
+                    path="account"
+                    element={
+                      <ProtectedRoute>
+                        <Account />
+                      </ProtectedRoute>
+                    }
+                  >
+                    <Route
+                      index
+                      element={<Navigate replace to="/account/profile" />}
+                    />
+                    <Route path="/account/profile" element={<Profile />} />
+                    <Route path="/account/orders" element={<Orders />} />
+                    <Route path="/account/security" element={<Security />} />
+                    <Route path="/account/dashboard" element={<Dashboard />} />
+                  </Route>
+                  <Route path="checkout" element={<CheckOut />} />
+                  <Route path="products" element={<Products />} />
+                  <Route path="products/:category" element={<Products />} />
+                  <Route path="cart-summary" element={<CartSummary />} />
+                  <Route path="product/:id" element={<Product />} />
+                  <Route path="login" element={<Login />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="legal" element={<Legal />} />
+                  <Route path="*" element={<PageNotFound />} />
                 </Route>
-                <Route path="checkout" element={<CheckOut />} />
-                <Route path="products" element={<Products />} />
-                <Route path="products/:category" element={<Products />} />
-                <Route path="cart-summary" element={<CartSummary />} />
-                <Route path="product/:id" element={<Product />} />
-                <Route path="login" element={<Login />} />
-                <Route path="about" element={<About />} />
-                <Route path="legal" element={<Legal />} />
-                <Route path="*" element={<PageNotFound />} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
-        </QueryClientProvider>
+              </Routes>
+            </BrowserRouter>
+          </QueryClientProvider>
+        </WishlistProvider>
       </CartProvider>
     </UserProvider>
   );

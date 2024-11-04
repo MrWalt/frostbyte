@@ -9,6 +9,7 @@ import styled from "styled-components";
 import { format } from "date-fns";
 import Price from "../../ui/Price";
 import { useCart } from "../cart/CartContext";
+import { useWishlist } from "../wishlist/WishlistContext";
 
 const Box = styled.div`
   height: 36rem;
@@ -123,25 +124,36 @@ export default function Card({ title, price, id }) {
   if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
 
   const { cart, addItem, removeItem } = useCart();
+  const {
+    wishlist,
+    addItem: addWishlistItem,
+    removeItem: removeWishlistItem,
+  } = useWishlist();
 
-  // const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
+  const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
   const isInCart = cart.find((item) => item.id === id) ? true : false;
 
   return (
     <Box>
-      {/* {isInWishlist ? (
-        <StyledButton>
+      {isInWishlist ? (
+        <StyledButton onClick={() => removeWishlistItem(id)}>
           <HiHeart className="wishlisted" />
         </StyledButton>
       ) : (
-        <StyledButton className="not-wishlisted">
+        <StyledButton
+          className="not-wishlisted"
+          onClick={() =>
+            addWishlistItem({
+              title,
+              price,
+              id,
+              dateAdded: format(new Date(), "dd/MM/yyyy"),
+            })
+          }
+        >
           <HiOutlineHeart />
         </StyledButton>
-      )} */}
-
-      <StyledButton className="not-wishlisted">
-        <HiOutlineHeart />
-      </StyledButton>
+      )}
 
       <ImageBox>
         <Link to={`/product/${id}`}>
@@ -167,16 +179,6 @@ export default function Card({ title, price, id }) {
           <HiOutlineShoppingCart />
         </StyledButton>
       )}
-      {/* <StyledButton
-        onClick={() =>
-          dispatch({
-            type: "cart/add",
-            payload: { title, price, id, quantity: 1 },
-          })
-        }
-      >
-        <HiOutlineShoppingCart />
-      </StyledButton> */}
     </Box>
   );
 }

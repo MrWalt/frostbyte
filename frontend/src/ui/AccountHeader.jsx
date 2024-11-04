@@ -4,8 +4,9 @@ import {
   HiOutlineIdentification,
   HiOutlineRectangleStack,
   HiOutlineShieldCheck,
-  HiOutlineTableCells,
 } from "react-icons/hi2";
+import Button from "./Button";
+import { useLogout } from "../features/authentication/useLogout";
 
 const Box = styled.div`
   width: 26rem;
@@ -17,6 +18,8 @@ const Box = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  justify-content: space-between;
 
   flex-shrink: 0;
 `;
@@ -56,28 +59,40 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
+const StyledButton = styled(Button)`
+  border: none;
+  background-color: var(--color-brand-700);
+
+  &:hover {
+    background-color: var(--color-brand-800);
+  }
+`;
+
 export default function AccountHeader() {
+  const { logout } = useLogout();
   return (
     <Box>
-      <StyledLink to="profile">
-        <HiOutlineIdentification />
-        {/* <HiOutlineUser /> */}
-        Profile
-      </StyledLink>
-      <StyledLink to="orders">
-        <HiOutlineRectangleStack />
-        Orders
-      </StyledLink>
-      <StyledLink to="security">
-        <HiOutlineShieldCheck />
-        Security
-      </StyledLink>
+      <div>
+        <StyledLink to="profile">
+          <HiOutlineIdentification />
+          Profile
+        </StyledLink>
+        <StyledLink to="orders">
+          <HiOutlineRectangleStack />
+          Orders
+        </StyledLink>
+        <StyledLink to="security">
+          <HiOutlineShieldCheck />
+          Security
+        </StyledLink>
+      </div>
       {/* {role === "admin" && (
         <StyledLink to="dashboard">
           <HiOutlineTableCells />
           Admin
         </StyledLink>
       )} */}
+      <StyledButton onClick={logout}>Logout</StyledButton>
     </Box>
   );
 }

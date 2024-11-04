@@ -5,7 +5,6 @@ import Button from "../../ui/Button";
 import Input from "../../ui/Input";
 import Label from "../../ui/Label";
 import { useState } from "react";
-import { login } from "../../../services/apiAuth";
 import { useLogin } from "./useLogin";
 
 const Container = styled.div`
@@ -43,18 +42,6 @@ const StyledInput = styled(Input)`
     margin-top: 1.8rem;
   }
 `;
-
-// const StyledLabel = styled.label`
-//   margin-left: 1.8rem;
-
-//   color: var(--color-grey-400);
-//   font-size: 1.4rem;
-
-//   transition: var(--animation-fast);
-
-//   transform: translateY(-7rem);
-//   display: block;
-// `;
 
 const StyledSpan = styled.span`
   display: block;
@@ -102,6 +89,7 @@ export default function LoginForm() {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           disabled={isLoading}
+          variation="large"
         />
         <Label htmlFor="email">E-Mail Address</Label>
 
@@ -113,6 +101,7 @@ export default function LoginForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           disabled={isLoading}
+          variation="large"
         />
         <Label htmlFor="password">Password</Label>
 

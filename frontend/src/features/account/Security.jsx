@@ -37,11 +37,19 @@ export default function Security() {
       <Box>
         <div>
           <Heading variation="tertiary">Update Your Password</Heading>
-          <Input type="password" placeholder="Current Password" />
+          <Input
+            type="password"
+            placeholder="Current Password"
+            variation="large"
+          />
           <Label>Current Password</Label>
-          <Input type="password" placeholder="New Password" />
+          <Input type="password" placeholder="New Password" variation="large" />
           <Label>New Password</Label>
-          <Input type="password" placeholder="Confirm Password" />
+          <Input
+            type="password"
+            placeholder="Confirm Password"
+            variation="large"
+          />
           <Label>Confirm Password</Label>
           <Button>Update Password</Button>
         </div>

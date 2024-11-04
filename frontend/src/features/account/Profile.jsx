@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { HiOutlinePencil } from "react-icons/hi2";
 import { useUser } from "../authentication/UserContext";
+import Input from "../../ui/Input";
 
 const Box = styled.div`
   width: 100%;
@@ -28,19 +29,11 @@ const InfoBox = styled.div`
   }
 `;
 
-const StyledInput = styled.input`
+const StyledInput = styled(Input)`
   font-size: 1.6rem;
   width: 100%;
 
   margin-top: 0.4rem;
-
-  color: var(--color-brand-500);
-
-  cursor: pointer;
-
-  &::placeholder {
-    color: var(--color-brand-500);
-  }
 `;
 
 const StyledSpan = styled.div`
@@ -88,7 +81,12 @@ export default function Profile() {
       <StyledP>Full Name</StyledP>
       <InfoBox>
         <StyledSpan>
-          <StyledInput type="text" placeholder={name} spellCheck="false" />
+          <StyledInput
+            type="text"
+            placeholder={name}
+            spellCheck="false"
+            variation="minimal"
+          />
           <HiOutlinePencil />
         </StyledSpan>
       </InfoBox>
@@ -101,7 +99,12 @@ export default function Profile() {
       <StyledP>Address</StyledP>
       <InfoBox>
         <StyledSpan>
-          <StyledInput type="text" placeholder={address} spellCheck="false" />
+          <StyledInput
+            type="text"
+            placeholder={address}
+            spellCheck="false"
+            variation="minimal"
+          />
           <HiOutlinePencil />
         </StyledSpan>
       </InfoBox>
@@ -109,7 +112,12 @@ export default function Profile() {
       <StyledP>Country</StyledP>
       <InfoBox>
         <StyledSpan>
-          <StyledInput type="text" placeholder={country} spellCheck="false" />
+          <StyledInput
+            type="text"
+            placeholder={country}
+            spellCheck="false"
+            variation="minimal"
+          />
           <HiOutlinePencil />
         </StyledSpan>
       </InfoBox>
@@ -117,7 +125,12 @@ export default function Profile() {
       <StyledP>City</StyledP>
       <InfoBox>
         <StyledSpan>
-          <StyledInput type="text" placeholder={city} spellCheck="false" />
+          <StyledInput
+            type="text"
+            placeholder={city}
+            spellCheck="false"
+            variation="minimal"
+          />
           <HiOutlinePencil />
         </StyledSpan>
       </InfoBox>
@@ -125,7 +138,12 @@ export default function Profile() {
       <StyledP>Phone Number</StyledP>
       <InfoBox>
         <StyledSpan>
-          <StyledInput type="text" placeholder={phone} spellCheck="false" />
+          <StyledInput
+            type="text"
+            placeholder={phone}
+            spellCheck="false"
+            variation="minimal"
+          />
           <HiOutlinePencil />
         </StyledSpan>
       </InfoBox>

@@ -1,32 +1,24 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
+import { HiChevronDown } from "react-icons/hi2";
 
 const StyledDiv = styled.div`
   font-size: 1.6rem;
   color: var(--color-grey-0);
 
-  padding: 0.8rem 1.2rem;
-  padding-right: 9.2rem;
   margin-top: 1.8rem;
-
-  display: flex;
-  flex-direction: column;
-
-  border: 1px solid var(--color-grey-700);
-  border-top: 2px solid var(--color-brand-500);
 
   background-color: var(--color-grey-800);
 
+  transition: var(--animation-medium);
+
+  z-index: 10;
+
   position: relative;
 
-  cursor: pointer;
-
-  transition: var(--animation-fast);
-
-  &:hover {
-    background-color: var(--color-grey-700);
+  &.toggled {
+    margin-bottom: 9.2rem;
   }
 
   &:first-of-type {
@@ -41,13 +33,34 @@ const StyledDiv = styled.div`
     transform: translate(-50%, -50%);
 
     font-size: 3.2rem;
+
+    transition: var(--animation-fast);
+
+    &.toggled {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
   }
 `;
 
 const Question = styled.p`
   display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid var(--color-grey-700);
+  border-top: 2px solid var(--color-brand-500);
+
+  cursor: pointer;
+
+  padding: 1.2rem 1.8rem;
 
   font-size: 1.8rem;
+
+  transition: var(--animation-fast);
+
+  &:hover {
+    background-color: var(--color-grey-700);
+  }
 
   & span {
     color: var(--color-brand-600);
@@ -58,15 +71,37 @@ const Question = styled.p`
 `;
 
 const Answer = styled.p`
-  margin-top: 1.8rem;
-  margin-left: 1.2rem;
+  padding: 1.6rem 2.4rem;
 
-  /* padding: 0.4rem 0.8rem;
-  background-color: var(--color-grey-900); */
+  border: 1px solid var(--color-grey-800);
+  border-top: none;
 
   display: inline-block;
-
   font-size: 1.6rem;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  width: 100%;
+
+  position: absolute;
+  right: 50%;
+  bottom: 0%;
+  transform: translate(50%, 0);
+  z-index: -1;
+
+  background-color: var(--color-grey-900);
+
+  transition: var(--animation-fast);
+
+  &.toggled {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translate(50%, 100%);
+  }
 `;
 
 export default function Accordion({ question, answer }) {
@@ -77,13 +112,13 @@ export default function Accordion({ question, answer }) {
   }
 
   return (
-    <StyledDiv onClick={handleToggle}>
-      {isToggled ? <HiChevronUp /> : <HiChevronDown />}
-      <Question>
+    <StyledDiv className={`${isToggled ? "toggled" : ""}`}>
+      <HiChevronDown className={`${isToggled ? "toggled" : ""}`} />
+      <Question onClick={handleToggle}>
         <span>Q.</span>
         {question}
       </Question>
-      {isToggled && <Answer>{answer}</Answer>}
+      <Answer className={`${isToggled ? "toggled" : ""}`}>{answer}</Answer>
     </StyledDiv>
   );
 }

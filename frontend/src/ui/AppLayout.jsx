@@ -6,9 +6,10 @@ import Footer from "./Footer";
 
 const Main = styled.main`
   width: 100%;
-  padding-top: 6.4rem;
 
   min-height: calc(100vh - 10rem);
+
+  padding-top: 8rem;
 
   background-color: var(--color-grey-900);
 `;

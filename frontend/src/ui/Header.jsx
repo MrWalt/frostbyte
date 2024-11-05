@@ -7,6 +7,10 @@ import {
   HiOutlineShoppingCart,
 } from "react-icons/hi2";
 import { useCart } from "../features/cart/CartContext";
+import DropDownMenu from "./DropDownMenu";
+import { useState } from "react";
+import Cart from "../features/cart/Cart";
+import WishList from "../features/wishlist/WishList";
 
 const StyledHeader = styled.header`
   height: 8rem;
@@ -94,12 +98,11 @@ const Box = styled.div`
 
       transform: translate(50%, -50%);
 
-      width: 2rem;
-      height: 2rem;
+      width: 1.8rem;
+      height: 1.8rem;
       border-radius: 50%;
 
-      background-color: var(--color-brand-900);
-      border: 1px solid var(--color-grey-0);
+      background-color: var(--color-grey-800);
 
       display: flex;
       justify-content: center;
@@ -110,15 +113,48 @@ const Box = styled.div`
   }
 `;
 
+const StyledButton = styled.button`
+  cursor: pointer;
+  color: var(--color-grey-0);
+
+  font-size: 1.6rem;
+
+  transition: var(--animation-fast);
+
+  &.link {
+    &:hover {
+      font-weight: 500;
+    }
+  }
+`;
+
 export default function Header() {
+  const [toggledMenu, setToggledMenu] = useState("");
   const { cart } = useCart();
   const itemsInCart = cart.length;
 
+  function handleSetToggledMenu(menu) {
+    if (toggledMenu === menu) {
+      closeMenu();
+      return;
+    }
+    setToggledMenu(menu);
+  }
+
+  function closeMenu() {
+    setToggledMenu("");
+  }
+
   return (
-    <StyledHeader>
+    <StyledHeader className="header">
       <Container>
         <StyledNav>
-          <StyledLink to="/products">Shop</StyledLink>
+          <StyledButton
+            onClick={() => handleSetToggledMenu("products")}
+            className="link products"
+          >
+            Shop
+          </StyledButton>
           <StyledLink to="/contact">Support</StyledLink>
         </StyledNav>
 
@@ -132,15 +168,39 @@ export default function Header() {
           <Link to="/account/profile">
             <HiOutlineUserCircle />
           </Link>
-          <Link>
-            <HiOutlineHeart />
-          </Link>
-          <Link to="/cart-summary" className="cart">
-            <HiOutlineShoppingCart />
+          <StyledButton onClick={() => handleSetToggledMenu("wishlist")}>
+            <HiOutlineHeart className="wishlist" />
+          </StyledButton>
+          <StyledButton onClick={() => handleSetToggledMenu("cart")}>
+            <HiOutlineShoppingCart className="cart" />
             {itemsInCart ? <span>{itemsInCart}</span> : null}
-          </Link>
+          </StyledButton>
         </Box>
       </Container>
+      <DropDownMenu
+        align="left"
+        isOpen={toggledMenu === "products"}
+        closeMenu={closeMenu}
+        menuName="products"
+      >
+        <p>This is products</p>
+      </DropDownMenu>
+      <DropDownMenu
+        align="right"
+        isOpen={toggledMenu === "cart"}
+        closeMenu={closeMenu}
+        menuName="cart"
+      >
+        <Cart />
+      </DropDownMenu>
+      <DropDownMenu
+        align="right"
+        isOpen={toggledMenu === "wishlist"}
+        closeMenu={closeMenu}
+        menuName="wishlist"
+      >
+        <WishList />
+      </DropDownMenu>
     </StyledHeader>
   );
 }

@@ -53,6 +53,7 @@ html {
 
 body {
     font-family: "Rubik", sans-serif;
+    position: relative;
 }
 
 a:link, a:visited {

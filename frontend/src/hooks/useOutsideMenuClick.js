@@ -14,7 +14,7 @@ export default function useOutsideMenuClick(
           ref.current &&
           !e.target.classList.contains("open") &&
           !ref.current.contains(e.target) &&
-          !e.target.classList.contains(menuName)
+          !e.target.closest("button")?.classList.contains(menuName)
         ) {
           handler();
         }

@@ -168,11 +168,17 @@ export default function Header() {
           <Link to="/account/profile">
             <HiOutlineUserCircle />
           </Link>
-          <StyledButton onClick={() => handleSetToggledMenu("wishlist")}>
-            <HiOutlineHeart className="wishlist" />
+          <StyledButton
+            onClick={() => handleSetToggledMenu("wishlist")}
+            className="wishlist"
+          >
+            <HiOutlineHeart />
           </StyledButton>
-          <StyledButton onClick={() => handleSetToggledMenu("cart")}>
-            <HiOutlineShoppingCart className="cart" />
+          <StyledButton
+            onClick={() => handleSetToggledMenu("cart")}
+            className="cart"
+          >
+            <HiOutlineShoppingCart />
             {itemsInCart ? <span>{itemsInCart}</span> : null}
           </StyledButton>
         </Box>

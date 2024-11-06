@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
-import { login as loginApi } from "../../../services/apiAuth";
+import { login as loginApi } from "../../services/apiAuth";
 import { useUser } from "./UserContext";
 
 export function useLogin() {
@@ -14,9 +14,10 @@ export function useLogin() {
       queryClient.setQueryData(["user"], user.data.user);
       handleSetIsAuth();
       handleSetUser(user.data.user);
-      navigate("/account");
+      navigate("/account/profile");
     },
-    onError: () => {
+    onError: (err) => {
+      console.log(err);
       console.log("Incorrect email or password");
     },
   });

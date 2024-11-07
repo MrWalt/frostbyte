@@ -7,12 +7,37 @@ import {
 
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import useOutsideMenuClick from "../hooks/useOutsideMenuClick";
+import { useMenu } from "../contexts/MenuContext";
 
-const Container = styled.div`
-  position: absolute;
-  overflow: scroll;
+const Overlay = styled.div`
+  width: 100%;
+  height: 100vh;
 
+  z-index: 1000;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  background-color: rgb(17, 24, 39, 0.4);
+  /* backdrop-filter: blur(1px); */
+
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: var(--animation-medium);
+
+  &.open {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+`;
+
+const Box = styled.div`
+  position: fixed;
+  z-index: 1001;
   transition: var(--animation-medium);
 
   top: 0;
@@ -25,7 +50,7 @@ const Container = styled.div`
       ? css`
           right: 0;
 
-          border-left: 1px solid var(--color-brand-400);
+          border-left: 1px solid var(--color-brand-500);
 
           transform: translateX(100%);
 
@@ -50,34 +75,24 @@ const Container = styled.div`
     pointer-events: auto;
   }
 
-  height: calc(100vh - 8rem);
+  height: calc(100vh);
   width: 48rem;
 
-  margin-top: 8rem;
-
   background-color: var(--color-grey-900);
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 `;
 
-export default function DropDownMenu({
-  align,
-  children,
-  isOpen,
-  closeMenu,
-  menuName,
-}) {
-  const ref = useOutsideMenuClick(closeMenu, menuName);
+export default function DropDownMenu({ align, children, isOpen }) {
+  const { closeMenu } = useMenu();
 
   return (
-    <Container
-      align={align}
-      className={`${isOpen ? "open" : ""}`}
-      ref={isOpen ? ref : null}
-    >
-      {children}
-    </Container>
+    <>
+      <Overlay
+        className={`${isOpen ? "open" : ""}`}
+        onClick={closeMenu}
+      ></Overlay>
+      <Box align={align} className={`${isOpen ? "open" : ""}`}>
+        {children}
+      </Box>
+    </>
   );
 }

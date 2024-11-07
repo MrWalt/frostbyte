@@ -5,7 +5,7 @@ import Price from "../../ui/Price";
 import { useCart } from "./CartContext";
 
 const Box = styled.div`
-  height: 28rem;
+  height: 14rem;
   width: 100%;
 
   background-color: var(--color-grey-900);
@@ -15,12 +15,11 @@ const Box = styled.div`
   color: var(--color-grey-0);
 
   display: flex;
-  flex-direction: column;
   gap: 1.2rem;
 
-  padding: 1.6rem;
+  padding: 1.2rem;
 
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
 
   position: relative;
 
@@ -29,26 +28,27 @@ const Box = styled.div`
   }
 
   &:last-of-type {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.8rem;
   }
 `;
 
 const Image = styled.div`
   height: 100%;
   text-align: center;
-  /* border: 1px solid var(--color-grey-700); */
+  width: 12rem;
+  /* border: 1px solid var(--color-grey-800); */
+
+  /* flex-grow: 0; */
+  flex-shrink: 0;
 `;
 
 const InfoBox = styled.div`
-  height: 35%;
-  width: 100%;
+  width: 50%;
   text-align: start;
 
   display: flex;
   flex-direction: column;
-  justify-content: end;
-
-  flex-shrink: 0;
+  justify-content: space-between;
 `;
 
 const ItemName = styled.span`

@@ -4,37 +4,26 @@ import Button from "../../ui/Button";
 import { Link } from "react-router-dom";
 import { useCart } from "./CartContext";
 import Heading from "../../ui/Heading";
+import { HiXMark } from "react-icons/hi2";
+import { useMenu } from "../../contexts/MenuContext";
+import Price from "../../ui/Price";
 
 const Container = styled.div`
   padding: 0.8rem;
-`;
 
-const StyledSpan = styled.span`
-  font-size: 1.6rem;
-  text-align: center;
-  font-weight: 500;
+  display: flex;
+  flex-direction: column;
 
-  display: inline-block;
-
-  width: 100%;
-  margin-top: 2.4rem;
-`;
-
-const ClearCartButton = styled.button`
-  color: var(--color-grey-0);
-  font-size: 1.4rem;
-
-  transition: var(--animation-fast);
-
-  cursor: pointer;
-
-  &:hover {
-    color: var(--color-brand-500);
-  }
+  height: 100%;
 `;
 
 const StyledHeading = styled(Heading)`
   font-weight: 400;
+
+  width: 100%;
+  text-align: start;
+
+  position: relative;
 `;
 
 const InfoBox = styled.div`
@@ -45,41 +34,82 @@ const InfoBox = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
-
-  margin-bottom: 0.8rem;
 `;
 
 const ItemCount = styled.span`
   color: var(--color-brand-500);
 `;
 
-const StyledLink = styled(Link)`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+const Box = styled.div`
+  overflow: scroll;
+  margin: 0.8rem 0;
+  border-top: 1px solid var(--color-brand-500);
+  border-bottom: 1px solid var(--color-brand-500);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+const StyledButton = styled.button`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: var(--color-grey-0);
+
+  cursor: pointer;
+  font-size: 2.4rem;
+
+  transition: var(--animation-fast);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+`;
+
+const CheckOutBox = styled.div`
+  text-align: start;
+  padding: 1.2rem 0.8rem;
+  flex-shrink: 0;
+
+  button {
+    margin-top: 1.2rem;
+  }
+
+  div {
+    margin-left: 1.2rem;
+  }
 `;
 
 export default function Cart() {
-  const { cart, clearCart } = useCart();
-  const itemsInCart = cart.reduce((acc, cur) => (acc += cur.quantity), 0);
+  const { cart, itemsInCart, totalCartPrice } = useCart();
+  const { closeMenu } = useMenu();
+
   return (
     <Container>
       <InfoBox>
         <StyledHeading variation="tertiary">
-          {cart.length !== 0 ? (
+          {itemsInCart !== 0 ? (
             <>
-              {" "}
               Your cart &mdash; <ItemCount>{itemsInCart} </ItemCount>
-              items{" "}
+              {itemsInCart === 1 ? "item" : "items"}
             </>
           ) : (
             <>Your cart is empty</>
           )}
+          <StyledButton onClick={closeMenu}>
+            <HiXMark />
+          </StyledButton>
         </StyledHeading>
       </InfoBox>
       {cart.length !== 0 && (
-        <>
+        <Box>
           {cart.map((item) => (
             <CartItem
               title={item.title}
@@ -89,9 +119,16 @@ export default function Cart() {
               key={item.id}
             />
           ))}
-          <ClearCartButton onClick={clearCart}>Clear Cart</ClearCartButton>
-        </>
+        </Box>
       )}
+      {itemsInCart ? (
+        <CheckOutBox>
+          <Price size="large" price={totalCartPrice} />
+          <Link to="/cart-summary">
+            <Button onClick={closeMenu}>Checkout</Button>
+          </Link>
+        </CheckOutBox>
+      ) : null}
     </Container>
   );
 }

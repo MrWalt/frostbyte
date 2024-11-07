@@ -7,16 +7,13 @@ import {
   HiOutlineShoppingCart,
 } from "react-icons/hi2";
 import { useCart } from "../features/cart/CartContext";
-import DropDownMenu from "./DropDownMenu";
-import { useState } from "react";
-import Cart from "../features/cart/Cart";
-import WishList from "../features/wishlist/WishList";
+import { useMenu } from "../contexts/MenuContext";
 
 const StyledHeader = styled.header`
   height: 8rem;
   width: 100%;
 
-  z-index: 9999;
+  z-index: 999;
 
   background-color: var(--color-brand-800);
   border-bottom: 1px solid var(--color-brand-400);
@@ -129,21 +126,8 @@ const StyledButton = styled.button`
 `;
 
 export default function Header() {
-  const [toggledMenu, setToggledMenu] = useState("");
-  const { cart } = useCart();
-  const itemsInCart = cart.length;
-
-  function handleSetToggledMenu(menu) {
-    if (toggledMenu === menu) {
-      closeMenu();
-      return;
-    }
-    setToggledMenu(menu);
-  }
-
-  function closeMenu() {
-    setToggledMenu("");
-  }
+  const { itemsInCart } = useCart();
+  const { handleSetToggledMenu } = useMenu();
 
   return (
     <StyledHeader className="header">
@@ -183,30 +167,6 @@ export default function Header() {
           </StyledButton>
         </Box>
       </Container>
-      <DropDownMenu
-        align="left"
-        isOpen={toggledMenu === "products"}
-        closeMenu={closeMenu}
-        menuName="products"
-      >
-        <p>This is products</p>
-      </DropDownMenu>
-      <DropDownMenu
-        align="right"
-        isOpen={toggledMenu === "cart"}
-        closeMenu={closeMenu}
-        menuName="cart"
-      >
-        <Cart />
-      </DropDownMenu>
-      <DropDownMenu
-        align="right"
-        isOpen={toggledMenu === "wishlist"}
-        closeMenu={closeMenu}
-        menuName="wishlist"
-      >
-        <WishList />
-      </DropDownMenu>
     </StyledHeader>
   );
 }

@@ -3,16 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import Header from "./Header";
 import Footer from "./Footer";
-
-const Main = styled.main`
-  width: 100%;
-
-  min-height: calc(100vh - 10rem);
-
-  padding-top: 8rem;
-
-  background-color: var(--color-grey-900);
-`;
+import Main from "./Main";
 
 export default function AppLayout() {
   return (

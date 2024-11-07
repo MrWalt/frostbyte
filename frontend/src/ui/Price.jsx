@@ -39,6 +39,8 @@ const centSizes = {
 const StyledPrice = styled.span`
   display: inline-block;
 
+  color: var(--color-grey-0);
+
   ${(props) => priceSizes[props.size]}
 `;
 
@@ -66,7 +68,7 @@ export default function Price({ price, size }) {
       <Currency size={size}>$</Currency>
       <StyledPrice size={size}>{formattedPrice.at(0)},</StyledPrice>
       <Cents size={size}>
-        {formattedPrice.at(1) > 0 ? formattedPrice.at(1) : "00"}
+        {formattedPrice.at(1) > 0 ? formattedPrice.at(1).slice(0, 2) : "00"}
       </Cents>
     </div>
   );

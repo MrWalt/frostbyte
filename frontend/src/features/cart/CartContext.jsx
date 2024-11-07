@@ -61,6 +61,12 @@ export default function CartProvider({ children }) {
     dispatch({ type: "cart/decrease", payload: id });
   }
 
+  const itemsInCart = cart.reduce((acc, cur) => (acc += cur.quantity), 0);
+  const totalCartPrice = cart.reduce(
+    (acc, cur) => (acc += cur.price * cur.quantity),
+    0
+  );
+
   return (
     <CartContext.Provider
       value={{
@@ -70,6 +76,8 @@ export default function CartProvider({ children }) {
         clearCart,
         increaseQuantity,
         decreaseQuantity,
+        itemsInCart,
+        totalCartPrice,
       }}
     >
       {children}

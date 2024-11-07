@@ -10,7 +10,7 @@ import SummaryDetails from "../features/cart/SummaryDetails";
 import { useCart } from "../features/cart/CartContext";
 
 const StyledSection = styled(Section)`
-  background-image: url("/background.png");
+  background-image: url("/background.webp");
 
   min-height: calc(100vh - 6.4rem - 10rem);
 `;

@@ -4,7 +4,7 @@ import AccountHeader from "../ui/AccountHeader";
 import { Outlet } from "react-router-dom";
 
 const StyledSection = styled(Section)`
-  background-image: url("/background.png");
+  background-image: url("/background.webp");
   min-height: calc(100vh - 8rem - 10rem);
 
   font-size: 1.6rem;

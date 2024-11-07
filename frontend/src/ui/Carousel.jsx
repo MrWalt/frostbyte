@@ -1,14 +1,9 @@
-import {
-  HiArrowLongRight,
-  HiArrowRight,
-  HiArrowLeft,
-  HiFire,
-} from "react-icons/hi2";
+import { HiArrowRight, HiArrowLeft, HiFire } from "react-icons/hi2";
 import styled from "styled-components";
 import Button from "./Button";
 
 const Container = styled.div`
-  height: calc(100vh - 6.4rem - 2px);
+  height: 64vh;
   width: 100%;
 
   background-color: var(--color-grey-transparent);
@@ -19,34 +14,29 @@ const Container = styled.div`
 
   position: relative;
   backdrop-filter: blur(4px);
+
+  padding: 4.8rem 0;
 `;
 
 const CarouselContainer = styled.div`
-  width: 160rem;
+  max-width: 90rem;
   height: 100%;
 
-  padding: 9.6rem 0;
+  flex: 1 0 0;
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100%;
-  justify-content: center;
+  display: flex;
 `;
 
 const ImageContainer = styled.div`
-  height: 100%;
-  width: 100%;
-
   display: flex;
   justify-content: start;
   align-items: center;
 
-  padding: 2.4rem 0;
+  flex: 1 1 0;
 `;
 
 const Image = styled.img`
-  display: inline-block;
-  max-width: 100%;
+  display: block;
   height: 100%;
 `;
 
@@ -56,13 +46,13 @@ const InfoBox = styled.div`
   justify-content: space-between;
 
   justify-self: center;
-
-  padding: 4.8rem 3.6rem;
+  flex: 1 1 0;
+  padding: 3.6rem 0;
 `;
 
 const Specs = styled.div`
   color: var(--color-grey-0);
-  font-size: 2rem;
+  font-size: 1.8rem;
 
   p:not(:last-of-type) {
     margin-bottom: 0.8rem;
@@ -184,21 +174,11 @@ export default function Carousel() {
           </IconBox>
 
           <Specs>
-            <p>
-              <HiArrowLongRight /> NVidia RTX 4090
-            </p>
-            <p>
-              <HiArrowLongRight /> Intel I9-14990K
-            </p>
-            <p>
-              <HiArrowLongRight /> 4TB SSD Storage
-            </p>
-            <p>
-              <HiArrowLongRight /> 128GB DDR5 6400MHz
-            </p>
-            <p>
-              <HiArrowLongRight /> Custom Liquid Cooling
-            </p>
+            <p>NVidia RTX 4090</p>
+            <p>Intel I9-14990K</p>
+            <p>4TB SSD Storage</p>
+            <p>128GB DDR5 6400MHz</p>
+            <p>Custom Liquid Cooling</p>
           </Specs>
         </InfoBox>
 

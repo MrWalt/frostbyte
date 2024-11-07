@@ -1,64 +1,55 @@
-const desktopComputerParts = [
-  { title: "Processors", link: "processors" },
-  { title: "Memory", link: "memory" },
-
+const categories = [
   {
-    title: "Graphics Cards",
-    link: "graphics-cards",
+    category: "Desktop",
+    links: [
+      { heading: "Processors", link: "processors" },
+      { heading: "Graphics Cards", link: "graphics-cards" },
+      { heading: "RAM Memory", link: "memory" },
+      { heading: "Storage Disks", link: "storage" },
+      { heading: "Computer Cases", link: "computer-cases" },
+      { heading: "Cooling", link: "cooling" },
+      { heading: "Power Supplies", link: "power-supplies" },
+      { heading: "Prebuilt Computers", link: "prebuilt-computers" },
+    ],
   },
   {
-    title: "Storage",
-    link: "storage",
+    category: "Computer Peripherals",
+    links: [
+      { heading: "Mice", link: "mice" },
+      { heading: "Keyboards", link: "keyboards" },
+      { heading: "Other", link: "other-peripherals" },
+    ],
   },
   {
-    title: "Computer Cases",
-    link: "computer-cases",
+    category: "Audio Equipment",
+    links: [
+      { heading: "Speakers", link: "speakers" },
+      { heading: "Headphones", link: "Headphones" },
+      { heading: "Microphones", link: "microphones" },
+    ],
   },
-  { title: "Cooling", link: "cooling" },
   {
-    title: "Power Supplies",
-    link: "power-supplies",
+    category: "Gaming",
+    links: [
+      { heading: "Consoles", link: "gaming-consoles" },
+      { heading: "Games", link: "video-games" },
+      { heading: "Controllers", link: "controllers" },
+    ],
   },
-  { title: "Prebuilt Computers", link: "prebuilt-computers" },
+  {
+    category: "Handheld Devices",
+    links: [
+      { heading: "Mobile Phones", link: "mobile-phones" },
+      { heading: "Tablets", link: "tablets" },
+    ],
+  },
+  {
+    category: "Network",
+    links: [
+      { heading: "Routers", link: "routers" },
+      { heading: "Switches", link: "switches" },
+    ],
+  },
 ];
 
-const computerPeripherals = [
-  { title: "Monitors", link: "monitors" },
-  {
-    title: "Mice",
-    link: "mice",
-  },
-  {
-    title: "Keyboards",
-    link: "keyboards",
-  },
-  {
-    title: "Speakers",
-    link: "speakers",
-  },
-  {
-    title: "Headphones",
-    link: "headphones",
-  },
-];
-
-const other = [
-  {
-    title: "Accessories",
-    link: "accessories",
-  },
-  {
-    title: "Laptops",
-    link: "laptops",
-  },
-  { title: "Consoles", link: "consoles" },
-  { title: "Games", link: "games" },
-  { title: "Phones", link: "phones" },
-  { title: "Multimedia", link: "multimedia" },
-  { title: "Tablets", link: "tablets" },
-  { title: "Cameras", link: "cameras" },
-  { title: "Networking", link: "networking" },
-  { title: "Printers", link: "printers" },
-];
-
-export { other, desktopComputerParts, computerPeripherals };
+export default categories;

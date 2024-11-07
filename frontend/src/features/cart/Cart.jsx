@@ -43,8 +43,8 @@ const ItemCount = styled.span`
 const Box = styled.div`
   overflow: scroll;
   margin: 0.8rem 0;
-  border-top: 1px solid var(--color-brand-500);
-  border-bottom: 1px solid var(--color-brand-500);
+  border-top: 1px solid var(--color-grey-800);
+  border-bottom: 1px solid var(--color-grey-800);
 
   &::-webkit-scrollbar {
     display: none;
@@ -125,7 +125,7 @@ export default function Cart() {
         <CheckOutBox>
           <Price size="large" price={totalCartPrice} />
           <Link to="/cart-summary">
-            <Button onClick={closeMenu}>Checkout</Button>
+            <Button>Checkout</Button>
           </Link>
         </CheckOutBox>
       ) : null}

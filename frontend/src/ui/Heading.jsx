@@ -18,6 +18,8 @@ const Heading = styled.h1`
   color: var(--color-grey-0);
 
   ${(props) => variations[props.variation]};
+
+  font-weight: 400;
 `;
 
 export default Heading;

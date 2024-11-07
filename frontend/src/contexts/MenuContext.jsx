@@ -1,9 +1,11 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { useLocation, useParams, useSearchParams } from "react-router-dom";
 
 const MenuContext = createContext();
 
 export default function MenuProvider({ children }) {
   const [toggledMenu, setToggledMenu] = useState("");
+  const location = useLocation();
 
   function handleSetToggledMenu(menu) {
     setToggledMenu(menu);
@@ -12,6 +14,13 @@ export default function MenuProvider({ children }) {
   function closeMenu() {
     setToggledMenu("");
   }
+
+  useEffect(
+    function () {
+      closeMenu();
+    },
+    [location.pathname]
+  );
 
   return (
     <MenuContext.Provider

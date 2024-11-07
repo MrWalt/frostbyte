@@ -1,12 +1,4 @@
 import styled, { css } from "styled-components";
-import {
-  computerPeripherals,
-  desktopComputerParts,
-  other,
-} from "../data/productTabs";
-
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import { useMenu } from "../contexts/MenuContext";
 
 const Overlay = styled.div`

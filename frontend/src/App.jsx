@@ -35,16 +35,16 @@ const queryClient = new QueryClient({
 
 export default function App() {
   return (
-    <UserProvider>
-      <CartProvider>
-        <WishlistProvider>
-          <MenuProvider>
-            <QueryClientProvider client={queryClient}>
-              <div style={{ fontSize: "16px" }}>
-                <ReactQueryDevtools initialIsOpen={false} />
-              </div>
-              <GlobalStyles />
-              <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <div style={{ fontSize: "16px" }}>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </div>
+      <GlobalStyles />
+      <BrowserRouter>
+        <UserProvider>
+          <CartProvider>
+            <WishlistProvider>
+              <MenuProvider>
                 <Routes>
                   <Route path="/" element={<AppLayout />}>
                     <Route index element={<Home />} />
@@ -80,11 +80,11 @@ export default function App() {
                     <Route path="*" element={<PageNotFound />} />
                   </Route>
                 </Routes>
-              </BrowserRouter>
-            </QueryClientProvider>
-          </MenuProvider>
-        </WishlistProvider>
-      </CartProvider>
-    </UserProvider>
+              </MenuProvider>
+            </WishlistProvider>
+          </CartProvider>
+        </UserProvider>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }

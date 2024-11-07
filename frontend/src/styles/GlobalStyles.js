@@ -110,4 +110,16 @@ input, button {
         transform: scale(1) translateY(0) rotate(0);
     }
 }
+
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
 `;

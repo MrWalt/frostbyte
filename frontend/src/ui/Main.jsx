@@ -3,6 +3,7 @@ import DropDownMenu from "./DropDownMenu";
 import Cart from "../features/cart/Cart";
 import WishList from "../features/wishlist/WishList";
 import { useMenu } from "../contexts/MenuContext";
+import Navigation from "./Navigation";
 
 const StyledMain = styled.main`
   width: 100%;
@@ -21,7 +22,7 @@ export default function Main({ children }) {
       {children}
 
       <DropDownMenu align="left" isOpen={toggledMenu === "products"}>
-        <p>This is products</p>
+        <Navigation />
       </DropDownMenu>
       <DropDownMenu align="right" isOpen={toggledMenu === "cart"}>
         <Cart />

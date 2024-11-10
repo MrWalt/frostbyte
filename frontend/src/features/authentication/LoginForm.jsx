@@ -84,15 +84,14 @@ export default function LoginForm() {
 
   function onSubmit(data) {
     login(data);
+    reset({ email: data.email, password: "" });
   }
-
-  function onError() {}
 
   return (
     <Container>
       <StyledHeading variation="primary">Login to your account</StyledHeading>
 
-      <form onSubmit={handleSubmit(onSubmit, onError)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <StyledDiv>
           {errors?.email && <Error>{errors.email.message}</Error>}
           <Input

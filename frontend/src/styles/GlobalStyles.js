@@ -93,6 +93,16 @@ input, button {
     transform: scale(0);
 }
 
+.toast {
+    font-size: 1.6rem;
+    max-width: 50rem;
+    padding: 1.6rem 2.4rem;
+    color: var(--color-grey-0);
+    background-color: var(--color-grey-900);
+    border:1px solid var(--color-grey-800);
+    border-radius: 0;
+}
+
 
 @keyframes jumpUp {
     0% {

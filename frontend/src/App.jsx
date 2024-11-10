@@ -24,6 +24,7 @@ import UserProvider from "./features/authentication/UserContext";
 import CartProvider from "./features/cart/CartContext";
 import WishlistProvider from "./features/wishlist/WishlistContext";
 import MenuProvider from "./contexts/MenuContext";
+import { Toaster } from "react-hot-toast";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -85,6 +86,30 @@ export default function App() {
           </CartProvider>
         </UserProvider>
       </BrowserRouter>
+      <Toaster
+        position="top-right"
+        gutter={12}
+        containerStyle={{
+          marginTop: "80px",
+        }}
+        toastOptions={{
+          success: {
+            duration: 3000,
+          },
+          error: {
+            duration: 5000,
+          },
+          style: {
+            fontSize: "16px",
+            maxWidth: "500px",
+            padding: "16px 24px",
+            backgroundColor: "var(--color-grey-900)",
+            color: "var(--color-grey-0)",
+            border: "1px solid var(--color-grey-800)",
+            borderRadius: "0",
+          },
+        }}
+      />
     </QueryClientProvider>
   );
 }

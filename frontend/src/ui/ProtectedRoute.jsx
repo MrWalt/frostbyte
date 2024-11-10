@@ -4,14 +4,14 @@ import { useUser } from "../features/authentication/UserContext";
 
 export default function ProtectedRoute({ children }) {
   const navigate = useNavigate();
-  const { isAuthenticated } = useUser();
+  const { user } = useUser();
 
   useEffect(
     function () {
-      if (!isAuthenticated) navigate("/login", { replace: true });
+      if (!user.isAuthenticated) navigate("/login", { replace: true });
     },
-    [isAuthenticated, navigate]
+    [user.isAuthenticated, navigate]
   );
 
-  if (isAuthenticated) return children;
+  if (user.isAuthenticated) return children;
 }

@@ -4,20 +4,13 @@ const UserContext = createContext();
 
 export default function UserProvider({ children }) {
   const [user, setUser] = useState({});
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  function handleSetUser(user) {
-    setUser(user);
-  }
-
-  function handleSetIsAuth() {
-    setIsAuthenticated(true);
+  function handleSetUser(loggedInUser) {
+    setUser(loggedInUser);
   }
 
   return (
-    <UserContext.Provider
-      value={{ user, handleSetUser, isAuthenticated, handleSetIsAuth }}
-    >
+    <UserContext.Provider value={{ user, handleSetUser }}>
       {children}
     </UserContext.Provider>
   );

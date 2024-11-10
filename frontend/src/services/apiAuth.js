@@ -7,5 +7,8 @@ export async function login({ email, password }) {
     },
   });
 
-  return res.json();
+  const data = await res.json();
+  if (data.status === "error") throw new Error(data.message);
+
+  return data;
 }

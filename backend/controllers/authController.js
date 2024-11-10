@@ -44,11 +44,11 @@ async function login(req, res) {
     const user = await User.findOne({ email }).select("+password");
 
     if (!user || !(await user.correctPassword(password, user.password)))
-      throw new Error("Incorrect Email or Password.");
+      throw new Error("Incorrect Email or Password");
 
     createAndSendToken(user, 200, res);
   } catch (err) {
-    res.status(400).json({ status: "error", message: err });
+    res.status(401).json({ status: "error", message: err.message });
   }
 }
 

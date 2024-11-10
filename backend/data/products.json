@@ -1,9 +1,38 @@
 [
   {
-    "title": "MSI GeForce RTX 4080 Ventus 3X 16G OC",
-    "shortTitle": "MSI RTX 4080 Ventus 3X OC",
-    "priceUSD": 1199.99,
-    "priceEUR": 1349.99,
+    "title": "NVIDIA GeForce RTX 4090 24GB Founders Edition",
+    "shortTitle": "RTX 4090 24GB FE",
+    "price": {
+      "USD": 1599.99,
+      "EUR": 1799.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Ada Lovelace Architecture",
+      "24GB GDDR6X Memory",
+      "2460 MHz Boost Clock",
+      "PCI Express Gen 4 x16 Interface",
+      "DLSS 3",
+      "Ray Tracing Cores",
+      "Advanced Shader Cores",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+      "285W TGP",
+      "242 Tensor Cores",
+      "9728 CUDA Cores",
+      "228 Shader Execution Units"
+    ],
+    "warranty": "2 years",
+    "stock": 3,
+    "sold": 7
+  },
+  {
+    "title": "MSI GeForce RTX 4080 16GB Ventus 3X OC",
+    "shortTitle": "MSI RTX 4080 16GB Ventus 3X OC",
+    "price": {
+      "USD": 1199.99,
+      "EUR": 1349.99
+    },
     "manufacturer": "MSI",
     "category": "graphics-cards",
     "specifications": [
@@ -12,181 +41,1322 @@
       "2505 MHz Boost Clock (OC Mode)",
       "Torx Fan 4.0",
       "Tri Frozr 3 Cooler",
-      "PCIe Gen 4.0 x16 Interface"
+      "PCIe Gen 4.0 x16 Interface",
+      "DLSS 3",
+      "Ray Tracing Cores",
+      "Advanced Shader Cores",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+      "250W TGP"
     ],
     "warranty": "2 years",
     "stock": 3,
     "sold": 7
   },
   {
-    "title": "PNY GeForce RTX 4070 Ti Verto Gaming",
-    "shortTitle": "PNY RTX 4070 Ti Verto",
-    "priceUSD": 849.99,
-    "priceEUR": 949.99,
-    "manufacturer": "PNY",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Ada Lovelace Architecture",
-      "12GB GDDR6X Memory",
-      "2610 MHz Boost Clock",
-      "Dual-Fan Cooling",
-      "RGB Lighting",
-      "PCIe Gen 4.0 x16 Interface"
-    ],
-    "warranty": "2 years",
-    "stock": 9,
-    "sold": 1
-  },
-  {
-    "title": "XFX Speedster MERC 319 AMD Radeon RX 7900 XT Black",
-    "shortTitle": "XFX RX 7900 XT MERC 319 Black",
-    "priceUSD": 899.99,
-    "priceEUR": 1049.99,
-    "manufacturer": "XFX",
-    "category": "graphics-cards",
-    "specifications": [
-      "AMD RDNA 3 Architecture",
-      "20GB GDDR6 Memory",
-      "2300 MHz Game Clock",
-      "2500 MHz Boost Clock",
-      "Triple Dissipation Fans",
-      "PCIe Gen 4.0 x16 Interface"
-    ],
-    "warranty": "3 years",
-    "stock": 10,
-    "sold": 0
-  },
-  {
-    "title": "Gigabyte AORUS GeForce RTX 4090 XTREME WATERFORCE",
-    "shortTitle": "Gigabyte RTX 4090 AORUS WF",
-    "priceUSD": 2499.99,
-    "priceEUR": 2799.99,
-    "manufacturer": "Gigabyte",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Ada Lovelace Architecture",
-      "24GB GDDR6X Memory",
-      "2520 MHz Boost Clock",
-      "AORUS Liquid Cooling",
-      "RGB Fusion 2.0",
-      "PCIe Gen 5.0 x16 Interface"
-    ],
-    "warranty": "2 years",
-    "stock": 2,
-    "sold": 8
-  },
-  {
-    "title": "ZOTAC GAMING GeForce RTX 4080 AMP Extreme AIRO",
-    "shortTitle": "ZOTAC RTX 4080 AMP Extreme",
-    "priceUSD": 1299.99,
-    "priceEUR": 1449.99,
-    "manufacturer": "ZOTAC",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Ada Lovelace Architecture",
-      "16GB GDDR6X Memory",
-      "2520 MHz Boost Clock",
-      "IceStorm 2.0 Cooling",
-      "Spectra 2.0 RGB Lighting",
-      "PCIe Gen 4.0 x16 Interface"
-    ],
-    "warranty": "2 years",
-    "stock": 7,
-    "sold": 3
-  },
-  {
-    "title": "ASUS ROG Strix GeForce RTX 4090 Ti OC Edition",
-    "shortTitle": "ROG RTX 4090 Ti OC",
-    "priceUSD": 2299.99,
-    "priceEUR": 2599.99,
+    "title": "ASUS ROG Strix GeForce RTX 4070 Ti 12GB OC Edition",
+    "shortTitle": "ROG Strix RTX 4070 Ti 12GB OC",
+    "price": {
+      "USD": 899.99,
+      "EUR": 999.99
+    },
     "manufacturer": "ASUS",
     "category": "graphics-cards",
     "specifications": [
       "NVIDIA Ada Lovelace Architecture",
-      "24GB GDDR6X Memory",
-      "2520 MHz Boost Clock (OC Mode)",
-      "Axial-tech Fans",
-      "MaxContact Cooler",
-      "PCIe Gen 5.0 x16 Interface"
+      "12GB GDDR6X Memory",
+      "2610 MHz Boost Clock (OC Mode)",
+      "PCI Express Gen 4 x16 Interface",
+      "DLSS 3",
+      "Ray Tracing Cores",
+      "Advanced Shader Cores",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+      "240W TGP"
     ],
     "warranty": "2 years",
-    "stock": 5,
+    "stock": 2,
     "sold": 5
   },
   {
-    "title": "PowerColor Red Devil Radeon RX 7900 XTX",
-    "shortTitle": "PowerColor RX 7900 XTX Red Devil",
-    "priceUSD": 999.99,
-    "priceEUR": 1149.99,
+    "title": "Gigabyte AORUS GeForce RTX 4060 Ti 8GB Master",
+    "shortTitle": "AORUS RTX 4060 Ti 8GB Master",
+    "price": {
+      "USD": 499.99,
+      "EUR": 549.99
+    },
+    "manufacturer": "Gigabyte",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Ada Lovelace Architecture",
+      "8GB GDDR6 Memory",
+      "2535 MHz Boost Clock",
+      "PCI Express Gen 4 x16 Interface",
+      "DLSS 3",
+      "Ray Tracing Cores",
+      "Advanced Shader Cores",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1a",
+      "200W TGP"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 1
+  },
+  {
+    "title": "PowerColor Red Devil Radeon RX 7900 XTX 24GB",
+    "shortTitle": "Red Devil RX 7900 XTX 24GB",
+    "price": {
+      "USD": 999.99,
+      "EUR": 1099.99
+    },
     "manufacturer": "PowerColor",
     "category": "graphics-cards",
     "specifications": [
       "AMD RDNA 3 Architecture",
       "24GB GDDR6 Memory",
       "2500 MHz Game Clock",
-      "2600 MHz Boost Clock",
-      "Triple Axial Fans",
-      "PCIe Gen 4.0 x16 Interface"
+      "PCI Express Gen 4 x16 Interface",
+      "FSR 3.0",
+      "Ray Tracing Cores",
+      "3x DisplayPort 2.1, 1x HDMI 2.1a",
+      "355W TGP"
     ],
-    "warranty": "3 years",
-    "stock": 1,
-    "sold": 9
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 2
   },
   {
-    "title": "Sapphire NITRO+ Radeon RX 7900 XT",
-    "shortTitle": "Sapphire RX 7900 XT Nitro+",
-    "priceUSD": 899.99,
-    "priceEUR": 1049.99,
-    "manufacturer": "Sapphire",
-    "category": "graphics-cards",
+    "title": "Intel Core i9-13900K 24-Core 5.8 GHz",
+    "shortTitle": "Intel i9-13900K 24-Core 5.8 GHz",
+    "price": {
+      "USD": 589.99,
+      "EUR": 649.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
     "specifications": [
-      "AMD RDNA 3 Architecture",
-      "20GB GDDR6 Memory",
-      "2300 MHz Game Clock",
-      "2500 MHz Boost Clock",
-      "Dual-Axial Fans",
-      "PCIe Gen 4.0 x16 Interface"
+      "24 Cores, 32 Threads",
+      "5.8 GHz Max Turbo Frequency",
+      "Intel 7 Process",
+      "DDR5-5600 Memory Support",
+      "PCIe Gen 5.0",
+      "Integrated Intel UHD Graphics 770",
+      "Intel Z790 Chipset",
+      "LGA 1700 Socket"
     ],
     "warranty": "3 years",
+    "stock": 7,
+    "sold": 3
+  },
+  {
+    "title": "AMD Ryzen 9 7950X 16-Core 5.7 GHz",
+    "shortTitle": "AMD Ryzen 9 7950X 16-Core 5.7 GHz",
+    "price": {
+      "USD": 549.99,
+      "EUR": 629.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "16 Cores, 32 Threads",
+      "5.7 GHz Max Boost Clock",
+      "5nm TSMC Process",
+      "DDR5-5200 Memory Support",
+      "PCIe Gen 5.0",
+      "Integrated AMD Radeon Graphics",
+      "AMD X670E Chipset",
+      "AM5 Socket"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 2
+  },
+  {
+    "title": "Intel Core i7-13700K 16-Core 5.4 GHz",
+    "shortTitle": "Intel i7-13700K 16-Core 5.4 GHz",
+    "price": {
+      "USD": 409.99,
+      "EUR": 459.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "16 Cores, 24 Threads",
+      "5.4 GHz Max Turbo Frequency",
+      "Intel 7 Process",
+      "DDR5-5600 Memory Support",
+      "PCIe Gen 5.0",
+      "Integrated Intel UHD Graphics 770",
+      "Intel Z790 Chipset",
+      "LGA 1700 Socket"
+    ],
+    "warranty": "3 years",
+    "stock": 8,
+    "sold": 1
+  },
+  {
+    "title": "AMD Ryzen 7 7700X 8-Core 5.5 GHz",
+    "shortTitle": "AMD Ryzen 7 7700X 8-Core 5.5 GHz",
+    "price": {
+      "USD": 299.99,
+      "EUR": 339.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "8 Cores, 16 Threads",
+      "5.5 GHz Max Boost Clock",
+      "5nm TSMC Process",
+      "DDR5-5200 Memory Support",
+      "PCIe Gen 5.0",
+      "Integrated AMD Radeon Graphics",
+      "AMD X670E Chipset",
+      "AM5 Socket"
+    ],
+    "warranty": "2 years",
+    "stock": 10,
+    "sold": 4
+  },
+  {
+    "title": "Intel Core i5-13600K 14-Core 5.1 GHz",
+    "shortTitle": "Intel i5-13600K 14-Core 5.1 GHz",
+    "price": {
+      "USD": 319.99,
+      "EUR": 359.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "14 Cores, 20 Threads",
+      "5.1 GHz Max Turbo Frequency",
+      "Intel 7 Process",
+      "DDR5-5600 Memory Support",
+      "PCIe Gen 5.0",
+      "Integrated Intel UHD Graphics 770",
+      "Intel Z790 Chipset",
+      "LGA 1700 Socket"
+    ],
+    "warranty": "3 years",
+    "stock": 6,
+    "sold": 2
+  },
+  {
+    "title": "Corsair Vengeance DDR5 32GB (2x16GB) 5600MHz CL36 RAM",
+    "shortTitle": "Corsair Vengeance DDR5 32GB 5600MHz CL36",
+    "price": {
+      "USD": 129.99,
+      "EUR": 149.99
+    },
+    "manufacturer": "Corsair",
+    "category": "memory",
+    "specifications": [
+      "DDR5-5600 CL36 Memory Kit",
+      "32GB (2 x 16GB) Capacity",
+      "Intel XMP 3.0 Ready",
+      "Corsair Vengeance RGB Pro Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 10,
+    "sold": 3
+  },
+  {
+    "title": "G.Skill Trident Z5 Neo DDR5 32GB (2x16GB) 6000MHz CL30 RAM",
+    "shortTitle": "G.Skill Trident Z5 Neo DDR5 32GB 6000MHz CL30",
+    "price": {
+      "USD": 179.99,
+      "EUR": 209.99
+    },
+    "manufacturer": "G.Skill",
+    "category": "memory",
+    "specifications": [
+      "DDR5-6000 CL30 Memory Kit",
+      "32GB (2 x 16GB) Capacity",
+      "Intel XMP 3.0 Ready",
+      "RGB Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "Kingston Fury Beast DDR5 32GB (2x16GB) 5200MHz CL40 RAM",
+    "shortTitle": "Kingston Fury Beast DDR5 32GB 5200MHz CL40",
+    "price": {
+      "USD": 99.99,
+      "EUR": 119.99
+    },
+    "manufacturer": "Kingston",
+    "category": "memory",
+    "specifications": [
+      "DDR5-5200 CL40 Memory Kit",
+      "32GB (2 x 16GB) Capacity",
+      "Intel XMP 3.0 Ready",
+      "Black Heat Spreader"
+    ],
+    "warranty": "4 years",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "TeamGroup T-Force Delta RGB DDR5 32GB (2x16GB) 5200MHz CL40 RAM",
+    "shortTitle": "TeamGroup T-Force Delta RGB DDR5 32GB 5200MHz CL40",
+    "price": {
+      "USD": 109.99,
+      "EUR": 129.99
+    },
+    "manufacturer": "TeamGroup",
+    "category": "memory",
+    "specifications": [
+      "DDR5-5200 CL40 Memory Kit",
+      "32GB (2 x 16GB) Capacity",
+      "Intel XMP 3.0 Ready",
+      "RGB Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "Patriot Viper DDR5 32GB (2x16GB) 5600MHz CL36 RAM",
+    "shortTitle": "Patriot Viper DDR5 32GB 5600MHz CL36",
+    "price": {
+      "USD": 119.99,
+      "EUR": 139.99
+    },
+    "manufacturer": "Patriot",
+    "category": "memory",
+    "specifications": [
+      "DDR5-5600 CL36 Memory Kit",
+      "32GB (2 x 16GB) Capacity",
+      "Intel XMP 3.0 Ready",
+      "RGB Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 9,
+    "sold": 6
+  },
+  {
+    "title": "Samsung 990 Pro 1TB PCIe 4.0 NVMe SSD",
+    "shortTitle": "Samsung 990 Pro 1TB NVMe",
+    "price": {
+      "USD": 169.99,
+      "EUR": 199.99
+    },
+    "manufacturer": "Samsung",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "PCIe Gen 4 x4 Interface",
+      "Up to 7450 MB/s Read Speed",
+      "Up to 6900 MB/s Write Speed",
+      "NVMe 2.0"
+    ],
+    "warranty": "3 years",
+    "stock": 10,
+    "sold": 3
+  },
+  {
+    "title": "WD Black SN850X 1TB PCIe 4.0 NVMe SSD",
+    "shortTitle": "WD Black SN850X 1TB NVMe",
+    "price": {
+      "USD": 159.99,
+      "EUR": 189.99
+    },
+    "manufacturer": "WD",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "PCIe Gen 4 x4 Interface",
+      "Up to 7300 MB/s Read Speed",
+      "Up to 6800 MB/s Write Speed",
+      "NVMe 2.0"
+    ],
+    "warranty": "3 years",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "Crucial P5 Plus 1TB PCIe 4.0 NVMe SSD",
+    "shortTitle": "Crucial P5 Plus 1TB NVMe",
+    "price": {
+      "USD": 119.99,
+      "EUR": 139.99
+    },
+    "manufacturer": "Crucial",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "PCIe Gen 4 x4 Interface",
+      "Up to 7000 MB/s Read Speed",
+      "Up to 6800 MB/s Write Speed",
+      "NVMe 2.0"
+    ],
+    "warranty": "5 years",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "Sabrent Rocket 4 Plus 2TB PCIe 4.0 NVMe SSD",
+    "shortTitle": "Sabrent Rocket 4 Plus 2TB NVMe",
+    "price": {
+      "USD": 249.99,
+      "EUR": 299.99
+    },
+    "manufacturer": "Sabrent",
+    "category": "storage",
+    "specifications": [
+      "2TB Capacity",
+      "PCIe Gen 4 x4 Interface",
+      "Up to 7100 MB/s Read Speed",
+      "Up to 7000 MB/s Write Speed",
+      "NVMe 2.0"
+    ],
+    "warranty": "5 years",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "SK Hynix Platinum P41 1TB PCIe 4.0 NVMe SSD",
+    "shortTitle": "SK Hynix Platinum P41 1TB NVMe",
+    "price": {
+      "USD": 129.99,
+      "EUR": 149.99
+    },
+    "manufacturer": "SK Hynix",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "PCIe Gen 4 x4 Interface",
+      "Up to 7000 MB/s Read Speed",
+      "Up to 6800 MB/s Write Speed",
+      "NVMe 2.0"
+    ],
+    "warranty": "5 years",
+    "stock": 9,
+    "sold": 6
+  },
+  {
+    "title": "Seagate BarraCuda 2TB 7200 RPM HDD",
+    "shortTitle": "Seagate BarraCuda 2TB HDD",
+    "price": {
+      "USD": 59.99,
+      "EUR": 69.99
+    },
+    "manufacturer": "Seagate",
+    "category": "storage",
+    "specifications": [
+      "2TB Capacity",
+      "7200 RPM Spindle Speed",
+      "256MB Cache",
+      "SATA 6Gb/s Interface"
+    ],
+    "warranty": "2 years",
+    "stock": 10,
+    "sold": 3
+  },
+  {
+    "title": "Western Digital WD Blue 4TB 7200 RPM HDD",
+    "shortTitle": "WD Blue 4TB HDD",
+    "price": {
+      "USD": 89.99,
+      "EUR": 109.99
+    },
+    "manufacturer": "Western Digital",
+    "category": "storage",
+    "specifications": [
+      "4TB Capacity",
+      "7200 RPM Spindle Speed",
+      "256MB Cache",
+      "SATA 6Gb/s Interface"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "Toshiba X300 4TB 7200 RPM HDD",
+    "shortTitle": "Toshiba X300 4TB HDD",
+    "price": {
+      "USD": 89.99,
+      "EUR": 109.99
+    },
+    "manufacturer": "Toshiba",
+    "category": "storage",
+    "specifications": [
+      "4TB Capacity",
+      "7200 RPM Spindle Speed",
+      "256MB Cache",
+      "SATA 6Gb/s Interface"
+    ],
+    "warranty": "2 years",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "Seagate IronWolf Pro 10TB 7200 RPM NAS HDD",
+    "shortTitle": "Seagate IronWolf Pro 10TB NAS HDD",
+    "price": {
+      "USD": 299.99,
+      "EUR": 349.99
+    },
+    "manufacturer": "Seagate",
+    "category": "storage",
+    "specifications": [
+      "10TB Capacity",
+      "7200 RPM Spindle Speed",
+      "256MB Cache",
+      "SATA 6Gb/s Interface"
+    ],
+    "warranty": "5 years",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "Western Digital WD Red Plus 8TB 5400 RPM NAS HDD",
+    "shortTitle": "WD Red Plus 8TB NAS HDD",
+    "price": {
+      "USD": 199.99,
+      "EUR": 239.99
+    },
+    "manufacturer": "Western Digital",
+    "category": "storage",
+    "specifications": [
+      "8TB Capacity",
+      "5400 RPM Spindle Speed",
+      "256MB Cache",
+      "SATA 6Gb/s Interface"
+    ],
+    "warranty": "5 years",
+    "stock": 9,
+    "sold": 6
+  },
+  {
+    "title": "Logitech G502 X Plus Lightspeed Wireless Gaming Mouse",
+    "shortTitle": "Logitech G502 X Plus Lightspeed",
+    "price": {
+      "USD": 89.99,
+      "EUR": 109.99
+    },
+    "manufacturer": "Logitech",
+    "category": "mice",
+    "specifications": [
+      "Hero 25K Sensor",
+      "Lightspeed Wireless Technology",
+      "Programmable DPI Button",
+      "Lightweight Design",
+      "RGB Lighting"
+    ],
+    "warranty": "2 years",
+    "stock": 10,
+    "sold": 3
+  },
+  {
+    "title": "Razer Viper V2 Pro Wireless Gaming Mouse",
+    "shortTitle": "Razer Viper V2 Pro Wireless",
+    "price": {
+      "USD": 149.99,
+      "EUR": 179.99
+    },
+    "manufacturer": "Razer",
+    "category": "mice",
+    "specifications": [
+      "Focus Pro 30K Sensor",
+      "HyperSpeed Wireless Technology",
+      "Ultralight Design",
+      "Razer Optical Mouse Switches",
+      "RGB Chroma Lighting"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "SteelSeries Aerox 5 Wireless Gaming Mouse",
+    "shortTitle": "SteelSeries Aerox 5 Wireless",
+    "price": {
+      "USD": 79.99,
+      "EUR": 99.99
+    },
+    "manufacturer": "SteelSeries",
+    "category": "mice",
+    "specifications": [
+      "TrueMove Air Sensor",
+      "Quantum 2.0 Wireless",
+      "AquaBarrier Water Resistance",
+      "Lightweight Design",
+      "RGB Illumination"
+    ],
+    "warranty": "2 years",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "Glorious Model O- Wireless Gaming Mouse",
+    "shortTitle": "Glorious Model O- Wireless",
+    "price": {
+      "USD": 59.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Glorious PC Gaming Race",
+    "category": "mice",
+    "specifications": [
+      "PixArt PMW3360 Sensor",
+      "Wireless and Wired Connectivity",
+      "Ultralight Design",
+      "Omron Switches",
+      "RGB Lighting"
+    ],
+    "warranty": "2 years",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "HyperX Pulsefire Haste 2 Wireless Gaming Mouse",
+    "shortTitle": "HyperX Pulsefire Haste 2 Wireless",
+    "price": {
+      "USD": 69.99,
+      "EUR": 89.99
+    },
+    "manufacturer": "HyperX",
+    "category": "mice",
+    "specifications": [
+      "PixArt PAW3370 Sensor",
+      "2.4GHz Wireless Technology",
+      "Ultralight Design",
+      "HyperX Switches",
+      "RGB Lighting"
+    ],
+    "warranty": "2 years",
+    "stock": 9,
+    "sold": 6
+  },
+  {
+    "title": "Keychron K8 Pro Wireless Mechanical Keyboard",
+    "shortTitle": "Keychron K8 Pro Wireless",
+    "price": {
+      "USD": 119.99,
+      "EUR": 139.99
+    },
+    "manufacturer": "Keychron",
+    "category": "keyboards",
+    "specifications": [
+      "Hot-Swappable Switches",
+      "Wireless and Wired Connectivity",
+      "RGB Backlighting",
+      "Mac and Windows Layout",
+      "Aluminum Frame"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 3
+  },
+  {
+    "title": "Ducky One 3 SF RGB Mechanical Keyboard",
+    "shortTitle": "Ducky One 3 SF RGB",
+    "price": {
+      "USD": 129.99,
+      "EUR": 149.99
+    },
+    "manufacturer": "Ducky",
+    "category": "keyboards",
+    "specifications": [
+      "Cherry MX Switches",
+      "PBT Keycaps",
+      "RGB Backlighting",
+      "Compact Layout",
+      "Solid Build Quality"
+    ],
+    "warranty": "1 year",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "Razer Huntsman V2 Analog Optical Keyboard",
+    "shortTitle": "Razer Huntsman V2 Analog",
+    "price": {
+      "USD": 199.99,
+      "EUR": 229.99
+    },
+    "manufacturer": "Razer",
+    "category": "keyboards",
+    "specifications": [
+      "Razer Optical Switches",
+      "Analog Key Input",
+      "Double-Shot PBT Keycaps",
+      "RGB Chroma Lighting",
+      "Multi-Function Digital Dial"
+    ],
+    "warranty": "2 years",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "Keychron K6 Pro Wireless Mechanical Keyboard",
+    "shortTitle": "Keychron K6 Pro Wireless",
+    "price": {
+      "USD": 99.99,
+      "EUR": 119.99
+    },
+    "manufacturer": "Keychron",
+    "category": "keyboards",
+    "specifications": [
+      "Hot-Swappable Switches",
+      "Wireless and Wired Connectivity",
+      "RGB Backlighting",
+      "Compact Layout",
+      "Aluminum Frame"
+    ],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "SteelSeries Apex Pro Mini Mechanical Keyboard",
+    "shortTitle": "SteelSeries Apex Pro Mini",
+    "price": {
+      "USD": 149.99,
+      "EUR": 179.99
+    },
+    "manufacturer": "SteelSeries",
+    "category": "keyboards",
+    "specifications": [
+      "OmniPoint Adjustable Switches",
+      "OLED Smart Display",
+      "Magnetic Wrist Rest",
+      "RGB Illumination",
+      "Compact Layout"
+    ],
+    "warranty": "2 years",
+    "stock": 9,
+    "sold": 6
+  },
+  {
+    "title": "ASUS ROG Maximus Z790 Extreme LGA 1700",
+    "shortTitle": "ASUS ROG Maximus Z790",
+    "price": {
+      "USD": 699.99,
+      "EUR": 799.99
+    },
+    "manufacturer": "ASUS",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z790 Chipset",
+      "DDR5 Memory Support",
+      "PCIe 5.0 Support",
+      "Onboard Wi-Fi 6E",
+      "10G Ethernet",
+      "RGB Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 5,
+    "sold": 2
+  },
+  {
+    "title": "MSI MEG Z790 Ace LGA 1700",
+    "shortTitle": "MSI MEG Z790",
+    "price": {
+      "USD": 599.99,
+      "EUR": 699.99
+    },
+    "manufacturer": "MSI",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z790 Chipset",
+      "DDR5 Memory Support",
+      "PCIe 5.0 Support",
+      "Onboard Wi-Fi 6E",
+      "2.5G Ethernet",
+      "RGB Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 7,
+    "sold": 3
+  },
+  {
+    "title": "Gigabyte Z790 AORUS Master LGA 1700",
+    "shortTitle": "Gigabyte Z790 AORUS",
+    "price": {
+      "USD": 549.99,
+      "EUR": 649.99
+    },
+    "manufacturer": "Gigabyte",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z790 Chipset",
+      "DDR5 Memory Support",
+      "PCIe 5.0 Support",
+      "Onboard Wi-Fi 6E",
+      "2.5G Ethernet",
+      "RGB Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 9,
+    "sold": 1
+  },
+  {
+    "title": "ASRock Z790 Taichi LGA 1700",
+    "shortTitle": "ASRock Z790 Taichi",
+    "price": {
+      "USD": 499.99,
+      "EUR": 599.99
+    },
+    "manufacturer": "ASRock",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z790 Chipset",
+      "DDR5 Memory Support",
+      "PCIe 5.0 Support",
+      "Onboard Wi-Fi 6E",
+      "2.5G Ethernet",
+      "RGB Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 10,
+    "sold": 4
+  },
+  {
+    "title": "MSI MPG Z790 Force LGA 1700",
+    "shortTitle": "MSI MPG Z790",
+    "price": {
+      "USD": 449.99,
+      "EUR": 549.99
+    },
+    "manufacturer": "MSI",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z790 Chipset",
+      "DDR5 Memory Support",
+      "PCIe 5.0 Support",
+      "Onboard Wi-Fi 6E",
+      "2.5G Ethernet",
+      "RGB Lighting"
+    ],
+    "warranty": "4 years",
+    "stock": 6,
+    "sold": 2
+  },
+  {
+    "title": "HyperX Cloud Alpha Wireless",
+    "shortTitle": "HyperX Cloud Alpha Wireless",
+    "price": {
+      "USD": 199.99,
+      "EUR": 229.99
+    },
+    "manufacturer": "HyperX",
+    "category": "headphones",
+    "specifications": [
+      "Wireless Connectivity",
+      "Dual-Chamber Drivers",
+      "Noise-Canceling Microphone",
+      "Comfortable Design",
+      "RGB Lighting"
+    ],
+    "warranty": "2 years",
+    "stock": 10,
+    "sold": 3
+  },
+  {
+    "title": "SteelSeries Arctis Nova Pro Wireless",
+    "shortTitle": "SteelSeries Arctis Nova Pro Wireless",
+    "price": {
+      "USD": 349.99,
+      "EUR": 399.99
+    },
+    "manufacturer": "SteelSeries",
+    "category": "headphones",
+    "specifications": [
+      "Wireless and Wired Connectivity",
+      "Sonar Audio Software",
+      "Dual Wireless Mode",
+      "Comfortable Design",
+      "RGB Illumination"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "Razer BlackShark V2 Pro",
+    "shortTitle": "Razer BlackShark V2 Pro",
+    "price": {
+      "USD": 179.99,
+      "EUR": 209.99
+    },
+    "manufacturer": "Razer",
+    "category": "headphones",
+    "specifications": [
+      "TriForce Titanium Drivers",
+      "Active Noise Cancellation",
+      "HyperClear Cardioid Microphone",
+      "Comfortable Design",
+      "RGB Chroma Lighting"
+    ],
+    "warranty": "2 years",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "Logitech G Pro X Wireless",
+    "shortTitle": "Logitech G Pro X Wireless",
+    "price": {
+      "USD": 199.99,
+      "EUR": 229.99
+    },
+    "manufacturer": "Logitech",
+    "category": "headphones",
+    "specifications": [
+      "Lightspeed Wireless Technology",
+      "DTS Headphone:X 2.0",
+      "Blue VO!CE Mic Filter",
+      "Comfortable Design",
+      "RGB Lighting"
+    ],
+    "warranty": "2 years",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "Sennheiser HD 560S",
+    "shortTitle": "Sennheiser HD 560S",
+    "price": {
+      "USD": 199.99,
+      "EUR": 229.99
+    },
+    "manufacturer": "Sennheiser",
+    "category": "headphones",
+    "specifications": [
+      "Open-Back Design",
+      "High-Fidelity Audio",
+      "Comfortable Design",
+      "Durable Build"
+    ],
+    "warranty": "2 years",
+    "stock": 9,
+    "sold": 6
+  },
+  {
+    "title": "iPhone 15 Pro Max 256GB",
+    "shortTitle": "iPhone 15 Pro Max 256GB",
+    "price": {
+      "USD": 1099.0,
+      "EUR": 1299.0
+    },
+    "manufacturer": "Apple",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "48MP Main camera",
+      "256GB storage",
+      "iOS 17"
+    ],
+    "warranty": "1 year",
+    "stock": 5,
+    "sold": 2
+  },
+  {
+    "title": "Samsung Galaxy S24 Ultra",
+    "shortTitle": "Samsung Galaxy S24 Ultra",
+    "price": {
+      "USD": 1199.0,
+      "EUR": 1399.0
+    },
+    "manufacturer": "Samsung",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.8-inch Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 3",
+      "200MP Main camera",
+      "256GB storage",
+      "Android 14"
+    ],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 3
+  },
+  {
+    "title": "Xiaomi 14 Pro",
+    "shortTitle": "Xiaomi 14 Pro",
+    "price": {
+      "USD": 899.0,
+      "EUR": 1099.0
+    },
+    "manufacturer": "Xiaomi",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.7-inch AMOLED display",
+      "Snapdragon 8 Gen 3",
+      "50MP Main camera",
+      "256GB storage",
+      "MIUI 15"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 2
+  },
+  {
+    "title": "Google Pixel 8 Pro",
+    "shortTitle": "Google Pixel 8 Pro",
+    "price": {
+      "USD": 999.0,
+      "EUR": 1199.0
+    },
+    "manufacturer": "Google",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.7-inch OLED display",
+      "Google Tensor G3",
+      "48MP Main camera",
+      "256GB storage",
+      "Android 14"
+    ],
+    "warranty": "1 year",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "OnePlus 12 Pro",
+    "shortTitle": "OnePlus 12 Pro",
+    "price": {
+      "USD": 899.0,
+      "EUR": 1099.0
+    },
+    "manufacturer": "OnePlus",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.7-inch Fluid AMOLED display",
+      "Snapdragon 8 Gen 3",
+      "50MP Main camera",
+      "256GB storage",
+      "OxygenOS 14"
+    ],
+    "warranty": "1 year",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "iPhone 15 128GB",
+    "shortTitle": "iPhone 15 128GB",
+    "price": {
+      "USD": 799.0,
+      "EUR": 949.0
+    },
+    "manufacturer": "Apple",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.1-inch Super Retina XDR display",
+      "A16 Bionic chip",
+      "48MP Main camera",
+      "128GB storage",
+      "iOS 17"
+    ],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "Samsung Galaxy S24",
+    "shortTitle": "Samsung Galaxy S24",
+    "price": {
+      "USD": 799.0,
+      "EUR": 949.0
+    },
+    "manufacturer": "Samsung",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.1-inch Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 3",
+      "50MP Main camera",
+      "128GB storage",
+      "Android 14"
+    ],
+    "warranty": "1 year",
+    "stock": 9,
+    "sold": 6
+  },
+  {
+    "title": "Xiaomi 14",
+    "shortTitle": "Xiaomi 14",
+    "price": {
+      "USD": 699.0,
+      "EUR": 849.0
+    },
+    "manufacturer": "Xiaomi",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.5-inch AMOLED display",
+      "Snapdragon 8 Gen 2",
+      "50MP Main camera",
+      "128GB storage",
+      "MIUI 15"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 3
+  },
+  {
+    "title": "Google Pixel 8",
+    "shortTitle": "Google Pixel 8",
+    "price": {
+      "USD": 699.0,
+      "EUR": 849.0
+    },
+    "manufacturer": "Google",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.3-inch OLED display",
+      "Google Tensor G3",
+      "50MP Main camera",
+      "128GB storage",
+      "Android 14"
+    ],
+    "warranty": "1 year",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "OnePlus 12",
+    "shortTitle": "OnePlus 12",
+    "price": {
+      "USD": 599.0,
+      "EUR": 749.0
+    },
+    "manufacturer": "OnePlus",
+    "category": "mobile-phones",
+    "specifications": [
+      "6.5-inch Fluid AMOLED display",
+      "Snapdragon 8 Gen 2",
+      "50MP Main camera",
+      "128GB storage",
+      "OxygenOS 14"
+    ],
+    "warranty": "1 year",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "PlayStation 5 (PS5) Disc Edition",
+    "shortTitle": "PS5 Disc Edition",
+    "price": {
+      "USD": 499.99,
+      "EUR": 549.99
+    },
+    "manufacturer": "Sony",
+    "category": "gaming-consoles",
+    "specifications": [
+      "AMD Zen 2 CPU",
+      "RDNA 2 GPU",
+      "Ultra-HD Blu-ray Drive",
+      "825GB SSD Storage"
+    ],
+    "warranty": "1 year",
+    "stock": 3,
+    "sold": 2
+  },
+  {
+    "title": "PlayStation 5 (PS5) Digital Edition",
+    "shortTitle": "PS5 Digital Edition",
+    "price": {
+      "USD": 399.99,
+      "EUR": 449.99
+    },
+    "manufacturer": "Sony",
+    "category": "gaming-consoles",
+    "specifications": ["AMD Zen 2 CPU", "RDNA 2 GPU", "825GB SSD Storage"],
+    "warranty": "1 year",
+    "stock": 5,
+    "sold": 1
+  },
+  {
+    "title": "Xbox Series X",
+    "shortTitle": "Xbox Series X",
+    "price": {
+      "USD": 499.99,
+      "EUR": 549.99
+    },
+    "manufacturer": "Microsoft",
+    "category": "gaming-consoles",
+    "specifications": [
+      "Custom AMD Zen 2 CPU",
+      "Custom RDNA 2 GPU",
+      "1TB SSD Storage"
+    ],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 3
+  },
+  {
+    "title": "Xbox Series S",
+    "shortTitle": "Xbox Series S",
+    "price": {
+      "USD": 299.99,
+      "EUR": 349.99
+    },
+    "manufacturer": "Microsoft",
+    "category": "gaming-consoles",
+    "specifications": [
+      "Custom AMD Zen 2 CPU",
+      "Custom RDNA 2 GPU",
+      "512GB SSD Storage"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 2
+  },
+  {
+    "title": "Nintendo Switch OLED Model",
+    "shortTitle": "Nintendo Switch OLED",
+    "price": {
+      "USD": 349.99,
+      "EUR": 399.99
+    },
+    "manufacturer": "Nintendo",
+    "category": "gaming-consoles",
+    "specifications": [
+      "NVIDIA Custom Tegra Processor",
+      "7-inch OLED Display",
+      "64GB Internal Storage"
+    ],
+    "warranty": "1 year",
     "stock": 6,
     "sold": 4
   },
   {
-    "title": "MSI GeForce RTX 3090 Ti Gaming X Trio",
-    "shortTitle": "MSI RTX 3090 Ti Gaming X Trio",
-    "priceUSD": 1999.99,
-    "priceEUR": 2249.99,
-    "manufacturer": "MSI",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Ampere Architecture",
-      "24GB GDDR6X Memory",
-      "1900 MHz Boost Clock",
-      "Torx Fan 4.0",
-      "Tri Frozr 2S Cooler",
-      "PCIe Gen 4.0 x16 Interface"
-    ],
-    "warranty": "2 years",
-    "stock": 4,
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "shortTitle": "Zelda: Tears of the Kingdom",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Nintendo",
+    "category": "video-games",
+    "specifications": ["Open-World Action-Adventure"],
+    "warranty": "No Warranty",
+    "stock": 10,
+    "sold": 3
+  },
+  {
+    "title": "Starfield",
+    "shortTitle": "Starfield",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Bethesda",
+    "category": "video-games",
+    "specifications": ["Open-World RPG"],
+    "warranty": "No Warranty",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "Diablo IV",
+    "shortTitle": "Diablo IV",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Blizzard Entertainment",
+    "category": "video-games",
+    "specifications": ["Action RPG"],
+    "warranty": "No Warranty",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "Final Fantasy XVI",
+    "shortTitle": "Final Fantasy XVI",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Square Enix",
+    "category": "video-games",
+    "specifications": ["Action RPG"],
+    "warranty": "No Warranty",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "Baldur's Gate III",
+    "shortTitle": "Baldur's Gate III",
+    "price": {
+      "USD": 59.99,
+      "EUR": 69.99
+    },
+    "manufacturer": "Larian Studios",
+    "category": "video-games",
+    "specifications": ["RPG"],
+    "warranty": "No Warranty",
+    "stock": 9,
     "sold": 6
   },
   {
-    "title": "ASUS ROG Strix GeForce RTX 3080 Ti OC Edition",
-    "shortTitle": "ROG RTX 3080 Ti OC",
-    "priceUSD": 1199.99,
-    "priceEUR": 1349.99,
-    "manufacturer": "ASUS",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Ampere Architecture",
-      "12GB GDDR6X Memory",
-      "1785 MHz Boost Clock (OC Mode)",
-      "Axial-tech Fans",
-      "MaxContact Cooler",
-      "PCIe Gen 4.0 x16 Interface"
-    ],
-    "warranty": "2 years",
-    "stock": 7,
+    "title": "Cyberpunk 2077: Phantom Liberty",
+    "shortTitle": "Cyberpunk 2077: Phantom Liberty",
+    "price": {
+      "USD": 29.99,
+      "EUR": 34.99
+    },
+    "manufacturer": "CD Projekt Red",
+    "category": "video-games",
+    "specifications": ["Open-World RPG"],
+    "warranty": "No Warranty",
+    "stock": 10,
     "sold": 3
+  },
+  {
+    "title": "Red Dead Redemption 2",
+    "shortTitle": "Red Dead Redemption 2",
+    "price": {
+      "USD": 29.99,
+      "EUR": 34.99
+    },
+    "manufacturer": "Rockstar Games",
+    "category": "video-games",
+    "specifications": ["Open-World Action-Adventure"],
+    "warranty": "No Warranty",
+    "stock": 8,
+    "sold": 5
+  },
+  {
+    "title": "The Witcher 3: Wild Hunt - Complete Edition",
+    "shortTitle": "The Witcher 3: Wild Hunt",
+    "price": {
+      "USD": 29.99,
+      "EUR": 34.99
+    },
+    "manufacturer": "CD Projekt Red",
+    "category": "video-games",
+    "specifications": ["Open-World RPG"],
+    "warranty": "No Warranty",
+    "stock": 12,
+    "sold": 2
+  },
+  {
+    "title": "Elden Ring",
+    "shortTitle": "Elden Ring",
+    "price": {
+      "USD": 59.99,
+      "EUR": 69.99
+    },
+    "manufacturer": "FromSoftware",
+    "category": "video-games",
+    "specifications": ["Action RPG"],
+    "warranty": "No Warranty",
+    "stock": 7,
+    "sold": 4
+  },
+  {
+    "title": "God of War Ragnarök",
+    "shortTitle": "God of War Ragnarök",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Sony Interactive Entertainment",
+    "category": "video-games",
+    "specifications": ["Action-Adventure"],
+    "warranty": "No Warranty",
+    "stock": 9,
+    "sold": 6
   }
 ]

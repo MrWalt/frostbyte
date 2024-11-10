@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import Button from "../../ui/Button";
 import Input from "../../ui/Input";
 import Label from "../../ui/Label";
-import { useState } from "react";
 import { useLogin } from "./useLogin";
+import { useForm } from "react-hook-form";
+import Loader from "../../ui/Loader";
 
 const Container = styled.div`
-  margin: 0 auto;
-  width: 40rem;
-  height: 54rem;
+  margin: 4.8rem auto;
+  max-width: 40rem;
 
   padding: 4.8rem 2.8rem 3.6rem 2.8rem;
 
@@ -33,14 +33,27 @@ const Container = styled.div`
   }
 `;
 
-const StyledDiv = styled.div`
-  margin-top: 1.8rem;
+const StyledHeading = styled(Heading)`
+  text-align: center;
+  padding-bottom: 4.8rem;
 `;
 
-const StyledInput = styled(Input)`
+const StyledDiv = styled.div`
+  padding-top: 2.4rem;
+
+  position: relative;
+
   &:last-of-type {
-    margin-top: 1.8rem;
+    padding-top: 1.8rem;
   }
+`;
+
+const Error = styled.span`
+  color: var(--color-red-500);
+
+  position: absolute;
+  top: 0;
+  left: 1.8rem;
 `;
 
 const StyledSpan = styled.span`
@@ -65,48 +78,55 @@ const StyledSpan = styled.span`
 `;
 
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const { login, isLoading } = useLogin();
+  const { register, handleSubmit, formState, reset } = useForm();
+  const { login, isPending } = useLogin();
+  const { errors } = formState;
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-
-    if (!email || !password) return;
-    login({ email, password });
+  function onSubmit(data) {
+    login(data);
   }
+
+  function onError() {}
 
   return (
     <Container>
-      <Heading variation="primary">Login</Heading>
+      <StyledHeading variation="primary">Login to your account</StyledHeading>
 
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <StyledInput
-          type="email"
-          placeholder="E-Mail Address"
-          id="email"
-          spellCheck="false"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          disabled={isLoading}
-          variation="large"
-        />
-        <Label htmlFor="email">E-Mail Address</Label>
-
-        <StyledInput
-          type="password"
-          placeholder="Password"
-          id="password"
-          spellCheck="false"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          disabled={isLoading}
-          variation="large"
-        />
-        <Label htmlFor="password">Password</Label>
-
+      <form onSubmit={handleSubmit(onSubmit, onError)}>
         <StyledDiv>
-          <Button disabled={isLoading}>Login</Button>
+          {errors?.email && <Error>{errors.email.message}</Error>}
+          <Input
+            type="text"
+            placeholder="E-Mail Address"
+            id="email"
+            spellCheck="false"
+            disabled={isPending}
+            variation="large"
+            {...register("email", {
+              required: "This field is required.",
+            })}
+          />
+          <Label htmlFor="email">E-Mail Address</Label>
+        </StyledDiv>
+        <StyledDiv>
+          {errors?.password && <Error>{errors.password.message}</Error>}
+          <Input
+            type="password"
+            placeholder="Password"
+            id="password"
+            spellCheck="false"
+            disabled={isPending}
+            variation="large"
+            {...register("password", {
+              required: "This field is required.",
+            })}
+          />
+          <Label htmlFor="password">Password</Label>
+        </StyledDiv>
+        <StyledDiv>
+          <Button disabled={isPending}>
+            {isPending ? <Loader size={44} /> : "Login"}
+          </Button>
           <StyledSpan>
             Don't have an account? <Link to="/signup">Create an account</Link>
           </StyledSpan>

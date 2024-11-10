@@ -10,6 +10,8 @@ const Button = styled.button`
   border: none;
   width: 100%;
 
+  display: inline-block;
+
   cursor: pointer;
 
   color: var(--color-grey-0);
@@ -18,6 +20,8 @@ const Button = styled.button`
   border: 1px solid var(--color-brand-900);
 
   transition: var(--animation-fast);
+
+  flex-grow: 0;
 
   &:hover {
     background-color: var(--color-brand-700);

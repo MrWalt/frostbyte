@@ -69,9 +69,9 @@ const StyledButton = styled.button`
 `;
 
 const ImageBox = styled.div`
-  height: 75%;
+  height: 65%;
   width: 100%;
-
+  flex-shrink: 0;
   cursor: pointer;
 `;
 
@@ -80,26 +80,29 @@ const Image = styled.img`
 `;
 
 const InformationBox = styled.div`
-  height: 25%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.2rem;
+
+  padding-bottom: 0.6rem;
 `;
 
-const Title = styled.p`
+const Title = styled.span`
   padding: 0.4rem 1.6rem;
   font-size: 1.6rem;
-
-  height: 50%;
 `;
 
 const PriceBox = styled.div`
   position: relative;
 
-  height: 4rem;
-
   display: flex;
   align-items: center;
 
-  flex-grow: 1;
-  padding: 0.4rem 3.2rem;
+  /* flex-grow: 1; */
+  padding: 0.4rem 2.8rem;
 
   &::before {
     content: "";
@@ -119,9 +122,9 @@ const PriceBox = styled.div`
   }
 `;
 
-export default function Card({ title, price, id }) {
-  let filteredTitle = title;
-  if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
+export default function Card({ shortTitle, title, price, id }) {
+  // const titleToShow = title.length >= 36 ? shortTitle : title;
+  const titleToShow = title;
 
   const { cart, addItem, removeItem } = useCart();
   const {
@@ -162,7 +165,7 @@ export default function Card({ title, price, id }) {
         </Link>
       </ImageBox>
       <InformationBox>
-        <Title>{filteredTitle}</Title>
+        <Title>{titleToShow}</Title>
         <PriceBox>
           <Price price={price} size="large" />
         </PriceBox>

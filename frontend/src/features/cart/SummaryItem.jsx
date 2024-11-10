@@ -68,6 +68,13 @@ const RemoveItemButton = styled.span`
   }
 `;
 
+const Details = styled.div`
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+`;
+
 export default function SummaryItem({ title, price, quantity, id }) {
   const { removeItem } = useCart();
 
@@ -75,13 +82,12 @@ export default function SummaryItem({ title, price, quantity, id }) {
     <Box>
       <Image>IMAGE</Image>
       <ProductInfoBox>
-        <div>
-          <Title>{title}</Title>
-          <Price size="medium" price={price} />
-        </div>
-        <span>
-          <Quantity>{quantity}</Quantity> in cart
-        </span>
+        <Title>{title}</Title>
+
+        <Details>
+          <Quantity>{quantity}</Quantity> in cart &mdash;{" "}
+          <Price size="medium" price={price * quantity} />
+        </Details>
       </ProductInfoBox>
 
       <RemoveItemButton className="clear-cart" onClick={() => removeItem(id)}>

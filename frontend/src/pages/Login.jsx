@@ -5,7 +5,7 @@ import LoginForm from "../features/authentication/LoginForm";
 const StyledSection = styled(Section)`
   background-image: url("/background.webp");
 
-  height: calc(100vh - 6.4rem - 10rem);
+  height: calc(100vh - 8rem - 10rem);
 `;
 
 export default function Login() {

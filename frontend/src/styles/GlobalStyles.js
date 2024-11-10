@@ -33,6 +33,7 @@ export const GlobalStyles = createGlobalStyle`
     --color-green-700: #15803d;
 
     --color-red-100: #fee2e2;
+    --color-red-500: #c03333;
     --color-red-700: #b91c1c;
     --color-red-800: #991b1b;
 

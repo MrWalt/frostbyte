@@ -2,6 +2,7 @@ import styled from "styled-components";
 // import products from "../data/testProductData";
 import Card from "./Card";
 import { useProducts } from "./useProducts";
+import Loader from "../../ui/Loader";
 
 const CardBox = styled.div`
   display: grid;
@@ -15,7 +16,10 @@ const CardBox = styled.div`
 export default function ProductsGrid({ category }) {
   const { isLoading, products } = useProducts();
 
-  if (isLoading) return <p>Is Loading</p>;
+  // const products = [];
+  // const isLoading = true;
+
+  if (isLoading) return <Loader />;
 
   return (
     <CardBox>
@@ -24,7 +28,8 @@ export default function ProductsGrid({ category }) {
             return item.category === category ? (
               <Card
                 title={item.title}
-                price={item.priceUSD}
+                price={item.price.USD}
+                shortTitle={item.shortTitle}
                 key={item.id}
                 id={item.id}
               />
@@ -33,7 +38,8 @@ export default function ProductsGrid({ category }) {
         : products.map((item) => (
             <Card
               title={item.title}
-              price={item.priceUSD}
+              price={item.price.USD}
+              shortTitle={item.shortTitle}
               key={item.id}
               id={item.id}
             />

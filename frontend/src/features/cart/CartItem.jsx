@@ -144,7 +144,7 @@ export default function CartItem({ title, price, quantity, id }) {
       <Image>IMAGE</Image>
       <InfoBox>
         <ItemName>{title}</ItemName>
-        <Price price={price} size="small" />
+        <Price price={price} size="medium" />
       </InfoBox>
       <ButtonBox>
         <button onClick={() => decreaseQuantity({ id, quantity })}>

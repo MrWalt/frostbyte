@@ -24,20 +24,21 @@ const CarouselContainer = styled.div`
 
   flex: 1 0 0;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100%;
 `;
 
 const ImageContainer = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
-
-  flex: 1 1 0;
+  height: 100%;
 `;
 
 const Image = styled.img`
   display: block;
-  height: 100%;
+  width: 95%;
 `;
 
 const InfoBox = styled.div`
@@ -46,7 +47,6 @@ const InfoBox = styled.div`
   justify-content: space-between;
 
   justify-self: center;
-  flex: 1 1 0;
   padding: 3.6rem 0;
 `;
 

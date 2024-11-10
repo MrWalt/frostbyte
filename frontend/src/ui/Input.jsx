@@ -19,6 +19,12 @@ const variations = {
       opacity: 0;
       visibility: hidden;
     }
+
+    &:disabled {
+      background-color: var(--color-grey-200);
+      border-bottom: 3px solid var(--color-grey-400);
+      cursor: not-allowed;
+    }
   `,
   minimal: css`
     color: var(--color-brand-500);

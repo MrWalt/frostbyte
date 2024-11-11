@@ -7,6 +7,7 @@ import Label from "../../ui/Label";
 import { useLogin } from "./useLogin";
 import { useForm } from "react-hook-form";
 import Loader from "../../ui/Loader";
+import { useEffect, useRef } from "react";
 
 const Container = styled.div`
   margin: 4.8rem auto;
@@ -78,9 +79,20 @@ const StyledSpan = styled.span`
 `;
 
 export default function LoginForm() {
-  const { register, handleSubmit, formState, reset } = useForm();
+  const passwordInputRef = useRef();
+  const { register, handleSubmit, formState, reset, getValues } = useForm();
   const { login, isPending } = useLogin();
   const { errors } = formState;
+  const { ref, ...rest } = register("password", {
+    required: "This field is required.",
+  });
+
+  useEffect(
+    function () {
+      if (!isPending && getValues().email) passwordInputRef.current.focus();
+    },
+    [isPending, getValues]
+  );
 
   function onSubmit(data) {
     login(data);
@@ -92,6 +104,7 @@ export default function LoginForm() {
       <StyledHeading variation="primary">Login to your account</StyledHeading>
 
       <form onSubmit={handleSubmit(onSubmit)}>
+        {/* Input field for Email */}
         <StyledDiv>
           {errors?.email && <Error>{errors.email.message}</Error>}
           <Input
@@ -107,6 +120,8 @@ export default function LoginForm() {
           />
           <Label htmlFor="email">E-Mail Address</Label>
         </StyledDiv>
+
+        {/* Input field for password. Need to do this ...rest weirdness cause ref isnt working */}
         <StyledDiv>
           {errors?.password && <Error>{errors.password.message}</Error>}
           <Input
@@ -116,12 +131,16 @@ export default function LoginForm() {
             spellCheck="false"
             disabled={isPending}
             variation="large"
-            {...register("password", {
-              required: "This field is required.",
-            })}
+            {...rest}
+            ref={(e) => {
+              ref(e);
+              passwordInputRef.current = e;
+            }}
           />
           <Label htmlFor="password">Password</Label>
         </StyledDiv>
+
+        {/* Button to submit */}
         <StyledDiv>
           <Button disabled={isPending}>
             {isPending ? <Loader size={44} /> : "Login"}

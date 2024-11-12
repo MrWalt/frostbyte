@@ -69,20 +69,6 @@ const StyledButton = styled(Button)`
   width: 28rem;
 `;
 
-const BackToShopLink = styled.button`
-  font-size: 1.4rem;
-
-  cursor: pointer;
-
-  color: inherit;
-
-  transition: var(--animation-fast);
-
-  &:hover {
-    color: var(--color-brand-500);
-  }
-`;
-
 export default function CartSummary() {
   const moveBack = useMoveBack();
   const { cart } = useCart();
@@ -98,7 +84,7 @@ export default function CartSummary() {
             <SummaryDetails />
             <Box onClick={moveBack}>
               <HiArrowLongLeft />
-              <BackToShopLink>Continue Shopping</BackToShopLink>
+              <Button variation="medium">Continue Shopping</Button>
             </Box>
           </>
         ) : (

@@ -1,8 +1,8 @@
 // READ
-function getAll(Model) {
+function getAll(Model, selectOptions) {
   return async function (req, res) {
     try {
-      const data = await Model.find();
+      const data = await Model.find().select(selectOptions);
 
       res.status(200).json({ status: "success", data });
     } catch (err) {

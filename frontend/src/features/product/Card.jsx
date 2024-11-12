@@ -122,10 +122,7 @@ const PriceBox = styled.div`
   }
 `;
 
-export default function Card({ shortTitle, title, price, id }) {
-  // const titleToShow = title.length >= 36 ? shortTitle : title;
-  const titleToShow = title;
-
+export default function Card({ title, price, id }) {
   const { cart, addItem, removeItem } = useCart();
   const {
     wishlist,
@@ -158,14 +155,14 @@ export default function Card({ shortTitle, title, price, id }) {
         </StyledButton>
       )}
 
-      <ImageBox>
-        <Link to={`/product/${id}`}>
+      <Link to={`/product/${id}`}>
+        <ImageBox>
           IMAGE
           <Image />
-        </Link>
-      </ImageBox>
+        </ImageBox>
+      </Link>
       <InformationBox>
-        <Title>{titleToShow}</Title>
+        <Title>{title}</Title>
         <PriceBox>
           <Price price={price} size="large" />
         </PriceBox>

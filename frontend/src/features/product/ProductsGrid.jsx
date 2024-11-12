@@ -16,9 +16,6 @@ const CardBox = styled.div`
 export default function ProductsGrid({ category }) {
   const { isLoading, products } = useProducts();
 
-  // const products = [];
-  // const isLoading = true;
-
   if (isLoading) return <Loader />;
 
   return (

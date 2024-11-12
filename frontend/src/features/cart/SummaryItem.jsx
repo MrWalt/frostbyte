@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Price from "../../ui/Price";
 import { useCart } from "./CartContext";
+import Button from "../../ui/Button";
 
 const Box = styled.div`
   width: 100%;
@@ -48,16 +49,10 @@ const Quantity = styled.span`
   color: var(--color-brand-500);
 `;
 
-const RemoveItemButton = styled.span`
-  font-size: 1.4rem;
-
+const RemoveItemButton = styled(Button)`
   position: absolute;
   bottom: 0.8rem;
   right: 0.8rem;
-
-  cursor: pointer;
-
-  transition: var(--animation-fast);
 
   opacity: 0;
   visibility: hidden;
@@ -90,7 +85,11 @@ export default function SummaryItem({ title, price, quantity, id }) {
         </Details>
       </ProductInfoBox>
 
-      <RemoveItemButton className="clear-cart" onClick={() => removeItem(id)}>
+      <RemoveItemButton
+        variation="medium"
+        className="clear-cart"
+        onClick={() => removeItem(id)}
+      >
         Remove Item
       </RemoveItemButton>
     </Box>

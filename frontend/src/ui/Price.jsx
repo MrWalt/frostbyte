@@ -47,9 +47,9 @@ const StyledPrice = styled.span`
 const Currency = styled.span`
   display: inline-block;
 
-  margin-right: 0.2rem;
+  margin-right: 0.1rem;
 
-  color: var(--color-grey-300);
+  color: var(--color-grey-0);
 
   ${(props) => currencySizes[props.size]}
 `;

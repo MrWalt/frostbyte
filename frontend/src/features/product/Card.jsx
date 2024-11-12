@@ -123,15 +123,16 @@ const PriceBox = styled.div`
 `;
 
 export default function Card({ title, price, id }) {
-  const { cart, addItem, removeItem } = useCart();
+  const { cart, addItem, removeItem, isInCart } = useCart();
   const {
     wishlist,
     addItem: addWishlistItem,
     removeItem: removeWishlistItem,
   } = useWishlist();
 
+  const inStock = false;
+
   const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
-  const isInCart = cart.find((item) => item.id === id) ? true : false;
 
   return (
     <Box>
@@ -167,8 +168,7 @@ export default function Card({ title, price, id }) {
           <Price price={price} size="large" />
         </PriceBox>
       </InformationBox>
-
-      {isInCart ? (
+      {isInCart(id) ? (
         <StyledButton onClick={() => removeItem(id)}>
           <HiShoppingCart className="in-cart" />
         </StyledButton>

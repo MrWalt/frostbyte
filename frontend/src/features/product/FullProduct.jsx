@@ -61,7 +61,7 @@ export default function Product() {
 
   if (isLoading) return <Loader size={60} />;
 
-  const { title, price, specifications, stock, warranty } = product;
+  const { title, price, specifications, stock, warranty, id } = product;
 
   return (
     <Container>
@@ -71,8 +71,8 @@ export default function Product() {
       </BackButtonBox>
       <ImageBox>IMAGE</ImageBox>
 
-      <Details title={title} price={price.USD} stock={stock} />
-      <Specifications />
+      <Details title={title} price={price.USD} stock={stock} id={id} />
+      <Specifications specs={specifications} warranty={warranty} />
     </Container>
   );
 }

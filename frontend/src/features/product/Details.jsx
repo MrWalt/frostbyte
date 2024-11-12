@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Price from "../../ui/Price";
 import Button from "../../ui/Button";
+import { useCart } from "../cart/CartContext";
 
 const Box = styled.div`
   align-self: start;
@@ -36,7 +37,9 @@ const Stock = styled.span`
   /* text-decoration: underline; */
 `;
 
-export default function Details({ title, price, stock }) {
+export default function Details({ id, title, price, stock }) {
+  const { isInCart, addItem, removeItem } = useCart();
+
   return (
     <Box>
       <Title>{title}</Title>
@@ -45,7 +48,13 @@ export default function Details({ title, price, stock }) {
         {stock < 4 && <Stock>Only {stock} left</Stock>}
       </InfoBox>
 
-      <Button>Add to Cart</Button>
+      {isInCart(id) ? (
+        <Button onClick={() => removeItem(id)}>Remove from cart</Button>
+      ) : (
+        <Button onClick={() => addItem({ id, title, price, quantity: 1 })}>
+          Add to cart
+        </Button>
+      )}
     </Box>
   );
 }

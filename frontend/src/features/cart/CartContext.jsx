@@ -61,6 +61,10 @@ export default function CartProvider({ children }) {
     dispatch({ type: "cart/decrease", payload: id });
   }
 
+  function isInCart(id) {
+    return cart.find((item) => item.id === id) ? true : false;
+  }
+
   const itemsInCart = cart.reduce((acc, cur) => (acc += cur.quantity), 0);
   const totalCartPrice = cart.reduce(
     (acc, cur) => (acc += cur.price * cur.quantity),
@@ -78,6 +82,7 @@ export default function CartProvider({ children }) {
         decreaseQuantity,
         itemsInCart,
         totalCartPrice,
+        isInCart,
       }}
     >
       {children}

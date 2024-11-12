@@ -3,6 +3,7 @@ import { HiMinus, HiPlus, HiXMark } from "react-icons/hi2";
 
 import Price from "../../ui/Price";
 import { useCart } from "./CartContext";
+import { Link } from "react-router-dom";
 
 const Box = styled.div`
   height: 14rem;
@@ -141,7 +142,9 @@ export default function CartItem({ title, price, quantity, id }) {
       <DeleteButton onClick={() => removeItem(id)}>
         <HiXMark />
       </DeleteButton>
-      <Image>IMAGE</Image>
+      <Link to={`/product/${id}`}>
+        <Image>IMAGE</Image>
+      </Link>
       <InfoBox>
         <ItemName>{title}</ItemName>
         <Price price={price} size="medium" />

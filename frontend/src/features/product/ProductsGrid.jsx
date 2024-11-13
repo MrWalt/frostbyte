@@ -29,6 +29,7 @@ export default function ProductsGrid({ category }) {
                 shortTitle={item.shortTitle}
                 key={item.id}
                 id={item.id}
+                stock={item.stock}
               />
             ) : null;
           })
@@ -39,6 +40,7 @@ export default function ProductsGrid({ category }) {
               shortTitle={item.shortTitle}
               key={item.id}
               id={item.id}
+              stock={item.stock}
             />
           ))}
     </CardBox>

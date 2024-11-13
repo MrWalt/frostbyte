@@ -39,8 +39,6 @@ const Box = styled.div`
   & button:last-of-type {
     bottom: 1.2rem;
     right: 1.2rem;
-
-    transform: scale(1);
   }
 `;
 
@@ -122,15 +120,27 @@ const PriceBox = styled.div`
   }
 `;
 
-export default function Card({ title, price, id }) {
-  const { cart, addItem, removeItem, isInCart } = useCart();
+const OutOfStock = styled.span`
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+
+  font-size: 1.6rem;
+
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+
+  border: 1px solid var(--color-grey-800);
+  backdrop-filter: blur(4px);
+`;
+
+export default function Card({ title, price, id, stock }) {
+  const { addItem, removeItem, isInCart } = useCart();
   const {
     wishlist,
     addItem: addWishlistItem,
     removeItem: removeWishlistItem,
   } = useWishlist();
-
-  const inStock = false;
 
   const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
 
@@ -168,16 +178,20 @@ export default function Card({ title, price, id }) {
           <Price price={price} size="large" />
         </PriceBox>
       </InformationBox>
-      {isInCart(id) ? (
-        <StyledButton onClick={() => removeItem(id)}>
-          <HiShoppingCart className="in-cart" />
-        </StyledButton>
+      {stock ? (
+        isInCart(id) ? (
+          <StyledButton onClick={() => removeItem(id)}>
+            <HiShoppingCart className="in-cart" />
+          </StyledButton>
+        ) : (
+          <StyledButton
+            onClick={() => addItem({ title, price, id, quantity: 1 })}
+          >
+            <HiOutlineShoppingCart />
+          </StyledButton>
+        )
       ) : (
-        <StyledButton
-          onClick={() => addItem({ title, price, id, quantity: 1 })}
-        >
-          <HiOutlineShoppingCart />
-        </StyledButton>
+        <OutOfStock>Sold Out</OutOfStock>
       )}
     </Box>
   );

@@ -1358,5 +1358,1026 @@
     "warranty": "No Warranty",
     "stock": 9,
     "sold": 6
+  },
+  {
+    "title": "Corsair RM750x",
+    "shortTitle": "RM750x",
+    "price": {
+      "USD": 129.99,
+      "EUR": 149.99
+    },
+    "manufacturer": "Corsair",
+    "category": "power-supplies",
+    "specifications": [
+      "750W 80 PLUS Gold Certified",
+      "Fully Modular Cable Management",
+      "Zero RPM Fan Mode",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "6 months",
+    "stock": 10,
+    "sold": 2
+  },
+  {
+    "title": "EVGA SuperNOVA 850 G3",
+    "shortTitle": "SuperNOVA 850 G3",
+    "price": {
+      "USD": 179.99,
+      "EUR": 209.99
+    },
+    "manufacturer": "EVGA",
+    "category": "power-supplies",
+    "specifications": [
+      "850W 80 PLUS Gold Certified",
+      "Fully Modular Cable Management",
+      "Eco Mode",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "3 months",
+    "stock": 8,
+    "sold": 1
+  },
+  {
+    "title": "Seasonic FOCUS GX-650",
+    "shortTitle": "FOCUS GX-650",
+    "price": {
+      "USD": 119.99,
+      "EUR": 139.99
+    },
+    "manufacturer": "Seasonic",
+    "category": "power-supplies",
+    "specifications": [
+      "650W 80 PLUS Gold Certified",
+      "Fully Modular Cable Management",
+      "Fluid Dynamic Bearing Fan",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "No Warranty",
+    "stock": 12,
+    "sold": 0
+  },
+  {
+    "title": "Be Quiet! Straight Power 11 650W",
+    "shortTitle": "Straight Power 11 650W",
+    "price": {
+      "USD": 129.99,
+      "EUR": 149.99
+    },
+    "manufacturer": "Be Quiet!",
+    "category": "power-supplies",
+    "specifications": [
+      "650W 80 PLUS Gold Certified",
+      "Fully Modular Cable Management",
+      "Silent Wings Fan",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "6 months",
+    "stock": 5,
+    "sold": 3
+  },
+  {
+    "title": "Thermaltake Toughpower GF1 750W",
+    "shortTitle": "Toughpower GF1 750W",
+    "price": {
+      "USD": 139.99,
+      "EUR": 159.99
+    },
+    "manufacturer": "Thermaltake",
+    "category": "power-supplies",
+    "specifications": [
+      "750W 80 PLUS Gold Certified",
+      "Fully Modular Cable Management",
+      "Riing Duo Fan",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "2 months",
+    "stock": 7,
+    "sold": 2
+  },
+  {
+    "title": "Cooler Master MasterWatt Toughpower GF1 850W",
+    "shortTitle": "MasterWatt Toughpower GF1 850W",
+    "price": {
+      "USD": 159.99,
+      "EUR": 179.99
+    },
+    "manufacturer": "Cooler Master",
+    "category": "power-supplies",
+    "specifications": [
+      "850W 80 PLUS Gold Certified",
+      "Fully Modular Cable Management",
+      "Silent Fan Design",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "4 months",
+    "stock": 10,
+    "sold": 2
+  },
+  {
+    "title": "Antec HCG X 850W",
+    "shortTitle": "HCG X 850W",
+    "price": {
+      "USD": 169.99,
+      "EUR": 199.99
+    },
+    "manufacturer": "Antec",
+    "category": "power-supplies",
+    "specifications": [
+      "850W 80 PLUS Gold Certified",
+      "Fully Modular Cable Management",
+      "Fluid Dynamic Bearing Fan",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "No Warranty",
+    "stock": 8,
+    "sold": 1
+  },
+  {
+    "title": "Phanteks AMP T1000",
+    "shortTitle": "AMP T1000",
+    "price": {
+      "USD": 249.99,
+      "EUR": 299.99
+    },
+    "manufacturer": "Phanteks",
+    "category": "power-supplies",
+    "specifications": [
+      "1000W 80 PLUS Titanium Certified",
+      "Fully Modular Cable Management",
+      "Fluid Dynamic Bearing Fan",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "6 months",
+    "stock": 12,
+    "sold": 0
+  },
+  {
+    "title": "SilverStone SX1000-LTI",
+    "shortTitle": "SX1000-LTI",
+    "price": {
+      "USD": 229.99,
+      "EUR": 279.99
+    },
+    "manufacturer": "SilverStone",
+    "category": "power-supplies",
+    "specifications": [
+      "1000W 80 PLUS Titanium Certified",
+      "Fully Modular Cable Management",
+      "Silent Fan Design",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "3 months",
+    "stock": 5,
+    "sold": 3
+  },
+  {
+    "title": "Enermax Revolution D.F. 850W",
+    "shortTitle": "Revolution D.F. 850W",
+    "price": {
+      "USD": 179.99,
+      "EUR": 209.99
+    },
+    "manufacturer": "Enermax",
+    "category": "power-supplies",
+    "specifications": [
+      "850W 80 PLUS Gold Certified",
+      "Fully Modular Cable Management",
+      "D.F. Bearing Fan",
+      "PCIe 5.0 Ready"
+    ],
+    "warranty": "2 months",
+    "stock": 7,
+    "sold": 2
+  },
+  {
+    "title": "GeForce GTX 580",
+    "shortTitle": "GTX 580",
+    "price": {
+      "USD": 49.99,
+      "EUR": 59.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Fermi Architecture",
+      "512 MB GDDR5 Memory",
+      "772 MHz Base Clock, 850 MHz Boost Clock",
+      "PCI Express 2.0 x16 Interface",
+      "512 CUDA Cores",
+      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
+      "244W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 0,
+    "sold": 20
+  },
+  {
+    "title": "Radeon HD 6970",
+    "shortTitle": "HD 6970",
+    "price": {
+      "USD": 39.99,
+      "EUR": 49.99
+    },
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD VLIW4 Architecture",
+      "2GB GDDR5 Memory",
+      "880 MHz Base Clock, 950 MHz Boost Clock",
+      "PCI Express 2.0 x16 Interface",
+      "1536 Stream Processors",
+      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
+      "188W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 5,
+    "sold": 10
+  },
+  {
+    "title": "GeForce GTX 480",
+    "shortTitle": "GTX 480",
+    "price": {
+      "USD": 29.99,
+      "EUR": 39.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Fermi Architecture",
+      "1536 MB GDDR5 Memory",
+      "700 MHz Base Clock, 780 MHz Boost Clock",
+      "PCI Express 2.0 x16 Interface",
+      "480 CUDA Cores",
+      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
+      "436W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 8,
+    "sold": 2
+  },
+  {
+    "title": "Radeon HD 5870",
+    "shortTitle": "HD 5870",
+    "price": {
+      "USD": 19.99,
+      "EUR": 29.99
+    },
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD Evergreen Architecture",
+      "1GB GDDR5 Memory",
+      "850 MHz Base Clock, 900 MHz Boost Clock",
+      "PCI Express 2.0 x16 Interface",
+      "1600 Stream Processors",
+      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
+      "190W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 0,
+    "sold": 15
+  },
+  {
+    "title": "GeForce RTX 2080 Ti",
+    "shortTitle": "RTX 2080 Ti",
+    "price": {
+      "USD": 899.99,
+      "EUR": 999.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Turing Architecture",
+      "11GB GDDR6 Memory",
+      "1665 MHz Boost Clock",
+      "PCI Express Gen 3 x16 Interface",
+      "DLSS 2, Ray Tracing Cores",
+      "Turing Shaders",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "350W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 0,
+    "sold": 20
+  },
+  {
+    "title": "Radeon RX 5700 XT",
+    "shortTitle": "RX 5700 XT",
+    "price": {
+      "USD": 399.99,
+      "EUR": 449.99
+    },
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA Architecture",
+      "8GB GDDR6 Memory",
+      "1905 MHz Boost Clock",
+      "PCI Express Gen 4 x16 Interface",
+      "FSR, Ray Tracing Cores",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "225W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 5,
+    "sold": 10
+  },
+  {
+    "title": "GeForce RTX 2070 Super",
+    "shortTitle": "RTX 2070 Super",
+    "price": {
+      "USD": 599.99,
+      "EUR": 699.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Turing Architecture",
+      "8GB GDDR6 Memory",
+      "1770 MHz Boost Clock",
+      "PCI Express Gen 3 x16 Interface",
+      "DLSS 2, Ray Tracing Cores",
+      "Turing Shaders",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "215W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 8,
+    "sold": 2
+  },
+  {
+    "title": "Radeon RX 5600 XT",
+    "shortTitle": "RX 5600 XT",
+    "price": {
+      "USD": 299.99,
+      "EUR": 349.99
+    },
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA Architecture",
+      "6GB GDDR6 Memory",
+      "1560 MHz Boost Clock",
+      "PCI Express Gen 4 x16 Interface",
+      "FSR, Ray Tracing Cores",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "150W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 0,
+    "sold": 15
+  },
+  {
+    "title": "Noctua NH-D15 chromax.black",
+    "shortTitle": "NH-D15 chromax.black",
+    "price": {
+      "USD": 109.99,
+      "EUR": 129.99
+    },
+    "manufacturer": "Noctua",
+    "category": "cooling",
+    "specifications": [
+      "Dual NH-D15S Fans",
+      "NF-A15 PWM Fans",
+      "Sinterized Polyamide Bearing",
+      "6 Heat Pipes",
+      "150W TDP"
+    ],
+    "warranty": "6 years",
+    "stock": 15,
+    "sold": 3
+  },
+  {
+    "title": "be quiet! Dark Rock Pro 4",
+    "shortTitle": "Dark Rock Pro 4",
+    "price": {
+      "USD": 99.99,
+      "EUR": 119.99
+    },
+    "manufacturer": "be quiet!",
+    "category": "cooling",
+    "specifications": ["Dual Silent Wings Fans", "7 Heat Pipes", "184W TDP"],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 2
+  },
+  {
+    "title": "Scythe Fuma 2 Rev.B",
+    "shortTitle": "Fuma 2 Rev.B",
+    "price": {
+      "USD": 69.99,
+      "EUR": 89.99
+    },
+    "manufacturer": "Scythe",
+    "category": "cooling",
+    "specifications": ["Dual Kaze Flex Slim Fans", "6 Heat Pipes", "140W TDP"],
+    "warranty": "2 years",
+    "stock": 12,
+    "sold": 0
+  },
+  {
+    "title": "Thermalright Silver Arrow IB-E Extreme",
+    "shortTitle": "Silver Arrow IB-E Extreme",
+    "price": {
+      "USD": 119.99,
+      "EUR": 139.99
+    },
+    "manufacturer": "Thermalright",
+    "category": "cooling",
+    "specifications": ["Dual TL-C12B Fans", "7 Heat Pipes", "180W TDP"],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 2
+  },
+  {
+    "title": "Deepcool AK620",
+    "shortTitle": "AK620",
+    "price": {
+      "USD": 79.99,
+      "EUR": 99.99
+    },
+    "manufacturer": "Deepcool",
+    "category": "cooling",
+    "specifications": ["Dual TF120S Fans", "6 Heat Pipes", "180W TDP"],
+    "warranty": "6 months",
+    "stock": 5,
+    "sold": 3
+  },
+  {
+    "title": "Corsair iCUE H150i Elite LCD",
+    "shortTitle": "iCUE H150i Elite LCD",
+    "price": {
+      "USD": 249.99,
+      "EUR": 279.99
+    },
+    "manufacturer": "Corsair",
+    "category": "cooling",
+    "specifications": [
+      "360mm Radiator",
+      "Capellix LED Pump Head",
+      "iCUE LCD Display",
+      "Zero RPM Pump Mode",
+      "280W TDP"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 1
+  },
+  {
+    "title": "NZXT Kraken X73",
+    "shortTitle": "Kraken X73",
+    "price": {
+      "USD": 199.99,
+      "EUR": 229.99
+    },
+    "manufacturer": "NZXT",
+    "category": "cooling",
+    "specifications": [
+      "360mm Radiator",
+      "AIO Pump with RGB Lighting",
+      "Kraken X RGB2 Fans",
+      "280W TDP"
+    ],
+    "warranty": "1.5 years",
+    "stock": 12,
+    "sold": 0
+  },
+  {
+    "title": "Arctic Liquid Freezer II 420",
+    "shortTitle": "Liquid Freezer II 420",
+    "price": {
+      "USD": 199.99,
+      "EUR": 229.99
+    },
+    "manufacturer": "Arctic",
+    "category": "cooling",
+    "specifications": [
+      "420mm Radiator",
+      "Pumps with VRM Cooling",
+      "PWM Fans with Patented Pump Bracket",
+      "280W TDP"
+    ],
+    "warranty": "6 months",
+    "stock": 7,
+    "sold": 2
+  },
+  {
+    "title": "EK AIO 360 D-RGB",
+    "shortTitle": "EK AIO 360 D-RGB",
+    "price": {
+      "USD": 249.99,
+      "EUR": 299.99
+    },
+    "manufacturer": "EK",
+    "category": "cooling",
+    "specifications": [
+      "360mm Radiator",
+      "D-RGB Pump Head",
+      "PWM Fans",
+      "280W TDP"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 0
+  },
+  {
+    "title": "LIAN LI GALAHAD AIO 360 RGB",
+    "shortTitle": "GALAHAD AIO 360 RGB",
+    "price": {
+      "USD": 229.99,
+      "EUR": 279.99
+    },
+    "manufacturer": "LIAN LI",
+    "category": "cooling",
+    "specifications": [
+      "360mm Radiator",
+      "RGB Pump Head",
+      "PWM Fans",
+      "280W TDP"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 3
+  },
+  {
+    "title": "SteelSeries QcK Prism XL",
+    "shortTitle": "QcK Prism XL",
+    "price": {
+      "USD": 39.99,
+      "EUR": 49.99
+    },
+    "manufacturer": "SteelSeries",
+    "category": "mice",
+    "specifications": [
+      "XL Size (900 x 300 x 4mm)",
+      "Micro-Weaved Cloth Surface",
+      "RGB Illumination",
+      "Non-Slip Rubber Base"
+    ],
+    "warranty": "2 years",
+    "stock": 15,
+    "sold": 3
+  },
+  {
+    "title": "Razer Gigantus V2 - Extended",
+    "shortTitle": "Gigantus V2 - Extended",
+    "price": {
+      "USD": 34.99,
+      "EUR": 44.99
+    },
+    "manufacturer": "Razer",
+    "category": "mice",
+    "specifications": [
+      "Extended Size (940 x 355 x 4mm)",
+      "Micro-Weaved Cloth Surface",
+      "Optimized for Low and High DPI Sensors",
+      "Non-Slip Rubber Base"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 2
+  },
+  {
+    "title": "Glorious PC Gaming Race Mouse Pad - XXL",
+    "shortTitle": "Glorious PC Gaming Race Mouse Pad - XXL",
+    "price": {
+      "USD": 24.99,
+      "EUR": 29.99
+    },
+    "manufacturer": "Glorious PC Gaming Race",
+    "category": "mice",
+    "specifications": [
+      "XXL Size (900 x 400 x 3mm)",
+      "Cloth Surface",
+      "Optimized for Low and High DPI Sensors",
+      "Non-Slip Rubber Base"
+    ],
+    "warranty": "2 years",
+    "stock": 12,
+    "sold": 0
+  },
+  {
+    "title": "Logitech G640p",
+    "shortTitle": "G640p",
+    "price": {
+      "USD": 19.99,
+      "EUR": 24.99
+    },
+    "manufacturer": "Logitech",
+    "category": "mice",
+    "specifications": [
+      "Medium Size (350 x 250 x 4mm)",
+      "Cloth Surface",
+      "Optimized for Low and High DPI Sensors",
+      "Non-Slip Rubber Base"
+    ],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 2
+  },
+  {
+    "title": "HyperX Pulsefire Mat",
+    "shortTitle": "Pulsefire Mat",
+    "price": {
+      "USD": 14.99,
+      "EUR": 19.99
+    },
+    "manufacturer": "HyperX",
+    "category": "mice",
+    "specifications": [
+      "Medium Size (350 x 250 x 4mm)",
+      "Cloth Surface",
+      "Optimized for Low and High DPI Sensors",
+      "Non-Slip Rubber Base"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 3
+  },
+  {
+    "title": "Intel Core i7-7700K",
+    "shortTitle": "Core i7-7700K",
+    "price": {
+      "USD": 249.99,
+      "EUR": 299.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "Intel Kaby Lake Architecture",
+      "4 Cores, 8 Threads",
+      "4.2 GHz Base Clock, 4.5 GHz Turbo Boost",
+      "14nm Process",
+      "8 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 10
+  },
+  {
+    "title": "AMD Ryzen 7 2700X",
+    "shortTitle": "Ryzen 7 2700X",
+    "price": {
+      "USD": 229.99,
+      "EUR": 279.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "AMD Zen+ Architecture",
+      "8 Cores, 16 Threads",
+      "3.7 GHz Base Clock, 4.3 GHz Boost Clock",
+      "12nm Process",
+      "16 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "3 years",
+    "stock": 8,
+    "sold": 2
+  },
+  {
+    "title": "Intel Core i5-7600K",
+    "shortTitle": "Core i5-7600K",
+    "price": {
+      "USD": 199.99,
+      "EUR": 249.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "Intel Kaby Lake Architecture",
+      "4 Cores, 4 Threads",
+      "3.8 GHz Base Clock, 4.2 GHz Turbo Boost",
+      "14nm Process",
+      "6 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "1 year",
+    "stock": 0,
+    "sold": 15
+  },
+  {
+    "title": "AMD Ryzen 5 2600",
+    "shortTitle": "Ryzen 5 2600",
+    "price": {
+      "USD": 169.99,
+      "EUR": 209.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "AMD Zen+ Architecture",
+      "6 Cores, 12 Threads",
+      "3.4 GHz Base Clock, 3.9 GHz Boost Clock",
+      "12nm Process",
+      "16 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "2 years",
+    "stock": 10,
+    "sold": 5
+  },
+  {
+    "title": "Intel Core i3-7350K",
+    "shortTitle": "Core i3-7350K",
+    "price": {
+      "USD": 129.99,
+      "EUR": 159.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "Intel Kaby Lake Architecture",
+      "2 Cores, 4 Threads",
+      "4.2 GHz Base Clock, 4.2 GHz Turbo Boost",
+      "14nm Process",
+      "4 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "6 months",
+    "stock": 7,
+    "sold": 2
+  },
+  {
+    "title": "Intel Core i7-8700K",
+    "shortTitle": "Core i7-8700K",
+    "price": {
+      "USD": 299.99,
+      "EUR": 349.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "Intel Coffee Lake Architecture",
+      "6 Cores, 12 Threads",
+      "3.7 GHz Base Clock, 4.7 GHz Turbo Boost",
+      "14nm Process",
+      "12 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 10
+  },
+  {
+    "title": "AMD Ryzen 7 1800X",
+    "shortTitle": "Ryzen 7 1800X",
+    "price": {
+      "USD": 249.99,
+      "EUR": 299.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "AMD Zen Architecture",
+      "8 Cores, 16 Threads",
+      "3.6 GHz Base Clock, 4.0 GHz Boost Clock",
+      "14nm Process",
+      "16 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "3 years",
+    "stock": 8,
+    "sold": 2
+  },
+  {
+    "title": "Intel Core i5-8600K",
+    "shortTitle": "Core i5-8600K",
+    "price": {
+      "USD": 229.99,
+      "EUR": 279.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "Intel Coffee Lake Architecture",
+      "6 Cores, 6 Threads",
+      "3.6 GHz Base Clock, 4.3 GHz Turbo Boost",
+      "14nm Process",
+      "9 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "1 year",
+    "stock": 0,
+    "sold": 15
+  },
+  {
+    "title": "AMD Ryzen 5 1600X",
+    "shortTitle": "Ryzen 5 1600X",
+    "price": {
+      "USD": 199.99,
+      "EUR": 249.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "AMD Zen Architecture",
+      "6 Cores, 12 Threads",
+      "3.6 GHz Base Clock, 4.0 GHz Boost Clock",
+      "14nm Process",
+      "16 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "2 years",
+    "stock": 10,
+    "sold": 5
+  },
+  {
+    "title": "Intel Core i3-8350K",
+    "shortTitle": "Core i3-8350K",
+    "price": {
+      "USD": 169.99,
+      "EUR": 209.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "Intel Coffee Lake Architecture",
+      "4 Cores, 4 Threads",
+      "4 GHz Base Clock, 4 GHz Turbo Boost",
+      "14nm Process",
+      "8 MB Cache",
+      "PCIe 3.0 Support"
+    ],
+    "warranty": "6 months",
+    "stock": 7,
+    "sold": 2
+  },
+  {
+    "title": "GeForce GTX 980 Ti",
+    "shortTitle": "GTX 980 Ti",
+    "price": {
+      "USD": 299.99,
+      "EUR": 349.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Maxwell Architecture",
+      "6GB GDDR5 Memory",
+      "1000 MHz Base Clock, 1076 MHz Boost Clock",
+      "PCI Express 3.0 x16 Interface",
+      "2816 CUDA Cores",
+      "3x DisplayPort 1.2, 1x HDMI 2.0b",
+      "250W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 0,
+    "sold": 20
+  },
+  {
+    "title": "Radeon R9 290X",
+    "shortTitle": "R9 290X",
+    "price": {
+      "USD": 199.99,
+      "EUR": 249.99
+    },
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD GCN Architecture",
+      "4GB GDDR5 Memory",
+      "1000 MHz Base Clock, 1050 MHz Boost Clock",
+      "PCI Express 3.0 x16 Interface",
+      "2816 Stream Processors",
+      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
+      "275W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 5,
+    "sold": 10
+  },
+  {
+    "title": "GeForce GTX 780 Ti",
+    "shortTitle": "GTX 780 Ti",
+    "price": {
+      "USD": 149.99,
+      "EUR": 179.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Kepler Architecture",
+      "3GB GDDR5 Memory",
+      "876 MHz Base Clock, 928 MHz Boost Clock",
+      "PCI Express 3.0 x16 Interface",
+      "2880 CUDA Cores",
+      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
+      "250W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 8,
+    "sold": 2
+  },
+  {
+    "title": "Radeon HD 7970 GHz Edition",
+    "shortTitle": "HD 7970 GHz Edition",
+    "price": {
+      "USD": 99.99,
+      "EUR": 119.99
+    },
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD GCN Architecture",
+      "3GB GDDR5 Memory",
+      "1000 MHz Base Clock, 1050 MHz Boost Clock",
+      "PCI Express 3.0 x16 Interface",
+      "2048 Stream Processors",
+      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
+      "250W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 0,
+    "sold": 15
+  },
+  {
+    "title": "GeForce GTX 980",
+    "shortTitle": "GTX 980",
+    "price": {
+      "USD": 249.99,
+      "EUR": 299.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Maxwell Architecture",
+      "4GB GDDR5 Memory",
+      "876 MHz Base Clock, 932 MHz Boost Clock",
+      "PCI Express 3.0 x16 Interface",
+      "2048 CUDA Cores",
+      "3x DisplayPort 1.2, 1x HDMI 2.0b",
+      "165W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 0,
+    "sold": 20
+  },
+  {
+    "title": "Radeon R9 290",
+    "shortTitle": "R9 290",
+    "price": {
+      "USD": 179.99,
+      "EUR": 229.99
+    },
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD GCN Architecture",
+      "4GB GDDR5 Memory",
+      "947 MHz Base Clock, 1000 MHz Boost Clock",
+      "PCI Express 3.0 x16 Interface",
+      "2816 Stream Processors",
+      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
+      "250W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 5,
+    "sold": 10
+  },
+  {
+    "title": "GeForce GTX 780",
+    "shortTitle": "GTX 780",
+    "price": {
+      "USD": 129.99,
+      "EUR": 159.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Kepler Architecture",
+      "3GB GDDR5 Memory",
+      "863 MHz Base Clock, 900 MHz Boost Clock",
+      "PCI Express 3.0 x16 Interface",
+      "2304 CUDA Cores",
+      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
+      "250W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 8,
+    "sold": 2
+  },
+  {
+    "title": "Radeon HD 7950",
+    "shortTitle": "HD 7950",
+    "price": {
+      "USD": 79.99,
+      "EUR": 99.99
+    },
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD GCN Architecture",
+      "3GB GDDR5 Memory",
+      "800 MHz Base Clock, 850 MHz Boost Clock",
+      "PCI Express 3.0 x16 Interface",
+      "1792 Stream Processors",
+      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
+      "200W TGP"
+    ],
+    "warranty": "No Warranty",
+    "stock": 0,
+    "sold": 15
   }
 ]

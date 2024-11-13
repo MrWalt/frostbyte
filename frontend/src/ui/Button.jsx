@@ -22,7 +22,7 @@ const variations = {
   medium: css`
     font-weight: 400;
     font-size: 1.4rem;
-    color: inherit;
+    color: var(--color-grey-0);
 
     &:hover {
       color: var(--color-brand-500);
@@ -31,7 +31,7 @@ const variations = {
   small: css`
     font-size: 1.2rem;
     font-weight: 400;
-    color: inherit;
+    color: var(--color-grey-0);
 
     &:hover {
       color: var(--color-brand-500);

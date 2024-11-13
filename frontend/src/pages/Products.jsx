@@ -7,6 +7,8 @@ import FilterMenu from "../ui/FilterMenu";
 import Heading from "../ui/Heading";
 import ProductsGrid from "../features/product/ProductsGrid";
 import formatCategoryTitle from "../utils/formatCategoryTitle";
+import Pagination from "../ui/Pagination";
+import { useProducts } from "../features/product/useProducts";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -27,6 +29,9 @@ const StyledHeading = styled(Heading)`
 export default function Products() {
   const params = useParams();
   const category = formatCategoryTitle(params?.category ?? "");
+  const { count } = useProducts();
+  const { isLoading } = useProducts();
+
   return (
     <Section>
       <Container>
@@ -35,6 +40,7 @@ export default function Products() {
         </StyledHeading>
         <FilterMenu />
         <ProductsGrid category={params?.category ? params.category : null} />
+        {!isLoading && <Pagination count={count} />}
       </Container>
     </Section>
   );

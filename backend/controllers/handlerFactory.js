@@ -1,10 +1,21 @@
+const APIFeatures = require("../utils/APIFeatures");
+
 // READ
 function getAll(Model, selectOptions) {
   return async function (req, res) {
     try {
-      const data = await Model.find().select(selectOptions);
+      const features = new APIFeatures(
+        Model.find().select(selectOptions),
+        req.query
+      )
+        .filter()
+        .paginate();
 
-      res.status(200).json({ status: "success", data });
+      const documents = new APIFeatures(Model.find(), req.query).filter();
+      const count = await documents.query.countDocuments();
+      const document = await features.query;
+
+      res.status(200).json({ status: "success", data: document, count });
     } catch (err) {
       res.status(400).json({ status: "error", message: "Could not fetch" });
     }

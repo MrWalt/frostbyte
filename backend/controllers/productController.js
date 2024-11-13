@@ -8,7 +8,10 @@ const {
 } = require("./handlerFactory");
 
 // READ
-const getAllProducts = getAll(Product, "-sold -specifications -warranty -__v");
+const getAllProducts = getAll(
+  Product,
+  "-sold -specifications -warranty -description -__v"
+);
 const getProduct = getOne(Product);
 
 // CREATE

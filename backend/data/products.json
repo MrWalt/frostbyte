@@ -1,1645 +1,274 @@
 [
   {
-    "title": "NVIDIA GeForce RTX 4090 24GB Founders Edition",
-    "shortTitle": "RTX 4090 24GB FE",
-    "price": {
-      "USD": 1599.99,
-      "EUR": 1799.99
-    },
-    "manufacturer": "NVIDIA",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Ada Lovelace Architecture",
-      "24GB GDDR6X Memory",
-      "2460 MHz Boost Clock",
-      "PCI Express Gen 4 x16 Interface",
-      "DLSS 3",
-      "Ray Tracing Cores",
-      "Advanced Shader Cores",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1a",
-      "285W TGP",
-      "242 Tensor Cores",
-      "9728 CUDA Cores",
-      "228 Shader Execution Units"
-    ],
-    "warranty": "2 years",
-    "stock": 3,
-    "sold": 7
-  },
-  {
-    "title": "MSI GeForce RTX 4080 16GB Ventus 3X OC",
-    "shortTitle": "MSI RTX 4080 16GB Ventus 3X OC",
+    "title": "NVIDIA GeForce RTX 4080 16GB Founders Edition",
     "price": {
       "USD": 1199.99,
-      "EUR": 1349.99
+      "EUR": 1299.99
     },
-    "manufacturer": "MSI",
+    "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
       "NVIDIA Ada Lovelace Architecture",
       "16GB GDDR6X Memory",
-      "2505 MHz Boost Clock (OC Mode)",
-      "Torx Fan 4.0",
-      "Tri Frozr 3 Cooler",
-      "PCIe Gen 4.0 x16 Interface",
-      "DLSS 3",
+      "2505 MHz Boost Clock",
+      "PCIe Gen 4 x16 Interface",
+      "DLSS 3 Support",
       "Ray Tracing Cores",
-      "Advanced Shader Cores",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1a",
-      "250W TGP"
+      "Supports 8K & 4K Gaming",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "320W TGP",
+      "7680 CUDA Cores",
+      "384 Tensor Cores",
+      "NVIDIA Reflex Low Latency",
+      "8K HDR Ready",
+      "Dual Axial-tech Fans",
+      "Max Temp: 93°C",
+      "Maximum Power Connectors: 2 x 8-pin"
     ],
     "warranty": "2 years",
-    "stock": 3,
-    "sold": 7
+    "stock": 6,
+    "sold": 20,
+    "description": "The RTX 4080 delivers top-tier performance with 16GB GDDR6X memory and Ada Lovelace architecture. Perfect for 4K and 8K gaming, featuring DLSS 3, ray tracing, and AI enhancements.",
+    "discount": 0
   },
   {
-    "title": "ASUS ROG Strix GeForce RTX 4070 Ti 12GB OC Edition",
-    "shortTitle": "ROG Strix RTX 4070 Ti 12GB OC",
-    "price": {
-      "USD": 899.99,
-      "EUR": 999.99
-    },
-    "manufacturer": "ASUS",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Ada Lovelace Architecture",
-      "12GB GDDR6X Memory",
-      "2610 MHz Boost Clock (OC Mode)",
-      "PCI Express Gen 4 x16 Interface",
-      "DLSS 3",
-      "Ray Tracing Cores",
-      "Advanced Shader Cores",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1a",
-      "240W TGP"
-    ],
-    "warranty": "2 years",
-    "stock": 2,
-    "sold": 5
-  },
-  {
-    "title": "Gigabyte AORUS GeForce RTX 4060 Ti 8GB Master",
-    "shortTitle": "AORUS RTX 4060 Ti 8GB Master",
-    "price": {
-      "USD": 499.99,
-      "EUR": 549.99
-    },
-    "manufacturer": "Gigabyte",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Ada Lovelace Architecture",
-      "8GB GDDR6 Memory",
-      "2535 MHz Boost Clock",
-      "PCI Express Gen 4 x16 Interface",
-      "DLSS 3",
-      "Ray Tracing Cores",
-      "Advanced Shader Cores",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1a",
-      "200W TGP"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 1
-  },
-  {
-    "title": "PowerColor Red Devil Radeon RX 7900 XTX 24GB",
-    "shortTitle": "Red Devil RX 7900 XTX 24GB",
+    "title": "AMD Radeon RX 7900 XT 20GB",
     "price": {
       "USD": 999.99,
       "EUR": 1099.99
     },
-    "manufacturer": "PowerColor",
+    "manufacturer": "AMD",
     "category": "graphics-cards",
     "specifications": [
-      "AMD RDNA 3 Architecture",
-      "24GB GDDR6 Memory",
-      "2500 MHz Game Clock",
-      "PCI Express Gen 4 x16 Interface",
-      "FSR 3.0",
-      "Ray Tracing Cores",
-      "3x DisplayPort 2.1, 1x HDMI 2.1a",
-      "355W TGP"
+      "RDNA 3 Architecture",
+      "20GB GDDR6 Memory",
+      "2500 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "Ray Tracing Support",
+      "1x DisplayPort 2.1, 1x HDMI 2.1",
+      "300W TGP",
+      "5120 Stream Processors",
+      "128 Ray Accelerators",
+      "Infinity Cache: 80MB",
+      "Supports 8K Gaming",
+      "Dynamic Load Balancing",
+      "Smart Access Memory",
+      "Vulkan & DirectX 12 Ultimate Support",
+      "Maximum Power Connectors: 2 x 8-pin"
     ],
     "warranty": "2 years",
-    "stock": 5,
-    "sold": 2
-  },
-  {
-    "title": "Intel Core i9-13900K 24-Core 5.8 GHz",
-    "shortTitle": "Intel i9-13900K 24-Core 5.8 GHz",
-    "price": {
-      "USD": 589.99,
-      "EUR": 649.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "24 Cores, 32 Threads",
-      "5.8 GHz Max Turbo Frequency",
-      "Intel 7 Process",
-      "DDR5-5600 Memory Support",
-      "PCIe Gen 5.0",
-      "Integrated Intel UHD Graphics 770",
-      "Intel Z790 Chipset",
-      "LGA 1700 Socket"
-    ],
-    "warranty": "3 years",
-    "stock": 7,
-    "sold": 3
-  },
-  {
-    "title": "AMD Ryzen 9 7950X 16-Core 5.7 GHz",
-    "shortTitle": "AMD Ryzen 9 7950X 16-Core 5.7 GHz",
-    "price": {
-      "USD": 549.99,
-      "EUR": 629.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "16 Cores, 32 Threads",
-      "5.7 GHz Max Boost Clock",
-      "5nm TSMC Process",
-      "DDR5-5200 Memory Support",
-      "PCIe Gen 5.0",
-      "Integrated AMD Radeon Graphics",
-      "AMD X670E Chipset",
-      "AM5 Socket"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 2
-  },
-  {
-    "title": "Intel Core i7-13700K 16-Core 5.4 GHz",
-    "shortTitle": "Intel i7-13700K 16-Core 5.4 GHz",
-    "price": {
-      "USD": 409.99,
-      "EUR": 459.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "16 Cores, 24 Threads",
-      "5.4 GHz Max Turbo Frequency",
-      "Intel 7 Process",
-      "DDR5-5600 Memory Support",
-      "PCIe Gen 5.0",
-      "Integrated Intel UHD Graphics 770",
-      "Intel Z790 Chipset",
-      "LGA 1700 Socket"
-    ],
-    "warranty": "3 years",
-    "stock": 8,
-    "sold": 1
-  },
-  {
-    "title": "AMD Ryzen 7 7700X 8-Core 5.5 GHz",
-    "shortTitle": "AMD Ryzen 7 7700X 8-Core 5.5 GHz",
-    "price": {
-      "USD": 299.99,
-      "EUR": 339.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "8 Cores, 16 Threads",
-      "5.5 GHz Max Boost Clock",
-      "5nm TSMC Process",
-      "DDR5-5200 Memory Support",
-      "PCIe Gen 5.0",
-      "Integrated AMD Radeon Graphics",
-      "AMD X670E Chipset",
-      "AM5 Socket"
-    ],
-    "warranty": "2 years",
-    "stock": 10,
-    "sold": 4
-  },
-  {
-    "title": "Intel Core i5-13600K 14-Core 5.1 GHz",
-    "shortTitle": "Intel i5-13600K 14-Core 5.1 GHz",
-    "price": {
-      "USD": 319.99,
-      "EUR": 359.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "14 Cores, 20 Threads",
-      "5.1 GHz Max Turbo Frequency",
-      "Intel 7 Process",
-      "DDR5-5600 Memory Support",
-      "PCIe Gen 5.0",
-      "Integrated Intel UHD Graphics 770",
-      "Intel Z790 Chipset",
-      "LGA 1700 Socket"
-    ],
-    "warranty": "3 years",
-    "stock": 6,
-    "sold": 2
-  },
-  {
-    "title": "Corsair Vengeance DDR5 32GB (2x16GB) 5600MHz CL36 RAM",
-    "shortTitle": "Corsair Vengeance DDR5 32GB 5600MHz CL36",
-    "price": {
-      "USD": 129.99,
-      "EUR": 149.99
-    },
-    "manufacturer": "Corsair",
-    "category": "memory",
-    "specifications": [
-      "DDR5-5600 CL36 Memory Kit",
-      "32GB (2 x 16GB) Capacity",
-      "Intel XMP 3.0 Ready",
-      "Corsair Vengeance RGB Pro Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "G.Skill Trident Z5 Neo DDR5 32GB (2x16GB) 6000MHz CL30 RAM",
-    "shortTitle": "G.Skill Trident Z5 Neo DDR5 32GB 6000MHz CL30",
-    "price": {
-      "USD": 179.99,
-      "EUR": 209.99
-    },
-    "manufacturer": "G.Skill",
-    "category": "memory",
-    "specifications": [
-      "DDR5-6000 CL30 Memory Kit",
-      "32GB (2 x 16GB) Capacity",
-      "Intel XMP 3.0 Ready",
-      "RGB Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "Kingston Fury Beast DDR5 32GB (2x16GB) 5200MHz CL40 RAM",
-    "shortTitle": "Kingston Fury Beast DDR5 32GB 5200MHz CL40",
-    "price": {
-      "USD": 99.99,
-      "EUR": 119.99
-    },
-    "manufacturer": "Kingston",
-    "category": "memory",
-    "specifications": [
-      "DDR5-5200 CL40 Memory Kit",
-      "32GB (2 x 16GB) Capacity",
-      "Intel XMP 3.0 Ready",
-      "Black Heat Spreader"
-    ],
-    "warranty": "4 years",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "TeamGroup T-Force Delta RGB DDR5 32GB (2x16GB) 5200MHz CL40 RAM",
-    "shortTitle": "TeamGroup T-Force Delta RGB DDR5 32GB 5200MHz CL40",
-    "price": {
-      "USD": 109.99,
-      "EUR": 129.99
-    },
-    "manufacturer": "TeamGroup",
-    "category": "memory",
-    "specifications": [
-      "DDR5-5200 CL40 Memory Kit",
-      "32GB (2 x 16GB) Capacity",
-      "Intel XMP 3.0 Ready",
-      "RGB Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "Patriot Viper DDR5 32GB (2x16GB) 5600MHz CL36 RAM",
-    "shortTitle": "Patriot Viper DDR5 32GB 5600MHz CL36",
-    "price": {
-      "USD": 119.99,
-      "EUR": 139.99
-    },
-    "manufacturer": "Patriot",
-    "category": "memory",
-    "specifications": [
-      "DDR5-5600 CL36 Memory Kit",
-      "32GB (2 x 16GB) Capacity",
-      "Intel XMP 3.0 Ready",
-      "RGB Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "Samsung 990 Pro 1TB PCIe 4.0 NVMe SSD",
-    "shortTitle": "Samsung 990 Pro 1TB NVMe",
-    "price": {
-      "USD": 169.99,
-      "EUR": 199.99
-    },
-    "manufacturer": "Samsung",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "PCIe Gen 4 x4 Interface",
-      "Up to 7450 MB/s Read Speed",
-      "Up to 6900 MB/s Write Speed",
-      "NVMe 2.0"
-    ],
-    "warranty": "3 years",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "WD Black SN850X 1TB PCIe 4.0 NVMe SSD",
-    "shortTitle": "WD Black SN850X 1TB NVMe",
-    "price": {
-      "USD": 159.99,
-      "EUR": 189.99
-    },
-    "manufacturer": "WD",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "PCIe Gen 4 x4 Interface",
-      "Up to 7300 MB/s Read Speed",
-      "Up to 6800 MB/s Write Speed",
-      "NVMe 2.0"
-    ],
-    "warranty": "3 years",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "Crucial P5 Plus 1TB PCIe 4.0 NVMe SSD",
-    "shortTitle": "Crucial P5 Plus 1TB NVMe",
-    "price": {
-      "USD": 119.99,
-      "EUR": 139.99
-    },
-    "manufacturer": "Crucial",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "PCIe Gen 4 x4 Interface",
-      "Up to 7000 MB/s Read Speed",
-      "Up to 6800 MB/s Write Speed",
-      "NVMe 2.0"
-    ],
-    "warranty": "5 years",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "Sabrent Rocket 4 Plus 2TB PCIe 4.0 NVMe SSD",
-    "shortTitle": "Sabrent Rocket 4 Plus 2TB NVMe",
-    "price": {
-      "USD": 249.99,
-      "EUR": 299.99
-    },
-    "manufacturer": "Sabrent",
-    "category": "storage",
-    "specifications": [
-      "2TB Capacity",
-      "PCIe Gen 4 x4 Interface",
-      "Up to 7100 MB/s Read Speed",
-      "Up to 7000 MB/s Write Speed",
-      "NVMe 2.0"
-    ],
-    "warranty": "5 years",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "SK Hynix Platinum P41 1TB PCIe 4.0 NVMe SSD",
-    "shortTitle": "SK Hynix Platinum P41 1TB NVMe",
-    "price": {
-      "USD": 129.99,
-      "EUR": 149.99
-    },
-    "manufacturer": "SK Hynix",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "PCIe Gen 4 x4 Interface",
-      "Up to 7000 MB/s Read Speed",
-      "Up to 6800 MB/s Write Speed",
-      "NVMe 2.0"
-    ],
-    "warranty": "5 years",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "Seagate BarraCuda 2TB 7200 RPM HDD",
-    "shortTitle": "Seagate BarraCuda 2TB HDD",
-    "price": {
-      "USD": 59.99,
-      "EUR": 69.99
-    },
-    "manufacturer": "Seagate",
-    "category": "storage",
-    "specifications": [
-      "2TB Capacity",
-      "7200 RPM Spindle Speed",
-      "256MB Cache",
-      "SATA 6Gb/s Interface"
-    ],
-    "warranty": "2 years",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "Western Digital WD Blue 4TB 7200 RPM HDD",
-    "shortTitle": "WD Blue 4TB HDD",
-    "price": {
-      "USD": 89.99,
-      "EUR": 109.99
-    },
-    "manufacturer": "Western Digital",
-    "category": "storage",
-    "specifications": [
-      "4TB Capacity",
-      "7200 RPM Spindle Speed",
-      "256MB Cache",
-      "SATA 6Gb/s Interface"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "Toshiba X300 4TB 7200 RPM HDD",
-    "shortTitle": "Toshiba X300 4TB HDD",
-    "price": {
-      "USD": 89.99,
-      "EUR": 109.99
-    },
-    "manufacturer": "Toshiba",
-    "category": "storage",
-    "specifications": [
-      "4TB Capacity",
-      "7200 RPM Spindle Speed",
-      "256MB Cache",
-      "SATA 6Gb/s Interface"
-    ],
-    "warranty": "2 years",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "Seagate IronWolf Pro 10TB 7200 RPM NAS HDD",
-    "shortTitle": "Seagate IronWolf Pro 10TB NAS HDD",
-    "price": {
-      "USD": 299.99,
-      "EUR": 349.99
-    },
-    "manufacturer": "Seagate",
-    "category": "storage",
-    "specifications": [
-      "10TB Capacity",
-      "7200 RPM Spindle Speed",
-      "256MB Cache",
-      "SATA 6Gb/s Interface"
-    ],
-    "warranty": "5 years",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "Western Digital WD Red Plus 8TB 5400 RPM NAS HDD",
-    "shortTitle": "WD Red Plus 8TB NAS HDD",
-    "price": {
-      "USD": 199.99,
-      "EUR": 239.99
-    },
-    "manufacturer": "Western Digital",
-    "category": "storage",
-    "specifications": [
-      "8TB Capacity",
-      "5400 RPM Spindle Speed",
-      "256MB Cache",
-      "SATA 6Gb/s Interface"
-    ],
-    "warranty": "5 years",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "Logitech G502 X Plus Lightspeed Wireless Gaming Mouse",
-    "shortTitle": "Logitech G502 X Plus Lightspeed",
-    "price": {
-      "USD": 89.99,
-      "EUR": 109.99
-    },
-    "manufacturer": "Logitech",
-    "category": "mice",
-    "specifications": [
-      "Hero 25K Sensor",
-      "Lightspeed Wireless Technology",
-      "Programmable DPI Button",
-      "Lightweight Design",
-      "RGB Lighting"
-    ],
-    "warranty": "2 years",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "Razer Viper V2 Pro Wireless Gaming Mouse",
-    "shortTitle": "Razer Viper V2 Pro Wireless",
-    "price": {
-      "USD": 149.99,
-      "EUR": 179.99
-    },
-    "manufacturer": "Razer",
-    "category": "mice",
-    "specifications": [
-      "Focus Pro 30K Sensor",
-      "HyperSpeed Wireless Technology",
-      "Ultralight Design",
-      "Razer Optical Mouse Switches",
-      "RGB Chroma Lighting"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "SteelSeries Aerox 5 Wireless Gaming Mouse",
-    "shortTitle": "SteelSeries Aerox 5 Wireless",
-    "price": {
-      "USD": 79.99,
-      "EUR": 99.99
-    },
-    "manufacturer": "SteelSeries",
-    "category": "mice",
-    "specifications": [
-      "TrueMove Air Sensor",
-      "Quantum 2.0 Wireless",
-      "AquaBarrier Water Resistance",
-      "Lightweight Design",
-      "RGB Illumination"
-    ],
-    "warranty": "2 years",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "Glorious Model O- Wireless Gaming Mouse",
-    "shortTitle": "Glorious Model O- Wireless",
-    "price": {
-      "USD": 59.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Glorious PC Gaming Race",
-    "category": "mice",
-    "specifications": [
-      "PixArt PMW3360 Sensor",
-      "Wireless and Wired Connectivity",
-      "Ultralight Design",
-      "Omron Switches",
-      "RGB Lighting"
-    ],
-    "warranty": "2 years",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "HyperX Pulsefire Haste 2 Wireless Gaming Mouse",
-    "shortTitle": "HyperX Pulsefire Haste 2 Wireless",
-    "price": {
-      "USD": 69.99,
-      "EUR": 89.99
-    },
-    "manufacturer": "HyperX",
-    "category": "mice",
-    "specifications": [
-      "PixArt PAW3370 Sensor",
-      "2.4GHz Wireless Technology",
-      "Ultralight Design",
-      "HyperX Switches",
-      "RGB Lighting"
-    ],
-    "warranty": "2 years",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "Keychron K8 Pro Wireless Mechanical Keyboard",
-    "shortTitle": "Keychron K8 Pro Wireless",
-    "price": {
-      "USD": 119.99,
-      "EUR": 139.99
-    },
-    "manufacturer": "Keychron",
-    "category": "keyboards",
-    "specifications": [
-      "Hot-Swappable Switches",
-      "Wireless and Wired Connectivity",
-      "RGB Backlighting",
-      "Mac and Windows Layout",
-      "Aluminum Frame"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "Ducky One 3 SF RGB Mechanical Keyboard",
-    "shortTitle": "Ducky One 3 SF RGB",
-    "price": {
-      "USD": 129.99,
-      "EUR": 149.99
-    },
-    "manufacturer": "Ducky",
-    "category": "keyboards",
-    "specifications": [
-      "Cherry MX Switches",
-      "PBT Keycaps",
-      "RGB Backlighting",
-      "Compact Layout",
-      "Solid Build Quality"
-    ],
-    "warranty": "1 year",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "Razer Huntsman V2 Analog Optical Keyboard",
-    "shortTitle": "Razer Huntsman V2 Analog",
-    "price": {
-      "USD": 199.99,
-      "EUR": 229.99
-    },
-    "manufacturer": "Razer",
-    "category": "keyboards",
-    "specifications": [
-      "Razer Optical Switches",
-      "Analog Key Input",
-      "Double-Shot PBT Keycaps",
-      "RGB Chroma Lighting",
-      "Multi-Function Digital Dial"
-    ],
-    "warranty": "2 years",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "Keychron K6 Pro Wireless Mechanical Keyboard",
-    "shortTitle": "Keychron K6 Pro Wireless",
-    "price": {
-      "USD": 99.99,
-      "EUR": 119.99
-    },
-    "manufacturer": "Keychron",
-    "category": "keyboards",
-    "specifications": [
-      "Hot-Swappable Switches",
-      "Wireless and Wired Connectivity",
-      "RGB Backlighting",
-      "Compact Layout",
-      "Aluminum Frame"
-    ],
-    "warranty": "1 year",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "SteelSeries Apex Pro Mini Mechanical Keyboard",
-    "shortTitle": "SteelSeries Apex Pro Mini",
-    "price": {
-      "USD": 149.99,
-      "EUR": 179.99
-    },
-    "manufacturer": "SteelSeries",
-    "category": "keyboards",
-    "specifications": [
-      "OmniPoint Adjustable Switches",
-      "OLED Smart Display",
-      "Magnetic Wrist Rest",
-      "RGB Illumination",
-      "Compact Layout"
-    ],
-    "warranty": "2 years",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "ASUS ROG Maximus Z790 Extreme LGA 1700",
-    "shortTitle": "ASUS ROG Maximus Z790",
-    "price": {
-      "USD": 699.99,
-      "EUR": 799.99
-    },
-    "manufacturer": "ASUS",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z790 Chipset",
-      "DDR5 Memory Support",
-      "PCIe 5.0 Support",
-      "Onboard Wi-Fi 6E",
-      "10G Ethernet",
-      "RGB Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 5,
-    "sold": 2
-  },
-  {
-    "title": "MSI MEG Z790 Ace LGA 1700",
-    "shortTitle": "MSI MEG Z790",
-    "price": {
-      "USD": 599.99,
-      "EUR": 699.99
-    },
-    "manufacturer": "MSI",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z790 Chipset",
-      "DDR5 Memory Support",
-      "PCIe 5.0 Support",
-      "Onboard Wi-Fi 6E",
-      "2.5G Ethernet",
-      "RGB Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 7,
-    "sold": 3
-  },
-  {
-    "title": "Gigabyte Z790 AORUS Master LGA 1700",
-    "shortTitle": "Gigabyte Z790 AORUS",
-    "price": {
-      "USD": 549.99,
-      "EUR": 649.99
-    },
-    "manufacturer": "Gigabyte",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z790 Chipset",
-      "DDR5 Memory Support",
-      "PCIe 5.0 Support",
-      "Onboard Wi-Fi 6E",
-      "2.5G Ethernet",
-      "RGB Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 9,
-    "sold": 1
-  },
-  {
-    "title": "ASRock Z790 Taichi LGA 1700",
-    "shortTitle": "ASRock Z790 Taichi",
-    "price": {
-      "USD": 499.99,
-      "EUR": 599.99
-    },
-    "manufacturer": "ASRock",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z790 Chipset",
-      "DDR5 Memory Support",
-      "PCIe 5.0 Support",
-      "Onboard Wi-Fi 6E",
-      "2.5G Ethernet",
-      "RGB Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 10,
-    "sold": 4
-  },
-  {
-    "title": "MSI MPG Z790 Force LGA 1700",
-    "shortTitle": "MSI MPG Z790",
-    "price": {
-      "USD": 449.99,
-      "EUR": 549.99
-    },
-    "manufacturer": "MSI",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z790 Chipset",
-      "DDR5 Memory Support",
-      "PCIe 5.0 Support",
-      "Onboard Wi-Fi 6E",
-      "2.5G Ethernet",
-      "RGB Lighting"
-    ],
-    "warranty": "4 years",
-    "stock": 6,
-    "sold": 2
-  },
-  {
-    "title": "HyperX Cloud Alpha Wireless",
-    "shortTitle": "HyperX Cloud Alpha Wireless",
-    "price": {
-      "USD": 199.99,
-      "EUR": 229.99
-    },
-    "manufacturer": "HyperX",
-    "category": "headphones",
-    "specifications": [
-      "Wireless Connectivity",
-      "Dual-Chamber Drivers",
-      "Noise-Canceling Microphone",
-      "Comfortable Design",
-      "RGB Lighting"
-    ],
-    "warranty": "2 years",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "SteelSeries Arctis Nova Pro Wireless",
-    "shortTitle": "SteelSeries Arctis Nova Pro Wireless",
-    "price": {
-      "USD": 349.99,
-      "EUR": 399.99
-    },
-    "manufacturer": "SteelSeries",
-    "category": "headphones",
-    "specifications": [
-      "Wireless and Wired Connectivity",
-      "Sonar Audio Software",
-      "Dual Wireless Mode",
-      "Comfortable Design",
-      "RGB Illumination"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "Razer BlackShark V2 Pro",
-    "shortTitle": "Razer BlackShark V2 Pro",
-    "price": {
-      "USD": 179.99,
-      "EUR": 209.99
-    },
-    "manufacturer": "Razer",
-    "category": "headphones",
-    "specifications": [
-      "TriForce Titanium Drivers",
-      "Active Noise Cancellation",
-      "HyperClear Cardioid Microphone",
-      "Comfortable Design",
-      "RGB Chroma Lighting"
-    ],
-    "warranty": "2 years",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "Logitech G Pro X Wireless",
-    "shortTitle": "Logitech G Pro X Wireless",
-    "price": {
-      "USD": 199.99,
-      "EUR": 229.99
-    },
-    "manufacturer": "Logitech",
-    "category": "headphones",
-    "specifications": [
-      "Lightspeed Wireless Technology",
-      "DTS Headphone:X 2.0",
-      "Blue VO!CE Mic Filter",
-      "Comfortable Design",
-      "RGB Lighting"
-    ],
-    "warranty": "2 years",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "Sennheiser HD 560S",
-    "shortTitle": "Sennheiser HD 560S",
-    "price": {
-      "USD": 199.99,
-      "EUR": 229.99
-    },
-    "manufacturer": "Sennheiser",
-    "category": "headphones",
-    "specifications": [
-      "Open-Back Design",
-      "High-Fidelity Audio",
-      "Comfortable Design",
-      "Durable Build"
-    ],
-    "warranty": "2 years",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "iPhone 15 Pro Max 256GB",
-    "shortTitle": "iPhone 15 Pro Max 256GB",
-    "price": {
-      "USD": 1099.0,
-      "EUR": 1299.0
-    },
-    "manufacturer": "Apple",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.7-inch Super Retina XDR display",
-      "A17 Bionic chip",
-      "48MP Main camera",
-      "256GB storage",
-      "iOS 17"
-    ],
-    "warranty": "1 year",
-    "stock": 5,
-    "sold": 2
-  },
-  {
-    "title": "Samsung Galaxy S24 Ultra",
-    "shortTitle": "Samsung Galaxy S24 Ultra",
-    "price": {
-      "USD": 1199.0,
-      "EUR": 1399.0
-    },
-    "manufacturer": "Samsung",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.8-inch Dynamic AMOLED 2X display",
-      "Snapdragon 8 Gen 3",
-      "200MP Main camera",
-      "256GB storage",
-      "Android 14"
-    ],
-    "warranty": "1 year",
-    "stock": 7,
-    "sold": 3
-  },
-  {
-    "title": "Xiaomi 14 Pro",
-    "shortTitle": "Xiaomi 14 Pro",
-    "price": {
-      "USD": 899.0,
-      "EUR": 1099.0
-    },
-    "manufacturer": "Xiaomi",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.7-inch AMOLED display",
-      "Snapdragon 8 Gen 3",
-      "50MP Main camera",
-      "256GB storage",
-      "MIUI 15"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 2
-  },
-  {
-    "title": "Google Pixel 8 Pro",
-    "shortTitle": "Google Pixel 8 Pro",
-    "price": {
-      "USD": 999.0,
-      "EUR": 1199.0
-    },
-    "manufacturer": "Google",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.7-inch OLED display",
-      "Google Tensor G3",
-      "48MP Main camera",
-      "256GB storage",
-      "Android 14"
-    ],
-    "warranty": "1 year",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "OnePlus 12 Pro",
-    "shortTitle": "OnePlus 12 Pro",
-    "price": {
-      "USD": 899.0,
-      "EUR": 1099.0
-    },
-    "manufacturer": "OnePlus",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.7-inch Fluid AMOLED display",
-      "Snapdragon 8 Gen 3",
-      "50MP Main camera",
-      "256GB storage",
-      "OxygenOS 14"
-    ],
-    "warranty": "1 year",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "iPhone 15 128GB",
-    "shortTitle": "iPhone 15 128GB",
-    "price": {
-      "USD": 799.0,
-      "EUR": 949.0
-    },
-    "manufacturer": "Apple",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.1-inch Super Retina XDR display",
-      "A16 Bionic chip",
-      "48MP Main camera",
-      "128GB storage",
-      "iOS 17"
-    ],
-    "warranty": "1 year",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "Samsung Galaxy S24",
-    "shortTitle": "Samsung Galaxy S24",
-    "price": {
-      "USD": 799.0,
-      "EUR": 949.0
-    },
-    "manufacturer": "Samsung",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.1-inch Dynamic AMOLED 2X display",
-      "Snapdragon 8 Gen 3",
-      "50MP Main camera",
-      "128GB storage",
-      "Android 14"
-    ],
-    "warranty": "1 year",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "Xiaomi 14",
-    "shortTitle": "Xiaomi 14",
-    "price": {
-      "USD": 699.0,
-      "EUR": 849.0
-    },
-    "manufacturer": "Xiaomi",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.5-inch AMOLED display",
-      "Snapdragon 8 Gen 2",
-      "50MP Main camera",
-      "128GB storage",
-      "MIUI 15"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "Google Pixel 8",
-    "shortTitle": "Google Pixel 8",
-    "price": {
-      "USD": 699.0,
-      "EUR": 849.0
-    },
-    "manufacturer": "Google",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.3-inch OLED display",
-      "Google Tensor G3",
-      "50MP Main camera",
-      "128GB storage",
-      "Android 14"
-    ],
-    "warranty": "1 year",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "OnePlus 12",
-    "shortTitle": "OnePlus 12",
-    "price": {
-      "USD": 599.0,
-      "EUR": 749.0
-    },
-    "manufacturer": "OnePlus",
-    "category": "mobile-phones",
-    "specifications": [
-      "6.5-inch Fluid AMOLED display",
-      "Snapdragon 8 Gen 2",
-      "50MP Main camera",
-      "128GB storage",
-      "OxygenOS 14"
-    ],
-    "warranty": "1 year",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "PlayStation 5 (PS5) Disc Edition",
-    "shortTitle": "PS5 Disc Edition",
-    "price": {
-      "USD": 499.99,
-      "EUR": 549.99
-    },
-    "manufacturer": "Sony",
-    "category": "gaming-consoles",
-    "specifications": [
-      "AMD Zen 2 CPU",
-      "RDNA 2 GPU",
-      "Ultra-HD Blu-ray Drive",
-      "825GB SSD Storage"
-    ],
-    "warranty": "1 year",
     "stock": 3,
-    "sold": 2
+    "sold": 15,
+    "description": "The AMD Radeon RX 7900 XT, with RDNA 3 and 20GB GDDR6, offers exceptional 4K and 8K gaming. Features like Smart Access Memory and dynamic load balancing deliver ultra-fast performance.",
+    "discount": 0
   },
   {
-    "title": "PlayStation 5 (PS5) Digital Edition",
-    "shortTitle": "PS5 Digital Edition",
-    "price": {
-      "USD": 399.99,
-      "EUR": 449.99
-    },
-    "manufacturer": "Sony",
-    "category": "gaming-consoles",
-    "specifications": ["AMD Zen 2 CPU", "RDNA 2 GPU", "825GB SSD Storage"],
-    "warranty": "1 year",
-    "stock": 5,
-    "sold": 1
-  },
-  {
-    "title": "Xbox Series X",
-    "shortTitle": "Xbox Series X",
-    "price": {
-      "USD": 499.99,
-      "EUR": 549.99
-    },
-    "manufacturer": "Microsoft",
-    "category": "gaming-consoles",
-    "specifications": [
-      "Custom AMD Zen 2 CPU",
-      "Custom RDNA 2 GPU",
-      "1TB SSD Storage"
-    ],
-    "warranty": "1 year",
-    "stock": 7,
-    "sold": 3
-  },
-  {
-    "title": "Xbox Series S",
-    "shortTitle": "Xbox Series S",
-    "price": {
-      "USD": 299.99,
-      "EUR": 349.99
-    },
-    "manufacturer": "Microsoft",
-    "category": "gaming-consoles",
-    "specifications": [
-      "Custom AMD Zen 2 CPU",
-      "Custom RDNA 2 GPU",
-      "512GB SSD Storage"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 2
-  },
-  {
-    "title": "Nintendo Switch OLED Model",
-    "shortTitle": "Nintendo Switch OLED",
-    "price": {
-      "USD": 349.99,
-      "EUR": 399.99
-    },
-    "manufacturer": "Nintendo",
-    "category": "gaming-consoles",
-    "specifications": [
-      "NVIDIA Custom Tegra Processor",
-      "7-inch OLED Display",
-      "64GB Internal Storage"
-    ],
-    "warranty": "1 year",
-    "stock": 6,
-    "sold": 4
-  },
-  {
-    "title": "The Legend of Zelda: Tears of the Kingdom",
-    "shortTitle": "Zelda: Tears of the Kingdom",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Nintendo",
-    "category": "video-games",
-    "specifications": ["Open-World Action-Adventure"],
-    "warranty": "No Warranty",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "Starfield",
-    "shortTitle": "Starfield",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Bethesda",
-    "category": "video-games",
-    "specifications": ["Open-World RPG"],
-    "warranty": "No Warranty",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "Diablo IV",
-    "shortTitle": "Diablo IV",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Blizzard Entertainment",
-    "category": "video-games",
-    "specifications": ["Action RPG"],
-    "warranty": "No Warranty",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "Final Fantasy XVI",
-    "shortTitle": "Final Fantasy XVI",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Square Enix",
-    "category": "video-games",
-    "specifications": ["Action RPG"],
-    "warranty": "No Warranty",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "Baldur's Gate III",
-    "shortTitle": "Baldur's Gate III",
-    "price": {
-      "USD": 59.99,
-      "EUR": 69.99
-    },
-    "manufacturer": "Larian Studios",
-    "category": "video-games",
-    "specifications": ["RPG"],
-    "warranty": "No Warranty",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "Cyberpunk 2077: Phantom Liberty",
-    "shortTitle": "Cyberpunk 2077: Phantom Liberty",
-    "price": {
-      "USD": 29.99,
-      "EUR": 34.99
-    },
-    "manufacturer": "CD Projekt Red",
-    "category": "video-games",
-    "specifications": ["Open-World RPG"],
-    "warranty": "No Warranty",
-    "stock": 10,
-    "sold": 3
-  },
-  {
-    "title": "Red Dead Redemption 2",
-    "shortTitle": "Red Dead Redemption 2",
-    "price": {
-      "USD": 29.99,
-      "EUR": 34.99
-    },
-    "manufacturer": "Rockstar Games",
-    "category": "video-games",
-    "specifications": ["Open-World Action-Adventure"],
-    "warranty": "No Warranty",
-    "stock": 8,
-    "sold": 5
-  },
-  {
-    "title": "The Witcher 3: Wild Hunt - Complete Edition",
-    "shortTitle": "The Witcher 3: Wild Hunt",
-    "price": {
-      "USD": 29.99,
-      "EUR": 34.99
-    },
-    "manufacturer": "CD Projekt Red",
-    "category": "video-games",
-    "specifications": ["Open-World RPG"],
-    "warranty": "No Warranty",
-    "stock": 12,
-    "sold": 2
-  },
-  {
-    "title": "Elden Ring",
-    "shortTitle": "Elden Ring",
-    "price": {
-      "USD": 59.99,
-      "EUR": 69.99
-    },
-    "manufacturer": "FromSoftware",
-    "category": "video-games",
-    "specifications": ["Action RPG"],
-    "warranty": "No Warranty",
-    "stock": 7,
-    "sold": 4
-  },
-  {
-    "title": "God of War Ragnarök",
-    "shortTitle": "God of War Ragnarök",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Sony Interactive Entertainment",
-    "category": "video-games",
-    "specifications": ["Action-Adventure"],
-    "warranty": "No Warranty",
-    "stock": 9,
-    "sold": 6
-  },
-  {
-    "title": "Corsair RM750x",
-    "shortTitle": "RM750x",
-    "price": {
-      "USD": 129.99,
-      "EUR": 149.99
-    },
-    "manufacturer": "Corsair",
-    "category": "power-supplies",
-    "specifications": [
-      "750W 80 PLUS Gold Certified",
-      "Fully Modular Cable Management",
-      "Zero RPM Fan Mode",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "6 months",
-    "stock": 10,
-    "sold": 2
-  },
-  {
-    "title": "EVGA SuperNOVA 850 G3",
-    "shortTitle": "SuperNOVA 850 G3",
-    "price": {
-      "USD": 179.99,
-      "EUR": 209.99
-    },
-    "manufacturer": "EVGA",
-    "category": "power-supplies",
-    "specifications": [
-      "850W 80 PLUS Gold Certified",
-      "Fully Modular Cable Management",
-      "Eco Mode",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "3 months",
-    "stock": 8,
-    "sold": 1
-  },
-  {
-    "title": "Seasonic FOCUS GX-650",
-    "shortTitle": "FOCUS GX-650",
-    "price": {
-      "USD": 119.99,
-      "EUR": 139.99
-    },
-    "manufacturer": "Seasonic",
-    "category": "power-supplies",
-    "specifications": [
-      "650W 80 PLUS Gold Certified",
-      "Fully Modular Cable Management",
-      "Fluid Dynamic Bearing Fan",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "No Warranty",
-    "stock": 12,
-    "sold": 0
-  },
-  {
-    "title": "Be Quiet! Straight Power 11 650W",
-    "shortTitle": "Straight Power 11 650W",
-    "price": {
-      "USD": 129.99,
-      "EUR": 149.99
-    },
-    "manufacturer": "Be Quiet!",
-    "category": "power-supplies",
-    "specifications": [
-      "650W 80 PLUS Gold Certified",
-      "Fully Modular Cable Management",
-      "Silent Wings Fan",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "6 months",
-    "stock": 5,
-    "sold": 3
-  },
-  {
-    "title": "Thermaltake Toughpower GF1 750W",
-    "shortTitle": "Toughpower GF1 750W",
-    "price": {
-      "USD": 139.99,
-      "EUR": 159.99
-    },
-    "manufacturer": "Thermaltake",
-    "category": "power-supplies",
-    "specifications": [
-      "750W 80 PLUS Gold Certified",
-      "Fully Modular Cable Management",
-      "Riing Duo Fan",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "2 months",
-    "stock": 7,
-    "sold": 2
-  },
-  {
-    "title": "Cooler Master MasterWatt Toughpower GF1 850W",
-    "shortTitle": "MasterWatt Toughpower GF1 850W",
-    "price": {
-      "USD": 159.99,
-      "EUR": 179.99
-    },
-    "manufacturer": "Cooler Master",
-    "category": "power-supplies",
-    "specifications": [
-      "850W 80 PLUS Gold Certified",
-      "Fully Modular Cable Management",
-      "Silent Fan Design",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "4 months",
-    "stock": 10,
-    "sold": 2
-  },
-  {
-    "title": "Antec HCG X 850W",
-    "shortTitle": "HCG X 850W",
-    "price": {
-      "USD": 169.99,
-      "EUR": 199.99
-    },
-    "manufacturer": "Antec",
-    "category": "power-supplies",
-    "specifications": [
-      "850W 80 PLUS Gold Certified",
-      "Fully Modular Cable Management",
-      "Fluid Dynamic Bearing Fan",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "No Warranty",
-    "stock": 8,
-    "sold": 1
-  },
-  {
-    "title": "Phanteks AMP T1000",
-    "shortTitle": "AMP T1000",
-    "price": {
-      "USD": 249.99,
-      "EUR": 299.99
-    },
-    "manufacturer": "Phanteks",
-    "category": "power-supplies",
-    "specifications": [
-      "1000W 80 PLUS Titanium Certified",
-      "Fully Modular Cable Management",
-      "Fluid Dynamic Bearing Fan",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "6 months",
-    "stock": 12,
-    "sold": 0
-  },
-  {
-    "title": "SilverStone SX1000-LTI",
-    "shortTitle": "SX1000-LTI",
+    "title": "MSI GeForce GTX 1660 Super 6GB",
     "price": {
       "USD": 229.99,
-      "EUR": 279.99
+      "EUR": 249.99
     },
-    "manufacturer": "SilverStone",
-    "category": "power-supplies",
-    "specifications": [
-      "1000W 80 PLUS Titanium Certified",
-      "Fully Modular Cable Management",
-      "Silent Fan Design",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "3 months",
-    "stock": 5,
-    "sold": 3
-  },
-  {
-    "title": "Enermax Revolution D.F. 850W",
-    "shortTitle": "Revolution D.F. 850W",
-    "price": {
-      "USD": 179.99,
-      "EUR": 209.99
-    },
-    "manufacturer": "Enermax",
-    "category": "power-supplies",
-    "specifications": [
-      "850W 80 PLUS Gold Certified",
-      "Fully Modular Cable Management",
-      "D.F. Bearing Fan",
-      "PCIe 5.0 Ready"
-    ],
-    "warranty": "2 months",
-    "stock": 7,
-    "sold": 2
-  },
-  {
-    "title": "GeForce GTX 580",
-    "shortTitle": "GTX 580",
-    "price": {
-      "USD": 49.99,
-      "EUR": 59.99
-    },
-    "manufacturer": "NVIDIA",
+    "manufacturer": "MSI",
     "category": "graphics-cards",
     "specifications": [
-      "NVIDIA Fermi Architecture",
-      "512 MB GDDR5 Memory",
-      "772 MHz Base Clock, 850 MHz Boost Clock",
-      "PCI Express 2.0 x16 Interface",
-      "512 CUDA Cores",
-      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
-      "244W TGP"
+      "Turing Architecture",
+      "6GB GDDR5 Memory",
+      "1785 MHz Boost Clock",
+      "PCIe Gen 3 x16",
+      "No Ray Tracing",
+      "1x DisplayPort 1.4, 1x HDMI 2.0b",
+      "125W TGP",
+      "1408 CUDA Cores",
+      "Dual Fan Cooling",
+      "Supports 1080p Gaming",
+      "High Efficiency VRM Design",
+      "Max Temp: 88°C",
+      "Optimal for Budget-Friendly Builds"
     ],
-    "warranty": "No Warranty",
+    "warranty": "2 years",
     "stock": 0,
-    "sold": 20
+    "sold": 50,
+    "description": "The MSI GTX 1660 Super offers excellent value for 1080p gaming. With 6GB GDDR5 memory and Turing architecture, it delivers solid performance without the high price tag.",
+    "discount": 0
   },
   {
-    "title": "Radeon HD 6970",
-    "shortTitle": "HD 6970",
+    "title": "EVGA GeForce RTX 3070 Ti 8GB FTW3 Ultra Gaming",
     "price": {
-      "USD": 39.99,
-      "EUR": 49.99
+      "USD": 699.99,
+      "EUR": 749.99
     },
-    "manufacturer": "AMD",
+    "manufacturer": "EVGA",
     "category": "graphics-cards",
     "specifications": [
-      "AMD VLIW4 Architecture",
-      "2GB GDDR5 Memory",
-      "880 MHz Base Clock, 950 MHz Boost Clock",
-      "PCI Express 2.0 x16 Interface",
-      "1536 Stream Processors",
-      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
-      "188W TGP"
+      "Ampere Architecture",
+      "8GB GDDR6X Memory",
+      "1770 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 2 Support",
+      "Ray Tracing Cores",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "320W TGP",
+      "2560 CUDA Cores",
+      "80 Tensor Cores",
+      "Dual-Fan Cooling System",
+      "EVGA iCX3 Technology",
+      "High-Performance VRM for Stability",
+      "Max Temp: 85°C",
+      "Maximum Power Connectors: 2 x 8-pin"
     ],
-    "warranty": "No Warranty",
-    "stock": 5,
-    "sold": 10
-  },
-  {
-    "title": "GeForce GTX 480",
-    "shortTitle": "GTX 480",
-    "price": {
-      "USD": 29.99,
-      "EUR": 39.99
-    },
-    "manufacturer": "NVIDIA",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Fermi Architecture",
-      "1536 MB GDDR5 Memory",
-      "700 MHz Base Clock, 780 MHz Boost Clock",
-      "PCI Express 2.0 x16 Interface",
-      "480 CUDA Cores",
-      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
-      "436W TGP"
-    ],
-    "warranty": "No Warranty",
+    "warranty": "3 years",
     "stock": 8,
-    "sold": 2
+    "sold": 40,
+    "description": "The EVGA RTX 3070 Ti offers incredible 1440p and 4K gaming performance with 8GB of GDDR6X memory, DLSS 2, and ray tracing. Its advanced cooling ensures peak performance at all times.",
+    "discount": 0
   },
   {
-    "title": "Radeon HD 5870",
-    "shortTitle": "HD 5870",
+    "title": "ASUS ROG Strix Radeon RX 6800 XT 16GB",
     "price": {
-      "USD": 19.99,
-      "EUR": 29.99
+      "USD": 649.99,
+      "EUR": 699.99
     },
-    "manufacturer": "AMD",
+    "manufacturer": "ASUS",
     "category": "graphics-cards",
     "specifications": [
-      "AMD Evergreen Architecture",
-      "1GB GDDR5 Memory",
-      "850 MHz Base Clock, 900 MHz Boost Clock",
-      "PCI Express 2.0 x16 Interface",
-      "1600 Stream Processors",
-      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
-      "190W TGP"
+      "RDNA 2 Architecture",
+      "16GB GDDR6 Memory",
+      "2250 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "Ray Tracing Support",
+      "3x DisplayPort 1.4, 1x HDMI 2.1",
+      "300W TGP",
+      "72 Compute Units",
+      "4608 Stream Processors",
+      "Dual Axial-tech Fans",
+      "Zero RPM Fan Mode for silent operation",
+      "Supports 4K Gaming",
+      "Max Temp: 90°C",
+      "Maximum Power Connectors: 2 x 8-pin"
     ],
-    "warranty": "No Warranty",
-    "stock": 0,
-    "sold": 15
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 10,
+    "description": "The ASUS ROG Strix RX 6800 XT delivers outstanding 4K performance with 16GB of GDDR6 memory. Built with RDNA 2 architecture, it supports ray tracing and features advanced cooling.",
+    "discount": 0
   },
   {
-    "title": "GeForce RTX 2080 Ti",
-    "shortTitle": "RTX 2080 Ti",
+    "title": "ZOTAC GeForce RTX 3060 Twin Fan 12GB",
+    "price": {
+      "USD": 439.99,
+      "EUR": 479.99
+    },
+    "manufacturer": "ZOTAC",
+    "category": "graphics-cards",
+    "specifications": [
+      "Ampere Architecture",
+      "12GB GDDR6 Memory",
+      "1777 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 2 Support",
+      "Ray Tracing Cores",
+      "2x DisplayPort 1.4a, 1x HDMI 2.1",
+      "170W TGP",
+      "3584 CUDA Cores",
+      "48 Tensor Cores",
+      "Dual Fan Cooling",
+      "Max Temp: 80°C",
+      "Compact Form Factor",
+      "Ideal for 1440p Gaming"
+    ],
+    "warranty": "2 years",
+    "stock": 9,
+    "sold": 30,
+    "description": "The ZOTAC GeForce RTX 3060 offers excellent performance for 1440p gaming, featuring 12GB of GDDR6 memory, DLSS 2, and ray tracing for immersive visuals.",
+    "discount": 10
+  },
+  {
+    "title": "Gigabyte Radeon RX 6700 XT 12GB",
+    "price": {
+      "USD": 529.99,
+      "EUR": 579.99
+    },
+    "manufacturer": "Gigabyte",
+    "category": "graphics-cards",
+    "specifications": [
+      "RDNA 2 Architecture",
+      "12GB GDDR6 Memory",
+      "2581 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "Ray Tracing Support",
+      "3x DisplayPort 1.4, 1x HDMI 2.1",
+      "230W TGP",
+      "2560 Stream Processors",
+      "40 Compute Units",
+      "Advanced Cooling System",
+      "Supports 1440p Gaming",
+      "Max Temp: 85°C",
+      "Maximum Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 4,
+    "sold": 12,
+    "description": "The Gigabyte RX 6700 XT offers great 1440p gaming performance, with 12GB of GDDR6 memory and advanced RDNA 2 architecture. Its efficient cooling system ensures stable performance.",
+    "discount": 0
+  },
+  {
+    "title": "NVIDIA GeForce GTX 1650 4GB",
+    "price": {
+      "USD": 149.99,
+      "EUR": 169.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "Turing Architecture",
+      "4GB GDDR5 Memory",
+      "1665 MHz Boost Clock",
+      "PCIe Gen 3 x16",
+      "No Ray Tracing",
+      "1x DisplayPort 1.4, 1x HDMI 2.0b",
+      "75W TGP",
+      "896 CUDA Cores",
+      "Single Fan Cooling",
+      "Ideal for 1080p Gaming",
+      "Max Temp: 85°C",
+      "Compact Design for Small Cases"
+    ],
+    "warranty": "2 years",
+    "stock": 10,
+    "sold": 35,
+    "description": "The NVIDIA GTX 1650 is an excellent budget-friendly option for 1080p gaming. With 4GB of GDDR5 memory, it offers solid performance for casual gamers.",
+    "discount": 0
+  },
+  {
+    "title": "ASRock Phantom Gaming Radeon RX 5600 XT 6GB",
+    "price": {
+      "USD": 279.99,
+      "EUR": 299.99
+    },
+    "manufacturer": "ASRock",
+    "category": "graphics-cards",
+    "specifications": [
+      "RDNA Architecture",
+      "6GB GDDR6 Memory",
+      "1750 MHz Boost Clock",
+      "PCIe Gen 3 x16",
+      "Ray Tracing Support",
+      "3x DisplayPort 1.4, 1x HDMI 2.0",
+      "150W TGP",
+      "2048 Stream Processors",
+      "12 Compute Units",
+      "Dual Fan Cooling",
+      "Max Temp: 80°C",
+      "Supports 1080p & 1440p Gaming"
+    ],
+    "warranty": "2 years",
+    "stock": 7,
+    "sold": 22,
+    "description": "The ASRock RX 5600 XT is a great option for 1080p and 1440p gaming, offering 6GB of GDDR6 memory, RDNA architecture, and efficient cooling for long gaming sessions.",
+    "discount": 15
+  },
+  {
+    "title": "NVIDIA GeForce RTX 4070 Ti 12GB Founders Edition",
     "price": {
       "USD": 899.99,
       "EUR": 999.99
@@ -1647,737 +276,2265 @@
     "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
-      "NVIDIA Turing Architecture",
-      "11GB GDDR6 Memory",
-      "1665 MHz Boost Clock",
-      "PCI Express Gen 3 x16 Interface",
-      "DLSS 2, Ray Tracing Cores",
-      "Turing Shaders",
-      "3x DisplayPort 1.4, 1x HDMI 2.0b",
-      "350W TGP"
+      "NVIDIA Ada Lovelace Architecture",
+      "12GB GDDR6X Memory",
+      "2610 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 3 Support",
+      "Ray Tracing Cores",
+      "Supports 4K Gaming",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "285W TGP",
+      "5888 CUDA Cores",
+      "192 Tensor Cores",
+      "8K HDR Ready",
+      "Dual Axial-tech Fans",
+      "Max Temp: 93°C",
+      "Maximum Power Connectors: 2 x 8-pin"
     ],
-    "warranty": "No Warranty",
-    "stock": 0,
-    "sold": 20
+    "warranty": "2 years",
+    "stock": 4,
+    "sold": 18,
+    "description": "The RTX 4070 Ti offers incredible performance for 4K gaming, featuring 12GB of GDDR6X memory, Ada Lovelace architecture, and cutting-edge AI features like DLSS 3.",
+    "discount": 0
   },
   {
-    "title": "Radeon RX 5700 XT",
-    "shortTitle": "RX 5700 XT",
+    "title": "Sapphire Nitro+ Radeon RX 5700 XT 8GB",
     "price": {
       "USD": 399.99,
-      "EUR": 449.99
+      "EUR": 439.99
     },
-    "manufacturer": "AMD",
+    "manufacturer": "Sapphire",
     "category": "graphics-cards",
     "specifications": [
-      "AMD RDNA Architecture",
+      "RDNA 1 Architecture",
       "8GB GDDR6 Memory",
-      "1905 MHz Boost Clock",
-      "PCI Express Gen 4 x16 Interface",
-      "FSR, Ray Tracing Cores",
-      "3x DisplayPort 1.4, 1x HDMI 2.0b",
-      "225W TGP"
+      "1755 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "Ray Tracing Support",
+      "3x DisplayPort 1.4, 1x HDMI 2.0",
+      "225W TGP",
+      "2560 Stream Processors",
+      "64 Compute Units",
+      "Dual-X Cooling with Two Fans",
+      "Max Temp: 85°C",
+      "Supports 1440p Gaming",
+      "8K Ready"
     ],
-    "warranty": "No Warranty",
-    "stock": 5,
-    "sold": 10
+    "warranty": "2 years",
+    "stock": 7,
+    "sold": 25,
+    "description": "The Sapphire Nitro+ RX 5700 XT provides smooth 1440p and 4K gaming with 8GB GDDR6 memory and RDNA 1 architecture, with dual-fan cooling and ray tracing support.",
+    "discount": 0
   },
   {
-    "title": "GeForce RTX 2070 Super",
-    "shortTitle": "RTX 2070 Super",
+    "title": "Gigabyte GeForce GTX 1050 Ti 4GB OC",
     "price": {
-      "USD": 599.99,
-      "EUR": 699.99
+      "USD": 169.99,
+      "EUR": 189.99
+    },
+    "manufacturer": "Gigabyte",
+    "category": "graphics-cards",
+    "specifications": [
+      "Pascal Architecture",
+      "4GB GDDR5 Memory",
+      "1392 MHz Boost Clock",
+      "PCIe Gen 3 x16",
+      "No Ray Tracing",
+      "1x DisplayPort 1.4, 1x HDMI 2.0",
+      "75W TGP",
+      "768 CUDA Cores",
+      "Single Fan Cooling",
+      "Max Temp: 80°C",
+      "Ideal for 1080p Gaming"
+    ],
+    "warranty": "2 years",
+    "stock": 9,
+    "sold": 30,
+    "description": "The GTX 1050 Ti provides budget-friendly 1080p gaming performance with 4GB GDDR5 memory, perfect for casual gamers and eSports enthusiasts.",
+    "discount": 0
+  },
+  {
+    "title": "ZOTAC GeForce RTX 2080 Super 8GB",
+    "price": {
+      "USD": 699.99,
+      "EUR": 799.99
+    },
+    "manufacturer": "ZOTAC",
+    "category": "graphics-cards",
+    "specifications": [
+      "Turing Architecture",
+      "8GB GDDR6 Memory",
+      "1815 MHz Boost Clock",
+      "PCIe Gen 3 x16",
+      "Ray Tracing Support",
+      "DLSS 2.0 Support",
+      "3x DisplayPort 1.4a, 1x HDMI 2.0",
+      "250W TGP",
+      "3072 CUDA Cores",
+      "384 Tensor Cores",
+      "Advanced Cooling System",
+      "Supports 4K Gaming",
+      "Max Temp: 85°C",
+      "Maximum Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 6,
+    "sold": 18,
+    "description": "The ZOTAC RTX 2080 Super offers exceptional 4K gaming performance with real-time ray tracing and DLSS 2.0, featuring advanced cooling and 8GB of GDDR6 memory.",
+    "discount": 0
+  },
+  {
+    "title": "MSI Radeon RX 6700 XT 12GB Gaming X",
+    "price": {
+      "USD": 499.99,
+      "EUR": 549.99
+    },
+    "manufacturer": "MSI",
+    "category": "graphics-cards",
+    "specifications": [
+      "RDNA 2 Architecture",
+      "12GB GDDR6 Memory",
+      "2581 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "Ray Tracing Support",
+      "3x DisplayPort 1.4, 1x HDMI 2.1",
+      "230W TGP",
+      "2560 Stream Processors",
+      "40 Compute Units",
+      "Triple-Fan Cooling",
+      "Supports 1440p Gaming",
+      "Max Temp: 80°C",
+      "Maximum Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 20,
+    "description": "The MSI RX 6700 XT is built for high-end 1440p gaming, offering 12GB of GDDR6 memory and RDNA 2 architecture, with triple-fan cooling and ray tracing support.",
+    "discount": 0
+  },
+  {
+    "title": "EVGA GeForce GTX 1660 Super 6GB SC Ultra",
+    "price": {
+      "USD": 229.99,
+      "EUR": 249.99
+    },
+    "manufacturer": "EVGA",
+    "category": "graphics-cards",
+    "specifications": [
+      "Turing Architecture",
+      "6GB GDDR5 Memory",
+      "1785 MHz Boost Clock",
+      "PCIe Gen 3 x16",
+      "No Ray Tracing",
+      "1x DisplayPort 1.4, 1x HDMI 2.0b",
+      "125W TGP",
+      "1408 CUDA Cores",
+      "Dual Fan Cooling",
+      "Supports 1080p Gaming",
+      "Max Temp: 85°C",
+      "Ideal for Budget Builds"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 45,
+    "description": "The EVGA GTX 1660 Super is an affordable solution for 1080p gaming, featuring 6GB of GDDR5 memory and dual-fan cooling for reliable performance at a great price.",
+    "discount": 0
+  },
+  {
+    "title": "ASUS TUF Gaming Radeon RX 6600 XT 8GB",
+    "price": {
+      "USD": 379.99,
+      "EUR": 419.99
+    },
+    "manufacturer": "ASUS",
+    "category": "graphics-cards",
+    "specifications": [
+      "RDNA 2 Architecture",
+      "8GB GDDR6 Memory",
+      "2589 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "Ray Tracing Support",
+      "3x DisplayPort 1.4, 1x HDMI 2.1",
+      "160W TGP",
+      "2048 Stream Processors",
+      "32 Compute Units",
+      "Dual-Fan Cooling",
+      "Supports 1080p & 1440p Gaming",
+      "Max Temp: 85°C",
+      "Maximum Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 6,
+    "sold": 28,
+    "description": "The ASUS TUF RX 6600 XT offers great 1080p and 1440p performance with 8GB of GDDR6 memory and RDNA 2 architecture, featuring ray tracing support and dual-fan cooling.",
+    "discount": 0
+  },
+  {
+    "title": "NVIDIA Quadro RTX 5000 16GB",
+    "price": {
+      "USD": 2299.99,
+      "EUR": 2499.99
     },
     "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
-      "NVIDIA Turing Architecture",
-      "8GB GDDR6 Memory",
+      "Turing Architecture",
+      "16GB GDDR6 Memory",
       "1770 MHz Boost Clock",
-      "PCI Express Gen 3 x16 Interface",
-      "DLSS 2, Ray Tracing Cores",
-      "Turing Shaders",
-      "3x DisplayPort 1.4, 1x HDMI 2.0b",
-      "215W TGP"
+      "PCIe Gen 3 x16",
+      "Ray Tracing Support",
+      "3840 CUDA Cores",
+      "48 Tensor Cores",
+      "6x DisplayPort 1.4",
+      "Supports Professional Workloads",
+      "Max Temp: 82°C",
+      "Maximum Power Connectors: 2 x 8-pin"
     ],
-    "warranty": "No Warranty",
-    "stock": 8,
-    "sold": 2
+    "warranty": "3 years",
+    "stock": 3,
+    "sold": 5,
+    "description": "The Quadro RTX 5000 is a powerhouse for professionals, delivering real-time ray tracing and AI-accelerated workflows. Equipped with 16GB of GDDR6, it's built for demanding tasks.",
+    "discount": 0
   },
   {
-    "title": "Radeon RX 5600 XT",
-    "shortTitle": "RX 5600 XT",
+    "title": "MSI GeForce RTX 3060 Ti 8GB Ventus 2X OC",
+    "price": {
+      "USD": 399.99,
+      "EUR": 439.99
+    },
+    "manufacturer": "MSI",
+    "category": "graphics-cards",
+    "specifications": [
+      "Ampere Architecture",
+      "8GB GDDR6 Memory",
+      "1770 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 2 Support",
+      "Ray Tracing Cores",
+      "2x DisplayPort 1.4a, 1x HDMI 2.1",
+      "200W TGP",
+      "4864 CUDA Cores",
+      "38 Tensor Cores",
+      "Dual Fan Cooling",
+      "Supports 1440p Gaming",
+      "Max Temp: 85°C",
+      "Maximum Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 4,
+    "sold": 15,
+    "description": "The MSI RTX 3060 Ti delivers excellent 1440p gaming with 8GB GDDR6 memory, ray tracing, and DLSS 2. It's perfect for gamers who want a performance boost at an affordable price.",
+    "discount": 0
+  },
+  {
+    "title": "NVIDIA GeForce RTX 4070 12GB Founders Edition",
+    "price": {
+      "USD": 799.99,
+      "EUR": 879.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "Ada Lovelace Architecture",
+      "12GB GDDR6X Memory",
+      "2370 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 3 Support",
+      "Ray Tracing Cores",
+      "Supports 4K Gaming",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "220W TGP",
+      "5120 CUDA Cores",
+      "160 Tensor Cores",
+      "Max Temp: 90°C",
+      "Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 22,
+    "description": "The RTX 4070 offers a powerful 4K gaming experience with DLSS 3 and ray tracing, featuring Ada Lovelace architecture and 12GB GDDR6X memory.",
+    "discount": 0
+  },
+  {
+    "title": "Gigabyte GeForce RTX 4090 24GB Gaming OC",
+    "price": {
+      "USD": 1999.99,
+      "EUR": 2199.99
+    },
+    "manufacturer": "Gigabyte",
+    "category": "graphics-cards",
+    "specifications": [
+      "Ada Lovelace Architecture",
+      "24GB GDDR6X Memory",
+      "2520 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 3 Support",
+      "Ray Tracing Cores",
+      "Supports 8K Gaming",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "450W TGP",
+      "16384 CUDA Cores",
+      "576 Tensor Cores",
+      "Max Temp: 85°C",
+      "Dual-Fan Cooling System",
+      "Power Connectors: 3 x 8-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 4,
+    "sold": 14,
+    "description": "The RTX 4090 Gaming OC offers flagship-level performance with 24GB of GDDR6X memory, perfect for 8K gaming and ray tracing at maximum settings.",
+    "discount": 0
+  },
+  {
+    "title": "MSI Radeon RX 6900 XT 16GB GAMING X",
+    "price": {
+      "USD": 1499.99,
+      "EUR": 1599.99
+    },
+    "manufacturer": "MSI",
+    "category": "graphics-cards",
+    "specifications": [
+      "RDNA 2 Architecture",
+      "16GB GDDR6 Memory",
+      "2250 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "Ray Tracing Support",
+      "3x DisplayPort 1.4, 1x HDMI 2.1",
+      "300W TGP",
+      "5120 Stream Processors",
+      "80 Compute Units",
+      "Max Temp: 85°C",
+      "Triple-Fan Cooling System",
+      "Supports 4K Gaming",
+      "Max Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 6,
+    "sold": 18,
+    "description": "The MSI RX 6900 XT delivers outstanding 4K gaming performance with RDNA 2 architecture and 16GB GDDR6 memory, perfect for enthusiasts seeking top-tier performance.",
+    "discount": 0
+  },
+  {
+    "title": "NVIDIA GeForce RTX 3060 12GB Founders Edition",
+    "price": {
+      "USD": 399.99,
+      "EUR": 439.99
+    },
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "Ampere Architecture",
+      "12GB GDDR6 Memory",
+      "1777 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 2 Support",
+      "Ray Tracing Cores",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "170W TGP",
+      "3584 CUDA Cores",
+      "48 Tensor Cores",
+      "Max Temp: 80°C",
+      "Dual-Fan Cooling",
+      "Supports 1440p Gaming",
+      "Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 28,
+    "description": "The RTX 3060 offers excellent performance for 1440p gaming with 12GB of GDDR6 memory and support for DLSS 2 and ray tracing.",
+    "discount": 0
+  },
+  {
+    "title": "Gigabyte GeForce GTX 1080 Ti 11GB G1 Gaming",
+    "price": {
+      "USD": 749.99,
+      "EUR": 849.99
+    },
+    "manufacturer": "Gigabyte",
+    "category": "graphics-cards",
+    "specifications": [
+      "Pascal Architecture",
+      "11GB GDDR5X Memory",
+      "1582 MHz Boost Clock",
+      "PCIe Gen 3 x16",
+      "No Ray Tracing",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "250W TGP",
+      "3584 CUDA Cores",
+      "Max Temp: 84°C",
+      "Dual-Fan Cooling",
+      "Supports 1440p Gaming",
+      "Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 3,
+    "sold": 17,
+    "description": "The GTX 1080 Ti is perfect for 1440p gaming, with 11GB GDDR5X memory and a powerful Pascal architecture for smooth performance in AAA games.",
+    "discount": 0
+  },
+  {
+    "title": "ASUS TUF Gaming GeForce RTX 3070 8GB",
+    "price": {
+      "USD": 649.99,
+      "EUR": 699.99
+    },
+    "manufacturer": "ASUS",
+    "category": "graphics-cards",
+    "specifications": [
+      "Ampere Architecture",
+      "8GB GDDR6 Memory",
+      "1770 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 2 Support",
+      "Ray Tracing Cores",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "220W TGP",
+      "5888 CUDA Cores",
+      "46 Tensor Cores",
+      "Dual-Fan Cooling",
+      "Supports 1440p Gaming",
+      "Max Temp: 80°C",
+      "Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 6,
+    "sold": 12,
+    "description": "The ASUS RTX 3070 provides solid 1440p performance with 8GB GDDR6 memory and efficient cooling, ideal for gamers looking to maximize performance on a budget.",
+    "discount": 0
+  },
+  {
+    "title": "Sapphire Radeon RX 5700 8GB Pulse",
+    "price": {
+      "USD": 399.99,
+      "EUR": 439.99
+    },
+    "manufacturer": "Sapphire",
+    "category": "graphics-cards",
+    "specifications": [
+      "RDNA 1 Architecture",
+      "8GB GDDR6 Memory",
+      "1750 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "Ray Tracing Support",
+      "3x DisplayPort 1.4, 1x HDMI 2.0",
+      "225W TGP",
+      "2304 Stream Processors",
+      "36 Compute Units",
+      "Dual-Fan Cooling",
+      "Supports 1440p Gaming",
+      "Max Temp: 80°C",
+      "Max Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 7,
+    "sold": 26,
+    "description": "The Sapphire RX 5700 provides great value for 1440p gaming, with 8GB of GDDR6 memory and RDNA 1 architecture, offering high frame rates and stable performance.",
+    "discount": 0
+  },
+  {
+    "title": "EVGA GeForce RTX 3080 10GB FTW3 Ultra Gaming",
+    "price": {
+      "USD": 849.99,
+      "EUR": 919.99
+    },
+    "manufacturer": "EVGA",
+    "category": "graphics-cards",
+    "specifications": [
+      "Ampere Architecture",
+      "10GB GDDR6X Memory",
+      "1710 MHz Boost Clock",
+      "PCIe Gen 4 x16",
+      "DLSS 2 Support",
+      "Ray Tracing Cores",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "320W TGP",
+      "8704 CUDA Cores",
+      "68 Tensor Cores",
+      "Triple-Fan Cooling",
+      "Supports 4K Gaming",
+      "Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 30,
+    "description": "The EVGA RTX 3080 delivers exceptional 4K performance with 10GB GDDR6X memory, perfect for demanding gamers and creators who need top-tier speed and ray tracing.",
+    "discount": 0
+  },
+  {
+    "title": "ZOTAC GeForce GTX 1660 Ti 6GB",
+    "price": {
+      "USD": 229.99,
+      "EUR": 249.99
+    },
+    "manufacturer": "ZOTAC",
+    "category": "graphics-cards",
+    "specifications": [
+      "Turing Architecture",
+      "6GB GDDR5 Memory",
+      "1770 MHz Boost Clock",
+      "PCIe Gen 3 x16",
+      "No Ray Tracing",
+      "1x DisplayPort 1.4, 1x HDMI 2.0b",
+      "120W TGP",
+      "1536 CUDA Cores",
+      "Dual-Fan Cooling",
+      "Supports 1080p & 1440p Gaming",
+      "Max Temp: 80°C",
+      "Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 9,
+    "sold": 40,
+    "description": "The ZOTAC GTX 1660 Ti offers an affordable solution for gamers who want solid 1080p and 1440p performance with 6GB GDDR5 memory and reliable dual-fan cooling.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i9-13900K 3.0GHz",
+    "price": {
+      "USD": 749.99,
+      "EUR": 849.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "13th Gen Intel Core Architecture",
+      "8 Performance Cores + 16 Efficiency Cores",
+      "24 Threads",
+      "3.0 GHz Base Clock, 5.8 GHz Turbo Boost",
+      "Intel UHD Graphics 770",
+      "Supports Intel Hyper-Threading",
+      "Supports DDR5/DDR4 RAM",
+      "65W Base TDP, 125W Max TDP",
+      "Unlocked for Overclocking",
+      "LGA 1700 Socket"
+    ],
+    "warranty": "3 years",
+    "stock": 5,
+    "sold": 18,
+    "description": "The Intel Core i9-13900K is a powerhouse for gaming and productivity, with a mix of performance and efficiency cores, offering unmatched multi-core processing power.",
+    "discount": 0
+  },
+  {
+    "title": "AMD Ryzen 9 7900X 4.7GHz",
+    "price": {
+      "USD": 749.99,
+      "EUR": 829.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "Zen 4 Architecture",
+      "12 Cores, 24 Threads",
+      "4.7 GHz Base Clock, 5.6 GHz Turbo Boost",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "100W Base TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "AMD Precision Boost",
+      "AMD Radeon Graphics (Integrated)"
+    ],
+    "warranty": "2 years",
+    "stock": 4,
+    "sold": 14,
+    "description": "The AMD Ryzen 9 7900X brings extreme performance with 12 cores, ideal for gamers and professionals demanding the best for gaming, content creation, and multi-threaded workloads.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i7-12700K 3.6GHz",
+    "price": {
+      "USD": 419.99,
+      "EUR": 479.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "12th Gen Intel Core Architecture",
+      "8 Performance Cores + 4 Efficiency Cores",
+      "12 Threads",
+      "3.6 GHz Base Clock, 5.0 GHz Turbo Boost",
+      "Intel UHD Graphics 770",
+      "Supports DDR5/DDR4 RAM",
+      "125W TDP",
+      "LGA 1700 Socket",
+      "Unlocked for Overclocking",
+      "Supports Intel Hyper-Threading"
+    ],
+    "warranty": "2 years",
+    "stock": 7,
+    "sold": 22,
+    "description": "The Intel Core i7-12700K offers outstanding performance for gamers and power users, featuring a hybrid architecture with both performance and efficiency cores for seamless multitasking.",
+    "discount": 0
+  },
+  {
+    "title": "AMD Ryzen 5 7600X 4.7GHz",
     "price": {
       "USD": 299.99,
       "EUR": 349.99
     },
     "manufacturer": "AMD",
-    "category": "graphics-cards",
+    "category": "processors",
     "specifications": [
-      "AMD RDNA Architecture",
-      "6GB GDDR6 Memory",
-      "1560 MHz Boost Clock",
-      "PCI Express Gen 4 x16 Interface",
-      "FSR, Ray Tracing Cores",
-      "3x DisplayPort 1.4, 1x HDMI 2.0b",
-      "150W TGP"
+      "Zen 4 Architecture",
+      "6 Cores, 12 Threads",
+      "4.7 GHz Base Clock, 5.3 GHz Turbo Boost",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "105W TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "Precision Boost",
+      "AMD Radeon Graphics (Integrated)"
     ],
-    "warranty": "No Warranty",
-    "stock": 0,
-    "sold": 15
-  },
-  {
-    "title": "Noctua NH-D15 chromax.black",
-    "shortTitle": "NH-D15 chromax.black",
-    "price": {
-      "USD": 109.99,
-      "EUR": 129.99
-    },
-    "manufacturer": "Noctua",
-    "category": "cooling",
-    "specifications": [
-      "Dual NH-D15S Fans",
-      "NF-A15 PWM Fans",
-      "Sinterized Polyamide Bearing",
-      "6 Heat Pipes",
-      "150W TDP"
-    ],
-    "warranty": "6 years",
-    "stock": 15,
-    "sold": 3
-  },
-  {
-    "title": "be quiet! Dark Rock Pro 4",
-    "shortTitle": "Dark Rock Pro 4",
-    "price": {
-      "USD": 99.99,
-      "EUR": 119.99
-    },
-    "manufacturer": "be quiet!",
-    "category": "cooling",
-    "specifications": ["Dual Silent Wings Fans", "7 Heat Pipes", "184W TDP"],
     "warranty": "1 year",
-    "stock": 10,
-    "sold": 2
+    "stock": 6,
+    "sold": 27,
+    "description": "The Ryzen 5 7600X offers impressive performance for gaming and content creation, with 6 cores and a high clock speed, making it perfect for enthusiasts and builders on a budget.",
+    "discount": 0
   },
   {
-    "title": "Scythe Fuma 2 Rev.B",
-    "shortTitle": "Fuma 2 Rev.B",
+    "title": "Intel Core i5-13600K 3.5GHz",
     "price": {
-      "USD": 69.99,
-      "EUR": 89.99
+      "USD": 319.99,
+      "EUR": 369.99
     },
-    "manufacturer": "Scythe",
-    "category": "cooling",
-    "specifications": ["Dual Kaze Flex Slim Fans", "6 Heat Pipes", "140W TDP"],
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "13th Gen Intel Core Architecture",
+      "6 Performance Cores + 8 Efficiency Cores",
+      "14 Threads",
+      "3.5 GHz Base Clock, 5.1 GHz Turbo Boost",
+      "Intel UHD Graphics 770",
+      "Supports DDR5/DDR4 RAM",
+      "125W TDP",
+      "LGA 1700 Socket",
+      "Unlocked for Overclocking",
+      "Supports Intel Hyper-Threading"
+    ],
     "warranty": "2 years",
-    "stock": 12,
-    "sold": 0
+    "stock": 8,
+    "sold": 16,
+    "description": "The Intel Core i5-13600K offers excellent value with 14 cores and great overclocking potential, perfect for gamers and creators who need a balance of performance and affordability.",
+    "discount": 0
   },
   {
-    "title": "Thermalright Silver Arrow IB-E Extreme",
-    "shortTitle": "Silver Arrow IB-E Extreme",
+    "title": "AMD Ryzen 7 7800X 4.5GHz",
+    "price": {
+      "USD": 499.99,
+      "EUR": 549.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "Zen 4 Architecture",
+      "8 Cores, 16 Threads",
+      "4.5 GHz Base Clock, 5.4 GHz Turbo Boost",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "120W TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "AMD Precision Boost",
+      "AMD Radeon Graphics (Integrated)"
+    ],
+    "warranty": "2 years",
+    "stock": 3,
+    "sold": 13,
+    "description": "The Ryzen 7 7800X is designed for high-performance gaming and multitasking, offering 8 cores and incredible clock speeds that tackle demanding workloads with ease.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i3-12100F 3.3GHz",
     "price": {
       "USD": 119.99,
       "EUR": 139.99
     },
-    "manufacturer": "Thermalright",
-    "category": "cooling",
-    "specifications": ["Dual TL-C12B Fans", "7 Heat Pipes", "180W TDP"],
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "12th Gen Intel Core Architecture",
+      "4 Cores, 8 Threads",
+      "3.3 GHz Base Clock, 4.3 GHz Turbo Boost",
+      "Intel UHD Graphics 730",
+      "Supports DDR4 RAM",
+      "60W TDP",
+      "LGA 1700 Socket",
+      "No Integrated Graphics",
+      "Supports Intel Hyper-Threading"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 50,
+    "description": "The Intel Core i3-12100F is a budget-friendly processor that offers solid performance for everyday computing tasks and light gaming, with excellent power efficiency.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i9-12900KF 3.2GHz",
+    "price": {
+      "USD": 629.99,
+      "EUR": 719.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "12th Gen Intel Core Architecture",
+      "8 Performance Cores + 8 Efficiency Cores",
+      "16 Threads",
+      "3.2 GHz Base Clock, 5.2 GHz Turbo Boost",
+      "Intel UHD Graphics 770",
+      "Supports DDR5/DDR4 RAM",
+      "125W TDP",
+      "LGA 1700 Socket",
+      "Unlocked for Overclocking",
+      "Supports Intel Hyper-Threading"
+    ],
+    "warranty": "3 years",
+    "stock": 6,
+    "sold": 20,
+    "description": "The Intel Core i9-12900KF offers top-tier performance with a mix of performance and efficiency cores, designed for gamers and power users who need extreme processing power.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i5-13600KF 3.5GHz",
+    "price": {
+      "USD": 389.99,
+      "EUR": 449.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "13th Gen Intel Core Architecture",
+      "6 Performance Cores + 8 Efficiency Cores",
+      "14 Threads",
+      "3.5 GHz Base Clock, 5.1 GHz Turbo Boost",
+      "Intel UHD Graphics 770",
+      "Supports DDR5/DDR4 RAM",
+      "125W TDP",
+      "LGA 1700 Socket",
+      "Unlocked for Overclocking",
+      "Supports Intel Hyper-Threading"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 32,
+    "description": "The Intel Core i5-13600KF combines great gaming performance with productivity capabilities, offering excellent value with 14 cores and high overclocking potential.",
+    "discount": 10
+  },
+  {
+    "title": "AMD Ryzen 5 7600 3.8GHz",
+    "price": {
+      "USD": 279.99,
+      "EUR": 319.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "Zen 4 Architecture",
+      "6 Cores, 12 Threads",
+      "3.8 GHz Base Clock, 4.6 GHz Turbo Boost",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "105W TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "Precision Boost",
+      "AMD Radeon Graphics (Integrated)"
+    ],
+    "warranty": "1 year",
+    "stock": 9,
+    "sold": 45,
+    "description": "The Ryzen 5 7600 is a great choice for gamers looking for solid performance, with a high base clock and impressive turbo boost for excellent gaming and multitasking.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i9-11900K 3.5GHz",
+    "price": {
+      "USD": 549.99,
+      "EUR": 629.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "11th Gen Intel Core Architecture",
+      "8 Cores, 16 Threads",
+      "3.5 GHz Base Clock, 5.3 GHz Turbo Boost",
+      "Intel UHD Graphics 750",
+      "Supports DDR4 RAM",
+      "125W TDP",
+      "LGA 1200 Socket",
+      "Unlocked for Overclocking",
+      "Supports Intel Hyper-Threading"
+    ],
+    "warranty": "2 years",
+    "stock": 4,
+    "sold": 20,
+    "description": "The Intel Core i9-11900K is an excellent high-performance processor for gaming and content creation, with 8 cores and Intel's Turbo Boost technology for maximum efficiency.",
+    "discount": 15
+  },
+  {
+    "title": "AMD Ryzen 9 7950X3D 4.4GHz",
+    "price": {
+      "USD": 849.99,
+      "EUR": 929.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "Zen 4 Architecture",
+      "16 Cores, 32 Threads",
+      "4.4 GHz Base Clock, 5.7 GHz Turbo Boost",
+      "3D V-Cache Technology",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "170W TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "AMD Precision Boost"
+    ],
+    "warranty": "3 years",
+    "stock": 5,
+    "sold": 25,
+    "description": "The AMD Ryzen 9 7950X3D is a revolutionary processor with 3D V-Cache, designed for extreme performance in gaming and multi-threaded applications.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i7-12700KF 3.6GHz",
+    "price": {
+      "USD": 419.99,
+      "EUR": 489.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "12th Gen Intel Core Architecture",
+      "8 Performance Cores + 4 Efficiency Cores",
+      "12 Threads",
+      "3.6 GHz Base Clock, 5.0 GHz Turbo Boost",
+      "Intel UHD Graphics 770",
+      "Supports DDR5/DDR4 RAM",
+      "125W TDP",
+      "LGA 1700 Socket",
+      "Unlocked for Overclocking",
+      "Supports Intel Hyper-Threading"
+    ],
+    "warranty": "3 years",
+    "stock": 3,
+    "sold": 18,
+    "description": "The Intel Core i7-12700KF delivers great performance for gaming and productivity, with its hybrid architecture that optimizes workload management across both performance and efficiency cores.",
+    "discount": 0
+  },
+  {
+    "title": "AMD Ryzen 3 7300X 4.0GHz",
+    "price": {
+      "USD": 139.99,
+      "EUR": 159.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "Zen 4 Architecture",
+      "4 Cores, 8 Threads",
+      "4.0 GHz Base Clock, 4.5 GHz Turbo Boost",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "65W TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "AMD Radeon Graphics (Integrated)"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 55,
+    "description": "The Ryzen 3 7300X is perfect for budget-conscious users looking for an efficient and powerful processor for light gaming, productivity, and everyday tasks.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i5-12600KF 3.7GHz",
+    "price": {
+      "USD": 299.99,
+      "EUR": 349.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "12th Gen Intel Core Architecture",
+      "6 Performance Cores + 4 Efficiency Cores",
+      "10 Threads",
+      "3.7 GHz Base Clock, 4.9 GHz Turbo Boost",
+      "Intel UHD Graphics 770",
+      "Supports DDR5/DDR4 RAM",
+      "125W TDP",
+      "LGA 1700 Socket",
+      "Unlocked for Overclocking"
+    ],
+    "warranty": "2 years",
+    "stock": 7,
+    "sold": 24,
+    "description": "The Intel Core i5-12600KF offers excellent performance for gamers with its combination of performance cores and efficient handling of tasks, plus great overclocking headroom.",
+    "discount": 5
+  },
+  {
+    "title": "AMD Ryzen 9 7900X3D 4.5GHz",
+    "price": {
+      "USD": 699.99,
+      "EUR": 799.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "Zen 4 Architecture",
+      "12 Cores, 24 Threads",
+      "4.5 GHz Base Clock, 5.6 GHz Turbo Boost",
+      "3D V-Cache Technology",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "170W TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "AMD Precision Boost"
+    ],
+    "warranty": "3 years",
+    "stock": 6,
+    "sold": 19,
+    "description": "The Ryzen 9 7900X3D is ideal for gamers and content creators, offering incredible performance with 3D V-Cache and exceptional multi-core processing power.",
+    "discount": 10
+  },
+  {
+    "title": "Intel Core i3-12100 3.3GHz",
+    "price": {
+      "USD": 129.99,
+      "EUR": 149.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "12th Gen Intel Core Architecture",
+      "4 Cores, 8 Threads",
+      "3.3 GHz Base Clock, 4.3 GHz Turbo Boost",
+      "Intel UHD Graphics 730",
+      "Supports DDR4 RAM",
+      "60W TDP",
+      "LGA 1700 Socket",
+      "No Integrated Graphics",
+      "Supports Intel Hyper-Threading"
+    ],
+    "warranty": "1 year",
+    "stock": 12,
+    "sold": 60,
+    "description": "The Intel Core i3-12100 is an affordable processor that offers solid performance for basic computing, web browsing, and light gaming, with power efficiency in mind.",
+    "discount": 0
+  },
+  {
+    "title": "Intel Core i9-10900K 3.7GHz",
+    "price": {
+      "USD": 549.99,
+      "EUR": 629.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "10th Gen Intel Core Architecture",
+      "10 Cores, 20 Threads",
+      "3.7 GHz Base Clock, 5.3 GHz Turbo Boost",
+      "Intel UHD Graphics 630",
+      "Supports DDR4 RAM",
+      "125W TDP",
+      "LGA 1200 Socket",
+      "Unlocked for Overclocking",
+      "Supports Intel Hyper-Threading"
+    ],
+    "warranty": "3 years",
+    "stock": 0,
+    "sold": 35,
+    "description": "The Intel Core i9-10900K offers incredible performance with 10 cores and a high turbo boost clock, ideal for gaming, content creation, and heavy multitasking.",
+    "discount": 0
+  },
+  {
+    "title": "AMD Ryzen 7 7700X 4.5GHz",
+    "price": {
+      "USD": 499.99,
+      "EUR": 569.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "Zen 4 Architecture",
+      "8 Cores, 16 Threads",
+      "4.5 GHz Base Clock, 5.3 GHz Turbo Boost",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "120W TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "AMD Precision Boost",
+      "Integrated AMD Radeon Graphics"
+    ],
+    "warranty": "2 years",
+    "stock": 4,
+    "sold": 22,
+    "description": "The Ryzen 7 7700X delivers powerful performance for gaming and multitasking, equipped with 8 cores and cutting-edge features like PCIe 5.0 and DDR5 support.",
+    "discount": 10
+  },
+  {
+    "title": "Intel Core i5-11600K 3.9GHz",
+    "price": {
+      "USD": 289.99,
+      "EUR": 329.99
+    },
+    "manufacturer": "Intel",
+    "category": "processors",
+    "specifications": [
+      "11th Gen Intel Core Architecture",
+      "6 Cores, 12 Threads",
+      "3.9 GHz Base Clock, 4.9 GHz Turbo Boost",
+      "Intel UHD Graphics 750",
+      "Supports DDR4 RAM",
+      "125W TDP",
+      "LGA 1200 Socket",
+      "Unlocked for Overclocking",
+      "Supports Intel Hyper-Threading"
+    ],
     "warranty": "1 year",
     "stock": 7,
-    "sold": 2
+    "sold": 30,
+    "description": "The Intel Core i5-11600K is a solid processor for gamers and content creators, offering great performance with 6 cores and an unlocked multiplier for overclocking.",
+    "discount": 0
   },
   {
-    "title": "Deepcool AK620",
-    "shortTitle": "AK620",
+    "title": "AMD Ryzen 9 7950X 4.5GHz",
+    "price": {
+      "USD": 799.99,
+      "EUR": 899.99
+    },
+    "manufacturer": "AMD",
+    "category": "processors",
+    "specifications": [
+      "Zen 4 Architecture",
+      "16 Cores, 32 Threads",
+      "4.5 GHz Base Clock, 5.7 GHz Turbo Boost",
+      "Supports PCIe 5.0",
+      "Supports DDR5 RAM",
+      "170W TDP",
+      "AM5 Socket",
+      "Unlocked for Overclocking",
+      "AMD Precision Boost",
+      "No Integrated Graphics"
+    ],
+    "warranty": "3 years",
+    "stock": 3,
+    "sold": 17,
+    "description": "The AMD Ryzen 9 7950X is a high-end processor with extreme multi-core performance, offering 16 cores and 32 threads for demanding applications and high-end gaming.",
+    "discount": 15
+  },
+  {
+    "title": "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4-3200MHz",
     "price": {
       "USD": 79.99,
-      "EUR": 99.99
+      "EUR": 89.99
     },
-    "manufacturer": "Deepcool",
-    "category": "cooling",
-    "specifications": ["Dual TF120S Fans", "6 Heat Pipes", "180W TDP"],
-    "warranty": "6 months",
+    "manufacturer": "Corsair",
+    "category": "memory",
+    "specifications": [
+      "16GB (2 x 8GB) Kit",
+      "DDR4-3200MHz Speed",
+      "CL16 Latency",
+      "1.35V Voltage",
+      "Heat Spreader for Optimal Cooling",
+      "Compatible with Intel and AMD Platforms",
+      "XMP 2.0 Support"
+    ],
+    "warranty": "3 years",
     "stock": 5,
-    "sold": 3
+    "sold": 40,
+    "description": "Corsair Vengeance LPX is designed for high-performance overclocking, offering excellent stability and speed for gaming and productivity.",
+    "discount": 5
   },
   {
-    "title": "Corsair iCUE H150i Elite LCD",
-    "shortTitle": "iCUE H150i Elite LCD",
+    "title": "G.SKILL Ripjaws V 32GB (2 x 16GB) DDR4-3600MHz",
+    "price": {
+      "USD": 139.99,
+      "EUR": 159.99
+    },
+    "manufacturer": "G.SKILL",
+    "category": "memory",
+    "specifications": [
+      "32GB (2 x 16GB) Kit",
+      "DDR4-3600MHz Speed",
+      "CL16 Latency",
+      "1.35V Voltage",
+      "Aluminum Heat Spreader",
+      "Supports Intel XMP 2.0 and AMD Ryzen",
+      "Fully Compatible with Latest Chipsets"
+    ],
+    "warranty": "4 years",
+    "stock": 3,
+    "sold": 18,
+    "description": "The G.SKILL Ripjaws V series offers high-performance memory with advanced heat management and excellent stability, ideal for gamers and content creators.",
+    "discount": 0
+  },
+  {
+    "title": "Kingston HyperX Fury 16GB (2 x 8GB) DDR4-2666MHz",
+    "price": {
+      "USD": 59.99,
+      "EUR": 69.99
+    },
+    "manufacturer": "Kingston",
+    "category": "memory",
+    "specifications": [
+      "16GB (2 x 8GB) Kit",
+      "DDR4-2666MHz Speed",
+      "CL16 Latency",
+      "1.2V Voltage",
+      "Plug-and-Play Technology",
+      "Compatible with Intel and AMD Systems",
+      "No Heat Spreader"
+    ],
+    "warranty": "3 years",
+    "stock": 0,
+    "sold": 15,
+    "description": "The Kingston HyperX Fury is a reliable and affordable memory option, delivering solid performance for budget-conscious users who need reliable speed and stability.",
+    "discount": 0
+  },
+  {
+    "title": "Corsair Vengeance RGB Pro 32GB (2 x 16GB) DDR4-3600MHz",
+    "price": {
+      "USD": 169.99,
+      "EUR": 199.99
+    },
+    "manufacturer": "Corsair",
+    "category": "memory",
+    "specifications": [
+      "32GB (2 x 16GB) Kit",
+      "DDR4-3600MHz Speed",
+      "CL18 Latency",
+      "1.35V Voltage",
+      "RGB Lighting with Dynamic Effects",
+      "Intel XMP 2.0 Support",
+      "Aluminum Heat Spreader"
+    ],
+    "warranty": "4 years",
+    "stock": 6,
+    "sold": 22,
+    "description": "Corsair Vengeance RGB Pro offers high-speed performance combined with vibrant RGB lighting, perfect for gamers and PC enthusiasts who want both performance and aesthetics.",
+    "discount": 10
+  },
+  {
+    "title": "Crucial Ballistix 16GB (2 x 8GB) DDR4-3200MHz",
+    "price": {
+      "USD": 74.99,
+      "EUR": 84.99
+    },
+    "manufacturer": "Crucial",
+    "category": "memory",
+    "specifications": [
+      "16GB (2 x 8GB) Kit",
+      "DDR4-3200MHz Speed",
+      "CL16 Latency",
+      "1.35V Voltage",
+      "Military-Grade Aluminum Heat Spreaders",
+      "XMP 2.0 Support"
+    ],
+    "warranty": "3 years",
+    "stock": 4,
+    "sold": 30,
+    "description": "The Crucial Ballistix series provides outstanding memory performance with efficient cooling and robust stability for gaming and heavy workloads.",
+    "discount": 0
+  },
+  {
+    "title": "Corsair Dominator Platinum RGB 64GB (4 x 16GB) DDR4-3200MHz",
+    "price": {
+      "USD": 349.99,
+      "EUR": 399.99
+    },
+    "manufacturer": "Corsair",
+    "category": "memory",
+    "specifications": [
+      "64GB (4 x 16GB) Kit",
+      "DDR4-3200MHz Speed",
+      "CL16 Latency",
+      "1.35V Voltage",
+      "Dynamic RGB Lighting",
+      "Advanced Aluminum Heat Spreader",
+      "Intel XMP 2.0 Support"
+    ],
+    "warranty": "4 years",
+    "stock": 2,
+    "sold": 12,
+    "description": "Corsair Dominator Platinum RGB delivers premium performance and stunning RGB lighting, ideal for high-end builds where both style and performance are paramount.",
+    "discount": 5
+  },
+  {
+    "title": "G.SKILL Trident Z Neo 32GB (2 x 16GB) DDR4-3600MHz",
+    "price": {
+      "USD": 159.99,
+      "EUR": 179.99
+    },
+    "manufacturer": "G.SKILL",
+    "category": "memory",
+    "specifications": [
+      "32GB (2 x 16GB) Kit",
+      "DDR4-3600MHz Speed",
+      "CL18 Latency",
+      "1.35V Voltage",
+      "Dual-Channel Memory",
+      "Compatible with Intel and AMD Platforms",
+      "RGB Lighting"
+    ],
+    "warranty": "3 years",
+    "stock": 0,
+    "sold": 20,
+    "description": "The G.SKILL Trident Z Neo offers premium performance and RGB lighting, designed for gamers and PC builders who demand both high speeds and visual appeal.",
+    "discount": 0
+  },
+  {
+    "title": "HyperX Predator 16GB (2 x 8GB) DDR4-3000MHz",
+    "price": {
+      "USD": 89.99,
+      "EUR": 99.99
+    },
+    "manufacturer": "HyperX",
+    "category": "memory",
+    "specifications": [
+      "16GB (2 x 8GB) Kit",
+      "DDR4-3000MHz Speed",
+      "CL15 Latency",
+      "1.35V Voltage",
+      "High-Performance Heat Spreaders",
+      "XMP 2.0 Support"
+    ],
+    "warranty": "4 years",
+    "stock": 3,
+    "sold": 25,
+    "description": "The HyperX Predator series is engineered for extreme performance, with high speeds and low latency, making it ideal for gamers and enthusiasts.",
+    "discount": 0
+  },
+  {
+    "title": "Team T-Force Vulcan Z 16GB (2 x 8GB) DDR4-2666MHz",
+    "price": {
+      "USD": 59.99,
+      "EUR": 69.99
+    },
+    "manufacturer": "Team",
+    "category": "memory",
+    "specifications": [
+      "16GB (2 x 8GB) Kit",
+      "DDR4-2666MHz Speed",
+      "CL16 Latency",
+      "1.2V Voltage",
+      "High-Performance Heat Spreaders",
+      "Supports Intel XMP 2.0"
+    ],
+    "warranty": "3 years",
+    "stock": 6,
+    "sold": 12,
+    "description": "The Team T-Force Vulcan Z offers great performance and value, providing high-quality memory for gaming, workstations, and everyday tasks.",
+    "discount": 10
+  },
+  {
+    "title": "Samsung 970 EVO Plus 1TB NVMe M.2 SSD",
+    "price": {
+      "USD": 109.99,
+      "EUR": 129.99
+    },
+    "manufacturer": "Samsung",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "NVMe Gen 3.0 x4 Interface",
+      "Up to 3500 MB/s Read Speed",
+      "Up to 3300 MB/s Write Speed",
+      "Dynamic Thermal Guard",
+      "M.2 2280 Form Factor",
+      "Endurance: 600TBW"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "sold": 55,
+    "description": "The Samsung 970 EVO Plus offers high-performance storage with exceptional read and write speeds, perfect for gamers and professionals requiring fast data access.",
+    "discount": 0
+  },
+  {
+    "title": "Crucial P5 500GB NVMe SSD",
+    "price": {
+      "USD": 59.99,
+      "EUR": 69.99
+    },
+    "manufacturer": "Crucial",
+    "category": "storage",
+    "specifications": [
+      "500GB Capacity",
+      "NVMe Gen 3.0 x4 Interface",
+      "Up to 3400 MB/s Read Speed",
+      "Up to 3000 MB/s Write Speed",
+      "M.2 2280 Form Factor",
+      "Endurance: 200TBW"
+    ],
+    "warranty": "1 year",
+    "stock": 4,
+    "sold": 35,
+    "description": "Crucial P5 delivers fast read/write speeds for efficient gaming, content creation, and general computing tasks, all at an affordable price point.",
+    "discount": 0
+  },
+  {
+    "title": "Western Digital WD Black SN850 1TB NVMe SSD",
+    "price": {
+      "USD": 179.99,
+      "EUR": 199.99
+    },
+    "manufacturer": "Western Digital",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "NVMe Gen 4.0 x4 Interface",
+      "Up to 7000 MB/s Read Speed",
+      "Up to 5300 MB/s Write Speed",
+      "M.2 2280 Form Factor",
+      "Endurance: 600TBW",
+      "Optimal for gaming and high-performance workloads"
+    ],
+    "warranty": "2 years",
+    "stock": 7,
+    "sold": 22,
+    "description": "WD Black SN850 offers blazing-fast read and write speeds for gamers and professionals, providing an edge in performance-intensive applications.",
+    "discount": 0
+  },
+  {
+    "title": "Kingston A2000 1TB NVMe SSD",
+    "price": {
+      "USD": 79.99,
+      "EUR": 89.99
+    },
+    "manufacturer": "Kingston",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "NVMe Gen 3.0 x4 Interface",
+      "Up to 2200 MB/s Read Speed",
+      "Up to 2000 MB/s Write Speed",
+      "M.2 2280 Form Factor",
+      "Endurance: 200TBW"
+    ],
+    "warranty": "1 year",
+    "stock": 6,
+    "sold": 18,
+    "description": "The Kingston A2000 delivers solid NVMe performance at an entry-level price, perfect for upgrading laptops and desktops for faster boot times and data transfer.",
+    "discount": 5
+  },
+  {
+    "title": "Samsung 860 EVO 500GB SATA SSD",
+    "price": {
+      "USD": 89.99,
+      "EUR": 99.99
+    },
+    "manufacturer": "Samsung",
+    "category": "storage",
+    "specifications": [
+      "500GB Capacity",
+      "SATA III Interface",
+      "Up to 550 MB/s Read Speed",
+      "Up to 520 MB/s Write Speed",
+      "2.5-inch Form Factor",
+      "Endurance: 150TBW"
+    ],
+    "warranty": "2 years",
+    "stock": 3,
+    "sold": 50,
+    "description": "Samsung's 860 EVO offers excellent performance for SATA-based systems, providing faster load times, boot speeds, and data access with high reliability.",
+    "discount": 0
+  },
+  {
+    "title": "Corsair MP400 1TB NVMe SSD",
+    "price": {
+      "USD": 119.99,
+      "EUR": 139.99
+    },
+    "manufacturer": "Corsair",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "NVMe Gen 3.0 x4 Interface",
+      "Up to 3200 MB/s Read Speed",
+      "Up to 2400 MB/s Write Speed",
+      "M.2 2280 Form Factor",
+      "Endurance: 360TBW"
+    ],
+    "warranty": "2 years",
+    "stock": 4,
+    "sold": 10,
+    "description": "Corsair's MP400 is a high-capacity SSD perfect for those who need reliable storage for large files and applications, including gaming and media creation.",
+    "discount": 0
+  },
+  {
+    "title": "ADATA XPG SX8200 Pro 512GB NVMe SSD",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "ADATA",
+    "category": "storage",
+    "specifications": [
+      "512GB Capacity",
+      "NVMe Gen 3.0 x4 Interface",
+      "Up to 3500 MB/s Read Speed",
+      "Up to 3000 MB/s Write Speed",
+      "M.2 2280 Form Factor",
+      "Endurance: 300TBW"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 25,
+    "description": "The ADATA XPG SX8200 Pro is an affordable high-speed NVMe SSD that offers great value for gamers and content creators looking for fast storage.",
+    "discount": 0
+  },
+  {
+    "title": "SanDisk Extreme PRO 500GB NVMe SSD",
+    "price": {
+      "USD": 99.99,
+      "EUR": 119.99
+    },
+    "manufacturer": "SanDisk",
+    "category": "storage",
+    "specifications": [
+      "500GB Capacity",
+      "NVMe Gen 3.0 x4 Interface",
+      "Up to 3400 MB/s Read Speed",
+      "Up to 2800 MB/s Write Speed",
+      "M.2 2280 Form Factor",
+      "Endurance: 400TBW"
+    ],
+    "warranty": "1 year",
+    "stock": 2,
+    "sold": 12,
+    "description": "SanDisk Extreme PRO offers high-performance speeds and robust durability for professionals needing ultra-fast load times and data transfer.",
+    "discount": 5
+  },
+  {
+    "title": "PNY XLR8 CS3030 1TB NVMe SSD",
+    "price": {
+      "USD": 109.99,
+      "EUR": 119.99
+    },
+    "manufacturer": "PNY",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "NVMe Gen 3.0 x4 Interface",
+      "Up to 3500 MB/s Read Speed",
+      "Up to 3000 MB/s Write Speed",
+      "M.2 2280 Form Factor",
+      "Endurance: 800TBW"
+    ],
+    "warranty": "2 years",
+    "stock": 3,
+    "sold": 15,
+    "description": "PNY XLR8 CS3030 combines speed and reliability for demanding applications and gaming with high sequential read and write speeds.",
+    "discount": 0
+  },
+  {
+    "title": "Seagate Barracuda 1TB 7200RPM HDD",
+    "price": {
+      "USD": 44.99,
+      "EUR": 49.99
+    },
+    "manufacturer": "Seagate",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "7200RPM Speed",
+      "SATA III Interface",
+      "64MB Cache",
+      "Average Seek Time: 8.5ms"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 50,
+    "description": "Seagate Barracuda offers solid performance for everyday computing and gaming storage, delivering fast data access with 1TB of space.",
+    "discount": 0
+  },
+  {
+    "title": "Western Digital Blue 2TB 5400RPM HDD",
+    "price": {
+      "USD": 59.99,
+      "EUR": 69.99
+    },
+    "manufacturer": "Western Digital",
+    "category": "storage",
+    "specifications": [
+      "2TB Capacity",
+      "5400RPM Speed",
+      "SATA III Interface",
+      "256MB Cache",
+      "Average Seek Time: 16ms"
+    ],
+    "warranty": "1 year",
+    "stock": 5,
+    "sold": 30,
+    "description": "WD Blue is ideal for high-capacity storage solutions, offering reliable and efficient data storage for both desktop and laptop systems.",
+    "discount": 0
+  },
+  {
+    "title": "Toshiba P300 3TB 7200RPM HDD",
+    "price": {
+      "USD": 89.99,
+      "EUR": 99.99
+    },
+    "manufacturer": "Toshiba",
+    "category": "storage",
+    "specifications": [
+      "3TB Capacity",
+      "7200RPM Speed",
+      "SATA III Interface",
+      "64MB Cache",
+      "Average Seek Time: 8.5ms"
+    ],
+    "warranty": "6 months",
+    "stock": 4,
+    "sold": 22,
+    "description": "Toshiba P300 offers high-capacity storage for gaming, media, and large-scale data applications with quick access speeds.",
+    "discount": 0
+  },
+  {
+    "title": "Seagate Skyhawk 4TB 5900RPM HDD",
+    "price": {
+      "USD": 139.99,
+      "EUR": 149.99
+    },
+    "manufacturer": "Seagate",
+    "category": "storage",
+    "specifications": [
+      "4TB Capacity",
+      "5900RPM Speed",
+      "SATA III Interface",
+      "128MB Cache",
+      "Optimized for Surveillance Use"
+    ],
+    "warranty": "6 months",
+    "stock": 2,
+    "sold": 15,
+    "description": "The Seagate Skyhawk is designed for high-demand surveillance applications, offering large storage capacity and reliability for 24/7 usage.",
+    "discount": 0
+  },
+  {
+    "title": "Hitachi Deskstar 2TB 7200RPM HDD",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Hitachi",
+    "category": "storage",
+    "specifications": [
+      "2TB Capacity",
+      "7200RPM Speed",
+      "SATA III Interface",
+      "64MB Cache",
+      "Quiet and Energy Efficient"
+    ],
+    "warranty": "3 months",
+    "stock": 6,
+    "sold": 40,
+    "description": "The Hitachi Deskstar provides a balance of performance and energy efficiency for desktop storage, perfect for workstations or home use.",
+    "discount": 0
+  },
+  {
+    "title": "Western Digital Red 1TB NAS HDD",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Western Digital",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "5400RPM Speed",
+      "SATA III Interface",
+      "64MB Cache",
+      "Optimized for NAS Systems"
+    ],
+    "warranty": "6 months",
+    "stock": 8,
+    "sold": 50,
+    "description": "WD Red is designed for NAS environments, offering reliable storage for home and small office data management with optimized firmware.",
+    "discount": 0
+  },
+  {
+    "title": "Toshiba L200 1TB 5400RPM HDD",
+    "price": {
+      "USD": 49.99,
+      "EUR": 59.99
+    },
+    "manufacturer": "Toshiba",
+    "category": "storage",
+    "specifications": [
+      "1TB Capacity",
+      "5400RPM Speed",
+      "SATA III Interface",
+      "128MB Cache",
+      "Optimized for Laptop and Desktop Use"
+    ],
+    "warranty": "3 months",
+    "stock": 5,
+    "sold": 30,
+    "description": "The Toshiba L200 is perfect for laptop users, offering solid storage performance and reliability at an affordable price.",
+    "discount": 0
+  },
+  {
+    "title": "Seagate Exos 12TB 7200RPM HDD",
+    "price": {
+      "USD": 349.99,
+      "EUR": 389.99
+    },
+    "manufacturer": "Seagate",
+    "category": "storage",
+    "specifications": [
+      "12TB Capacity",
+      "7200RPM Speed",
+      "SATA III Interface",
+      "256MB Cache",
+      "Optimized for Enterprise and Data Center Use"
+    ],
+    "warranty": "1 year",
+    "stock": 3,
+    "sold": 10,
+    "description": "Seagate Exos is an enterprise-grade hard drive with high capacity and performance, designed for data centers and heavy workloads.",
+    "discount": 0
+  },
+  {
+    "title": "Western Digital Black 4TB 7200RPM HDD",
+    "price": {
+      "USD": 149.99,
+      "EUR": 169.99
+    },
+    "manufacturer": "Western Digital",
+    "category": "storage",
+    "specifications": [
+      "4TB Capacity",
+      "7200RPM Speed",
+      "SATA III Interface",
+      "128MB Cache",
+      "High-Performance Storage for Gamers"
+    ],
+    "warranty": "1 year",
+    "stock": 2,
+    "sold": 8,
+    "description": "WD Black offers premium performance with fast data transfer rates, optimized for gaming, media storage, and high-speed computing tasks.",
+    "discount": 0
+  },
+  {
+    "title": "ASUS ROG Strix Z590-E Gaming WiFi 6E ATX Motherboard",
+    "price": {
+      "USD": 299.99,
+      "EUR": 349.99
+    },
+    "manufacturer": "ASUS",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z590 Chipset",
+      "LGA 1200 Socket",
+      "Supports Intel 10th and 11th Gen Processors",
+      "WiFi 6E Support",
+      "PCIe 4.0 x16 Slot",
+      "4x DDR4 DIMM Slots (up to 128GB)",
+      "2.5G Ethernet",
+      "Dual M.2 Slots, 6x SATA III Ports"
+    ],
+    "warranty": "2 years",
+    "stock": 6,
+    "sold": 18,
+    "description": "ASUS ROG Strix Z590-E is designed for gamers and PC enthusiasts with premium connectivity options like WiFi 6E, PCIe 4.0, and robust power delivery.",
+    "discount": 0
+  },
+  {
+    "title": "MSI MAG B550 TOMAHAWK WIFI ATX Motherboard",
+    "price": {
+      "USD": 139.99,
+      "EUR": 159.99
+    },
+    "manufacturer": "MSI",
+    "category": "motherboards",
+    "specifications": [
+      "AMD B550 Chipset",
+      "AM4 Socket",
+      "Supports AMD Ryzen 5000 and 3000 Series Processors",
+      "WiFi 6 Support",
+      "PCIe 4.0 x16 Slot",
+      "4x DDR4 DIMM Slots (up to 128GB)",
+      "2x M.2 Slots, 6x SATA III Ports",
+      "7.1 HD Audio"
+    ],
+    "warranty": "1 year",
+    "stock": 4,
+    "sold": 24,
+    "description": "MSI MAG B550 Tomahawk WIFI is a high-performance motherboard for gamers, offering PCIe 4.0 and WiFi 6 for faster connectivity.",
+    "discount": 0
+  },
+  {
+    "title": "Gigabyte Z590 AORUS ELITE AX ATX Motherboard",
+    "price": {
+      "USD": 199.99,
+      "EUR": 229.99
+    },
+    "manufacturer": "Gigabyte",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z590 Chipset",
+      "LGA 1200 Socket",
+      "Supports Intel 10th and 11th Gen Processors",
+      "WiFi 6 Support",
+      "PCIe 4.0 x16 Slot",
+      "4x DDR4 DIMM Slots (up to 128GB)",
+      "Dual M.2 Slots, 6x SATA III Ports",
+      "RGB Fusion 2.0 Support"
+    ],
+    "warranty": "2 years",
+    "stock": 3,
+    "sold": 15,
+    "description": "The Gigabyte Z590 AORUS ELITE AX is built for high-performance users who need the power of Intel 11th Gen CPUs and the benefits of WiFi 6.",
+    "discount": 0
+  },
+  {
+    "title": "ASRock B450M PRO4 Micro ATX Motherboard",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "ASRock",
+    "category": "motherboards",
+    "specifications": [
+      "AMD B450 Chipset",
+      "AM4 Socket",
+      "Supports AMD Ryzen 3000 and 5000 Series Processors",
+      "4x DDR4 DIMM Slots (up to 64GB)",
+      "1x PCIe 3.0 x16 Slot",
+      "2x M.2 Slots, 4x SATA III Ports",
+      "Realtek ALC892 7.1 Audio"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 35,
+    "description": "ASRock's B450M PRO4 motherboard is a budget-friendly option for building solid Ryzen-based systems, featuring essential connectivity and performance.",
+    "discount": 0
+  },
+  {
+    "title": "ASUS TUF Gaming B550-PLUS (Wi-Fi 6) ATX Motherboard",
+    "price": {
+      "USD": 179.99,
+      "EUR": 199.99
+    },
+    "manufacturer": "ASUS",
+    "category": "motherboards",
+    "specifications": [
+      "AMD B550 Chipset",
+      "AM4 Socket",
+      "Supports AMD Ryzen 5000 and 3000 Series Processors",
+      "WiFi 6 Support",
+      "PCIe 4.0 x16 Slot",
+      "4x DDR4 DIMM Slots (up to 128GB)",
+      "2x M.2 Slots, 6x SATA III Ports",
+      "Military-grade TUF Components"
+    ],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 40,
+    "description": "TUF Gaming B550-PLUS offers durable, military-grade components for long-lasting reliability, plus WiFi 6 support and PCIe 4.0 for high-speed performance.",
+    "discount": 5
+  },
+  {
+    "title": "MSI MPG Z490 GAMING EDGE WIFI ATX Motherboard",
+    "price": {
+      "USD": 229.99,
+      "EUR": 259.99
+    },
+    "manufacturer": "MSI",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z490 Chipset",
+      "LGA 1200 Socket",
+      "Supports Intel 10th Gen Core Processors",
+      "WiFi 6 Support",
+      "PCIe 3.0 x16 Slot",
+      "4x DDR4 DIMM Slots (up to 128GB)",
+      "2x M.2 Slots, 6x SATA III Ports",
+      "7.1 HD Audio"
+    ],
+    "warranty": "2 years",
+    "stock": 5,
+    "sold": 18,
+    "description": "MSI MPG Z490 Gaming Edge offers excellent performance for gamers, with fast networking options like WiFi 6 and support for Intel 10th Gen Core processors.",
+    "discount": 0
+  },
+  {
+    "title": "Gigabyte B450 AORUS ELITE ATX Motherboard",
+    "price": {
+      "USD": 89.99,
+      "EUR": 99.99
+    },
+    "manufacturer": "Gigabyte",
+    "category": "motherboards",
+    "specifications": [
+      "AMD B450 Chipset",
+      "AM4 Socket",
+      "Supports AMD Ryzen 3000 and 5000 Series Processors",
+      "4x DDR4 DIMM Slots (up to 64GB)",
+      "1x PCIe 3.0 x16 Slot",
+      "2x M.2 Slots, 6x SATA III Ports",
+      "RGB Fusion 2.0 Support"
+    ],
+    "warranty": "1 year",
+    "stock": 8,
+    "sold": 25,
+    "description": "Gigabyte's B450 AORUS ELITE offers reliable performance for Ryzen users, with excellent expandability and RGB features for a customizable build.",
+    "discount": 0
+  },
+  {
+    "title": "ASRock Z490 Steel Legend ATX Motherboard",
     "price": {
       "USD": 249.99,
       "EUR": 279.99
+    },
+    "manufacturer": "ASRock",
+    "category": "motherboards",
+    "specifications": [
+      "Intel Z490 Chipset",
+      "LGA 1200 Socket",
+      "Supports Intel 10th Gen Core Processors",
+      "PCIe 3.0 x16 Slot",
+      "4x DDR4 DIMM Slots (up to 128GB)",
+      "3x M.2 Slots, 6x SATA III Ports",
+      "WiFi 6 Support"
+    ],
+    "warranty": "2 years",
+    "stock": 2,
+    "sold": 10,
+    "description": "ASRock's Z490 Steel Legend motherboard offers premium features, including PCIe 3.0 x16 support, WiFi 6, and multiple M.2 slots for high-speed storage.",
+    "discount": 0
+  },
+  {
+    "title": "MSI B450 TOMAHAWK MAX ATX Motherboard",
+    "price": {
+      "USD": 109.99,
+      "EUR": 119.99
+    },
+    "manufacturer": "MSI",
+    "category": "motherboards",
+    "specifications": [
+      "AMD B450 Chipset",
+      "AM4 Socket",
+      "Supports AMD Ryzen 3000 and 5000 Series Processors",
+      "4x DDR4 DIMM Slots (up to 64GB)",
+      "1x PCIe 3.0 x16 Slot",
+      "2x M.2 Slots, 6x SATA III Ports"
+    ],
+    "warranty": "1 year",
+    "stock": 9,
+    "sold": 35,
+    "description": "The MSI B450 Tomahawk MAX offers an affordable solution for Ryzen enthusiasts, delivering solid performance and great upgrade potential.",
+    "discount": 0
+  },
+  {
+    "title": "Cooler Master Hyper 212 RGB Black Edition Air Cooler",
+    "price": {
+      "USD": 44.99,
+      "EUR": 49.99
+    },
+    "manufacturer": "Cooler Master",
+    "category": "cooling",
+    "specifications": [
+      "4 Heat Pipes",
+      "120mm RGB Fan",
+      "Compatible with Intel LGA 115X, LGA 1200, LGA 1700 and AMD AM4, AM3+ sockets",
+      "Airflow: 57.3 CFM",
+      "Noise Level: 30 dBA",
+      "Dimensions: 159 x 121 x 79 mm"
+    ],
+    "warranty": "1 year",
+    "stock": 10,
+    "sold": 25,
+    "description": "The Cooler Master Hyper 212 RGB Black Edition offers solid performance with a 120mm RGB fan, making it ideal for quiet and efficient cooling.",
+    "discount": 0
+  },
+  {
+    "title": "Noctua NH-U12S Redux Air Cooler",
+    "price": {
+      "USD": 49.99,
+      "EUR": 59.99
+    },
+    "manufacturer": "Noctua",
+    "category": "cooling",
+    "specifications": [
+      "Single Tower Design",
+      "120mm Fan (NF-P12 Redux)",
+      "Compatible with Intel LGA 1200, LGA 115x, and AMD AM4, AM3+",
+      "Airflow: 54.97 CFM",
+      "Noise Level: 23.6 dBA",
+      "Dimensions: 158 x 125 x 71 mm"
+    ],
+    "warranty": "1 year",
+    "stock": 8,
+    "sold": 14,
+    "description": "The Noctua NH-U12S Redux delivers high-quality, quiet cooling for compact systems and is known for its build quality and performance.",
+    "discount": 0
+  },
+  {
+    "title": "be quiet! Pure Rock 2 Air Cooler",
+    "price": {
+      "USD": 39.99,
+      "EUR": 44.99
+    },
+    "manufacturer": "be quiet!",
+    "category": "cooling",
+    "specifications": [
+      "4 Heat Pipes",
+      "120mm PWM Fan",
+      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4, AM3+ sockets",
+      "Airflow: 50.5 CFM",
+      "Noise Level: 26.8 dBA",
+      "Dimensions: 155 x 121 x 75 mm"
+    ],
+    "warranty": "1 year",
+    "stock": 6,
+    "sold": 18,
+    "description": "The Pure Rock 2 provides great cooling performance while maintaining low noise levels, ideal for users seeking a quiet PC build.",
+    "discount": 0
+  },
+  {
+    "title": "ARCTIC Freezer 34 eSports ONE Air Cooler",
+    "price": {
+      "USD": 34.99,
+      "EUR": 39.99
+    },
+    "manufacturer": "ARCTIC",
+    "category": "cooling",
+    "specifications": [
+      "Single Tower Design",
+      "120mm PWM Fan",
+      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
+      "Airflow: 49.0 CFM",
+      "Noise Level: 23.9 dBA",
+      "Dimensions: 157 x 122 x 75 mm"
+    ],
+    "warranty": "6 months",
+    "stock": 4,
+    "sold": 12,
+    "description": "The ARCTIC Freezer 34 is a compact and efficient cooler, perfect for users seeking value and performance without excessive noise.",
+    "discount": 0
+  },
+  {
+    "title": "Thermaltake UX100 ARGB Air Cooler",
+    "price": {
+      "USD": 29.99,
+      "EUR": 34.99
+    },
+    "manufacturer": "Thermaltake",
+    "category": "cooling",
+    "specifications": [
+      "120mm ARGB Fan",
+      "4 Heat Pipes",
+      "Compatible with Intel LGA 1200, LGA 115x, LGA 1700 and AMD AM4 sockets",
+      "Airflow: 42.4 CFM",
+      "Noise Level: 24.5 dBA",
+      "Dimensions: 128 x 79 x 156 mm"
+    ],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 20,
+    "description": "The UX100 ARGB Air Cooler offers enhanced aesthetics with addressable RGB lighting and reliable cooling performance for mainstream builds.",
+    "discount": 0
+  },
+  {
+    "title": "Scythe Mugen 5 Rev.B Air Cooler",
+    "price": {
+      "USD": 69.99,
+      "EUR": 79.99
+    },
+    "manufacturer": "Scythe",
+    "category": "cooling",
+    "specifications": [
+      "6 Heat Pipes",
+      "120mm Kaze Flex PWM Fan",
+      "Compatible with Intel LGA 115X, LGA 1200, LGA 1700 and AMD AM4, AM3+ sockets",
+      "Airflow: 51.17 CFM",
+      "Noise Level: 35.0 dBA",
+      "Dimensions: 154 x 130 x 110 mm"
+    ],
+    "warranty": "1 year",
+    "stock": 3,
+    "sold": 11,
+    "description": "The Scythe Mugen 5 Rev.B delivers premium cooling performance with low noise, and its expanded compatibility makes it a great choice for overclocking.",
+    "discount": 0
+  },
+  {
+    "title": "Cooler Master MasterAir MA410M Air Cooler",
+    "price": {
+      "USD": 49.99,
+      "EUR": 59.99
+    },
+    "manufacturer": "Cooler Master",
+    "category": "cooling",
+    "specifications": [
+      "4 Heat Pipes",
+      "120mm Addressable RGB Fan",
+      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
+      "Airflow: 51 CFM",
+      "Noise Level: 24 dBA",
+      "Dimensions: 135 x 103 x 156 mm"
+    ],
+    "warranty": "6 months",
+    "stock": 5,
+    "sold": 15,
+    "description": "The MasterAir MA410M combines high performance and vibrant RGB lighting for a great cooling solution that enhances your PC’s appearance and functionality.",
+    "discount": 0
+  },
+  {
+    "title": "DeepCool GAMMAXX 400 V2 Air Cooler",
+    "price": {
+      "USD": 29.99,
+      "EUR": 34.99
+    },
+    "manufacturer": "DeepCool",
+    "category": "cooling",
+    "specifications": [
+      "4 Heat Pipes",
+      "120mm PWM Fan",
+      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
+      "Airflow: 56.5 CFM",
+      "Noise Level: 27.3 dBA",
+      "Dimensions: 132 x 79 x 159 mm"
+    ],
+    "warranty": "1 year",
+    "stock": 9,
+    "sold": 20,
+    "description": "DeepCool GAMMAXX 400 V2 provides solid cooling performance for budget builds, with a sleek design and efficient heat dissipation.",
+    "discount": 0
+  },
+  {
+    "title": "Vetroo V5 Air Cooler",
+    "price": {
+      "USD": 34.99,
+      "EUR": 39.99
+    },
+    "manufacturer": "Vetroo",
+    "category": "cooling",
+    "specifications": [
+      "4 Heat Pipes",
+      "120mm LED Fan",
+      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
+      "Airflow: 58.5 CFM",
+      "Noise Level: 30 dBA",
+      "Dimensions: 155 x 125 x 85 mm"
+    ],
+    "warranty": "6 months",
+    "stock": 4,
+    "sold": 14,
+    "description": "The Vetroo V5 is a powerful air cooler with a great price-to-performance ratio, ideal for users seeking quiet and efficient cooling on a budget.",
+    "discount": 0
+  },
+  {
+    "title": "Corsair iCUE H100i ELITE CAPELLIX 240mm AIO Liquid Cooler",
+    "price": {
+      "USD": 149.99,
+      "EUR": 179.99
+    },
+    "manufacturer": "Corsair",
+    "category": "cooling",
+    "specifications": [
+      "240mm Radiator",
+      "Dual 120mm RGB Fans",
+      "3600 RPM Fan Speed",
+      "Compatible with Intel LGA 1200, LGA 115x, LGA 1700 and AMD AM4, TR4 sockets",
+      "Noise Level: 25 dBA",
+      "Airflow: 75 CFM",
+      "Corsair iCUE Software Control for RGB and Performance"
+    ],
+    "warranty": "1 year",
+    "stock": 6,
+    "sold": 18,
+    "description": "The Corsair iCUE H100i ELITE CAPELLIX combines powerful cooling performance and customizable RGB lighting, perfect for high-performance systems.",
+    "discount": 0
+  },
+  {
+    "title": "NZXT Kraken X53 240mm AIO Liquid Cooler",
+    "price": {
+      "USD": 139.99,
+      "EUR": 159.99
+    },
+    "manufacturer": "NZXT",
+    "category": "cooling",
+    "specifications": [
+      "240mm Radiator",
+      "Dual 120mm Aer P Fans",
+      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4 sockets",
+      "Fan Speed: 2000 RPM",
+      "Noise Level: 21 dBA",
+      "Airflow: 51.4 CFM",
+      "CAM Software for Advanced RGB Control"
+    ],
+    "warranty": "1 year",
+    "stock": 8,
+    "sold": 23,
+    "description": "The NZXT Kraken X53 features an advanced pump design and RGB lighting for a visually striking, ultra-efficient cooling solution.",
+    "discount": 0
+  },
+  {
+    "title": "Cooler Master MasterLiquid ML240L V2 RGB AIO Liquid Cooler",
+    "price": {
+      "USD": 89.99,
+      "EUR": 99.99
+    },
+    "manufacturer": "Cooler Master",
+    "category": "cooling",
+    "specifications": [
+      "240mm Radiator",
+      "Dual 120mm RGB Fans",
+      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
+      "Fan Speed: 2000 RPM",
+      "Noise Level: 30 dBA",
+      "Airflow: 66.3 CFM",
+      "RGB Lighting Control"
+    ],
+    "warranty": "1 year",
+    "stock": 9,
+    "sold": 32,
+    "description": "Cooler Master's MasterLiquid ML240L V2 offers excellent cooling performance with RGB lighting, ideal for gamers and PC enthusiasts.",
+    "discount": 0
+  },
+  {
+    "title": "ARCTIC Liquid Freezer II 240mm AIO Liquid Cooler",
+    "price": {
+      "USD": 99.99,
+      "EUR": 119.99
+    },
+    "manufacturer": "ARCTIC",
+    "category": "cooling",
+    "specifications": [
+      "240mm Radiator",
+      "Dual 120mm PWM Fans",
+      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4, TR4 sockets",
+      "Fan Speed: 2000 RPM",
+      "Noise Level: 28 dBA",
+      "Airflow: 57 CFM",
+      "Integrated Cable Management"
+    ],
+    "warranty": "1 year",
+    "stock": 5,
+    "sold": 15,
+    "description": "The ARCTIC Liquid Freezer II delivers high-efficiency cooling, with a sleek design and low-noise performance for high-demand applications.",
+    "discount": 0
+  },
+  {
+    "title": "Thermaltake WATER 3.0 ARGB 240mm AIO Liquid Cooler",
+    "price": {
+      "USD": 119.99,
+      "EUR": 139.99
+    },
+    "manufacturer": "Thermaltake",
+    "category": "cooling",
+    "specifications": [
+      "240mm Radiator",
+      "Dual 120mm ARGB Fans",
+      "Fan Speed: 2500 RPM",
+      "Compatible with Intel LGA 1200, LGA 115x, LGA 1700 and AMD AM4, AM3+ sockets",
+      "Noise Level: 30 dBA",
+      "Airflow: 74 CFM",
+      "ARGB Lighting Control"
+    ],
+    "warranty": "1 year",
+    "stock": 7,
+    "sold": 20,
+    "description": "Thermaltake's WATER 3.0 ARGB delivers excellent performance with addressable RGB lighting, enhancing both your system's cooling and aesthetic appeal.",
+    "discount": 0
+  },
+  {
+    "title": "Corsair iCUE H150i ELITE CAPELLIX 360mm AIO Liquid Cooler",
+    "price": {
+      "USD": 179.99,
+      "EUR": 209.99
     },
     "manufacturer": "Corsair",
     "category": "cooling",
     "specifications": [
       "360mm Radiator",
-      "Capellix LED Pump Head",
-      "iCUE LCD Display",
-      "Zero RPM Pump Mode",
-      "280W TDP"
+      "Triple 120mm RGB Fans",
+      "Fan Speed: 2400 RPM",
+      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4, TR4 sockets",
+      "Noise Level: 25 dBA",
+      "Airflow: 90 CFM",
+      "RGB Lighting Control with iCUE Software"
     ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 1
+    "warranty": "1 year",
+    "stock": 3,
+    "sold": 9,
+    "description": "The H150i ELITE CAPELLIX offers powerful cooling with three RGB fans and premium performance for overclocked systems.",
+    "discount": 0
   },
   {
-    "title": "NZXT Kraken X73",
-    "shortTitle": "Kraken X73",
+    "title": "NZXT Kraken Z63 280mm AIO Liquid Cooler",
     "price": {
-      "USD": 199.99,
-      "EUR": 229.99
+      "USD": 249.99,
+      "EUR": 289.99
     },
     "manufacturer": "NZXT",
     "category": "cooling",
     "specifications": [
-      "360mm Radiator",
-      "AIO Pump with RGB Lighting",
-      "Kraken X RGB2 Fans",
-      "280W TDP"
+      "280mm Radiator",
+      "Dual 140mm Aer P Fans",
+      "Fan Speed: 1800 RPM",
+      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4 sockets",
+      "Noise Level: 21 dBA",
+      "Airflow: 77 CFM",
+      "LCD Display with Customizable Graphics"
     ],
-    "warranty": "1.5 years",
-    "stock": 12,
-    "sold": 0
+    "warranty": "1 year",
+    "stock": 4,
+    "sold": 10,
+    "description": "The Kraken Z63 features an LCD display that shows custom graphics or system stats while providing exceptional cooling performance.",
+    "discount": 0
   },
   {
-    "title": "Arctic Liquid Freezer II 420",
-    "shortTitle": "Liquid Freezer II 420",
+    "title": "Cooler Master MasterLiquid ML240L RGB V2 AIO Liquid Cooler",
     "price": {
-      "USD": 199.99,
-      "EUR": 229.99
+      "USD": 109.99,
+      "EUR": 129.99
     },
-    "manufacturer": "Arctic",
+    "manufacturer": "Cooler Master",
     "category": "cooling",
     "specifications": [
-      "420mm Radiator",
-      "Pumps with VRM Cooling",
-      "PWM Fans with Patented Pump Bracket",
-      "280W TDP"
+      "240mm Radiator",
+      "Dual 120mm RGB Fans",
+      "Fan Speed: 2000 RPM",
+      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
+      "Noise Level: 25 dBA",
+      "Airflow: 70 CFM",
+      "RGB Lighting Control"
     ],
-    "warranty": "6 months",
-    "stock": 7,
-    "sold": 2
+    "warranty": "1 year",
+    "stock": 6,
+    "sold": 17,
+    "description": "The MasterLiquid ML240L RGB V2 provides improved cooling with a dual RGB fan setup, ideal for users looking to balance performance and aesthetics.",
+    "discount": 0
   },
   {
-    "title": "EK AIO 360 D-RGB",
-    "shortTitle": "EK AIO 360 D-RGB",
+    "title": "DeepCool Castle 240EX RGB AIO Liquid Cooler",
     "price": {
-      "USD": 249.99,
-      "EUR": 299.99
+      "USD": 109.99,
+      "EUR": 129.99
     },
-    "manufacturer": "EK",
+    "manufacturer": "DeepCool",
     "category": "cooling",
     "specifications": [
-      "360mm Radiator",
-      "D-RGB Pump Head",
-      "PWM Fans",
-      "280W TDP"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 0
-  },
-  {
-    "title": "LIAN LI GALAHAD AIO 360 RGB",
-    "shortTitle": "GALAHAD AIO 360 RGB",
-    "price": {
-      "USD": 229.99,
-      "EUR": 279.99
-    },
-    "manufacturer": "LIAN LI",
-    "category": "cooling",
-    "specifications": [
-      "360mm Radiator",
-      "RGB Pump Head",
-      "PWM Fans",
-      "280W TDP"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 3
-  },
-  {
-    "title": "SteelSeries QcK Prism XL",
-    "shortTitle": "QcK Prism XL",
-    "price": {
-      "USD": 39.99,
-      "EUR": 49.99
-    },
-    "manufacturer": "SteelSeries",
-    "category": "mice",
-    "specifications": [
-      "XL Size (900 x 300 x 4mm)",
-      "Micro-Weaved Cloth Surface",
-      "RGB Illumination",
-      "Non-Slip Rubber Base"
-    ],
-    "warranty": "2 years",
-    "stock": 15,
-    "sold": 3
-  },
-  {
-    "title": "Razer Gigantus V2 - Extended",
-    "shortTitle": "Gigantus V2 - Extended",
-    "price": {
-      "USD": 34.99,
-      "EUR": 44.99
-    },
-    "manufacturer": "Razer",
-    "category": "mice",
-    "specifications": [
-      "Extended Size (940 x 355 x 4mm)",
-      "Micro-Weaved Cloth Surface",
-      "Optimized for Low and High DPI Sensors",
-      "Non-Slip Rubber Base"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 2
-  },
-  {
-    "title": "Glorious PC Gaming Race Mouse Pad - XXL",
-    "shortTitle": "Glorious PC Gaming Race Mouse Pad - XXL",
-    "price": {
-      "USD": 24.99,
-      "EUR": 29.99
-    },
-    "manufacturer": "Glorious PC Gaming Race",
-    "category": "mice",
-    "specifications": [
-      "XXL Size (900 x 400 x 3mm)",
-      "Cloth Surface",
-      "Optimized for Low and High DPI Sensors",
-      "Non-Slip Rubber Base"
-    ],
-    "warranty": "2 years",
-    "stock": 12,
-    "sold": 0
-  },
-  {
-    "title": "Logitech G640p",
-    "shortTitle": "G640p",
-    "price": {
-      "USD": 19.99,
-      "EUR": 24.99
-    },
-    "manufacturer": "Logitech",
-    "category": "mice",
-    "specifications": [
-      "Medium Size (350 x 250 x 4mm)",
-      "Cloth Surface",
-      "Optimized for Low and High DPI Sensors",
-      "Non-Slip Rubber Base"
-    ],
-    "warranty": "1 year",
-    "stock": 7,
-    "sold": 2
-  },
-  {
-    "title": "HyperX Pulsefire Mat",
-    "shortTitle": "Pulsefire Mat",
-    "price": {
-      "USD": 14.99,
-      "EUR": 19.99
-    },
-    "manufacturer": "HyperX",
-    "category": "mice",
-    "specifications": [
-      "Medium Size (350 x 250 x 4mm)",
-      "Cloth Surface",
-      "Optimized for Low and High DPI Sensors",
-      "Non-Slip Rubber Base"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 3
-  },
-  {
-    "title": "Intel Core i7-7700K",
-    "shortTitle": "Core i7-7700K",
-    "price": {
-      "USD": 249.99,
-      "EUR": 299.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "Intel Kaby Lake Architecture",
-      "4 Cores, 8 Threads",
-      "4.2 GHz Base Clock, 4.5 GHz Turbo Boost",
-      "14nm Process",
-      "8 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 10
-  },
-  {
-    "title": "AMD Ryzen 7 2700X",
-    "shortTitle": "Ryzen 7 2700X",
-    "price": {
-      "USD": 229.99,
-      "EUR": 279.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "AMD Zen+ Architecture",
-      "8 Cores, 16 Threads",
-      "3.7 GHz Base Clock, 4.3 GHz Boost Clock",
-      "12nm Process",
-      "16 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "3 years",
-    "stock": 8,
-    "sold": 2
-  },
-  {
-    "title": "Intel Core i5-7600K",
-    "shortTitle": "Core i5-7600K",
-    "price": {
-      "USD": 199.99,
-      "EUR": 249.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "Intel Kaby Lake Architecture",
-      "4 Cores, 4 Threads",
-      "3.8 GHz Base Clock, 4.2 GHz Turbo Boost",
-      "14nm Process",
-      "6 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "1 year",
-    "stock": 0,
-    "sold": 15
-  },
-  {
-    "title": "AMD Ryzen 5 2600",
-    "shortTitle": "Ryzen 5 2600",
-    "price": {
-      "USD": 169.99,
-      "EUR": 209.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "AMD Zen+ Architecture",
-      "6 Cores, 12 Threads",
-      "3.4 GHz Base Clock, 3.9 GHz Boost Clock",
-      "12nm Process",
-      "16 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "2 years",
-    "stock": 10,
-    "sold": 5
-  },
-  {
-    "title": "Intel Core i3-7350K",
-    "shortTitle": "Core i3-7350K",
-    "price": {
-      "USD": 129.99,
-      "EUR": 159.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "Intel Kaby Lake Architecture",
-      "2 Cores, 4 Threads",
-      "4.2 GHz Base Clock, 4.2 GHz Turbo Boost",
-      "14nm Process",
-      "4 MB Cache",
-      "PCIe 3.0 Support"
+      "240mm Radiator",
+      "Dual 120mm RGB Fans",
+      "Compatible with Intel LGA 1200, LGA 115X and AMD AM4 sockets",
+      "Fan Speed: 2000 RPM",
+      "Noise Level: 26 dBA",
+      "Airflow: 62 CFM",
+      "ARGB Lighting Control"
     ],
     "warranty": "6 months",
-    "stock": 7,
-    "sold": 2
-  },
-  {
-    "title": "Intel Core i7-8700K",
-    "shortTitle": "Core i7-8700K",
-    "price": {
-      "USD": 299.99,
-      "EUR": 349.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "Intel Coffee Lake Architecture",
-      "6 Cores, 12 Threads",
-      "3.7 GHz Base Clock, 4.7 GHz Turbo Boost",
-      "14nm Process",
-      "12 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 10
-  },
-  {
-    "title": "AMD Ryzen 7 1800X",
-    "shortTitle": "Ryzen 7 1800X",
-    "price": {
-      "USD": 249.99,
-      "EUR": 299.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "AMD Zen Architecture",
-      "8 Cores, 16 Threads",
-      "3.6 GHz Base Clock, 4.0 GHz Boost Clock",
-      "14nm Process",
-      "16 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "3 years",
     "stock": 8,
-    "sold": 2
-  },
-  {
-    "title": "Intel Core i5-8600K",
-    "shortTitle": "Core i5-8600K",
-    "price": {
-      "USD": 229.99,
-      "EUR": 279.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "Intel Coffee Lake Architecture",
-      "6 Cores, 6 Threads",
-      "3.6 GHz Base Clock, 4.3 GHz Turbo Boost",
-      "14nm Process",
-      "9 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "1 year",
-    "stock": 0,
-    "sold": 15
-  },
-  {
-    "title": "AMD Ryzen 5 1600X",
-    "shortTitle": "Ryzen 5 1600X",
-    "price": {
-      "USD": 199.99,
-      "EUR": 249.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "AMD Zen Architecture",
-      "6 Cores, 12 Threads",
-      "3.6 GHz Base Clock, 4.0 GHz Boost Clock",
-      "14nm Process",
-      "16 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "2 years",
-    "stock": 10,
-    "sold": 5
-  },
-  {
-    "title": "Intel Core i3-8350K",
-    "shortTitle": "Core i3-8350K",
-    "price": {
-      "USD": 169.99,
-      "EUR": 209.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "Intel Coffee Lake Architecture",
-      "4 Cores, 4 Threads",
-      "4 GHz Base Clock, 4 GHz Turbo Boost",
-      "14nm Process",
-      "8 MB Cache",
-      "PCIe 3.0 Support"
-    ],
-    "warranty": "6 months",
-    "stock": 7,
-    "sold": 2
-  },
-  {
-    "title": "GeForce GTX 980 Ti",
-    "shortTitle": "GTX 980 Ti",
-    "price": {
-      "USD": 299.99,
-      "EUR": 349.99
-    },
-    "manufacturer": "NVIDIA",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Maxwell Architecture",
-      "6GB GDDR5 Memory",
-      "1000 MHz Base Clock, 1076 MHz Boost Clock",
-      "PCI Express 3.0 x16 Interface",
-      "2816 CUDA Cores",
-      "3x DisplayPort 1.2, 1x HDMI 2.0b",
-      "250W TGP"
-    ],
-    "warranty": "No Warranty",
-    "stock": 0,
-    "sold": 20
-  },
-  {
-    "title": "Radeon R9 290X",
-    "shortTitle": "R9 290X",
-    "price": {
-      "USD": 199.99,
-      "EUR": 249.99
-    },
-    "manufacturer": "AMD",
-    "category": "graphics-cards",
-    "specifications": [
-      "AMD GCN Architecture",
-      "4GB GDDR5 Memory",
-      "1000 MHz Base Clock, 1050 MHz Boost Clock",
-      "PCI Express 3.0 x16 Interface",
-      "2816 Stream Processors",
-      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
-      "275W TGP"
-    ],
-    "warranty": "No Warranty",
-    "stock": 5,
-    "sold": 10
-  },
-  {
-    "title": "GeForce GTX 780 Ti",
-    "shortTitle": "GTX 780 Ti",
-    "price": {
-      "USD": 149.99,
-      "EUR": 179.99
-    },
-    "manufacturer": "NVIDIA",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Kepler Architecture",
-      "3GB GDDR5 Memory",
-      "876 MHz Base Clock, 928 MHz Boost Clock",
-      "PCI Express 3.0 x16 Interface",
-      "2880 CUDA Cores",
-      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
-      "250W TGP"
-    ],
-    "warranty": "No Warranty",
-    "stock": 8,
-    "sold": 2
-  },
-  {
-    "title": "Radeon HD 7970 GHz Edition",
-    "shortTitle": "HD 7970 GHz Edition",
-    "price": {
-      "USD": 99.99,
-      "EUR": 119.99
-    },
-    "manufacturer": "AMD",
-    "category": "graphics-cards",
-    "specifications": [
-      "AMD GCN Architecture",
-      "3GB GDDR5 Memory",
-      "1000 MHz Base Clock, 1050 MHz Boost Clock",
-      "PCI Express 3.0 x16 Interface",
-      "2048 Stream Processors",
-      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
-      "250W TGP"
-    ],
-    "warranty": "No Warranty",
-    "stock": 0,
-    "sold": 15
-  },
-  {
-    "title": "GeForce GTX 980",
-    "shortTitle": "GTX 980",
-    "price": {
-      "USD": 249.99,
-      "EUR": 299.99
-    },
-    "manufacturer": "NVIDIA",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Maxwell Architecture",
-      "4GB GDDR5 Memory",
-      "876 MHz Base Clock, 932 MHz Boost Clock",
-      "PCI Express 3.0 x16 Interface",
-      "2048 CUDA Cores",
-      "3x DisplayPort 1.2, 1x HDMI 2.0b",
-      "165W TGP"
-    ],
-    "warranty": "No Warranty",
-    "stock": 0,
-    "sold": 20
-  },
-  {
-    "title": "Radeon R9 290",
-    "shortTitle": "R9 290",
-    "price": {
-      "USD": 179.99,
-      "EUR": 229.99
-    },
-    "manufacturer": "AMD",
-    "category": "graphics-cards",
-    "specifications": [
-      "AMD GCN Architecture",
-      "4GB GDDR5 Memory",
-      "947 MHz Base Clock, 1000 MHz Boost Clock",
-      "PCI Express 3.0 x16 Interface",
-      "2816 Stream Processors",
-      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
-      "250W TGP"
-    ],
-    "warranty": "No Warranty",
-    "stock": 5,
-    "sold": 10
-  },
-  {
-    "title": "GeForce GTX 780",
-    "shortTitle": "GTX 780",
-    "price": {
-      "USD": 129.99,
-      "EUR": 159.99
-    },
-    "manufacturer": "NVIDIA",
-    "category": "graphics-cards",
-    "specifications": [
-      "NVIDIA Kepler Architecture",
-      "3GB GDDR5 Memory",
-      "863 MHz Base Clock, 900 MHz Boost Clock",
-      "PCI Express 3.0 x16 Interface",
-      "2304 CUDA Cores",
-      "2x DVI, 1x HDMI 1.4a, 1x DisplayPort 1.2",
-      "250W TGP"
-    ],
-    "warranty": "No Warranty",
-    "stock": 8,
-    "sold": 2
-  },
-  {
-    "title": "Radeon HD 7950",
-    "shortTitle": "HD 7950",
-    "price": {
-      "USD": 79.99,
-      "EUR": 99.99
-    },
-    "manufacturer": "AMD",
-    "category": "graphics-cards",
-    "specifications": [
-      "AMD GCN Architecture",
-      "3GB GDDR5 Memory",
-      "800 MHz Base Clock, 850 MHz Boost Clock",
-      "PCI Express 3.0 x16 Interface",
-      "1792 Stream Processors",
-      "2x DVI, 2x Mini DisplayPort, 1x HDMI 1.4a",
-      "200W TGP"
-    ],
-    "warranty": "No Warranty",
-    "stock": 0,
-    "sold": 15
+    "sold": 22,
+    "description": "The DeepCool Castle 240EX RGB delivers superior cooling with vibrant ARGB lighting, perfect for those seeking a balance of performance and style.",
+    "discount": 0
   }
 ]

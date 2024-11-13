@@ -18,7 +18,7 @@ const Container = styled.div`
   grid-template-columns: 1fr 4fr;
 
   gap: 2rem;
-  row-gap: 3.6rem;
+  row-gap: 2.4rem;
 `;
 
 const StyledHeading = styled(Heading)`

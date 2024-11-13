@@ -7,11 +7,6 @@ const productSchema = new mongoose.Schema(
       required: [true, "Product must have a title."],
       unique: [true, "A product with this title already exists."],
     },
-    shortTitle: {
-      type: String,
-      required: [true, "Product must have a short title."],
-      unique: [true, "A product with this short title already exists."],
-    },
     price: {
       EUR: {
         type: Number,
@@ -21,6 +16,10 @@ const productSchema = new mongoose.Schema(
         type: Number,
         required: [true, "Product must have a price in USD"],
       },
+    },
+    description: {
+      type: String,
+      required: [true, "Product must have a description"],
     },
     manufacturer: {
       type: String,
@@ -42,6 +41,7 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: [true, "Product must have a stock count."],
     },
+    discount: Number,
     sold: {
       type: Number,
     },

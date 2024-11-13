@@ -10,6 +10,11 @@ const priceSizes = {
   small: css`
     font-size: 1.6rem;
   `,
+  tiny: css`
+    font-size: 1.2rem;
+    color: var(--color-grey-400);
+    text-decoration: line-through;
+  `,
 };
 
 const currencySizes = {
@@ -22,6 +27,11 @@ const currencySizes = {
   small: css`
     font-size: 1.2rem;
   `,
+  tiny: css`
+    font-size: 1.2rem;
+    color: var(--color-grey-400);
+    text-decoration: line-through;
+  `,
 };
 
 const centSizes = {
@@ -33,6 +43,11 @@ const centSizes = {
   `,
   small: css`
     font-size: 1.2rem;
+  `,
+  tiny: css`
+    font-size: 1.2rem;
+    color: var(--color-grey-400);
+    text-decoration: line-through;
   `,
 };
 

@@ -131,16 +131,40 @@ const OutOfStock = styled.span`
   right: 1.2rem;
 
   border: 1px solid var(--color-grey-800);
-  backdrop-filter: blur(4px);
 `;
 
-export default function Card({ title, price, id, stock }) {
+const OldPrice = styled.span`
+  align-self: end;
+  margin-bottom: 4px;
+  margin-left: 0.8rem;
+`;
+
+const Discount = styled.span`
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+
+  border: 1px solid var(--color-grey-800);
+  padding: 0.4rem 0.8rem;
+
+  font-size: 1.6rem;
+
+  backdrop-filter: blur(4px);
+
+  span {
+    color: var(--color-brand-500);
+  }
+`;
+
+export default function Card({ title, price, id, stock, discount }) {
   const { addItem, removeItem, isInCart } = useCart();
   const {
     wishlist,
     addItem: addWishlistItem,
     removeItem: removeWishlistItem,
   } = useWishlist();
+
+  const finalPrice = price - (price / 100) * discount;
 
   const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
 
@@ -172,10 +196,20 @@ export default function Card({ title, price, id, stock }) {
           <Image />
         </ImageBox>
       </Link>
+
       <InformationBox>
         <Title>{title}</Title>
         <PriceBox>
-          <Price price={price} size="large" />
+          {discount ? (
+            <>
+              <Price price={finalPrice} size="large" />
+              <OldPrice>
+                <Price price={price} size="tiny" />
+              </OldPrice>
+            </>
+          ) : (
+            <Price price={finalPrice} size="large" />
+          )}
         </PriceBox>
       </InformationBox>
       {stock ? (
@@ -185,7 +219,9 @@ export default function Card({ title, price, id, stock }) {
           </StyledButton>
         ) : (
           <StyledButton
-            onClick={() => addItem({ title, price, id, quantity: 1 })}
+            onClick={() =>
+              addItem({ title, price: finalPrice, id, quantity: 1 })
+            }
           >
             <HiOutlineShoppingCart />
           </StyledButton>
@@ -193,6 +229,11 @@ export default function Card({ title, price, id, stock }) {
       ) : (
         <OutOfStock>Sold Out</OutOfStock>
       )}
+      {discount ? (
+        <Discount>
+          <span>{discount}</span>% off
+        </Discount>
+      ) : null}
     </Box>
   );
 }

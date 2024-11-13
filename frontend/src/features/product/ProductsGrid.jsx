@@ -30,6 +30,7 @@ export default function ProductsGrid({ category }) {
                 key={item.id}
                 id={item.id}
                 stock={item.stock}
+                discount={item.discount}
               />
             ) : null;
           })
@@ -41,6 +42,7 @@ export default function ProductsGrid({ category }) {
               key={item.id}
               id={item.id}
               stock={item.stock}
+              discount={item.discount}
             />
           ))}
     </CardBox>

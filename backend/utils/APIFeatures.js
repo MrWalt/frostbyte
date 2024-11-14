@@ -3,9 +3,15 @@ class APIFeatures {
     this.query = query;
     this.queryString = queryString;
   }
-  filter() {
+  filter(skipManufacturer = false) {
     const queryObject = { ...this.queryString };
-    const excludedFields = ["page", "limit", "fields", "sort"];
+    const excludedFields = [
+      "page",
+      "limit",
+      "fields",
+      "sort",
+      `${skipManufacturer ? "manufacturer" : null}`,
+    ];
     excludedFields.forEach((item) => delete queryObject[item]);
 
     this.query = this.query.find(queryObject);

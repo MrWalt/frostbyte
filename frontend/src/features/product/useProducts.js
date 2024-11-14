@@ -21,15 +21,15 @@ export function useProducts() {
 
   if (page < pageCount) {
     queryClient.prefetchQuery({
-      queryFn: () => getProducts(page + 1, category),
-      queryKey: ["products", category, page + 1],
+      queryFn: () => getProducts(page + 1, category, filter),
+      queryKey: ["products", category, filter, page + 1],
     });
   }
 
   if (page > 1) {
     queryClient.prefetchQuery({
-      queryFn: () => getProducts(page - 1, category),
-      queryKey: ["products", category, page - 1],
+      queryFn: () => getProducts(page - 1, category, filter),
+      queryKey: ["products", category, filter, page - 1],
     });
   }
 

@@ -38,7 +38,7 @@ export default function Products() {
         <StyledHeading variation="secondary">
           {params?.category ? category : "All Products"}
         </StyledHeading>
-        {!isLoading && <FilterMenu />}
+        <FilterMenu />
         <ProductsGrid category={params?.category ? params.category : null} />
         {!isLoading && <Pagination count={count} />}
       </Container>

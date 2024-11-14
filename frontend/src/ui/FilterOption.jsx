@@ -35,11 +35,16 @@ const StyledSpan = styled.span`
   }
 `;
 
-export default function FilterOption({ type, options }) {
+export default function FilterOption({ type, options, filter }) {
+  const [selected, setSelected] = useState("");
   const [isToggled, setIsToggled] = useState(false);
 
   function handleToggle() {
-    setIsToggled((value) => !value);
+    setIsToggled((toggled) => !toggled);
+  }
+
+  function handleSelect(selected) {
+    setSelected(selected);
   }
 
   return (
@@ -49,7 +54,15 @@ export default function FilterOption({ type, options }) {
         {isToggled ? <HiChevronUp /> : <HiChevronDown />}
       </StyledSpan>
       {isToggled &&
-        options.map((option) => <Filter option={option} key={option} />)}
+        options.map((option) => (
+          <Filter
+            option={option}
+            key={option}
+            selected={selected}
+            handler={handleSelect}
+            filter={filter}
+          />
+        ))}
     </StyledDiv>
   );
 }

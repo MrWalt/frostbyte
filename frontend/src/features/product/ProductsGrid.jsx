@@ -7,14 +7,16 @@ import Loader from "../../ui/Loader";
 const CardBox = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: min-content;
+
+  grid-column: 2 / -1;
 
   gap: 2.4rem;
   row-gap: 2.4rem;
 `;
 
 export default function ProductsGrid() {
-  const { isLoading, products, brands } = useProducts();
+  const { isLoading, products } = useProducts();
 
   if (isLoading) return <Loader />;
 

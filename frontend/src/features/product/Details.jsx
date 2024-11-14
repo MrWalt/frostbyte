@@ -109,7 +109,16 @@ export default function Details({
           <Button onClick={() => removeItem(id)}>Remove from cart</Button>
         ) : (
           <Button
-            onClick={() => addItem({ id, title, price, quantity: 1, discount })}
+            onClick={() =>
+              addItem({
+                id,
+                title,
+                price,
+                quantity: 1,
+                discount,
+                discountedPrice,
+              })
+            }
           >
             Add to cart
           </Button>

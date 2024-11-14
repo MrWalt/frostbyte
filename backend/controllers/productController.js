@@ -13,6 +13,7 @@ const getAllProducts = getAll(
   "-sold -specifications -warranty -description -__v",
   true
 );
+
 const getProduct = getOne(Product);
 
 // CREATE

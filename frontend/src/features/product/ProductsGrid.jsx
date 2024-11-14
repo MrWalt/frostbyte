@@ -20,31 +20,18 @@ export default function ProductsGrid({ category }) {
 
   return (
     <CardBox>
-      {category
-        ? products.map((item) => {
-            return item.category === category ? (
-              <Card
-                title={item.title}
-                price={item.price.USD}
-                shortTitle={item.shortTitle}
-                key={item.id}
-                id={item.id}
-                stock={item.stock}
-                discount={item.discount}
-              />
-            ) : null;
-          })
-        : products.map((item) => (
-            <Card
-              title={item.title}
-              price={item.price.USD}
-              shortTitle={item.shortTitle}
-              key={item.id}
-              id={item.id}
-              stock={item.stock}
-              discount={item.discount}
-            />
-          ))}
+      {products.map((item) => (
+        <Card
+          title={item.title}
+          price={item.price.USD}
+          shortTitle={item.shortTitle}
+          key={item.id}
+          id={item.id}
+          stock={item.stock}
+          discount={item.discount}
+          discountedPrice={item.discountedPrice?.USD}
+        />
+      ))}
     </CardBox>
   );
 }

@@ -135,8 +135,20 @@ const DeleteButton = styled.button`
   }
 `;
 
-export default function CartItem({ title, price, quantity, id }) {
+const PriceBox = styled.div`
+  display: flex;
+  align-items: end;
+`;
+
+const OldPrice = styled.span`
+  display: inline-block;
+  margin-left: 0.8rem;
+`;
+
+export default function CartItem({ title, price, quantity, discount, id }) {
   const { removeItem, increaseQuantity, decreaseQuantity } = useCart();
+  const finalPrice = price - (price / 100) * discount;
+
   return (
     <Box>
       <DeleteButton onClick={() => removeItem(id)}>
@@ -147,7 +159,14 @@ export default function CartItem({ title, price, quantity, id }) {
       </Link>
       <InfoBox>
         <ItemName>{title}</ItemName>
-        <Price price={price} size="medium" />
+        <PriceBox>
+          <Price price={finalPrice} size="medium" />
+          {discount !== 0 && (
+            <OldPrice>
+              <Price price={price} size="tiny" />
+            </OldPrice>
+          )}
+        </PriceBox>
       </InfoBox>
       <ButtonBox>
         <button onClick={() => decreaseQuantity({ id, quantity })}>

@@ -120,6 +120,7 @@ export default function Cart() {
               quantity={item.quantity}
               id={item.id}
               key={item.id}
+              discount={item.discount}
             />
           ))}
         </Box>

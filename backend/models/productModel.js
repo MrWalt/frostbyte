@@ -49,6 +49,17 @@ const productSchema = new mongoose.Schema(
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
+productSchema.virtual("discountedPrice").get(function () {
+  const USD = Number(
+    (this.price.USD - (this.price.USD / 100) * this.discount).toFixed(2)
+  );
+  const EUR = Number(
+    (this.price.EUR - (this.price.EUR / 100) * this.discount).toFixed(2)
+  );
+
+  return this.discount > 0 ? { USD, EUR } : null;
+});
+
 const Product = mongoose.model("Product", productSchema);
 
 module.exports = Product;

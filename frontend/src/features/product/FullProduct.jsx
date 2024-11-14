@@ -46,6 +46,10 @@ const BackButtonBox = styled.div`
 
   &:hover {
     color: var(--color-brand-500);
+
+    button {
+      color: var(--color-brand-500);
+    }
   }
 
   svg {
@@ -55,13 +59,23 @@ const BackButtonBox = styled.div`
   }
 `;
 
-export default function Product() {
+export default function FullProduct() {
   const { product, isLoading } = useProduct();
   const moveBack = useMoveBack();
 
   if (isLoading) return <Loader size={60} />;
 
-  const { title, price, specifications, stock, warranty, id } = product;
+  const {
+    title,
+    price,
+    specifications,
+    stock,
+    warranty,
+    id,
+    discount,
+    description,
+    discountedPrice,
+  } = product;
 
   return (
     <Container>
@@ -71,7 +85,15 @@ export default function Product() {
       </BackButtonBox>
       <ImageBox>IMAGE</ImageBox>
 
-      <Details title={title} price={price.USD} stock={stock} id={id} />
+      <Details
+        title={title}
+        price={price.USD}
+        discount={discount}
+        stock={stock}
+        id={id}
+        description={description}
+        discountedPrice={discountedPrice?.USD}
+      />
       <Specifications specs={specifications} warranty={warranty} />
     </Container>
   );

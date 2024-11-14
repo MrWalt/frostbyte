@@ -156,15 +156,24 @@ const Discount = styled.span`
   }
 `;
 
-export default function Card({ title, price, id, stock, discount }) {
+const Percentage = styled.span`
+  font-size: 1.4rem;
+`;
+
+export default function Card({
+  title,
+  price,
+  id,
+  stock,
+  discount,
+  discountedPrice,
+}) {
   const { addItem, removeItem, isInCart } = useCart();
   const {
     wishlist,
     addItem: addWishlistItem,
     removeItem: removeWishlistItem,
   } = useWishlist();
-
-  const finalPrice = price - (price / 100) * discount;
 
   const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
 
@@ -200,15 +209,11 @@ export default function Card({ title, price, id, stock, discount }) {
       <InformationBox>
         <Title>{title}</Title>
         <PriceBox>
-          {discount ? (
-            <>
-              <Price price={finalPrice} size="large" />
-              <OldPrice>
-                <Price price={price} size="tiny" />
-              </OldPrice>
-            </>
-          ) : (
-            <Price price={finalPrice} size="large" />
+          <Price price={discount ? discountedPrice : price} size="large" />
+          {discount !== 0 && (
+            <OldPrice>
+              <Price price={price} size="tiny" />
+            </OldPrice>
           )}
         </PriceBox>
       </InformationBox>
@@ -219,9 +224,7 @@ export default function Card({ title, price, id, stock, discount }) {
           </StyledButton>
         ) : (
           <StyledButton
-            onClick={() =>
-              addItem({ title, price: finalPrice, id, quantity: 1 })
-            }
+            onClick={() => addItem({ title, price, id, quantity: 1, discount })}
           >
             <HiOutlineShoppingCart />
           </StyledButton>
@@ -231,7 +234,8 @@ export default function Card({ title, price, id, stock, discount }) {
       )}
       {discount ? (
         <Discount>
-          <span>{discount}</span>% off
+          <span>{discount}</span>
+          <Percentage>%</Percentage> off
         </Discount>
       ) : null}
     </Box>

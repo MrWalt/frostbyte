@@ -66,10 +66,11 @@ export default function CartProvider({ children }) {
   }
 
   const itemsInCart = cart.reduce((acc, cur) => (acc += cur.quantity), 0);
-  const totalCartPrice = cart.reduce(
-    (acc, cur) => (acc += cur.price * cur.quantity),
-    0
-  );
+
+  const totalCartPrice = cart.reduce((acc, cur) => {
+    const price = cur.discountedPrice || cur.price;
+    return (acc += price * cur.quantity);
+  }, 0);
 
   return (
     <CartContext.Provider

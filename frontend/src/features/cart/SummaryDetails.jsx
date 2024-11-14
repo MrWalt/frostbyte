@@ -48,11 +48,7 @@ const Disclaimer = styled.span`
 `;
 
 export default function SummaryDetails() {
-  const { cart } = useCart();
-  const itemsInCart = cart.reduce((acc, cur) => (acc += cur.quantity), 0);
-  const totalPrice = cart
-    .reduce((acc, cur) => (acc += cur.price * cur.quantity), 0)
-    .toFixed(2);
+  const { itemsInCart, totalCartPrice } = useCart();
 
   return (
     <Box>
@@ -63,7 +59,7 @@ export default function SummaryDetails() {
           <span>item{itemsInCart > 1 ? "s" : ""} in cart</span>
         </div>
         <PriceBox>
-          <Price price={String(totalPrice)} size="medium" />
+          <Price price={String(totalCartPrice)} size="medium" />
           <span>in total</span>
         </PriceBox>
         <Disclaimer>Shipping cost calculated at checkout</Disclaimer>

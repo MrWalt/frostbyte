@@ -121,6 +121,7 @@ export default function Cart() {
               id={item.id}
               key={item.id}
               discount={item.discount}
+              discountedPrice={item.discountedPrice}
             />
           ))}
         </Box>

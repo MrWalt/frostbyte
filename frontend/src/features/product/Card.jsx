@@ -224,7 +224,16 @@ export default function Card({
           </StyledButton>
         ) : (
           <StyledButton
-            onClick={() => addItem({ title, price, id, quantity: 1, discount })}
+            onClick={() =>
+              addItem({
+                title,
+                price,
+                id,
+                quantity: 1,
+                discount,
+                discountedPrice,
+              })
+            }
           >
             <HiOutlineShoppingCart />
           </StyledButton>

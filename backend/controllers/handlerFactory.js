@@ -1,7 +1,7 @@
 const APIFeatures = require("../utils/APIFeatures");
 
 // READ
-function getAll(Model, selectOptions) {
+function getAll(Model, selectOptions, getBrands = false) {
   return async function (req, res) {
     try {
       const features = new APIFeatures(
@@ -15,7 +15,27 @@ function getAll(Model, selectOptions) {
       const count = await documents.query.countDocuments();
       const document = await features.query;
 
-      res.status(200).json({ status: "success", data: document, count });
+      let brandQuery;
+      let brands;
+
+      if (getBrands) {
+        brandQuery = new APIFeatures(
+          Model.find().select(
+            "-title -description -price -discountedPrice -specifications -discount -stock -sold -warranty -category -__v -id -_id"
+          ),
+          req.query
+        ).filter();
+
+        brands = await brandQuery.query;
+
+        brands = brands.map((item) => item.manufacturer);
+
+        brands = brands.filter((item, index) => brands.indexOf(item) === index);
+      }
+
+      res
+        .status(200)
+        .json({ status: "success", data: document, count, brands });
     } catch (err) {
       res.status(400).json({ status: "error", message: "Could not fetch" });
     }
@@ -38,7 +58,7 @@ function getOne(Model) {
       res.status(200).json({ status: "success", data });
     } catch (err) {
       res
-        .status(400)
+        .status(404)
         .json({ status: "error", message: "Could not find this document" });
     }
   };

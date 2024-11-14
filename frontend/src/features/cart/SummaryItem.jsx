@@ -70,8 +70,26 @@ const Details = styled.div`
   gap: 0.6rem;
 `;
 
-export default function SummaryItem({ title, price, quantity, id }) {
+const PriceBox = styled.div`
+  display: flex;
+  align-items: end;
+  gap: 0.8rem;
+`;
+
+export default function SummaryItem({
+  title,
+  price,
+  quantity,
+  id,
+  discount,
+  discountedPrice,
+}) {
   const { removeItem } = useCart();
+
+  let totalPrice = discountedPrice || price;
+  totalPrice *= quantity;
+
+  const priceBeforeDiscount = price * quantity;
 
   return (
     <Box>
@@ -80,8 +98,13 @@ export default function SummaryItem({ title, price, quantity, id }) {
         <Title>{title}</Title>
 
         <Details>
-          <Quantity>{quantity}</Quantity> in cart &mdash;{" "}
-          <Price size="medium" price={price * quantity} />
+          <Quantity>{quantity}</Quantity> in cart &mdash;
+          <PriceBox>
+            <Price size="medium" price={totalPrice} />
+            {discount !== 0 && (
+              <Price size="tiny" price={priceBeforeDiscount} />
+            )}
+          </PriceBox>
         </Details>
       </ProductInfoBox>
 

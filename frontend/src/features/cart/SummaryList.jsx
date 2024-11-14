@@ -21,6 +21,8 @@ export default function SummaryList() {
         <SummaryItem
           title={item.title}
           price={item.price}
+          discount={item.discount}
+          discountedPrice={item.discountedPrice}
           quantity={item.quantity}
           id={item.id}
           key={item.id}

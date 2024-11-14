@@ -7,12 +7,13 @@ export function useProducts() {
   const queryClient = useQueryClient();
   const { category } = useParams();
   const [searchParams] = useSearchParams();
+  const filter = searchParams.get("manufacturer");
 
   const page = Number(searchParams.get("page")) || 1;
 
-  const { isLoading, data: { data: products, count } = {} } = useQuery({
-    queryFn: () => getProducts(page, category),
-    queryKey: ["products", page, category],
+  const { isLoading, data: { data: products, count, brands } = {} } = useQuery({
+    queryFn: () => getProducts(page, category, filter),
+    queryKey: ["products", page, category, filter],
   });
 
   // Prefetching
@@ -32,5 +33,5 @@ export function useProducts() {
     });
   }
 
-  return { isLoading, products, count };
+  return { isLoading, products, count, brands };
 }

@@ -145,9 +145,15 @@ const OldPrice = styled.span`
   margin-left: 0.8rem;
 `;
 
-export default function CartItem({ title, price, quantity, discount, id }) {
+export default function CartItem({
+  title,
+  price,
+  quantity,
+  discount,
+  id,
+  discountedPrice,
+}) {
   const { removeItem, increaseQuantity, decreaseQuantity } = useCart();
-  const finalPrice = price - (price / 100) * discount;
 
   return (
     <Box>
@@ -160,7 +166,7 @@ export default function CartItem({ title, price, quantity, discount, id }) {
       <InfoBox>
         <ItemName>{title}</ItemName>
         <PriceBox>
-          <Price price={finalPrice} size="medium" />
+          <Price price={discount ? discountedPrice : price} size="medium" />
           {discount !== 0 && (
             <OldPrice>
               <Price price={price} size="tiny" />

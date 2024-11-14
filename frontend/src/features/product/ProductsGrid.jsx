@@ -13,8 +13,8 @@ const CardBox = styled.div`
   row-gap: 2.4rem;
 `;
 
-export default function ProductsGrid({ category }) {
-  const { isLoading, products } = useProducts();
+export default function ProductsGrid() {
+  const { isLoading, products, brands } = useProducts();
 
   if (isLoading) return <Loader />;
 

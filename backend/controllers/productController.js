@@ -10,7 +10,8 @@ const {
 // READ
 const getAllProducts = getAll(
   Product,
-  "-sold -specifications -warranty -description -__v"
+  "-sold -specifications -warranty -description -__v",
+  true
 );
 const getProduct = getOne(Product);
 

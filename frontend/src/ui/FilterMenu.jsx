@@ -2,7 +2,7 @@ import styled from "styled-components";
 import FilterOption from "./FilterOption";
 
 import { HiOutlineFunnel } from "react-icons/hi2";
-import { useProducts } from "../features/product/useProducts";
+import { useProducts } from "../features/products/useProducts";
 import Button from "./Button";
 import { useSearchParams } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import FullProduct from "../features/product/FullProduct";
+import FullProduct from "../features/products/FullProduct";
 import Section from "../ui/Section";
 
 export default function Product() {

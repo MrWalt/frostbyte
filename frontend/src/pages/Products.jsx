@@ -5,10 +5,10 @@ import { useParams } from "react-router-dom";
 import Section from "../ui/Section";
 import FilterMenu from "../ui/FilterMenu";
 import Heading from "../ui/Heading";
-import ProductsGrid from "../features/product/ProductsGrid";
-import formatCategoryTitle from "../utils/formatCategoryTitle";
+import ProductsGrid from "../features/products/ProductsGrid";
+import { formatCategoryTitle } from "../utils/helpers";
 import Pagination from "../ui/Pagination";
-import { useProducts } from "../features/product/useProducts";
+import { useProducts } from "../features/products/useProducts";
 
 const Container = styled.div`
   margin: 0 auto;

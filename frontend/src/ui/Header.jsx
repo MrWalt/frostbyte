@@ -5,9 +5,11 @@ import {
   HiOutlineHeart,
   HiOutlineUserCircle,
   HiOutlineShoppingCart,
+  HiOutlinePresentationChartBar,
 } from "react-icons/hi2";
 import { useCart } from "../features/cart/CartContext";
 import { useMenu } from "../contexts/MenuContext";
+import { useUser } from "../features/authentication/UserContext";
 
 const StyledHeader = styled.header`
   height: 8rem;
@@ -128,6 +130,7 @@ const StyledButton = styled.button`
 export default function Header() {
   const { itemsInCart } = useCart();
   const { handleSetToggledMenu } = useMenu();
+  const { user } = useUser();
 
   return (
     <StyledHeader className="header">
@@ -149,6 +152,12 @@ export default function Header() {
         </Logo>
 
         <Box>
+          {user.role === "admin" && (
+            <Link to="/dashboard">
+              <HiOutlinePresentationChartBar />
+            </Link>
+          )}
+
           <Link to="/account/profile">
             <HiOutlineUserCircle />
           </Link>

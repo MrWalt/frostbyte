@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Price from "../../ui/Price";
 import { useCart } from "./CartContext";
 import Button from "../../ui/Button";
+import { HiOutlineTrash } from "react-icons/hi2";
 
 const Box = styled.div`
   width: 100%;
@@ -51,12 +52,18 @@ const Quantity = styled.span`
 
 const RemoveItemButton = styled(Button)`
   position: absolute;
-  bottom: 0.8rem;
-  right: 0.8rem;
+  bottom: 1.2rem;
+  right: 1.2rem;
 
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
 
   &:hover {
     color: var(--color-brand-500);
@@ -113,7 +120,7 @@ export default function SummaryItem({
         className="clear-cart"
         onClick={() => removeItem(id)}
       >
-        Remove Item
+        <HiOutlineTrash />
       </RemoveItemButton>
     </Box>
   );

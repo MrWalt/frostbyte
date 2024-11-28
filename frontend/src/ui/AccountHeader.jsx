@@ -4,9 +4,11 @@ import {
   HiOutlineIdentification,
   HiOutlineRectangleStack,
   HiOutlineShieldCheck,
+  HiOutlineTableCells,
 } from "react-icons/hi2";
 import Button from "./Button";
 import { useLogout } from "../features/authentication/useLogout";
+import { useUser } from "../features/authentication/UserContext";
 
 const Box = styled.div`
   width: 26rem;
@@ -70,6 +72,8 @@ const StyledButton = styled(Button)`
 
 export default function AccountHeader() {
   const { logout } = useLogout();
+  const { user } = useUser();
+
   return (
     <Box>
       <div>
@@ -85,13 +89,14 @@ export default function AccountHeader() {
           <HiOutlineShieldCheck />
           Security
         </StyledLink>
+        {user.role === "admin" && (
+          <StyledLink to="admin-dashboard">
+            <HiOutlineTableCells />
+            Admin
+          </StyledLink>
+        )}
       </div>
-      {/* {role === "admin" && (
-        <StyledLink to="dashboard">
-          <HiOutlineTableCells />
-          Admin
-        </StyledLink>
-      )} */}
+
       <StyledButton onClick={logout}>Logout</StyledButton>
     </Box>
   );

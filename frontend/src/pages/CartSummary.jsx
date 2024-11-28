@@ -12,7 +12,7 @@ import { useCart } from "../features/cart/CartContext";
 const StyledSection = styled(Section)`
   background-image: url("/background.webp");
 
-  min-height: calc(100vh - 6.4rem - 10rem);
+  min-height: calc(100vh - 8rem - 10rem);
 `;
 
 const Container = styled.div`

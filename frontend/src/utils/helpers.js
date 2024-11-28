@@ -1,4 +1,4 @@
-export default function formatCategoryTitle(title) {
+export function formatCategoryTitle(title) {
   let newTitle;
   if (title.includes("-")) {
     newTitle = title.split("-");

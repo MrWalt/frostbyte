@@ -1,5 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { GlobalStyles } from "./styles/GlobalStyles";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Toaster } from "react-hot-toast";
 
 import AppLayout from "./ui/AppLayout";
 import Contact from "./pages/Contact";
@@ -16,15 +19,14 @@ import Legal from "./pages/Legal";
 import Product from "./pages/Product";
 import Profile from "./features/account/Profile";
 import Security from "./features/account/Security";
-import Dashboard from "./features/account/Dashboard";
+import AdminDashboard from "./features/account/AdminDashboard";
 import Orders from "./features/account/Orders";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import UserProvider from "./features/authentication/UserContext";
 import CartProvider from "./features/cart/CartContext";
 import WishlistProvider from "./features/wishlist/WishlistContext";
 import MenuProvider from "./contexts/MenuContext";
-import { Toaster } from "react-hot-toast";
+import Dashboard from "./pages/Dashboard";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -46,41 +48,47 @@ export default function App() {
           <CartProvider>
             <WishlistProvider>
               <MenuProvider>
-                <Routes>
-                  <Route path="/" element={<AppLayout />}>
-                    <Route index element={<Home />} />
-                    <Route path="contact" element={<Contact />} />
-                    <Route
-                      path="account"
-                      element={
-                        <ProtectedRoute>
-                          <Account />
-                        </ProtectedRoute>
-                      }
-                    >
+                <ScrollToTop>
+                  <Routes>
+                    <Route path="/" element={<AppLayout />}>
+                      <Route index element={<Home />} />
+                      <Route path="contact" element={<Contact />} />
                       <Route
-                        index
-                        element={<Navigate replace to="/account/profile" />}
-                      />
-                      <Route path="/account/profile" element={<Profile />} />
-                      <Route path="/account/orders" element={<Orders />} />
-                      <Route path="/account/security" element={<Security />} />
-                      <Route
-                        path="/account/dashboard"
-                        element={<Dashboard />}
-                      />
+                        path="account"
+                        element={
+                          <ProtectedRoute>
+                            <Account />
+                          </ProtectedRoute>
+                        }
+                      >
+                        <Route
+                          index
+                          element={<Navigate replace to="/account/profile" />}
+                        />
+                        <Route path="/account/profile" element={<Profile />} />
+                        <Route path="/account/orders" element={<Orders />} />
+                        <Route
+                          path="/account/security"
+                          element={<Security />}
+                        />
+                        <Route
+                          path="/account/admin-dashboard"
+                          element={<AdminDashboard />}
+                        />
+                      </Route>
+                      <Route path="checkout" element={<CheckOut />} />
+                      <Route path="dashboard" element={<Dashboard />} />
+                      <Route path="products" element={<Products />} />
+                      <Route path="products/:category" element={<Products />} />
+                      <Route path="cart-summary" element={<CartSummary />} />
+                      <Route path="product/:id" element={<Product />} />
+                      <Route path="login" element={<Login />} />
+                      <Route path="about" element={<About />} />
+                      <Route path="legal" element={<Legal />} />
+                      <Route path="*" element={<PageNotFound />} />
                     </Route>
-                    <Route path="checkout" element={<CheckOut />} />
-                    <Route path="products" element={<Products />} />
-                    <Route path="products/:category" element={<Products />} />
-                    <Route path="cart-summary" element={<CartSummary />} />
-                    <Route path="product/:id" element={<Product />} />
-                    <Route path="login" element={<Login />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="legal" element={<Legal />} />
-                    <Route path="*" element={<PageNotFound />} />
-                  </Route>
-                </Routes>
+                  </Routes>
+                </ScrollToTop>
               </MenuProvider>
             </WishlistProvider>
           </CartProvider>

@@ -6,6 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import FilterOption from "./FilterOption";
 import Button from "./Button";
 import Filter from "./Filter";
+import FilterPrice from "./FilterPrice";
 
 const Box = styled.div`
   position: relative;
@@ -22,9 +23,16 @@ const Box = styled.div`
   padding: 1.6rem 2.4rem;
 `;
 
+const FiltersBox = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.6rem;
+`;
+
 const StyledSpan = styled.span`
   font-size: 2rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 
   display: flex;
   align-items: center;
@@ -49,9 +57,11 @@ export default function FilterMenu() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleClearFilters() {
-    if (!searchParams.get("manufacturer")) return;
+    if (!searchParams.get("manufacturer") && !searchParams.get("stock")) return;
 
+    searchParams.delete("stock");
     searchParams.delete("manufacturer");
+
     searchParams.set("page", 1);
     setSearchParams(searchParams);
   }
@@ -66,22 +76,19 @@ export default function FilterMenu() {
       <StyledButton variation="medium" onClick={handleClearFilters}>
         Clear
       </StyledButton>
-      <Filter option="true" filter="stock" label="In Stock Only" />
 
-      <FilterOption
-        type="Brand"
-        options={isLoading ? [] : brands}
-        key="Brand"
-        filter="manufacturer"
-      />
+      <FilterPrice />
 
-      {/* <FilterOption type="Type" options={["Overclocked", "Stock"]} key="Type" />
-      <FilterOption
-        type="Availability"
-        options={["In Stock", "Out of Stock"]}
-        key="Availability"
-      /> */}
-      {/* <Button>Apply</Button> */}
+      <FiltersBox>
+        <Filter option="true" filter="stock" label="In Stock Only" />
+
+        <FilterOption
+          type="Brand"
+          options={isLoading ? [] : brands}
+          key="Brand"
+          filter="manufacturer"
+        />
+      </FiltersBox>
     </Box>
   );
 }

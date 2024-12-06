@@ -5,7 +5,8 @@ const StyledFilter = styled.div`
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 0.4rem 2.4rem;
+
+  padding: 0.4rem 0.8rem;
 
   cursor: pointer;
 
@@ -39,7 +40,7 @@ const CheckBoxChecked = styled.div`
   border: 2px solid var(--color-brand-800);
 `;
 
-export default function Filter({ option, handler, filter }) {
+export default function Filter({ option, handler, filter, label = "" }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const selected = searchParams.get(filter) || "";
 
@@ -59,7 +60,8 @@ export default function Filter({ option, handler, filter }) {
   return (
     <StyledFilter
       onClick={() => {
-        handler(option);
+        if (handler) handler(option);
+
         handleClick();
       }}
     >
@@ -69,7 +71,7 @@ export default function Filter({ option, handler, filter }) {
         <CheckBox type="checkbox" id={option} />
       )}
 
-      <label htmlFor={option}>{option}</label>
+      <label htmlFor={option}>{label ? label : option}</label>
     </StyledFilter>
   );
 }

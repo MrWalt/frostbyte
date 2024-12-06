@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import FilterOption from "./FilterOption";
-
 import { HiOutlineFunnel } from "react-icons/hi2";
 import { useProducts } from "../features/products/useProducts";
-import Button from "./Button";
 import { useSearchParams } from "react-router-dom";
+
+import FilterOption from "./FilterOption";
+import Button from "./Button";
+import Filter from "./Filter";
 
 const Box = styled.div`
   position: relative;
@@ -23,7 +24,7 @@ const Box = styled.div`
 
 const StyledSpan = styled.span`
   font-size: 2rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.4rem;
 
   display: flex;
   align-items: center;
@@ -35,12 +36,16 @@ const StyledButton = styled(Button)`
   top: 1.2rem;
   right: 1.2rem;
 
-  padding: 0.8rem 1.2rem;
+  padding: 0.6rem 1rem;
   border: 1px solid var(--color-grey-800);
 
   &:hover {
     background-color: var(--color-grey-800);
   }
+`;
+
+const StyledFilter = styled.div`
+  margin-bottom: 0.4rem;
 `;
 
 export default function FilterMenu() {
@@ -65,6 +70,7 @@ export default function FilterMenu() {
       <StyledButton variation="medium" onClick={handleClearFilters}>
         Clear
       </StyledButton>
+      <Filter option="true" filter="stock" label="In Stock Only" />
 
       <FilterOption
         type="Brand"

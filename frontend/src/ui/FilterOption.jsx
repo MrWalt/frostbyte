@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
+import { HiChevronDown } from "react-icons/hi2";
 import Filter from "./Filter";
 
 const StyledDiv = styled.div`
@@ -13,7 +13,13 @@ const StyledDiv = styled.div`
   }
 `;
 
-const StyledSpan = styled.span`
+const OptionsBox = styled.div`
+  padding-left: 1.8rem;
+`;
+
+const StyledButton = styled.button`
+  color: var(--color-grey-0);
+
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -32,6 +38,11 @@ const StyledSpan = styled.span`
 
   svg {
     font-size: 2rem;
+    transition: var(--animation-fast);
+
+    &.toggled {
+      transform: rotate(180deg);
+    }
   }
 `;
 
@@ -49,20 +60,22 @@ export default function FilterOption({ type, options, filter }) {
 
   return (
     <StyledDiv>
-      <StyledSpan onClick={handleToggle}>
+      <StyledButton onClick={handleToggle}>
         {type}
-        {isToggled ? <HiChevronUp /> : <HiChevronDown />}
-      </StyledSpan>
-      {isToggled &&
-        options.map((option) => (
-          <Filter
-            option={option}
-            key={option}
-            selected={selected}
-            handler={handleSelect}
-            filter={filter}
-          />
-        ))}
+        <HiChevronDown className={`${isToggled ? "toggled" : ""}`} />
+      </StyledButton>
+      <OptionsBox>
+        {isToggled &&
+          options.map((option) => (
+            <Filter
+              option={option}
+              key={option}
+              selected={selected}
+              handler={handleSelect}
+              filter={filter}
+            />
+          ))}
+      </OptionsBox>
     </StyledDiv>
   );
 }

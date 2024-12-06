@@ -2,7 +2,9 @@ export async function getProducts(page, category, filter) {
   const res = await fetch(
     `http://localhost:8000/api/v1/products?page=${page}${
       category ? `&category=${category}` : ""
-    }${filter ? `&manufacturer=${filter}` : ""}`
+    }${filter.manufacturer ? `&manufacturer=${filter.manufacturer}` : ""}${
+      filter.stockOnly ? `&stock=${filter.stockOnly}` : ""
+    }`
   );
 
   const data = await res.json();

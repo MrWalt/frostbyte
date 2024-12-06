@@ -14,6 +14,12 @@ class APIFeatures {
     ];
     excludedFields.forEach((item) => delete queryObject[item]);
 
+    // Check if the inStockOnly query is there, if it is filter for stock only and then delete the property to prevent a re-find with stock: true
+    if (queryObject?.stock) {
+      this.query = this.query.find({ stock: { $ne: 0 } });
+      delete queryObject.stock;
+    }
+
     this.query = this.query.find(queryObject);
 
     return this;

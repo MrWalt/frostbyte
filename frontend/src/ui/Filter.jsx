@@ -23,6 +23,11 @@ const StyledFilter = styled.div`
   &:last-child {
     margin-bottom: 1.6rem;
   }
+
+  &.sole-filter {
+    font-size: 1.8rem;
+    padding: 0.4rem 0.8rem;
+  }
 `;
 
 const CheckBox = styled.div`
@@ -64,6 +69,7 @@ export default function Filter({ option, handler, filter, label = "" }) {
 
         handleClick();
       }}
+      className={`${label ? "sole-filter" : ""}`}
     >
       {selected === option ? (
         <CheckBoxChecked type="checkbox" id={option} />

@@ -44,10 +44,6 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const StyledFilter = styled.div`
-  margin-bottom: 0.4rem;
-`;
-
 export default function FilterMenu() {
   const { brands, isLoading } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();

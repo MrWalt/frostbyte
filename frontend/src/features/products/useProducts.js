@@ -9,8 +9,12 @@ export function useProducts() {
   const [searchParams] = useSearchParams();
 
   const filter = {};
-  filter.manufacturer = searchParams.get("manufacturer");
-  filter.stockOnly = searchParams.get("stock");
+  filter.manufacturer = searchParams.get("manufacturer") || null;
+  filter.stockOnly = searchParams.get("stock") || null;
+  filter.price = {
+    min: searchParams.get("minPrice") || null,
+    max: searchParams.get("maxPrice") || null,
+  };
 
   const page = Number(searchParams.get("page")) || 1;
 
@@ -22,6 +26,7 @@ export function useProducts() {
       category,
       filter.manufacturer,
       filter.stockOnly,
+      filter.price,
     ],
   });
 
@@ -37,6 +42,7 @@ export function useProducts() {
         category,
         filter.manufacturer,
         filter.stockOnly,
+        filter.price,
       ],
     });
   }
@@ -50,6 +56,7 @@ export function useProducts() {
         category,
         filter.manufacturer,
         filter.stockOnly,
+        filter.price,
       ],
     });
   }

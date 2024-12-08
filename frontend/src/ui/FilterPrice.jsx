@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 
 const PriceFilter = styled.div`
@@ -24,6 +25,27 @@ const PriceInput = styled.input`
 export default function FilterPrice() {
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(
+    function () {
+      if (minPrice !== "0" && minPrice !== "")
+        searchParams.set("minPrice", minPrice);
+      if (maxPrice !== "0" && maxPrice !== "")
+        searchParams.set("maxPrice", maxPrice);
+
+      if (minPrice === "0" || minPrice === "") searchParams.delete("minPrice");
+
+      if (maxPrice === "0" || maxPrice === "") searchParams.delete("maxPrice");
+
+      return function () {
+        setTimeout(() => {
+          setSearchParams(searchParams);
+        }, 2000);
+      };
+    },
+    [minPrice, maxPrice, searchParams, setSearchParams]
+  );
 
   return (
     <PriceFilter>

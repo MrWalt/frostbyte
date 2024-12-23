@@ -27,6 +27,7 @@ import WishlistProvider from "./features/wishlist/WishlistContext";
 import MenuProvider from "./contexts/MenuContext";
 import Dashboard from "./pages/Dashboard";
 import ScrollToTop from "./utils/ScrollToTop";
+import Order from "./pages/Order";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -85,6 +86,7 @@ export default function App() {
                       <Route path="login" element={<Login />} />
                       <Route path="about" element={<About />} />
                       <Route path="legal" element={<Legal />} />
+                      <Route path="order/:orderId" element={<Order />} />
                       <Route path="*" element={<PageNotFound />} />
                     </Route>
                   </Routes>

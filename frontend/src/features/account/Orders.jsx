@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Heading from "../../ui/Heading";
-import Order from "./Order";
+import Order from "../orders/Order";
 import { useUser } from "../authentication/UserContext";
 
 const Box = styled.div`
@@ -10,7 +10,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
 
-  gap: 0.4rem;
+  gap: 0.8rem;
 `;
 
 export default function Orders() {
@@ -18,7 +18,7 @@ export default function Orders() {
   const { orders } = user;
   return (
     <Box>
-      <Heading variation="tertiary">Orders</Heading>
+      <Heading variation="secondary">Your Orders</Heading>
       {orders.map((order) => (
         <Order
           orderId={order.id}

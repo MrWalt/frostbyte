@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Input from "../../ui/Input";
 import Label from "../../ui/Label";
 import Heading from "../../ui/Heading";
+import { useUser } from "../authentication/UserContext";
+import { useState } from "react";
 
 const Box = styled.div`
   width: 50%;
@@ -47,6 +49,12 @@ const StyledInput = styled(Input)`
 `;
 
 export default function UserDetails() {
+  const { user } = useUser();
+  const [fullName, setFullName] = useState(user.name);
+  const [address, setAddress] = useState(user.address);
+  const [country, setCountry] = useState(user.country);
+  const [city, setCity] = useState(user.city);
+
   return (
     <Box>
       <TextBox>
@@ -58,16 +66,20 @@ export default function UserDetails() {
           <StyledInput
             type="text"
             variation="large"
-            placeholder="First Name*"
-            id="firstName"
+            placeholder="Full Name*"
+            id="fullName"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
           />
-          <Label htmlFor="firstName">First Name*</Label>
+          <Label htmlFor="fullName">Full Name*</Label>
 
           <StyledInput
             type="text"
             variation="large"
             placeholder="Address*"
             id="address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
           />
           <Label htmlFor="address">Address*</Label>
 
@@ -76,6 +88,8 @@ export default function UserDetails() {
             variation="large"
             placeholder="City*"
             id="city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
           />
           <Label htmlFor="city">City*</Label>
 
@@ -88,10 +102,14 @@ export default function UserDetails() {
           <Label htmlFor="aptNumber">Apartment Number</Label>
         </div>
         <div>
-          <StyledInput type="text" variation="large" placeholder="Last Name*" />
-          <Label htmlFor="lastName">Last Name*</Label>
-
-          <StyledInput type="text" variation="large" placeholder="Country*" />
+          <StyledInput
+            type="text"
+            variation="large"
+            placeholder="Country*"
+            id="country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+          />
           <Label htmlFor="country">Country*</Label>
 
           <StyledInput type="text" variation="large" placeholder="Zip Code*" />

@@ -1,3 +1,9 @@
+import Button from "../../ui/Button";
+
 export default function PaymentDetails() {
-  return <div></div>;
+  return (
+    <div>
+      <Button>Place Order</Button>
+    </div>
+  );
 }

@@ -1,15 +1,16 @@
 import styled, { css } from "styled-components";
 import Price from "../../ui/Price";
+import { Link } from "react-router-dom";
 
-const Box = styled.div`
+const StyledLink = styled(Link)`
   width: 100%;
-  height: 10rem;
+  height: 12rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 0.8rem 1.2rem;
+  padding: 1.2rem 1.6rem;
 
   border: 1px solid var(--color-grey-800);
 
@@ -43,8 +44,8 @@ const OrderStatus = styled.span`
   display: inline-block;
 
   position: absolute;
-  bottom: 0.8rem;
-  right: 0.8rem;
+  bottom: 1.2rem;
+  right: 1.2rem;
 
   ${(props) =>
     props.status === "Shipped" &&
@@ -66,8 +67,8 @@ const Date = styled.span`
   font-style: italic;
 
   position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
+  top: 1.2rem;
+  right: 1.2rem;
 `;
 
 export default function Order({
@@ -78,7 +79,7 @@ export default function Order({
   date,
 }) {
   return (
-    <Box>
+    <StyledLink to={`/order/${orderId}`}>
       <div>
         <div>
           <span>Order ID: </span>
@@ -88,9 +89,9 @@ export default function Order({
         <OrderItems>{orderItems.join(", ")}</OrderItems>
       </div>
 
-      <Price price={totalPrice} size="small" />
+      <Price price={totalPrice} size="medium" />
 
       <Date>{date}</Date>
-    </Box>
+    </StyledLink>
   );
 }

@@ -54,8 +54,7 @@ const StyledButton = styled(Button)`
 
 export default function CartSummary() {
   const moveBack = useMoveBack();
-  const { cart } = useCart();
-  const itemsInCart = cart.length;
+  const { itemsInCart } = useCart();
 
   return (
     <StyledSection>

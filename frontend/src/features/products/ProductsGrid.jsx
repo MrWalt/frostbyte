@@ -33,6 +33,18 @@ const StyledSpan = styled.span`
   right: 0;
 `;
 
+const NoItems = styled.span`
+  font-size: 1.8rem;
+  color: var(--color-grey-0);
+  border-bottom: 1px solid var(--color-grey-800);
+
+  padding: 0.4rem 1.6rem;
+
+  margin-top: 2.4rem;
+  grid-column: 1 / -1;
+  justify-self: center;
+`;
+
 export default function ProductsGrid() {
   const { isLoading, products, count } = useProducts();
   const [searchParams] = useSearchParams();
@@ -43,31 +55,38 @@ export default function ProductsGrid() {
 
   return (
     <CardBox>
-      <StyledSpan>
-        Showing <ItemCount>{PAGE_SIZE * (currentPage - 1) + 1} </ItemCount>
-        &mdash;
-        <ItemCount>
-          {" "}
-          {PAGE_SIZE * currentPage > count
-            ? count
-            : PAGE_SIZE * currentPage}{" "}
-        </ItemCount>
-        out of
-        <ItemCount> {count} </ItemCount>
-        products
-      </StyledSpan>
-      {products.map((item) => (
-        <Card
-          title={item.title}
-          price={item.price.USD}
-          shortTitle={item.shortTitle}
-          key={item.id}
-          id={item.id}
-          stock={item.stock}
-          discount={item.discount}
-          discountedPrice={item.discountedPrice?.USD}
-        />
-      ))}
+      {products.length ? (
+        <StyledSpan>
+          Showing <ItemCount>{PAGE_SIZE * (currentPage - 1) + 1} </ItemCount>
+          &mdash;
+          <ItemCount>
+            {" "}
+            {PAGE_SIZE * currentPage > count
+              ? count
+              : PAGE_SIZE * currentPage}{" "}
+          </ItemCount>
+          out of
+          <ItemCount> {count} </ItemCount>
+          products
+        </StyledSpan>
+      ) : null}
+
+      {products.length ? (
+        products.map((item) => (
+          <Card
+            title={item.title}
+            price={item.price.USD}
+            shortTitle={item.shortTitle}
+            key={item.id}
+            id={item.id}
+            stock={item.stock}
+            discount={item.discount}
+            discountedPrice={item.discountedPrice?.USD}
+          />
+        ))
+      ) : (
+        <NoItems>No items found :(</NoItems>
+      )}
     </CardBox>
   );
 }

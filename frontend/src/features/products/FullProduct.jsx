@@ -28,33 +28,15 @@ const ImageBox = styled.div`
   border: 1px solid var(--color-grey-800);
 `;
 
-const BackButtonBox = styled.div`
+const FlexButton = styled(Button)`
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 0.4rem;
 
-  padding: 0.4rem 1.6rem;
-
   justify-self: start;
 
-  border: 1px solid var(--color-grey-800);
-  background-color: var(--color-grey-transparent);
-  backdrop-filter: blur(4px);
-
-  cursor: pointer;
-
-  &:hover {
-    color: var(--color-brand-500);
-
-    button {
-      color: var(--color-brand-500);
-    }
-  }
-
-  svg {
-    transition: var(--animation-fast);
-
+  & svg {
     font-size: 2rem;
   }
 `;
@@ -79,10 +61,10 @@ export default function FullProduct() {
 
   return (
     <Container>
-      <BackButtonBox onClick={moveBack}>
+      <FlexButton variation="medium" onClick={moveBack}>
         <HiArrowLongLeft />
-        <Button variation="medium">Back</Button>
-      </BackButtonBox>
+        Back
+      </FlexButton>
       <ImageBox>IMAGE</ImageBox>
 
       <Details

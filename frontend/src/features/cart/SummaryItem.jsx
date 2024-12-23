@@ -116,7 +116,7 @@ export default function SummaryItem({
       </ProductInfoBox>
 
       <RemoveItemButton
-        variation="medium"
+        variation="mediumNoBox"
         className="clear-cart"
         onClick={() => removeItem(id)}
       >

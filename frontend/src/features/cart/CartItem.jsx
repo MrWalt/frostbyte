@@ -27,10 +27,6 @@ const Box = styled.div`
   &:first-of-type {
     margin-top: 0.8rem;
   }
-
-  &:last-of-type {
-    margin-bottom: 0.8rem;
-  }
 `;
 
 const Image = styled.div`

@@ -24,7 +24,7 @@ function getAll(Model, selectOptions, getBrands = false) {
             "-title -description -price -discountedPrice -specifications -discount -stock -sold -warranty -category -__v -id -_id"
           ),
           req.query
-        ).filter(true);
+        ).filter(["manufacturer"]);
 
         brands = await brandQuery.query;
 

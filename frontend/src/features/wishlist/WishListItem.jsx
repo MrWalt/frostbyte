@@ -5,12 +5,13 @@ import { useWishlist } from "./WishlistContext";
 
 const Box = styled.div`
   width: 100%;
-  height: 28rem;
+  height: 14rem;
 
   font-size: 1.6rem;
   color: var(--color-grey-0);
 
   padding: 1.2rem;
+  margin-bottom: 0.8rem;
 
   text-align: start;
 
@@ -18,28 +19,46 @@ const Box = styled.div`
 
   position: relative;
 
-  &:not(:last-of-type) {
-    margin-bottom: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+
+  &:first-of-type {
+    margin-top: 0.8rem;
   }
 `;
 
+const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 const Image = styled.div`
-  height: 65%;
+  height: 100%;
+  width: 12rem;
+
+  flex-shrink: 0;
+
+  text-align: center;
 `;
 
 const Title = styled.p`
   font-size: 1.8rem;
   margin-bottom: 0.4rem;
+
+  width: 80%;
+`;
+
+const ExtraInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 `;
 
 const DateAdded = styled.p`
   font-size: 1.2rem;
 
   color: var(--color-grey-400);
-
-  position: absolute;
-  bottom: 1.2rem;
-  left: 1.2rem;
 `;
 
 const DeleteButton = styled.button`
@@ -74,9 +93,6 @@ const DeleteButton = styled.button`
 export default function WishListItem({ title, price, dateAdded, id }) {
   const { removeItem } = useWishlist();
 
-  let filteredTitle = title;
-  if (title.length > 38) filteredTitle = title.slice(0, 38).concat("...");
-
   return (
     <Box>
       <DeleteButton onClick={() => removeItem(id)}>
@@ -84,10 +100,14 @@ export default function WishListItem({ title, price, dateAdded, id }) {
       </DeleteButton>
       <Image>IMAGE</Image>
 
-      <Title>{filteredTitle}</Title>
-      <Price size="small" price={price} />
+      <InfoBox>
+        <Title>{title}</Title>
 
-      <DateAdded>Added on {dateAdded}</DateAdded>
+        <ExtraInfo>
+          <Price size="medium" price={price} />
+          <DateAdded>Added on {dateAdded}</DateAdded>
+        </ExtraInfo>
+      </InfoBox>
     </Box>
   );
 }

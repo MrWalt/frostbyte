@@ -34,33 +34,16 @@ const StyledHeading = styled(Heading)`
   margin-bottom: 3.6rem;
 `;
 
-const Box = styled.div`
-  grid-row: 3 / 4;
-
+const ContinueShoppingButton = styled(Button)`
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
 
-  padding: 0.4rem 1.6rem;
-
-  margin-top: 1.2rem;
-
+  margin-top: 1.6rem;
   justify-self: start;
 
-  border: 1px solid var(--color-grey-800);
-  background-color: var(--color-grey-transparent);
-  backdrop-filter: blur(4px);
-
-  cursor: pointer;
-
-  &:hover {
-    color: var(--color-brand-500);
-  }
-
-  svg {
-    transition: var(--animation-fast);
-
+  & svg {
     font-size: 2rem;
   }
 `;
@@ -82,16 +65,17 @@ export default function CartSummary() {
             <StyledHeading variation="secondary">Cart Summary</StyledHeading>
             <SummaryList />
             <SummaryDetails />
-            <Box onClick={moveBack}>
+
+            <ContinueShoppingButton variation="medium" onClick={moveBack}>
               <HiArrowLongLeft />
-              <Button variation="medium">Continue Shopping</Button>
-            </Box>
+              Continue Shopping
+            </ContinueShoppingButton>
           </>
         ) : (
           <>
             <StyledHeading variation="secondary">Cart Is Empty</StyledHeading>
             <Link to="/products">
-              <StyledButton>Go To Products</StyledButton>
+              <StyledButton variation="medium">Go To Products</StyledButton>
             </Link>
           </>
         )}

@@ -24,6 +24,21 @@ const variations = {
     font-size: 1.4rem;
     color: var(--color-grey-0);
 
+    border: 1px solid var(--color-grey-800);
+    background-color: var(--color-grey-transparent);
+    backdrop-filter: blur(4px);
+
+    padding: 0.4rem 1.6rem;
+
+    &:hover {
+      color: var(--color-brand-500);
+    }
+  `,
+  mediumNoBox: css`
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--color-grey-0);
+
     &:hover {
       color: var(--color-brand-500);
     }

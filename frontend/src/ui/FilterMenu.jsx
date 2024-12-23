@@ -52,15 +52,25 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const SmallText = styled.span`
+  font-size: 1.4rem;
+  color: var(--color-grey-500);
+
+  margin-left: 0.8rem;
+  margin-bottom: 0.4rem;
+`;
+
 export default function FilterMenu() {
   const { brands, isLoading } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleClearFilters() {
-    if (!searchParams.get("manufacturer") && !searchParams.get("stock")) return;
+    if (searchParams.size < 1) return;
 
     searchParams.delete("stock");
     searchParams.delete("manufacturer");
+    searchParams.delete("minPrice");
+    searchParams.delete("maxPrice");
 
     searchParams.set("page", 1);
     setSearchParams(searchParams);
@@ -76,7 +86,6 @@ export default function FilterMenu() {
       <StyledButton variation="medium" onClick={handleClearFilters}>
         Clear
       </StyledButton>
-
       <FilterPrice />
 
       <FiltersBox>

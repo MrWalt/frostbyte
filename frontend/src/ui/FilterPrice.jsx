@@ -20,52 +20,58 @@ const PriceInput = styled.input`
   text-align: center;
 
   width: 100%;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 `;
 
 export default function FilterPrice() {
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
+  const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") || "");
+  const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") || "");
 
   useEffect(
     function () {
-      if (minPrice !== "0" && minPrice !== "")
-        searchParams.set("minPrice", minPrice);
-      if (maxPrice !== "0" && maxPrice !== "")
+      if (minPrice) searchParams.set("minPrice", minPrice);
+      if (maxPrice && maxPrice > minPrice)
         searchParams.set("maxPrice", maxPrice);
 
-      if (minPrice === "0" || minPrice === "") searchParams.delete("minPrice");
+      if (!minPrice) searchParams.delete("minPrice");
+      if (!maxPrice) searchParams.delete("maxPrice");
 
-      if (maxPrice === "0" || maxPrice === "") searchParams.delete("maxPrice");
-
-      return function () {
-        setTimeout(() => {
-          setSearchParams(searchParams);
-        }, 2000);
-      };
+      setSearchParams(searchParams);
     },
-    [minPrice, maxPrice, searchParams, setSearchParams]
+    [minPrice, maxPrice]
   );
 
   return (
     <PriceFilter>
       <PriceInput
-        type="text"
+        type="number"
         placeholder="$0"
         value={minPrice}
         onChange={(e) => {
-          if (isNaN(e.target.value)) return;
-          setMinPrice(e.target.value);
+          if (Number(e.target.value) === 0 || e.target.value < 0) {
+            setMinPrice("");
+            return;
+          }
+          setMinPrice(Number(e.target.value));
         }}
       />
       <span>&mdash;</span>
       <PriceInput
-        type="text"
+        type="number"
         placeholder="$20000"
         value={maxPrice}
         onChange={(e) => {
-          if (isNaN(e.target.value)) return;
-          setMaxPrice(e.target.value);
+          if (Number(e.target.value) === 0) {
+            setMaxPrice("");
+            return;
+          }
+          setMaxPrice(Number(e.target.value));
         }}
       />
     </PriceFilter>

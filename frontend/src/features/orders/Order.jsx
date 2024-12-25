@@ -1,16 +1,15 @@
 import styled, { css } from "styled-components";
 import Price from "../../ui/Price";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
 
 const StyledLink = styled(Link)`
   width: 100%;
-  height: 12rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
-  padding: 1.2rem 1.6rem;
+  padding: 1.6rem 1.8rem;
 
   border: 1px solid var(--color-grey-800);
 
@@ -23,23 +22,25 @@ const StyledLink = styled(Link)`
   &:hover {
     background-color: var(--color-grey-800);
   }
+`;
 
-  &:first-of-type {
-    margin-top: 1.6rem;
-  }
+const OrderSpan = styled.span`
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
 `;
 
 const OrderID = styled.span`
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--color-brand-500);
 `;
 
 const OrderItems = styled.p`
-  margin-top: 0.4rem;
+  width: 80%;
+  padding-left: 1.2rem;
 `;
 
 const OrderStatus = styled.span`
-  padding: 0.2rem 1.2rem;
+  padding: 0.4rem 1.6rem;
   margin-left: 1.2rem;
   display: inline-block;
 
@@ -58,6 +59,24 @@ const OrderStatus = styled.span`
     css`
       background-color: var(--color-brand-900);
     `}
+
+    ${(props) =>
+    props.status === "Pending" &&
+    css`
+      border: 1px solid var(--color-brand-900);
+    `}
+`;
+
+const Item = styled.p`
+  font-size: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 0.4rem;
+  }
+`;
+
+const Quanitity = styled.span`
+  color: var(--color-grey-400);
 `;
 
 const Date = styled.span`
@@ -73,25 +92,31 @@ const Date = styled.span`
 
 export default function Order({
   orderId,
-  orderItems,
+  orderedItems,
   totalPrice,
   orderStatus,
-  date,
+  dateOrdered,
 }) {
   return (
     <StyledLink to={`/order/${orderId}`}>
-      <div>
-        <div>
-          <span>Order ID: </span>
-          <OrderID>{orderId}</OrderID>
-          <OrderStatus status={orderStatus}>{orderStatus}</OrderStatus>
-        </div>
-        <OrderItems>{orderItems.join(", ")}</OrderItems>
-      </div>
+      <OrderSpan>
+        Order &mdash; <OrderID>{orderId}</OrderID>
+      </OrderSpan>
 
-      <Price price={totalPrice} size="medium" />
+      <OrderStatus status={orderStatus}>{orderStatus}</OrderStatus>
 
-      <Date>{date}</Date>
+      <OrderItems>
+        {orderedItems.map((item) => (
+          <Item>
+            &mdash; {item.item.title}{" "}
+            {item.quantity > 1 ? <Quanitity>x{item.quantity}</Quanitity> : null}
+          </Item>
+        ))}
+      </OrderItems>
+
+      {/* <Price price={totalPrice} size="medium" /> */}
+
+      <Date>{format(dateOrdered, "dd/MM/yyyy")}</Date>
     </StyledLink>
   );
 }

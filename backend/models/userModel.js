@@ -46,16 +46,13 @@ const userSchema = new mongoose.Schema(
     },
     orders: [
       {
-        totalPrice: Number,
-        orderStatus: String,
-        date: String,
-        items: [String],
+        type: mongoose.Schema.ObjectId,
+        ref: "Order",
       },
     ],
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
-//
 
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();

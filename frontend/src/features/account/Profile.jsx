@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { HiOutlinePencil } from "react-icons/hi2";
 import { useUser } from "../authentication/UserContext";
 import Input from "../../ui/Input";
+import Heading from "../../ui/Heading";
 
 const Box = styled.div`
   width: 100%;
@@ -72,12 +73,18 @@ const Email = styled.span`
   border-bottom: 1px solid var(--color-grey-800);
 `;
 
+const StyledHeading = styled(Heading)`
+  margin-bottom: 2.4rem;
+  margin-left: 1.6rem;
+`;
+
 export default function Profile() {
   const { user } = useUser();
   const { name, email, address, country, city, phone } = user;
 
   return (
     <Box>
+      <StyledHeading variation="secondary">Your profile</StyledHeading>
       <StyledP>Full Name</StyledP>
       <InfoBox>
         <StyledSpan>

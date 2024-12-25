@@ -41,7 +41,9 @@ async function login(req, res) {
       throw new Error("Email and Password are required.");
 
     // Checking if user exits and pass is correct
-    const user = await User.findOne({ email }).select("+password");
+    const user = await User.findOne({ email })
+      .select("+password")
+      .populate("orders");
 
     if (!user || !(await user.correctPassword(password, user.password)))
       throw new Error("Incorrect Email or Password");

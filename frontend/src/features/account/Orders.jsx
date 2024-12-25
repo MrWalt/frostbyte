@@ -13,19 +13,24 @@ const Box = styled.div`
   gap: 0.8rem;
 `;
 
+const StyledHeading = styled(Heading)`
+  margin-bottom: 2.4rem;
+  margin-left: 1.6rem;
+`;
+
 export default function Orders() {
   const { user } = useUser();
   const { orders } = user;
+
   return (
     <Box>
-      <Heading variation="secondary">Your Orders</Heading>
+      <StyledHeading variation="secondary">Your Orders</StyledHeading>
       {orders.map((order) => (
         <Order
+          dateOrdered={order.dateOrdered}
           orderId={order.id}
-          orderItems={order.items}
-          totalPrice={order.totalPrice}
-          orderStatus={order.orderStatus}
-          date={order.date}
+          orderedItems={order.orderedItems}
+          orderStatus={order.status}
           key={order.id}
         />
       ))}

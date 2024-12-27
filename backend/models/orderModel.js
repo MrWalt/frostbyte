@@ -34,9 +34,7 @@ OrderSchema.pre(/^find/, function (next) {
   this.populate({
     path: "user",
     select: "name email",
-  });
-
-  this.populate({
+  }).populate({
     path: "orderedItems",
     populate: {
       path: "item",

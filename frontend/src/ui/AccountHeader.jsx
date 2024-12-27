@@ -12,6 +12,7 @@ import { useUser } from "../features/authentication/UserContext";
 
 const Box = styled.div`
   width: 26rem;
+  min-height: 40rem;
 
   border: 1px solid var(--color-grey-800);
   border-top: none;

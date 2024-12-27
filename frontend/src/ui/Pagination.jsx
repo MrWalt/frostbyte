@@ -2,6 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import Button from "./Button";
 import styled from "styled-components";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { PAGE_SIZE } from "../utils/constants";
 
 const Box = styled.div`
   grid-column: 2 / -1;
@@ -47,7 +48,7 @@ export default function Pagination({ count }) {
     ? 1
     : Number(searchParams.get("page"));
 
-  const pageCount = Math.ceil(count / 20);
+  const pageCount = Math.ceil(count / PAGE_SIZE);
 
   function nextPage() {
     const next = currentPage === pageCount ? currentPage : currentPage + 1;

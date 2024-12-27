@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Heading from "../../ui/Heading";
 import Order from "../orders/Order";
-import { useUser } from "../authentication/UserContext";
+import useOrders from "../orders/useOrders";
+import Loader from "../../ui/Loader";
 
 const Box = styled.div`
   width: 100%;
@@ -19,21 +20,24 @@ const StyledHeading = styled(Heading)`
 `;
 
 export default function Orders() {
-  const { user } = useUser();
-  const { orders } = user;
+  const { orders, isLoading } = useOrders();
 
   return (
     <Box>
-      <StyledHeading variation="secondary">Your Orders</StyledHeading>
-      {orders.map((order) => (
-        <Order
-          dateOrdered={order.dateOrdered}
-          orderId={order.id}
-          orderedItems={order.orderedItems}
-          orderStatus={order.status}
-          key={order.id}
-        />
-      ))}
+      <StyledHeading variation="secondary">Your orders</StyledHeading>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        orders.map((order) => (
+          <Order
+            dateOrdered={order.dateOrdered}
+            orderId={order.id}
+            orderedItems={order.orderedItems}
+            orderStatus={order.status}
+            key={order.id}
+          />
+        ))
+      )}
     </Box>
   );
 }

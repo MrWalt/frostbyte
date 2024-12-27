@@ -34,7 +34,7 @@ const OrderID = styled.span`
   color: var(--color-brand-500);
 `;
 
-const OrderItems = styled.p`
+const OrderItems = styled.div`
   width: 80%;
   padding-left: 1.2rem;
 `;

@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -9,8 +10,28 @@ const orderRoutes = require("./routes/orderRoutes");
 
 const app = express();
 
+app.use(
+  express.json({
+    limit: "10kb",
+  })
+);
+app.use(
+  express.urlencoded({
+    extended: true,
+    limit: "10kb",
+  })
+);
+
+app.use(cookieParser());
+
 app.use(helmet());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Allow only the frontend origin
+    credentials: true, // Allow cookies and credentials
+  })
+);
+
 app.use(morgan("dev"));
 app.use(express.json({ limit: "10kb" }));
 

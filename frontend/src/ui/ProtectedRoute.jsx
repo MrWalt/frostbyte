@@ -8,7 +8,8 @@ export default function ProtectedRoute({ children }) {
 
   useEffect(
     function () {
-      if (!user.isAuthenticated) navigate("/login", { replace: true });
+      if (!user.isAuthenticated && !document.cookie.includes("jwt"))
+        navigate("/login", { replace: true });
     },
     [user.isAuthenticated, navigate]
   );

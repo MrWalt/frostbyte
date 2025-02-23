@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const { promisify } = require("util");
 const User = require("../models/userModel");
 
 function signToken(id) {
@@ -10,11 +11,19 @@ function signToken(id) {
 function createAndSendToken(user, statusCode, res) {
   const token = signToken(user._id);
 
+  const cookieOptions = {
+    expires: new Date(
+      Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
+    ),
+    httpOnly: false,
+  };
+
+  res.cookie("jwt", token, cookieOptions);
+
   user.password = undefined;
 
   res.status(statusCode).json({
     status: "success",
-    token,
     data: { user },
   });
 }
@@ -54,4 +63,30 @@ async function login(req, res) {
   }
 }
 
-module.exports = { signUp, login };
+function logout(req, res) {
+  res.clearCookie("jwt");
+  res.status(200).json({ status: "success" });
+}
+
+async function isLoggedIn(req, res) {
+  try {
+    let token;
+
+    if (req.cookies.jwt) token = req.cookies.jwt;
+
+    if (!token) throw new Error("You are not logged in!");
+
+    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+
+    const user = await User.findById(decoded.id);
+    if (!user) throw new Error("This user does not exist.");
+
+    req.user = user;
+
+    res.status(200).json({ status: "success", data: user });
+  } catch (err) {
+    res.status(401).json({ status: "error", message: err.message });
+  }
+}
+
+module.exports = { signUp, login, isLoggedIn, logout };

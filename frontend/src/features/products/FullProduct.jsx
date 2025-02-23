@@ -140,12 +140,22 @@ const RemoveFromCartButton = styled(Button)`
   border: 1px solid var(--color-brand-500);
 `;
 
+const LoaderContainer = styled.div`
+  width: 100%;
+  margin-top: 9.2rem;
+`;
+
 export default function FullProduct() {
   const { product, isLoading } = useProduct();
   const moveBack = useMoveBack();
   const { isInCart, addItem, removeItem } = useCart();
 
-  if (isLoading) return <Loader size={60} />;
+  if (isLoading)
+    return (
+      <LoaderContainer>
+        <Loader size={80} />
+      </LoaderContainer>
+    );
 
   const {
     title,

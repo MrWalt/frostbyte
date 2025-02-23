@@ -4,9 +4,9 @@ const Container = styled.div`
   margin: 0 auto;
   width: 100%;
 
-  border-top: 1px solid var(--color-brand-500);
-  border-bottom: 1px solid var(--color-brand-500);
-  background-color: var(--color-grey-900);
+  /* border-top: 1px solid var(--color-brand-500);
+  border-bottom: 1px solid var(--color-brand-500); */
+  /* background-color: var(--color-grey-900); */
 
   padding: 6.4rem;
 `;

@@ -6,8 +6,8 @@ import Heading from "./Heading";
 const Container = styled.div`
   width: 100%;
 
-  background-color: var(--color-grey-transparent);
-  backdrop-filter: blur(4px);
+  /* background-color: var(--color-grey-transparent);
+  backdrop-filter: blur(4px); */
 
   padding: 6.4rem;
   padding-top: 2.4rem;

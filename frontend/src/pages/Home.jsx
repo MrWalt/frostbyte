@@ -11,13 +11,22 @@ const StyledSection = styled(Section)`
   padding-bottom: 0;
 `;
 
+const BackgroundBlur = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-grey-transparent);
+  backdrop-filter: blur(2px);
+`;
+
 export default function Home() {
   return (
     <>
       <StyledSection>
-        <Carousel />
-        <FeaturedCards />
-        <Giveaways />
+        <BackgroundBlur>
+          <Carousel />
+          <FeaturedCards />
+          <Giveaways />
+        </BackgroundBlur>
       </StyledSection>
     </>
   );

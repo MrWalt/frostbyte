@@ -44,7 +44,7 @@ const Specification = styled.p`
 export default function Specifications({ specs, warranty }) {
   return (
     <Box>
-      <StyledHeading variation="tertiary">Specifications</StyledHeading>
+      <StyledHeading variation="secondary">Specifications</StyledHeading>
       <WarrantyBox>
         <HiOutlineDocumentText />
         <Warranty>{warranty}</Warranty>{" "}

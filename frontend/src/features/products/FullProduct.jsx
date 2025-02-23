@@ -4,16 +4,29 @@ import Loader from "../../ui/Loader";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { useMoveBack } from "../../hooks/useMoveBack";
 import Specifications from "./Specifications";
-import Details from "./Details";
 import Button from "../../ui/Button";
+import Heading from "../../ui/Heading";
+import Price from "../../ui/Price";
+import { useCart } from "../cart/CartContext";
+
+const Background = styled.div`
+  width: 100%;
+  height: 100%;
+
+  padding-top: 4.8rem;
+  padding-bottom: 6.4rem;
+
+  background-color: var(--color-grey-transparent);
+  backdrop-filter: blur(2px);
+`;
 
 const Container = styled.div`
-  max-width: 112rem;
+  max-width: 110rem;
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 3.6rem 60rem;
+  grid-template-rows: 3.6rem 9.6rem 60rem auto;
 
   gap: 3.6rem;
   row-gap: 1.2rem;
@@ -24,8 +37,74 @@ const Container = styled.div`
 
 const ImageBox = styled.div`
   grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  width: 95%;
+  height: 100%;
 
   border: 1px solid var(--color-grey-800);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-grey-900);
+`;
+
+const Image = styled.img`
+  max-width: 100%;
+  height: 100%;
+`;
+
+const ProductTitle = styled(Heading)`
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+
+  align-self: center;
+  padding: 1.8rem 0 1.8rem 0;
+  padding-left: 2.4rem;
+
+  border-left: 3px solid var(--color-brand-600);
+  border-bottom: 1px solid var(--color-grey-800);
+`;
+
+const CartBox = styled.div`
+  width: 100%;
+
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+  align-self: end;
+
+  display: flex;
+  flex-direction: column;
+`;
+
+const PriceBox = styled.div`
+  padding-bottom: 2.4rem;
+
+  display: flex;
+  align-items: end;
+  gap: 1.8rem;
+`;
+
+const OldPrice = styled.span`
+  display: inline-block;
+  margin-bottom: 4px;
+`;
+
+const SoldOut = styled.p`
+  text-align: center;
+  padding: 1.2rem;
+  border-top: 1px solid var(--color-grey-800);
+  font-size: 2rem;
+`;
+
+const Stock = styled.span`
+  display: inline-block;
+  font-size: 1.4rem;
+  color: var(--color-grey-400);
+
+  border-bottom: 1px solid var(--color-grey-500);
+  margin-bottom: 0.4px;
 `;
 
 const FlexButton = styled(Button)`
@@ -41,9 +120,30 @@ const FlexButton = styled(Button)`
   }
 `;
 
+const AboutBox = styled.div`
+  width: 100%;
+  padding: 2.4rem;
+
+  grid-row: 4 / 5;
+  grid-column: 1 / -1;
+`;
+
+const AboutText = styled.p`
+  font-size: 1.6rem;
+
+  margin-left: 1.2rem;
+  margin-top: 1.8rem;
+`;
+
+const RemoveFromCartButton = styled(Button)`
+  background-color: transparent;
+  border: 1px solid var(--color-brand-500);
+`;
+
 export default function FullProduct() {
   const { product, isLoading } = useProduct();
   const moveBack = useMoveBack();
+  const { isInCart, addItem, removeItem } = useCart();
 
   if (isLoading) return <Loader size={60} />;
 
@@ -60,23 +160,63 @@ export default function FullProduct() {
   } = product;
 
   return (
-    <Container>
-      <FlexButton variation="medium" onClick={moveBack}>
-        <HiArrowLongLeft />
-        Back
-      </FlexButton>
-      <ImageBox>IMAGE</ImageBox>
+    <Background>
+      <Container>
+        <FlexButton variation="medium" onClick={moveBack}>
+          <HiArrowLongLeft />
+          Back
+        </FlexButton>
+        <ImageBox>
+          <Image src="/public/img/product-1.png" />
+        </ImageBox>
 
-      <Details
-        title={title}
-        price={price.USD}
-        discount={discount}
-        stock={stock}
-        id={id}
-        description={description}
-        discountedPrice={discountedPrice?.USD}
-      />
-      <Specifications specs={specifications} warranty={warranty} />
-    </Container>
+        <ProductTitle variation="secondary">{title}</ProductTitle>
+
+        <CartBox>
+          <PriceBox>
+            <Price
+              size="largex2"
+              price={discount ? discountedPrice.USD : price.USD}
+            />
+            {discount !== 0 && (
+              <OldPrice>
+                <Price size="tiny" price={price.USD} />
+              </OldPrice>
+            )}
+            {stock < 4 && stock !== 0 && <Stock>Only {stock} left</Stock>}
+          </PriceBox>
+
+          {stock ? (
+            isInCart(id) ? (
+              <RemoveFromCartButton onClick={() => removeItem(id)}>
+                Remove from cart
+              </RemoveFromCartButton>
+            ) : (
+              <Button
+                onClick={() =>
+                  addItem({
+                    id,
+                    title,
+                    price: price.USD,
+                    quantity: 1,
+                    discount,
+                    discountedPrice: discountedPrice?.USD,
+                  })
+                }
+              >
+                Add to cart
+              </Button>
+            )
+          ) : (
+            <SoldOut>Sold Out</SoldOut>
+          )}
+        </CartBox>
+        <AboutBox>
+          <Heading variation="secondary">About this product</Heading>
+          <AboutText>{description}</AboutText>
+        </AboutBox>
+        <Specifications specs={specifications} warranty={warranty} />
+      </Container>
+    </Background>
   );
 }

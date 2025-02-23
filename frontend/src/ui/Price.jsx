@@ -1,6 +1,9 @@
 import styled, { css } from "styled-components";
 
 const priceSizes = {
+  largex2: css`
+    font-size: 4.2rem;
+  `,
   large: css`
     font-size: 2.8rem;
   `,

@@ -66,15 +66,23 @@ const StyledButton = styled.button`
   }
 `;
 
+const ImageLink = styled(Link)`
+  height: 100%;
+  margin-top: 1.8rem;
+`;
+
 const ImageBox = styled.div`
-  height: 65%;
+  height: 100%;
   width: 100%;
-  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 `;
 
 const Image = styled.img`
-  /* height: 75%; */
+  width: 85%;
 `;
 
 const InformationBox = styled.div`
@@ -199,12 +207,11 @@ export default function Card({
         </StyledButton>
       )}
 
-      <Link to={`/product/${id}`}>
+      <ImageLink to={`/product/${id}`}>
         <ImageBox>
-          IMAGE
-          <Image />
+          <Image src={`/public/img/product-1.png`} />
         </ImageBox>
-      </Link>
+      </ImageLink>
 
       <InformationBox>
         <Title>{title}</Title>

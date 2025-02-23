@@ -5,9 +5,9 @@ import { useCart } from "../cart/CartContext";
 
 const Box = styled.div`
   align-self: start;
+  grid-row: 3 / 4;
 
   border: 1px solid var(--color-grey-800);
-  margin-top: 4.8rem;
 `;
 
 const Title = styled.p`

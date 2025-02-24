@@ -15,9 +15,12 @@ const Box = styled.div`
   min-height: 40rem;
 
   border: 1px solid var(--color-grey-800);
-  border-top: none;
+  /* border-top: none; */
 
   border-right: 2px solid var(--color-brand-700);
+  border-bottom: 1px solid var(---color-brand-700);
+
+  /* background-color: var(--color-brand-900); */
 
   display: flex;
   flex-direction: column;
@@ -29,45 +32,56 @@ const Box = styled.div`
 
 const StyledLink = styled(NavLink)`
   padding: 1.6rem 3.2rem;
-  border-bottom: 1px solid var(--color-grey-800);
 
   transition: var(--animation-fast);
+
+  overflow: hidden;
 
   display: flex;
   align-items: center;
   gap: 0.6rem;
 
+  position: relative;
+
   svg {
     font-size: 2rem;
   }
 
-  &:first-of-type {
-    border-top: 1px solid var(--color-grey-800);
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* transform: translateX(100px); */
 
-    &:hover {
-      border-top: 1px solid var(--color-brand-700);
-    }
+    height: 100%;
+    width: 0;
+
+    background-color: var(--color-brand-700);
+
+    transition: var(--animation-medium);
+
+    z-index: -1;
   }
 
-  &:hover {
-    background-color: var(--color-brand-700);
+  &:hover&::before {
+    width: 100%;
   }
 
   &.active {
     background-color: var(--color-brand-700);
-
-    &:first-of-type {
-      border-top: 1px solid var(--color-brand-700);
-    }
   }
 `;
 
 const StyledButton = styled(Button)`
-  border: none;
-  background-color: var(--color-brand-700);
+  /* border: none; */
+  background-color: transparent;
+  border: 2px solid var(--color-brand-700);
+  border-right: none;
+  border-color: var(--color-brand-700);
 
   &:hover {
-    background-color: var(--color-brand-800);
+    background-color: var(--color-brand-700);
   }
 `;
 

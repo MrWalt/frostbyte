@@ -9,6 +9,7 @@ export async function createOrder(order) {
 
   const data = await res.json();
 
+  console.log(data);
   if (data.status === "error") throw new Error(data.message);
 
   return data;

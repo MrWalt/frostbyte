@@ -1,16 +1,12 @@
 const express = require("express");
-const {
-  signUp,
-  login,
-  isLoggedIn,
-  logout,
-} = require("../controllers/authController");
+const { protect } = require("../controllers/authController");
+
+const { updateMe } = require("../controllers/userController");
 
 const router = express.Router();
 
-router.route("/signup").post(signUp);
-router.route("/login").post(login);
-router.route("/logout").get(logout);
-router.route("/is-logged-in").get(isLoggedIn);
+router.use(protect);
+
+router.route("/update-me").patch(updateMe);
 
 module.exports = router;

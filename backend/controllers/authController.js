@@ -1,6 +1,8 @@
 const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
 const User = require("../models/userModel");
+const AppError = require("../utils/AppError");
+const catchAsync = require("../utils/catchAsync");
 
 function signToken(id) {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -28,65 +30,83 @@ function createAndSendToken(user, statusCode, res) {
   });
 }
 
-async function signUp(req, res) {
-  try {
-    const newUser = await User.create(req.body);
+const signUp = catchAsync(async function (req, res, next) {
+  const newUser = await User.create(req.body);
 
-    res.status(201).json({ status: "success", data: newUser });
-  } catch (err) {
-    res.status(400).json({
-      status: "error",
-      message: "There was an error signing up.",
-      err,
-    });
-  }
-}
+  createAndSendToken(newUser, 201, res);
+});
 
-async function login(req, res) {
-  try {
-    const { email, password } = req.body;
+const login = catchAsync(async function (req, res, next) {
+  const { email, password } = req.body;
 
-    if (!email || !password)
-      throw new Error("Email and Password are required.");
+  if (!email || !password)
+    next(new AppError("Email and Password are required", 401));
 
-    // Checking if user exits and pass is correct
-    const user = await User.findOne({ email })
-      .select("+password")
-      .populate("orders");
+  // Checking if user exits and pass is correct
+  const user = await User.findOne({ email })
+    .select("+password")
+    .populate("orders");
 
-    if (!user || !(await user.correctPassword(password, user.password)))
-      throw new Error("Incorrect Email or Password");
+  if (!user || !(await user.correctPassword(password, user.password)))
+    next(new AppError("Incorrect Email or Password", 401));
 
-    createAndSendToken(user, 200, res);
-  } catch (err) {
-    res.status(401).json({ status: "error", message: err.message });
-  }
-}
+  createAndSendToken(user, 200, res);
+});
 
 function logout(req, res) {
   res.clearCookie("jwt");
   res.status(200).json({ status: "success" });
 }
 
-async function isLoggedIn(req, res) {
-  try {
-    let token;
+const isLoggedIn = catchAsync(async function (req, res, next) {
+  let token;
 
-    if (req.cookies.jwt) token = req.cookies.jwt;
+  if (req.cookies.jwt) token = req.cookies.jwt;
 
-    if (!token) throw new Error("You are not logged in!");
+  if (!token) next(new AppError("No previous login saved", 401));
 
-    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
 
-    const user = await User.findById(decoded.id);
-    if (!user) throw new Error("This user does not exist.");
+  const user = await User.findById(decoded.id);
+  if (!user)
+    next(new AppError("This user belonging to this token does not exist", 401));
 
-    req.user = user;
+  req.user = user;
 
-    res.status(200).json({ status: "success", data: user });
-  } catch (err) {
-    res.status(401).json({ status: "error", message: err.message });
-  }
-}
+  res.status(200).json({ status: "success", data: { user } });
+});
 
-module.exports = { signUp, login, isLoggedIn, logout };
+const protect = catchAsync(async function (req, res, next) {
+  let token;
+
+  if (req.cookies.jwt) token = req.cookies.jwt;
+
+  if (!token) next(new AppError("You must be logged in to do that", 401));
+
+  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+
+  const user = await User.findById(decoded.id);
+  if (!user)
+    return next(
+      new AppError("The user belonging to this token no longer exits", 401)
+    );
+
+  // if (user.changedPasswordAfterToken(decoded.iat))
+  //   return next(
+  //     new AppError("Password was recently changed. Please log in again", 401)
+  //   );
+
+  req.user = user;
+
+  next();
+});
+
+const restrictTo = function (...roles) {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role))
+      return next(new AppError("You do not have persmisson to do this", 403));
+    next();
+  };
+};
+
+module.exports = { signUp, login, isLoggedIn, logout, protect, restrictTo };

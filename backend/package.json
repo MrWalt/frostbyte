@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "npx nodemon server.js",
+    "prod": "NODE_ENV=production nodemon server.js",
     "upload": "node ./data/upload-dev-data --upload",
     "delete": "node ./data/upload-dev-data --delete"
   },

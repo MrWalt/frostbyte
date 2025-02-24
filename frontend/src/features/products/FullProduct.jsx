@@ -104,7 +104,8 @@ const Stock = styled.span`
   color: var(--color-grey-400);
 
   border-bottom: 1px solid var(--color-grey-500);
-  margin-bottom: 0.4px;
+  margin-bottom: 0.8px;
+  margin-left: auto;
 `;
 
 const FlexButton = styled(Button)`

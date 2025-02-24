@@ -3,6 +3,10 @@ import { HiOutlinePencil } from "react-icons/hi2";
 import { useUser } from "../authentication/UserContext";
 import Input from "../../ui/Input";
 import Heading from "../../ui/Heading";
+import { useState } from "react";
+import Button from "../../ui/Button";
+import { useUpdateUser } from "../authentication/useUpdateUser";
+import Loader from "../../ui/Loader";
 
 const Box = styled.div`
   width: 100%;
@@ -35,6 +39,18 @@ const StyledInput = styled(Input)`
   width: 100%;
 
   margin-top: 0.4rem;
+
+  &:disabled {
+    color: var(--color-brand-900);
+  }
+
+  &::placeholder {
+    color: var(--color-grey-500);
+  }
+
+  &:disabled::placeholder {
+    color: var(--color-grey-700);
+  }
 `;
 
 const StyledSpan = styled.div`
@@ -75,85 +91,140 @@ const Email = styled.span`
 
 const StyledHeading = styled(Heading)`
   margin-bottom: 2.4rem;
-  margin-left: 1.6rem;
+  /* margin-left: 1.6rem; */
+`;
+
+const InfoContainer = styled.div`
+  padding-left: 3.2rem;
+  margin-bottom: 4.8rem;
+`;
+
+const StyledButton = styled(Button)`
+  width: 32rem;
+
+  &:disabled {
+    border: 2px solid var(--color-brand-500);
+    background-color: transparent;
+    cursor: not-allowed;
+  }
 `;
 
 export default function Profile() {
   const { user } = useUser();
-  const { name, email, address, country, city, phone } = user;
+  const { updateUser, isPending } = useUpdateUser();
+
+  const [changedInfo, setChangedInfo] = useState(false);
+  const [name, setName] = useState(user.name);
+  const [address, setAddress] = useState(user.address || "");
+  const [country, setCountry] = useState(user.country || "");
+  const [city, setCity] = useState(user.city || "");
+  const [phone, setPhone] = useState(user.phone || "");
+  // const { name, email, address, country, city, phone } = user;
+
+  function changeInfo(func, value) {
+    setChangedInfo(true);
+    func(value);
+  }
 
   return (
     <Box>
       <StyledHeading variation="secondary">Your profile</StyledHeading>
-      <StyledP>Full Name</StyledP>
-      <InfoBox>
-        <StyledSpan>
-          <StyledInput
-            type="text"
-            placeholder={name}
-            spellCheck="false"
-            variation="minimal"
-          />
-          <HiOutlinePencil />
-        </StyledSpan>
-      </InfoBox>
 
-      <StyledP>E-Mail</StyledP>
-      <InfoBox>
-        <Email>{email}</Email>
-      </InfoBox>
+      <InfoContainer>
+        <StyledP>Full Name</StyledP>
+        <InfoBox>
+          <StyledSpan>
+            <StyledInput
+              type="text"
+              placeholder="John Smith"
+              spellCheck="false"
+              variation="minimal"
+              value={name}
+              disabled={isPending}
+              onChange={(e) => changeInfo(setName, e.target.value)}
+            />
+            <HiOutlinePencil />
+          </StyledSpan>
+        </InfoBox>
 
-      <StyledP>Address</StyledP>
-      <InfoBox>
-        <StyledSpan>
-          <StyledInput
-            type="text"
-            placeholder={address}
-            spellCheck="false"
-            variation="minimal"
-          />
-          <HiOutlinePencil />
-        </StyledSpan>
-      </InfoBox>
+        <StyledP>E-Mail</StyledP>
+        <InfoBox>
+          <Email>{user.email}</Email>
+        </InfoBox>
 
-      <StyledP>Country</StyledP>
-      <InfoBox>
-        <StyledSpan>
-          <StyledInput
-            type="text"
-            placeholder={country}
-            spellCheck="false"
-            variation="minimal"
-          />
-          <HiOutlinePencil />
-        </StyledSpan>
-      </InfoBox>
+        <StyledP>Address</StyledP>
+        <InfoBox>
+          <StyledSpan>
+            <StyledInput
+              type="text"
+              placeholder="34 Parkstrasse"
+              spellCheck="false"
+              variation="minimal"
+              value={address}
+              disabled={isPending}
+              onChange={(e) => changeInfo(setAddress, e.target.value)}
+            />
+            <HiOutlinePencil />
+          </StyledSpan>
+        </InfoBox>
 
-      <StyledP>City</StyledP>
-      <InfoBox>
-        <StyledSpan>
-          <StyledInput
-            type="text"
-            placeholder={city}
-            spellCheck="false"
-            variation="minimal"
-          />
-          <HiOutlinePencil />
-        </StyledSpan>
-      </InfoBox>
+        <StyledP>Country</StyledP>
+        <InfoBox>
+          <StyledSpan>
+            <StyledInput
+              type="text"
+              placeholder="Germany"
+              spellCheck="false"
+              variation="minimal"
+              value={country}
+              disabled={isPending}
+              onChange={(e) => changeInfo(setCountry, e.target.value)}
+            />
+            <HiOutlinePencil />
+          </StyledSpan>
+        </InfoBox>
 
-      <StyledP>Phone Number</StyledP>
-      <InfoBox>
-        <StyledSpan>
-          <StyledInput
-            type="text"
-            placeholder={phone}
-            spellCheck="false"
-            variation="minimal"
-          />
-          <HiOutlinePencil />
-        </StyledSpan>
-      </InfoBox>
+        <StyledP>City</StyledP>
+        <InfoBox>
+          <StyledSpan>
+            <StyledInput
+              type="text"
+              placeholder="Berlin"
+              spellCheck="false"
+              variation="minimal"
+              value={city}
+              disabled={isPending}
+              onChange={(e) => changeInfo(setCity, e.target.value)}
+            />
+            <HiOutlinePencil />
+          </StyledSpan>
+        </InfoBox>
+
+        <StyledP>Phone Number</StyledP>
+        <InfoBox>
+          <StyledSpan>
+            <StyledInput
+              type="text"
+              placeholder="(+49) 163 555 1584"
+              spellCheck="false"
+              variation="minimal"
+              value={phone}
+              disabled={isPending}
+              onChange={(e) => changeInfo(setPhone, e.target.value)}
+            />
+            <HiOutlinePencil />
+          </StyledSpan>
+        </InfoBox>
+      </InfoContainer>
+      <StyledButton
+        disabled={isPending || !changedInfo}
+        onClick={() => {
+          updateUser({ name, country, city, phone, address });
+          setChangedInfo(false);
+        }}
+      >
+        {isPending ? <Loader size={44} /> : "Update settings"}
+      </StyledButton>
     </Box>
   );
 }

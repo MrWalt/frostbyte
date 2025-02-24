@@ -12,7 +12,7 @@ export default function UserProvider({ children }) {
       const data = await isLoggedin();
 
       if (data.status === "success") {
-        setUser({ ...data.data, isAuthenticated: true });
+        setUser({ ...data.data.user, isAuthenticated: true });
         return;
       }
 

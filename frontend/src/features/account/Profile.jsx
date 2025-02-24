@@ -219,7 +219,7 @@ export default function Profile() {
       <StyledButton
         disabled={isPending || !changedInfo}
         onClick={() => {
-          updateUser({ name, country, city, phone, address });
+          updateUser({ name, country, city, phone, address, type: "data" });
           setChangedInfo(false);
         }}
       >

@@ -9,10 +9,10 @@ export function useUpdateUser() {
 
   const { mutate: updateUser, isPending } = useMutation({
     mutationFn: (user) => updateUserApi(user),
-    onSuccess: (user) => {
-      handleSetUser({ ...user.data.user, isAuthenticated: true });
+    onSuccess: (data) => {
+      handleSetUser({ ...data.data.user, isAuthenticated: true });
       //   navigate("/account/profile");
-      toast.success("Successfully updated data");
+      toast.success(`Successfully updated data`);
     },
     onError: (err) => {
       toast.error(err.message);

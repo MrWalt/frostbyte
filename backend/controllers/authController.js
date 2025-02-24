@@ -53,6 +53,22 @@ const login = catchAsync(async function (req, res, next) {
   createAndSendToken(user, 200, res);
 });
 
+const updatePassword = catchAsync(async function (req, res, next) {
+  const user = await User.findById(req.user.id).select("+password");
+
+  const { password, passwordNew, passwordConfirm } = req.body;
+
+  if (!password || !(await user.correctPassword(password, user.password)))
+    next(new AppError("Incorrect current password", 401));
+
+  user.password = passwordNew;
+  user.passwordConfirm = passwordConfirm;
+  // Cant call User.findByIdAndUpdate as it will not trigger save middleware or run validation
+  await user.save();
+
+  createAndSendToken(user, 201, res);
+});
+
 function logout(req, res) {
   res.clearCookie("jwt");
   res.status(200).json({ status: "success" });
@@ -109,4 +125,12 @@ const restrictTo = function (...roles) {
   };
 };
 
-module.exports = { signUp, login, isLoggedIn, logout, protect, restrictTo };
+module.exports = {
+  signUp,
+  login,
+  isLoggedIn,
+  logout,
+  protect,
+  restrictTo,
+  updatePassword,
+};

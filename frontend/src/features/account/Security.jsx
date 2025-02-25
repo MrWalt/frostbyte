@@ -15,11 +15,6 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const InputBox = styled.div`
-  /* padding-left: 3.2rem; */
-  margin-bottom: 4.8rem;
-`;
-
 const Box = styled.div`
   width: 100%;
 
@@ -31,33 +26,60 @@ const Box = styled.div`
       margin-top: 3.6rem;
     }
   }
+`;
 
-  button {
-    margin-top: 1.2rem;
-
-    width: 32rem;
-  }
+const StyledHeading = styled(Heading)`
+  margin-bottom: 4.8rem;
 `;
 
 const StyledButton = styled(Button)`
   border: 2px solid var(--color-brand-600);
+  margin-top: 4.8rem;
+  width: 32rem;
+
   &:disabled {
     background-color: transparent;
     cursor: not-allowed;
   }
 `;
 
+const StyledLabel = styled(Label)`
+  span {
+    font-size: 1.4rem;
+    color: var(--color-red-500);
+    animation: blink 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+`;
+
 export default function Security() {
+  const { updatePassword, isPending } = useUpdatePassword();
+
   const [password, setPassword] = useState("");
   const [passwordNew, setPasswordNew] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
+  const [lengthError, setLengthError] = useState(false);
 
-  const { updatePassword, isPending } = useUpdatePassword();
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (passwordNew.length < 8) {
+      setLengthError(true);
+      return;
+    }
+    setLengthError(false);
+    updatePassword({ password, passwordNew, passwordConfirm });
+    setPassword("");
+    setPasswordNew("");
+    setPasswordConfirm("");
+  }
+
   return (
     <Container>
       <Box>
-        <Heading variation="secondary">Update Your Password</Heading>
-        <InputBox>
+        <StyledHeading variation="secondary">
+          Update Your Password
+        </StyledHeading>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <Input
             type="password"
             placeholder="Current Password"
@@ -75,7 +97,10 @@ export default function Security() {
             disabled={isPending}
             onChange={(e) => setPasswordNew(e.target.value)}
           />
-          <Label>New Password</Label>
+          <StyledLabel>
+            New Password{" "}
+            {lengthError ? <span>must be at least 8 characters</span> : null}
+          </StyledLabel>
           <Input
             type="password"
             placeholder="Confirm Password"
@@ -85,18 +110,14 @@ export default function Security() {
             onChange={(e) => setPasswordConfirm(e.target.value)}
           />
           <Label>Confirm Password</Label>
-        </InputBox>
-        <StyledButton
-          disabled={!password || !passwordNew || !passwordConfirm || isPending}
-          onClick={() => {
-            updatePassword({ password, passwordNew, passwordConfirm });
-            setPassword("");
-            setPasswordNew("");
-            setPasswordConfirm("");
-          }}
-        >
-          {isPending ? <Loader size={44} /> : "Update password"}
-        </StyledButton>
+          <StyledButton
+            disabled={
+              !password || !passwordNew || !passwordConfirm || isPending
+            }
+          >
+            {isPending ? <Loader size={44} /> : "Update password"}
+          </StyledButton>
+        </form>
       </Box>
     </Container>
   );

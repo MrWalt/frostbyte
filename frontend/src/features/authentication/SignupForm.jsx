@@ -7,6 +7,8 @@ import Button from "../../ui/Button";
 import { Link } from "react-router-dom";
 import { useSignup } from "../../features/authentication/useSignup";
 import Loader from "../../ui/Loader";
+import { useState } from "react";
+import { HiOutlineEye, HiOutlineEyeSlash } from "react-icons/hi2";
 
 const Container = styled.div`
   margin: 4.8rem auto;
@@ -51,6 +53,26 @@ const StyledDiv = styled.div`
   &:last-of-type {
     padding-top: 1.8rem;
   }
+
+  svg {
+    position: absolute;
+    bottom: 26px;
+    right: 10px;
+    color: var(--color-grey-500);
+
+    width: 2.8rem;
+    height: 2.8rem;
+
+    padding: 0.4rem;
+
+    cursor: pointer;
+
+    transition: var(--animation-medium);
+
+    &:hover {
+      background-color: var(--color-grey-200);
+    }
+  }
 `;
 
 const Error = styled.span`
@@ -93,6 +115,8 @@ const StyledLabel = styled(Label)`
 `;
 
 export default function SignupForm() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
   const { register, handleSubmit, formState, reset } = useForm({
     mode: "onSubmit",
     reValidateMode: "onChange",
@@ -132,7 +156,7 @@ export default function SignupForm() {
         <StyledDiv>
           {errors?.password && <Error>{errors.password.message}</Error>}
           <Input
-            type="password"
+            type={showPassword ? "text" : "password"}
             placeholder="Password"
             id="password"
             spellCheck="false"
@@ -151,6 +175,13 @@ export default function SignupForm() {
               ""
             )}
           </StyledLabel>
+          {showPassword ? (
+            <HiOutlineEye onClick={() => setShowPassword((value) => !value)} />
+          ) : (
+            <HiOutlineEyeSlash
+              onClick={() => setShowPassword((value) => !value)}
+            />
+          )}
         </StyledDiv>
 
         <StyledDiv>
@@ -158,7 +189,7 @@ export default function SignupForm() {
             <Error>{errors.passwordConfirm.message}</Error>
           )}
           <Input
-            type="password"
+            type={showPasswordConfirm ? "text" : "password"}
             placeholder="Confirm Password"
             id="password-confirm"
             spellCheck="false"
@@ -169,6 +200,15 @@ export default function SignupForm() {
             })}
           />
           <Label htmlFor="password-confirm">Confirm Password</Label>
+          {showPasswordConfirm ? (
+            <HiOutlineEye
+              onClick={() => setShowPasswordConfirm((value) => !value)}
+            />
+          ) : (
+            <HiOutlineEyeSlash
+              onClick={() => setShowPasswordConfirm((value) => !value)}
+            />
+          )}
         </StyledDiv>
 
         {/* Button to submit */}

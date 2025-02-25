@@ -114,12 +114,11 @@ export default function Profile() {
   const { updateUser, isPending } = useUpdateUser();
 
   const [changedInfo, setChangedInfo] = useState(false);
-  const [name, setName] = useState(user.name);
+  const [name, setName] = useState(user.name || "");
   const [address, setAddress] = useState(user.address || "");
   const [country, setCountry] = useState(user.country || "");
   const [city, setCity] = useState(user.city || "");
   const [phone, setPhone] = useState(user.phone || "");
-  // const { name, email, address, country, city, phone } = user;
 
   function changeInfo(func, value) {
     setChangedInfo(true);

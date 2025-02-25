@@ -66,6 +66,7 @@ export default function Security() {
       setLengthError(true);
       return;
     }
+
     setLengthError(false);
     updatePassword({ password, passwordNew, passwordConfirm });
     setPassword("");
@@ -77,7 +78,7 @@ export default function Security() {
     <Container>
       <Box>
         <StyledHeading variation="secondary">
-          Update Your Password
+          Update your password
         </StyledHeading>
         <form onSubmit={(e) => handleSubmit(e)}>
           <Input
@@ -89,6 +90,7 @@ export default function Security() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Label>Current Password</Label>
+
           <Input
             type="password"
             placeholder="New Password"
@@ -101,6 +103,7 @@ export default function Security() {
             New Password{" "}
             {lengthError ? <span>must be at least 8 characters</span> : null}
           </StyledLabel>
+
           <Input
             type="password"
             placeholder="Confirm Password"

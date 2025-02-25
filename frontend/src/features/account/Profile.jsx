@@ -101,9 +101,9 @@ const InfoContainer = styled.div`
 
 const StyledButton = styled(Button)`
   width: 32rem;
+  border: 2px solid var(--color-brand-600);
 
   &:disabled {
-    border: 2px solid var(--color-brand-500);
     background-color: transparent;
     cursor: not-allowed;
   }

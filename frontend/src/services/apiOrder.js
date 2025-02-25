@@ -2,6 +2,7 @@ export async function createOrder(order) {
   const res = await fetch("http://localhost:8000/api/v1/orders", {
     method: "POST",
     body: JSON.stringify(order),
+    credentials: "include",
     headers: {
       "Content-Type": "application/json",
     },
@@ -9,8 +10,7 @@ export async function createOrder(order) {
 
   const data = await res.json();
 
-  console.log(data);
-  if (data.status === "error") throw new Error(data.message);
+  if (data.status === "error" || "fail") throw new Error(data.message);
 
   return data;
 }

@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import Heading from "../../ui/Heading";
-import { Link } from "react-router-dom";
-import Button from "../../ui/Button";
+import { useForm } from "react-hook-form";
 import Input from "../../ui/Input";
 import Label from "../../ui/Label";
-import { useLogin } from "./useLogin";
-import { useForm } from "react-hook-form";
+import Button from "../../ui/Button";
+import { Link } from "react-router-dom";
+import { useSignup } from "../../features/authentication/useSignup";
 import Loader from "../../ui/Loader";
-import { useEffect, useRef } from "react";
 
 const Container = styled.div`
   margin: 4.8rem auto;
@@ -37,6 +36,11 @@ const Container = styled.div`
 const StyledHeading = styled(Heading)`
   text-align: center;
   padding-bottom: 4.8rem;
+  padding: 0 2.4rem;
+
+  span {
+    color: var(--color-brand-500);
+  }
 `;
 
 const StyledDiv = styled.div`
@@ -80,33 +84,34 @@ const StyledSpan = styled.span`
   }
 `;
 
-export default function LoginForm() {
-  const passwordInputRef = useRef();
-  const { register, handleSubmit, formState, reset, getValues } = useForm();
-  const { login, isPending } = useLogin();
-  const { errors } = formState;
-  const { ref, ...rest } = register("password", {
-    required: "This field is required.",
-  });
+const StyledLabel = styled(Label)`
+  span {
+    font-size: 1.4rem;
+    color: var(--color-red-500);
+    animation: blink 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+`;
 
-  useEffect(
-    function () {
-      if (!isPending && getValues().email) passwordInputRef.current.focus();
-    },
-    [isPending, getValues]
-  );
+export default function SignupForm() {
+  const { register, handleSubmit, formState, reset } = useForm({
+    mode: "onSubmit",
+    reValidateMode: "onChange",
+  });
+  const { errors } = formState;
+  const { signup, isPending } = useSignup();
 
   function onSubmit(data) {
-    login(data);
-    reset({ email: data.email, password: "" });
+    signup(data);
+    reset({ email: data.email, password: data.password, passwordConfirm: "" });
   }
 
   return (
     <Container>
-      <StyledHeading variation="primary">Login to your account</StyledHeading>
+      <StyledHeading variation="primary">
+        Join us <span>today</span>
+      </StyledHeading>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* Input field for Email */}
         <StyledDiv>
           {errors?.email && <Error>{errors.email.message}</Error>}
           <Input
@@ -133,22 +138,47 @@ export default function LoginForm() {
             spellCheck="false"
             disabled={isPending}
             variation="large"
-            {...rest}
-            ref={(e) => {
-              ref(e);
-              passwordInputRef.current = e;
-            }}
+            {...register("password", {
+              required: "This field is required.",
+              minLength: 8,
+            })}
           />
-          <Label htmlFor="password">Password</Label>
+          <StyledLabel htmlFor="password">
+            Password{" "}
+            {errors.password?.type === "minLength" ? (
+              <span>must be longer than 8 characters</span>
+            ) : (
+              ""
+            )}
+          </StyledLabel>
+        </StyledDiv>
+
+        <StyledDiv>
+          {errors?.passwordConfirm && (
+            <Error>{errors.passwordConfirm.message}</Error>
+          )}
+          <Input
+            type="password"
+            placeholder="Confirm Password"
+            id="password-confirm"
+            spellCheck="false"
+            disabled={isPending}
+            variation="large"
+            {...register("passwordConfirm", {
+              required: "This field is required.",
+            })}
+          />
+          <Label htmlFor="password-confirm">Confirm Password</Label>
         </StyledDiv>
 
         {/* Button to submit */}
         <StyledDiv>
           <Button disabled={isPending}>
-            {isPending ? <Loader size={44} /> : "Login"}
+            {" "}
+            {isPending ? <Loader size={44} /> : "Create Account"}
           </Button>
           <StyledSpan>
-            Don't have an account? <Link to="/signup">Create an account</Link>
+            Already have an account? <Link to="/login">Login</Link>
           </StyledSpan>
         </StyledDiv>
       </form>

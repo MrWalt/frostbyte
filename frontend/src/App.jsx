@@ -28,6 +28,7 @@ import MenuProvider from "./contexts/MenuContext";
 import Dashboard from "./pages/Dashboard";
 import ScrollToTop from "./utils/ScrollToTop";
 import Order from "./pages/Order";
+import SignUp from "./pages/SignUp";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -84,6 +85,7 @@ export default function App() {
                       <Route path="cart-summary" element={<CartSummary />} />
                       <Route path="product/:id" element={<Product />} />
                       <Route path="login" element={<Login />} />
+                      <Route path="signup" element={<SignUp />} />
                       <Route path="about" element={<About />} />
                       <Route path="legal" element={<Legal />} />
                       <Route path="order/:orderId" element={<Order />} />

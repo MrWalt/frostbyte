@@ -133,4 +133,14 @@ input, button {
         transform: translateY(0);
     }
 }
+
+@keyframes blink {
+    0% {
+        color: var(--color-red-100);
+    }
+
+    100% {
+        color: var(--color-red-500)
+    }
+}
 `;

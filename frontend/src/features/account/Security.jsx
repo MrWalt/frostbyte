@@ -40,8 +40,8 @@ const Box = styled.div`
 `;
 
 const StyledButton = styled(Button)`
+  border: 2px solid var(--color-brand-600);
   &:disabled {
-    border: 2px solid var(--color-brand-600);
     background-color: transparent;
     cursor: not-allowed;
   }

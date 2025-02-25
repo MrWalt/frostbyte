@@ -90,18 +90,17 @@ const Email = styled.span`
 `;
 
 const StyledHeading = styled(Heading)`
-  margin-bottom: 2.4rem;
-  /* margin-left: 1.6rem; */
+  margin-bottom: 3.6rem;
 `;
 
-const InfoContainer = styled.div`
+const Form = styled.form`
   padding-left: 3.2rem;
-  margin-bottom: 4.8rem;
 `;
 
 const StyledButton = styled(Button)`
   width: 32rem;
   border: 2px solid var(--color-brand-600);
+  margin-top: 3.2rem;
 
   &:disabled {
     background-color: transparent;
@@ -129,7 +128,7 @@ export default function Profile() {
     <Box>
       <StyledHeading variation="secondary">Your profile</StyledHeading>
 
-      <InfoContainer>
+      <Form>
         <StyledP>Full Name</StyledP>
         <InfoBox>
           <StyledSpan>
@@ -214,16 +213,16 @@ export default function Profile() {
             <HiOutlinePencil />
           </StyledSpan>
         </InfoBox>
-      </InfoContainer>
-      <StyledButton
-        disabled={isPending || !changedInfo}
-        onClick={() => {
-          updateUser({ name, country, city, phone, address, type: "data" });
-          setChangedInfo(false);
-        }}
-      >
-        {isPending ? <Loader size={44} /> : "Update settings"}
-      </StyledButton>
+        <StyledButton
+          disabled={isPending || !changedInfo}
+          onClick={() => {
+            updateUser({ name, country, city, phone, address });
+            setChangedInfo(false);
+          }}
+        >
+          {isPending ? <Loader size={44} /> : "Update settings"}
+        </StyledButton>
+      </Form>
     </Box>
   );
 }

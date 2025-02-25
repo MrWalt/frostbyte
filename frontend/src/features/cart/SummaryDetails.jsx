@@ -12,6 +12,8 @@ const Box = styled.div`
 
   align-self: start;
 
+  flex-grow: 1;
+
   padding: 1.2rem 1.2rem;
 `;
 

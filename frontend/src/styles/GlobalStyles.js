@@ -110,11 +110,11 @@ input, button {
     }
     
     33% {
-        transform: scale(1.1) translateY(-2px) rotate(6deg);
+        transform: scale(1.2) translateY(-2px) rotate(6deg);
     }
 
     66% {
-        transform: scale(1.1) translateY(-4px) rotate(-6deg);
+        transform: scale(1.4) translateY(-4px) rotate(-6deg);
     }
 
     100% {

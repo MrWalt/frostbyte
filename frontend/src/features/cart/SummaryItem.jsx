@@ -13,8 +13,13 @@ const Box = styled.div`
   position: relative;
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid var(--color-grey-800);
+    margin-bottom: 0.8rem;
   }
+
+  border: 1px solid var(--color-grey-800);
+
+  background-color: var(--color-grey-transparent);
+  backdrop-filter: blur(4px);
 
   &:hover .clear-cart {
     opacity: 1;

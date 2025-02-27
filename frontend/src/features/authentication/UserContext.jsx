@@ -18,8 +18,8 @@ export default function UserProvider({ children }) {
 
       setUser({});
     }
-
-    persistLogin();
+    // Check if there is a jwt= cookie. Avoid the unnecessary error in console. If there is fake token there is error
+    if (document.cookie.includes("jwt=")) persistLogin();
   }, []);
 
   function handleSetUser(loggedInUser) {

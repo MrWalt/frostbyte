@@ -43,4 +43,37 @@ const updateMe = catchAsync(async function (req, res, next) {
   });
 });
 
-module.exports = { updateMe };
+const getWishlist = catchAsync(async function (req, res) {
+  const user = await User.findById(req.user.id).populate({
+    path: "wishlist",
+    populate: {
+      path: "product",
+      select: "title discount price",
+    },
+  });
+
+  res
+    .status(200)
+    .json({ status: "success", data: { wishlist: user.wishlist } });
+});
+
+const updateWishlist = catchAsync(async function (req, res, next) {
+  const user = await User.findById(req.user.id);
+
+  if (req.body.type === "add") {
+    user.wishlist.push({ product: req.body.product });
+  }
+
+  if (req.body.type === "remove") {
+    // Have to use unsafe != here because for some reason they are not the same types
+    user.wishlist = user.wishlist.filter(
+      (item) => item.product != req.body.product
+    );
+  }
+
+  await user.save({ validateBeforeSave: false });
+
+  res.status(201).json({ status: "success", data: { user } });
+});
+
+module.exports = { updateMe, updateWishlist, getWishlist };

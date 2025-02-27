@@ -44,10 +44,17 @@ const userSchema = new mongoose.Schema(
         message: "Passwords must match.",
       },
     },
-    orders: [
+    wishlist: [
       {
-        type: mongoose.Schema.ObjectId,
-        ref: "Order",
+        product: {
+          type: mongoose.Schema.ObjectId,
+          ref: "Product",
+          required: [true, "Cannot put nothing into wishlist"],
+        },
+        dateAdded: {
+          type: Date,
+          default: Date.now,
+        },
       },
     ],
   },

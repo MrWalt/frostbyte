@@ -29,7 +29,7 @@ const Box = styled.div`
   }
 `;
 
-const Image = styled.div`
+const Image = styled.img`
   height: 100%;
   text-align: center;
   width: 12rem;
@@ -157,7 +157,7 @@ export default function CartItem({
         <HiXMark />
       </DeleteButton>
       <Link to={`/product/${id}`}>
-        <Image>IMAGE</Image>
+        <Image src="./public/img/product-1.png" />
       </Link>
       <InfoBox>
         <ItemName>{title}</ItemName>

@@ -103,6 +103,14 @@ input, button {
     border-radius: 0;
 }
 
+.spin{
+    animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.scale {
+    transform: scale(1);
+}
+
 
 @keyframes jumpUp {
     0% {
@@ -141,6 +149,15 @@ input, button {
 
     100% {
         color: var(--color-red-500)
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
     }
 }
 `;

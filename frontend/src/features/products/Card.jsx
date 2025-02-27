@@ -6,10 +6,10 @@ import {
 } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { format } from "date-fns";
 import Price from "../../ui/Price";
 import { useCart } from "../cart/CartContext";
-import { useWishlist } from "../wishlist/WishlistContext";
+import { useUpdateWishlist } from "../wishlist/useUpdateWishlist";
+import { useUser } from "../authentication/UserContext";
 
 const Box = styled.div`
   height: 36rem;
@@ -177,33 +177,28 @@ export default function Card({
   discountedPrice,
 }) {
   const { addItem, removeItem, isInCart } = useCart();
-  const {
-    wishlist,
-    addItem: addWishlistItem,
-    removeItem: removeWishlistItem,
-  } = useWishlist();
-
-  const isInWishlist = wishlist.find((item) => item.id === id) ? true : false;
+  const { user } = useUser();
+  const { updateWishlist, isPending } = useUpdateWishlist();
+  const isInWishlist = user?.wishlist?.find((item) => item.product === id)
+    ? true
+    : false;
 
   return (
     <Box>
       {isInWishlist ? (
-        <StyledButton onClick={() => removeWishlistItem(id)}>
-          <HiHeart className="wishlisted" />
+        <StyledButton
+          disabled={isPending}
+          onClick={() => updateWishlist({ product: id, type: "remove" })}
+        >
+          <HiHeart className={`wishlisted ${isPending ? "spin" : ""}`} />
         </StyledButton>
       ) : (
         <StyledButton
-          className="not-wishlisted"
-          onClick={() =>
-            addWishlistItem({
-              title,
-              price,
-              id,
-              dateAdded: format(new Date(), "dd/MM/yyyy"),
-            })
-          }
+          disabled={isPending}
+          className={`not-wishlisted ${isPending ? "scale" : ""}`}
+          onClick={() => updateWishlist({ product: id, type: "add" })}
         >
-          <HiOutlineHeart />
+          <HiOutlineHeart className={`${isPending ? "spin" : ""}`} />
         </StyledButton>
       )}
 

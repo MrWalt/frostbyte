@@ -26,7 +26,6 @@ export async function signup({ email, password, passwordConfirm }) {
   });
 
   const data = await res.json();
-  console.log(data);
 
   if (data.status === "error" && data.message.startsWith("E11000"))
     throw new Error("Email already exists");
@@ -50,5 +49,23 @@ export async function isLoggedin() {
   });
 
   const data = await res.json();
+  return data;
+}
+
+export async function updatePassword(passwordData) {
+  const res = await fetch("http://localhost:8000/api/v1/auth/update-password", {
+    method: "POST",
+    body: JSON.stringify(passwordData),
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const data = await res.json();
+
+  if (data.status === "fail") throw new Error(data.message);
+  if (data.status === "error") throw new Error("Passwords must match");
+
   return data;
 }

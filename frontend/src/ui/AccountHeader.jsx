@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import {
   HiOutlineIdentification,
-  HiOutlineRectangleStack,
   HiOutlineShieldCheck,
+  HiOutlineShoppingBag,
   HiOutlineTableCells,
 } from "react-icons/hi2";
 import Button from "./Button";
@@ -97,7 +97,7 @@ export default function AccountHeader() {
           Profile
         </StyledLink>
         <StyledLink to="orders">
-          <HiOutlineRectangleStack />
+          <HiOutlineShoppingBag />
           Orders
         </StyledLink>
         <StyledLink to="security">

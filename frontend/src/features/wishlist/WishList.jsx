@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import WishListItem from "./WishListItem";
-import { useWishlist } from "./WishlistContext";
+import { useWishlist } from "../wishlist/useWishlist";
 import Heading from "../../ui/Heading";
 import { useMenu } from "../../contexts/MenuContext";
 import { HiXMark } from "react-icons/hi2";
+import Loader from "../../ui/Loader";
 
 const Container = styled.div`
   padding: 0.8rem;
@@ -21,6 +22,7 @@ const Box = styled.div`
 
   margin: 0.8rem 0;
   border-top: 1px solid var(--color-grey-800);
+  border-bottom: 1px solid var(--color-grey-800);
   /* border-bottom: 1px solid var(--color-grey-800); */
 
   &::-webkit-scrollbar {
@@ -69,34 +71,46 @@ const StyledButton = styled.button`
   }
 `;
 
+const LoaderContainer = styled.div`
+  width: 100%;
+  margin-top: 4.8rem;
+`;
+
 export default function WishList() {
-  const { wishlist } = useWishlist();
   const { closeMenu } = useMenu();
+  const { wishlist, isLoading } = useWishlist();
 
   return (
     <Container>
       <InfoBox>
-        <StyledHeading>
-          {wishlist?.length ? "Your wishlist" : "Your wishlist is empty"}
+        <StyledHeading variation="tertiary">
+          {isLoading && "Your wishlist"}
+          {wishlist?.length ? "Your wishlist" : ""}
+          {!wishlist?.length && !isLoading && "Your wishlist is empty"}
           <StyledButton onClick={closeMenu}>
             <HiXMark />
           </StyledButton>
         </StyledHeading>
       </InfoBox>
-
-      {wishlist?.length ? (
-        <Box>
-          {wishlist.map((item) => (
-            <WishListItem
-              title={item.title}
-              price={item.price}
-              id={item.id}
-              dateAdded={item.dateAdded}
-              key={item.id}
-            />
-          ))}
-        </Box>
-      ) : null}
+      {!isLoading ? (
+        wishlist?.length ? (
+          <Box>
+            {wishlist.map((item) => (
+              <WishListItem
+                title={item.product.title}
+                price={item.product.price.USD}
+                id={item.product.id}
+                dateAdded={item.dateAdded}
+                key={item.product.id}
+              />
+            ))}
+          </Box>
+        ) : null
+      ) : (
+        <LoaderContainer>
+          <Loader size={60} />
+        </LoaderContainer>
+      )}
     </Container>
   );
 }

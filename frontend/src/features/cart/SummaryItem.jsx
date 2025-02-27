@@ -3,6 +3,7 @@ import Price from "../../ui/Price";
 import { useCart } from "./CartContext";
 import Button from "../../ui/Button";
 import { HiOutlineTrash } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const Box = styled.div`
   width: 100%;
@@ -28,8 +29,15 @@ const Box = styled.div`
   }
 `;
 
-const Image = styled.div`
-  width: 25%;
+const ImageLink = styled(Link)`
+  padding: 0 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Image = styled.img`
+  height: 100%;
 
   flex-shrink: 0;
 
@@ -105,7 +113,9 @@ export default function SummaryItem({
 
   return (
     <Box>
-      <Image>IMAGE</Image>
+      <ImageLink to={`/product/${id}`}>
+        <Image src="./public/img/product-1.png" />
+      </ImageLink>
       <ProductInfoBox>
         <Title>{title}</Title>
 

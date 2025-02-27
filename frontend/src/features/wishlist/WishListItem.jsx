@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Price from "../../ui/Price";
 import { HiXMark } from "react-icons/hi2";
-import { useWishlist } from "./WishlistContext";
+import { format } from "date-fns";
+import { useUpdateWishlist } from "./useUpdateWishlist";
 
 const Box = styled.div`
   width: 100%;
@@ -28,12 +29,15 @@ const Box = styled.div`
 `;
 
 const InfoBox = styled.div`
+  /* Added this cause the date was sometimes center, might cause overlap issues. */
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 
-const Image = styled.div`
+const Image = styled.img`
   height: 100%;
   width: 12rem;
 
@@ -91,21 +95,24 @@ const DeleteButton = styled.button`
 `;
 
 export default function WishListItem({ title, price, dateAdded, id }) {
-  const { removeItem } = useWishlist();
+  const { updateWishlist, isPending } = useUpdateWishlist();
 
   return (
     <Box>
-      <DeleteButton onClick={() => removeItem(id)}>
-        <HiXMark />
+      <DeleteButton
+        disabled={isPending}
+        onClick={() => updateWishlist({ product: id, type: "remove" })}
+      >
+        <HiXMark className={`${isPending ? "spin" : ""}`} />
       </DeleteButton>
-      <Image>IMAGE</Image>
+      <Image src={`/public/img/product-1.png`} />
 
       <InfoBox>
         <Title>{title}</Title>
 
         <ExtraInfo>
           <Price size="medium" price={price} />
-          <DateAdded>Added on {dateAdded}</DateAdded>
+          <DateAdded>Added on {format(dateAdded, "dd/MM/yy")}</DateAdded>
         </ExtraInfo>
       </InfoBox>
     </Box>

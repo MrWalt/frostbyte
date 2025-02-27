@@ -15,11 +15,12 @@ export function useProducts() {
     min: searchParams.get("minPrice") || null,
     max: searchParams.get("maxPrice") || null,
   };
+  const sortBy = searchParams.get("sort") || null;
 
   const page = Number(searchParams.get("page")) || 1;
 
   const { isLoading, data: { data: products, count, brands } = {} } = useQuery({
-    queryFn: () => getProducts(page, category, filter),
+    queryFn: () => getProducts(page, category, filter, sortBy),
     queryKey: [
       "products",
       page,
@@ -27,6 +28,7 @@ export function useProducts() {
       filter.manufacturer,
       filter.stockOnly,
       filter.price,
+      sortBy,
     ],
   });
 
@@ -35,7 +37,7 @@ export function useProducts() {
 
   if (page < pageCount) {
     queryClient.prefetchQuery({
-      queryFn: () => getProducts(page + 1, category, filter),
+      queryFn: () => getProducts(page + 1, category, filter, sortBy),
       queryKey: [
         "products",
         page + 1,
@@ -43,13 +45,14 @@ export function useProducts() {
         filter.manufacturer,
         filter.stockOnly,
         filter.price,
+        sortBy,
       ],
     });
   }
 
   if (page > 1) {
     queryClient.prefetchQuery({
-      queryFn: () => getProducts(page - 1, category, filter),
+      queryFn: () => getProducts(page - 1, category, filter, sortBy),
       queryKey: [
         "products",
         page - 1,
@@ -57,6 +60,7 @@ export function useProducts() {
         filter.manufacturer,
         filter.stockOnly,
         filter.price,
+        sortBy,
       ],
     });
   }

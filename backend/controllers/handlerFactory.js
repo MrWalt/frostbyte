@@ -4,20 +4,25 @@ const APIFeatures = require("../utils/APIFeatures");
 function getAll(Model, selectOptions, getBrands = false) {
   return async function (req, res) {
     try {
+      // Getting the data from our database
       const features = new APIFeatures(
         Model.find().select(selectOptions),
         req.query
       )
         .filter()
+        .sort()
         .paginate();
 
-      const documents = new APIFeatures(Model.find(), req.query).filter();
-      const count = await documents.query.countDocuments();
-      const document = await features.query;
+      const documents = await features.query;
+
+      // For document count
+      const countQuery = new APIFeatures(Model.find(), req.query).filter();
+      const count = await countQuery.query.countDocuments();
 
       let brandQuery;
       let brands;
 
+      // For dynamic frontend filter. Returns the brands allowing user to filter by brands
       if (getBrands) {
         brandQuery = new APIFeatures(
           Model.find().select(
@@ -35,7 +40,7 @@ function getAll(Model, selectOptions, getBrands = false) {
 
       res
         .status(200)
-        .json({ status: "success", data: document, count, brands });
+        .json({ status: "success", data: documents, count, brands });
     } catch (err) {
       res.status(400).json({ status: "error", message: "Could not fetch" });
     }

@@ -143,6 +143,9 @@ export default function Header() {
             Shop
           </StyledButton>
           <StyledLink to="/contact">Support</StyledLink>
+          {user.role === "admin" && (
+            <StyledLink to="/dashboard">Dashboard</StyledLink>
+          )}
         </StyledNav>
 
         <Logo>
@@ -152,12 +155,6 @@ export default function Header() {
         </Logo>
 
         <Box>
-          {user.role === "admin" && (
-            <Link to="/dashboard">
-              <HiOutlinePresentationChartBar />
-            </Link>
-          )}
-
           <Link to="/account/profile">
             <HiOutlineUserCircle />
           </Link>

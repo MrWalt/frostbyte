@@ -28,6 +28,8 @@ export const GlobalStyles = createGlobalStyle`
     --color-grey-900: #111827;
 
     --color-grey-transparent: rgb(17, 24, 39, 0.9);
+    --color-grey-transparent-md: rgb(17, 24, 39, 0.6);
+    --color-grey-transparent-sm: rgb(17, 24, 39, 0.4);
     
     --color-green-100: #dcfce7;
     --color-green-700: #15803d;
@@ -110,7 +112,6 @@ input, button {
 .scale {
     transform: scale(1);
 }
-
 
 @keyframes jumpUp {
     0% {

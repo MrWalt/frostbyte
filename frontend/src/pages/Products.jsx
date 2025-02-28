@@ -10,6 +10,9 @@ import { formatCategoryTitle } from "../utils/helpers";
 import Pagination from "../ui/Pagination";
 import { useProducts } from "../features/products/useProducts";
 import Sort from "../ui/Sort";
+import { useUser } from "../features/authentication/UserContext";
+import Button from "../ui/Button";
+import { useModal } from "../contexts/ModalContext";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -39,6 +42,8 @@ export default function Products() {
   const category = formatCategoryTitle(params?.category ?? "");
   const { count } = useProducts();
   const { isLoading } = useProducts();
+  const { user } = useUser();
+  const { handleSetToggledModal } = useModal();
 
   return (
     <Section>
@@ -49,6 +54,11 @@ export default function Products() {
         <AsideBox>
           <Sort />
           <FilterMenu />
+          {user.role === "admin" && (
+            <Button onClick={() => handleSetToggledModal("addProduct")}>
+              Add new product
+            </Button>
+          )}
         </AsideBox>
         <ProductsGrid category={params?.category ? params.category : null} />
         {!isLoading && <Pagination count={count} />}

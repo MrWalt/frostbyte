@@ -28,6 +28,7 @@ import Dashboard from "./pages/Dashboard";
 import ScrollToTop from "./utils/ScrollToTop";
 import Order from "./pages/Order";
 import SignUp from "./pages/SignUp";
+import ModalProvider from "./contexts/ModalContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -47,48 +48,53 @@ export default function App() {
       <BrowserRouter>
         <UserProvider>
           <CartProvider>
-            <MenuProvider>
-              <ScrollToTop>
-                <Routes>
-                  <Route path="/" element={<AppLayout />}>
-                    <Route index element={<Home />} />
-                    <Route path="contact" element={<Contact />} />
-                    <Route
-                      path="account"
-                      element={
-                        <ProtectedRoute>
-                          <Account />
-                        </ProtectedRoute>
-                      }
-                    >
+            <ModalProvider>
+              <MenuProvider>
+                <ScrollToTop>
+                  <Routes>
+                    <Route path="/" element={<AppLayout />}>
+                      <Route index element={<Home />} />
+                      <Route path="contact" element={<Contact />} />
                       <Route
-                        index
-                        element={<Navigate replace to="/account/profile" />}
-                      />
-                      <Route path="/account/profile" element={<Profile />} />
-                      <Route path="/account/orders" element={<Orders />} />
-                      <Route path="/account/security" element={<Security />} />
-                      <Route
-                        path="/account/admin-dashboard"
-                        element={<AdminDashboard />}
-                      />
+                        path="account"
+                        element={
+                          <ProtectedRoute>
+                            <Account />
+                          </ProtectedRoute>
+                        }
+                      >
+                        <Route
+                          index
+                          element={<Navigate replace to="/account/profile" />}
+                        />
+                        <Route path="/account/profile" element={<Profile />} />
+                        <Route path="/account/orders" element={<Orders />} />
+                        <Route
+                          path="/account/security"
+                          element={<Security />}
+                        />
+                        <Route
+                          path="/account/admin-dashboard"
+                          element={<AdminDashboard />}
+                        />
+                      </Route>
+                      <Route path="checkout" element={<CheckOut />} />
+                      <Route path="dashboard" element={<Dashboard />} />
+                      <Route path="products" element={<Products />} />
+                      <Route path="products/:category" element={<Products />} />
+                      <Route path="cart-summary" element={<CartSummary />} />
+                      <Route path="product/:id" element={<Product />} />
+                      <Route path="login" element={<Login />} />
+                      <Route path="signup" element={<SignUp />} />
+                      <Route path="about" element={<About />} />
+                      <Route path="legal" element={<Legal />} />
+                      <Route path="order/:orderId" element={<Order />} />
+                      <Route path="*" element={<PageNotFound />} />
                     </Route>
-                    <Route path="checkout" element={<CheckOut />} />
-                    <Route path="dashboard" element={<Dashboard />} />
-                    <Route path="products" element={<Products />} />
-                    <Route path="products/:category" element={<Products />} />
-                    <Route path="cart-summary" element={<CartSummary />} />
-                    <Route path="product/:id" element={<Product />} />
-                    <Route path="login" element={<Login />} />
-                    <Route path="signup" element={<SignUp />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="legal" element={<Legal />} />
-                    <Route path="order/:orderId" element={<Order />} />
-                    <Route path="*" element={<PageNotFound />} />
-                  </Route>
-                </Routes>
-              </ScrollToTop>
-            </MenuProvider>
+                  </Routes>
+                </ScrollToTop>
+              </MenuProvider>
+            </ModalProvider>
           </CartProvider>
         </UserProvider>
       </BrowserRouter>

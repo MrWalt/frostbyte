@@ -6,6 +6,7 @@ import { useMenu } from "../contexts/MenuContext";
 import Navigation from "./Navigation";
 import Modal from "./Modal";
 import { useModal } from "../contexts/ModalContext";
+import CreateProductForm from "../features/products/CreateProductForm";
 
 const StyledMain = styled.main`
   width: 100%;
@@ -67,7 +68,9 @@ export default function Main({ children }) {
         <WishList />
       </DropDownMenu>
 
-      <Modal isOpen={toggledModal === "addProduct"} />
+      <Modal isOpen={toggledModal === "addProduct"}>
+        <CreateProductForm />
+      </Modal>
     </StyledMain>
   );
 }

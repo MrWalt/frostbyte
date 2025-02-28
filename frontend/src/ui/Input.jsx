@@ -41,6 +41,12 @@ const Input = styled.input`
   display: block;
   width: 100%;
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
   ${(props) => variations[props.variation]}
 `;
 

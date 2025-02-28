@@ -22,3 +22,18 @@ export async function getProduct(id) {
 
   return data;
 }
+
+export async function createProduct(newProduct) {
+  const res = await fetch(`http://localhost:8000/api/v1/products`, {
+    method: "POST",
+    body: JSON.stringify(newProduct),
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const { data } = await res.json();
+  console.log(data);
+  return data;
+}

@@ -37,6 +37,10 @@ const AsideBox = styled.div`
   gap: 1.2rem;
 `;
 
+const StyledButton = styled(Button)`
+  background-color: transparent;
+`;
+
 export default function Products() {
   const params = useParams();
   const category = formatCategoryTitle(params?.category ?? "");
@@ -55,9 +59,9 @@ export default function Products() {
           <Sort />
           <FilterMenu />
           {user.role === "admin" && (
-            <Button onClick={() => handleSetToggledModal("addProduct")}>
+            <StyledButton onClick={() => handleSetToggledModal("addProduct")}>
               Add new product
-            </Button>
+            </StyledButton>
           )}
         </AsideBox>
         <ProductsGrid category={params?.category ? params.category : null} />

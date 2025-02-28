@@ -41,7 +41,10 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: [true, "Product must have a stock count."],
     },
-    discount: Number,
+    discount: {
+      type: Number,
+      default: 0,
+    },
     sold: {
       type: Number,
     },

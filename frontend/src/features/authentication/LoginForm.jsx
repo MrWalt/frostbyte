@@ -10,6 +10,7 @@ import Loader from "../../ui/Loader";
 import { useEffect, useRef, useState } from "react";
 
 import { HiOutlineEye, HiOutlineEyeSlash } from "react-icons/hi2";
+import Error from "../../ui/Error";
 
 const Container = styled.div`
   margin: 4.8rem auto;
@@ -69,16 +70,6 @@ const StyledDiv = styled.div`
       background-color: var(--color-grey-300);
     }
   }
-`;
-
-const Error = styled.span`
-  color: var(--color-red-500);
-
-  position: absolute;
-  top: 0;
-  left: 1.8rem;
-
-  animation: blink 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 const StyledSpan = styled.span`

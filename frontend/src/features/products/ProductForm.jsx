@@ -4,11 +4,9 @@ import { HiXMark } from "react-icons/hi2";
 import { useModal } from "../../contexts/ModalContext";
 import Input from "../../ui/Input";
 import Label from "../../ui/Label";
-import Button from "../../ui/Button";
 import { useForm } from "react-hook-form";
 import Error from "../../ui/Error";
-import useCreateProduct from "./useCreateProduct";
-import Loader from "../../ui/Loader";
+import { useEffect } from "react";
 
 const HeadingBox = styled.div`
   border: 1px solid var(--color-grey-800);
@@ -51,6 +49,8 @@ const Box = styled.div`
   display: flex;
   gap: 4.8rem;
   padding: 4.8rem 2.4rem 2.4rem 2.4rem;
+
+  margin-bottom: 1.9rem;
 `;
 
 const ProductInfoBox = styled.div`
@@ -64,7 +64,6 @@ const ProductInfoBox = styled.div`
 const TextAreaBox = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
   gap: 1.2rem;
 
   width: 50%;
@@ -72,7 +71,7 @@ const TextAreaBox = styled.div`
   position: relative;
 
   & .desc-error {
-    top: 146px;
+    top: 216px;
   }
 `;
 
@@ -102,11 +101,11 @@ const StyledTextArea = styled.textarea`
   &:placeholder-shown + label {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-16rem);
+    transform: translateY(-21rem);
   }
 
   & + label {
-    transform: translateY(-17.6rem);
+    transform: translateY(-23.4rem);
   }
 
   &:disabled {
@@ -116,7 +115,7 @@ const StyledTextArea = styled.textarea`
   }
 `;
 
-const StockPriceBox = styled.div`
+const DoubleInputBox = styled.div`
   display: flex;
   gap: 4.8rem;
 `;
@@ -131,7 +130,7 @@ const ImageInput = styled.input`
     font-weight: 400;
 
     text-transform: uppercase;
-    padding: 1.2rem 1.8rem;
+    padding: 1.2rem 2.4rem;
 
     transition: var(--animation-fast);
 
@@ -147,44 +146,54 @@ const StyledError = styled(Error)`
   top: -2.4rem;
 `;
 
-export default function CreateProductForm() {
-  const { createProduct, isPending } = useCreateProduct();
-  const { closeModal } = useModal();
-  const { register, formState, handleSubmit } = useForm();
+export default function ProductForm({
+  children,
+  isPending,
+  handleOnSubmit,
+  defaultValues = {},
+  headingText,
+  isEditMode = false,
+}) {
+  const { closeModal, toggledModal } = useModal();
+  const { register, formState, handleSubmit, reset } = useForm(
+    isEditMode
+      ? {
+          defaultValues: {
+            ...defaultValues,
+            priceEUR: defaultValues?.price?.EUR,
+            priceUSD: defaultValues?.price?.USD,
+            specifications: defaultValues?.specifications?.join(","),
+          },
+        }
+      : {}
+  );
+
+  useEffect(
+    function () {
+      reset({
+        ...defaultValues,
+        priceEUR: defaultValues?.price?.EUR,
+        priceUSD: defaultValues?.price?.USD,
+        specifications: defaultValues?.specifications?.join(","),
+      });
+    },
+    // eslint-disable-next-line
+    [toggledModal]
+  );
+
   const { errors } = formState;
-
-  function onSubmit(data) {
-    const price = data.price.split(",");
-    const specifications = data.specifications.split(",");
-    const structuredData = {
-      title: data.title,
-      manufacturer: data.manufacturer,
-      description: data.description,
-      specifications,
-      stock: Number(data.stock),
-      category: data.category,
-      warranty: data.warranty,
-      price: {
-        EUR: Number(price.at(0)),
-        USD: Number(price.at(1)),
-      },
-    };
-
-    createProduct(structuredData);
-  }
 
   // This sure is messy, good luck
 
   return (
     <>
       <HeadingBox>
-        <Heading variation="tertiary">Add a new product</Heading>
+        <Heading variation="tertiary">{headingText}</Heading>
         <StyledButton onClick={closeModal}>
           <HiXMark />
         </StyledButton>
       </HeadingBox>
-
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(handleOnSubmit)}>
         <Box>
           <ProductInfoBox>
             <StyledDiv>
@@ -248,7 +257,73 @@ export default function CreateProductForm() {
               <Label>Warranty</Label>
             </StyledDiv>
 
-            <ImageInput type="file" accept="image/*" />
+            <DoubleInputBox>
+              <StyledDiv>
+                {errors?.priceEUR ? (
+                  <StyledError>{errors.priceEUR.message}</StyledError>
+                ) : null}
+                <Input
+                  disabled={isPending}
+                  placeholder="Price in EUR"
+                  type="text"
+                  variation="large"
+                  {...register("priceEUR", {
+                    required: "This field is required",
+                  })}
+                />
+                <Label>Price in EUR</Label>
+              </StyledDiv>
+
+              <StyledDiv>
+                {errors?.priceUSD ? (
+                  <StyledError>{errors.priceUSD.message}</StyledError>
+                ) : null}
+                <Input
+                  disabled={isPending}
+                  placeholder="Price in USD"
+                  type="text"
+                  variation="large"
+                  {...register("priceUSD", {
+                    required: "This field is required",
+                  })}
+                />
+                <Label>Price in USD</Label>
+              </StyledDiv>
+            </DoubleInputBox>
+
+            <DoubleInputBox>
+              <StyledDiv>
+                {errors?.stock ? (
+                  <StyledError>{errors.stock.message}</StyledError>
+                ) : null}
+                <Input
+                  disabled={isPending}
+                  placeholder="Stock"
+                  type="text"
+                  variation="large"
+                  {...register("stock", {
+                    required: "This field is required",
+                  })}
+                />
+                <Label>Stock</Label>
+              </StyledDiv>
+
+              <StyledDiv>
+                {errors?.discount ? (
+                  <StyledError>{errors.discount.message}</StyledError>
+                ) : null}
+                <Input
+                  disabled={isPending}
+                  placeholder="Discount"
+                  type="text"
+                  variation="large"
+                  {...register("discount", {
+                    required: "This field is required",
+                  })}
+                />
+                <Label>Discount</Label>
+              </StyledDiv>
+            </DoubleInputBox>
           </ProductInfoBox>
 
           <TextAreaBox>
@@ -280,43 +355,10 @@ export default function CreateProductForm() {
             />
             <Label>Description</Label>
 
-            <StockPriceBox>
-              <StyledDiv>
-                {errors?.price ? (
-                  <StyledError>{errors.price.message}</StyledError>
-                ) : null}
-                <Input
-                  disabled={isPending}
-                  placeholder="Price - EUR,USD"
-                  type="text"
-                  variation="large"
-                  {...register("price", {
-                    required: "This field is required",
-                  })}
-                />
-                <Label>Price</Label>
-              </StyledDiv>
-              <StyledDiv>
-                {errors?.stock ? (
-                  <StyledError>{errors.stock.message}</StyledError>
-                ) : null}
-                <Input
-                  disabled={isPending}
-                  placeholder="Stock"
-                  type="number"
-                  variation="large"
-                  {...register("stock", {
-                    required: "This field is required",
-                  })}
-                />
-                <Label>Stock</Label>
-              </StyledDiv>
-            </StockPriceBox>
+            <ImageInput type="file" accept="image/*" />
           </TextAreaBox>
         </Box>
-        <Button disabled={isPending}>
-          {isPending ? <Loader size={44} /> : "Add Product"}
-        </Button>
+        {children}
       </form>
     </>
   );

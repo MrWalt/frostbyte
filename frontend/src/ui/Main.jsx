@@ -6,7 +6,7 @@ import { useMenu } from "../contexts/MenuContext";
 import Navigation from "./Navigation";
 import Modal from "./Modal";
 import { useModal } from "../contexts/ModalContext";
-import CreateProductForm from "../features/products/CreateProductForm";
+import { useUser } from "../features/authentication/UserContext";
 
 const StyledMain = styled.main`
   width: 100%;
@@ -46,6 +46,8 @@ const Overlay = styled.div`
 export default function Main({ children }) {
   const { toggledMenu, closeMenu } = useMenu();
   const { toggledModal, closeModal } = useModal();
+  const { user } = useUser();
+
   return (
     <StyledMain>
       {children}
@@ -68,9 +70,16 @@ export default function Main({ children }) {
         <WishList />
       </DropDownMenu>
 
-      <Modal isOpen={toggledModal === "addProduct"}>
-        <CreateProductForm />
-      </Modal>
+      {user.role === "admin" && (
+        <>
+          <Modal isOpen={toggledModal === "addProduct"}>
+            <Modal.AddProduct />
+          </Modal>
+          <Modal isOpen={toggledModal === "editProduct"}>
+            <Modal.EditProduct />
+          </Modal>
+        </>
+      )}
     </StyledMain>
   );
 }

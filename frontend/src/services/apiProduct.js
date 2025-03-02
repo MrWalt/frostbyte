@@ -16,6 +16,8 @@ export async function getProducts(page, category, filter, sortBy) {
 }
 
 export async function getProduct(id) {
+  if (!id) return null;
+
   const res = await fetch(`http://localhost:8000/api/v1/products/${id}`);
 
   const { data } = await res.json();
@@ -34,6 +36,25 @@ export async function createProduct(newProduct) {
   });
 
   const { data } = await res.json();
-  console.log(data);
+  return data;
+}
+
+export async function editProduct(updatedProduct) {
+  const res = await fetch(
+    `http://localhost:8000/api/v1/products/${updatedProduct.id}`,
+    {
+      method: "PATCH",
+      body: JSON.stringify(updatedProduct),
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const { data } = await res.json();
+
+  if (data.status === "error") throw new Error("There was an error");
+
   return data;
 }

@@ -8,6 +8,8 @@ import Button from "../../ui/Button";
 import Heading from "../../ui/Heading";
 import Price from "../../ui/Price";
 import { useCart } from "../cart/CartContext";
+import { useModal } from "../../contexts/ModalContext";
+import { useUser } from "../authentication/UserContext";
 
 const Background = styled.div`
   width: 100%;
@@ -146,8 +148,18 @@ const LoaderContainer = styled.div`
   margin-top: 9.2rem;
 `;
 
+const StyledButton = styled(Button)`
+  background-color: transparent;
+
+  align-self: end;
+
+  margin-top: 1.2rem;
+`;
+
 export default function FullProduct() {
+  const { user } = useUser();
   const { product, isLoading } = useProduct();
+  const { handleSetToggledModal } = useModal();
   const moveBack = useMoveBack();
   const { isInCart, addItem, removeItem } = useCart();
 
@@ -220,6 +232,11 @@ export default function FullProduct() {
             )
           ) : (
             <SoldOut>Sold Out</SoldOut>
+          )}
+          {user.role === "admin" && (
+            <StyledButton onClick={() => handleSetToggledModal("editProduct")}>
+              Edit Product
+            </StyledButton>
           )}
         </CartBox>
         <AboutBox>

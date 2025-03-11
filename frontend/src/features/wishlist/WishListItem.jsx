@@ -105,7 +105,7 @@ export default function WishListItem({ title, price, dateAdded, id }) {
       >
         <HiXMark className={`${isPending ? "spin" : ""}`} />
       </DeleteButton>
-      <Image src={`/public/img/product-1.png`} />
+      <Image src={`/img/product-1.png`} />
 
       <InfoBox>
         <Title>{title}</Title>

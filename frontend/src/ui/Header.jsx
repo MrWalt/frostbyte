@@ -5,7 +5,6 @@ import {
   HiOutlineHeart,
   HiOutlineUserCircle,
   HiOutlineShoppingCart,
-  HiOutlinePresentationChartBar,
 } from "react-icons/hi2";
 import { useCart } from "../features/cart/CartContext";
 import { useMenu } from "../contexts/MenuContext";

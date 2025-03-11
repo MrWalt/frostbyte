@@ -67,7 +67,7 @@ export default function Main({ children }) {
         <Cart />
       </DropDownMenu>
       <DropDownMenu align="right" isOpen={toggledMenu === "wishlist"}>
-        <WishList />
+        {user?.isAuthenticated ? <WishList /> : <WishList.Unauthorized />}
       </DropDownMenu>
 
       {user.role === "admin" && (

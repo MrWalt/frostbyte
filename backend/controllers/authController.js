@@ -72,18 +72,25 @@ function logout(req, res) {
   res.status(200).json({ status: "success" });
 }
 
-const isLoggedIn = catchAsync(async function (req, res, next) {
+const isLoggedIn = catchAsync(async function (req, res) {
   let token;
 
   if (req.cookies.jwt) token = req.cookies.jwt;
 
-  if (!token) next(new AppError("No previous login saved", 401));
+  // Removed AppErrors to prevent automatic 401 error in client console
+  if (!token) {
+    res.status(200).json({ status: "error", data: null });
+    return;
+  }
 
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
 
   const user = await User.findById(decoded.id);
-  if (!user)
-    next(new AppError("This user belonging to this token does not exist", 401));
+
+  if (!user) {
+    res.status(200).json({ status: "error", data: null });
+    return;
+  }
 
   req.user = user;
 

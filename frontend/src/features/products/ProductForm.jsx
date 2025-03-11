@@ -152,21 +152,16 @@ export default function ProductForm({
   handleOnSubmit,
   defaultValues = {},
   headingText,
-  isEditMode = false,
 }) {
   const { closeModal, toggledModal } = useModal();
-  const { register, formState, handleSubmit, reset } = useForm(
-    isEditMode
-      ? {
-          defaultValues: {
-            ...defaultValues,
-            priceEUR: defaultValues?.price?.EUR,
-            priceUSD: defaultValues?.price?.USD,
-            specifications: defaultValues?.specifications?.join(","),
-          },
-        }
-      : {}
-  );
+  const { register, formState, handleSubmit, reset } = useForm({
+    defaultValues: {
+      ...defaultValues,
+      priceEUR: defaultValues?.price?.EUR,
+      priceUSD: defaultValues?.price?.USD,
+      specifications: defaultValues?.specifications?.join(","),
+    },
+  });
 
   useEffect(
     function () {
@@ -182,7 +177,6 @@ export default function ProductForm({
   );
 
   const { errors } = formState;
-
   // This sure is messy, good luck
 
   return (

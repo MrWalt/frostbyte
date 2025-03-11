@@ -5,6 +5,8 @@ import Heading from "../../ui/Heading";
 import { useMenu } from "../../contexts/MenuContext";
 import { HiXMark } from "react-icons/hi2";
 import Loader from "../../ui/Loader";
+import { Link } from "react-router-dom";
+import Button from "../../ui/Button";
 
 const Container = styled.div`
   padding: 0.8rem;
@@ -76,6 +78,15 @@ const LoaderContainer = styled.div`
   margin-top: 4.8rem;
 `;
 
+const StyledLink = styled(Link)`
+  color: var(--color-brand-500) !important;
+  transition: var(--animation-fast);
+
+  &:hover {
+    color: var(--color-brand-300) !important;
+  }
+`;
+
 export default function WishList() {
   const { closeMenu } = useMenu();
   const { wishlist, isLoading } = useWishlist();
@@ -114,3 +125,21 @@ export default function WishList() {
     </Container>
   );
 }
+
+function Unauthorized() {
+  const { closeMenu } = useMenu();
+  return (
+    <Container>
+      <InfoBox>
+        <StyledHeading variation="tertiary">
+          You must be logged in, <StyledLink to="./login">Login now</StyledLink>
+          <StyledButton onClick={closeMenu}>
+            <HiXMark />
+          </StyledButton>
+        </StyledHeading>
+      </InfoBox>
+    </Container>
+  );
+}
+
+WishList.Unauthorized = Unauthorized;

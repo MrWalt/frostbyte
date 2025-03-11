@@ -33,7 +33,10 @@ const StyledHeading = styled(Heading)`
 const AsideBox = styled.div`
   display: flex;
   flex-direction: column;
+  align-self: start;
 
+  position: sticky;
+  top: 100px;
   gap: 1.2rem;
 `;
 
@@ -57,7 +60,7 @@ export default function Products() {
         </StyledHeading>
         <AsideBox>
           <Sort />
-          <FilterMenu />
+          <FilterMenu params={params} />
           {user.role === "admin" && (
             <StyledButton onClick={() => handleSetToggledModal("addProduct")}>
               Add new product

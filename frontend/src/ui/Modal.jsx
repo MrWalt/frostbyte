@@ -121,7 +121,7 @@ function EditProduct() {
         isEditMode={true}
       >
         <Button disabled={isPending}>
-          {isPending ? <Loader size={44} /> : "Edit Product"}
+          {isPending ? <Loader size={44} /> : "Update Product"}
         </Button>
       </ProductForm>
     </>

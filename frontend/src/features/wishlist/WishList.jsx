@@ -6,7 +6,6 @@ import { useMenu } from "../../contexts/MenuContext";
 import { HiXMark } from "react-icons/hi2";
 import Loader from "../../ui/Loader";
 import { Link } from "react-router-dom";
-import Button from "../../ui/Button";
 
 const Container = styled.div`
   padding: 0.8rem;

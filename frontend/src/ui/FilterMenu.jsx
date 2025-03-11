@@ -52,15 +52,7 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const SmallText = styled.span`
-  font-size: 1.4rem;
-  color: var(--color-grey-500);
-
-  margin-left: 0.8rem;
-  margin-bottom: 0.4rem;
-`;
-
-export default function FilterMenu() {
+export default function FilterMenu({ params }) {
   const { brands, isLoading } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -89,14 +81,21 @@ export default function FilterMenu() {
       <FilterPrice />
 
       <FiltersBox>
-        <Filter option="true" filter="stock" label="In Stock Only" />
-
-        <FilterOption
-          type="Brand"
-          options={isLoading ? [] : brands}
-          key="Brand"
-          filter="manufacturer"
+        <Filter
+          option="true"
+          filter="stock"
+          label="In Stock Only"
+          key="Stock"
         />
+
+        {params?.category ? (
+          <FilterOption
+            type="Brand"
+            options={isLoading ? [] : brands}
+            key="Brand"
+            filter="manufacturer"
+          />
+        ) : null}
       </FiltersBox>
     </Box>
   );

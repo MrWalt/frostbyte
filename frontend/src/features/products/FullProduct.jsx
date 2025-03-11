@@ -152,7 +152,7 @@ const StyledButton = styled(Button)`
   background-color: transparent;
 
   align-self: end;
-
+  border: 1px solid var(--color-brand-500);
   margin-top: 1.2rem;
 `;
 

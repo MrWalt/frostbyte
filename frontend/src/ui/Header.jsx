@@ -30,6 +30,7 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   margin: 0 auto;
+  gap: 4.8rem;
 `;
 
 const StyledNav = styled.nav`
@@ -37,7 +38,7 @@ const StyledNav = styled.nav`
   align-items: center;
   gap: 2.4rem;
 
-  flex: 1 1 0%;
+  /* flex: 1 1 0%; */
 `;
 
 const StyledLink = styled(Link)`
@@ -52,10 +53,6 @@ const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin: auto;
-
-  flex: 1 1 0%;
 `;
 
 const Image = styled.img`
@@ -71,7 +68,9 @@ const Box = styled.div`
   justify-content: end;
   gap: 2.4rem;
 
-  flex: 1 1 0%;
+  margin-left: auto;
+
+  /* flex: 1 1 0%; */
 
   svg {
     width: 2.4rem;
@@ -134,6 +133,11 @@ export default function Header() {
   return (
     <StyledHeader className="header">
       <Container>
+        <Logo>
+          <Link to="/">
+            <Image src="/logo.png" />
+          </Link>
+        </Logo>
         <StyledNav>
           <StyledButton
             onClick={() => handleSetToggledMenu("products")}
@@ -146,12 +150,6 @@ export default function Header() {
             <StyledLink to="/dashboard">Dashboard</StyledLink>
           )}
         </StyledNav>
-
-        <Logo>
-          <Link to="/">
-            <Image src="/logo.png" />
-          </Link>
-        </Logo>
 
         <Box>
           <Link to="/account/profile">

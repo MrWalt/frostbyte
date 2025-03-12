@@ -31,7 +31,7 @@ function getAll(Model, selectOptions, getFilters = false) {
 
         filtersQuery = await filtersQuery.query;
 
-        filtersObject.capacites = [
+        filtersObject.capacities = [
           ...new Set(
             filtersQuery
               .filter((item) => item.capacity)

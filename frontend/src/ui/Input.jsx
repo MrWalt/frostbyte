@@ -29,7 +29,7 @@ const variations = {
   minimal: css`
     color: var(--color-brand-500);
 
-    cursor: pointer;
+    cursor: text;
 
     &::placeholder {
       color: var(--color-brand-500);

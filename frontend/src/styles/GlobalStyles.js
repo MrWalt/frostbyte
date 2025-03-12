@@ -161,4 +161,26 @@ input, button {
         transform: rotate(360deg)
     }
 }
+
+@keyframes shake {
+    0% {
+        transform: translateX(-4px)
+    }
+    
+    20% {
+        transform: translateX(4px)
+    }
+
+    40% {
+        transform: translateX(-4px)
+    }
+
+    60% {
+        transform: translateX(4px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
 `;

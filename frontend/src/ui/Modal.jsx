@@ -56,11 +56,13 @@ function AddProduct() {
       stock: Number(data.stock),
       category: data.category,
       warranty: data.warranty,
-      price: {
-        EUR: Number(data.priceEUR),
-        USD: Number(data.priceUSD),
-      },
+      price: Number(data.price.replace(",", ".")),
       discount: Number(data.discount),
+      speed: data.speed,
+      capacity: data.capacity,
+      ddr: data.ddr,
+      type: data.type,
+      socket: data.socket,
     };
 
     createProduct(structuredData);
@@ -98,14 +100,16 @@ function EditProduct() {
       stock: Number(data.stock),
       category: data.category,
       warranty: data.warranty,
-      price: {
-        EUR: Number(data.priceEUR),
-        USD: Number(data.priceUSD),
-      },
+      price: Number(data.price.replace(",", ".")),
       discount: Number(data.discount),
+      socket: data.socket,
+      type: data.type,
+      speed: data.speed,
+      ddr: data.ddr,
       id: data._id,
     };
 
+    // console.log(structuredData);
     editProduct(structuredData);
   }
 

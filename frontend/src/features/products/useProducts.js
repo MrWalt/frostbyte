@@ -14,6 +14,8 @@ export function useProducts() {
     minPrice: searchParams.get("minPrice") || null,
     maxPrice: searchParams.get("maxPrice") || null,
     socket: searchParams.get("socket") || null,
+    capacity: searchParams.get("capacity") || null,
+    type: searchParams.get("type") || null,
   };
 
   const sortBy = searchParams.get("sort") || null;

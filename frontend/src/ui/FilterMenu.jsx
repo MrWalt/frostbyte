@@ -64,6 +64,8 @@ export default function FilterMenu({ params }) {
     searchParams.delete("minPrice");
     searchParams.delete("maxPrice");
     searchParams.delete("socket");
+    searchParams.delete("capacity");
+    searchParams.delete("type");
 
     searchParams.set("page", 1);
     setSearchParams(searchParams);
@@ -105,6 +107,40 @@ export default function FilterMenu({ params }) {
             key="Socket"
             filter="socket"
           />
+        ) : null}
+
+        {params?.category === "storage" ? (
+          <>
+            <FilterOption
+              type="Capacity"
+              options={isLoading ? [] : filters?.capacities}
+              key="Capacity"
+              filter="capacity"
+            />
+            <FilterOption
+              type="Type"
+              options={isLoading ? [] : filters?.types}
+              key="Type"
+              filter="type"
+            />
+          </>
+        ) : null}
+
+        {params?.category === "motherboards" ? (
+          <>
+            <FilterOption
+              type="Chipset"
+              options={isLoading ? [] : filters?.sockets}
+              key="Chipset"
+              filter="socket"
+            />
+            <FilterOption
+              type="Type"
+              options={isLoading ? [] : filters?.type}
+              key="Type"
+              filter="type"
+            />
+          </>
         ) : null}
       </FiltersBox>
     </Box>

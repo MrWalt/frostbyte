@@ -20,15 +20,30 @@ function getAll(Model, selectOptions, getFilters = false) {
       const count = await countQuery.query.countDocuments();
 
       // This returns all filterable options for dynamic frontend filters
+      // Socket, Type, Capacity, Brand
       let filtersQuery;
       const filtersObject = {};
       if (getFilters) {
         filtersQuery = new APIFeatures(
-          Model.find().select(`manufacturer socket -_id`),
+          Model.find().select(`manufacturer socket type capacity -_id`),
           req.query
-        ).filter(["manufacturer", "socket"]);
+        ).filter(["manufacturer", "socket", "type", "capacity"]);
 
         filtersQuery = await filtersQuery.query;
+
+        filtersObject.capacites = [
+          ...new Set(
+            filtersQuery
+              .filter((item) => item.capacity)
+              .map((item) => item.capacity)
+          ),
+        ];
+
+        filtersObject.types = [
+          ...new Set(
+            filtersQuery.filter((item) => item.type).map((item) => item.type)
+          ),
+        ];
 
         filtersObject.sockets = [
           ...new Set(

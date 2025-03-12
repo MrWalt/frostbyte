@@ -138,6 +138,7 @@ const OutOfStock = styled.span`
   bottom: 1.2rem;
   right: 1.2rem;
 
+  backdrop-filter: blur(8px);
   border: 1px solid var(--color-grey-800);
 `;
 
@@ -155,7 +156,7 @@ const Discount = styled.span`
   border: 1px solid var(--color-grey-800);
   padding: 0.4rem 0.8rem;
 
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 
   backdrop-filter: blur(4px);
 
@@ -204,7 +205,7 @@ export default function Card({
 
       <ImageLink to={`/product/${id}`}>
         <ImageBox>
-          <Image src={`/public/img/product-1.png`} />
+          <Image src={`/img/product-1.png`} />
         </ImageBox>
       </ImageLink>
 
@@ -245,8 +246,8 @@ export default function Card({
       )}
       {discount ? (
         <Discount>
-          <span>{discount}</span>
-          <Percentage>%</Percentage> off
+          -<span>{discount}</span>
+          <Percentage>%</Percentage>
         </Discount>
       ) : null}
     </Box>

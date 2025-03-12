@@ -8,29 +8,24 @@ export function useProducts() {
   const { category } = useParams();
   const [searchParams] = useSearchParams();
 
-  const filter = {};
-  filter.manufacturer = searchParams.get("manufacturer") || null;
-  filter.stockOnly = searchParams.get("stock") || null;
-  filter.price = {
-    min: searchParams.get("minPrice") || null,
-    max: searchParams.get("maxPrice") || null,
+  const filter = {
+    manufacturer: searchParams.get("manufacturer") || null,
+    stock: searchParams.get("stock") || null,
+    minPrice: searchParams.get("minPrice") || null,
+    maxPrice: searchParams.get("maxPrice") || null,
+    socket: searchParams.get("socket") || null,
   };
+
   const sortBy = searchParams.get("sort") || null;
 
   const page = Number(searchParams.get("page")) || 1;
 
-  const { isLoading, data: { data: products, count, brands } = {} } = useQuery({
-    queryFn: () => getProducts(page, category, filter, sortBy),
-    queryKey: [
-      "products",
-      page,
-      category,
-      filter.manufacturer,
-      filter.stockOnly,
-      filter.price,
-      sortBy,
-    ],
-  });
+  const { isLoading, data: { data: products, count, filters } = {} } = useQuery(
+    {
+      queryFn: () => getProducts(page, category, filter, sortBy),
+      queryKey: ["products", page, category, filter, sortBy],
+    }
+  );
 
   // Prefetching
   const pageCount = Math.ceil(count / PAGE_SIZE);
@@ -38,32 +33,16 @@ export function useProducts() {
   if (page < pageCount) {
     queryClient.prefetchQuery({
       queryFn: () => getProducts(page + 1, category, filter, sortBy),
-      queryKey: [
-        "products",
-        page + 1,
-        category,
-        filter.manufacturer,
-        filter.stockOnly,
-        filter.price,
-        sortBy,
-      ],
+      queryKey: ["products", page + 1, category, filter, sortBy],
     });
   }
 
   if (page > 1) {
     queryClient.prefetchQuery({
       queryFn: () => getProducts(page - 1, category, filter, sortBy),
-      queryKey: [
-        "products",
-        page - 1,
-        category,
-        filter.manufacturer,
-        filter.stockOnly,
-        filter.price,
-        sortBy,
-      ],
+      queryKey: ["products", page - 1, category, filter, sortBy],
     });
   }
 
-  return { isLoading, products, count, brands };
+  return { isLoading, products, count, filters };
 }

@@ -1,7 +1,7 @@
 const APIFeatures = require("../utils/APIFeatures");
 
 // READ
-function getAll(Model, selectOptions, getBrands = false) {
+function getAll(Model, selectOptions, getFilters = false) {
   return async function (req, res) {
     try {
       // Getting the data from our database
@@ -19,28 +19,36 @@ function getAll(Model, selectOptions, getBrands = false) {
       const countQuery = new APIFeatures(Model.find(), req.query).filter();
       const count = await countQuery.query.countDocuments();
 
-      let brandQuery;
-      let brands;
-
-      // For dynamic frontend filter. Returns the brands allowing user to filter by brands
-      if (getBrands) {
-        brandQuery = new APIFeatures(
-          Model.find().select(
-            "-title -description -price -discountedPrice -specifications -discount -stock -sold -warranty -category -__v -id -_id"
-          ),
+      // This returns all filterable options for dynamic frontend filters
+      let filtersQuery;
+      const filtersObject = {};
+      if (getFilters) {
+        filtersQuery = new APIFeatures(
+          Model.find().select(`manufacturer socket -_id`),
           req.query
-        ).filter(["manufacturer"]);
+        ).filter(["manufacturer", "socket"]);
 
-        brands = await brandQuery.query;
+        filtersQuery = await filtersQuery.query;
 
-        brands = brands.map((item) => item.manufacturer);
-
-        brands = brands.filter((item, index) => brands.indexOf(item) === index);
+        filtersObject.sockets = [
+          ...new Set(
+            filtersQuery
+              .filter((item) => item.socket)
+              .map((item) => item.socket)
+          ),
+        ];
+        filtersObject.brands = [
+          ...new Set(filtersQuery.map((item) => item.manufacturer)),
+        ];
       }
+      // For dynamic frontend filter. Returns the brands allowing user to filter by brands
 
-      res
-        .status(200)
-        .json({ status: "success", data: documents, count, brands });
+      res.status(200).json({
+        status: "success",
+        data: documents,
+        count,
+        filters: filtersObject,
+      });
     } catch (err) {
       res.status(400).json({ status: "error", message: "Could not fetch" });
     }

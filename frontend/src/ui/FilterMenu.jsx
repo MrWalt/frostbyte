@@ -53,7 +53,7 @@ const StyledButton = styled(Button)`
 `;
 
 export default function FilterMenu({ params }) {
-  const { brands, isLoading } = useProducts();
+  const { filters, isLoading } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleClearFilters() {
@@ -63,6 +63,7 @@ export default function FilterMenu({ params }) {
     searchParams.delete("manufacturer");
     searchParams.delete("minPrice");
     searchParams.delete("maxPrice");
+    searchParams.delete("socket");
 
     searchParams.set("page", 1);
     setSearchParams(searchParams);
@@ -91,9 +92,18 @@ export default function FilterMenu({ params }) {
         {params?.category ? (
           <FilterOption
             type="Brand"
-            options={isLoading ? [] : brands}
+            options={isLoading ? [] : filters?.brands}
             key="Brand"
             filter="manufacturer"
+          />
+        ) : null}
+
+        {params?.category === "processors" ? (
+          <FilterOption
+            type="Socket"
+            options={isLoading ? [] : filters?.sockets}
+            key="Socket"
+            filter="socket"
           />
         ) : null}
       </FiltersBox>

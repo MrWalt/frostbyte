@@ -108,7 +108,7 @@ export default function WishList() {
             {wishlist.map((item) => (
               <WishListItem
                 title={item.product.title}
-                price={item.product.price.USD}
+                price={item.product.price}
                 id={item.product.id}
                 dateAdded={item.dateAdded}
                 key={item.product.id}

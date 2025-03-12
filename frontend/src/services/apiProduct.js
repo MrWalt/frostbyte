@@ -1,13 +1,20 @@
 export async function getProducts(page, category, filter, sortBy) {
+  let filterQuery = Object.keys(filter)
+    .map((item) => {
+      if (filter[item] !== null) return `${item}=${filter[item]}`;
+      return null;
+    })
+    .filter((item) => item);
+
+  filterQuery = `&` + filterQuery.join("&");
+
   // Will change this horrid sight later
   const res = await fetch(
     `http://localhost:8000/api/v1/products?page=${page}${
       category ? `&category=${category}` : ""
-    }${filter.manufacturer ? `&manufacturer=${filter.manufacturer}` : ""}${
-      filter.stockOnly ? `&stock=${filter.stockOnly}` : ""
-    }${filter.price.min ? `&minPrice=${filter.price.min}` : ""}${
-      filter.price.max ? `&maxPrice=${filter.price.max}` : ""
-    }${sortBy ? `&sort=${sortBy}` : ""}`
+    }${sortBy ? `&sort=${sortBy}` : ""}${
+      filterQuery !== "&" ? filterQuery : ""
+    }`
   );
 
   const data = await res.json();

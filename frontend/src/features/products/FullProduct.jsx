@@ -197,13 +197,10 @@ export default function FullProduct() {
 
         <CartBox>
           <PriceBox>
-            <Price
-              size="largex2"
-              price={discount ? discountedPrice.USD : price.USD}
-            />
+            <Price size="largex2" price={discount ? discountedPrice : price} />
             {discount !== 0 && (
               <OldPrice>
-                <Price size="tiny" price={price.USD} />
+                <Price size="tiny" price={price} />
               </OldPrice>
             )}
             {stock < 4 && stock !== 0 && <Stock>Only {stock} left</Stock>}

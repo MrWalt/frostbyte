@@ -19,14 +19,14 @@ class APIFeatures {
 
     if (queryObject?.minPrice) {
       this.query = this.query.find({
-        "price.USD": { $gte: queryObject.minPrice },
+        price: { $gte: queryObject.minPrice },
       });
       delete queryObject.minPrice;
     }
 
     if (queryObject?.maxPrice) {
       this.query = this.query.find({
-        "price.USD": { $lte: queryObject.maxPrice },
+        price: { $lte: queryObject.maxPrice },
       });
       delete queryObject.maxPrice;
     }
@@ -41,7 +41,7 @@ class APIFeatures {
 
       this.query = this.query.sort(sortBy);
     } else {
-      this.query = this.query.sort("-price");
+      this.query = this.query.sort("-dateAdded");
     }
 
     return this;

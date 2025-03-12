@@ -75,13 +75,13 @@ export default function ProductsGrid() {
         products.map((item) => (
           <Card
             title={item.title}
-            price={item.price.USD}
+            price={item.price}
             shortTitle={item.shortTitle}
             key={item.id}
             id={item.id}
             stock={item.stock}
             discount={item.discount}
-            discountedPrice={item.discountedPrice?.USD}
+            discountedPrice={item.discountedPrice}
           />
         ))
       ) : (

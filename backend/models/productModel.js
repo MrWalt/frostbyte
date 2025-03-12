@@ -5,17 +5,10 @@ const productSchema = new mongoose.Schema(
     title: {
       type: String,
       required: [true, "Product must have a title."],
-      unique: [true, "A product with this title already exists."],
     },
     price: {
-      EUR: {
-        type: Number,
-        required: [true, "Product must have a price in EUR"],
-      },
-      USD: {
-        type: Number,
-        required: [true, "Product must have a price in USD"],
-      },
+      type: Number,
+      required: [true, "Product must have a price"],
     },
     description: {
       type: String,
@@ -41,26 +34,31 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: [true, "Product must have a stock count."],
     },
+    image: {
+      type: String,
+      default: "default.jpg",
+    },
+    capacity: String,
+    type: String,
+    socket: String,
+    speed: String,
+    ddr: String,
+    dateAdded: {
+      type: Date,
+      default: Date.now,
+    },
     discount: {
       type: Number,
       default: 0,
-    },
-    sold: {
-      type: Number,
     },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
 productSchema.virtual("discountedPrice").get(function () {
-  const USD = Number(
-    (this.price.USD - (this.price.USD / 100) * this.discount).toFixed(2)
-  );
-  const EUR = Number(
-    (this.price.EUR - (this.price.EUR / 100) * this.discount).toFixed(2)
-  );
-
-  return this.discount > 0 ? { USD, EUR } : null;
+  return this.discount > 0
+    ? (this.price - (this.price / 100) * this.discount).toFixed(2)
+    : null;
 });
 
 const Product = mongoose.model("Product", productSchema);

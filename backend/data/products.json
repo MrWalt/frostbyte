@@ -1,2540 +1,1300 @@
 [
   {
-    "title": "NVIDIA GeForce RTX 4080 16GB Founders Edition",
-    "price": {
-      "USD": 1199.99,
-      "EUR": 1299.99
-    },
+    "title": "NVIDIA GeForce RTX 4090 24GB Founders Edition",
+    "price": 1799.99,
     "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
       "NVIDIA Ada Lovelace Architecture",
-      "16GB GDDR6X Memory",
-      "2505 MHz Boost Clock",
-      "PCIe Gen 4 x16 Interface",
-      "DLSS 3 Support",
-      "Ray Tracing Cores",
+      "24GB GDDR6X Memory",
+      "2610 MHz Boost Clock",
+      "16384 CUDA Cores",
+      "640 Tensor Cores",
+      "Performance: 83 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 1008 GB/s",
+      "Ray Tracing Performance: DLSS 3 Enabled",
       "Supports 8K & 4K Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
       "3x DisplayPort 1.4a, 1x HDMI 2.1",
-      "320W TGP",
-      "7680 CUDA Cores",
-      "384 Tensor Cores",
-      "NVIDIA Reflex Low Latency",
-      "8K HDR Ready",
-      "Dual Axial-tech Fans",
-      "Max Temp: 93°C",
-      "Maximum Power Connectors: 2 x 8-pin"
+      "Dimensions: 304 x 137 x 61 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "450W TGP",
+      "Recommended PSU: 850W",
+      "Maximum Power Connectors: 1 x 16-pin"
     ],
-    "warranty": "2 years",
-    "stock": 6,
-    "sold": 20,
-    "description": "The RTX 4080 delivers top-tier performance with 16GB GDDR6X memory and Ada Lovelace architecture. Perfect for 4K and 8K gaming, featuring DLSS 3, ray tracing, and AI enhancements.",
-    "discount": 0
+    "warranty": "3 years",
+    "stock": 3,
+    "description": "Unleash the pinnacle of graphical prowess with the NVIDIA GeForce RTX 4090, the undisputed champion of 4K and 8K gaming, powered by 24GB GDDR6X memory and the revolutionary Ada Lovelace architecture. Experience jaw-dropping visuals and buttery-smooth frame rates, elevated by DLSS 3 for unmatched performance in ray-traced masterpieces. Ideal for hardcore gamers, VR enthusiasts, and professional creators, this card crushes AAA titles, accelerates AI workloads, and delivers future-proof connectivity with DisplayPort 1.4a and HDMI 2.1. Upgrade to the ultimate GPU and redefine your gaming and creative potential today.",
+    "discount": 0,
+    "image": "product-1.png"
   },
   {
-    "title": "AMD Radeon RX 7900 XT 20GB",
-    "price": {
-      "USD": 999.99,
-      "EUR": 1099.99
-    },
+    "title": "AMD Radeon RX 7800 XT 16GB",
+    "price": 529.95,
     "manufacturer": "AMD",
     "category": "graphics-cards",
     "specifications": [
-      "RDNA 3 Architecture",
-      "20GB GDDR6 Memory",
-      "2500 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "Ray Tracing Support",
-      "1x DisplayPort 2.1, 1x HDMI 2.1",
-      "300W TGP",
-      "5120 Stream Processors",
-      "128 Ray Accelerators",
-      "Infinity Cache: 80MB",
-      "Supports 8K Gaming",
-      "Dynamic Load Balancing",
-      "Smart Access Memory",
-      "Vulkan & DirectX 12 Ultimate Support",
-      "Maximum Power Connectors: 2 x 8-pin"
-    ],
-    "warranty": "2 years",
-    "stock": 3,
-    "sold": 15,
-    "description": "The AMD Radeon RX 7900 XT, with RDNA 3 and 20GB GDDR6, offers exceptional 4K and 8K gaming. Features like Smart Access Memory and dynamic load balancing deliver ultra-fast performance.",
-    "discount": 0
-  },
-  {
-    "title": "MSI GeForce GTX 1660 Super 6GB",
-    "price": {
-      "USD": 229.99,
-      "EUR": 249.99
-    },
-    "manufacturer": "MSI",
-    "category": "graphics-cards",
-    "specifications": [
-      "Turing Architecture",
-      "6GB GDDR5 Memory",
-      "1785 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "No Ray Tracing",
-      "1x DisplayPort 1.4, 1x HDMI 2.0b",
-      "125W TGP",
-      "1408 CUDA Cores",
-      "Dual Fan Cooling",
-      "Supports 1080p Gaming",
-      "High Efficiency VRM Design",
-      "Max Temp: 88°C",
-      "Optimal for Budget-Friendly Builds"
-    ],
-    "warranty": "2 years",
-    "stock": 0,
-    "sold": 50,
-    "description": "The MSI GTX 1660 Super offers excellent value for 1080p gaming. With 6GB GDDR5 memory and Turing architecture, it delivers solid performance without the high price tag.",
-    "discount": 0
-  },
-  {
-    "title": "EVGA GeForce RTX 3070 Ti 8GB FTW3 Ultra Gaming",
-    "price": {
-      "USD": 699.99,
-      "EUR": 749.99
-    },
-    "manufacturer": "EVGA",
-    "category": "graphics-cards",
-    "specifications": [
-      "Ampere Architecture",
-      "8GB GDDR6X Memory",
-      "1770 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 2 Support",
-      "Ray Tracing Cores",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1",
-      "320W TGP",
-      "2560 CUDA Cores",
-      "80 Tensor Cores",
-      "Dual-Fan Cooling System",
-      "EVGA iCX3 Technology",
-      "High-Performance VRM for Stability",
-      "Max Temp: 85°C",
-      "Maximum Power Connectors: 2 x 8-pin"
-    ],
-    "warranty": "3 years",
-    "stock": 8,
-    "sold": 40,
-    "description": "The EVGA RTX 3070 Ti offers incredible 1440p and 4K gaming performance with 8GB of GDDR6X memory, DLSS 2, and ray tracing. Its advanced cooling ensures peak performance at all times.",
-    "discount": 0
-  },
-  {
-    "title": "ASUS ROG Strix Radeon RX 6800 XT 16GB",
-    "price": {
-      "USD": 649.99,
-      "EUR": 699.99
-    },
-    "manufacturer": "ASUS",
-    "category": "graphics-cards",
-    "specifications": [
-      "RDNA 2 Architecture",
+      "AMD RDNA 3 Architecture",
       "16GB GDDR6 Memory",
-      "2250 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "Ray Tracing Support",
-      "3x DisplayPort 1.4, 1x HDMI 2.1",
+      "2430 MHz Boost Clock",
+      "3840 Stream Processors",
+      "240 AI Accelerators",
+      "Memory Bus Bandwidth: 624 GB/s",
+      "Ray Tracing Performance: 45 TFLOPS (FP32)",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x16 Interface",
+      "2x DisplayPort 2.1, 2x HDMI 2.1",
+      "Dimensions: 267 x 111 x 50 mm",
+      "Cooling Solution: Dual-Fan Open Air",
       "300W TGP",
-      "72 Compute Units",
-      "4608 Stream Processors",
-      "Dual Axial-tech Fans",
-      "Zero RPM Fan Mode for silent operation",
-      "Supports 4K Gaming",
-      "Max Temp: 90°C",
+      "Recommended PSU: 700W",
       "Maximum Power Connectors: 2 x 8-pin"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 10,
-    "description": "The ASUS ROG Strix RX 6800 XT delivers outstanding 4K performance with 16GB of GDDR6 memory. Built with RDNA 2 architecture, it supports ray tracing and features advanced cooling.",
-    "discount": 0
-  },
-  {
-    "title": "ZOTAC GeForce RTX 3060 Twin Fan 12GB",
-    "price": {
-      "USD": 439.99,
-      "EUR": 479.99
-    },
-    "manufacturer": "ZOTAC",
-    "category": "graphics-cards",
-    "specifications": [
-      "Ampere Architecture",
-      "12GB GDDR6 Memory",
-      "1777 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 2 Support",
-      "Ray Tracing Cores",
-      "2x DisplayPort 1.4a, 1x HDMI 2.1",
-      "170W TGP",
-      "3584 CUDA Cores",
-      "48 Tensor Cores",
-      "Dual Fan Cooling",
-      "Max Temp: 80°C",
-      "Compact Form Factor",
-      "Ideal for 1440p Gaming"
-    ],
-    "warranty": "2 years",
-    "stock": 9,
-    "sold": 30,
-    "description": "The ZOTAC GeForce RTX 3060 offers excellent performance for 1440p gaming, featuring 12GB of GDDR6 memory, DLSS 2, and ray tracing for immersive visuals.",
-    "discount": 10
-  },
-  {
-    "title": "Gigabyte Radeon RX 6700 XT 12GB",
-    "price": {
-      "USD": 529.99,
-      "EUR": 579.99
-    },
-    "manufacturer": "Gigabyte",
-    "category": "graphics-cards",
-    "specifications": [
-      "RDNA 2 Architecture",
-      "12GB GDDR6 Memory",
-      "2581 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "Ray Tracing Support",
-      "3x DisplayPort 1.4, 1x HDMI 2.1",
-      "230W TGP",
-      "2560 Stream Processors",
-      "40 Compute Units",
-      "Advanced Cooling System",
-      "Supports 1440p Gaming",
-      "Max Temp: 85°C",
-      "Maximum Power Connectors: 2 x 8-pin"
-    ],
-    "warranty": "2 years",
-    "stock": 4,
-    "sold": 12,
-    "description": "The Gigabyte RX 6700 XT offers great 1440p gaming performance, with 12GB of GDDR6 memory and advanced RDNA 2 architecture. Its efficient cooling system ensures stable performance.",
-    "discount": 0
-  },
-  {
-    "title": "NVIDIA GeForce GTX 1650 4GB",
-    "price": {
-      "USD": 149.99,
-      "EUR": 169.99
-    },
-    "manufacturer": "NVIDIA",
-    "category": "graphics-cards",
-    "specifications": [
-      "Turing Architecture",
-      "4GB GDDR5 Memory",
-      "1665 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "No Ray Tracing",
-      "1x DisplayPort 1.4, 1x HDMI 2.0b",
-      "75W TGP",
-      "896 CUDA Cores",
-      "Single Fan Cooling",
-      "Ideal for 1080p Gaming",
-      "Max Temp: 85°C",
-      "Compact Design for Small Cases"
-    ],
-    "warranty": "2 years",
-    "stock": 10,
-    "sold": 35,
-    "description": "The NVIDIA GTX 1650 is an excellent budget-friendly option for 1080p gaming. With 4GB of GDDR5 memory, it offers solid performance for casual gamers.",
-    "discount": 0
-  },
-  {
-    "title": "ASRock Phantom Gaming Radeon RX 5600 XT 6GB",
-    "price": {
-      "USD": 279.99,
-      "EUR": 299.99
-    },
-    "manufacturer": "ASRock",
-    "category": "graphics-cards",
-    "specifications": [
-      "RDNA Architecture",
-      "6GB GDDR6 Memory",
-      "1750 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "Ray Tracing Support",
-      "3x DisplayPort 1.4, 1x HDMI 2.0",
-      "150W TGP",
-      "2048 Stream Processors",
-      "12 Compute Units",
-      "Dual Fan Cooling",
-      "Max Temp: 80°C",
-      "Supports 1080p & 1440p Gaming"
     ],
     "warranty": "2 years",
     "stock": 7,
-    "sold": 22,
-    "description": "The ASRock RX 5600 XT is a great option for 1080p and 1440p gaming, offering 6GB of GDDR6 memory, RDNA architecture, and efficient cooling for long gaming sessions.",
-    "discount": 15
+    "description": "Step into the future of gaming with the AMD Radeon RX 7800 XT, a powerhouse engineered for silky-smooth 1440p and stunning 4K gaming, fueled by 16GB GDDR6 memory and the cutting-edge RDNA 3 architecture. Dive into immersive ray-traced worlds with FidelityFX Super Resolution, ensuring high frame rates without sacrificing detail. Perfect for competitive gamers and VR adventurers, this card delivers exceptional performance in AAA titles, esports, and beyond, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Elevate your gameplay and dominate the leaderboards with AMD's finest.",
+    "discount": 0,
+    "image": "product-2.png"
   },
   {
-    "title": "NVIDIA GeForce RTX 4070 Ti 12GB Founders Edition",
-    "price": {
-      "USD": 899.99,
-      "EUR": 999.99
-    },
+    "title": "Intel Arc A750 8GB Limited Edition",
+    "price": 239.99,
+    "manufacturer": "Intel",
+    "category": "graphics-cards",
+    "specifications": [
+      "Intel Xe-HPG Architecture",
+      "8GB GDDR6 Memory",
+      "2050 MHz Boost Clock",
+      "3584 Vector Engines",
+      "224 XMX Engines",
+      "Memory Bus Bandwidth: 512 GB/s",
+      "Ray Tracing Performance: 9.2 TFLOPS (FP32)",
+      "Supports 1440p & 1080p Gaming",
+      "VR Ready",
+      "XeSS Super Sampling",
+      "DirectX 12 Ultimate Support",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 2.0, 1x HDMI 2.1",
+      "Dimensions: 267 x 111 x 43 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "225W TGP",
+      "Recommended PSU: 650W",
+      "Maximum Power Connectors: 1 x 8-pin, 1 x 6-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 1,
+    "description": "Experience next-level value with the Intel Arc A750, a budget-friendly titan that delivers smooth 1080p and impressive 1440p gaming, powered by 8GB GDDR6 memory and the innovative Xe-HPG architecture. Unleash stunning visuals with XeSS Super Sampling, Intel's answer to upscaling, and dive into ray-traced adventures without breaking the bank. Ideal for budget-conscious gamers, esports enthusiasts, and VR explorers, this card offers modern connectivity with DisplayPort 2.0 and HDMI 2.1, ensuring your setup is ready for the future. Upgrade smart and game hard with Intel's groundbreaking entry into discrete graphics.",
+    "discount": 0,
+    "image": "product-3.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 3060 12GB",
+    "price": 299.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Ampere Architecture",
+      "12GB GDDR6 Memory",
+      "1777 MHz Boost Clock",
+      "3584 CUDA Cores",
+      "112 Tensor Cores",
+      "Performance: 13 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 360 GB/s",
+      "Ray Tracing Performance: DLSS 2 Enabled",
+      "Supports 1440p & 1080p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 242 x 112 x 41 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "170W TGP",
+      "Recommended PSU: 550W",
+      "Maximum Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 9,
+    "description": "Unleash exceptional value with the NVIDIA GeForce RTX 3060, a mid-range marvel delivering outstanding 1080p and solid 1440p gaming, powered by 12GB GDDR6 memory and the efficient Ampere architecture. Experience smooth, ray-traced visuals with DLSS 2, ensuring high frame rates without compromising on detail. Perfect for budget-conscious gamers, esports fanatics, and VR enthusiasts, this card excels in AAA titles and creative workloads, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy a perfect balance of performance, efficiency, and affordability with NVIDIA's trusted technology.",
+    "discount": 0,
+    "image": "product-4.png"
+  },
+  {
+    "title": "AMD Radeon RX 7600 8GB",
+    "price": 269.99,
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA 3 Architecture",
+      "8GB GDDR6 Memory",
+      "2250 MHz Boost Clock",
+      "2048 Stream Processors",
+      "128 AI Accelerators",
+      "Memory Bus Bandwidth: 288 GB/s",
+      "Ray Tracing Performance: 22 TFLOPS (FP32)",
+      "Supports 1080p & 1440p Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x8 Interface",
+      "2x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 204 x 107 x 40 mm",
+      "Cooling Solution: Single-Fan Open Air",
+      "165W TGP",
+      "Recommended PSU: 550W",
+      "Maximum Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 4,
+    "description": "Dive into high-performance gaming on a budget with the AMD Radeon RX 7600, a compact powerhouse delivering outstanding 1080p and solid 1440p gaming, fueled by 8GB GDDR6 memory and the advanced RDNA 3 architecture. Experience crisp, ray-traced visuals with FidelityFX Super Resolution, ensuring smooth frame rates without sacrificing quality. Ideal for budget gamers, esports enthusiasts, and compact builds, this card shines in AAA titles and VR experiences, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your setup and enjoy AMD's signature value and efficiency in a sleek, single-fan design.",
+    "discount": 0,
+    "image": "product-5.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 4070 Ti 12GB",
+    "price": 799.95,
     "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
       "NVIDIA Ada Lovelace Architecture",
       "12GB GDDR6X Memory",
       "2610 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 3 Support",
-      "Ray Tracing Cores",
-      "Supports 4K Gaming",
+      "7680 CUDA Cores",
+      "240 Tensor Cores",
+      "Performance: 40 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 504 GB/s",
+      "Ray Tracing Performance: DLSS 3 Enabled",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
       "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 285 x 112 x 51 mm",
+      "Cooling Solution: Triple-Fan Open Air",
       "285W TGP",
-      "5888 CUDA Cores",
-      "192 Tensor Cores",
-      "8K HDR Ready",
-      "Dual Axial-tech Fans",
-      "Max Temp: 93°C",
+      "Recommended PSU: 700W",
+      "Maximum Power Connectors: 1 x 16-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 6,
+    "description": "Unleash breathtaking performance with the NVIDIA GeForce RTX 4070 Ti, a high-end marvel delivering exceptional 1440p and stunning 4K gaming, powered by 12GB GDDR6X memory and the revolutionary Ada Lovelace architecture. Experience silky-smooth, ray-traced visuals with DLSS 3, ensuring maximum performance without compromising detail. Perfect for enthusiasts, VR adventurers, and content creators, this card excels in AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy a perfect blend of power, efficiency, and cutting-edge technology, all in a sleek, triple-fan design that keeps temperatures in check during intense sessions.",
+    "discount": 0,
+    "image": "product-6.png"
+  },
+  {
+    "title": "AMD Radeon RX 7900 XTX 24GB",
+    "price": 959.99,
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA 3 Architecture",
+      "24GB GDDR6 Memory",
+      "2615 MHz Boost Clock",
+      "6144 Stream Processors",
+      "384 AI Accelerators",
+      "Memory Bus Bandwidth: 960 GB/s",
+      "Ray Tracing Performance: 61 TFLOPS (FP32)",
+      "Supports 8K & 4K Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 287 x 135 x 56 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "355W TGP",
+      "Recommended PSU: 750W",
       "Maximum Power Connectors: 2 x 8-pin"
     ],
     "warranty": "2 years",
-    "stock": 4,
-    "sold": 18,
-    "description": "The RTX 4070 Ti offers incredible performance for 4K gaming, featuring 12GB of GDDR6X memory, Ada Lovelace architecture, and cutting-edge AI features like DLSS 3.",
-    "discount": 0
+    "stock": 8,
+    "description": "Unleash unparalleled power with the AMD Radeon RX 7900 XTX, a flagship titan engineered for breathtaking 4K and 8K gaming, fueled by 24GB GDDR6 memory and the cutting-edge RDNA 3 architecture. Dive into immersive ray-traced worlds with FidelityFX Super Resolution, delivering silky-smooth frame rates without sacrificing detail. Perfect for enthusiasts, VR adventurers, and professional creators, this card dominates AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and experience AMD's finest, blending raw power, efficiency, and innovation in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 0,
+    "image": "product-7.png"
   },
   {
-    "title": "Sapphire Nitro+ Radeon RX 5700 XT 8GB",
-    "price": {
-      "USD": 399.99,
-      "EUR": 439.99
-    },
-    "manufacturer": "Sapphire",
+    "title": "Intel Arc B580 10GB",
+    "price": 249.99,
+    "manufacturer": "Intel",
     "category": "graphics-cards",
     "specifications": [
-      "RDNA 1 Architecture",
+      "Intel Xe2 Architecture",
+      "10GB GDDR6 Memory",
+      "2667 MHz Boost Clock",
+      "2560 Vector Engines",
+      "160 XMX Engines",
+      "Memory Bus Bandwidth: 560 GB/s",
+      "Ray Tracing Performance: 10 TFLOPS (FP32)",
+      "Supports 1440p & 1080p Gaming",
+      "VR Ready",
+      "XeSS Super Sampling",
+      "DirectX 12 Ultimate Support",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 2.0, 1x HDMI 2.1",
+      "Dimensions: 244 x 111 x 38 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "185W TGP",
+      "Recommended PSU: 600W",
+      "Maximum Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 0,
+    "description": "Experience exceptional value with the Intel Arc B580, a budget-friendly powerhouse delivering smooth 1080p and impressive 1440p gaming, powered by 10GB GDDR6 memory and the innovative Xe2 architecture. Unleash stunning visuals with XeSS Super Sampling, Intel's cutting-edge upscaling technology, and dive into ray-traced adventures without breaking the bank. Ideal for budget-conscious gamers, esports enthusiasts, and VR explorers, this card shines in AAA titles and compact builds, with future-proof connectivity via DisplayPort 2.0 and HDMI 2.1. Upgrade smart and game hard with Intel's latest, blending performance, efficiency, and innovation in a sleek, dual-fan design that's perfect for small form factor PCs.",
+    "discount": 15,
+    "image": "product-8.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 4060 8GB",
+    "price": 299.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Ada Lovelace Architecture",
       "8GB GDDR6 Memory",
-      "1755 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "Ray Tracing Support",
-      "3x DisplayPort 1.4, 1x HDMI 2.0",
-      "225W TGP",
-      "2560 Stream Processors",
-      "64 Compute Units",
-      "Dual-X Cooling with Two Fans",
-      "Max Temp: 85°C",
-      "Supports 1440p Gaming",
-      "8K Ready"
+      "2460 MHz Boost Clock",
+      "3072 CUDA Cores",
+      "96 Tensor Cores",
+      "Performance: 15 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 272 GB/s",
+      "Ray Tracing Performance: DLSS 3 Enabled",
+      "Supports 1080p & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 210 x 105 x 40 mm",
+      "Cooling Solution: Single-Fan Open Air",
+      "115W TGP",
+      "Recommended PSU: 550W",
+      "Maximum Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 2,
+    "description": "Unleash outstanding value with the NVIDIA GeForce RTX 4060, a budget-friendly marvel delivering exceptional 1080p and solid 1440p gaming, powered by 8GB GDDR6 memory and the efficient Ada Lovelace architecture. Experience crisp, ray-traced visuals with DLSS 3, ensuring smooth frame rates without compromising quality. Ideal for budget gamers, esports enthusiasts, and compact builds, this card excels in AAA titles, VR experiences, and light creative workloads, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's signature performance, efficiency, and innovation in a sleek, single-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-9.png"
+  },
+  {
+    "title": "AMD Radeon RX 7900 GRE 16GB",
+    "price": 549.95,
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA 3 Architecture",
+      "16GB GDDR6 Memory",
+      "2245 MHz Boost Clock",
+      "5120 Stream Processors",
+      "320 AI Accelerators",
+      "Memory Bus Bandwidth: 576 GB/s",
+      "Ray Tracing Performance: 51 TFLOPS (FP32)",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 276 x 113 x 51 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "300W TGP",
+      "Recommended PSU: 700W",
+      "Maximum Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 10,
+    "description": "Unleash top-tier performance with the AMD Radeon RX 7900 GRE, a high-end powerhouse engineered for breathtaking 1440p and stunning 4K gaming, fueled by 16GB GDDR6 memory and the advanced RDNA 3 architecture. Dive into immersive ray-traced worlds with FidelityFX Super Resolution, delivering silky-smooth frame rates without sacrificing detail. Perfect for enthusiasts, VR adventurers, and content creators, this card dominates AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and experience AMD's signature power, efficiency, and innovation in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 0,
+    "image": "product-10.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 4080 16GB Founders Edition",
+    "price": 1199.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Ada Lovelace Architecture",
+      "16GB GDDR6X Memory",
+      "2505 MHz Boost Clock",
+      "9728 CUDA Cores",
+      "304 Tensor Cores",
+      "Performance: 49 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 717 GB/s",
+      "Ray Tracing Performance: DLSS 3 Enabled",
+      "Supports 8K & 4K Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 304 x 137 x 61 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "320W TGP",
+      "Recommended PSU: 750W",
+      "Maximum Power Connectors: 1 x 16-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 5,
+    "description": "Unleash unparalleled performance with the NVIDIA GeForce RTX 4080, a flagship titan delivering breathtaking 4K and 8K gaming, powered by 16GB GDDR6X memory and the revolutionary Ada Lovelace architecture. Experience jaw-dropping, ray-traced visuals with DLSS 3, ensuring maximum performance without compromising detail. Perfect for enthusiasts, VR adventurers, and professional creators, this card dominates AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and experience NVIDIA's finest, blending raw power, efficiency, and innovation in a robust, dual-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 0,
+    "image": "product-11.png"
+  },
+  {
+    "title": "AMD Radeon RX 7700 XT 12GB",
+    "price": 429.95,
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA 3 Architecture",
+      "12GB GDDR6 Memory",
+      "2544 MHz Boost Clock",
+      "3456 Stream Processors",
+      "216 AI Accelerators",
+      "Memory Bus Bandwidth: 432 GB/s",
+      "Ray Tracing Performance: 40 TFLOPS (FP32)",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x16 Interface",
+      "2x DisplayPort 2.1, 2x HDMI 2.1",
+      "Dimensions: 267 x 111 x 50 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "250W TGP",
+      "Recommended PSU: 700W",
+      "Maximum Power Connectors: 2 x 8-pin"
     ],
     "warranty": "2 years",
     "stock": 7,
-    "sold": 25,
-    "description": "The Sapphire Nitro+ RX 5700 XT provides smooth 1440p and 4K gaming with 8GB GDDR6 memory and RDNA 1 architecture, with dual-fan cooling and ray tracing support.",
-    "discount": 0
+    "description": "Unleash breathtaking visuals with the AMD Radeon RX 7700 XT, a powerhouse engineered for silky-smooth 1440p and stunning 4K gaming, fueled by 12GB GDDR6 memory and the cutting-edge RDNA 3 architecture. Experience crisp, ray-traced effects with FidelityFX Super Resolution, ensuring high frame rates without sacrificing detail. Perfect for competitive gamers, VR enthusiasts, and content creators, this card excels in AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and dominate the competition with AMD's latest innovations, all in a sleek, dual-fan design that keeps temperatures in check during intense sessions.",
+    "discount": 0,
+    "image": "product-12.png"
   },
   {
-    "title": "Gigabyte GeForce GTX 1050 Ti 4GB OC",
-    "price": {
-      "USD": 169.99,
-      "EUR": 189.99
-    },
-    "manufacturer": "Gigabyte",
+    "title": "Intel Arc A770 16GB Limited Edition",
+    "price": 329.95,
+    "manufacturer": "Intel",
     "category": "graphics-cards",
     "specifications": [
-      "Pascal Architecture",
-      "4GB GDDR5 Memory",
-      "1392 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "No Ray Tracing",
-      "1x DisplayPort 1.4, 1x HDMI 2.0",
-      "75W TGP",
-      "768 CUDA Cores",
-      "Single Fan Cooling",
-      "Max Temp: 80°C",
-      "Ideal for 1080p Gaming"
+      "Intel Xe-HPG Architecture",
+      "16GB GDDR6 Memory",
+      "2100 MHz Boost Clock",
+      "4096 Vector Engines",
+      "256 XMX Engines",
+      "Memory Bus Bandwidth: 560 GB/s",
+      "Ray Tracing Performance: 12 TFLOPS (FP32)",
+      "Supports 1440p & 4K Gaming",
+      "VR Ready",
+      "XeSS Super Sampling",
+      "DirectX 12 Ultimate Support",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 2.0, 1x HDMI 2.1",
+      "Dimensions: 269 x 111 x 43 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "225W TGP",
+      "Recommended PSU: 650W",
+      "Maximum Power Connectors: 1 x 8-pin, 1 x 6-pin"
     ],
-    "warranty": "2 years",
-    "stock": 9,
-    "sold": 30,
-    "description": "The GTX 1050 Ti provides budget-friendly 1080p gaming performance with 4GB GDDR5 memory, perfect for casual gamers and eSports enthusiasts.",
-    "discount": 0
+    "warranty": "3 years",
+    "stock": 3,
+    "description": "Experience exceptional value with the Intel Arc A770, a mid-range powerhouse delivering smooth 1440p and impressive 4K gaming, powered by 16GB GDDR6 memory and the innovative Xe-HPG architecture. Unleash stunning visuals with XeSS Super Sampling, Intel's cutting-edge upscaling technology, and dive into ray-traced adventures without breaking the bank. Ideal for gamers, VR enthusiasts, and content creators, this card shines in AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.0 and HDMI 2.1. Upgrade smart and game hard with Intel's latest, blending performance, efficiency, and innovation in a sleek, dual-fan design that's perfect for mid-sized builds.",
+    "discount": 0,
+    "image": "product-13.png"
   },
   {
-    "title": "ZOTAC GeForce RTX 2080 Super 8GB",
-    "price": {
-      "USD": 699.99,
-      "EUR": 799.99
-    },
-    "manufacturer": "ZOTAC",
+    "title": "NVIDIA GeForce RTX 5090 32GB Founders Edition",
+    "price": 1999.95,
+    "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
-      "Turing Architecture",
-      "8GB GDDR6 Memory",
-      "1815 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "Ray Tracing Support",
-      "DLSS 2.0 Support",
-      "3x DisplayPort 1.4a, 1x HDMI 2.0",
-      "250W TGP",
-      "3072 CUDA Cores",
-      "384 Tensor Cores",
-      "Advanced Cooling System",
-      "Supports 4K Gaming",
-      "Max Temp: 85°C",
-      "Maximum Power Connectors: 2 x 8-pin"
+      "NVIDIA Blackwell Architecture",
+      "32GB GDDR7 Memory",
+      "2820 MHz Boost Clock",
+      "18432 CUDA Cores",
+      "720 Tensor Cores",
+      "Performance: 92 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 1800 GB/s",
+      "Ray Tracing Performance: DLSS 4 Enabled",
+      "Supports 8K & 4K Gaming",
+      "VR Ready",
+      "PCIe Gen 5 x16 Interface",
+      "3x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 310 x 140 x 65 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "500W TGP",
+      "Recommended PSU: 1000W",
+      "Maximum Power Connectors: 1 x 16-pin"
     ],
-    "warranty": "2 years",
-    "stock": 6,
-    "sold": 18,
-    "description": "The ZOTAC RTX 2080 Super offers exceptional 4K gaming performance with real-time ray tracing and DLSS 2.0, featuring advanced cooling and 8GB of GDDR6 memory.",
-    "discount": 0
+    "warranty": "3 years",
+    "stock": 1,
+    "description": "Unleash the future of graphics with the NVIDIA GeForce RTX 5090, the ultimate flagship titan redefining 4K and 8K gaming, powered by 32GB GDDR7 memory and the groundbreaking Blackwell architecture. Experience unparalleled, ray-traced visuals with DLSS 4, delivering unmatched performance and detail in even the most demanding titles. Perfect for bleeding-edge enthusiasts, VR pioneers, and professional creators, this card obliterates AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and step into a new era of performance, efficiency, and innovation, all in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 10,
+    "image": "product-14.png"
   },
   {
-    "title": "MSI Radeon RX 6700 XT 12GB Gaming X",
-    "price": {
-      "USD": 499.99,
-      "EUR": 549.99
-    },
-    "manufacturer": "MSI",
+    "title": "AMD Radeon RX 6700 XT 12GB",
+    "price": 349.95,
+    "manufacturer": "AMD",
     "category": "graphics-cards",
     "specifications": [
-      "RDNA 2 Architecture",
+      "AMD RDNA 2 Architecture",
       "12GB GDDR6 Memory",
       "2581 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "Ray Tracing Support",
-      "3x DisplayPort 1.4, 1x HDMI 2.1",
-      "230W TGP",
       "2560 Stream Processors",
-      "40 Compute Units",
-      "Triple-Fan Cooling",
-      "Supports 1440p Gaming",
-      "Max Temp: 80°C",
-      "Maximum Power Connectors: 2 x 8-pin"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 20,
-    "description": "The MSI RX 6700 XT is built for high-end 1440p gaming, offering 12GB of GDDR6 memory and RDNA 2 architecture, with triple-fan cooling and ray tracing support.",
-    "discount": 0
-  },
-  {
-    "title": "EVGA GeForce GTX 1660 Super 6GB SC Ultra",
-    "price": {
-      "USD": 229.99,
-      "EUR": 249.99
-    },
-    "manufacturer": "EVGA",
-    "category": "graphics-cards",
-    "specifications": [
-      "Turing Architecture",
-      "6GB GDDR5 Memory",
-      "1785 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "No Ray Tracing",
-      "1x DisplayPort 1.4, 1x HDMI 2.0b",
-      "125W TGP",
-      "1408 CUDA Cores",
-      "Dual Fan Cooling",
-      "Supports 1080p Gaming",
-      "Max Temp: 85°C",
-      "Ideal for Budget Builds"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 45,
-    "description": "The EVGA GTX 1660 Super is an affordable solution for 1080p gaming, featuring 6GB of GDDR5 memory and dual-fan cooling for reliable performance at a great price.",
-    "discount": 0
-  },
-  {
-    "title": "ASUS TUF Gaming Radeon RX 6600 XT 8GB",
-    "price": {
-      "USD": 379.99,
-      "EUR": 419.99
-    },
-    "manufacturer": "ASUS",
-    "category": "graphics-cards",
-    "specifications": [
-      "RDNA 2 Architecture",
-      "8GB GDDR6 Memory",
-      "2589 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "Ray Tracing Support",
-      "3x DisplayPort 1.4, 1x HDMI 2.1",
-      "160W TGP",
-      "2048 Stream Processors",
-      "32 Compute Units",
-      "Dual-Fan Cooling",
-      "Supports 1080p & 1440p Gaming",
-      "Max Temp: 85°C",
-      "Maximum Power Connectors: 1 x 8-pin"
+      "160 AI Accelerators",
+      "Memory Bus Bandwidth: 384 GB/s",
+      "Ray Tracing Performance: 28 TFLOPS (FP32)",
+      "Supports 1440p & 4K Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x16 Interface",
+      "2x DisplayPort 1.4, 2x HDMI 2.1",
+      "Dimensions: 267 x 110 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "230W TGP",
+      "Recommended PSU: 650W",
+      "Maximum Power Connectors: 1 x 8-pin, 1 x 6-pin"
     ],
     "warranty": "2 years",
     "stock": 6,
-    "sold": 28,
-    "description": "The ASUS TUF RX 6600 XT offers great 1080p and 1440p performance with 8GB of GDDR6 memory and RDNA 2 architecture, featuring ray tracing support and dual-fan cooling.",
-    "discount": 0
+    "description": "Unleash exceptional value with the AMD Radeon RX 6700 XT, a mid-range powerhouse delivering smooth 1440p and solid 4K gaming, fueled by 12GB GDDR6 memory and the advanced RDNA 2 architecture. Experience crisp, ray-traced visuals with FidelityFX Super Resolution, ensuring high frame rates without sacrificing quality. Ideal for gamers, VR enthusiasts, and content creators on a budget, this card excels in AAA titles, esports, and light creative workloads, with modern connectivity via DisplayPort 1.4 and HDMI 2.1. Upgrade your rig and enjoy AMD's signature performance, efficiency, and value in a sleek, dual-fan design that's perfect for mid-sized builds.",
+    "discount": 0,
+    "image": "product-15.png"
   },
   {
-    "title": "NVIDIA Quadro RTX 5000 16GB",
-    "price": {
-      "USD": 2299.99,
-      "EUR": 2499.99
-    },
+    "title": "NVIDIA GeForce RTX 3050 8GB",
+    "price": 229.95,
     "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
-      "Turing Architecture",
-      "16GB GDDR6 Memory",
-      "1770 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "Ray Tracing Support",
-      "3840 CUDA Cores",
-      "48 Tensor Cores",
-      "6x DisplayPort 1.4",
-      "Supports Professional Workloads",
-      "Max Temp: 82°C",
-      "Maximum Power Connectors: 2 x 8-pin"
+      "NVIDIA Ampere Architecture",
+      "8GB GDDR6 Memory",
+      "1777 MHz Boost Clock",
+      "2560 CUDA Cores",
+      "80 Tensor Cores",
+      "Performance: 9.1 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 224 GB/s",
+      "Ray Tracing Performance: DLSS 2 Enabled",
+      "Supports 1080p & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 242 x 112 x 41 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "130W TGP",
+      "Recommended PSU: 550W",
+      "Maximum Power Connectors: 1 x 8-pin"
     ],
     "warranty": "3 years",
-    "stock": 3,
-    "sold": 5,
-    "description": "The Quadro RTX 5000 is a powerhouse for professionals, delivering real-time ray tracing and AI-accelerated workflows. Equipped with 16GB of GDDR6, it's built for demanding tasks.",
-    "discount": 0
+    "stock": 8,
+    "description": "Unleash incredible value with the NVIDIA GeForce RTX 3050, a budget-friendly gem delivering outstanding 1080p and solid 1440p gaming, powered by 8GB GDDR6 memory and the efficient Ampere architecture. Experience smooth, ray-traced visuals with DLSS 2, ensuring high frame rates without compromising quality. Ideal for budget gamers, esports enthusiasts, and compact builds, this card shines in AAA titles, VR experiences, and light creative workloads, with modern connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's signature performance, efficiency, and innovation in a sleek, dual-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-16.png"
   },
   {
-    "title": "MSI GeForce RTX 3060 Ti 8GB Ventus 2X OC",
-    "price": {
-      "USD": 399.99,
-      "EUR": 439.99
-    },
-    "manufacturer": "MSI",
+    "title": "AMD Radeon RX 6800 16GB",
+    "price": 479.95,
+    "manufacturer": "AMD",
     "category": "graphics-cards",
     "specifications": [
-      "Ampere Architecture",
+      "AMD RDNA 2 Architecture",
+      "16GB GDDR6 Memory",
+      "2105 MHz Boost Clock",
+      "3840 Stream Processors",
+      "240 AI Accelerators",
+      "Memory Bus Bandwidth: 512 GB/s",
+      "Ray Tracing Performance: 46 TFLOPS (FP32)",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x16 Interface",
+      "2x DisplayPort 1.4, 1x HDMI 2.1, 1x USB-C",
+      "Dimensions: 267 x 120 x 40 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "250W TGP",
+      "Recommended PSU: 650W",
+      "Maximum Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 4,
+    "description": "Unleash high-end performance with the AMD Radeon RX 6800, a powerhouse engineered for silky-smooth 1440p and stunning 4K gaming, fueled by 16GB GDDR6 memory and the advanced RDNA 2 architecture. Dive into immersive ray-traced worlds with FidelityFX Super Resolution, delivering high frame rates without sacrificing detail. Perfect for enthusiasts, VR adventurers, and content creators, this card excels in AAA titles, esports, and creative workloads, with modern connectivity via DisplayPort 1.4, HDMI 2.1, and USB-C. Upgrade your rig and enjoy AMD's signature power, efficiency, and value in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 0,
+    "image": "product-17.png"
+  },
+  {
+    "title": "Intel Arc A580 8GB",
+    "price": 179.95,
+    "manufacturer": "Intel",
+    "category": "graphics-cards",
+    "specifications": [
+      "Intel Xe-HPG Architecture",
       "8GB GDDR6 Memory",
-      "1770 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 2 Support",
-      "Ray Tracing Cores",
-      "2x DisplayPort 1.4a, 1x HDMI 2.1",
+      "2000 MHz Boost Clock",
+      "3072 Vector Engines",
+      "192 XMX Engines",
+      "Memory Bus Bandwidth: 384 GB/s",
+      "Ray Tracing Performance: 8.2 TFLOPS (FP32)",
+      "Supports 1080p & 1440p Gaming",
+      "VR Ready",
+      "XeSS Super Sampling",
+      "DirectX 12 Ultimate Support",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 2.0, 1x HDMI 2.1",
+      "Dimensions: 267 x 111 x 43 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "185W TGP",
+      "Recommended PSU: 650W",
+      "Maximum Power Connectors: 1 x 8-pin, 1 x 6-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 9,
+    "description": "Experience unbeatable value with the Intel Arc A580, a budget-friendly powerhouse delivering smooth 1080p and impressive 1440p gaming, powered by 8GB GDDR6 memory and the innovative Xe-HPG architecture. Unleash stunning visuals with XeSS Super Sampling, Intel's cutting-edge upscaling technology, and dive into ray-traced adventures without breaking the bank. Ideal for budget-conscious gamers, esports enthusiasts, and VR explorers, this card shines in AAA titles, indie games, and compact builds, with future-proof connectivity via DisplayPort 2.0 and HDMI 2.1. Upgrade smart and game hard with Intel's latest, blending performance, efficiency, and innovation in a sleek, dual-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-18.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 4070 12GB",
+    "price": 599.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Ada Lovelace Architecture",
+      "12GB GDDR6X Memory",
+      "2475 MHz Boost Clock",
+      "5888 CUDA Cores",
+      "184 Tensor Cores",
+      "Performance: 29 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 504 GB/s",
+      "Ray Tracing Performance: DLSS 3 Enabled",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 244 x 112 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
       "200W TGP",
-      "4864 CUDA Cores",
-      "38 Tensor Cores",
-      "Dual Fan Cooling",
-      "Supports 1440p Gaming",
-      "Max Temp: 85°C",
+      "Recommended PSU: 650W",
+      "Maximum Power Connectors: 1 x 16-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 5,
+    "description": "Unleash high-end performance with the NVIDIA GeForce RTX 4070, a powerhouse engineered for silky-smooth 1440p and stunning 4K gaming, fueled by 12GB GDDR6X memory and the revolutionary Ada Lovelace architecture. Experience crisp, ray-traced visuals with DLSS 3, ensuring high frame rates without sacrificing quality. Ideal for enthusiasts, VR adventurers, and content creators, this card excels in AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's signature performance, efficiency, and innovation in a sleek, dual-fan design that's perfect for mid-sized builds.",
+    "discount": 0,
+    "image": "product-19.png"
+  },
+  {
+    "title": "AMD Radeon RX 6600 8GB",
+    "price": 229.95,
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA 2 Architecture",
+      "8GB GDDR6 Memory",
+      "2491 MHz Boost Clock",
+      "1792 Stream Processors",
+      "112 AI Accelerators",
+      "Memory Bus Bandwidth: 224 GB/s",
+      "Ray Tracing Performance: 18 TFLOPS (FP32)",
+      "Supports 1080p & 1440p Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 1.4, 1x HDMI 2.1",
+      "Dimensions: 232 x 107 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "132W TGP",
+      "Recommended PSU: 450W",
       "Maximum Power Connectors: 1 x 8-pin"
     ],
     "warranty": "2 years",
-    "stock": 4,
-    "sold": 15,
-    "description": "The MSI RTX 3060 Ti delivers excellent 1440p gaming with 8GB GDDR6 memory, ray tracing, and DLSS 2. It's perfect for gamers who want a performance boost at an affordable price.",
-    "discount": 0
+    "stock": 3,
+    "description": "Unleash incredible value with the AMD Radeon RX 6600, a budget-friendly gem delivering outstanding 1080p and solid 1440p gaming, powered by 8GB GDDR6 memory and the efficient RDNA 2 architecture. Experience smooth, ray-traced visuals with FidelityFX Super Resolution, ensuring high frame rates without compromising quality. Ideal for budget gamers, esports enthusiasts, and compact builds, this card shines in AAA titles, indie games, and VR experiences, with modern connectivity via DisplayPort 1.4 and HDMI 2.1. Upgrade your rig and enjoy AMD's signature performance, efficiency, and value in a sleek, dual-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-20.png"
   },
   {
-    "title": "NVIDIA GeForce RTX 4070 12GB Founders Edition",
-    "price": {
-      "USD": 799.99,
-      "EUR": 879.99
-    },
+    "title": "NVIDIA GeForce RTX 4060 Ti 8GB",
+    "price": 399.95,
     "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
-      "Ada Lovelace Architecture",
-      "12GB GDDR6X Memory",
-      "2370 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 3 Support",
-      "Ray Tracing Cores",
-      "Supports 4K Gaming",
+      "NVIDIA Ada Lovelace Architecture",
+      "8GB GDDR6 Memory",
+      "2535 MHz Boost Clock",
+      "4352 CUDA Cores",
+      "136 Tensor Cores",
+      "Performance: 22 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 288 GB/s",
+      "Ray Tracing Performance: DLSS 3 Enabled",
+      "Supports 1440p & 1080p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x8 Interface",
       "3x DisplayPort 1.4a, 1x HDMI 2.1",
-      "220W TGP",
-      "5120 CUDA Cores",
-      "160 Tensor Cores",
-      "Max Temp: 90°C",
-      "Power Connectors: 1 x 8-pin"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 22,
-    "description": "The RTX 4070 offers a powerful 4K gaming experience with DLSS 3 and ray tracing, featuring Ada Lovelace architecture and 12GB GDDR6X memory.",
-    "discount": 0
-  },
-  {
-    "title": "Gigabyte GeForce RTX 4090 24GB Gaming OC",
-    "price": {
-      "USD": 1999.99,
-      "EUR": 2199.99
-    },
-    "manufacturer": "Gigabyte",
-    "category": "graphics-cards",
-    "specifications": [
-      "Ada Lovelace Architecture",
-      "24GB GDDR6X Memory",
-      "2520 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 3 Support",
-      "Ray Tracing Cores",
-      "Supports 8K Gaming",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1",
-      "450W TGP",
-      "16384 CUDA Cores",
-      "576 Tensor Cores",
-      "Max Temp: 85°C",
-      "Dual-Fan Cooling System",
-      "Power Connectors: 3 x 8-pin"
+      "Dimensions: 225 x 112 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "160W TGP",
+      "Recommended PSU: 550W",
+      "Maximum Power Connectors: 1 x 8-pin"
     ],
     "warranty": "3 years",
-    "stock": 4,
-    "sold": 14,
-    "description": "The RTX 4090 Gaming OC offers flagship-level performance with 24GB of GDDR6X memory, perfect for 8K gaming and ray tracing at maximum settings.",
-    "discount": 0
+    "stock": 7,
+    "description": "Unleash exceptional performance with the NVIDIA GeForce RTX 4060 Ti, a mid-range powerhouse delivering silky-smooth 1080p and impressive 1440p gaming, fueled by 8GB GDDR6 memory and the revolutionary Ada Lovelace architecture. Experience crisp, ray-traced visuals with DLSS 3, ensuring high frame rates without sacrificing quality. Ideal for gamers, VR enthusiasts, and content creators on a budget, this card excels in AAA titles, esports, and light creative workloads, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's signature performance, efficiency, and innovation in a sleek, dual-fan design that's perfect for compact builds.",
+    "discount": 0,
+    "image": "product-21.png"
   },
   {
-    "title": "MSI Radeon RX 6900 XT 16GB GAMING X",
-    "price": {
-      "USD": 1499.99,
-      "EUR": 1599.99
-    },
-    "manufacturer": "MSI",
+    "title": "AMD Radeon RX 6900 XT 16GB",
+    "price": 649.95,
+    "manufacturer": "AMD",
     "category": "graphics-cards",
     "specifications": [
-      "RDNA 2 Architecture",
+      "AMD RDNA 2 Architecture",
       "16GB GDDR6 Memory",
       "2250 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "Ray Tracing Support",
-      "3x DisplayPort 1.4, 1x HDMI 2.1",
-      "300W TGP",
       "5120 Stream Processors",
-      "80 Compute Units",
-      "Max Temp: 85°C",
-      "Triple-Fan Cooling System",
-      "Supports 4K Gaming",
-      "Max Power Connectors: 2 x 8-pin"
+      "320 AI Accelerators",
+      "Memory Bus Bandwidth: 512 GB/s",
+      "Ray Tracing Performance: 61 TFLOPS (FP32)",
+      "Supports 4K & 8K Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution",
+      "AMD Smart Access Memory",
+      "PCIe Gen 4 x16 Interface",
+      "2x DisplayPort 1.4, 1x HDMI 2.1, 1x USB-C",
+      "Dimensions: 267 x 120 x 50 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "300W TGP",
+      "Recommended PSU: 850W",
+      "Maximum Power Connectors: 2 x 8-pin"
     ],
     "warranty": "2 years",
-    "stock": 6,
-    "sold": 18,
-    "description": "The MSI RX 6900 XT delivers outstanding 4K gaming performance with RDNA 2 architecture and 16GB GDDR6 memory, perfect for enthusiasts seeking top-tier performance.",
-    "discount": 0
+    "stock": 2,
+    "description": "Unleash flagship performance with the AMD Radeon RX 6900 XT, a powerhouse engineered for breathtaking 4K and 8K gaming, fueled by 16GB GDDR6 memory and the advanced RDNA 2 architecture. Dive into immersive ray-traced worlds with FidelityFX Super Resolution, delivering silky-smooth frame rates without sacrificing detail. Perfect for enthusiasts, VR adventurers, and professional creators, this card dominates AAA titles, esports, and creative workloads, with modern connectivity via DisplayPort 1.4, HDMI 2.1, and USB-C. Upgrade your rig and enjoy AMD's signature power, efficiency, and value in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 0,
+    "image": "product-22.png"
   },
   {
-    "title": "NVIDIA GeForce RTX 3060 12GB Founders Edition",
-    "price": {
-      "USD": 399.99,
-      "EUR": 439.99
-    },
+    "title": "Intel Arc A380 6GB",
+    "price": 129.95,
+    "manufacturer": "Intel",
+    "category": "graphics-cards",
+    "specifications": [
+      "Intel Xe-HPG Architecture",
+      "6GB GDDR6 Memory",
+      "2000 MHz Boost Clock",
+      "1024 Vector Engines",
+      "64 XMX Engines",
+      "Memory Bus Bandwidth: 186 GB/s",
+      "Ray Tracing Performance: 4.8 TFLOPS (FP32)",
+      "Supports 1080p Gaming",
+      "VR Ready",
+      "XeSS Super Sampling",
+      "DirectX 12 Ultimate Support",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 2.0, 1x HDMI 2.0",
+      "Dimensions: 222 x 105 x 40 mm",
+      "Cooling Solution: Single-Fan Open Air",
+      "75W TGP",
+      "Recommended PSU: 450W",
+      "Maximum Power Connectors: None (PCIe power only)"
+    ],
+    "warranty": "3 years",
+    "stock": 10,
+    "description": "Experience unbeatable value with the Intel Arc A380, a budget-friendly gem delivering smooth 1080p gaming, powered by 6GB GDDR6 memory and the innovative Xe-HPG architecture. Unleash stunning visuals with XeSS Super Sampling, Intel's cutting-edge upscaling technology, and dive into light ray-traced adventures without breaking the bank. Ideal for budget-conscious gamers, esports enthusiasts, and compact builds, this card shines in indie games, esports, and light VR experiences, with modern connectivity via DisplayPort 2.0 and HDMI 2.0. Upgrade smart and game hard with Intel's entry-level offering, blending performance, efficiency, and innovation in a sleek, single-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-23.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 5080 16GB Founders Edition",
+    "price": 1499.95,
     "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
-      "Ampere Architecture",
-      "12GB GDDR6 Memory",
-      "1777 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 2 Support",
-      "Ray Tracing Cores",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1",
-      "170W TGP",
-      "3584 CUDA Cores",
-      "48 Tensor Cores",
-      "Max Temp: 80°C",
-      "Dual-Fan Cooling",
-      "Supports 1440p Gaming",
-      "Power Connectors: 1 x 8-pin"
+      "NVIDIA Blackwell Architecture",
+      "16GB GDDR7 Memory",
+      "2700 MHz Boost Clock",
+      "12288 CUDA Cores",
+      "480 Tensor Cores",
+      "Performance: 70 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 1410 GB/s",
+      "Ray Tracing Performance: DLSS 4 Enabled",
+      "Supports 8K & 4K Gaming",
+      "VR Ready",
+      "PCIe Gen 5 x16 Interface",
+      "3x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 304 x 137 x 61 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "400W TGP",
+      "Recommended PSU: 850W",
+      "Maximum Power Connectors: 1 x 16-pin"
     ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 28,
-    "description": "The RTX 3060 offers excellent performance for 1440p gaming with 12GB of GDDR6 memory and support for DLSS 2 and ray tracing.",
-    "discount": 0
+    "warranty": "3 years",
+    "stock": 1,
+    "description": "Unleash flagship performance with the NVIDIA GeForce RTX 5080, a high-end titan delivering breathtaking 4K and 8K gaming, powered by 16GB GDDR7 memory and the groundbreaking Blackwell architecture. Experience unparalleled, ray-traced visuals with DLSS 4, ensuring maximum performance without compromising detail. Perfect for enthusiasts, VR pioneers, and professional creators, this card obliterates AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's signature power, efficiency, and innovation in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 10,
+    "image": "product-24.png"
   },
   {
-    "title": "Gigabyte GeForce GTX 1080 Ti 11GB G1 Gaming",
-    "price": {
-      "USD": 749.99,
-      "EUR": 849.99
-    },
-    "manufacturer": "Gigabyte",
+    "title": "NVIDIA GeForce GTX 1080 Ti 11GB",
+    "price": 249.95,
+    "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
-      "Pascal Architecture",
+      "NVIDIA Pascal Architecture",
       "11GB GDDR5X Memory",
       "1582 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "No Ray Tracing",
-      "3x DisplayPort 1.4, 1x HDMI 2.0b",
-      "250W TGP",
       "3584 CUDA Cores",
-      "Max Temp: 84°C",
-      "Dual-Fan Cooling",
-      "Supports 1440p Gaming",
-      "Power Connectors: 1 x 8-pin"
+      "Performance: 11.3 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 484 GB/s",
+      "Supports 1440p & 1080p Gaming",
+      "VR Ready",
+      "PCIe Gen 3 x16 Interface",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "Dimensions: 267 x 112 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "250W TGP",
+      "Recommended PSU: 600W",
+      "Maximum Power Connectors: 1 x 8-pin, 1 x 6-pin"
     ],
-    "warranty": "2 years",
-    "stock": 3,
-    "sold": 17,
-    "description": "The GTX 1080 Ti is perfect for 1440p gaming, with 11GB GDDR5X memory and a powerful Pascal architecture for smooth performance in AAA games.",
-    "discount": 0
+    "warranty": "3 years",
+    "stock": 4,
+    "description": "Unleash the power of a bygone era with the NVIDIA GeForce GTX 1080 Ti, a legendary card that redefined high-end gaming in its time, delivering outstanding 1080p and solid 1440p performance, powered by 11GB GDDR5X memory and the proven Pascal architecture. While it lacks modern ray tracing, its raw rasterization power still holds up for budget-conscious gamers, esports enthusiasts, and VR explorers looking for a deal on a capable GPU. Ideal for retro builds or secondary systems, this card offers reliable performance in AAA titles and indie games, with modern connectivity via DisplayPort 1.4 and HDMI 2.0b. Upgrade your rig and enjoy NVIDIA's classic performance, efficiency, and value in a robust, dual-fan design that's built to last.",
+    "discount": 0,
+    "image": "product-25.png"
   },
   {
-    "title": "ASUS TUF Gaming GeForce RTX 3070 8GB",
-    "price": {
-      "USD": 649.99,
-      "EUR": 699.99
-    },
-    "manufacturer": "ASUS",
+    "title": "AMD Radeon RX 580 8GB",
+    "price": 129.95,
+    "manufacturer": "AMD",
     "category": "graphics-cards",
     "specifications": [
-      "Ampere Architecture",
-      "8GB GDDR6 Memory",
-      "1770 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 2 Support",
-      "Ray Tracing Cores",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1",
-      "220W TGP",
-      "5888 CUDA Cores",
-      "46 Tensor Cores",
-      "Dual-Fan Cooling",
-      "Supports 1440p Gaming",
-      "Max Temp: 80°C",
-      "Power Connectors: 1 x 8-pin"
-    ],
-    "warranty": "2 years",
-    "stock": 6,
-    "sold": 12,
-    "description": "The ASUS RTX 3070 provides solid 1440p performance with 8GB GDDR6 memory and efficient cooling, ideal for gamers looking to maximize performance on a budget.",
-    "discount": 0
-  },
-  {
-    "title": "Sapphire Radeon RX 5700 8GB Pulse",
-    "price": {
-      "USD": 399.99,
-      "EUR": 439.99
-    },
-    "manufacturer": "Sapphire",
-    "category": "graphics-cards",
-    "specifications": [
-      "RDNA 1 Architecture",
-      "8GB GDDR6 Memory",
-      "1750 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "Ray Tracing Support",
-      "3x DisplayPort 1.4, 1x HDMI 2.0",
-      "225W TGP",
+      "AMD Polaris Architecture",
+      "8GB GDDR5 Memory",
+      "1340 MHz Boost Clock",
       "2304 Stream Processors",
-      "36 Compute Units",
-      "Dual-Fan Cooling",
-      "Supports 1440p Gaming",
-      "Max Temp: 80°C",
-      "Max Power Connectors: 1 x 8-pin"
+      "Performance: 6.17 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 256 GB/s",
+      "Supports 1080p Gaming",
+      "VR Ready",
+      "PCIe Gen 3 x16 Interface",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "Dimensions: 241 x 111 x 38 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "150W TGP",
+      "Recommended PSU: 450W",
+      "Maximum Power Connectors: 1 x 8-pin"
     ],
     "warranty": "2 years",
     "stock": 7,
-    "sold": 26,
-    "description": "The Sapphire RX 5700 provides great value for 1440p gaming, with 8GB of GDDR6 memory and RDNA 1 architecture, offering high frame rates and stable performance.",
-    "discount": 0
+    "description": "Unleash unbeatable value with the AMD Radeon RX 580, a budget-friendly classic delivering smooth 1080p gaming, powered by 8GB GDDR5 memory and the reliable Polaris architecture. Perfect for budget-conscious gamers, esports enthusiasts, and casual VR explorers, this card shines in indie games, esports, and older AAA titles, offering a cost-effective entry into PC gaming. While it lacks ray tracing, its raw performance is ideal for compact builds or secondary systems, with modern connectivity via DisplayPort 1.4 and HDMI 2.0b. Upgrade your rig and enjoy AMD's signature value and efficiency in a sleek, dual-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-26.png"
   },
   {
-    "title": "EVGA GeForce RTX 3080 10GB FTW3 Ultra Gaming",
-    "price": {
-      "USD": 849.99,
-      "EUR": 919.99
-    },
-    "manufacturer": "EVGA",
+    "title": "NVIDIA GeForce RTX 2080 Ti 11GB Founders Edition",
+    "price": 499.95,
+    "manufacturer": "NVIDIA",
     "category": "graphics-cards",
     "specifications": [
-      "Ampere Architecture",
+      "NVIDIA Turing Architecture",
+      "11GB GDDR6 Memory",
+      "1545 MHz Boost Clock",
+      "4352 CUDA Cores",
+      "544 Tensor Cores",
+      "Performance: 14.2 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 616 GB/s",
+      "Ray Tracing Performance: RT Cores Enabled",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 3 x16 Interface",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b, 1x USB-C",
+      "Dimensions: 267 x 116 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "250W TGP",
+      "Recommended PSU: 650W",
+      "Maximum Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 3,
+    "description": "Unleash the power of the first ray tracing era with the NVIDIA GeForce RTX 2080 Ti, a former flagship delivering outstanding 1440p and solid 4K gaming, powered by 11GB GDDR6 memory and the groundbreaking Turing architecture. Experience crisp, ray-traced visuals with NVIDIA's first-generation RT Cores, ensuring immersive visuals in supported titles. Ideal for enthusiasts, VR adventurers, and content creators on a budget, this card excels in AAA titles, esports, and creative workloads, with modern connectivity via DisplayPort 1.4, HDMI 2.0b, and USB-C. Upgrade your rig and enjoy NVIDIA's pioneering performance, efficiency, and innovation in a robust, dual-fan design that's perfect for mid-sized builds.",
+    "discount": 0,
+    "image": "product-27.png"
+  },
+  {
+    "title": "AMD Radeon RX 5700 XT 8GB",
+    "price": 199.95,
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA 1 Architecture",
+      "8GB GDDR6 Memory",
+      "1905 MHz Boost Clock",
+      "2560 Stream Processors",
+      "Performance: 9.75 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 448 GB/s",
+      "Supports 1440p & 1080p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "Dimensions: 272 x 111 x 36 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "225W TGP",
+      "Recommended PSU: 600W",
+      "Maximum Power Connectors: 1 x 8-pin, 1 x 6-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 6,
+    "description": "Unleash exceptional value with the AMD Radeon RX 5700 XT, a mid-range titan delivering outstanding 1080p and solid 1440p gaming, powered by 8GB GDDR6 memory and the innovative RDNA 1 architecture. While it lacks ray tracing, its raw rasterization power ensures high frame rates in AAA titles, esports, and VR experiences, making it ideal for budget-conscious gamers and enthusiasts. This card shines in compact builds or secondary systems, with modern connectivity via DisplayPort 1.4 and HDMI 2.0b. Upgrade your rig and enjoy AMD's signature performance, efficiency, and value in a sleek, dual-fan design that's built to last.",
+    "discount": 0,
+    "image": "product-28.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 3090 24GB Founders Edition",
+    "price": 899.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Ampere Architecture",
+      "24GB GDDR6X Memory",
+      "1695 MHz Boost Clock",
+      "10496 CUDA Cores",
+      "328 Tensor Cores",
+      "Performance: 35.6 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 936 GB/s",
+      "Ray Tracing Performance: DLSS 2 Enabled",
+      "Supports 8K & 4K Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 313 x 138 x 56 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "350W TGP",
+      "Recommended PSU: 750W",
+      "Maximum Power Connectors: 1 x 12-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 2,
+    "description": "Unleash flagship performance with the NVIDIA GeForce RTX 3090, a former titan delivering breathtaking 4K and pioneering 8K gaming, powered by 24GB GDDR6X memory and the advanced Ampere architecture. Experience silky-smooth, ray-traced visuals with DLSS 2, ensuring maximum performance without compromising detail. Perfect for enthusiasts, VR pioneers, and professional creators, this card dominates AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's signature power, efficiency, and innovation in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 0,
+    "image": "product-29.png"
+  },
+  {
+    "title": "AMD Radeon RX 9070 XT 16GB",
+    "price": 599.95,
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD RDNA 4 Architecture",
+      "16GB GDDR6 Memory",
+      "2850 MHz Boost Clock",
+      "4608 Stream Processors",
+      "288 AI Accelerators",
+      "Memory Bus Bandwidth: 672 GB/s",
+      "Ray Tracing Performance: 48 TFLOPS (FP32)",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution 4",
+      "AMD Smart Access Memory",
+      "PCIe Gen 5 x16 Interface",
+      "3x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 280 x 115 x 50 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "285W TGP",
+      "Recommended PSU: 700W",
+      "Maximum Power Connectors: 2 x 8-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 8,
+    "description": "Unleash cutting-edge performance with the AMD Radeon RX 9070 XT, a very new mid-range powerhouse delivering silky-smooth 1440p and stunning 4K gaming, fueled by 16GB GDDR6 memory and the revolutionary RDNA 4 architecture. Dive into immersive ray-traced worlds with FidelityFX Super Resolution 4, ensuring high frame rates without sacrificing detail. Perfect for competitive gamers, VR enthusiasts, and content creators, this card excels in AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and enjoy AMD's latest innovations, blending power, efficiency, and value in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 0,
+    "image": "product-30.png"
+  },
+  {
+    "title": "Intel Arc B570 10GB",
+    "price": 219.95,
+    "manufacturer": "Intel",
+    "category": "graphics-cards",
+    "specifications": [
+      "Intel Xe2 Architecture",
+      "10GB GDDR6 Memory",
+      "2500 MHz Boost Clock",
+      "2304 Vector Engines",
+      "144 XMX Engines",
+      "Memory Bus Bandwidth: 480 GB/s",
+      "Ray Tracing Performance: 9.5 TFLOPS (FP32)",
+      "Supports 1440p & 1080p Gaming",
+      "VR Ready",
+      "XeSS Super Sampling",
+      "DirectX 12 Ultimate Support",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 2.0, 1x HDMI 2.1",
+      "Dimensions: 244 x 111 x 38 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "175W TGP",
+      "Recommended PSU: 550W",
+      "Maximum Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 5,
+    "description": "Experience exceptional value with the Intel Arc B570, a very new budget-friendly powerhouse delivering smooth 1080p and impressive 1440p gaming, powered by 10GB GDDR6 memory and the innovative Xe2 architecture. Unleash stunning visuals with XeSS Super Sampling, Intel's cutting-edge upscaling technology, and dive into ray-traced adventures without breaking the bank. Ideal for budget-conscious gamers, esports enthusiasts, and VR explorers, this card shines in AAA titles, indie games, and compact builds, with future-proof connectivity via DisplayPort 2.0 and HDMI 2.1. Upgrade smart and game hard with Intel's latest, blending performance, efficiency, and innovation in a sleek, dual-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-31.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 5070 Ti 16GB",
+    "price": 749.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Blackwell Architecture",
+      "16GB GDDR7 Memory",
+      "2650 MHz Boost Clock",
+      "8448 CUDA Cores",
+      "264 Tensor Cores",
+      "Performance: 38 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 896 GB/s",
+      "Ray Tracing Performance: DLSS 4 Enabled",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 5 x16 Interface",
+      "3x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 285 x 112 x 51 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "300W TGP",
+      "Recommended PSU: 700W",
+      "Maximum Power Connectors: 1 x 16-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 6,
+    "description": "Unleash very new high-end performance with the NVIDIA GeForce RTX 5070 Ti, a powerhouse delivering silky-smooth 1440p and stunning 4K gaming, fueled by 16GB GDDR7 memory and the groundbreaking Blackwell architecture. Experience unparalleled, ray-traced visuals with DLSS 4, ensuring maximum performance without compromising detail. Perfect for enthusiasts, VR adventurers, and content creators, this card excels in AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's latest innovations, blending power, efficiency, and cutting-edge technology in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 10,
+    "image": "product-32.png"
+  },
+  {
+    "title": "NVIDIA GeForce GTX 1660 Super 6GB",
+    "price": 169.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Turing Architecture",
+      "6GB GDDR6 Memory",
+      "1830 MHz Boost Clock",
+      "1408 CUDA Cores",
+      "Performance: 5.0 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 336 GB/s",
+      "Supports 1080p & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 3 x16 Interface",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "Dimensions: 229 x 111 x 35 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "125W TGP",
+      "Recommended PSU: 450W",
+      "Maximum Power Connectors: 1 x 8-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 6,
+    "description": "Unleash unbeatable value with the NVIDIA GeForce GTX 1660 Super, a budget-friendly classic delivering smooth 1080p and solid 1440p gaming, powered by 6GB GDDR6 memory and the efficient Turing architecture. While it lacks ray tracing, its raw rasterization power ensures high frame rates in esports, indie games, and older AAA titles, making it ideal for budget-conscious gamers and casual VR explorers. This card shines in compact builds or secondary systems, with modern connectivity via DisplayPort 1.4 and HDMI 2.0b. Upgrade your rig and enjoy NVIDIA's signature value and efficiency in a sleek, dual-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-33.png"
+  },
+  {
+    "title": "AMD Radeon RX 470 4GB",
+    "price": 89.95,
+    "manufacturer": "AMD",
+    "category": "graphics-cards",
+    "specifications": [
+      "AMD Polaris Architecture",
+      "4GB GDDR5 Memory",
+      "1206 MHz Boost Clock",
+      "2048 Stream Processors",
+      "Performance: 4.9 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 211 GB/s",
+      "Supports 1080p Gaming",
+      "VR Ready",
+      "PCIe Gen 3 x16 Interface",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "Dimensions: 240 x 111 x 38 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "110W TGP",
+      "Recommended PSU: 400W",
+      "Maximum Power Connectors: 1 x 6-pin"
+    ],
+    "warranty": "2 years",
+    "stock": 3,
+    "description": "Unleash incredible value with the AMD Radeon RX 470, a budget-friendly relic delivering solid 1080p gaming, powered by 4GB GDDR5 memory and the reliable Polaris architecture. Perfect for budget-conscious gamers and esports enthusiasts, this card shines in indie games, esports, and older AAA titles, offering a cost-effective entry into PC gaming. While it lacks ray tracing, its performance is ideal for compact builds, retro systems, or upgrades from integrated graphics, with modern connectivity via DisplayPort 1.4 and HDMI 2.0b. Upgrade your rig and enjoy AMD's signature value and efficiency in a sleek, dual-fan design that's built to last.",
+    "discount": 0,
+    "image": "product-34.png"
+  },
+  {
+    "title": "NVIDIA GeForce RTX 3080 10GB Founders Edition",
+    "price": 599.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Ampere Architecture",
       "10GB GDDR6X Memory",
       "1710 MHz Boost Clock",
-      "PCIe Gen 4 x16",
-      "DLSS 2 Support",
-      "Ray Tracing Cores",
-      "3x DisplayPort 1.4a, 1x HDMI 2.1",
-      "320W TGP",
       "8704 CUDA Cores",
-      "68 Tensor Cores",
-      "Triple-Fan Cooling",
-      "Supports 4K Gaming",
-      "Power Connectors: 2 x 8-pin"
+      "272 Tensor Cores",
+      "Performance: 29.8 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 760 GB/s",
+      "Ray Tracing Performance: DLSS 2 Enabled",
+      "Supports 4K & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 285 x 112 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "320W TGP",
+      "Recommended PSU: 750W",
+      "Maximum Power Connectors: 1 x 12-pin"
     ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 30,
-    "description": "The EVGA RTX 3080 delivers exceptional 4K performance with 10GB GDDR6X memory, perfect for demanding gamers and creators who need top-tier speed and ray tracing.",
-    "discount": 0
+    "warranty": "3 years",
+    "stock": 2,
+    "description": "Unleash high-end performance with the NVIDIA GeForce RTX 3080, a former flagship delivering silky-smooth 1440p and stunning 4K gaming, powered by 10GB GDDR6X memory and the advanced Ampere architecture. Experience crisp, ray-traced visuals with DLSS 2, ensuring high frame rates without sacrificing quality. Ideal for enthusiasts, VR adventurers, and content creators on a budget, this card excels in AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's signature performance, efficiency, and value in a sleek, dual-fan design that's perfect for mid-sized builds.",
+    "discount": 0,
+    "image": "product-35.png"
   },
   {
-    "title": "ZOTAC GeForce GTX 1660 Ti 6GB",
-    "price": {
-      "USD": 229.99,
-      "EUR": 249.99
-    },
-    "manufacturer": "ZOTAC",
+    "title": "AMD Radeon RX 5600 XT 6GB",
+    "price": 179.95,
+    "manufacturer": "AMD",
     "category": "graphics-cards",
     "specifications": [
-      "Turing Architecture",
-      "6GB GDDR5 Memory",
-      "1770 MHz Boost Clock",
-      "PCIe Gen 3 x16",
-      "No Ray Tracing",
-      "1x DisplayPort 1.4, 1x HDMI 2.0b",
-      "120W TGP",
-      "1536 CUDA Cores",
-      "Dual-Fan Cooling",
+      "AMD RDNA 1 Architecture",
+      "6GB GDDR6 Memory",
+      "1620 MHz Boost Clock",
+      "2304 Stream Processors",
+      "Performance: 7.5 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 288 GB/s",
       "Supports 1080p & 1440p Gaming",
-      "Max Temp: 80°C",
-      "Power Connectors: 1 x 8-pin"
+      "VR Ready",
+      "PCIe Gen 4 x16 Interface",
+      "3x DisplayPort 1.4, 1x HDMI 2.0b",
+      "Dimensions: 267 x 111 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "150W TGP",
+      "Recommended PSU: 450W",
+      "Maximum Power Connectors: 1 x 8-pin"
     ],
     "warranty": "2 years",
-    "stock": 9,
-    "sold": 40,
-    "description": "The ZOTAC GTX 1660 Ti offers an affordable solution for gamers who want solid 1080p and 1440p performance with 6GB GDDR5 memory and reliable dual-fan cooling.",
-    "discount": 0
+    "stock": 8,
+    "description": "Unleash exceptional value with the AMD Radeon RX 5600 XT, a budget-friendly titan delivering outstanding 1080p and solid 1440p gaming, powered by 6GB GDDR6 memory and the innovative RDNA 1 architecture. While it lacks ray tracing, its raw rasterization power ensures high frame rates in AAA titles, esports, and VR experiences, making it ideal for budget-conscious gamers and enthusiasts. This card shines in compact builds or secondary systems, with modern connectivity via DisplayPort 1.4 and HDMI 2.0b. Upgrade your rig and enjoy AMD's signature performance, efficiency, and value in a sleek, dual-fan design that's built to last.",
+    "discount": 0,
+    "image": "product-36.png"
   },
   {
-    "title": "Intel Core i9-13900K 3.0GHz",
-    "price": {
-      "USD": 749.99,
-      "EUR": 849.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
+    "title": "NVIDIA GeForce RTX 4050 6GB",
+    "price": 199.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
     "specifications": [
-      "13th Gen Intel Core Architecture",
-      "8 Performance Cores + 16 Efficiency Cores",
-      "24 Threads",
-      "3.0 GHz Base Clock, 5.8 GHz Turbo Boost",
-      "Intel UHD Graphics 770",
-      "Supports Intel Hyper-Threading",
-      "Supports DDR5/DDR4 RAM",
-      "65W Base TDP, 125W Max TDP",
-      "Unlocked for Overclocking",
-      "LGA 1700 Socket"
+      "NVIDIA Ada Lovelace Architecture",
+      "6GB GDDR6 Memory",
+      "2580 MHz Boost Clock",
+      "2560 CUDA Cores",
+      "80 Tensor Cores",
+      "Performance: 12 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 192 GB/s",
+      "Ray Tracing Performance: DLSS 3 Enabled",
+      "Supports 1080p & 1440p Gaming",
+      "VR Ready",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 1.4a, 1x HDMI 2.1",
+      "Dimensions: 210 x 105 x 40 mm",
+      "Cooling Solution: Single-Fan Open Air",
+      "115W TGP",
+      "Recommended PSU: 450W",
+      "Maximum Power Connectors: None (PCIe power only)"
     ],
     "warranty": "3 years",
     "stock": 5,
-    "sold": 18,
-    "description": "The Intel Core i9-13900K is a powerhouse for gaming and productivity, with a mix of performance and efficiency cores, offering unmatched multi-core processing power.",
-    "discount": 0
+    "description": "Unleash incredible value with the NVIDIA GeForce RTX 4050, a budget-friendly gem delivering outstanding 1080p and solid 1440p gaming, powered by 6GB GDDR6 memory and the efficient Ada Lovelace architecture. Experience smooth, ray-traced visuals with DLSS 3, ensuring high frame rates without compromising quality. Ideal for budget gamers, esports enthusiasts, and compact builds, this card shines in AAA titles, indie games, and light VR experiences, with future-proof connectivity via DisplayPort 1.4a and HDMI 2.1. Upgrade your rig and enjoy NVIDIA's signature performance, efficiency, and innovation in a sleek, single-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-37.png"
   },
   {
-    "title": "AMD Ryzen 9 7900X 4.7GHz",
-    "price": {
-      "USD": 749.99,
-      "EUR": 829.99
-    },
+    "title": "AMD Radeon RX 9050 8GB",
+    "price": 299.95,
     "manufacturer": "AMD",
-    "category": "processors",
+    "category": "graphics-cards",
     "specifications": [
-      "Zen 4 Architecture",
-      "12 Cores, 24 Threads",
-      "4.7 GHz Base Clock, 5.6 GHz Turbo Boost",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "100W Base TDP",
-      "AM5 Socket",
-      "Unlocked for Overclocking",
-      "AMD Precision Boost",
-      "AMD Radeon Graphics (Integrated)"
-    ],
-    "warranty": "2 years",
-    "stock": 4,
-    "sold": 14,
-    "description": "The AMD Ryzen 9 7900X brings extreme performance with 12 cores, ideal for gamers and professionals demanding the best for gaming, content creation, and multi-threaded workloads.",
-    "discount": 0
-  },
-  {
-    "title": "Intel Core i7-12700K 3.6GHz",
-    "price": {
-      "USD": 419.99,
-      "EUR": 479.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "12th Gen Intel Core Architecture",
-      "8 Performance Cores + 4 Efficiency Cores",
-      "12 Threads",
-      "3.6 GHz Base Clock, 5.0 GHz Turbo Boost",
-      "Intel UHD Graphics 770",
-      "Supports DDR5/DDR4 RAM",
-      "125W TDP",
-      "LGA 1700 Socket",
-      "Unlocked for Overclocking",
-      "Supports Intel Hyper-Threading"
+      "AMD RDNA 4 Architecture",
+      "8GB GDDR6 Memory",
+      "2600 MHz Boost Clock",
+      "2816 Stream Processors",
+      "176 AI Accelerators",
+      "Memory Bus Bandwidth: 384 GB/s",
+      "Ray Tracing Performance: 28 TFLOPS (FP32)",
+      "Supports 1440p & 1080p Gaming",
+      "VR Ready",
+      "FidelityFX Super Resolution 4",
+      "AMD Smart Access Memory",
+      "PCIe Gen 5 x8 Interface",
+      "3x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 245 x 107 x 40 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "165W TGP",
+      "Recommended PSU: 550W",
+      "Maximum Power Connectors: 1 x 8-pin"
     ],
     "warranty": "2 years",
     "stock": 7,
-    "sold": 22,
-    "description": "The Intel Core i7-12700K offers outstanding performance for gamers and power users, featuring a hybrid architecture with both performance and efficiency cores for seamless multitasking.",
-    "discount": 0
+    "description": "Unleash very new performance with the AMD Radeon RX 9050, a budget-friendly powerhouse delivering silky-smooth 1080p and impressive 1440p gaming, fueled by 8GB GDDR6 memory and the revolutionary RDNA 4 architecture. Experience crisp, ray-traced visuals with FidelityFX Super Resolution 4, ensuring high frame rates without sacrificing quality. Ideal for budget gamers, esports enthusiasts, and VR explorers, this card excels in AAA titles, indie games, and light creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and enjoy AMD's latest innovations, blending performance, efficiency, and value in a sleek, dual-fan design that's perfect for compact builds.",
+    "discount": 0,
+    "image": "product-38.png"
   },
   {
-    "title": "AMD Ryzen 5 7600X 4.7GHz",
-    "price": {
-      "USD": 299.99,
-      "EUR": 349.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "Zen 4 Architecture",
-      "6 Cores, 12 Threads",
-      "4.7 GHz Base Clock, 5.3 GHz Turbo Boost",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "105W TDP",
-      "AM5 Socket",
-      "Unlocked for Overclocking",
-      "Precision Boost",
-      "AMD Radeon Graphics (Integrated)"
-    ],
-    "warranty": "1 year",
-    "stock": 6,
-    "sold": 27,
-    "description": "The Ryzen 5 7600X offers impressive performance for gaming and content creation, with 6 cores and a high clock speed, making it perfect for enthusiasts and builders on a budget.",
-    "discount": 0
-  },
-  {
-    "title": "Intel Core i5-13600K 3.5GHz",
-    "price": {
-      "USD": 319.99,
-      "EUR": 369.99
-    },
+    "title": "Intel Arc B560 8GB",
+    "price": 189.95,
     "manufacturer": "Intel",
-    "category": "processors",
+    "category": "graphics-cards",
     "specifications": [
-      "13th Gen Intel Core Architecture",
-      "6 Performance Cores + 8 Efficiency Cores",
-      "14 Threads",
-      "3.5 GHz Base Clock, 5.1 GHz Turbo Boost",
-      "Intel UHD Graphics 770",
-      "Supports DDR5/DDR4 RAM",
-      "125W TDP",
-      "LGA 1700 Socket",
-      "Unlocked for Overclocking",
-      "Supports Intel Hyper-Threading"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 16,
-    "description": "The Intel Core i5-13600K offers excellent value with 14 cores and great overclocking potential, perfect for gamers and creators who need a balance of performance and affordability.",
-    "discount": 0
-  },
-  {
-    "title": "AMD Ryzen 7 7800X 4.5GHz",
-    "price": {
-      "USD": 499.99,
-      "EUR": 549.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "Zen 4 Architecture",
-      "8 Cores, 16 Threads",
-      "4.5 GHz Base Clock, 5.4 GHz Turbo Boost",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "120W TDP",
-      "AM5 Socket",
-      "Unlocked for Overclocking",
-      "AMD Precision Boost",
-      "AMD Radeon Graphics (Integrated)"
-    ],
-    "warranty": "2 years",
-    "stock": 3,
-    "sold": 13,
-    "description": "The Ryzen 7 7800X is designed for high-performance gaming and multitasking, offering 8 cores and incredible clock speeds that tackle demanding workloads with ease.",
-    "discount": 0
-  },
-  {
-    "title": "Intel Core i3-12100F 3.3GHz",
-    "price": {
-      "USD": 119.99,
-      "EUR": 139.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "12th Gen Intel Core Architecture",
-      "4 Cores, 8 Threads",
-      "3.3 GHz Base Clock, 4.3 GHz Turbo Boost",
-      "Intel UHD Graphics 730",
-      "Supports DDR4 RAM",
-      "60W TDP",
-      "LGA 1700 Socket",
-      "No Integrated Graphics",
-      "Supports Intel Hyper-Threading"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 50,
-    "description": "The Intel Core i3-12100F is a budget-friendly processor that offers solid performance for everyday computing tasks and light gaming, with excellent power efficiency.",
-    "discount": 0
-  },
-  {
-    "title": "Intel Core i9-12900KF 3.2GHz",
-    "price": {
-      "USD": 629.99,
-      "EUR": 719.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "12th Gen Intel Core Architecture",
-      "8 Performance Cores + 8 Efficiency Cores",
-      "16 Threads",
-      "3.2 GHz Base Clock, 5.2 GHz Turbo Boost",
-      "Intel UHD Graphics 770",
-      "Supports DDR5/DDR4 RAM",
-      "125W TDP",
-      "LGA 1700 Socket",
-      "Unlocked for Overclocking",
-      "Supports Intel Hyper-Threading"
+      "Intel Xe2 Architecture",
+      "8GB GDDR6 Memory",
+      "2400 MHz Boost Clock",
+      "2048 Vector Engines",
+      "128 XMX Engines",
+      "Memory Bus Bandwidth: 384 GB/s",
+      "Ray Tracing Performance: 8.5 TFLOPS (FP32)",
+      "Supports 1080p & 1440p Gaming",
+      "VR Ready",
+      "XeSS Super Sampling",
+      "DirectX 12 Ultimate Support",
+      "PCIe Gen 4 x8 Interface",
+      "3x DisplayPort 2.0, 1x HDMI 2.1",
+      "Dimensions: 244 x 111 x 38 mm",
+      "Cooling Solution: Dual-Fan Open Air",
+      "165W TGP",
+      "Recommended PSU: 550W",
+      "Maximum Power Connectors: 1 x 8-pin"
     ],
     "warranty": "3 years",
-    "stock": 6,
-    "sold": 20,
-    "description": "The Intel Core i9-12900KF offers top-tier performance with a mix of performance and efficiency cores, designed for gamers and power users who need extreme processing power.",
-    "discount": 0
-  },
-  {
-    "title": "Intel Core i5-13600KF 3.5GHz",
-    "price": {
-      "USD": 389.99,
-      "EUR": 449.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "13th Gen Intel Core Architecture",
-      "6 Performance Cores + 8 Efficiency Cores",
-      "14 Threads",
-      "3.5 GHz Base Clock, 5.1 GHz Turbo Boost",
-      "Intel UHD Graphics 770",
-      "Supports DDR5/DDR4 RAM",
-      "125W TDP",
-      "LGA 1700 Socket",
-      "Unlocked for Overclocking",
-      "Supports Intel Hyper-Threading"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 32,
-    "description": "The Intel Core i5-13600KF combines great gaming performance with productivity capabilities, offering excellent value with 14 cores and high overclocking potential.",
-    "discount": 10
-  },
-  {
-    "title": "AMD Ryzen 5 7600 3.8GHz",
-    "price": {
-      "USD": 279.99,
-      "EUR": 319.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "Zen 4 Architecture",
-      "6 Cores, 12 Threads",
-      "3.8 GHz Base Clock, 4.6 GHz Turbo Boost",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "105W TDP",
-      "AM5 Socket",
-      "Unlocked for Overclocking",
-      "Precision Boost",
-      "AMD Radeon Graphics (Integrated)"
-    ],
-    "warranty": "1 year",
-    "stock": 9,
-    "sold": 45,
-    "description": "The Ryzen 5 7600 is a great choice for gamers looking for solid performance, with a high base clock and impressive turbo boost for excellent gaming and multitasking.",
-    "discount": 0
-  },
-  {
-    "title": "Intel Core i9-11900K 3.5GHz",
-    "price": {
-      "USD": 549.99,
-      "EUR": 629.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "11th Gen Intel Core Architecture",
-      "8 Cores, 16 Threads",
-      "3.5 GHz Base Clock, 5.3 GHz Turbo Boost",
-      "Intel UHD Graphics 750",
-      "Supports DDR4 RAM",
-      "125W TDP",
-      "LGA 1200 Socket",
-      "Unlocked for Overclocking",
-      "Supports Intel Hyper-Threading"
-    ],
-    "warranty": "2 years",
     "stock": 4,
-    "sold": 20,
-    "description": "The Intel Core i9-11900K is an excellent high-performance processor for gaming and content creation, with 8 cores and Intel's Turbo Boost technology for maximum efficiency.",
-    "discount": 15
+    "description": "Experience exceptional value with the Intel Arc B560, a very new budget-friendly powerhouse delivering smooth 1080p and impressive 1440p gaming, powered by 8GB GDDR6 memory and the innovative Xe2 architecture. Unleash stunning visuals with XeSS Super Sampling, Intel's cutting-edge upscaling technology, and dive into ray-traced adventures without breaking the bank. Ideal for budget-conscious gamers, esports enthusiasts, and VR explorers, this card shines in AAA titles, indie games, and compact builds, with future-proof connectivity via DisplayPort 2.0 and HDMI 2.1. Upgrade smart and game hard with Intel's latest, blending performance, efficiency, and innovation in a sleek, dual-fan design that's perfect for small form factor PCs.",
+    "discount": 0,
+    "image": "product-39.png"
   },
   {
-    "title": "AMD Ryzen 9 7950X3D 4.4GHz",
-    "price": {
-      "USD": 849.99,
-      "EUR": 929.99
-    },
+    "title": "NVIDIA GeForce RTX 5090 Ti 32GB Founders Edition",
+    "price": 2499.95,
+    "manufacturer": "NVIDIA",
+    "category": "graphics-cards",
+    "specifications": [
+      "NVIDIA Blackwell Architecture",
+      "32GB GDDR7 Memory",
+      "2950 MHz Boost Clock",
+      "19712 CUDA Cores",
+      "768 Tensor Cores",
+      "Performance: 100 TFLOPS (FP32)",
+      "Memory Bus Bandwidth: 2048 GB/s",
+      "Ray Tracing Performance: DLSS 4 Enabled",
+      "Supports 8K & 4K Gaming",
+      "VR Ready",
+      "PCIe Gen 5 x16 Interface",
+      "3x DisplayPort 2.1, 1x HDMI 2.1",
+      "Dimensions: 320 x 140 x 70 mm",
+      "Cooling Solution: Triple-Fan Open Air",
+      "550W TGP",
+      "Recommended PSU: 1000W",
+      "Maximum Power Connectors: 1 x 16-pin"
+    ],
+    "warranty": "3 years",
+    "stock": 1,
+    "description": "Unleash the future of graphics with the NVIDIA GeForce RTX 5090 Ti, the ultimate flagship titan redefining 4K and 8K gaming, powered by 32GB GDDR7 memory and the groundbreaking Blackwell architecture. Experience unparalleled, ray-traced visuals with DLSS 4, delivering unmatched performance and detail in even the most demanding titles. Perfect for bleeding-edge enthusiasts, VR pioneers, and professional creators, this card obliterates AAA titles, esports, and creative workloads, with future-proof connectivity via DisplayPort 2.1 and HDMI 2.1. Upgrade your rig and step into a new era of performance, efficiency, and innovation, all in a robust, triple-fan design that ensures cool, quiet operation under the heaviest loads.",
+    "discount": 15,
+    "image": "product-40.png"
+  },
+  {
+    "title": "AMD Ryzen 9 9950X3D",
+    "price": 699.95,
     "manufacturer": "AMD",
     "category": "processors",
+    "socket": "AM5",
     "specifications": [
-      "Zen 4 Architecture",
+      "AM5 Socket",
       "16 Cores, 32 Threads",
-      "4.4 GHz Base Clock, 5.7 GHz Turbo Boost",
-      "3D V-Cache Technology",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "170W TDP",
-      "AM5 Socket",
-      "Unlocked for Overclocking",
-      "AMD Precision Boost"
+      "Base Frequency: 3.5 GHz; Max Boost Frequency: 5.7 GHz",
+      "144MB Total Cache (16MB L2 + 128MB L3)",
+      "Supports DDR5 Memory (up to 5600 MHz)",
+      "PCIe 5.0 Support",
+      "TDP: 170W",
+      "Ideal for high-end gaming, content creation, and complex workloads"
     ],
     "warranty": "3 years",
     "stock": 5,
-    "sold": 25,
-    "description": "The AMD Ryzen 9 7950X3D is a revolutionary processor with 3D V-Cache, designed for extreme performance in gaming and multi-threaded applications.",
-    "discount": 0
+    "description": "The AMD Ryzen 9 9950X3D is a top-tier processor designed for enthusiasts seeking exceptional performance. With 16 cores and 32 threads, it delivers robust multitasking capabilities. The 144MB total cache, including 128MB of L3 cache, significantly enhances data access speeds, benefiting both gaming and professional applications. Support for DDR5 memory ensures faster data transfer rates, while PCIe 5.0 provides high-bandwidth connectivity for next-gen GPUs and storage devices. Its 170W TDP reflects its high-performance nature, making it suitable for demanding tasks.",
+    "discount": 0,
+    "image": "product-41.png"
   },
   {
-    "title": "Intel Core i7-12700KF 3.6GHz",
-    "price": {
-      "USD": 419.99,
-      "EUR": 489.99
-    },
+    "title": "Intel Core i9-14900K",
+    "price": 585.95,
     "manufacturer": "Intel",
     "category": "processors",
+    "socket": "LGA 1700",
     "specifications": [
-      "12th Gen Intel Core Architecture",
-      "8 Performance Cores + 4 Efficiency Cores",
-      "12 Threads",
-      "3.6 GHz Base Clock, 5.0 GHz Turbo Boost",
-      "Intel UHD Graphics 770",
-      "Supports DDR5/DDR4 RAM",
-      "125W TDP",
       "LGA 1700 Socket",
-      "Unlocked for Overclocking",
-      "Supports Intel Hyper-Threading"
+      "24 Cores (8 Performance-cores + 16 Efficient-cores), 32 Threads",
+      "Base Frequency: 3.2 GHz; Max Turbo Frequency: 6.0 GHz",
+      "36MB Intel Smart Cache",
+      "Unlocked for overclocking",
+      "Supports DDR5 Memory (up to 5600 MHz) & DDR4 Memory (up to 3200 MHz)",
+      "PCIe 5.0 Support",
+      "Integrated Intel UHD Graphics 770",
+      "Base Power: 125W; Max Turbo Power: 253W",
+      "Designed for high-end gaming, content creation, and intensive workloads"
     ],
     "warranty": "3 years",
-    "stock": 3,
-    "sold": 18,
-    "description": "The Intel Core i7-12700KF delivers great performance for gaming and productivity, with its hybrid architecture that optimizes workload management across both performance and efficiency cores.",
-    "discount": 0
+    "stock": 8,
+    "description": "The Intel Core i9-14900K processor offers a blend of high-performance and efficiency with its 24-core design, comprising 8 Performance-cores and 16 Efficient-cores. It achieves a base clock of 3.2 GHz, boosting up to 6.0 GHz, ensuring responsiveness in both single-threaded and multi-threaded applications. The 36MB Intel Smart Cache enhances data retrieval speeds, improving overall system responsiveness. Supporting both DDR5 and DDR4 memory provides flexibility for various system configurations. PCIe 5.0 support ensures compatibility with the latest GPUs and storage solutions. Integrated Intel UHD Graphics 770 offers decent graphics performance for non-GPU-intensive tasks. With a base power of 125W and a max turbo power of 253W, it delivers exceptional performance for demanding applications.",
+    "discount": 10,
+    "image": "product-42.png"
   },
   {
-    "title": "AMD Ryzen 3 7300X 4.0GHz",
-    "price": {
-      "USD": 139.99,
-      "EUR": 159.99
-    },
+    "title": "AMD Ryzen 7 7800X3D",
+    "price": 599.98,
     "manufacturer": "AMD",
     "category": "processors",
+    "socket": "AM5",
     "specifications": [
-      "Zen 4 Architecture",
-      "4 Cores, 8 Threads",
-      "4.0 GHz Base Clock, 4.5 GHz Turbo Boost",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "65W TDP",
       "AM5 Socket",
-      "Unlocked for Overclocking",
-      "AMD Radeon Graphics (Integrated)"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 55,
-    "description": "The Ryzen 3 7300X is perfect for budget-conscious users looking for an efficient and powerful processor for light gaming, productivity, and everyday tasks.",
-    "discount": 0
-  },
-  {
-    "title": "Intel Core i5-12600KF 3.7GHz",
-    "price": {
-      "USD": 299.99,
-      "EUR": 349.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "12th Gen Intel Core Architecture",
-      "6 Performance Cores + 4 Efficiency Cores",
-      "10 Threads",
-      "3.7 GHz Base Clock, 4.9 GHz Turbo Boost",
-      "Intel UHD Graphics 770",
-      "Supports DDR5/DDR4 RAM",
-      "125W TDP",
-      "LGA 1700 Socket",
-      "Unlocked for Overclocking"
-    ],
-    "warranty": "2 years",
-    "stock": 7,
-    "sold": 24,
-    "description": "The Intel Core i5-12600KF offers excellent performance for gamers with its combination of performance cores and efficient handling of tasks, plus great overclocking headroom.",
-    "discount": 5
-  },
-  {
-    "title": "AMD Ryzen 9 7900X3D 4.5GHz",
-    "price": {
-      "USD": 699.99,
-      "EUR": 799.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "Zen 4 Architecture",
-      "12 Cores, 24 Threads",
-      "4.5 GHz Base Clock, 5.6 GHz Turbo Boost",
-      "3D V-Cache Technology",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "170W TDP",
-      "AM5 Socket",
-      "Unlocked for Overclocking",
-      "AMD Precision Boost"
-    ],
-    "warranty": "3 years",
-    "stock": 6,
-    "sold": 19,
-    "description": "The Ryzen 9 7900X3D is ideal for gamers and content creators, offering incredible performance with 3D V-Cache and exceptional multi-core processing power.",
-    "discount": 10
-  },
-  {
-    "title": "Intel Core i3-12100 3.3GHz",
-    "price": {
-      "USD": 129.99,
-      "EUR": 149.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "12th Gen Intel Core Architecture",
-      "4 Cores, 8 Threads",
-      "3.3 GHz Base Clock, 4.3 GHz Turbo Boost",
-      "Intel UHD Graphics 730",
-      "Supports DDR4 RAM",
-      "60W TDP",
-      "LGA 1700 Socket",
-      "No Integrated Graphics",
-      "Supports Intel Hyper-Threading"
-    ],
-    "warranty": "1 year",
-    "stock": 12,
-    "sold": 60,
-    "description": "The Intel Core i3-12100 is an affordable processor that offers solid performance for basic computing, web browsing, and light gaming, with power efficiency in mind.",
-    "discount": 0
-  },
-  {
-    "title": "Intel Core i9-10900K 3.7GHz",
-    "price": {
-      "USD": 549.99,
-      "EUR": 629.99
-    },
-    "manufacturer": "Intel",
-    "category": "processors",
-    "specifications": [
-      "10th Gen Intel Core Architecture",
-      "10 Cores, 20 Threads",
-      "3.7 GHz Base Clock, 5.3 GHz Turbo Boost",
-      "Intel UHD Graphics 630",
-      "Supports DDR4 RAM",
-      "125W TDP",
-      "LGA 1200 Socket",
-      "Unlocked for Overclocking",
-      "Supports Intel Hyper-Threading"
-    ],
-    "warranty": "3 years",
-    "stock": 0,
-    "sold": 35,
-    "description": "The Intel Core i9-10900K offers incredible performance with 10 cores and a high turbo boost clock, ideal for gaming, content creation, and heavy multitasking.",
-    "discount": 0
-  },
-  {
-    "title": "AMD Ryzen 7 7700X 4.5GHz",
-    "price": {
-      "USD": 499.99,
-      "EUR": 569.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "Zen 4 Architecture",
       "8 Cores, 16 Threads",
-      "4.5 GHz Base Clock, 5.3 GHz Turbo Boost",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "120W TDP",
-      "AM5 Socket",
-      "Unlocked for Overclocking",
-      "AMD Precision Boost",
-      "Integrated AMD Radeon Graphics"
+      "Base Frequency: 4.5 GHz; Max Boost Frequency: 5.0 GHz",
+      "96MB Total Cache (8MB L2 + 88MB L3)",
+      "Supports DDR5 Memory (up to 5600 MHz)",
+      "PCIe 5.0 Support",
+      "TDP: 120W",
+      "Optimized for gaming and multitasking"
     ],
-    "warranty": "2 years",
-    "stock": 4,
-    "sold": 22,
-    "description": "The Ryzen 7 7700X delivers powerful performance for gaming and multitasking, equipped with 8 cores and cutting-edge features like PCIe 5.0 and DDR5 support.",
-    "discount": 10
+    "warranty": "3 years",
+    "stock": 6,
+    "description": "The AMD Ryzen 7 7800X3D is engineered for gamers and multitaskers seeking high performance. With 8 cores and 16 threads, it efficiently handles simultaneous applications. The 96MB total cache, including 88MB of L3 cache, reduces latency and enhances performance. DDR5 memory support allows for faster data rates, while PCIe 5.0 ensures compatibility with next-gen peripherals. Its 120W TDP indicates a balance between power consumption and performance, making it suitable for high-end gaming and productivity tasks.",
+    "discount": 15,
+    "image": "product-43.png"
   },
   {
-    "title": "Intel Core i5-11600K 3.9GHz",
-    "price": {
-      "USD": 289.99,
-      "EUR": 329.99
-    },
+    "title": "Intel Core i7-13700K",
+    "price": 471.95,
     "manufacturer": "Intel",
     "category": "processors",
+    "socket": "LGA 1700",
     "specifications": [
-      "11th Gen Intel Core Architecture",
-      "6 Cores, 12 Threads",
-      "3.9 GHz Base Clock, 4.9 GHz Turbo Boost",
-      "Intel UHD Graphics 750",
-      "Supports DDR4 RAM",
-      "125W TDP",
-      "LGA 1200 Socket",
-      "Unlocked for Overclocking",
-      "Supports Intel Hyper-Threading"
+      "LGA 1700 Socket",
+      "16 Cores (8 Performance-cores + 8 Efficient-cores), 24 Threads",
+      "Base Frequency: 3.6 GHz; Max Turbo Frequency: 5.4 GHz",
+      "30MB Intel Smart Cache",
+      "Unlocked for overclocking",
+      "Supports DDR5 Memory (up to 4800 MHz) & DDR4 Memory (up to 2933 MHz)",
+      "PCIe 5.0 Support",
+      "Integrated Intel UHD Graphics 770",
+      "Base Power: 125W; Max Turbo Power: 253W",
+      "Ideal for gaming, content creation, and multitasking"
     ],
-    "warranty": "1 year",
+    "warranty": "3 years",
     "stock": 7,
-    "sold": 30,
-    "description": "The Intel Core i5-11600K is a solid processor for gamers and content creators, offering great performance with 6 cores and an unlocked multiplier for overclocking.",
-    "discount": 0
-  },
-  {
-    "title": "AMD Ryzen 9 7950X 4.5GHz",
-    "price": {
-      "USD": 799.99,
-      "EUR": 899.99
-    },
-    "manufacturer": "AMD",
-    "category": "processors",
-    "specifications": [
-      "Zen 4 Architecture",
-      "16 Cores, 32 Threads",
-      "4.5 GHz Base Clock, 5.7 GHz Turbo Boost",
-      "Supports PCIe 5.0",
-      "Supports DDR5 RAM",
-      "170W TDP",
-      "AM5 Socket",
-      "Unlocked for Overclocking",
-      "AMD Precision Boost",
-      "No Integrated Graphics"
-    ],
-    "warranty": "3 years",
-    "stock": 3,
-    "sold": 17,
-    "description": "The AMD Ryzen 9 7950X is a high-end processor with extreme multi-core performance, offering 16 cores and 32 threads for demanding applications and high-end gaming.",
-    "discount": 15
-  },
-  {
-    "title": "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4-3200MHz",
-    "price": {
-      "USD": 79.99,
-      "EUR": 89.99
-    },
-    "manufacturer": "Corsair",
-    "category": "memory",
-    "specifications": [
-      "16GB (2 x 8GB) Kit",
-      "DDR4-3200MHz Speed",
-      "CL16 Latency",
-      "1.35V Voltage",
-      "Heat Spreader for Optimal Cooling",
-      "Compatible with Intel and AMD Platforms",
-      "XMP 2.0 Support"
-    ],
-    "warranty": "3 years",
-    "stock": 5,
-    "sold": 40,
-    "description": "Corsair Vengeance LPX is designed for high-performance overclocking, offering excellent stability and speed for gaming and productivity.",
-    "discount": 5
-  },
-  {
-    "title": "G.SKILL Ripjaws V 32GB (2 x 16GB) DDR4-3600MHz",
-    "price": {
-      "USD": 139.99,
-      "EUR": 159.99
-    },
-    "manufacturer": "G.SKILL",
-    "category": "memory",
-    "specifications": [
-      "32GB (2 x 16GB) Kit",
-      "DDR4-3600MHz Speed",
-      "CL16 Latency",
-      "1.35V Voltage",
-      "Aluminum Heat Spreader",
-      "Supports Intel XMP 2.0 and AMD Ryzen",
-      "Fully Compatible with Latest Chipsets"
-    ],
-    "warranty": "4 years",
-    "stock": 3,
-    "sold": 18,
-    "description": "The G.SKILL Ripjaws V series offers high-performance memory with advanced heat management and excellent stability, ideal for gamers and content creators.",
-    "discount": 0
-  },
-  {
-    "title": "Kingston HyperX Fury 16GB (2 x 8GB) DDR4-2666MHz",
-    "price": {
-      "USD": 59.99,
-      "EUR": 69.99
-    },
-    "manufacturer": "Kingston",
-    "category": "memory",
-    "specifications": [
-      "16GB (2 x 8GB) Kit",
-      "DDR4-2666MHz Speed",
-      "CL16 Latency",
-      "1.2V Voltage",
-      "Plug-and-Play Technology",
-      "Compatible with Intel and AMD Systems",
-      "No Heat Spreader"
-    ],
-    "warranty": "3 years",
-    "stock": 0,
-    "sold": 15,
-    "description": "The Kingston HyperX Fury is a reliable and affordable memory option, delivering solid performance for budget-conscious users who need reliable speed and stability.",
-    "discount": 0
-  },
-  {
-    "title": "Corsair Vengeance RGB Pro 32GB (2 x 16GB) DDR4-3600MHz",
-    "price": {
-      "USD": 169.99,
-      "EUR": 199.99
-    },
-    "manufacturer": "Corsair",
-    "category": "memory",
-    "specifications": [
-      "32GB (2 x 16GB) Kit",
-      "DDR4-3600MHz Speed",
-      "CL18 Latency",
-      "1.35V Voltage",
-      "RGB Lighting with Dynamic Effects",
-      "Intel XMP 2.0 Support",
-      "Aluminum Heat Spreader"
-    ],
-    "warranty": "4 years",
-    "stock": 6,
-    "sold": 22,
-    "description": "Corsair Vengeance RGB Pro offers high-speed performance combined with vibrant RGB lighting, perfect for gamers and PC enthusiasts who want both performance and aesthetics.",
-    "discount": 10
-  },
-  {
-    "title": "Crucial Ballistix 16GB (2 x 8GB) DDR4-3200MHz",
-    "price": {
-      "USD": 74.99,
-      "EUR": 84.99
-    },
-    "manufacturer": "Crucial",
-    "category": "memory",
-    "specifications": [
-      "16GB (2 x 8GB) Kit",
-      "DDR4-3200MHz Speed",
-      "CL16 Latency",
-      "1.35V Voltage",
-      "Military-Grade Aluminum Heat Spreaders",
-      "XMP 2.0 Support"
-    ],
-    "warranty": "3 years",
-    "stock": 4,
-    "sold": 30,
-    "description": "The Crucial Ballistix series provides outstanding memory performance with efficient cooling and robust stability for gaming and heavy workloads.",
-    "discount": 0
-  },
-  {
-    "title": "Corsair Dominator Platinum RGB 64GB (4 x 16GB) DDR4-3200MHz",
-    "price": {
-      "USD": 349.99,
-      "EUR": 399.99
-    },
-    "manufacturer": "Corsair",
-    "category": "memory",
-    "specifications": [
-      "64GB (4 x 16GB) Kit",
-      "DDR4-3200MHz Speed",
-      "CL16 Latency",
-      "1.35V Voltage",
-      "Dynamic RGB Lighting",
-      "Advanced Aluminum Heat Spreader",
-      "Intel XMP 2.0 Support"
-    ],
-    "warranty": "4 years",
-    "stock": 2,
-    "sold": 12,
-    "description": "Corsair Dominator Platinum RGB delivers premium performance and stunning RGB lighting, ideal for high-end builds where both style and performance are paramount.",
-    "discount": 5
-  },
-  {
-    "title": "G.SKILL Trident Z Neo 32GB (2 x 16GB) DDR4-3600MHz",
-    "price": {
-      "USD": 159.99,
-      "EUR": 179.99
-    },
-    "manufacturer": "G.SKILL",
-    "category": "memory",
-    "specifications": [
-      "32GB (2 x 16GB) Kit",
-      "DDR4-3600MHz Speed",
-      "CL18 Latency",
-      "1.35V Voltage",
-      "Dual-Channel Memory",
-      "Compatible with Intel and AMD Platforms",
-      "RGB Lighting"
-    ],
-    "warranty": "3 years",
-    "stock": 0,
-    "sold": 20,
-    "description": "The G.SKILL Trident Z Neo offers premium performance and RGB lighting, designed for gamers and PC builders who demand both high speeds and visual appeal.",
-    "discount": 0
-  },
-  {
-    "title": "HyperX Predator 16GB (2 x 8GB) DDR4-3000MHz",
-    "price": {
-      "USD": 89.99,
-      "EUR": 99.99
-    },
-    "manufacturer": "HyperX",
-    "category": "memory",
-    "specifications": [
-      "16GB (2 x 8GB) Kit",
-      "DDR4-3000MHz Speed",
-      "CL15 Latency",
-      "1.35V Voltage",
-      "High-Performance Heat Spreaders",
-      "XMP 2.0 Support"
-    ],
-    "warranty": "4 years",
-    "stock": 3,
-    "sold": 25,
-    "description": "The HyperX Predator series is engineered for extreme performance, with high speeds and low latency, making it ideal for gamers and enthusiasts.",
-    "discount": 0
-  },
-  {
-    "title": "Team T-Force Vulcan Z 16GB (2 x 8GB) DDR4-2666MHz",
-    "price": {
-      "USD": 59.99,
-      "EUR": 69.99
-    },
-    "manufacturer": "Team",
-    "category": "memory",
-    "specifications": [
-      "16GB (2 x 8GB) Kit",
-      "DDR4-2666MHz Speed",
-      "CL16 Latency",
-      "1.2V Voltage",
-      "High-Performance Heat Spreaders",
-      "Supports Intel XMP 2.0"
-    ],
-    "warranty": "3 years",
-    "stock": 6,
-    "sold": 12,
-    "description": "The Team T-Force Vulcan Z offers great performance and value, providing high-quality memory for gaming, workstations, and everyday tasks.",
-    "discount": 10
-  },
-  {
-    "title": "Samsung 970 EVO Plus 1TB NVMe M.2 SSD",
-    "price": {
-      "USD": 109.99,
-      "EUR": 129.99
-    },
-    "manufacturer": "Samsung",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "NVMe Gen 3.0 x4 Interface",
-      "Up to 3500 MB/s Read Speed",
-      "Up to 3300 MB/s Write Speed",
-      "Dynamic Thermal Guard",
-      "M.2 2280 Form Factor",
-      "Endurance: 600TBW"
-    ],
-    "warranty": "2 years",
-    "stock": 8,
-    "sold": 55,
-    "description": "The Samsung 970 EVO Plus offers high-performance storage with exceptional read and write speeds, perfect for gamers and professionals requiring fast data access.",
-    "discount": 0
-  },
-  {
-    "title": "Crucial P5 500GB NVMe SSD",
-    "price": {
-      "USD": 59.99,
-      "EUR": 69.99
-    },
-    "manufacturer": "Crucial",
-    "category": "storage",
-    "specifications": [
-      "500GB Capacity",
-      "NVMe Gen 3.0 x4 Interface",
-      "Up to 3400 MB/s Read Speed",
-      "Up to 3000 MB/s Write Speed",
-      "M.2 2280 Form Factor",
-      "Endurance: 200TBW"
-    ],
-    "warranty": "1 year",
-    "stock": 4,
-    "sold": 35,
-    "description": "Crucial P5 delivers fast read/write speeds for efficient gaming, content creation, and general computing tasks, all at an affordable price point.",
-    "discount": 0
-  },
-  {
-    "title": "Western Digital WD Black SN850 1TB NVMe SSD",
-    "price": {
-      "USD": 179.99,
-      "EUR": 199.99
-    },
-    "manufacturer": "Western Digital",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "NVMe Gen 4.0 x4 Interface",
-      "Up to 7000 MB/s Read Speed",
-      "Up to 5300 MB/s Write Speed",
-      "M.2 2280 Form Factor",
-      "Endurance: 600TBW",
-      "Optimal for gaming and high-performance workloads"
-    ],
-    "warranty": "2 years",
-    "stock": 7,
-    "sold": 22,
-    "description": "WD Black SN850 offers blazing-fast read and write speeds for gamers and professionals, providing an edge in performance-intensive applications.",
-    "discount": 0
-  },
-  {
-    "title": "Kingston A2000 1TB NVMe SSD",
-    "price": {
-      "USD": 79.99,
-      "EUR": 89.99
-    },
-    "manufacturer": "Kingston",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "NVMe Gen 3.0 x4 Interface",
-      "Up to 2200 MB/s Read Speed",
-      "Up to 2000 MB/s Write Speed",
-      "M.2 2280 Form Factor",
-      "Endurance: 200TBW"
-    ],
-    "warranty": "1 year",
-    "stock": 6,
-    "sold": 18,
-    "description": "The Kingston A2000 delivers solid NVMe performance at an entry-level price, perfect for upgrading laptops and desktops for faster boot times and data transfer.",
-    "discount": 5
-  },
-  {
-    "title": "Samsung 860 EVO 500GB SATA SSD",
-    "price": {
-      "USD": 89.99,
-      "EUR": 99.99
-    },
-    "manufacturer": "Samsung",
-    "category": "storage",
-    "specifications": [
-      "500GB Capacity",
-      "SATA III Interface",
-      "Up to 550 MB/s Read Speed",
-      "Up to 520 MB/s Write Speed",
-      "2.5-inch Form Factor",
-      "Endurance: 150TBW"
-    ],
-    "warranty": "2 years",
-    "stock": 3,
-    "sold": 50,
-    "description": "Samsung's 860 EVO offers excellent performance for SATA-based systems, providing faster load times, boot speeds, and data access with high reliability.",
-    "discount": 0
-  },
-  {
-    "title": "Corsair MP400 1TB NVMe SSD",
-    "price": {
-      "USD": 119.99,
-      "EUR": 139.99
-    },
-    "manufacturer": "Corsair",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "NVMe Gen 3.0 x4 Interface",
-      "Up to 3200 MB/s Read Speed",
-      "Up to 2400 MB/s Write Speed",
-      "M.2 2280 Form Factor",
-      "Endurance: 360TBW"
-    ],
-    "warranty": "2 years",
-    "stock": 4,
-    "sold": 10,
-    "description": "Corsair's MP400 is a high-capacity SSD perfect for those who need reliable storage for large files and applications, including gaming and media creation.",
-    "discount": 0
-  },
-  {
-    "title": "ADATA XPG SX8200 Pro 512GB NVMe SSD",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "ADATA",
-    "category": "storage",
-    "specifications": [
-      "512GB Capacity",
-      "NVMe Gen 3.0 x4 Interface",
-      "Up to 3500 MB/s Read Speed",
-      "Up to 3000 MB/s Write Speed",
-      "M.2 2280 Form Factor",
-      "Endurance: 300TBW"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 25,
-    "description": "The ADATA XPG SX8200 Pro is an affordable high-speed NVMe SSD that offers great value for gamers and content creators looking for fast storage.",
-    "discount": 0
-  },
-  {
-    "title": "SanDisk Extreme PRO 500GB NVMe SSD",
-    "price": {
-      "USD": 99.99,
-      "EUR": 119.99
-    },
-    "manufacturer": "SanDisk",
-    "category": "storage",
-    "specifications": [
-      "500GB Capacity",
-      "NVMe Gen 3.0 x4 Interface",
-      "Up to 3400 MB/s Read Speed",
-      "Up to 2800 MB/s Write Speed",
-      "M.2 2280 Form Factor",
-      "Endurance: 400TBW"
-    ],
-    "warranty": "1 year",
-    "stock": 2,
-    "sold": 12,
-    "description": "SanDisk Extreme PRO offers high-performance speeds and robust durability for professionals needing ultra-fast load times and data transfer.",
-    "discount": 5
-  },
-  {
-    "title": "PNY XLR8 CS3030 1TB NVMe SSD",
-    "price": {
-      "USD": 109.99,
-      "EUR": 119.99
-    },
-    "manufacturer": "PNY",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "NVMe Gen 3.0 x4 Interface",
-      "Up to 3500 MB/s Read Speed",
-      "Up to 3000 MB/s Write Speed",
-      "M.2 2280 Form Factor",
-      "Endurance: 800TBW"
-    ],
-    "warranty": "2 years",
-    "stock": 3,
-    "sold": 15,
-    "description": "PNY XLR8 CS3030 combines speed and reliability for demanding applications and gaming with high sequential read and write speeds.",
-    "discount": 0
-  },
-  {
-    "title": "Seagate Barracuda 1TB 7200RPM HDD",
-    "price": {
-      "USD": 44.99,
-      "EUR": 49.99
-    },
-    "manufacturer": "Seagate",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "7200RPM Speed",
-      "SATA III Interface",
-      "64MB Cache",
-      "Average Seek Time: 8.5ms"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 50,
-    "description": "Seagate Barracuda offers solid performance for everyday computing and gaming storage, delivering fast data access with 1TB of space.",
-    "discount": 0
-  },
-  {
-    "title": "Western Digital Blue 2TB 5400RPM HDD",
-    "price": {
-      "USD": 59.99,
-      "EUR": 69.99
-    },
-    "manufacturer": "Western Digital",
-    "category": "storage",
-    "specifications": [
-      "2TB Capacity",
-      "5400RPM Speed",
-      "SATA III Interface",
-      "256MB Cache",
-      "Average Seek Time: 16ms"
-    ],
-    "warranty": "1 year",
-    "stock": 5,
-    "sold": 30,
-    "description": "WD Blue is ideal for high-capacity storage solutions, offering reliable and efficient data storage for both desktop and laptop systems.",
-    "discount": 0
-  },
-  {
-    "title": "Toshiba P300 3TB 7200RPM HDD",
-    "price": {
-      "USD": 89.99,
-      "EUR": 99.99
-    },
-    "manufacturer": "Toshiba",
-    "category": "storage",
-    "specifications": [
-      "3TB Capacity",
-      "7200RPM Speed",
-      "SATA III Interface",
-      "64MB Cache",
-      "Average Seek Time: 8.5ms"
-    ],
-    "warranty": "6 months",
-    "stock": 4,
-    "sold": 22,
-    "description": "Toshiba P300 offers high-capacity storage for gaming, media, and large-scale data applications with quick access speeds.",
-    "discount": 0
-  },
-  {
-    "title": "Seagate Skyhawk 4TB 5900RPM HDD",
-    "price": {
-      "USD": 139.99,
-      "EUR": 149.99
-    },
-    "manufacturer": "Seagate",
-    "category": "storage",
-    "specifications": [
-      "4TB Capacity",
-      "5900RPM Speed",
-      "SATA III Interface",
-      "128MB Cache",
-      "Optimized for Surveillance Use"
-    ],
-    "warranty": "6 months",
-    "stock": 2,
-    "sold": 15,
-    "description": "The Seagate Skyhawk is designed for high-demand surveillance applications, offering large storage capacity and reliability for 24/7 usage.",
-    "discount": 0
-  },
-  {
-    "title": "Hitachi Deskstar 2TB 7200RPM HDD",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Hitachi",
-    "category": "storage",
-    "specifications": [
-      "2TB Capacity",
-      "7200RPM Speed",
-      "SATA III Interface",
-      "64MB Cache",
-      "Quiet and Energy Efficient"
-    ],
-    "warranty": "3 months",
-    "stock": 6,
-    "sold": 40,
-    "description": "The Hitachi Deskstar provides a balance of performance and energy efficiency for desktop storage, perfect for workstations or home use.",
-    "discount": 0
-  },
-  {
-    "title": "Western Digital Red 1TB NAS HDD",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Western Digital",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "5400RPM Speed",
-      "SATA III Interface",
-      "64MB Cache",
-      "Optimized for NAS Systems"
-    ],
-    "warranty": "6 months",
-    "stock": 8,
-    "sold": 50,
-    "description": "WD Red is designed for NAS environments, offering reliable storage for home and small office data management with optimized firmware.",
-    "discount": 0
-  },
-  {
-    "title": "Toshiba L200 1TB 5400RPM HDD",
-    "price": {
-      "USD": 49.99,
-      "EUR": 59.99
-    },
-    "manufacturer": "Toshiba",
-    "category": "storage",
-    "specifications": [
-      "1TB Capacity",
-      "5400RPM Speed",
-      "SATA III Interface",
-      "128MB Cache",
-      "Optimized for Laptop and Desktop Use"
-    ],
-    "warranty": "3 months",
-    "stock": 5,
-    "sold": 30,
-    "description": "The Toshiba L200 is perfect for laptop users, offering solid storage performance and reliability at an affordable price.",
-    "discount": 0
-  },
-  {
-    "title": "Seagate Exos 12TB 7200RPM HDD",
-    "price": {
-      "USD": 349.99,
-      "EUR": 389.99
-    },
-    "manufacturer": "Seagate",
-    "category": "storage",
-    "specifications": [
-      "12TB Capacity",
-      "7200RPM Speed",
-      "SATA III Interface",
-      "256MB Cache",
-      "Optimized for Enterprise and Data Center Use"
-    ],
-    "warranty": "1 year",
-    "stock": 3,
-    "sold": 10,
-    "description": "Seagate Exos is an enterprise-grade hard drive with high capacity and performance, designed for data centers and heavy workloads.",
-    "discount": 0
-  },
-  {
-    "title": "Western Digital Black 4TB 7200RPM HDD",
-    "price": {
-      "USD": 149.99,
-      "EUR": 169.99
-    },
-    "manufacturer": "Western Digital",
-    "category": "storage",
-    "specifications": [
-      "4TB Capacity",
-      "7200RPM Speed",
-      "SATA III Interface",
-      "128MB Cache",
-      "High-Performance Storage for Gamers"
-    ],
-    "warranty": "1 year",
-    "stock": 2,
-    "sold": 8,
-    "description": "WD Black offers premium performance with fast data transfer rates, optimized for gaming, media storage, and high-speed computing tasks.",
-    "discount": 0
-  },
-  {
-    "title": "ASUS ROG Strix Z590-E Gaming WiFi 6E ATX Motherboard",
-    "price": {
-      "USD": 299.99,
-      "EUR": 349.99
-    },
-    "manufacturer": "ASUS",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z590 Chipset",
-      "LGA 1200 Socket",
-      "Supports Intel 10th and 11th Gen Processors",
-      "WiFi 6E Support",
-      "PCIe 4.0 x16 Slot",
-      "4x DDR4 DIMM Slots (up to 128GB)",
-      "2.5G Ethernet",
-      "Dual M.2 Slots, 6x SATA III Ports"
-    ],
-    "warranty": "2 years",
-    "stock": 6,
-    "sold": 18,
-    "description": "ASUS ROG Strix Z590-E is designed for gamers and PC enthusiasts with premium connectivity options like WiFi 6E, PCIe 4.0, and robust power delivery.",
-    "discount": 0
-  },
-  {
-    "title": "MSI MAG B550 TOMAHAWK WIFI ATX Motherboard",
-    "price": {
-      "USD": 139.99,
-      "EUR": 159.99
-    },
-    "manufacturer": "MSI",
-    "category": "motherboards",
-    "specifications": [
-      "AMD B550 Chipset",
-      "AM4 Socket",
-      "Supports AMD Ryzen 5000 and 3000 Series Processors",
-      "WiFi 6 Support",
-      "PCIe 4.0 x16 Slot",
-      "4x DDR4 DIMM Slots (up to 128GB)",
-      "2x M.2 Slots, 6x SATA III Ports",
-      "7.1 HD Audio"
-    ],
-    "warranty": "1 year",
-    "stock": 4,
-    "sold": 24,
-    "description": "MSI MAG B550 Tomahawk WIFI is a high-performance motherboard for gamers, offering PCIe 4.0 and WiFi 6 for faster connectivity.",
-    "discount": 0
-  },
-  {
-    "title": "Gigabyte Z590 AORUS ELITE AX ATX Motherboard",
-    "price": {
-      "USD": 199.99,
-      "EUR": 229.99
-    },
-    "manufacturer": "Gigabyte",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z590 Chipset",
-      "LGA 1200 Socket",
-      "Supports Intel 10th and 11th Gen Processors",
-      "WiFi 6 Support",
-      "PCIe 4.0 x16 Slot",
-      "4x DDR4 DIMM Slots (up to 128GB)",
-      "Dual M.2 Slots, 6x SATA III Ports",
-      "RGB Fusion 2.0 Support"
-    ],
-    "warranty": "2 years",
-    "stock": 3,
-    "sold": 15,
-    "description": "The Gigabyte Z590 AORUS ELITE AX is built for high-performance users who need the power of Intel 11th Gen CPUs and the benefits of WiFi 6.",
-    "discount": 0
-  },
-  {
-    "title": "ASRock B450M PRO4 Micro ATX Motherboard",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "ASRock",
-    "category": "motherboards",
-    "specifications": [
-      "AMD B450 Chipset",
-      "AM4 Socket",
-      "Supports AMD Ryzen 3000 and 5000 Series Processors",
-      "4x DDR4 DIMM Slots (up to 64GB)",
-      "1x PCIe 3.0 x16 Slot",
-      "2x M.2 Slots, 4x SATA III Ports",
-      "Realtek ALC892 7.1 Audio"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 35,
-    "description": "ASRock's B450M PRO4 motherboard is a budget-friendly option for building solid Ryzen-based systems, featuring essential connectivity and performance.",
-    "discount": 0
-  },
-  {
-    "title": "ASUS TUF Gaming B550-PLUS (Wi-Fi 6) ATX Motherboard",
-    "price": {
-      "USD": 179.99,
-      "EUR": 199.99
-    },
-    "manufacturer": "ASUS",
-    "category": "motherboards",
-    "specifications": [
-      "AMD B550 Chipset",
-      "AM4 Socket",
-      "Supports AMD Ryzen 5000 and 3000 Series Processors",
-      "WiFi 6 Support",
-      "PCIe 4.0 x16 Slot",
-      "4x DDR4 DIMM Slots (up to 128GB)",
-      "2x M.2 Slots, 6x SATA III Ports",
-      "Military-grade TUF Components"
-    ],
-    "warranty": "1 year",
-    "stock": 7,
-    "sold": 40,
-    "description": "TUF Gaming B550-PLUS offers durable, military-grade components for long-lasting reliability, plus WiFi 6 support and PCIe 4.0 for high-speed performance.",
-    "discount": 5
-  },
-  {
-    "title": "MSI MPG Z490 GAMING EDGE WIFI ATX Motherboard",
-    "price": {
-      "USD": 229.99,
-      "EUR": 259.99
-    },
-    "manufacturer": "MSI",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z490 Chipset",
-      "LGA 1200 Socket",
-      "Supports Intel 10th Gen Core Processors",
-      "WiFi 6 Support",
-      "PCIe 3.0 x16 Slot",
-      "4x DDR4 DIMM Slots (up to 128GB)",
-      "2x M.2 Slots, 6x SATA III Ports",
-      "7.1 HD Audio"
-    ],
-    "warranty": "2 years",
-    "stock": 5,
-    "sold": 18,
-    "description": "MSI MPG Z490 Gaming Edge offers excellent performance for gamers, with fast networking options like WiFi 6 and support for Intel 10th Gen Core processors.",
-    "discount": 0
-  },
-  {
-    "title": "Gigabyte B450 AORUS ELITE ATX Motherboard",
-    "price": {
-      "USD": 89.99,
-      "EUR": 99.99
-    },
-    "manufacturer": "Gigabyte",
-    "category": "motherboards",
-    "specifications": [
-      "AMD B450 Chipset",
-      "AM4 Socket",
-      "Supports AMD Ryzen 3000 and 5000 Series Processors",
-      "4x DDR4 DIMM Slots (up to 64GB)",
-      "1x PCIe 3.0 x16 Slot",
-      "2x M.2 Slots, 6x SATA III Ports",
-      "RGB Fusion 2.0 Support"
-    ],
-    "warranty": "1 year",
-    "stock": 8,
-    "sold": 25,
-    "description": "Gigabyte's B450 AORUS ELITE offers reliable performance for Ryzen users, with excellent expandability and RGB features for a customizable build.",
-    "discount": 0
-  },
-  {
-    "title": "ASRock Z490 Steel Legend ATX Motherboard",
-    "price": {
-      "USD": 249.99,
-      "EUR": 279.99
-    },
-    "manufacturer": "ASRock",
-    "category": "motherboards",
-    "specifications": [
-      "Intel Z490 Chipset",
-      "LGA 1200 Socket",
-      "Supports Intel 10th Gen Core Processors",
-      "PCIe 3.0 x16 Slot",
-      "4x DDR4 DIMM Slots (up to 128GB)",
-      "3x M.2 Slots, 6x SATA III Ports",
-      "WiFi 6 Support"
-    ],
-    "warranty": "2 years",
-    "stock": 2,
-    "sold": 10,
-    "description": "ASRock's Z490 Steel Legend motherboard offers premium features, including PCIe 3.0 x16 support, WiFi 6, and multiple M.2 slots for high-speed storage.",
-    "discount": 0
-  },
-  {
-    "title": "MSI B450 TOMAHAWK MAX ATX Motherboard",
-    "price": {
-      "USD": 109.99,
-      "EUR": 119.99
-    },
-    "manufacturer": "MSI",
-    "category": "motherboards",
-    "specifications": [
-      "AMD B450 Chipset",
-      "AM4 Socket",
-      "Supports AMD Ryzen 3000 and 5000 Series Processors",
-      "4x DDR4 DIMM Slots (up to 64GB)",
-      "1x PCIe 3.0 x16 Slot",
-      "2x M.2 Slots, 6x SATA III Ports"
-    ],
-    "warranty": "1 year",
-    "stock": 9,
-    "sold": 35,
-    "description": "The MSI B450 Tomahawk MAX offers an affordable solution for Ryzen enthusiasts, delivering solid performance and great upgrade potential.",
-    "discount": 0
-  },
-  {
-    "title": "Cooler Master Hyper 212 RGB Black Edition Air Cooler",
-    "price": {
-      "USD": 44.99,
-      "EUR": 49.99
-    },
-    "manufacturer": "Cooler Master",
-    "category": "cooling",
-    "specifications": [
-      "4 Heat Pipes",
-      "120mm RGB Fan",
-      "Compatible with Intel LGA 115X, LGA 1200, LGA 1700 and AMD AM4, AM3+ sockets",
-      "Airflow: 57.3 CFM",
-      "Noise Level: 30 dBA",
-      "Dimensions: 159 x 121 x 79 mm"
-    ],
-    "warranty": "1 year",
-    "stock": 10,
-    "sold": 25,
-    "description": "The Cooler Master Hyper 212 RGB Black Edition offers solid performance with a 120mm RGB fan, making it ideal for quiet and efficient cooling.",
-    "discount": 0
-  },
-  {
-    "title": "Noctua NH-U12S Redux Air Cooler",
-    "price": {
-      "USD": 49.99,
-      "EUR": 59.99
-    },
-    "manufacturer": "Noctua",
-    "category": "cooling",
-    "specifications": [
-      "Single Tower Design",
-      "120mm Fan (NF-P12 Redux)",
-      "Compatible with Intel LGA 1200, LGA 115x, and AMD AM4, AM3+",
-      "Airflow: 54.97 CFM",
-      "Noise Level: 23.6 dBA",
-      "Dimensions: 158 x 125 x 71 mm"
-    ],
-    "warranty": "1 year",
-    "stock": 8,
-    "sold": 14,
-    "description": "The Noctua NH-U12S Redux delivers high-quality, quiet cooling for compact systems and is known for its build quality and performance.",
-    "discount": 0
-  },
-  {
-    "title": "be quiet! Pure Rock 2 Air Cooler",
-    "price": {
-      "USD": 39.99,
-      "EUR": 44.99
-    },
-    "manufacturer": "be quiet!",
-    "category": "cooling",
-    "specifications": [
-      "4 Heat Pipes",
-      "120mm PWM Fan",
-      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4, AM3+ sockets",
-      "Airflow: 50.5 CFM",
-      "Noise Level: 26.8 dBA",
-      "Dimensions: 155 x 121 x 75 mm"
-    ],
-    "warranty": "1 year",
-    "stock": 6,
-    "sold": 18,
-    "description": "The Pure Rock 2 provides great cooling performance while maintaining low noise levels, ideal for users seeking a quiet PC build.",
-    "discount": 0
-  },
-  {
-    "title": "ARCTIC Freezer 34 eSports ONE Air Cooler",
-    "price": {
-      "USD": 34.99,
-      "EUR": 39.99
-    },
-    "manufacturer": "ARCTIC",
-    "category": "cooling",
-    "specifications": [
-      "Single Tower Design",
-      "120mm PWM Fan",
-      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
-      "Airflow: 49.0 CFM",
-      "Noise Level: 23.9 dBA",
-      "Dimensions: 157 x 122 x 75 mm"
-    ],
-    "warranty": "6 months",
-    "stock": 4,
-    "sold": 12,
-    "description": "The ARCTIC Freezer 34 is a compact and efficient cooler, perfect for users seeking value and performance without excessive noise.",
-    "discount": 0
-  },
-  {
-    "title": "Thermaltake UX100 ARGB Air Cooler",
-    "price": {
-      "USD": 29.99,
-      "EUR": 34.99
-    },
-    "manufacturer": "Thermaltake",
-    "category": "cooling",
-    "specifications": [
-      "120mm ARGB Fan",
-      "4 Heat Pipes",
-      "Compatible with Intel LGA 1200, LGA 115x, LGA 1700 and AMD AM4 sockets",
-      "Airflow: 42.4 CFM",
-      "Noise Level: 24.5 dBA",
-      "Dimensions: 128 x 79 x 156 mm"
-    ],
-    "warranty": "1 year",
-    "stock": 7,
-    "sold": 20,
-    "description": "The UX100 ARGB Air Cooler offers enhanced aesthetics with addressable RGB lighting and reliable cooling performance for mainstream builds.",
-    "discount": 0
-  },
-  {
-    "title": "Scythe Mugen 5 Rev.B Air Cooler",
-    "price": {
-      "USD": 69.99,
-      "EUR": 79.99
-    },
-    "manufacturer": "Scythe",
-    "category": "cooling",
-    "specifications": [
-      "6 Heat Pipes",
-      "120mm Kaze Flex PWM Fan",
-      "Compatible with Intel LGA 115X, LGA 1200, LGA 1700 and AMD AM4, AM3+ sockets",
-      "Airflow: 51.17 CFM",
-      "Noise Level: 35.0 dBA",
-      "Dimensions: 154 x 130 x 110 mm"
-    ],
-    "warranty": "1 year",
-    "stock": 3,
-    "sold": 11,
-    "description": "The Scythe Mugen 5 Rev.B delivers premium cooling performance with low noise, and its expanded compatibility makes it a great choice for overclocking.",
-    "discount": 0
-  },
-  {
-    "title": "Cooler Master MasterAir MA410M Air Cooler",
-    "price": {
-      "USD": 49.99,
-      "EUR": 59.99
-    },
-    "manufacturer": "Cooler Master",
-    "category": "cooling",
-    "specifications": [
-      "4 Heat Pipes",
-      "120mm Addressable RGB Fan",
-      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
-      "Airflow: 51 CFM",
-      "Noise Level: 24 dBA",
-      "Dimensions: 135 x 103 x 156 mm"
-    ],
-    "warranty": "6 months",
-    "stock": 5,
-    "sold": 15,
-    "description": "The MasterAir MA410M combines high performance and vibrant RGB lighting for a great cooling solution that enhances your PC’s appearance and functionality.",
-    "discount": 0
-  },
-  {
-    "title": "DeepCool GAMMAXX 400 V2 Air Cooler",
-    "price": {
-      "USD": 29.99,
-      "EUR": 34.99
-    },
-    "manufacturer": "DeepCool",
-    "category": "cooling",
-    "specifications": [
-      "4 Heat Pipes",
-      "120mm PWM Fan",
-      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
-      "Airflow: 56.5 CFM",
-      "Noise Level: 27.3 dBA",
-      "Dimensions: 132 x 79 x 159 mm"
-    ],
-    "warranty": "1 year",
-    "stock": 9,
-    "sold": 20,
-    "description": "DeepCool GAMMAXX 400 V2 provides solid cooling performance for budget builds, with a sleek design and efficient heat dissipation.",
-    "discount": 0
-  },
-  {
-    "title": "Vetroo V5 Air Cooler",
-    "price": {
-      "USD": 34.99,
-      "EUR": 39.99
-    },
-    "manufacturer": "Vetroo",
-    "category": "cooling",
-    "specifications": [
-      "4 Heat Pipes",
-      "120mm LED Fan",
-      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
-      "Airflow: 58.5 CFM",
-      "Noise Level: 30 dBA",
-      "Dimensions: 155 x 125 x 85 mm"
-    ],
-    "warranty": "6 months",
-    "stock": 4,
-    "sold": 14,
-    "description": "The Vetroo V5 is a powerful air cooler with a great price-to-performance ratio, ideal for users seeking quiet and efficient cooling on a budget.",
-    "discount": 0
-  },
-  {
-    "title": "Corsair iCUE H100i ELITE CAPELLIX 240mm AIO Liquid Cooler",
-    "price": {
-      "USD": 149.99,
-      "EUR": 179.99
-    },
-    "manufacturer": "Corsair",
-    "category": "cooling",
-    "specifications": [
-      "240mm Radiator",
-      "Dual 120mm RGB Fans",
-      "3600 RPM Fan Speed",
-      "Compatible with Intel LGA 1200, LGA 115x, LGA 1700 and AMD AM4, TR4 sockets",
-      "Noise Level: 25 dBA",
-      "Airflow: 75 CFM",
-      "Corsair iCUE Software Control for RGB and Performance"
-    ],
-    "warranty": "1 year",
-    "stock": 6,
-    "sold": 18,
-    "description": "The Corsair iCUE H100i ELITE CAPELLIX combines powerful cooling performance and customizable RGB lighting, perfect for high-performance systems.",
-    "discount": 0
-  },
-  {
-    "title": "NZXT Kraken X53 240mm AIO Liquid Cooler",
-    "price": {
-      "USD": 139.99,
-      "EUR": 159.99
-    },
-    "manufacturer": "NZXT",
-    "category": "cooling",
-    "specifications": [
-      "240mm Radiator",
-      "Dual 120mm Aer P Fans",
-      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4 sockets",
-      "Fan Speed: 2000 RPM",
-      "Noise Level: 21 dBA",
-      "Airflow: 51.4 CFM",
-      "CAM Software for Advanced RGB Control"
-    ],
-    "warranty": "1 year",
-    "stock": 8,
-    "sold": 23,
-    "description": "The NZXT Kraken X53 features an advanced pump design and RGB lighting for a visually striking, ultra-efficient cooling solution.",
-    "discount": 0
-  },
-  {
-    "title": "Cooler Master MasterLiquid ML240L V2 RGB AIO Liquid Cooler",
-    "price": {
-      "USD": 89.99,
-      "EUR": 99.99
-    },
-    "manufacturer": "Cooler Master",
-    "category": "cooling",
-    "specifications": [
-      "240mm Radiator",
-      "Dual 120mm RGB Fans",
-      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
-      "Fan Speed: 2000 RPM",
-      "Noise Level: 30 dBA",
-      "Airflow: 66.3 CFM",
-      "RGB Lighting Control"
-    ],
-    "warranty": "1 year",
-    "stock": 9,
-    "sold": 32,
-    "description": "Cooler Master's MasterLiquid ML240L V2 offers excellent cooling performance with RGB lighting, ideal for gamers and PC enthusiasts.",
-    "discount": 0
-  },
-  {
-    "title": "ARCTIC Liquid Freezer II 240mm AIO Liquid Cooler",
-    "price": {
-      "USD": 99.99,
-      "EUR": 119.99
-    },
-    "manufacturer": "ARCTIC",
-    "category": "cooling",
-    "specifications": [
-      "240mm Radiator",
-      "Dual 120mm PWM Fans",
-      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4, TR4 sockets",
-      "Fan Speed: 2000 RPM",
-      "Noise Level: 28 dBA",
-      "Airflow: 57 CFM",
-      "Integrated Cable Management"
-    ],
-    "warranty": "1 year",
-    "stock": 5,
-    "sold": 15,
-    "description": "The ARCTIC Liquid Freezer II delivers high-efficiency cooling, with a sleek design and low-noise performance for high-demand applications.",
-    "discount": 0
-  },
-  {
-    "title": "Thermaltake WATER 3.0 ARGB 240mm AIO Liquid Cooler",
-    "price": {
-      "USD": 119.99,
-      "EUR": 139.99
-    },
-    "manufacturer": "Thermaltake",
-    "category": "cooling",
-    "specifications": [
-      "240mm Radiator",
-      "Dual 120mm ARGB Fans",
-      "Fan Speed: 2500 RPM",
-      "Compatible with Intel LGA 1200, LGA 115x, LGA 1700 and AMD AM4, AM3+ sockets",
-      "Noise Level: 30 dBA",
-      "Airflow: 74 CFM",
-      "ARGB Lighting Control"
-    ],
-    "warranty": "1 year",
-    "stock": 7,
-    "sold": 20,
-    "description": "Thermaltake's WATER 3.0 ARGB delivers excellent performance with addressable RGB lighting, enhancing both your system's cooling and aesthetic appeal.",
-    "discount": 0
-  },
-  {
-    "title": "Corsair iCUE H150i ELITE CAPELLIX 360mm AIO Liquid Cooler",
-    "price": {
-      "USD": 179.99,
-      "EUR": 209.99
-    },
-    "manufacturer": "Corsair",
-    "category": "cooling",
-    "specifications": [
-      "360mm Radiator",
-      "Triple 120mm RGB Fans",
-      "Fan Speed: 2400 RPM",
-      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4, TR4 sockets",
-      "Noise Level: 25 dBA",
-      "Airflow: 90 CFM",
-      "RGB Lighting Control with iCUE Software"
-    ],
-    "warranty": "1 year",
-    "stock": 3,
-    "sold": 9,
-    "description": "The H150i ELITE CAPELLIX offers powerful cooling with three RGB fans and premium performance for overclocked systems.",
-    "discount": 0
-  },
-  {
-    "title": "NZXT Kraken Z63 280mm AIO Liquid Cooler",
-    "price": {
-      "USD": 249.99,
-      "EUR": 289.99
-    },
-    "manufacturer": "NZXT",
-    "category": "cooling",
-    "specifications": [
-      "280mm Radiator",
-      "Dual 140mm Aer P Fans",
-      "Fan Speed: 1800 RPM",
-      "Compatible with Intel LGA 1200, LGA 115X, LGA 1700 and AMD AM4 sockets",
-      "Noise Level: 21 dBA",
-      "Airflow: 77 CFM",
-      "LCD Display with Customizable Graphics"
-    ],
-    "warranty": "1 year",
-    "stock": 4,
-    "sold": 10,
-    "description": "The Kraken Z63 features an LCD display that shows custom graphics or system stats while providing exceptional cooling performance.",
-    "discount": 0
-  },
-  {
-    "title": "Cooler Master MasterLiquid ML240L RGB V2 AIO Liquid Cooler",
-    "price": {
-      "USD": 109.99,
-      "EUR": 129.99
-    },
-    "manufacturer": "Cooler Master",
-    "category": "cooling",
-    "specifications": [
-      "240mm Radiator",
-      "Dual 120mm RGB Fans",
-      "Fan Speed: 2000 RPM",
-      "Compatible with Intel LGA 115X, LGA 1200 and AMD AM4 sockets",
-      "Noise Level: 25 dBA",
-      "Airflow: 70 CFM",
-      "RGB Lighting Control"
-    ],
-    "warranty": "1 year",
-    "stock": 6,
-    "sold": 17,
-    "description": "The MasterLiquid ML240L RGB V2 provides improved cooling with a dual RGB fan setup, ideal for users looking to balance performance and aesthetics.",
-    "discount": 0
-  },
-  {
-    "title": "DeepCool Castle 240EX RGB AIO Liquid Cooler",
-    "price": {
-      "USD": 109.99,
-      "EUR": 129.99
-    },
-    "manufacturer": "DeepCool",
-    "category": "cooling",
-    "specifications": [
-      "240mm Radiator",
-      "Dual 120mm RGB Fans",
-      "Compatible with Intel LGA 1200, LGA 115X and AMD AM4 sockets",
-      "Fan Speed: 2000 RPM",
-      "Noise Level: 26 dBA",
-      "Airflow: 62 CFM",
-      "ARGB Lighting Control"
-    ],
-    "warranty": "6 months",
-    "stock": 8,
-    "sold": 22,
-    "description": "The DeepCool Castle 240EX RGB delivers superior cooling with vibrant ARGB lighting, perfect for those seeking a balance of performance and style.",
-    "discount": 0
+    "description": "The Intel Core i7-13700K processor strikes a balance between performance and efficiency. With 16 cores, divided equally between Performance-cores and Efficient-cores, it adeptly manages diverse workloads. The base clock of 3.6 GHz, boosting up to 5.4 GHz, ensures responsiveness in various applications. A 30MB Intel Smart Cache facilitates quick data access, enhancing overall system performance. Support for both DDR5 and DDR4 memory offers flexibility in system design. PCIe 5.0 compatibility future-proofs your setup for upcoming hardware. Integrated Intel UHD Graphics 770 provides competent graphics capabilities for general use. Its power specifications align with its high-performance capabilities, making it a versatile choice for demanding tasks.",
+    "discount": 0,
+    "image": "product-44.png"
   }
 ]

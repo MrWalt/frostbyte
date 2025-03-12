@@ -47,7 +47,9 @@ const StyledSelect = styled.select`
 
 export default function Sort() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [sortBy, setSortBy] = useState(searchParams.get("sort") || "-price");
+  const [sortBy, setSortBy] = useState(
+    searchParams.get("sort") || "-dateAdded"
+  );
 
   useEffect(
     function () {
@@ -71,6 +73,10 @@ export default function Sort() {
         <optgroup label="Price">
           <option value={"price"}>Ascending</option>
           <option value={"-price"}>Descending</option>
+        </optgroup>
+        <optgroup label="Date">
+          <option value={"dateAdded"}>Oldest First</option>
+          <option value={"-dateAdded"}>Newest First</option>
         </optgroup>
       </StyledSelect>
     </Box>

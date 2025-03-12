@@ -44,6 +44,7 @@ export default function FilterPrice() {
 
       setSearchParams(searchParams);
     },
+    // eslint-disable-next-line
     [minPrice, maxPrice]
   );
 
@@ -51,7 +52,7 @@ export default function FilterPrice() {
     <PriceFilter>
       <PriceInput
         type="number"
-        placeholder="$0"
+        placeholder="0€"
         value={minPrice}
         onChange={(e) => {
           if (Number(e.target.value) === 0 || e.target.value < 0) {
@@ -64,7 +65,7 @@ export default function FilterPrice() {
       <span>&mdash;</span>
       <PriceInput
         type="number"
-        placeholder="$20000"
+        placeholder="5000€"
         value={maxPrice}
         onChange={(e) => {
           if (Number(e.target.value) === 0) {

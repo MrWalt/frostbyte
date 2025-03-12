@@ -65,7 +65,7 @@ const StyledPrice = styled.span`
 const Currency = styled.span`
   display: inline-block;
 
-  margin-right: 0.1rem;
+  margin-left: 2px;
 
   color: var(--color-grey-0);
 
@@ -83,11 +83,11 @@ export default function Price({ price, size }) {
 
   return (
     <div>
-      <Currency size={size}>$</Currency>
       <StyledPrice size={size}>{formattedPrice.at(0)},</StyledPrice>
       <Cents size={size}>
         {formattedPrice.at(1) > 0 ? formattedPrice.at(1).slice(0, 2) : "00"}
       </Cents>
+      <Currency size={size}>€</Currency>
     </div>
   );
 }

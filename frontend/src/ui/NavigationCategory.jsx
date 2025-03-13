@@ -1,15 +1,44 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+const StyledDiv = styled.div`
+  transition: var(--animation-medium);
+`;
+
 const Box = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 0.8rem;
-
+  height: 100%;
   align-items: start;
 
-  animation: dropIn 0.2s;
+  transform: translateY(-4px);
+
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+  transition: var(--animation-medium);
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    max-height: 0;
+    margin-top: 0;
+  }
+
+  &:not(.hidden) {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    margin-top: 0.8rem;
+
+    transform: translateY(0);
+  }
 `;
 
 const StyledButton = styled.button`
@@ -52,22 +81,21 @@ export default function NavigationCategory({
   links,
 }) {
   return (
-    <div>
+    <StyledDiv>
       <StyledButton
         onClick={() => handler(category)}
         className={`${isToggled ? "active" : ""}`}
       >
         {category}
       </StyledButton>
-      {isToggled && (
-        <Box>
-          {links.map((link) => (
-            <StyledNavLink to={`/products/${link.link}`} key={link.link}>
-              {link.heading}
-            </StyledNavLink>
-          ))}
-        </Box>
-      )}
-    </div>
+
+      <Box className={`${!isToggled ? "hidden" : ""}`}>
+        {links.map((link) => (
+          <StyledNavLink to={`/products/${link.link}`} key={link.link}>
+            {link.heading}
+          </StyledNavLink>
+        ))}
+      </Box>
+    </StyledDiv>
   );
 }

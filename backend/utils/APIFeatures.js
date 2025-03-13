@@ -4,6 +4,7 @@ class APIFeatures {
     this.queryString = queryString;
   }
   filter(extraExcluded = []) {
+    console.log(this.queryString);
     const queryObject = { ...this.queryString };
     const excludedFields = ["page", "limit", "fields", "sort"];
 
@@ -29,6 +30,13 @@ class APIFeatures {
         price: { $lte: queryObject.maxPrice },
       });
       delete queryObject.maxPrice;
+    }
+
+    if (queryObject?.search) {
+      this.query = this.query.find({
+        title: { $regex: queryObject.search, $options: "i" },
+      });
+      delete queryObject.search;
     }
 
     this.query = this.query.find(queryObject);

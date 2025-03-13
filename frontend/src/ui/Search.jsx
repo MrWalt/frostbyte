@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { HiOutlineArrowRight, HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 
-const Box = styled.div`
+const Box = styled.form`
   border: 1px solid var(--color-grey-800);
   background-color: var(--color-grey-900);
 
@@ -53,13 +54,23 @@ const StyledInput = styled.input`
 
 export default function Search() {
   const [query, setQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
 
-  function handleSearch() {
-    console.log("User searched for " + query);
+  function handleSearch(e) {
+    e.preventDefault();
+
+    if (query === "") {
+      searchParams.delete("search");
+      setSearchParams(searchParams);
+    }
+    if (query.length < 3) return;
+
+    navigate(`/products?search=${query}`);
   }
 
   return (
-    <Box>
+    <Box onSubmit={(e) => handleSearch(e)}>
       <HiOutlineMagnifyingGlass />
       <StyledInput
         placeholder="Search"
@@ -67,7 +78,7 @@ export default function Search() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button onClick={handleSearch}>
+      <button>
         <HiOutlineArrowRight className="btn-search" />
       </button>
     </Box>

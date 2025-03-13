@@ -16,6 +16,7 @@ export function useProducts() {
     socket: searchParams.get("socket") || null,
     capacity: searchParams.get("capacity") || null,
     type: searchParams.get("type") || null,
+    search: searchParams.get("search") || null,
   };
 
   const sortBy = searchParams.get("sort") || null;

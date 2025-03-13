@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 
 import Section from "../ui/Section";
 import FilterMenu from "../ui/FilterMenu";
@@ -58,20 +58,29 @@ const StyledButton = styled(Button)`
   background-color: transparent;
 `;
 
+const SearchText = styled.span`
+  color: var(--color-brand-500);
+`;
+
 export default function Products() {
   const params = useParams();
+  const [searchParams] = useSearchParams();
   const category = formatCategoryTitle(params?.category ?? "");
   const { count } = useProducts();
   const { isLoading } = useProducts();
   const { user } = useUser();
   const { handleSetToggledModal } = useModal();
+  const searchQuery = searchParams.get("search") || null;
 
   return (
     <StyledSection>
       <Background>
         <Container>
           <StyledHeading $variation="secondary">
-            {params?.category ? category : "All Products"}
+            {params?.category ? category : ""}
+            {!params?.category && !searchQuery ? "All Products" : ""}
+            {searchQuery ? `Search for ` : ""}
+            {searchQuery ? <SearchText>{searchQuery}</SearchText> : ""}
           </StyledHeading>
           <AsideBox>
             <Search />

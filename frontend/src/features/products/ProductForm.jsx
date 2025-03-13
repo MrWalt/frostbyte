@@ -102,6 +102,8 @@ const StyledTextArea = styled.textarea`
   color: var(--color-grey-0);
   font-family: inherit;
 
+  transition: var(--animation-fast);
+
   &:focus {
     border: 1px solid var(--color-brand-600);
     outline: none;

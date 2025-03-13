@@ -30,7 +30,7 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   margin: 0 auto;
-  gap: 4.8rem;
+  gap: 3.2rem;
 `;
 
 const StyledNav = styled.nav`

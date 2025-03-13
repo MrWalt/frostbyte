@@ -48,7 +48,7 @@ const getWishlist = catchAsync(async function (req, res) {
     path: "wishlist",
     populate: {
       path: "product",
-      select: "title discount price",
+      select: "title discount price image",
     },
   });
 

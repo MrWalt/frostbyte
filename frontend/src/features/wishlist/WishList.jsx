@@ -89,7 +89,7 @@ const StyledLink = styled(Link)`
 export default function WishList() {
   const { closeMenu } = useMenu();
   const { wishlist, isLoading } = useWishlist();
-
+  console.log(wishlist);
   return (
     <Container>
       <InfoBox>
@@ -112,6 +112,7 @@ export default function WishList() {
                 id={item.product.id}
                 dateAdded={item.dateAdded}
                 key={item.product.id}
+                image={item.product.image}
               />
             ))}
           </Box>

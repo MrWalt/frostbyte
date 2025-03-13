@@ -3,6 +3,7 @@ import Price from "../../ui/Price";
 import { HiXMark } from "react-icons/hi2";
 import { format } from "date-fns";
 import { useUpdateWishlist } from "./useUpdateWishlist";
+import { Link } from "react-router-dom";
 
 const Box = styled.div`
   width: 100%;
@@ -94,7 +95,7 @@ const DeleteButton = styled.button`
   }
 `;
 
-export default function WishListItem({ title, price, dateAdded, id }) {
+export default function WishListItem({ title, price, dateAdded, id, image }) {
   const { updateWishlist, isPending } = useUpdateWishlist();
 
   return (
@@ -105,7 +106,9 @@ export default function WishListItem({ title, price, dateAdded, id }) {
       >
         <HiXMark className={`${isPending ? "spin" : ""}`} />
       </DeleteButton>
-      <Image src={`/img/product-1.png`} />
+      <Link to={`/product/${id}`}>
+        <Image src={`/img/${image}`} />
+      </Link>
 
       <InfoBox>
         <Title>{title}</Title>

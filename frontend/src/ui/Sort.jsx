@@ -13,6 +13,8 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   gap: 0.4rem;
+
+  background-color: var(--color-grey-900);
 `;
 
 const StyledSelect = styled.select`

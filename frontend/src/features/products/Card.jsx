@@ -27,6 +27,8 @@ const Box = styled.div`
 
   position: relative;
 
+  background-color: var(--color-grey-900);
+
   &:hover button {
     transform: scale(1);
   }

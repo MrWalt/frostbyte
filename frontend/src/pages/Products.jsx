@@ -14,6 +14,19 @@ import { useUser } from "../features/authentication/UserContext";
 import Button from "../ui/Button";
 import { useModal } from "../contexts/ModalContext";
 
+const StyledSection = styled(Section)`
+  background-image: url("/background.webp");
+
+  padding: 0;
+`;
+
+const Background = styled.div`
+  background-color: var(--color-grey-transparent);
+  backdrop-filter: blur(4px);
+
+  padding: 4.8rem 0 6.4rem 0;
+`;
+
 const Container = styled.div`
   margin: 0 auto;
   width: 140rem;
@@ -53,23 +66,25 @@ export default function Products() {
   const { handleSetToggledModal } = useModal();
 
   return (
-    <Section>
-      <Container>
-        <StyledHeading $variation="secondary">
-          {params?.category ? category : "All Products"}
-        </StyledHeading>
-        <AsideBox>
-          <Sort />
-          <FilterMenu params={params} />
-          {user.role === "admin" && (
-            <StyledButton onClick={() => handleSetToggledModal("addProduct")}>
-              Add new product
-            </StyledButton>
-          )}
-        </AsideBox>
-        <ProductsGrid category={params?.category ? params.category : null} />
-        {!isLoading && <Pagination count={count} />}
-      </Container>
-    </Section>
+    <StyledSection>
+      <Background>
+        <Container>
+          <StyledHeading $variation="secondary">
+            {params?.category ? category : "All Products"}
+          </StyledHeading>
+          <AsideBox>
+            <Sort />
+            <FilterMenu params={params} />
+            {user.role === "admin" && (
+              <StyledButton onClick={() => handleSetToggledModal("addProduct")}>
+                Add new product
+              </StyledButton>
+            )}
+          </AsideBox>
+          <ProductsGrid category={params?.category ? params.category : null} />
+          {!isLoading && <Pagination count={count} />}
+        </Container>
+      </Background>
+    </StyledSection>
   );
 }

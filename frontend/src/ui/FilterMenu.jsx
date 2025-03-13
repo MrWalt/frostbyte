@@ -21,6 +21,8 @@ const Box = styled.div`
 
   border: 1px solid var(--color-grey-800);
   padding: 1.6rem 2.4rem;
+
+  background-color: var(--color-grey-900);
 `;
 
 const FiltersBox = styled.div`

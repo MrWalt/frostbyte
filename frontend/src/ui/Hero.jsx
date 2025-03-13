@@ -7,7 +7,7 @@ const Container = styled.div`
 
   background-image: linear-gradient(
       to right,
-      rgba(51, 155, 240, 0.15) 50%,
+      rgba(51, 155, 240, 0.15),
       rgba(51, 155, 240, 0.15)
     ),
     url("hero.jpg");

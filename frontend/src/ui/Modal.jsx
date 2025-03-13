@@ -203,7 +203,7 @@ function DeleteProduct() {
   const { deleteProduct, isPending } = useDeleteProduct();
   return (
     <>
-      <StyledHeading variation="tertiary">
+      <StyledHeading $variation="tertiary">
         Delete this product?
         <XButton onClick={closeModal}>
           <HiXMark />

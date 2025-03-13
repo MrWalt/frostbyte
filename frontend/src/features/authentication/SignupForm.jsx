@@ -122,7 +122,7 @@ export default function SignupForm() {
 
   return (
     <Container>
-      <StyledHeading variation="primary">
+      <StyledHeading $variation="primary">
         Join us <span>today</span>
       </StyledHeading>
 
@@ -135,7 +135,7 @@ export default function SignupForm() {
             id="email"
             spellCheck="false"
             disabled={isPending}
-            variation="large"
+            $variation="large"
             {...register("email", {
               required: "This field is required.",
             })}
@@ -152,7 +152,7 @@ export default function SignupForm() {
             id="password"
             spellCheck="false"
             disabled={isPending}
-            variation="large"
+            $variation="large"
             {...register("password", {
               required: "This field is required.",
               minLength: 8,
@@ -185,7 +185,7 @@ export default function SignupForm() {
             id="password-confirm"
             spellCheck="false"
             disabled={isPending}
-            variation="large"
+            $variation="large"
             {...register("passwordConfirm", {
               required: "This field is required.",
             })}

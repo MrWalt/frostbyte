@@ -19,14 +19,14 @@ export default function Contact() {
   return (
     <Section id="contact">
       <StyledDiv>
-        <Heading variation="secondary">Contact us</Heading>
+        <Heading $variation="secondary">Contact us</Heading>
         <TextArea>
           Before reaching out to our support team, please take a look at our
           <StyledSpan> Frequently Asked Questions</StyledSpan> below. You may
           find answers to your questions there, saving you time and effort.
         </TextArea>
         <FrequentlyAskedQuestions />
-        <Heading variation="secondary">Still need help?</Heading>
+        <Heading $variation="secondary">Still need help?</Heading>
         <TextArea>
           If you've tried our troubleshooting tips and still need assistance,
           please contact our dedicated support team. We're committed to

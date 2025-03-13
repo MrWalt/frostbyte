@@ -55,7 +55,7 @@ export default function Products() {
   return (
     <Section>
       <Container>
-        <StyledHeading variation="secondary">
+        <StyledHeading $variation="secondary">
           {params?.category ? category : "All Products"}
         </StyledHeading>
         <AsideBox>

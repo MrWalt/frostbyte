@@ -47,7 +47,7 @@ const Input = styled.input`
     margin: 0;
   }
 
-  ${(props) => variations[props.variation]}
+  ${(props) => variations[props.$variation]}
 `;
 
 export default Input;

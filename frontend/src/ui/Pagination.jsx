@@ -78,7 +78,7 @@ export default function Pagination({ count }) {
 
   return (
     <Box>
-      <StyledButton variation="mediumNoBox" onClick={previousPage}>
+      <StyledButton $variation="mediumNoBox" onClick={previousPage}>
         <HiChevronLeft />
       </StyledButton>
       {/* First Page */}
@@ -101,7 +101,7 @@ export default function Pagination({ count }) {
       )}
       {/* Last Page */}
       {currentPage !== pageCount && <Page onClick={lastPage}>{pageCount}</Page>}
-      <StyledButton variation="mediumNoBox" onClick={nextPage}>
+      <StyledButton $variation="mediumNoBox" onClick={nextPage}>
         <HiChevronRight />
       </StyledButton>
     </Box>

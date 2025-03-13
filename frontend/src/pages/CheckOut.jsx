@@ -28,7 +28,7 @@ export default function CheckOut() {
   return (
     <StyledSection>
       <Container>
-        <StyledHeading variation="secondary">Checkout</StyledHeading>
+        <StyledHeading $variation="secondary">Checkout</StyledHeading>
         <Box>
           <UserDetails />
           <PaymentDetails />

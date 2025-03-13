@@ -119,7 +119,7 @@ export default function LoginForm() {
 
   return (
     <Container>
-      <StyledHeading variation="primary">Login to your account</StyledHeading>
+      <StyledHeading $variation="primary">Login to your account</StyledHeading>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Input field for Email */}
@@ -131,7 +131,7 @@ export default function LoginForm() {
             id="email"
             spellCheck="false"
             disabled={isPending}
-            variation="large"
+            $variation="large"
             {...register("email", {
               required: "This field is required.",
             })}
@@ -148,7 +148,7 @@ export default function LoginForm() {
             id="password"
             spellCheck="false"
             disabled={isPending}
-            variation="large"
+            $variation="large"
             {...rest}
             ref={(e) => {
               ref(e);

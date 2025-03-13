@@ -44,7 +44,7 @@ export default function SummaryList() {
           image={item.image}
         />
       ))}
-      <ContinueShoppingButton variation="medium" onClick={moveBack}>
+      <ContinueShoppingButton $variation="medium" onClick={moveBack}>
         <HiArrowLongLeft />
         Continue Shopping
       </ContinueShoppingButton>

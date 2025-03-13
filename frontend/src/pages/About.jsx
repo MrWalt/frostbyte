@@ -29,7 +29,7 @@ const StyledSpan = styled.span`
 export default function About() {
   return (
     <Container>
-      <StyledHeading variation="secondary">About us</StyledHeading>
+      <StyledHeading $variation="secondary">About us</StyledHeading>
       <TextArea>
         At FrostByte, we're more than just a tech store. We're a beacon of
         innovation, a digital haven for the tech-savvy. We're passionate about
@@ -58,7 +58,7 @@ export default function About() {
         here to help.
       </TextArea>
 
-      <StyledHeading variation="tertiary">
+      <StyledHeading $variation="tertiary">
         Join the FrostByte community and experience the future of technology,
         <StyledSpan> today.</StyledSpan>
       </StyledHeading>

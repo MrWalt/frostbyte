@@ -77,7 +77,7 @@ export default function CartSummary() {
     <StyledSection>
       {itemsInCart !== 0 ? (
         <Container>
-          <StyledHeading variation="secondary">Cart Summary</StyledHeading>
+          <StyledHeading $variation="secondary">Cart Summary</StyledHeading>
           <Box>
             <SummaryList />
             <SummaryDetails />
@@ -85,9 +85,11 @@ export default function CartSummary() {
         </Container>
       ) : (
         <EmptyCartContainer>
-          <EmptyCartHeading variation="primary">Cart is empty</EmptyCartHeading>
+          <EmptyCartHeading $variation="primary">
+            Cart is empty
+          </EmptyCartHeading>
           <Link to="/products">
-            <StyledButton variation="medium">Go To Products</StyledButton>
+            <StyledButton $variation="medium">Go To Products</StyledButton>
           </Link>
         </EmptyCartContainer>
       )}

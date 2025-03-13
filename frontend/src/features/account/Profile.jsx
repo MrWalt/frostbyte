@@ -126,7 +126,7 @@ export default function Profile() {
 
   return (
     <Box>
-      <StyledHeading variation="secondary">Your profile</StyledHeading>
+      <StyledHeading $variation="secondary">Your profile</StyledHeading>
 
       <Form>
         <StyledP>Full Name</StyledP>
@@ -136,7 +136,7 @@ export default function Profile() {
               type="text"
               placeholder="John Smith"
               spellCheck="false"
-              variation="minimal"
+              $variation="minimal"
               value={name}
               disabled={isPending}
               onChange={(e) => changeInfo(setName, e.target.value)}
@@ -157,7 +157,7 @@ export default function Profile() {
               type="text"
               placeholder="34 Parkstrasse"
               spellCheck="false"
-              variation="minimal"
+              $variation="minimal"
               value={address}
               disabled={isPending}
               onChange={(e) => changeInfo(setAddress, e.target.value)}
@@ -173,7 +173,7 @@ export default function Profile() {
               type="text"
               placeholder="Germany"
               spellCheck="false"
-              variation="minimal"
+              $variation="minimal"
               value={country}
               disabled={isPending}
               onChange={(e) => changeInfo(setCountry, e.target.value)}
@@ -189,7 +189,7 @@ export default function Profile() {
               type="text"
               placeholder="Berlin"
               spellCheck="false"
-              variation="minimal"
+              $variation="minimal"
               value={city}
               disabled={isPending}
               onChange={(e) => changeInfo(setCity, e.target.value)}
@@ -205,7 +205,7 @@ export default function Profile() {
               type="text"
               placeholder="(+49) 163 555 1584"
               spellCheck="false"
-              variation="minimal"
+              $variation="minimal"
               value={phone}
               disabled={isPending}
               onChange={(e) => changeInfo(setPhone, e.target.value)}

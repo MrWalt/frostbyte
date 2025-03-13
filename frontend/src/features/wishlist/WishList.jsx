@@ -93,7 +93,7 @@ export default function WishList() {
   return (
     <Container>
       <InfoBox>
-        <StyledHeading variation="tertiary">
+        <StyledHeading $variation="tertiary">
           {isLoading && "Your wishlist"}
           {wishlist?.length ? "Your wishlist" : ""}
           {!wishlist?.length && !isLoading && "Your wishlist is empty"}
@@ -130,7 +130,7 @@ function Unauthorized() {
   return (
     <Container>
       <InfoBox>
-        <StyledHeading variation="tertiary">
+        <StyledHeading $variation="tertiary">
           You must be logged in, <StyledLink to="./login">Login now</StyledLink>
           <StyledButton onClick={closeMenu}>
             <HiXMark />

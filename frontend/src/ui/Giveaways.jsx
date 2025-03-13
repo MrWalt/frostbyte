@@ -58,7 +58,7 @@ const StyledSpan = styled.span`
 export default function Giveaways() {
   return (
     <Container>
-      <StyledHeading variation="secondary">
+      <StyledHeading $variation="secondary">
         Check Out Our Giveaways
       </StyledHeading>
       <StyledDiv>

@@ -24,7 +24,7 @@ export default function Orders() {
 
   return (
     <Box>
-      <StyledHeading variation="secondary">Your orders</StyledHeading>
+      <StyledHeading $variation="secondary">Your orders</StyledHeading>
       {isLoading ? (
         <Loader />
       ) : (

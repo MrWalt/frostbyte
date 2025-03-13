@@ -62,11 +62,11 @@ const Button = styled.button`
 
   cursor: pointer;
 
-  ${(props) => variations[props.variation]}
+  ${(props) => variations[props.$variation]}
 `;
 
 Button.defaultProps = {
-  variation: "large",
+  $variation: "large",
 };
 
 export default Button;

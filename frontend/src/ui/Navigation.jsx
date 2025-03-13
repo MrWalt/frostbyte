@@ -91,7 +91,7 @@ export default function Navigation() {
 
   return (
     <Container>
-      <StyledHeading variation="tertiary">
+      <StyledHeading $variation="tertiary">
         Products
         <StyledButton onClick={closeMenu}>
           <HiXMark />

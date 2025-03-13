@@ -97,7 +97,7 @@ export default function Cart() {
   return (
     <Container>
       <InfoBox>
-        <StyledHeading variation="tertiary">
+        <StyledHeading $variation="tertiary">
           {itemsInCart !== 0 ? (
             <>
               Your cart &mdash; <ItemCount>{itemsInCart} </ItemCount>

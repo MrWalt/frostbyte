@@ -77,14 +77,14 @@ export default function Security() {
   return (
     <Container>
       <Box>
-        <StyledHeading variation="secondary">
+        <StyledHeading $variation="secondary">
           Update your password
         </StyledHeading>
         <form onSubmit={(e) => handleSubmit(e)}>
           <Input
             type="password"
             placeholder="Current Password"
-            variation="large"
+            $variation="large"
             value={password}
             disabled={isPending}
             onChange={(e) => setPassword(e.target.value)}
@@ -94,7 +94,7 @@ export default function Security() {
           <Input
             type="password"
             placeholder="New Password"
-            variation="large"
+            $variation="large"
             value={passwordNew}
             disabled={isPending}
             onChange={(e) => setPasswordNew(e.target.value)}
@@ -107,7 +107,7 @@ export default function Security() {
           <Input
             type="password"
             placeholder="Confirm Password"
-            variation="large"
+            $variation="large"
             value={passwordConfirm}
             disabled={isPending}
             onChange={(e) => setPasswordConfirm(e.target.value)}

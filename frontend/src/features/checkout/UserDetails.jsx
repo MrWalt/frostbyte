@@ -58,14 +58,14 @@ export default function UserDetails() {
   return (
     <Box>
       <TextBox>
-        <StyledHeading variation="tertiary">Shipping details</StyledHeading>
+        <StyledHeading $variation="tertiary">Shipping details</StyledHeading>
         <RequiredFields>Fields marked with * are required</RequiredFields>
       </TextBox>
       <UserInfoBox>
         <div>
           <StyledInput
             type="text"
-            variation="large"
+            $variation="large"
             placeholder="Full Name*"
             id="fullName"
             value={fullName}
@@ -75,7 +75,7 @@ export default function UserDetails() {
 
           <StyledInput
             type="text"
-            variation="large"
+            $variation="large"
             placeholder="Address*"
             id="address"
             value={address}
@@ -85,7 +85,7 @@ export default function UserDetails() {
 
           <StyledInput
             type="text"
-            variation="large"
+            $variation="large"
             placeholder="City*"
             id="city"
             value={city}
@@ -95,7 +95,7 @@ export default function UserDetails() {
 
           <StyledInput
             type="text"
-            variation="large"
+            $variation="large"
             placeholder="Apartment Number"
             id="aptNumber"
           />
@@ -104,7 +104,7 @@ export default function UserDetails() {
         <div>
           <StyledInput
             type="text"
-            variation="large"
+            $variation="large"
             placeholder="Country*"
             id="country"
             value={country}
@@ -112,12 +112,12 @@ export default function UserDetails() {
           />
           <Label htmlFor="country">Country*</Label>
 
-          <StyledInput type="text" variation="large" placeholder="Zip Code*" />
+          <StyledInput type="text" $variation="large" placeholder="Zip Code*" />
           <Label htmlFor="zipcode">Zip Code*</Label>
 
           <StyledInput
             type="text"
-            variation="large"
+            $variation="large"
             placeholder="Phone Number"
           />
           <Label htmlFor="phoneNumber">Phone Number</Label>

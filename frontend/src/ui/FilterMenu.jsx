@@ -78,7 +78,7 @@ export default function FilterMenu({ params }) {
         Filter
       </StyledSpan>
 
-      <StyledButton variation="medium" onClick={handleClearFilters}>
+      <StyledButton $variation="medium" onClick={handleClearFilters}>
         Clear
       </StyledButton>
       <FilterPrice />

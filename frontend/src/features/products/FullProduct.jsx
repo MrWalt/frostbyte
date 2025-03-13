@@ -198,7 +198,7 @@ export default function FullProduct() {
   return (
     <Background>
       <Container>
-        <FlexButton variation="medium" onClick={moveBack}>
+        <FlexButton $variation="medium" onClick={moveBack}>
           <HiArrowLongLeft />
           Back
         </FlexButton>
@@ -206,7 +206,7 @@ export default function FullProduct() {
           <Image src={`/img/${image}`} />
         </ImageBox>
 
-        <ProductTitle variation="secondary">{title}</ProductTitle>
+        <ProductTitle $variation="secondary">{title}</ProductTitle>
 
         <CartBox>
           <PriceBox>
@@ -257,7 +257,7 @@ export default function FullProduct() {
           )}
         </CartBox>
         <AboutBox>
-          <Heading variation="secondary">About this product</Heading>
+          <Heading $variation="secondary">About this product</Heading>
           <AboutText>{description}</AboutText>
         </AboutBox>
         <Specifications specs={specifications} warranty={warranty} />

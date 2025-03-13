@@ -19,7 +19,7 @@ const Container = styled.div`
 export default function Legal() {
   return (
     <Container>
-      <Heading variation="secondary">Legal</Heading>
+      <Heading $variation="secondary">Legal</Heading>
       <TextArea>
         By accessing and using the FrostByte website, you agree to be bound by
         these terms and conditions. FrostByte reserves the right to modify these

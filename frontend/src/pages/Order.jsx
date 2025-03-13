@@ -14,7 +14,7 @@ export default function Order() {
   return (
     <Section>
       <Container>
-        <Heading variation="secondary">Order {orderId}</Heading>
+        <Heading $variation="secondary">Order {orderId}</Heading>
       </Container>
     </Section>
   );

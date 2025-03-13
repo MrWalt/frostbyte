@@ -176,7 +176,7 @@ export default function ProductForm({
   return (
     <>
       <HeadingBox>
-        <Heading variation="tertiary">{headingText}</Heading>
+        <Heading $variation="tertiary">{headingText}</Heading>
         <StyledButton onClick={closeModal}>
           <HiXMark />
         </StyledButton>
@@ -189,7 +189,7 @@ export default function ProductForm({
             <StyledInput
               disabled={isPending}
               className={`${errors?.title ? "input-error" : ""}`}
-              variation="minimal"
+              $variation="minimal"
               placeholder="RTX 4080Ti"
               id="title"
               {...register("title", {
@@ -204,7 +204,7 @@ export default function ProductForm({
                 <StyledInput
                   disabled={isPending}
                   className={`${errors?.manufacturer ? "input-error" : ""}`}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="NVIDIA"
                   id="manufacturer"
                   {...register("manufacturer", {
@@ -219,7 +219,7 @@ export default function ProductForm({
                 <StyledInput
                   disabled={isPending}
                   className={`${errors?.category ? "input-error" : ""}`}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="graphics-cards"
                   id="category"
                   {...register("category", {
@@ -237,7 +237,7 @@ export default function ProductForm({
                   disabled={isPending}
                   className={`${errors?.warranty ? "input-error" : ""}`}
                   id="warranty"
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="2 years, 6 months"
                   {...register("warranty", {
                     required: true,
@@ -249,7 +249,7 @@ export default function ProductForm({
                 <StyledInput
                   disabled={isPending}
                   className={`${errors?.price ? "input-error" : ""}`}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="499,99"
                   id="price"
                   {...register("price", {
@@ -267,7 +267,7 @@ export default function ProductForm({
                   disabled={isPending}
                   className={`${errors?.discount ? "input-error" : ""}`}
                   placeholder="5/10/0"
-                  variation="minimal"
+                  $variation="minimal"
                   id="discount"
                   {...register("discount", {
                     max: 25,
@@ -279,7 +279,7 @@ export default function ProductForm({
                 <StyledLabel htmlFor="type">Type</StyledLabel>
                 <StyledInput
                   disabled={isPending}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="Wired/SSD"
                   id="type"
                   {...register("type")}
@@ -291,7 +291,7 @@ export default function ProductForm({
                 <StyledLabel htmlFor="ddr">DDR</StyledLabel>
                 <StyledInput
                   disabled={isPending}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="DRR5/DDR4"
                   id="ddr"
                   {...register("ddr")}
@@ -301,7 +301,7 @@ export default function ProductForm({
                 <StyledLabel htmlFor="capacity">Capacity</StyledLabel>
                 <StyledInput
                   disabled={isPending}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="500GB/1TB/256GB"
                   id="capacity"
                   {...register("capacity")}
@@ -316,7 +316,7 @@ export default function ProductForm({
                 <StyledLabel htmlFor="socket">Socket</StyledLabel>
                 <StyledInput
                   disabled={isPending}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="LGA 1700/AM4"
                   id="socket"
                   {...register("socket")}
@@ -326,7 +326,7 @@ export default function ProductForm({
                 <StyledLabel htmlFor="speed">Speed</StyledLabel>
                 <StyledInput
                   disabled={isPending}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="3200MHz/6000MHz"
                   id="speed"
                   {...register("speed")}
@@ -359,7 +359,7 @@ export default function ProductForm({
                 <StyledInput
                   disabled={isPending}
                   className={`${errors?.stock ? "input-error" : ""}`}
-                  variation="minimal"
+                  $variation="minimal"
                   placeholder="4"
                   id="stock"
                   {...register("stock", {

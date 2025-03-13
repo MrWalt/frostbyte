@@ -13,6 +13,7 @@ import Sort from "../ui/Sort";
 import { useUser } from "../features/authentication/UserContext";
 import Button from "../ui/Button";
 import { useModal } from "../contexts/ModalContext";
+import Search from "../ui/Search";
 
 const StyledSection = styled(Section)`
   background-image: url("/background.webp");
@@ -73,6 +74,7 @@ export default function Products() {
             {params?.category ? category : "All Products"}
           </StyledHeading>
           <AsideBox>
+            <Search />
             <Sort />
             <FilterMenu params={params} />
             {user.role === "admin" && (

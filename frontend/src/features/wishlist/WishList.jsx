@@ -89,7 +89,6 @@ const StyledLink = styled(Link)`
 export default function WishList() {
   const { closeMenu } = useMenu();
   const { wishlist, isLoading } = useWishlist();
-  console.log(wishlist);
   return (
     <Container>
       <InfoBox>

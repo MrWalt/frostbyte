@@ -103,6 +103,7 @@ export default function SummaryItem({
   id,
   discount,
   discountedPrice,
+  image,
 }) {
   const { removeItem } = useCart();
 
@@ -114,7 +115,7 @@ export default function SummaryItem({
   return (
     <Box>
       <ImageLink to={`/product/${id}`}>
-        <Image src="./public/img/product-1.png" />
+        <Image src={`/img/${image}`} />
       </ImageLink>
       <ProductInfoBox>
         <Title>{title}</Title>

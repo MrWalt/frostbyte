@@ -119,7 +119,7 @@ export default function FilterMenu({ params }) {
             />
             <FilterOption
               type="Type"
-              options={isLoading ? [] : filters?.types}
+              options={isLoading ? [] : filters?.type}
               key="Type"
               filter="type"
             />

@@ -11,7 +11,7 @@ const Box = styled.div`
   pointer-events: none;
 
   ${(props) =>
-    props.align === "right"
+    props.$align === "right"
       ? css`
           right: 0;
 
@@ -48,7 +48,7 @@ const Box = styled.div`
 
 export default function DropDownMenu({ align, children, isOpen }) {
   return (
-    <Box align={align} className={`${isOpen ? "open" : ""}`}>
+    <Box $align={align} className={`${isOpen ? "open" : ""}`}>
       {children}
     </Box>
   );

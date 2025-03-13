@@ -192,6 +192,7 @@ export default function FullProduct() {
     discount,
     description,
     discountedPrice,
+    image,
   } = product;
 
   return (
@@ -202,7 +203,7 @@ export default function FullProduct() {
           Back
         </FlexButton>
         <ImageBox>
-          <Image src="/public/img/product-1.png" />
+          <Image src={`/img/${image}`} />
         </ImageBox>
 
         <ProductTitle variation="secondary">{title}</ProductTitle>

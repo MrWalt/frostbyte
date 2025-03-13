@@ -148,16 +148,16 @@ export default function CartItem({
   discount,
   id,
   discountedPrice,
+  image,
 }) {
   const { removeItem, increaseQuantity, decreaseQuantity } = useCart();
-
   return (
     <Box>
       <DeleteButton onClick={() => removeItem(id)}>
         <HiXMark />
       </DeleteButton>
       <Link to={`/product/${id}`}>
-        <Image src="./public/img/product-1.png" />
+        <Image src={`/img/${image}`} />
       </Link>
       <InfoBox>
         <ItemName>{title}</ItemName>

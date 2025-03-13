@@ -82,10 +82,11 @@ export default function ProductsGrid() {
             stock={item.stock}
             discount={item.discount}
             discountedPrice={item.discountedPrice}
+            image={item.image}
           />
         ))
       ) : (
-        <NoItems>No items found :(</NoItems>
+        <NoItems>No items found</NoItems>
       )}
     </CardBox>
   );

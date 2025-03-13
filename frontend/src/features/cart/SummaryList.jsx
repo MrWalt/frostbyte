@@ -41,6 +41,7 @@ export default function SummaryList() {
           quantity={item.quantity}
           id={item.id}
           key={item.id}
+          image={item.image}
         />
       ))}
       <ContinueShoppingButton variation="medium" onClick={moveBack}>

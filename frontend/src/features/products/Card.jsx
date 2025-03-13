@@ -82,7 +82,11 @@ const ImageBox = styled.div`
 `;
 
 const Image = styled.img`
-  width: 85%;
+  width: 75%;
+
+  &.sold-out {
+    filter: grayscale(1);
+  }
 `;
 
 const InformationBox = styled.div`
@@ -176,6 +180,7 @@ export default function Card({
   stock,
   discount,
   discountedPrice,
+  image,
 }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { user } = useUser();
@@ -205,7 +210,10 @@ export default function Card({
 
       <ImageLink to={`/product/${id}`}>
         <ImageBox>
-          <Image src={`/img/product-1.png`} />
+          <Image
+            src={`/img/${image}`}
+            className={`${stock === 0 ? "sold-out" : ""}`}
+          />
         </ImageBox>
       </ImageLink>
 
@@ -235,6 +243,7 @@ export default function Card({
                 quantity: 1,
                 discount,
                 discountedPrice,
+                image,
               })
             }
           >

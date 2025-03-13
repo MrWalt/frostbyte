@@ -2,11 +2,17 @@ import styled from "styled-components";
 import UserDetails from "../features/checkout/UserDetails";
 import PaymentDetails from "../features/checkout/PaymentDetails";
 import Heading from "../ui/Heading";
+import Section from "../ui/Section";
+
+const StyledSection = styled(Section)`
+  background-image: url("background.webp");
+  min-height: calc(100vh - 8rem - 10rem);
+`;
 
 const Container = styled.div`
   width: 120rem;
 
-  margin: 4.8rem auto;
+  margin: 0 auto;
 `;
 
 const Box = styled.div`
@@ -20,12 +26,14 @@ const StyledHeading = styled(Heading)`
 
 export default function CheckOut() {
   return (
-    <Container>
-      <StyledHeading variation="secondary">Checkout</StyledHeading>
-      <Box>
-        <UserDetails />
-        <PaymentDetails />
-      </Box>
-    </Container>
+    <StyledSection>
+      <Container>
+        <StyledHeading variation="secondary">Checkout</StyledHeading>
+        <Box>
+          <UserDetails />
+          <PaymentDetails />
+        </Box>
+      </Container>
+    </StyledSection>
   );
 }

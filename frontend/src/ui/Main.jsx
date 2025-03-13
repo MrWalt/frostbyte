@@ -78,6 +78,9 @@ export default function Main({ children }) {
           <Modal isOpen={toggledModal === "editProduct"}>
             <Modal.EditProduct />
           </Modal>
+          <Modal size="small" isOpen={toggledModal === "deleteProduct"}>
+            <Modal.DeleteProduct />
+          </Modal>
         </>
       )}
     </StyledMain>

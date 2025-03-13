@@ -65,3 +65,15 @@ export async function editProduct(updatedProduct) {
 
   return data;
 }
+
+export async function deleteProduct(id) {
+  await fetch(`http://localhost:8000/api/v1/products/${id}`, {
+    method: "DELETE",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  return 1;
+}

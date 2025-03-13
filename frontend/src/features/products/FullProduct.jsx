@@ -156,6 +156,18 @@ const StyledButton = styled(Button)`
   margin-top: 1.2rem;
 `;
 
+const DeleteButton = styled(Button)`
+  background-color: transparent;
+
+  align-self: end;
+  border: 1px solid var(--color-red-500);
+  margin-top: 1.2rem;
+
+  &:hover {
+    background-color: var(--color-red-800);
+  }
+`;
+
 export default function FullProduct() {
   const { user } = useUser();
   const { product, isLoading } = useProduct();
@@ -234,6 +246,13 @@ export default function FullProduct() {
             <StyledButton onClick={() => handleSetToggledModal("editProduct")}>
               Edit Product
             </StyledButton>
+          )}
+          {user.role === "admin" && (
+            <DeleteButton
+              onClick={() => handleSetToggledModal("deleteProduct")}
+            >
+              Delete Product
+            </DeleteButton>
           )}
         </CartBox>
         <AboutBox>

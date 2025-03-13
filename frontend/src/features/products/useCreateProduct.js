@@ -5,9 +5,8 @@ import toast from "react-hot-toast";
 export default function useCreateProduct() {
   const { mutate: createProduct, isPending } = useMutation({
     mutationFn: (newProduct) => createProductApi(newProduct),
-    onSuccess: (data) => {
+    onSuccess: () => {
       toast.success("Sucessfully created product");
-      console.log(data);
     },
     onError: () => {
       toast.error("There was an error creating this product");

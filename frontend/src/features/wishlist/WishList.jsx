@@ -6,6 +6,7 @@ import { useMenu } from "../../contexts/MenuContext";
 import { HiXMark } from "react-icons/hi2";
 import Loader from "../../ui/Loader";
 import { Link } from "react-router-dom";
+import { useUpdateWishlist } from "./useUpdateWishlist";
 
 const Container = styled.div`
   padding: 0.8rem;
@@ -86,9 +87,59 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const DeletedItem = styled.div`
+  /* height: 14rem; */
+  width: 100%;
+  padding: 1.2rem 1.2rem;
+
+  margin: 0.8rem 0;
+  border: 1px solid var(--color-grey-800);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 1.6rem;
+    color: var(--color-grey-0);
+
+    width: 80%;
+
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+`;
+
+const DeleteButton = styled.button`
+  width: 2.8rem;
+  height: 2.8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-grey-900);
+  border: 1px solid var(--color-grey-800);
+
+  cursor: pointer;
+
+  transition: var(--animation-fast);
+
+  &:hover {
+    background-color: var(--color-grey-800);
+  }
+
+  svg {
+    font-size: 1.8rem;
+    color: var(--color-grey-0);
+  }
+`;
+
 export default function WishList() {
   const { closeMenu } = useMenu();
   const { wishlist, isLoading } = useWishlist();
+  const { updateWishlist, isPending } = useUpdateWishlist();
+
   return (
     <Container>
       <InfoBox>
@@ -104,16 +155,35 @@ export default function WishList() {
       {!isLoading ? (
         wishlist?.length ? (
           <Box>
-            {wishlist.map((item) => (
-              <WishListItem
-                title={item.product.title}
-                price={item.product.price}
-                id={item.product.id}
-                dateAdded={item.dateAdded}
-                key={item.product.id}
-                image={item.product.image}
-              />
-            ))}
+            {wishlist.map((item) => {
+              if (item.product === null) {
+                return (
+                  <DeletedItem key={item.id}>
+                    <p>This item was removed from our shop</p>
+                    <DeleteButton
+                      disabled={isPending}
+                      onClick={() =>
+                        updateWishlist({ product: item.id, type: "remove" })
+                      }
+                    >
+                      <HiXMark className={`${isPending ? "spin" : ""}`} />
+                    </DeleteButton>
+                  </DeletedItem>
+                );
+              }
+
+              return (
+                <WishListItem
+                  title={item.product.title}
+                  price={item.product.price}
+                  id={item.product.id}
+                  dateAdded={item.dateAdded}
+                  key={item.product.id}
+                  image={item.product.image}
+                  wishlistId={item.id}
+                />
+              );
+            })}
           </Box>
         ) : null
       ) : (

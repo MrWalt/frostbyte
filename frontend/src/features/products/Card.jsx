@@ -191,12 +191,16 @@ export default function Card({
     ? true
     : false;
 
+  const wishlistItem = user?.wishlist?.find((item) => item.product === id);
+
   return (
     <Box>
       {isInWishlist ? (
         <StyledButton
           disabled={isPending}
-          onClick={() => updateWishlist({ product: id, type: "remove" })}
+          onClick={() =>
+            updateWishlist({ product: wishlistItem.id, type: "remove" })
+          }
         >
           <HiHeart className={`wishlisted ${isPending ? "spin" : ""}`} />
         </StyledButton>

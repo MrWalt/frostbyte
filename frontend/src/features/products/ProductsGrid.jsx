@@ -45,13 +45,22 @@ const NoItems = styled.span`
   justify-self: center;
 `;
 
+const LoaderBox = styled.div`
+  padding-top: 6.4rem;
+`;
+
 export default function ProductsGrid() {
   const { isLoading, products, count } = useProducts();
   const [searchParams] = useSearchParams();
 
   const currentPage = searchParams.get("page") || 1;
 
-  if (isLoading) return <Loader />;
+  if (isLoading)
+    return (
+      <LoaderBox>
+        <Loader />
+      </LoaderBox>
+    );
 
   return (
     <CardBox>

@@ -230,10 +230,11 @@ export default function FullProduct() {
                   addItem({
                     id,
                     title,
-                    price: price.USD,
+                    price,
                     quantity: 1,
                     discount,
-                    discountedPrice: discountedPrice?.USD,
+                    discountedPrice,
+                    image,
                   })
                 }
               >

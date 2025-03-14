@@ -68,8 +68,9 @@ export default function FilterMenu({ params }) {
     searchParams.delete("socket");
     searchParams.delete("capacity");
     searchParams.delete("type");
+    searchParams.delete("search");
+    searchParams.delete("page");
 
-    searchParams.set("page", 1);
     setSearchParams(searchParams);
   }
 
@@ -81,7 +82,7 @@ export default function FilterMenu({ params }) {
       </StyledSpan>
 
       <StyledButton $variation="medium" onClick={handleClearFilters}>
-        Clear
+        Reset
       </StyledButton>
       <FilterPrice />
 
@@ -93,6 +94,7 @@ export default function FilterMenu({ params }) {
           key="Stock"
         />
 
+        {/* Temporary to check if filters work, refactor code later */}
         {params?.category ? (
           <FilterOption
             type="Brand"
@@ -121,7 +123,7 @@ export default function FilterMenu({ params }) {
             />
             <FilterOption
               type="Type"
-              options={isLoading ? [] : filters?.type}
+              options={isLoading ? [] : filters?.types}
               key="Type"
               filter="type"
             />
@@ -138,7 +140,7 @@ export default function FilterMenu({ params }) {
             />
             <FilterOption
               type="Type"
-              options={isLoading ? [] : filters?.type}
+              options={isLoading ? [] : filters?.types}
               key="Type"
               filter="type"
             />

@@ -95,14 +95,21 @@ const DeleteButton = styled.button`
   }
 `;
 
-export default function WishListItem({ title, price, dateAdded, id, image }) {
+export default function WishListItem({
+  title,
+  price,
+  dateAdded,
+  id,
+  image,
+  wishlistId,
+}) {
   const { updateWishlist, isPending } = useUpdateWishlist();
 
   return (
     <Box>
       <DeleteButton
         disabled={isPending}
-        onClick={() => updateWishlist({ product: id, type: "remove" })}
+        onClick={() => updateWishlist({ product: wishlistId, type: "remove" })}
       >
         <HiXMark className={`${isPending ? "spin" : ""}`} />
       </DeleteButton>

@@ -66,9 +66,7 @@ const updateWishlist = catchAsync(async function (req, res, next) {
 
   if (req.body.type === "remove") {
     // Have to use unsafe != here because for some reason they are not the same types
-    user.wishlist = user.wishlist.filter(
-      (item) => item.product != req.body.product
-    );
+    user.wishlist = user.wishlist.filter((item) => item.id != req.body.product);
   }
 
   await user.save({ validateBeforeSave: false });

@@ -13,7 +13,9 @@ const createOrder = catchAsync(async function (req, res, next) {
   // Check to see if the products purchased havent been tampered with or changed by an admin
   if (!(await order.validateProducts(order.items))) {
     Order.findByIdAndDelete(order.id);
-    next(new AppError("Outdated product, please refresh and try again", 400));
+    return next(
+      new AppError("Outdated product, please refresh and try again", 400)
+    );
   }
 
   const { items } = order;
@@ -21,31 +23,59 @@ const createOrder = catchAsync(async function (req, res, next) {
   const productsPromise = items.map(
     async (item) =>
       await Product.findById(item.item.id).select(
-        "id discount image warranty title price"
+        "id discount image warranty title price stock"
       )
   );
 
   const products = await Promise.all(productsPromise);
 
-  order.items = items.map((item) => {
-    return {
-      item: products.find((product) => product.id == item.item.id),
-      quantity: item.quantity,
-    };
-  });
+  try {
+    order.items = items.map((item) => {
+      const productStock = products.find(
+        (product) => product.id == item.item.id
+      );
+
+      if (productStock.stock === 0)
+        throw new AppError(
+          `${
+            productStock.title.length > 16
+              ? productStock.title.slice(0, 16) + "..."
+              : productStock.title
+          } is out of stock`,
+          400
+        );
+
+      if (productStock.stock < item.quantity)
+        throw new AppError(
+          `Only ${productStock.stock} ${
+            productStock.title.length > 16
+              ? productStock.title.slice(0, 16) + "..."
+              : productStock.title
+          } left`,
+          400
+        );
+
+      return {
+        item: products.find((product) => product.id == item.item.id),
+        quantity: item.quantity,
+      };
+    });
+  } catch (err) {
+    return next(err);
+  }
 
   order.isValidated = true;
 
-  const newOrder = await order.save();
+  products.map(
+    async (product) =>
+      await Product.findByIdAndUpdate(product.id, {
+        stock:
+          product.stock -
+          order.items.find((item) => item.item.id == product.id).quantity,
+      })
+  );
 
-  //   const newOrder = await Order.findByIdAndUpdate(order.id, order, {
-  //     new: true,
-  //     runValidators: true,
-  //   });
-  //   const newOrder = await Order.findByIdAndUpdate(order.id, order, {
-  //     new: true,
-  //     runValidators: true,
-  //   });
+  const newOrder = await order.save();
 
   res.status(201).json({ status: "success", data: { order: newOrder } });
 });

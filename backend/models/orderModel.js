@@ -28,9 +28,10 @@ const orderSchema = new mongoose.Schema(
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
+// Validate to make sure the products are not tampered with
 orderSchema.methods.validateProducts = async function (products) {
   const productsPromise = products.map(async (item) =>
-    Product.findById(item.item.id).select("id price stock discount")
+    Product.findById(item.item.id).select("id price discount")
   );
 
   const fetchedProducts = await Promise.all(productsPromise);
@@ -42,7 +43,6 @@ orderSchema.methods.validateProducts = async function (products) {
 
     if (
       productToCompare.item.price === product.price &&
-      productToCompare.item.stock === product.stock &&
       productToCompare.item.discount === product.discount
     )
       return acc;
@@ -58,14 +58,6 @@ orderSchema.methods.validateProducts = async function (products) {
 };
 
 // Calculating the total price
-orderSchema.pre("save", function (next) {
-  if (this.isValidated) {
-    this.virtuals;
-  }
-
-  next();
-});
-
 orderSchema.virtual("totalPrice").get(function () {
   if (this.isValidated) {
     const totalPrice = this.items.reduce((acc, cur) => {

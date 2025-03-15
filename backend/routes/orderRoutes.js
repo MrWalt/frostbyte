@@ -4,6 +4,8 @@ const { protect } = require("../controllers/authController");
 
 const router = express.Router();
 
-router.route("/").get(getOrders).post(protect, createOrder);
+router.use(protect);
+
+router.route("/").get(getOrders).post(createOrder);
 
 module.exports = router;

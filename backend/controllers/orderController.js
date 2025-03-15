@@ -8,7 +8,7 @@ const getOrders = getAll(Order);
 // const createOrder = createOne(Order);
 
 const createOrder = catchAsync(async function (req, res, next) {
-  const order = await Order.create(req.body);
+  const order = await Order.create({ ...req.body, user: req.user.id });
 
   // Check to see if the products purchased havent been tampered with or changed by an admin
   if (!(await order.validateProducts(order.items))) {
@@ -37,23 +37,35 @@ const createOrder = catchAsync(async function (req, res, next) {
 
       if (productStock.stock === 0)
         throw new AppError(
-          `${
-            productStock.title.length > 16
-              ? productStock.title.slice(0, 16) + "..."
-              : productStock.title
-          } is out of stock`,
-          400
+          `${productStock.title
+            .split(" ")
+            .slice(0, 3)
+            .join(" ")} is out of stock`
         );
+      // throw new AppError(
+      //   `${
+      //     productStock.title.length > 16
+      //       ? productStock.title.slice(0, 16) + "..."
+      //       : productStock.title
+      //   } is out of stock`,
+      //   400
+      // );
 
       if (productStock.stock < item.quantity)
         throw new AppError(
-          `Only ${productStock.stock} ${
-            productStock.title.length > 16
-              ? productStock.title.slice(0, 16) + "..."
-              : productStock.title
-          } left`,
-          400
+          `Only ${productStock.stock} ${productStock.title
+            .split(" ")
+            .slice(0, 3)
+            .join(" ")} left`
         );
+      // throw new AppError(
+      //   `Only ${productStock.stock} ${
+      //     productStock.title.length > 16
+      //       ? productStock.title.slice(0, 16) + "..."
+      //       : productStock.title
+      //   } left`,
+      //   400
+      // );
 
       return {
         item: products.find((product) => product.id == item.item.id),

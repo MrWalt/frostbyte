@@ -6,16 +6,16 @@ import { useCreateOrder } from "../orders/useCreateOrder";
 export default function PaymentDetails() {
   const { createOrder, isPending } = useCreateOrder();
   const { cart } = useCart();
-  const { user } = useUser();
 
   function handleCreateOrder() {
     const newOrder = {
-      user: user.id,
-      orderedItems: cart.map((item) => ({
-        item: item.id,
+      items: cart.map((item) => ({
+        item: { id: item.id, price: item.price, discount: item.discount },
         quantity: item.quantity,
       })),
+      shipTo: "Kazakhstan",
     };
+
     createOrder(newOrder);
   }
 

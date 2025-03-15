@@ -159,7 +159,7 @@ export default function WishList() {
               if (item.product === null) {
                 return (
                   <DeletedItem key={item.id}>
-                    <p>This item was removed from our shop</p>
+                    <p>Item is no longer available</p>
                     <DeleteButton
                       disabled={isPending}
                       onClick={() =>

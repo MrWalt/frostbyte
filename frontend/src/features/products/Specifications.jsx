@@ -14,18 +14,19 @@ const StyledHeading = styled(Heading)`
 
 const WarrantyBox = styled.div`
   padding: 1.2rem;
+  padding-left: 0;
 
   display: flex;
   align-items: center;
 
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 
   gap: 0.4rem;
 
   margin-bottom: 0.4rem;
 
   svg {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 `;
 
@@ -35,6 +36,7 @@ const Warranty = styled.span`
 
 const Specification = styled.p`
   font-size: 1.6rem;
+  font-weight: 300;
 
   &:not(:last-of-type) {
     margin-bottom: 1rem;

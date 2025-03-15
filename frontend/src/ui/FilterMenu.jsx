@@ -68,7 +68,6 @@ export default function FilterMenu({ params }) {
     searchParams.delete("socket");
     searchParams.delete("capacity");
     searchParams.delete("type");
-    searchParams.delete("search");
     searchParams.delete("page");
 
     setSearchParams(searchParams);

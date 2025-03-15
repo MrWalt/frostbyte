@@ -134,6 +134,8 @@ const AboutBox = styled.div`
 const AboutText = styled.p`
   font-size: 1.6rem;
 
+  font-weight: 300;
+
   margin-left: 1.2rem;
   margin-top: 1.8rem;
 `;

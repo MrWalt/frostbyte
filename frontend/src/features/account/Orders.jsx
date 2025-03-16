@@ -4,6 +4,7 @@ import Order from "../orders/Order";
 import useOrders from "../orders/useOrders";
 import Loader from "../../ui/Loader";
 import Pagination from "../../ui/Pagination";
+import { ORDERS_PAGE_SIZE } from "../../utils/constants";
 
 const Box = styled.div`
   width: 100%;
@@ -70,7 +71,7 @@ export default function Orders() {
 
       {count > 3 ? (
         <PaginationBox>
-          <Pagination count={count} pageSize={3} />
+          <Pagination count={count} pageSize={ORDERS_PAGE_SIZE} />
         </PaginationBox>
       ) : null}
     </Box>

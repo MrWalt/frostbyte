@@ -78,7 +78,14 @@ export default function App() {
                           element={<AdminDashboard />}
                         />
                       </Route>
-                      <Route path="checkout" element={<CheckOut />} />
+                      <Route
+                        path="checkout"
+                        element={
+                          <ProtectedRoute>
+                            <CheckOut />
+                          </ProtectedRoute>
+                        }
+                      />
                       <Route path="dashboard" element={<Dashboard />} />
                       <Route path="products" element={<Products />} />
                       <Route path="products/:category" element={<Products />} />

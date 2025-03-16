@@ -1,3 +1,5 @@
+const constants = require("./constants");
+
 class APIFeatures {
   constructor(query, queryString) {
     this.query = query;
@@ -55,11 +57,10 @@ class APIFeatures {
   }
   paginate() {
     const page = this.queryString.page || 1;
-    const limit = 20;
+    const limit = constants.PRODUCT_PAGE_SIZE;
     const skip = (page - 1) * limit;
 
     this.query = this.query.skip(skip).limit(limit);
-
     return this;
   }
 }

@@ -11,6 +11,15 @@ const StyledSection = styled(Section)`
   background-image: url("/background.webp");
 
   min-height: calc(100vh - 8rem - 10rem);
+  padding: 0;
+`;
+
+const Background = styled.div`
+  background-color: var(--color-grey-transparent);
+  backdrop-filter: blur(4px);
+
+  min-height: calc(100vh - 8rem - 10rem);
+  width: 100%;
 `;
 
 const Container = styled.div`
@@ -34,7 +43,7 @@ const StyledHeading = styled(Heading)`
 const Box = styled.div`
   display: flex;
 
-  gap: 3.2rem;
+  gap: 2.4rem;
 `;
 
 const StyledButton = styled(Button)`
@@ -42,11 +51,12 @@ const StyledButton = styled(Button)`
 `;
 
 const EmptyCartHeading = styled(Heading)`
-  padding: 0 2.6rem 1.2rem 2.6rem;
+  padding: 0 2.6rem 0.8rem 2.6rem;
   border-bottom: 1px solid var(--color-grey-800);
 
   text-transform: uppercase;
   letter-spacing: 0;
+  font-weight: 300;
 `;
 
 const EmptyCartContainer = styled.div`
@@ -70,29 +80,37 @@ const EmptyCartContainer = styled.div`
   }
 `;
 
+const Padding = styled.div`
+  padding-top: 4.8rem;
+`;
+
 export default function CartSummary() {
   const { itemsInCart } = useCart();
 
   return (
     <StyledSection>
-      {itemsInCart !== 0 ? (
-        <Container>
-          <StyledHeading $variation="secondary">Cart Summary</StyledHeading>
-          <Box>
-            <SummaryList />
-            <SummaryDetails />
-          </Box>
-        </Container>
-      ) : (
-        <EmptyCartContainer>
-          <EmptyCartHeading $variation="primary">
-            Cart is empty
-          </EmptyCartHeading>
-          <Link to="/products">
-            <StyledButton $variation="medium">Go To Products</StyledButton>
-          </Link>
-        </EmptyCartContainer>
-      )}
+      <Background>
+        <Padding>
+          {itemsInCart !== 0 ? (
+            <Container>
+              <StyledHeading $variation="secondary">Cart Summary</StyledHeading>
+              <Box>
+                <SummaryList />
+                <SummaryDetails />
+              </Box>
+            </Container>
+          ) : (
+            <EmptyCartContainer>
+              <EmptyCartHeading $variation="primary">
+                Cart is empty
+              </EmptyCartHeading>
+              <Link to="/products">
+                <StyledButton $variation="medium">Go To Products</StyledButton>
+              </Link>
+            </EmptyCartContainer>
+          )}
+        </Padding>
+      </Background>
     </StyledSection>
   );
 }

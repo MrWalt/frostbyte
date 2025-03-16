@@ -69,7 +69,7 @@ export default function Orders() {
         <Loader />
       )}
 
-      {count > 3 ? (
+      {count > ORDERS_PAGE_SIZE ? (
         <PaginationBox>
           <Pagination count={count} pageSize={ORDERS_PAGE_SIZE} />
         </PaginationBox>

@@ -3,6 +3,7 @@ import Button from "../../ui/Button";
 import Price from "../../ui/Price";
 import { Link } from "react-router-dom";
 import { useCart } from "./CartContext";
+import { useUser } from "../authentication/UserContext";
 
 const Box = styled.div`
   background-color: var(--color-grey-transparent);
@@ -14,61 +15,81 @@ const Box = styled.div`
 
   flex-grow: 1;
 
-  padding: 1.2rem 1.2rem;
+  padding: 1.2rem;
 `;
 
 const StyledTitle = styled.h3`
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
 
   margin-left: 1.2rem;
+  margin-bottom: 1.6rem;
 `;
 
 const InfoBox = styled.div`
   padding: 1.2rem 1.8rem;
 `;
 
-const PriceBox = styled.div`
-  margin-top: 0.4rem;
-
-  gap: 0.6rem;
-  display: flex;
-  align-items: center;
+const ItemCount = styled.span`
+  color: var(--color-brand-500);
 `;
 
-const ItemCount = styled.span`
-  font-size: 1.8rem;
-  color: var(--color-brand-500);
+const CartInfoBox = styled.div`
+  display: flex;
+  gap: 0.4rem;
+
+  font-weight: 300;
 `;
 
 const Disclaimer = styled.span`
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--color-grey-500);
+  letter-spacing: 0px;
+  text-transform: uppercase;
+`;
 
-  margin-top: 1.6rem;
+const LoginParagraph = styled.p`
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  border: 1px solid var(--color-grey-800);
+`;
+
+const StyledLink = styled(Link)`
+  color: var(--color-brand-500) !important;
+  transition: var(--animation-fast);
+
+  &:hover {
+    color: var(--color-brand-300) !important;
+  }
 `;
 
 export default function SummaryDetails() {
   const { itemsInCart, totalCartPrice } = useCart();
+  const { user } = useUser();
 
   return (
     <Box>
       <StyledTitle>Cart Details</StyledTitle>
       <InfoBox>
-        <div>
+        <CartInfoBox>
+          <Price price={String(totalCartPrice)} size="normal" />
+          <span>&mdash;</span>
           <ItemCount>{itemsInCart} </ItemCount>
-          <span>item{itemsInCart > 1 ? "s" : ""} in cart</span>
-        </div>
-        <PriceBox>
-          <Price price={String(totalCartPrice)} size="medium" />
-          <span>in total</span>
-        </PriceBox>
-        <Disclaimer>Shipping cost calculated at checkout</Disclaimer>
+          <span>Item{itemsInCart > 1 ? "s" : ""}</span>
+        </CartInfoBox>
+        <Disclaimer>Shipping cost calculated at checkout*</Disclaimer>
       </InfoBox>
-      <Link to="/checkout">
-        <Button>Continue to payment</Button>
-      </Link>
+      {user?.id ? (
+        <Link to="/checkout">
+          <Button>Continue to payment</Button>
+        </Link>
+      ) : (
+        <LoginParagraph>
+          Please <StyledLink to="/login">login</StyledLink> to continue
+        </LoginParagraph>
+      )}
     </Box>
   );
 }

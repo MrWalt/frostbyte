@@ -3,6 +3,7 @@ const Order = require("../models/orderModel");
 const AppError = require("../utils/AppError");
 const catchAsync = require("../utils/catchAsync");
 const APIFeatures = require("../utils/APIFeatures");
+const constants = require("../utils/constants");
 
 // Reused function for filtering the body only allowing some fields to be changed
 function filterObj(object, ...fields) {
@@ -79,10 +80,13 @@ const updateWishlist = catchAsync(async function (req, res, next) {
 const getMyOrders = catchAsync(async function (req, res, next) {
   const orders = await Order.find({ user: req.user.id })
     .sort("-dateOrdered")
-    .skip((req.query.page - 1) * 3)
-    .limit(3);
+    .skip((req.query.page - 1) * constants.ORDER_PAGE_SIZE)
+    .limit(constants.ORDER_PAGE_SIZE);
 
-  const countQuery = new APIFeatures(Order.find(), req.query).filter();
+  const countQuery = new APIFeatures(
+    Order.find({ user: req.user.id }),
+    req.query
+  ).filter();
   const count = await countQuery.query.countDocuments();
 
   res.status(200).json({ status: "success", data: orders, count });

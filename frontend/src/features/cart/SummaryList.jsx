@@ -19,7 +19,7 @@ const ContinueShoppingButton = styled(Button)`
   gap: 0.8rem;
 
   padding: 0.4rem 2.4rem;
-  margin-top: 2rem;
+  margin-top: 0.8rem;
   justify-self: start;
 
   & svg {

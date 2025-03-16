@@ -16,14 +16,17 @@ export async function createOrder(order) {
   return data;
 }
 
-export async function getOrders() {
-  const res = await fetch(`http://localhost:8000/api/v1/users/my-orders`, {
-    method: "GET",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+export async function getOrders(page) {
+  const res = await fetch(
+    `http://localhost:8000/api/v1/users/my-orders?page=${page || 1}`,
+    {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 
   const data = await res.json();
 

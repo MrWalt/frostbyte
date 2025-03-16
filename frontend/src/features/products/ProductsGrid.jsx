@@ -34,13 +34,18 @@ const StyledSpan = styled.span`
 `;
 
 const NoItems = styled.span`
-  font-size: 1.8rem;
-  color: var(--color-grey-0);
-  border-bottom: 1px solid var(--color-grey-800);
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--color-grey-300);
 
-  padding: 0.4rem 1.6rem;
+  padding-bottom: 0.6rem;
+  padding-top: 2.4rem;
 
-  margin-top: 2.4rem;
+  align-self: center;
+
+  border-bottom: 1px solid var(--color-grey-700);
   grid-column: 1 / -1;
   justify-self: center;
 `;

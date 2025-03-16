@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import Price from "../../ui/Price";
 import { Link } from "react-router-dom";
-import { format } from "date-fns";
+import { format, isToday, isYesterday } from "date-fns";
 
 const StyledLink = styled(Link)`
   width: 100%;
@@ -19,6 +19,10 @@ const StyledLink = styled(Link)`
   height: 14rem;
   position: relative;
 
+  &:last-of-type {
+    margin-bottom: 1.8rem;
+  }
+
   &:hover {
     background-color: var(--color-grey-800);
   }
@@ -34,6 +38,8 @@ const OrderStatus = styled.span`
   padding: 0.4rem 1.6rem;
   margin-left: 1.2rem;
   display: inline-block;
+
+  font-size: 1.4rem;
 
   position: absolute;
   bottom: 1.2rem;
@@ -84,7 +90,7 @@ const ItemsLeft = styled.span`
 `;
 
 const Date = styled.span`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--color-grey-500);
 
   font-style: italic;
@@ -92,6 +98,11 @@ const Date = styled.span`
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
+`;
+
+const Quantity = styled.span`
+  font-size: 1.4rem;
+  color: var(--color-grey-500);
 `;
 
 export default function Order({
@@ -116,7 +127,15 @@ export default function Order({
 
       <OrderItems>
         {items.map((item, i) => {
-          if (i < 2) return <Item key={item.item._id}>{item.item.title}</Item>;
+          if (i < 2)
+            return (
+              <Item key={item.item._id}>
+                {item.item.title}
+                {item.quantity > 1 ? (
+                  <Quantity> x{item.quantity}</Quantity>
+                ) : null}
+              </Item>
+            );
 
           return "";
         })}
@@ -128,7 +147,11 @@ export default function Order({
         </ItemsLeft>
       ) : null}
 
-      <Date>{format(dateOrdered, "dd/MM/yyyy")}</Date>
+      {isToday(dateOrdered) ? <Date>Today</Date> : null}
+      {isYesterday(dateOrdered) ? <Date>Yesterday</Date> : null}
+      {!isToday(dateOrdered) && !isYesterday(dateOrdered) ? (
+        <Date>{format(dateOrdered, "do MMMM, yyyy")}</Date>
+      ) : null}
     </StyledLink>
   );
 }

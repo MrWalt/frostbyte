@@ -3,10 +3,12 @@ import Heading from "../../ui/Heading";
 import Order from "../orders/Order";
 import useOrders from "../orders/useOrders";
 import Loader from "../../ui/Loader";
+import Pagination from "../../ui/Pagination";
 
 const Box = styled.div`
   width: 100%;
   padding: 4.8rem;
+  padding-bottom: 2.4rem;
 
   display: flex;
   flex-direction: column;
@@ -18,25 +20,59 @@ const StyledHeading = styled(Heading)`
   margin-bottom: 2.4rem;
 `;
 
+const PaginationBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: auto;
+`;
+
+const NoOrders = styled.span`
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--color-grey-300);
+
+  padding-bottom: 0.6rem;
+  padding-top: 2.4rem;
+
+  align-self: center;
+
+  border-bottom: 1px solid var(--color-grey-700);
+`;
+
 export default function Orders() {
-  const { orders, isLoading } = useOrders();
+  const { orders, isLoading, count } = useOrders();
+
   return (
     <Box>
       <StyledHeading $variation="secondary">Your orders</StyledHeading>
-      {isLoading ? (
-        <Loader />
+      {!isLoading ? (
+        orders.length ? (
+          orders.map((order) => (
+            <Order
+              dateOrdered={order.dateOrdered}
+              orderId={order.id}
+              items={order.items}
+              orderStatus={order.status}
+              totalPrice={order.totalPrice}
+              key={order.id}
+            />
+          ))
+        ) : (
+          <NoOrders>You havent made any orders</NoOrders>
+        )
       ) : (
-        orders.map((order) => (
-          <Order
-            dateOrdered={order.dateOrdered}
-            orderId={order.id}
-            items={order.items}
-            orderStatus={order.status}
-            totalPrice={order.totalPrice}
-            key={order.id}
-          />
-        ))
+        <Loader />
       )}
+
+      {count > 3 ? (
+        <PaginationBox>
+          <Pagination count={count} pageSize={3} />
+        </PaginationBox>
+      ) : null}
     </Box>
   );
 }

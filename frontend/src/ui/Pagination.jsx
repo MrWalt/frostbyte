@@ -42,13 +42,13 @@ const Page = styled.span`
   }
 `;
 
-export default function Pagination({ count }) {
+export default function Pagination({ count, pageSize = PAGE_SIZE }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentPage = !searchParams.get("page")
     ? 1
     : Number(searchParams.get("page"));
 
-  const pageCount = Math.ceil(count / PAGE_SIZE);
+  const pageCount = Math.ceil(count / pageSize);
 
   function nextPage() {
     const next = currentPage === pageCount ? currentPage : currentPage + 1;

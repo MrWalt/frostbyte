@@ -34,7 +34,8 @@ export async function updateWishlist({ product, type }) {
 
   const data = await res.json();
 
-  if (data.status === "fail") throw new Error(data.message);
+  if (data.status === "error" || data.status === "fail")
+    throw new Error(data.message);
 
   return data;
 }

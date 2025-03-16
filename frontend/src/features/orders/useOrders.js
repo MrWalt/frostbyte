@@ -6,11 +6,11 @@ export default function useOrders() {
   const { user } = useUser();
 
   const {
-    data: { data: orders } = {},
     count,
     isLoading,
+    data: { data: { orders } = {} } = {},
   } = useQuery({
-    queryFn: () => getOrdersApi(user.id),
+    queryFn: () => getOrdersApi(),
     queryKey: ["orders", user],
   });
 

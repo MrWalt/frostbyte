@@ -57,7 +57,7 @@ const productSchema = new mongoose.Schema(
 
 productSchema.virtual("discountedPrice").get(function () {
   return this.discount > 0
-    ? (this.price - (this.price / 100) * this.discount).toFixed(2)
+    ? Number((this.price - (this.price / 100) * this.discount).toFixed(2))
     : null;
 });
 

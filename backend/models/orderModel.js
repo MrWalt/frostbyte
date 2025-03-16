@@ -62,7 +62,7 @@ orderSchema.virtual("totalPrice").get(function () {
   if (this.isValidated) {
     const totalPrice = this.items.reduce((acc, cur) => {
       return (acc +=
-        cur.item.discountedPrice !== null
+        cur.item.discount !== 0
           ? cur.item.discountedPrice * cur.quantity
           : cur.item.price * cur.quantity);
     }, 0);

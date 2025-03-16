@@ -1,4 +1,5 @@
 const User = require("../models/userModel");
+const Order = require("../models/orderModel");
 const AppError = require("../utils/AppError");
 const catchAsync = require("../utils/catchAsync");
 
@@ -74,4 +75,10 @@ const updateWishlist = catchAsync(async function (req, res, next) {
   res.status(201).json({ status: "success", data: { user } });
 });
 
-module.exports = { updateMe, updateWishlist, getWishlist };
+const getMyOrders = catchAsync(async function (req, res, next) {
+  const orders = await Order.find({ user: req.user.id }).sort("-dateOrdered");
+
+  res.status(200).json({ status: "success", data: { orders } });
+});
+
+module.exports = { updateMe, updateWishlist, getWishlist, getMyOrders };

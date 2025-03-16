@@ -16,12 +16,19 @@ export async function createOrder(order) {
   return data;
 }
 
-export async function getOrders(userId) {
-  const res = await fetch(`http://localhost:8000/api/v1/orders?user=${userId}`);
+export async function getOrders() {
+  const res = await fetch(`http://localhost:8000/api/v1/users/my-orders`, {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
   const data = await res.json();
 
-  if (data.status === "error") throw new Error(data.message);
+  if (data.status === "error" || data.status === "fail")
+    throw new Error(data.message);
 
   return data;
 }

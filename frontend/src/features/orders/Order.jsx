@@ -9,14 +9,14 @@ const StyledLink = styled(Link)`
   display: flex;
   flex-direction: column;
 
-  padding: 1.6rem 1.8rem;
+  padding: 1.8rem 2.4rem;
 
   border: 1px solid var(--color-grey-800);
 
   cursor: pointer;
 
   transition: var(--animation-fast);
-
+  height: 14rem;
   position: relative;
 
   &:hover {
@@ -24,19 +24,10 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const OrderSpan = styled.span`
-  font-size: 2rem;
-  margin-bottom: 1.6rem;
-`;
-
-const OrderID = styled.span`
-  font-size: 2rem;
-  color: var(--color-brand-500);
-`;
-
 const OrderItems = styled.div`
   width: 80%;
   padding-left: 1.2rem;
+  margin-top: 1.2rem;
 `;
 
 const OrderStatus = styled.span`
@@ -49,19 +40,19 @@ const OrderStatus = styled.span`
   right: 1.2rem;
 
   ${(props) =>
-    props.status === "Shipped" &&
+    props.$status === "Shipped" &&
     css`
       border: 1px solid var(--color-brand-900);
     `}
 
   ${(props) =>
-    props.status === "Delivered" &&
+    props.$status === "Delivered" &&
     css`
       background-color: var(--color-brand-900);
     `}
 
     ${(props) =>
-    props.status === "Pending" &&
+    props.$status === "Pending" &&
     css`
       border: 1px solid var(--color-brand-900);
     `}
@@ -69,14 +60,27 @@ const OrderStatus = styled.span`
 
 const Item = styled.p`
   font-size: 1.6rem;
+  font-weight: 300;
 
   &:not(:last-child) {
     margin-bottom: 0.4rem;
   }
 `;
 
-const Quanitity = styled.span`
+const OrderInfo = styled.span`
   color: var(--color-grey-400);
+  font-size: 1.4rem;
+
+  display: flex;
+  gap: 0.8rem;
+`;
+
+const ItemsLeft = styled.span`
+  color: var(--color-grey-400);
+
+  margin-left: 1.2rem;
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
 `;
 
 const Date = styled.span`
@@ -92,29 +96,37 @@ const Date = styled.span`
 
 export default function Order({
   orderId,
-  orderedItems,
+  items,
   totalPrice,
   orderStatus,
   dateOrdered,
 }) {
+  const totalItems = items.reduce((acc, cur) => (acc += cur.quantity), 0);
+
   return (
     <StyledLink to={`/order/${orderId}`}>
-      <OrderSpan>
-        Order &mdash; <OrderID>{orderId}</OrderID>
-      </OrderSpan>
+      <OrderStatus $status={orderStatus}>{orderStatus}</OrderStatus>
 
-      <OrderStatus status={orderStatus}>{orderStatus}</OrderStatus>
+      <OrderInfo>
+        <Price price={totalPrice} size="minimal" /> &mdash;{" "}
+        <span>
+          {totalItems} {`${totalItems === 1 ? "item" : "items"}`}
+        </span>
+      </OrderInfo>
 
       <OrderItems>
-        {orderedItems.map((item) => (
-          <Item>
-            &mdash; {item.item.title}{" "}
-            {item.quantity > 1 ? <Quanitity>x{item.quantity}</Quanitity> : null}
-          </Item>
-        ))}
-      </OrderItems>
+        {items.map((item, i) => {
+          if (i < 2) return <Item key={item.item._id}>{item.item.title}</Item>;
 
-      {/* <Price price={totalPrice} size="medium" /> */}
+          return "";
+        })}
+      </OrderItems>
+      {items.length > 2 ? (
+        <ItemsLeft>
+          And {items.length - 2} more{" "}
+          {`${items.length - 2 === 1 ? "item" : "items"}`}
+        </ItemsLeft>
+      ) : null}
 
       <Date>{format(dateOrdered, "dd/MM/yyyy")}</Date>
     </StyledLink>

@@ -11,17 +11,15 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
 
-  gap: 0.8rem;
+  gap: 1rem;
 `;
 
 const StyledHeading = styled(Heading)`
   margin-bottom: 2.4rem;
-  margin-left: 1.6rem;
 `;
 
 export default function Orders() {
   const { orders, isLoading } = useOrders();
-
   return (
     <Box>
       <StyledHeading $variation="secondary">Your orders</StyledHeading>
@@ -32,8 +30,9 @@ export default function Orders() {
           <Order
             dateOrdered={order.dateOrdered}
             orderId={order.id}
-            orderedItems={order.orderedItems}
+            items={order.items}
             orderStatus={order.status}
+            totalPrice={order.totalPrice}
             key={order.id}
           />
         ))

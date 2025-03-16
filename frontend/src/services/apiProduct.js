@@ -61,7 +61,8 @@ export async function editProduct(updatedProduct) {
 
   const { data } = await res.json();
 
-  if (data.status === "error") throw new Error("There was an error");
+  if (data.status === "error" || data.status === "fail")
+    throw new Error(data.message);
 
   return data;
 }

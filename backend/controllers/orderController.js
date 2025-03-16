@@ -42,14 +42,6 @@ const createOrder = catchAsync(async function (req, res, next) {
             .slice(0, 3)
             .join(" ")} is out of stock`
         );
-      // throw new AppError(
-      //   `${
-      //     productStock.title.length > 16
-      //       ? productStock.title.slice(0, 16) + "..."
-      //       : productStock.title
-      //   } is out of stock`,
-      //   400
-      // );
 
       if (productStock.stock < item.quantity)
         throw new AppError(
@@ -58,26 +50,22 @@ const createOrder = catchAsync(async function (req, res, next) {
             .slice(0, 3)
             .join(" ")} left`
         );
-      // throw new AppError(
-      //   `Only ${productStock.stock} ${
-      //     productStock.title.length > 16
-      //       ? productStock.title.slice(0, 16) + "..."
-      //       : productStock.title
-      //   } left`,
-      //   400
-      // );
 
       return {
-        item: products.find((product) => product.id == item.item.id),
+        item: products
+          .find((product) => product.id == item.item.id)
+          .toObject({ virtuals: true }),
         quantity: item.quantity,
       };
     });
   } catch (err) {
+    await Order.findByIdAndDelete(order.id);
     return next(err);
   }
-
+  console.log(order.items);
   order.isValidated = true;
 
+  // This is the code needed to change the stock of the bought products
   products.map(
     async (product) =>
       await Product.findByIdAndUpdate(product.id, {

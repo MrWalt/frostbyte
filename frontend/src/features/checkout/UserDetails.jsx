@@ -9,6 +9,7 @@ const Box = styled.div`
 
   padding: 2.4rem;
   background-color: var(--color-grey-900);
+  flex: 1 1 70%;
 `;
 
 const TextBox = styled.div`

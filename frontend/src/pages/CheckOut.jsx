@@ -10,14 +10,14 @@ import { useCart } from "../features/cart/CartContext";
 import { useCreateOrder } from "../features/orders/useCreateOrder";
 
 const Container = styled.div`
-  width: 120rem;
+  width: 96rem;
 
   margin: 0 auto;
 `;
 
 const Box = styled.form`
   display: flex;
-  gap: 3.6rem;
+  gap: 1.6rem;
 `;
 
 const StyledHeading = styled(Heading)`
@@ -25,7 +25,7 @@ const StyledHeading = styled(Heading)`
 `;
 
 export default function CheckOut() {
-  const { cart } = useCart();
+  const { cart, totalCartPrice } = useCart();
   const { user } = useUser();
   const { createOrder, isPending } = useCreateOrder();
 
@@ -65,7 +65,7 @@ export default function CheckOut() {
               email={user.email}
               isPending={isPending}
             />
-            <PaymentDetails />
+            <PaymentDetails totalCartPrice={totalCartPrice} />
           </Box>
         </Container>
       </Background>

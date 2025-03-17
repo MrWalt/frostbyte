@@ -13,7 +13,7 @@ import Error from "../../ui/Error";
 
 const Container = styled.div`
   margin: 4.8rem auto;
-  max-width: 40rem;
+  width: 40rem;
 
   padding: 4.8rem 2.8rem 3.6rem 2.8rem;
 

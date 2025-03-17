@@ -4,16 +4,15 @@ import AccountHeader from "../ui/AccountHeader";
 import { Outlet } from "react-router-dom";
 
 const StyledSection = styled(Section)`
-  background-image: url("/background.webp");
-  min-height: calc(100vh - 8rem - 10rem);
-
   font-size: 1.6rem;
   color: var(--color-grey-0);
+
+  padding: 4.8rem 0;
 `;
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 120rem;
+  max-width: 120rem;
   border: 1px solid var(--color-grey-800);
 
   background-color: var(--color-grey-transparent);

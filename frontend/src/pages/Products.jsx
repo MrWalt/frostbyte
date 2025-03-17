@@ -14,19 +14,7 @@ import { useUser } from "../features/authentication/UserContext";
 import Button from "../ui/Button";
 import { useModal } from "../contexts/ModalContext";
 import Search from "../ui/Search";
-
-const StyledSection = styled(Section)`
-  background-image: url("/background.webp");
-
-  padding: 0;
-`;
-
-const Background = styled.div`
-  background-color: var(--color-grey-transparent);
-  backdrop-filter: blur(4px);
-
-  padding: 4.8rem 0 6.4rem 0;
-`;
+import Background from "../ui/Background";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -73,7 +61,7 @@ export default function Products() {
   const searchQuery = searchParams.get("search") || null;
 
   return (
-    <StyledSection>
+    <Section>
       <Background>
         <Container>
           <StyledHeading $variation="secondary">
@@ -96,6 +84,6 @@ export default function Products() {
           {!isLoading && <Pagination count={count} />}
         </Container>
       </Background>
-    </StyledSection>
+    </Section>
   );
 }

@@ -13,7 +13,7 @@ import { HiOutlineEye, HiOutlineEyeSlash } from "react-icons/hi2";
 import Error from "../../ui/Error";
 
 const Container = styled.div`
-  margin: 4.8rem auto;
+  margin: 0 auto;
   max-width: 40rem;
 
   padding: 4.8rem 2.8rem 3.6rem 2.8rem;

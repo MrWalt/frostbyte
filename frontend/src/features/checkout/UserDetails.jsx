@@ -1,59 +1,56 @@
 import styled from "styled-components";
 import Input from "../../ui/Input";
-import Label from "../../ui/Label";
 import Heading from "../../ui/Heading";
-import { useUser } from "../authentication/UserContext";
-import { useState } from "react";
 
 const Box = styled.div`
   width: 50%;
 
   border: 1px solid var(--color-grey-800);
 
-  padding-top: 2.4rem;
-  padding-bottom: 4.8rem;
-`;
-
-const UserInfoBox = styled.div`
-  display: flex;
-
-  div {
-    width: 50%;
-
-    padding: 0rem 2.4rem;
-
-    &:first-child {
-      border-right: 1px solid var(--color-grey-800);
-    }
-  }
+  padding: 2.4rem;
+  background-color: var(--color-grey-900);
 `;
 
 const TextBox = styled.div`
   margin-left: 2.4rem;
-  margin-bottom: 4.2rem;
+`;
+
+const UserInfoBox = styled.div`
+  padding-top: 3.2rem;
+`;
+
+const DualInput = styled.div`
+  display: flex;
+  gap: 2rem;
+`;
+
+const StyledLabel = styled.label`
+  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+  color: var(--color-grey-300);
+`;
+
+const StyledDiv = styled.div`
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
 `;
 
 const StyledHeading = styled(Heading)`
   margin-bottom: 0.4rem;
+  font-weight: 300;
 `;
 
 const RequiredFields = styled.span`
   font-size: 1.4rem;
-  color: var(--color-grey-300);
+  color: var(--color-grey-400);
+  font-weight: 300;
 `;
 
-const StyledInput = styled(Input)`
-  &:not(:first-of-type) {
-    margin-top: 2.4rem;
-  }
-`;
-
-export default function UserDetails() {
-  const { user } = useUser();
-  const [fullName, setFullName] = useState(user.name);
-  const [address, setAddress] = useState(user.address);
-  const [country, setCountry] = useState(user.country);
-  const [city, setCity] = useState(user.city);
+export default function UserDetails({ register, formState, email, isPending }) {
+  const { errors } = formState;
 
   return (
     <Box>
@@ -62,66 +59,94 @@ export default function UserDetails() {
         <RequiredFields>Fields marked with * are required</RequiredFields>
       </TextBox>
       <UserInfoBox>
-        <div>
-          <StyledInput
-            type="text"
-            $variation="large"
-            placeholder="Full Name*"
-            id="fullName"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-          />
-          <Label htmlFor="fullName">Full Name*</Label>
-
-          <StyledInput
-            type="text"
-            $variation="large"
-            placeholder="Address*"
+        <DualInput>
+          <StyledDiv>
+            <StyledLabel htmlFor="fullName">Full Name*</StyledLabel>
+            <Input
+              $variation="form"
+              disabled={isPending}
+              placeholder="John Smith"
+              id="fullName"
+              className={`${errors?.name ? "input-error" : ""}`}
+              {...register("name", {
+                required: true,
+              })}
+            />
+          </StyledDiv>
+          <StyledDiv>
+            <StyledLabel htmlFor="email">Email*</StyledLabel>
+            <Input
+              id="email"
+              $variation="form"
+              placeholder="If you can read this you messed up"
+              disabled
+              value={email}
+            />
+          </StyledDiv>
+        </DualInput>
+        <DualInput>
+          <StyledDiv>
+            <StyledLabel htmlFor="country">Country*</StyledLabel>
+            <Input
+              $variation="form"
+              disabled={isPending}
+              placeholder="Germany"
+              className={`${errors?.country ? "input-error" : ""}`}
+              id="country"
+              {...register("country", {
+                required: true,
+              })}
+            />
+          </StyledDiv>
+          <StyledDiv>
+            <StyledLabel htmlFor="city">City*</StyledLabel>
+            <Input
+              id="city"
+              $variation="form"
+              disabled={isPending}
+              className={`${errors?.city ? "input-error" : ""}`}
+              placeholder="Berlin"
+              {...register("city", {
+                required: true,
+              })}
+            />
+          </StyledDiv>
+        </DualInput>
+        <StyledDiv>
+          <StyledLabel htmlFor="address">Address*</StyledLabel>
+          <Input
+            $variation="form"
+            disabled={isPending}
+            placeholder="Parkasse Street 34"
             id="address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
+            className={`${errors?.address ? "input-error" : ""}`}
+            {...register("address", {
+              required: true,
+            })}
           />
-          <Label htmlFor="address">Address*</Label>
-
-          <StyledInput
-            type="text"
-            $variation="large"
-            placeholder="City*"
-            id="city"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-          <Label htmlFor="city">City*</Label>
-
-          <StyledInput
-            type="text"
-            $variation="large"
-            placeholder="Apartment Number"
-            id="aptNumber"
-          />
-          <Label htmlFor="aptNumber">Apartment Number</Label>
-        </div>
-        <div>
-          <StyledInput
-            type="text"
-            $variation="large"
-            placeholder="Country*"
-            id="country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          />
-          <Label htmlFor="country">Country*</Label>
-
-          <StyledInput type="text" $variation="large" placeholder="Zip Code*" />
-          <Label htmlFor="zipcode">Zip Code*</Label>
-
-          <StyledInput
-            type="text"
-            $variation="large"
-            placeholder="Phone Number"
-          />
-          <Label htmlFor="phoneNumber">Phone Number</Label>
-        </div>
+        </StyledDiv>
+        <DualInput>
+          <StyledDiv>
+            <StyledLabel htmlFor="phone">Phone Number</StyledLabel>
+            <Input
+              $variation="form"
+              disabled={isPending}
+              placeholder="(+49) 163 555 1584"
+              id="phone"
+              {...register("phone")}
+            />
+          </StyledDiv>
+          <StyledDiv>
+            <StyledLabel htmlFor="aptNumber">Apartment Number</StyledLabel>
+            <Input
+              id="aptNumber"
+              $variation="form"
+              disabled={isPending}
+              placeholder="42"
+              {...register("aptNumber")}
+            />
+          </StyledDiv>
+        </DualInput>
       </UserInfoBox>
     </Box>
   );

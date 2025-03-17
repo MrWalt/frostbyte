@@ -3,11 +3,11 @@ import UserDetails from "../features/checkout/UserDetails";
 import PaymentDetails from "../features/checkout/PaymentDetails";
 import Heading from "../ui/Heading";
 import Section from "../ui/Section";
-
-const StyledSection = styled(Section)`
-  background-image: url("background.webp");
-  min-height: calc(100vh - 8rem - 10rem);
-`;
+import Background from "../ui/Background";
+import { useForm } from "react-hook-form";
+import { useUser } from "../features/authentication/UserContext";
+import { useCart } from "../features/cart/CartContext";
+import { useCreateOrder } from "../features/orders/useCreateOrder";
 
 const Container = styled.div`
   width: 120rem;
@@ -15,7 +15,7 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-const Box = styled.div`
+const Box = styled.form`
   display: flex;
   gap: 3.6rem;
 `;
@@ -25,15 +25,50 @@ const StyledHeading = styled(Heading)`
 `;
 
 export default function CheckOut() {
+  const { cart } = useCart();
+  const { user } = useUser();
+  const { createOrder, isPending } = useCreateOrder();
+
+  const { formState, register, handleSubmit } = useForm({
+    defaultValues: {
+      name: user.name || "",
+      country: user.country || "",
+      city: user.city || "",
+      address: user.address || "",
+      phone: user.phone || "",
+    },
+  });
+
+  function onSubmit(data) {
+    const shipTo = `${data.address}, ${data.city}, ${data.country} `;
+
+    const newOrder = {
+      items: cart.map((item) => ({
+        item: { id: item.id, price: item.price, discount: item.discount },
+        quantity: item.quantity,
+      })),
+      shipTo,
+    };
+
+    createOrder(newOrder);
+  }
+
   return (
-    <StyledSection>
-      <Container>
-        <StyledHeading $variation="secondary">Checkout</StyledHeading>
-        <Box>
-          <UserDetails />
-          <PaymentDetails />
-        </Box>
-      </Container>
-    </StyledSection>
+    <Section>
+      <Background>
+        <Container>
+          <StyledHeading $variation="secondary">Checkout</StyledHeading>
+          <Box onSubmit={handleSubmit(onSubmit)}>
+            <UserDetails
+              register={register}
+              formState={formState}
+              email={user.email}
+              isPending={isPending}
+            />
+            <PaymentDetails />
+          </Box>
+        </Container>
+      </Background>
+    </Section>
   );
 }

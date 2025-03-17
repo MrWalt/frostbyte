@@ -40,7 +40,8 @@ const createOrder = catchAsync(async function (req, res, next) {
           `${productStock.title
             .split(" ")
             .slice(0, 3)
-            .join(" ")} is out of stock`
+            .join(" ")} is out of stock`,
+          400
         );
 
       if (productStock.stock < item.quantity)
@@ -48,7 +49,8 @@ const createOrder = catchAsync(async function (req, res, next) {
           `Only ${productStock.stock} ${productStock.title
             .split(" ")
             .slice(0, 3)
-            .join(" ")} left`
+            .join(" ")} left`,
+          400
         );
 
       return {
@@ -62,7 +64,7 @@ const createOrder = catchAsync(async function (req, res, next) {
     await Order.findByIdAndDelete(order.id);
     return next(err);
   }
-  console.log(order.items);
+
   order.isValidated = true;
 
   // This is the code needed to change the stock of the bought products

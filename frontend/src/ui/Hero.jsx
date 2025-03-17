@@ -10,7 +10,7 @@ const Container = styled.div`
       rgba(51, 155, 240, 0.15),
       rgba(51, 155, 240, 0.15)
     ),
-    url("hero.jpg");
+    url("/hero.jpg");
   background-position: center;
   background-size: cover;
 

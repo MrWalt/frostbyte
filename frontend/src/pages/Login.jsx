@@ -1,17 +1,17 @@
-import styled from "styled-components";
 import Section from "../ui/Section";
 import LoginForm from "../features/authentication/LoginForm";
+import styled from "styled-components";
 
-const StyledSection = styled(Section)`
-  background-image: url("/background.webp");
-
-  height: calc(100vh - 8rem - 10rem);
+const FlexSection = styled(Section)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default function Login() {
   return (
-    <StyledSection>
+    <FlexSection>
       <LoginForm />
-    </StyledSection>
+    </FlexSection>
   );
 }

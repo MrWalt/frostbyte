@@ -6,21 +6,7 @@ import Button from "../ui/Button";
 import { Link } from "react-router-dom";
 import SummaryDetails from "../features/cart/SummaryDetails";
 import { useCart } from "../features/cart/CartContext";
-
-const StyledSection = styled(Section)`
-  background-image: url("/background.webp");
-
-  min-height: calc(100vh - 8rem - 10rem);
-  padding: 0;
-`;
-
-const Background = styled.div`
-  background-color: var(--color-grey-transparent);
-  backdrop-filter: blur(4px);
-
-  min-height: calc(100vh - 8rem - 10rem);
-  width: 100%;
-`;
+import Background from "../ui/Background";
 
 const Container = styled.div`
   max-width: 120rem;
@@ -37,7 +23,7 @@ const StyledHeading = styled(Heading)`
   grid-column: 1 / -1;
   grid-row: 1 / 2;
 
-  margin-bottom: 3.6rem;
+  margin-bottom: 2.4rem;
 `;
 
 const Box = styled.div`
@@ -80,37 +66,31 @@ const EmptyCartContainer = styled.div`
   }
 `;
 
-const Padding = styled.div`
-  padding-top: 4.8rem;
-`;
-
 export default function CartSummary() {
   const { itemsInCart } = useCart();
 
   return (
-    <StyledSection>
+    <Section>
       <Background>
-        <Padding>
-          {itemsInCart !== 0 ? (
-            <Container>
-              <StyledHeading $variation="secondary">Cart Summary</StyledHeading>
-              <Box>
-                <SummaryList />
-                <SummaryDetails />
-              </Box>
-            </Container>
-          ) : (
-            <EmptyCartContainer>
-              <EmptyCartHeading $variation="primary">
-                Cart is empty
-              </EmptyCartHeading>
-              <Link to="/products">
-                <StyledButton $variation="medium">Go To Products</StyledButton>
-              </Link>
-            </EmptyCartContainer>
-          )}
-        </Padding>
+        {itemsInCart !== 0 ? (
+          <Container>
+            <StyledHeading $variation="secondary">Cart Summary</StyledHeading>
+            <Box>
+              <SummaryList />
+              <SummaryDetails />
+            </Box>
+          </Container>
+        ) : (
+          <EmptyCartContainer>
+            <EmptyCartHeading $variation="primary">
+              Cart is empty
+            </EmptyCartHeading>
+            <Link to="/products">
+              <StyledButton $variation="medium">Go To Products</StyledButton>
+            </Link>
+          </EmptyCartContainer>
+        )}
       </Background>
-    </StyledSection>
+    </Section>
   );
 }

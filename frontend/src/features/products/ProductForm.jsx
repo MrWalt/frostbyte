@@ -49,30 +49,6 @@ const Box = styled.div`
   font-size: 1.4rem;
 `;
 
-const StyledInput = styled(Input)`
-  border: 1px solid var(--color-grey-800);
-
-  padding: 0.8rem 1rem;
-  font-size: 1.4rem;
-  color: var(--color-grey-0);
-  transition: var(--animation-fast);
-
-  margin-bottom: 1.6rem;
-
-  &:focus {
-    border: 1px solid var(--color-brand-600);
-  }
-
-  &::placeholder {
-    color: var(--color-grey-500);
-  }
-
-  &.input-error {
-    border: 1px solid var(--color-red-500);
-    animation: shake 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-`;
-
 const DualInput = styled.div`
   display: flex;
   gap: 1.8rem;
@@ -188,10 +164,10 @@ export default function ProductForm({
           <StyledDiv>
             {/* Title */}
             <StyledLabel htmlFor="title">Title</StyledLabel>
-            <StyledInput
+            <Input
               disabled={isPending}
               className={`${errors?.title ? "input-error" : ""}`}
-              $variation="minimal"
+              $variation="form"
               placeholder="RTX 4080Ti"
               id="title"
               {...register("title", {
@@ -203,10 +179,10 @@ export default function ProductForm({
               {/* Manufacturer */}
               <div>
                 <StyledLabel htmlFor="manufacturer">Manufacturer</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
                   className={`${errors?.manufacturer ? "input-error" : ""}`}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="NVIDIA"
                   id="manufacturer"
                   {...register("manufacturer", {
@@ -218,10 +194,10 @@ export default function ProductForm({
               <div>
                 {/* Category */}
                 <StyledLabel htmlFor="category">Category</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
                   className={`${errors?.category ? "input-error" : ""}`}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="graphics-cards"
                   id="category"
                   {...register("category", {
@@ -235,11 +211,11 @@ export default function ProductForm({
             <DualInput>
               <div>
                 <StyledLabel htmlFor="warranty">Warranty</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
                   className={`${errors?.warranty ? "input-error" : ""}`}
                   id="warranty"
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="2 years, 6 months"
                   {...register("warranty", {
                     required: true,
@@ -248,10 +224,10 @@ export default function ProductForm({
               </div>
               <div>
                 <StyledLabel htmlFor="price">Price in EUR</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
                   className={`${errors?.price ? "input-error" : ""}`}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="499,99"
                   id="price"
                   {...register("price", {
@@ -265,11 +241,11 @@ export default function ProductForm({
             <DualInput>
               <div>
                 <StyledLabel htmlFor="discount">Discount</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
                   className={`${errors?.discount ? "input-error" : ""}`}
                   placeholder="5/10/0"
-                  $variation="minimal"
+                  $variation="form"
                   id="discount"
                   {...register("discount", {
                     max: 25,
@@ -279,9 +255,9 @@ export default function ProductForm({
               </div>
               <div>
                 <StyledLabel htmlFor="type">Type</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="Wired/SSD"
                   id="type"
                   {...register("type")}
@@ -291,9 +267,9 @@ export default function ProductForm({
             <DualInput>
               <div>
                 <StyledLabel htmlFor="ddr">DDR</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="DRR5/DDR4"
                   id="ddr"
                   {...register("ddr")}
@@ -301,9 +277,9 @@ export default function ProductForm({
               </div>
               <div>
                 <StyledLabel htmlFor="capacity">Capacity</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="500GB/1TB/256GB"
                   id="capacity"
                   {...register("capacity")}
@@ -316,9 +292,9 @@ export default function ProductForm({
             <DualInput>
               <div>
                 <StyledLabel htmlFor="socket">Socket</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="LGA 1700/AM4"
                   id="socket"
                   {...register("socket")}
@@ -326,9 +302,9 @@ export default function ProductForm({
               </div>
               <div>
                 <StyledLabel htmlFor="speed">Speed</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="3200MHz/6000MHz"
                   id="speed"
                   {...register("speed")}
@@ -358,10 +334,10 @@ export default function ProductForm({
             <DualInput>
               <div>
                 <StyledLabel htmlFor="stock">Stock</StyledLabel>
-                <StyledInput
+                <Input
                   disabled={isPending}
                   className={`${errors?.stock ? "input-error" : ""}`}
-                  $variation="minimal"
+                  $variation="form"
                   placeholder="4"
                   id="stock"
                   {...register("stock", {

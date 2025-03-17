@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const Section = styled.section`
+  background-image: url("/background.webp");
+  min-height: calc(100vh - 8rem - 10rem);
+
   width: 100%;
   height: 100%;
-
-  padding: 4.8rem 0 6.4rem 0;
 `;
 
 export default Section;

@@ -29,6 +29,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import Order from "./pages/Order";
 import SignUp from "./pages/SignUp";
 import ModalProvider from "./contexts/ModalContext";
+import ThankYou from "./pages/ThankYou";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -95,6 +96,7 @@ export default function App() {
                       <Route path="signup" element={<SignUp />} />
                       <Route path="about" element={<About />} />
                       <Route path="legal" element={<Legal />} />
+                      <Route path="thank-you" element={<ThankYou />} />
                       <Route path="order/:orderId" element={<Order />} />
                       <Route path="*" element={<PageNotFound />} />
                     </Route>

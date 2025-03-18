@@ -65,7 +65,10 @@ export default function CheckOut() {
               email={user.email}
               isPending={isPending}
             />
-            <PaymentDetails totalCartPrice={totalCartPrice} />
+            <PaymentDetails
+              totalCartPrice={totalCartPrice}
+              isPending={isPending}
+            />
           </Box>
         </Container>
       </Background>

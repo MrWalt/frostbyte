@@ -3,12 +3,13 @@ import Button from "../../ui/Button";
 import Heading from "../../ui/Heading";
 import Price from "../../ui/Price";
 import Input from "../../ui/Input";
+import Loader from "../../ui/Loader";
 
 const Container = styled.div`
   flex: 1 0 30%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  /* justify-content: end; */
   gap: 1.6rem;
 
   font-size: 1.6rem;
@@ -24,6 +25,10 @@ const Box = styled.div`
   background-color: var(--color-grey-900);
   border: 1px solid var(--color-grey-800);
 
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
   padding: 1rem;
 `;
 
@@ -36,7 +41,7 @@ const PriceBox = styled.div`
   }
 
   &:last-of-type {
-    margin-top: 2.4rem;
+    margin-top: 1.8rem;
 
     * {
       font-size: 2.4rem !important;
@@ -60,11 +65,14 @@ const Shipping = styled.p`
 
 const Padding = styled.div`
   padding: 1.2rem;
+  flex: 1 0;
 `;
 
 const CouponBox = styled.div`
   border: 1px solid var(--color-grey-800);
   display: flex;
+
+  position: relative;
 `;
 
 const Coupon = styled(Input)`
@@ -86,6 +94,9 @@ const CouponText = styled.label`
   margin-left: 1.2rem;
   margin-bottom: 0.4rem;
   color: var(--color-grey-400);
+
+  position: absolute;
+  transform: translateY(-24px);
 `;
 
 const ApplyCouponButton = styled(Button)`
@@ -98,7 +109,7 @@ const ApplyCouponButton = styled(Button)`
   text-transform: uppercase;
 `;
 
-export default function PaymentDetails({ totalCartPrice }) {
+export default function PaymentDetails({ totalCartPrice, isPending }) {
   const shippingPrice = 7.82;
   const totalPrice = totalCartPrice + shippingPrice;
   return (
@@ -108,25 +119,29 @@ export default function PaymentDetails({ totalCartPrice }) {
           <StyledHeading $variation="tertiary">Payment Details</StyledHeading>
           <TextBox>
             <PriceBox>
-              <Price price={totalCartPrice} $size="normal"></Price>
+              <Price price={totalCartPrice} size="normal"></Price>
               <span> with all taxes</span>
             </PriceBox>
             <Shipping>+ {shippingPrice}€ shipping</Shipping>
             <PriceBox>
               <span>=</span>
-              <Price $size="normal" price={totalPrice}></Price>
+              <Price size="normal" price={totalPrice}></Price>
             </PriceBox>
           </TextBox>
         </Padding>
-        <CouponText htmlFor="coupon">Enter coupon here</CouponText>
         <CouponBox>
+          <CouponText htmlFor="coupon">Enter your coupon here</CouponText>
           <Coupon $variation="form" placeholder="dev2025" />
-          <ApplyCouponButton type="button" $variation="medium">
+          <ApplyCouponButton
+            type="button"
+            $variation="medium"
+            disabled={isPending}
+          >
             Apply
           </ApplyCouponButton>
         </CouponBox>
       </Box>
-      <Button>Place Order</Button>
+      <Button>{!isPending ? "Place Order" : <Loader size={44} />}</Button>
     </Container>
   );
 }

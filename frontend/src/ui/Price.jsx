@@ -85,7 +85,7 @@ const StyledPrice = styled.span`
 
   color: var(--color-grey-0);
 
-  ${(props) => priceSizes[props.$size]}
+  ${(props) => priceSizes[props.size]}
 `;
 
 const Currency = styled.span`
@@ -93,13 +93,13 @@ const Currency = styled.span`
 
   color: var(--color-grey-0);
 
-  ${(props) => currencySizes[props.$size]}
+  ${(props) => currencySizes[props.size]}
 `;
 
 const Cents = styled.span`
   color: var(--color-brand-600);
 
-  ${(props) => centSizes[props.$size]}
+  ${(props) => centSizes[props.size]}
 `;
 
 export default function Price({ price, size }) {

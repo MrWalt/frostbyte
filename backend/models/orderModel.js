@@ -13,6 +13,15 @@ const orderSchema = new mongoose.Schema(
       ref: "User",
       required: [true, "An order must belong to a user"],
     },
+    isGift: {
+      type: Boolean,
+      default: false,
+      enum: [true, false],
+    },
+    name: {
+      type: String,
+      required: [true, "Order must have a persons name"],
+    },
     // Embedding this
     items: Array,
     shipTo: {

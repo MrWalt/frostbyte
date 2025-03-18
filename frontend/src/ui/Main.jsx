@@ -4,7 +4,6 @@ import Cart from "../features/cart/Cart";
 import WishList from "../features/wishlist/WishList";
 import { useMenu } from "../contexts/MenuContext";
 import Navigation from "./Navigation";
-import Modal from "./Modal";
 import { useModal } from "../contexts/ModalContext";
 import { useUser } from "../features/authentication/UserContext";
 
@@ -69,20 +68,6 @@ export default function Main({ children }) {
       <DropDownMenu align="right" isOpen={toggledMenu === "wishlist"}>
         {user?.isAuthenticated ? <WishList /> : <WishList.Unauthorized />}
       </DropDownMenu>
-
-      {user.role === "admin" && (
-        <>
-          <Modal isOpen={toggledModal === "addProduct"}>
-            <Modal.AddProduct />
-          </Modal>
-          <Modal isOpen={toggledModal === "editProduct"}>
-            <Modal.EditProduct />
-          </Modal>
-          <Modal size="small" isOpen={toggledModal === "deleteProduct"}>
-            <Modal.DeleteProduct />
-          </Modal>
-        </>
-      )}
     </StyledMain>
   );
 }

@@ -48,6 +48,7 @@ export default function CheckOut() {
         quantity: item.quantity,
       })),
       shipTo,
+      name: data.name,
     };
 
     createOrder(newOrder);

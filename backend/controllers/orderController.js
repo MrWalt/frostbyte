@@ -1,6 +1,6 @@
 const Order = require("../models/orderModel");
 const Product = require("../models/productModel");
-const { getAll, createOne } = require("./handlerFactory");
+const { getAll, createOne, getOne } = require("./handlerFactory");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/AppError");
 
@@ -82,4 +82,6 @@ const createOrder = catchAsync(async function (req, res, next) {
   res.status(201).json({ status: "success", data: { order: newOrder } });
 });
 
-module.exports = { getOrders, createOrder };
+const getOrder = getOne(Order);
+
+module.exports = { getOrders, createOrder, getOrder };

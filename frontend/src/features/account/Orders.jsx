@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Heading from "../../ui/Heading";
-import Order from "../orders/Order";
+import OrderItem from "../orders/OrderItem";
 import useOrders from "../orders/useOrders";
 import Loader from "../../ui/Loader";
 import Pagination from "../../ui/Pagination";
@@ -53,7 +53,7 @@ export default function Orders() {
       {!isLoading ? (
         orders.length ? (
           orders.map((order) => (
-            <Order
+            <OrderItem
               dateOrdered={order.dateOrdered}
               orderId={order.id}
               items={order.items}

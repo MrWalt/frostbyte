@@ -1,11 +1,15 @@
 import { useParams } from "react-router-dom";
 import Section from "../ui/Section";
 import styled from "styled-components";
-import Heading from "../ui/Heading";
+import Background from "../ui/Background";
+
+import OrderFullPage from "../features/orders/OrderFullPage";
 
 const Container = styled.div`
-  width: 90rem;
+  max-width: 108rem;
   margin: 0 auto;
+
+  color: var(--color-grey-0);
 `;
 
 export default function Order() {
@@ -13,9 +17,11 @@ export default function Order() {
 
   return (
     <Section>
-      <Container>
-        <Heading $variation="secondary">Order {orderId}</Heading>
-      </Container>
+      <Background>
+        <Container>
+          <OrderFullPage orderId={orderId} />
+        </Container>
+      </Background>
     </Section>
   );
 }

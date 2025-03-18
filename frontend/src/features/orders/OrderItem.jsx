@@ -105,7 +105,7 @@ const Quantity = styled.span`
   color: var(--color-grey-500);
 `;
 
-export default function Order({
+export default function OrderItem({
   orderId,
   items,
   totalPrice,

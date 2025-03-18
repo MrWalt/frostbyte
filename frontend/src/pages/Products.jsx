@@ -15,6 +15,7 @@ import Button from "../ui/Button";
 import { useModal } from "../contexts/ModalContext";
 import Search from "../ui/Search";
 import Background from "../ui/Background";
+import Modal from "../ui/Modal";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -57,33 +58,44 @@ export default function Products() {
   const { count } = useProducts();
   const { isLoading } = useProducts();
   const { user } = useUser();
-  const { handleSetToggledModal } = useModal();
+  const { handleSetToggledModal, toggledModal } = useModal();
   const searchQuery = searchParams.get("search") || null;
 
   return (
-    <Section>
-      <Background>
-        <Container>
-          <StyledHeading $variation="secondary">
-            {params?.category ? category : ""}
-            {!params?.category && !searchQuery ? "All Products" : ""}
-            {searchQuery ? `Search for ` : ""}
-            {searchQuery ? <SearchText>{searchQuery}</SearchText> : ""}
-          </StyledHeading>
-          <AsideBox>
-            <Search />
-            <Sort />
-            <FilterMenu params={params} />
-            {user.role === "admin" && (
-              <StyledButton onClick={() => handleSetToggledModal("addProduct")}>
-                Add new product
-              </StyledButton>
-            )}
-          </AsideBox>
-          <ProductsGrid category={params?.category ? params.category : null} />
-          {!isLoading && <Pagination count={count} />}
-        </Container>
-      </Background>
-    </Section>
+    <>
+      <Section>
+        <Background>
+          <Container>
+            <StyledHeading $variation="secondary">
+              {params?.category ? category : ""}
+              {!params?.category && !searchQuery ? "All Products" : ""}
+              {searchQuery ? `Search for ` : ""}
+              {searchQuery ? <SearchText>{searchQuery}</SearchText> : ""}
+            </StyledHeading>
+            <AsideBox>
+              <Search />
+              <Sort />
+              <FilterMenu params={params} />
+              {user.role === "admin" && (
+                <StyledButton
+                  onClick={() => handleSetToggledModal("addProduct")}
+                >
+                  Add new product
+                </StyledButton>
+              )}
+            </AsideBox>
+            <ProductsGrid
+              category={params?.category ? params.category : null}
+            />
+            {!isLoading && <Pagination count={count} />}
+          </Container>
+        </Background>
+      </Section>
+      {user.role === "admin" && (
+        <Modal isOpen={toggledModal === "addProduct"}>
+          <Modal.AddProduct />
+        </Modal>
+      )}
+    </>
   );
 }

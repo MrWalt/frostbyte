@@ -106,12 +106,12 @@ export default function Price({ price, size }) {
   const formattedPrice = String(price).split(".");
 
   return (
-    <div>
+    <span>
       <StyledPrice size={size}>{formattedPrice.at(0)},</StyledPrice>
       <Cents size={size}>
         {formattedPrice.at(1) > 0 ? formattedPrice.at(1).slice(0, 2) : "00"}
       </Cents>
       <Currency size={size}>€</Currency>
-    </div>
+    </span>
   );
 }

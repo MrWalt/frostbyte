@@ -8,6 +8,8 @@ import { useForm } from "react-hook-form";
 import { useUser } from "../features/authentication/UserContext";
 import { useCart } from "../features/cart/CartContext";
 import { useCreateOrder } from "../features/orders/useCreateOrder";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Container = styled.div`
   width: 96rem;
@@ -25,7 +27,8 @@ const StyledHeading = styled(Heading)`
 `;
 
 export default function CheckOut() {
-  const { cart, totalCartPrice } = useCart();
+  const navigate = useNavigate();
+  const { cart, totalCartPrice, itemsInCart } = useCart();
   const { user } = useUser();
   const { createOrder, isPending } = useCreateOrder();
 
@@ -38,6 +41,12 @@ export default function CheckOut() {
       phone: user.phone || "",
     },
   });
+
+  // This is useEffect to prevent users from going to /checkout with empty cart
+  useEffect(function () {
+    if (!itemsInCart) return navigate("/products", { replace: true });
+    // eslint-disable-next-line
+  }, []);
 
   function onSubmit(data) {
     const shipTo = `${data.address}, ${data.city}, ${data.country} `;

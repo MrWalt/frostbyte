@@ -3,6 +3,7 @@ import Background from "../ui/Background";
 import Section from "../ui/Section";
 import Heading from "../ui/Heading";
 import Button from "../ui/Button";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Container = styled.div`
   max-width: 90rem;
@@ -37,6 +38,8 @@ const StyledButton = styled(Button)`
 `;
 
 export default function ThankYou() {
+  const [searchParams] = useSearchParams();
+  const orderId = searchParams.get("id");
   return (
     <Section>
       <Background>
@@ -45,7 +48,9 @@ export default function ThankYou() {
             Your purchase was successful!
           </StyledHeading>
           <StyledText>Thank you for your trust in us!</StyledText>
-          <StyledButton>View your Order</StyledButton>
+          <Link to={`/order/${orderId}`}>
+            <StyledButton>View your Order</StyledButton>
+          </Link>
         </Container>
       </Background>
     </Section>

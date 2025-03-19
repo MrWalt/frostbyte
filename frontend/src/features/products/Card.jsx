@@ -36,11 +36,17 @@ const Box = styled.div`
   & button:first-of-type {
     top: 1.2rem;
     right: 1.2rem;
+
+    background-color: var(--color-grey-transparent);
+    backdrop-filter: blur(8px);
   }
 
   & button:last-of-type {
     bottom: 1.2rem;
     right: 1.2rem;
+
+    background-color: var(--color-grey-transparent);
+    backdrop-filter: blur(8px);
   }
 `;
 
@@ -53,7 +59,7 @@ const StyledButton = styled.button`
   background-color: transparent;
 
   position: absolute;
-
+  z-index: 1;
   cursor: pointer;
 
   transition: var(--animation-fast);
@@ -144,6 +150,7 @@ const OutOfStock = styled.span`
   bottom: 1.2rem;
   right: 1.2rem;
 
+  background-color: var(--color-grey-transparent);
   backdrop-filter: blur(8px);
   border: 1px solid var(--color-grey-800);
 `;
@@ -164,6 +171,7 @@ const Discount = styled.span`
 
   font-size: 1.8rem;
 
+  background-color: var(--color-grey-transparent);
   backdrop-filter: blur(4px);
 
   span {

@@ -11,8 +11,8 @@ export function useCreateOrder() {
 
   const { mutate: createOrder, isPending } = useMutation({
     mutationFn: (order) => createOrderApi(order),
-    onSuccess: () => {
-      navigate("/thank-you");
+    onSuccess: (data) => {
+      navigate(`/thank-you?id=${data.data.order.id}`);
       queryClient.invalidateQueries("orders");
       clearCart();
     },

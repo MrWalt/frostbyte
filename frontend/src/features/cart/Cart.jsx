@@ -41,13 +41,15 @@ const ItemCount = styled.span`
 `;
 
 const Box = styled.div`
-  overflow: scroll;
+  overflow-y: scroll;
 
   height: 100%;
 
   margin: 0.8rem 0;
   border-top: 1px solid var(--color-grey-800);
   border-bottom: 1px solid var(--color-grey-800);
+
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;

@@ -109,7 +109,8 @@ const SupportText = styled.p`
   color: var(--color-grey-300);
   margin-top: 5rem;
 
-  a {
+  a:visited,
+  a:link {
     color: var(--color-brand-500);
     transition: var(--animation-fast);
 

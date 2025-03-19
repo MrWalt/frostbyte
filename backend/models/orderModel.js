@@ -23,7 +23,15 @@ const orderSchema = new mongoose.Schema(
       required: [true, "Order must have a persons name"],
     },
     // Embedding this
-    items: Array,
+    items: {
+      type: Array,
+      validate: {
+        validator: function (array) {
+          return array.length;
+        },
+        message: "Order cannot be empty",
+      },
+    },
     shipTo: {
       type: String,
       required: [true, "Order must have a shipping address"],

@@ -3,9 +3,42 @@ const Product = require("../models/productModel");
 const { getAll, createOne, getOne } = require("./handlerFactory");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/AppError");
-
+const stripe = require("stripe")(process.env.STRIPE_SECRET);
 const getOrders = getAll(Order);
 // const createOrder = createOne(Order);
+
+// THIS IS INCOMPLETE ADD WEBHOOKS LATER! USERS STILL GET A VALID ORDER EVEN IF THEY CANCEL
+const getCheckoutSession = catchAsync(async function (req, res, next) {
+  const order = await Order.findById(req.params.id);
+
+  const line_items = [
+    ...order.items.map((item) => ({
+      quantity: item.quantity,
+      price_data: {
+        currency: "eur",
+        unit_amount: (item.item?.discount
+          ? item.item.discountedPrice * 100
+          : item.item.price * 100
+        ).toFixed(0),
+        product_data: {
+          name: item.item.title,
+        },
+      },
+    })),
+  ];
+
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ["card"],
+    success_url: `${req.get("origin")}/thank-you?id=${order.id}`,
+    cancel_url: `${req.get("origin")}/products`,
+    customer_email: req.user.email,
+    client_reference_id: "Product",
+    mode: "payment",
+    line_items,
+  });
+
+  res.status(200).json({ status: "success", session });
+});
 
 const createOrder = catchAsync(async function (req, res, next) {
   const order = await Order.create({ ...req.body, user: req.user.id });
@@ -84,4 +117,4 @@ const createOrder = catchAsync(async function (req, res, next) {
 
 const getOrder = getOne(Order);
 
-module.exports = { getOrders, createOrder, getOrder };
+module.exports = { getOrders, createOrder, getOrder, getCheckoutSession };

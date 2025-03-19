@@ -49,3 +49,20 @@ export async function getOrder(orderId) {
 
   return data;
 }
+
+export async function getCheckoutSession(id) {
+  const res = await fetch(
+    `http://localhost:8000/api/v1/orders/checkout-session/${id}`,
+    {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const data = await res.json();
+
+  return data;
+}

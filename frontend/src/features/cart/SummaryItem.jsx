@@ -34,6 +34,8 @@ const ImageLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  flex: 0 0;
 `;
 
 const Image = styled.img`

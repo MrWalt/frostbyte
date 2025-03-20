@@ -69,6 +69,8 @@ export default function FilterMenu({ params }) {
     searchParams.delete("capacity");
     searchParams.delete("type");
     searchParams.delete("page");
+    searchParams.delete("speed");
+    searchParams.delete("ddr");
 
     setSearchParams(searchParams);
   }
@@ -94,7 +96,7 @@ export default function FilterMenu({ params }) {
         />
 
         {/* Temporary to check if filters work, refactor code later */}
-        {params?.category ? (
+        {params?.category && params?.category !== "video-games" ? (
           <FilterOption
             type="Brand"
             options={isLoading ? [] : filters?.brands}
@@ -103,7 +105,8 @@ export default function FilterMenu({ params }) {
           />
         ) : null}
 
-        {params?.category === "processors" ? (
+        {params?.category === "processors" ||
+        params?.category === "motherboards" ? (
           <FilterOption
             type="Socket"
             options={isLoading ? [] : filters?.sockets}
@@ -112,7 +115,9 @@ export default function FilterMenu({ params }) {
           />
         ) : null}
 
-        {params?.category === "storage" ? (
+        {params?.category === "storage" ||
+        params?.category === "gaming-consoles" ||
+        params?.category === "mobile-phones" ? (
           <>
             <FilterOption
               type="Capacity"
@@ -120,23 +125,46 @@ export default function FilterMenu({ params }) {
               key="Capacity"
               filter="capacity"
             />
+          </>
+        ) : null}
+
+        {params?.category === "memory" ? (
+          <>
             <FilterOption
-              type="Type"
+              type="Speed"
+              options={isLoading ? [] : filters?.speeds}
+              key="Speed"
+              filter="speed"
+            />
+            <FilterOption
+              type="DDR"
+              options={isLoading ? [] : filters?.ddr}
+              key="DDR"
+              filter="ddr"
+            />
+          </>
+        ) : null}
+
+        {params?.category === "video-games" ? (
+          <>
+            <FilterOption
+              type="Platform"
               options={isLoading ? [] : filters?.types}
-              key="Type"
+              key="Platform"
               filter="type"
             />
           </>
         ) : null}
 
-        {params?.category === "motherboards" ? (
+        {params?.category === "motherboards" ||
+        params?.category === "power-supplies" ||
+        params?.category === "cooling" ||
+        params?.category === "mice" ||
+        params?.category === "keyboards" ||
+        params?.category === "headphones" ||
+        params?.category === "storage" ||
+        params?.category === "controllers" ? (
           <>
-            <FilterOption
-              type="Chipset"
-              options={isLoading ? [] : filters?.sockets}
-              key="Chipset"
-              filter="socket"
-            />
             <FilterOption
               type="Type"
               options={isLoading ? [] : filters?.types}

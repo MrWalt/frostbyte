@@ -17,6 +17,8 @@ export function useProducts() {
     capacity: searchParams.get("capacity") || null,
     type: searchParams.get("type") || null,
     search: searchParams.get("search") || null,
+    speed: searchParams.get("speed") || null,
+    ddr: searchParams.get("ddr") || null,
   };
 
   const sortBy = searchParams.get("sort") || null;

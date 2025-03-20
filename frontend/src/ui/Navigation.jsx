@@ -115,19 +115,16 @@ export default function Navigation() {
             key={category.category}
           />
         ))}
-        {/* <NavigationCategory
-          category="Desktop"
-          handler={handleToggleCategory}
-          isToggled={isToggled === "desktop"}
-        />
-        <NavigationCategory category="Computer Peripherals" /> */}
-        {/* <NavigationCategory category="Computer Peripherals" />
-        <NavigationCategory category="Laptops" />
-        <NavigationCategory category="Audio" />
-        <NavigationCategory category="Gaming" />
-        <NavigationCategory category="Network" />
-        <NavigationCategory category="Touch Devices" />
-        <NavigationCategory category="Other" /> */}
+
+        <StyledLink
+          to="/products/other"
+          className={`${
+            location.pathname === "/products/other" ? "active" : ""
+          }`}
+          onClick={() => handleToggleCategory("")}
+        >
+          Other
+        </StyledLink>
       </Box>
     </Container>
   );

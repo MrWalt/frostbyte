@@ -4,13 +4,20 @@ const categories = [
     links: [
       { heading: "Processors", link: "processors" },
       { heading: "Graphics Cards", link: "graphics-cards" },
-      { heading: "RAM Memory", link: "memory" },
+      { heading: "Memory", link: "memory" },
       { heading: "Motherboards", link: "motherboards" },
       { heading: "Storage Disks", link: "storage" },
       { heading: "Power Supplies", link: "power-supplies" },
       { heading: "Cooling", link: "cooling" },
       { heading: "Computer Cases", link: "computer-cases" },
       { heading: "Prebuilt Computers", link: "prebuilt-computers" },
+    ],
+  },
+  {
+    category: "Portable Computers",
+    links: [
+      { heading: "Laptops", link: "laptops" },
+      { heading: "Accessories", link: "laptop-accessories" },
     ],
   },
   {
@@ -25,7 +32,7 @@ const categories = [
     category: "Audio Equipment",
     links: [
       { heading: "Speakers", link: "speakers" },
-      { heading: "Headphones", link: "Headphones" },
+      { heading: "Headphones", link: "headphones" },
       { heading: "Microphones", link: "microphones" },
     ],
   },
@@ -42,13 +49,6 @@ const categories = [
     links: [
       { heading: "Mobile Phones", link: "mobile-phones" },
       { heading: "Tablets", link: "tablets" },
-    ],
-  },
-  {
-    category: "Network",
-    links: [
-      { heading: "Routers", link: "routers" },
-      { heading: "Switches", link: "switches" },
     ],
   },
 ];

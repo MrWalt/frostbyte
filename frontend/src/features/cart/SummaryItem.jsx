@@ -30,7 +30,7 @@ const Box = styled.div`
 `;
 
 const ImageLink = styled(Link)`
-  padding: 0 1.2rem;
+  padding: 0.8rem 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;

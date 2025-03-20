@@ -25,9 +25,18 @@ function getAll(Model, selectOptions, getFilters = false) {
       const filtersObject = {};
       if (getFilters) {
         filtersQuery = new APIFeatures(
-          Model.find().select(`manufacturer socket type capacity -_id`),
+          Model.find().select(
+            `manufacturer socket type capacity speed ddr -_id`
+          ),
           req.query
-        ).filter(["manufacturer", "socket", "type", "capacity"]);
+        ).filter([
+          "manufacturer",
+          "socket",
+          "type",
+          "capacity",
+          "speed",
+          "ddr",
+        ]);
 
         filtersQuery = await filtersQuery.query;
 
@@ -52,9 +61,16 @@ function getAll(Model, selectOptions, getFilters = false) {
               .map((item) => item.socket)
           ),
         ];
+
         filtersObject.brands = [
           ...new Set(filtersQuery.map((item) => item.manufacturer)),
         ];
+
+        filtersObject.speeds = [
+          ...new Set(filtersQuery.map((item) => item.speed)),
+        ];
+
+        filtersObject.ddr = [...new Set(filtersQuery.map((item) => item.ddr))];
       }
       // For dynamic frontend filter. Returns the brands allowing user to filter by brands
 

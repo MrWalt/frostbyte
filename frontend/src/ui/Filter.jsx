@@ -21,7 +21,7 @@ const StyledFilter = styled.div`
   }
 
   &:last-child {
-    margin-bottom: 1.6rem;
+    margin-bottom: 0.4rem;
   }
 
   &.sole-filter {

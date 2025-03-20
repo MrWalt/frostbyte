@@ -32,7 +32,7 @@ const getCheckoutSession = catchAsync(async function (req, res, next) {
     success_url: `${req.get("origin")}/thank-you?id=${order.id}`,
     cancel_url: `${req.get("origin")}/products`,
     customer_email: req.user.email,
-    client_reference_id: "Product",
+    client_reference_id: order.id,
     mode: "payment",
     line_items,
   });

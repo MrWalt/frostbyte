@@ -73,8 +73,8 @@ export default function Sort() {
       <span>Sort</span>
       <StyledSelect value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
         <optgroup label="Price">
-          <option value={"price"}>Ascending</option>
-          <option value={"-price"}>Descending</option>
+          <option value={"price"}>Cheap First</option>
+          <option value={"-price"}>Expensive First</option>
         </optgroup>
         <optgroup label="Date">
           <option value={"dateAdded"}>Oldest First</option>

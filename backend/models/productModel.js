@@ -28,7 +28,7 @@ const productSchema = new mongoose.Schema(
     },
     warranty: {
       type: String,
-      required: [true, "Product must have warranty length"],
+      default: "No",
     },
     stock: {
       type: Number,

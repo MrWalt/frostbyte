@@ -83,6 +83,8 @@ const getMyOrders = catchAsync(async function (req, res, next) {
     .skip((req.query.page - 1) * constants.ORDER_PAGE_SIZE)
     .limit(constants.ORDER_PAGE_SIZE);
 
+  orders.forEach((order) => order.updateStatus(order));
+
   const countQuery = new APIFeatures(
     Order.find({ user: req.user.id }),
     req.query

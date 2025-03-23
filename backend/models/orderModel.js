@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Product = require("./productModel");
+const datefns = require("date-fns");
 
 const orderSchema = new mongoose.Schema(
   {
@@ -7,13 +8,22 @@ const orderSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
-    status: { type: String, default: "Pending" },
+    status: {
+      type: String,
+      default: "Pending",
+      enum: ["Pending", "Processing", "Shipped", "OutForDelivery", "Delivered"],
+    },
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "User",
       required: [true, "An order must belong to a user"],
     },
     isGift: {
+      type: Boolean,
+      default: false,
+      enum: [true, false],
+    },
+    isRefunded: {
       type: Boolean,
       default: false,
       enum: [true, false],
@@ -40,6 +50,15 @@ const orderSchema = new mongoose.Schema(
       type: Boolean,
       enum: [true, false],
       default: false,
+    },
+    isPaid: {
+      type: Boolean,
+      enum: [true, false],
+      default: false,
+    },
+    expectedArrival: {
+      type: Date,
+      default: () => Date.now() + 1036800000,
     },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
@@ -74,7 +93,47 @@ orderSchema.methods.validateProducts = async function (products) {
   return 1;
 };
 
-// Calculating the total price
+// Changing the status based on time passed
+// Will change these hardcoded values later. For demo purposes only
+orderSchema.methods.updateStatus = async function (order) {
+  if (
+    datefns.getUnixTime(Date.now()) >
+    datefns.getUnixTime(order.dateOrdered) + 512000
+  ) {
+    order.status = "Delivered";
+    await order.save();
+    return order;
+  }
+
+  if (
+    datefns.getUnixTime(Date.now()) >
+    datefns.getUnixTime(order.dateOrdered) + 432000
+  ) {
+    order.status = "OutForDelivery";
+    await order.save();
+    return order;
+  }
+
+  if (
+    datefns.getUnixTime(Date.now()) >
+    datefns.getUnixTime(order.dateOrdered) + 7200
+  ) {
+    order.status = "Shipped";
+    await order.save();
+    return order;
+  }
+
+  if (
+    datefns.getUnixTime(Date.now()) >
+    datefns.getUnixTime(order.dateOrdered) + 3600
+  ) {
+    order.status = "Processing";
+    await order.save();
+    return order;
+  }
+};
+
+// Calculating the total price as a virtual field
 orderSchema.virtual("totalPrice").get(function () {
   if (this.isValidated) {
     const totalPrice = this.items.reduce((acc, cur) => {

@@ -225,6 +225,7 @@ export default function Card({
       <ImageLink to={`/product/${id}`}>
         <ImageBox>
           <Image
+            loading="lazy"
             src={`/img/${image}`}
             className={`${stock === 0 ? "sold-out" : ""}`}
           />

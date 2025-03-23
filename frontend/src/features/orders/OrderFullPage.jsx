@@ -35,18 +35,17 @@ const DateOrdered = styled.p`
 const StyledParagraph = styled.p`
   font-size: 1.6rem;
   font-weight: 300;
-  margin-bottom: 0.8rem;
+  /* margin-bottom: 0.8rem; */
 
   span {
     font-weight: 400;
   }
+`;
 
-  &:last-of-type {
-    * {
-      margin-top: 1.6rem;
-      margin-bottom: 4.8rem;
-      font-size: 2rem;
-    }
+const PriceBox = styled.div`
+  * {
+    margin-top: 3.2rem;
+    font-size: 2rem;
   }
 `;
 
@@ -55,7 +54,7 @@ const ProductImagesBox = styled.div`
   /* height: 18rem; */
   gap: 0.8rem;
   margin-bottom: 3.2rem;
-
+  margin-top: 4.8rem;
   flex-wrap: wrap;
 `;
 
@@ -125,6 +124,11 @@ const StyledDiv = styled.div`
     margin-bottom: 1.8rem;
   }
 `;
+const StyledSpan = styled.span`
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-grey-400);
+`;
 
 export default function OrderFullPage({ orderId }) {
   const { order, isLoading } = useOrder();
@@ -132,7 +136,7 @@ export default function OrderFullPage({ orderId }) {
 
   return (
     <Container>
-      <Progress status={order.status} />
+      <Progress status={order.status} dateOrdered={order.dateOrdered} />
       <Box>
         <OrderId>Order ID {orderId}</OrderId>
         <DateOrdered>
@@ -144,14 +148,11 @@ export default function OrderFullPage({ orderId }) {
         <StyledParagraph>
           For <span>{order.name}</span>
         </StyledParagraph>
-        <StyledParagraph>
-          <Price price={order.totalPrice} size="normal" />
-        </StyledParagraph>
 
         <ProductImagesBox>
           {order.items.map((item) => (
             <Link to={`/product/${item.item.id}`} key={item.item.image}>
-              <ProductImage src={`/img/${item.item.image}`} />
+              <ProductImage loading="lazy" src={`/img/${item.item.image}`} />
             </Link>
           ))}
         </ProductImagesBox>
@@ -179,7 +180,10 @@ export default function OrderFullPage({ orderId }) {
             </StyledDiv>
           ))}
         </ProductBox>
-
+        <PriceBox>
+          <Price price={order.totalPrice} size="normal" />
+          <StyledSpan> paid with card ending in 4242</StyledSpan>
+        </PriceBox>
         <div>
           <SupportText>
             Having issues? Contact our support team{" "}

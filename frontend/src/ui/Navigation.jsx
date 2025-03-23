@@ -115,16 +115,6 @@ export default function Navigation() {
             key={category.category}
           />
         ))}
-
-        <StyledLink
-          to="/products/other"
-          className={`${
-            location.pathname === "/products/other" ? "active" : ""
-          }`}
-          onClick={() => handleToggleCategory("")}
-        >
-          Other
-        </StyledLink>
       </Box>
     </Container>
   );

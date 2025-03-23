@@ -40,8 +40,10 @@ const Container = styled.div`
 const ImageBox = styled.div`
   grid-column: 1 / 3;
   grid-row: 3 / 4;
-  width: 95%;
+  width: 100%;
   height: 100%;
+
+  padding: 2.4rem;
 
   border: 1px solid var(--color-grey-800);
 

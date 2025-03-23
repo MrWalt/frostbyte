@@ -4,8 +4,8 @@ const { getAll, createOne, getOne } = require("./handlerFactory");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/AppError");
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
+
 const getOrders = getAll(Order);
-// const createOrder = createOne(Order);
 
 // THIS IS INCOMPLETE ADD WEBHOOKS LATER! USERS STILL GET A VALID ORDER EVEN IF THEY CANCEL
 const getCheckoutSession = catchAsync(async function (req, res, next) {
@@ -115,6 +115,15 @@ const createOrder = catchAsync(async function (req, res, next) {
   res.status(201).json({ status: "success", data: { order: newOrder } });
 });
 
-const getOrder = getOne(Order);
+const getOrder = catchAsync(async function (req, res, next) {
+  const order = await Order.findById(req.params.id);
+  if (!order) return next(new AppError("Could not find this order", 404));
+
+  order.updateStatus(order);
+
+  res.status(200).json({ status: "success", data: order });
+});
+
+// const getOrder = getOne(Order);
 
 module.exports = { getOrders, createOrder, getOrder, getCheckoutSession };

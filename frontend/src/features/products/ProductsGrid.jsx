@@ -57,7 +57,6 @@ const LoaderBox = styled.div`
 export default function ProductsGrid() {
   const { isLoading, products, count } = useProducts();
   const [searchParams] = useSearchParams();
-
   const currentPage = searchParams.get("page") || 1;
 
   if (isLoading)

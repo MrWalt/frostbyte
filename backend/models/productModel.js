@@ -45,7 +45,7 @@ const productSchema = new mongoose.Schema(
     ddr: String,
     dateAdded: {
       type: Date,
-      default: Date.now,
+      default: () => Date.now() + Math.random() * 10000,
     },
     discount: {
       type: Number,

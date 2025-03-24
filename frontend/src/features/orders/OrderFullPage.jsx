@@ -44,7 +44,7 @@ const StyledParagraph = styled.p`
 
 const PriceBox = styled.div`
   * {
-    margin-top: 3.2rem;
+    margin-top: 4.8rem;
     font-size: 2rem;
   }
 `;

@@ -19,7 +19,6 @@ import Legal from "./pages/Legal";
 import Product from "./pages/Product";
 import Profile from "./features/account/Profile";
 import Security from "./features/account/Security";
-import AdminDashboard from "./features/account/AdminDashboard";
 import Orders from "./features/account/Orders";
 import UserProvider from "./features/authentication/UserContext";
 import CartProvider from "./features/cart/CartContext";
@@ -30,6 +29,7 @@ import Order from "./pages/Order";
 import SignUp from "./pages/SignUp";
 import ModalProvider from "./contexts/ModalContext";
 import ThankYou from "./pages/ThankYou";
+import Users from "./features/account/Users";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -74,10 +74,7 @@ export default function App() {
                           path="/account/security"
                           element={<Security />}
                         />
-                        <Route
-                          path="/account/admin-dashboard"
-                          element={<AdminDashboard />}
-                        />
+                        <Route path="/account/users" element={<Users />} />
                       </Route>
                       <Route
                         path="checkout"

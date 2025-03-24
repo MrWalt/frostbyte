@@ -45,22 +45,12 @@ const OrderStatus = styled.span`
   bottom: 1.2rem;
   right: 1.2rem;
 
-  ${(props) =>
-    props.$status === "Shipped" &&
-    css`
-      border: 1px solid var(--color-brand-900);
-    `}
+  border: 1px solid var(--color-brand-900);
 
   ${(props) =>
     props.$status === "Delivered" &&
     css`
       background-color: var(--color-brand-900);
-    `}
-
-    ${(props) =>
-    props.$status === "Pending" &&
-    css`
-      border: 1px solid var(--color-brand-900);
     `}
 `;
 

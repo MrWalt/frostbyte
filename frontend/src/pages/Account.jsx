@@ -17,6 +17,7 @@ const Container = styled.div`
 
   background-color: var(--color-grey-transparent);
   backdrop-filter: blur(4px);
+  min-height: 64rem;
 
   display: flex;
 

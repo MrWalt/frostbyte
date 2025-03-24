@@ -2,9 +2,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import {
   HiOutlineIdentification,
+  HiOutlineRectangleStack,
   HiOutlineShieldCheck,
   HiOutlineShoppingBag,
-  HiOutlineTableCells,
+  HiOutlineUserGroup,
 } from "react-icons/hi2";
 import Button from "./Button";
 import { useLogout } from "../features/authentication/useLogout";
@@ -73,6 +74,12 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
+const StyledParagraph = styled.p`
+  margin-top: 3.2rem;
+  padding: 1.6rem 3.2rem;
+  font-weight: 300;
+`;
+
 const StyledButton = styled(Button)`
   /* border: none; */
   background-color: transparent;
@@ -105,10 +112,18 @@ export default function AccountHeader() {
           Security
         </StyledLink>
         {user.role === "admin" && (
-          <StyledLink to="admin-dashboard">
-            <HiOutlineTableCells />
-            Admin
-          </StyledLink>
+          <>
+            <StyledParagraph>Admin Tools</StyledParagraph>
+
+            <StyledLink to="users">
+              <HiOutlineUserGroup />
+              Users
+            </StyledLink>
+            <StyledLink to="orders">
+              <HiOutlineRectangleStack />
+              Orders
+            </StyledLink>
+          </>
         )}
       </div>
 

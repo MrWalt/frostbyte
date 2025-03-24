@@ -34,9 +34,18 @@ class APIFeatures {
     }
 
     if (queryObject?.search) {
-      this.query = this.query.find({
-        title: { $regex: queryObject.search, $options: "i" },
-      });
+      if (this.query.mongooseCollection.name === "products") {
+        this.query = this.query.find({
+          title: { $regex: queryObject.search, $options: "i" },
+        });
+      }
+
+      if (this.query.mongooseCollection.name === "users") {
+        this.query = this.query.find({
+          email: { $regex: queryObject.search, $options: "i" },
+        });
+      }
+
       delete queryObject.search;
     }
 
@@ -55,9 +64,8 @@ class APIFeatures {
 
     return this;
   }
-  paginate() {
+  paginate(limit) {
     const page = this.queryString.page || 1;
-    const limit = constants.PRODUCT_PAGE_SIZE;
     const skip = (page - 1) * limit;
 
     this.query = this.query.skip(skip).limit(limit);

@@ -1,4 +1,5 @@
 const APIFeatures = require("../utils/APIFeatures");
+const constants = require("../utils/constants");
 
 // READ
 function getAll(Model, selectOptions, getFilters = false) {
@@ -11,7 +12,11 @@ function getAll(Model, selectOptions, getFilters = false) {
       )
         .filter()
         .sort()
-        .paginate();
+        .paginate(
+          req.baseUrl.includes("users")
+            ? constants.USER_PAGE_SIZE
+            : constants.PRODUCT_PAGE_SIZE
+        );
 
       const documents = await features.query;
 

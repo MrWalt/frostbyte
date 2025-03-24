@@ -1,16 +1,19 @@
 const express = require("express");
-const { protect } = require("../controllers/authController");
+const { protect, restrictTo } = require("../controllers/authController");
 
 const {
   updateMe,
   getWishlist,
   updateWishlist,
   getMyOrders,
+  getUsers,
 } = require("../controllers/userController");
 
 const router = express.Router();
 
 router.use(protect);
+
+router.route("/").get(restrictTo("admin"), getUsers);
 
 router.route("/update-me").patch(updateMe);
 

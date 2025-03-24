@@ -4,6 +4,7 @@ const AppError = require("../utils/AppError");
 const catchAsync = require("../utils/catchAsync");
 const APIFeatures = require("../utils/APIFeatures");
 const constants = require("../utils/constants");
+const { getAll } = require("./handlerFactory");
 
 // Reused function for filtering the body only allowing some fields to be changed
 function filterObj(object, ...fields) {
@@ -94,4 +95,12 @@ const getMyOrders = catchAsync(async function (req, res, next) {
   res.status(200).json({ status: "success", data: orders, count });
 });
 
-module.exports = { updateMe, updateWishlist, getWishlist, getMyOrders };
+const getUsers = getAll(User);
+
+module.exports = {
+  updateMe,
+  updateWishlist,
+  getWishlist,
+  getMyOrders,
+  getUsers,
+};

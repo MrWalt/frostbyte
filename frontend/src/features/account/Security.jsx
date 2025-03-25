@@ -8,11 +8,7 @@ import { useUpdatePassword } from "../authentication/useUpdatePassword";
 import Loader from "../../ui/Loader";
 
 const Container = styled.div`
-  padding: 4.8rem;
-
   display: flex;
-
-  width: 100%;
 `;
 
 const Box = styled.div`

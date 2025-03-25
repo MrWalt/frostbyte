@@ -8,11 +8,6 @@ import Button from "../../ui/Button";
 import { useUpdateUser } from "../authentication/useUpdateUser";
 import Loader from "../../ui/Loader";
 
-const Box = styled.div`
-  width: 100%;
-  padding: 4.8rem;
-`;
-
 const StyledP = styled.p`
   font-size: 2rem;
 `;
@@ -125,7 +120,7 @@ export default function Profile() {
   }
 
   return (
-    <Box>
+    <>
       <StyledHeading $variation="secondary">Your profile</StyledHeading>
 
       <Form>
@@ -223,6 +218,6 @@ export default function Profile() {
           {isPending ? <Loader size={44} /> : "Update settings"}
         </StyledButton>
       </Form>
-    </Box>
+    </>
   );
 }

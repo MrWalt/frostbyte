@@ -4,15 +4,12 @@ import Input from "../../ui/Input";
 import Button from "../../ui/Button";
 import useUsers from "./useUsers";
 import Loader from "../../ui/Loader";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import Pagination from "../../ui/Pagination";
 import { USERS_PAGE_SIZE } from "../../utils/constants";
 
 const Container = styled.div`
-  width: 100%;
-  padding: 4.8rem;
-
   display: flex;
   flex-direction: column;
 `;
@@ -44,7 +41,7 @@ const Box = styled.div`
   height: 100%;
 `;
 
-const UserBox = styled.div`
+const UserBox = styled(Link)`
   font-size: 1.4rem;
   border: 1px solid var(--color-grey-800);
   padding: 0.8rem 2rem;
@@ -76,6 +73,11 @@ const PaginationBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const LoaderBox = styled.div`
+  height: 100%;
+  margin-top: 6.4rem;
 `;
 
 export default function Users() {
@@ -117,18 +119,22 @@ export default function Users() {
           </Count>
           <Box>
             {users.map((user) => (
-              <UserBox key={user.id}>
+              <UserBox key={user.id} to={`${user.id}`}>
                 <span>{user.email}</span>
               </UserBox>
             ))}
           </Box>
+          {count > USERS_PAGE_SIZE && (
+            <PaginationBox>
+              <Pagination pageSize={USERS_PAGE_SIZE} count={count} />
+            </PaginationBox>
+          )}
         </>
       ) : (
-        <Loader />
+        <LoaderBox>
+          <Loader />
+        </LoaderBox>
       )}
-      <PaginationBox>
-        <Pagination pageSize={USERS_PAGE_SIZE} count={count} />
-      </PaginationBox>
     </Container>
   );
 }

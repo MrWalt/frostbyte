@@ -30,6 +30,7 @@ import SignUp from "./pages/SignUp";
 import ModalProvider from "./contexts/ModalContext";
 import ThankYou from "./pages/ThankYou";
 import Users from "./features/account/Users";
+import User from "./features/account/User";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -75,6 +76,10 @@ export default function App() {
                           element={<Security />}
                         />
                         <Route path="/account/users" element={<Users />} />
+                        <Route
+                          path="/account/users/:userId"
+                          element={<User />}
+                        />
                       </Route>
                       <Route
                         path="checkout"

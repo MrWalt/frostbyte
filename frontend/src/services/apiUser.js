@@ -57,3 +57,33 @@ export async function getUsers(page, search) {
   const data = await res.json();
   return data;
 }
+
+export async function getUser(userId) {
+  const res = await fetch(`http://localhost:8000/api/v1/users/${userId}`, {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const data = await res.json();
+
+  return data;
+}
+
+export async function editUser(user) {
+  const res = await fetch(`http://localhost:8000/api/v1/users/${user.id}`, {
+    method: "POST",
+    body: JSON.stringify(user),
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const data = await res.json();
+  if (data.status === "error" || data.status === "fail")
+    throw new Error(data.message);
+  return data;
+}

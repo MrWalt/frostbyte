@@ -7,8 +7,6 @@ import Pagination from "../../ui/Pagination";
 import { ORDERS_PAGE_SIZE } from "../../utils/constants";
 
 const Box = styled.div`
-  width: 100%;
-  padding: 4.8rem;
   padding-bottom: 2.4rem;
 
   display: flex;

@@ -4,7 +4,7 @@ const AppError = require("../utils/AppError");
 const catchAsync = require("../utils/catchAsync");
 const APIFeatures = require("../utils/APIFeatures");
 const constants = require("../utils/constants");
-const { getAll } = require("./handlerFactory");
+const { getAll, getOne, updateOne } = require("./handlerFactory");
 
 // Reused function for filtering the body only allowing some fields to be changed
 function filterObj(object, ...fields) {
@@ -97,10 +97,38 @@ const getMyOrders = catchAsync(async function (req, res, next) {
 
 const getUsers = getAll(User);
 
+const getUser = getOne(User);
+
+const updateUser = catchAsync(async function (req, res, next) {
+  let user;
+
+  // This is to update the password
+  if (req.body.passwordNew || req.body.passwordConfirm) {
+    if (req.body.passwordNew !== req.body.passwordConfirm)
+      return next(new AppError("Passwords must match", 400));
+
+    user = await User.findById(req.params.id);
+    user.password = req.body.passwordNew;
+    user.passwordConfirm = req.body.passwordConfirm;
+
+    await user.save();
+    delete req.body.passwordNew;
+    delete req.body.passwordConfirm;
+  }
+
+  user = await User.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+
+  res.status(200).json({ status: "success", data: user });
+});
+
 module.exports = {
   updateMe,
   updateWishlist,
   getWishlist,
   getMyOrders,
   getUsers,
+  getUser,
+  updateUser,
 };

@@ -65,8 +65,8 @@ const statusStages = {
 const statusTime = {
   pending: 3200,
   processing: 7200,
-  outfordelivery: 432000,
-  pickup: 518400,
+  shipped: 432000,
+  outfordelivery: 518400,
 };
 
 export default function Progress({ status, dateOrdered }) {
@@ -111,19 +111,23 @@ export default function Progress({ status, dateOrdered }) {
         <ProgressContainer key={item}>
           <ProgressFill
             $progressPercent={
-              currentStage === statusStages[item.toLowerCase()]
+              currentStage === statusStages[item.toLowerCase().replace(" ", "")]
                 ? progressPercentage
-                : currentStage > statusStages[item.toLowerCase()]
+                : currentStage >
+                  statusStages[item.toLowerCase().replace(" ", "")]
                 ? 100
                 : 0
             }
             className={`${
-              currentStage > statusStages[item.toLowerCase()] ||
+              currentStage >
+                statusStages[item.toLowerCase().replace(" ", "")] ||
               currentStage === 4
                 ? "completed"
                 : ""
             }${
-              currentStage === statusStages[item.toLowerCase()] ? "active" : ""
+              currentStage === statusStages[item.toLowerCase().replace(" ", "")]
+                ? "active"
+                : ""
             }`}
           ></ProgressFill>
         </ProgressContainer>

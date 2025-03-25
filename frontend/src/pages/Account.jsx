@@ -24,12 +24,19 @@ const Container = styled.div`
   padding: 0.4rem;
 `;
 
+const Box = styled.div`
+  padding: 4.8rem;
+  width: 100%;
+`;
+
 export default function Account() {
   return (
     <StyledSection>
       <Container>
         <AccountHeader />
-        <Outlet />
+        <Box>
+          <Outlet />
+        </Box>
       </Container>
     </StyledSection>
   );

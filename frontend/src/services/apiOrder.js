@@ -66,3 +66,17 @@ export async function getCheckoutSession(id) {
 
   return data;
 }
+
+export async function refundOrder(id) {
+  const res = await fetch(`http://localhost:8000/api/v1/orders/${id}`, {
+    method: "POST",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const data = await res.json();
+
+  return data;
+}

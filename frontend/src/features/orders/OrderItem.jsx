@@ -52,6 +52,13 @@ const OrderStatus = styled.span`
     css`
       background-color: var(--color-brand-900);
     `}
+
+  ${(props) =>
+    props.$status === "Refunded" &&
+    css`
+      color: var(--color-grey-400);
+      border: 1px solid var(--color-grey-700);
+    `}
 `;
 
 const Item = styled.p`

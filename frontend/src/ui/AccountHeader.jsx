@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import {
   HiOutlineIdentification,
-  HiOutlineRectangleStack,
   HiOutlineShieldCheck,
   HiOutlineShoppingBag,
   HiOutlineUserGroup,
@@ -118,10 +117,6 @@ export default function AccountHeader() {
             <StyledLink to="users">
               <HiOutlineUserGroup />
               Users
-            </StyledLink>
-            <StyledLink to="orders">
-              <HiOutlineRectangleStack />
-              Orders
             </StyledLink>
           </>
         )}

@@ -48,6 +48,10 @@ const UserBox = styled(Link)`
 
   cursor: pointer;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   transition: var(--animation-fast);
 
   &:hover {
@@ -78,6 +82,13 @@ const PaginationBox = styled.div`
 const LoaderBox = styled.div`
   height: 100%;
   margin-top: 6.4rem;
+`;
+
+const Role = styled.span`
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--color-grey-400);
 `;
 
 export default function Users() {
@@ -121,6 +132,7 @@ export default function Users() {
             {users.map((user) => (
               <UserBox key={user.id} to={`${user.id}`}>
                 <span>{user.email}</span>
+                <Role>{user.role}</Role>
               </UserBox>
             ))}
           </Box>

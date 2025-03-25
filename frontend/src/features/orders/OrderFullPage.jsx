@@ -5,6 +5,9 @@ import Loader from "../../ui/Loader";
 import Price from "../../ui/Price";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
+import Button from "../../ui/Button";
+import { useEffect, useState } from "react";
+import useRefundOrder from "./useRefundOrder";
 
 const Container = styled.div`
   display: flex;
@@ -130,13 +133,107 @@ const StyledSpan = styled.span`
   color: var(--color-grey-400);
 `;
 
+const RefundBox = styled.div`
+  border: 1px solid var(--color-grey-800);
+  /* padding: 1.2rem 2.4rem; */
+  padding-left: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const StyledButton = styled(Button)`
+  border: none;
+  border-left: 1px solid var(--color-grey-800);
+  padding: 1.2rem 2.4rem;
+
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--color-grey-400);
+  }
+`;
+
+const CheckBox = styled.div`
+  width: 1.8rem;
+  height: 1.8rem;
+
+  border: 2px solid var(--color-brand-800);
+  cursor: pointer;
+`;
+
+const CheckBoxChecked = styled.div`
+  width: 1.8rem;
+  height: 1.8rem;
+
+  background-color: var(--color-brand-500);
+  border: 2px solid var(--color-brand-800);
+`;
+
+const InputBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1.2rem;
+
+  label {
+    cursor: pointer;
+  }
+`;
+
+const RefundBanner = styled.div`
+  background-color: var(--color-brand-800);
+  border: 1px solid var(--color-brand-500);
+  padding: 2.4rem;
+
+  font-weight: 300;
+  color: var(--color-brand-100);
+
+  p:first-of-type {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+`;
+
 export default function OrderFullPage({ orderId }) {
   const { order, isLoading } = useOrder();
+  const [isRefunded, setIsRefunded] = useState(order?.isRefunded || false);
+  const { refundOrder, isPending } = useRefundOrder();
+
+  useEffect(
+    function () {
+      setIsRefunded(order?.isRefunded || false);
+    },
+    [order]
+  );
+
   if (isLoading) return <Loader size={60} />;
+
+  function handleRefund() {
+    refundOrder(order.id);
+  }
 
   return (
     <Container>
-      <Progress status={order.status} dateOrdered={order.dateOrdered} />
+      {order.isRefunded ? (
+        <RefundBanner>
+          <p>This order was refunded</p>
+          <p>
+            Please allow up to 7 business days for the balance to be refunded
+          </p>
+        </RefundBanner>
+      ) : (
+        <Progress status={order.status} dateOrdered={order.dateOrdered} />
+      )}
+
       <Box>
         <OrderId>Order ID {orderId}</OrderId>
         <DateOrdered>
@@ -191,6 +288,27 @@ export default function OrderFullPage({ orderId }) {
           </SupportText>
         </div>
       </Box>
+      {!order.isRefunded && (
+        <RefundBox>
+          <InputBox>
+            {!isRefunded ? (
+              <CheckBox type="checkbox" onClick={() => setIsRefunded(true)} />
+            ) : (
+              <CheckBoxChecked type="checkbox" />
+            )}
+            <label htmlFor="refund" onClick={() => setIsRefunded(true)}>
+              This order was refunded
+            </label>
+          </InputBox>
+          <StyledButton
+            $variation="medium"
+            onClick={handleRefund}
+            disabled={!isRefunded || isPending}
+          >
+            Save
+          </StyledButton>
+        </RefundBox>
+      )}
     </Container>
   );
 }

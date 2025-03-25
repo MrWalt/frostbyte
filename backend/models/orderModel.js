@@ -11,7 +11,14 @@ const orderSchema = new mongoose.Schema(
     status: {
       type: String,
       default: "Pending",
-      enum: ["Pending", "Processing", "Shipped", "OutForDelivery", "Delivered"],
+      enum: [
+        "Pending",
+        "Processing",
+        "Shipped",
+        "OutForDelivery",
+        "Delivered",
+        "Refunded",
+      ],
     },
     user: {
       type: mongoose.Schema.ObjectId,
@@ -96,6 +103,8 @@ orderSchema.methods.validateProducts = async function (products) {
 // Changing the status based on time passed
 // Will change these hardcoded values later. For demo purposes only
 orderSchema.methods.updateStatus = async function (order) {
+  if (order.status === "Refunded") return order;
+
   if (
     datefns.getUnixTime(Date.now()) >
     datefns.getUnixTime(order.dateOrdered) + 512000

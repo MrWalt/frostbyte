@@ -126,4 +126,19 @@ const getOrder = catchAsync(async function (req, res, next) {
 
 // const getOrder = getOne(Order);
 
-module.exports = { getOrders, createOrder, getOrder, getCheckoutSession };
+const refundOrder = catchAsync(async function (req, res, next) {
+  const order = await Order.findByIdAndUpdate(req.params.id, {
+    isRefunded: true,
+    status: "Refunded",
+  });
+
+  res.status(200).json({ status: "success", data: order });
+});
+
+module.exports = {
+  getOrders,
+  createOrder,
+  getOrder,
+  getCheckoutSession,
+  refundOrder,
+};

@@ -123,6 +123,19 @@ const updateUser = catchAsync(async function (req, res, next) {
   res.status(200).json({ status: "success", data: user });
 });
 
+const getUserOrders = catchAsync(async function (req, res, next) {
+  const orders = await Order.find({ user: req.params.id })
+    .sort("-dateOrdered")
+    .skip((req.query.page - 1) * constants.USER_PAGE_SIZE)
+    .limit(constants.USER_PAGE_SIZE);
+
+  const count = await Order.find({
+    user: req.params.id,
+  }).countDocuments();
+
+  res.status(200).json({ status: "success", data: { orders, count } });
+});
+
 module.exports = {
   updateMe,
   updateWishlist,
@@ -131,4 +144,5 @@ module.exports = {
   getUsers,
   getUser,
   updateUser,
+  getUserOrders,
 };

@@ -7,6 +7,12 @@ import Input from "../../ui/Input";
 import { useEffect } from "react";
 import Button from "../../ui/Button";
 import useEditUser from "./useEditUser";
+import useUserOrders from "./useUserOrders";
+import { format } from "date-fns";
+import Price from "../../ui/Price";
+import { Link } from "react-router-dom";
+import { USERS_PAGE_SIZE } from "../../utils/constants";
+import Pagination from "../../ui/Pagination";
 
 const LoadingBox = styled.div`
   height: 100%;
@@ -18,7 +24,7 @@ const StyledHeading = styled(Heading)`
 `;
 
 const Form = styled.form`
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 `;
 
 const DualInput = styled.div`
@@ -77,10 +83,49 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const OrdersBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1.8rem;
+`;
+
+const OrderItem = styled(Link)`
+  font-weight: 300;
+
+  padding: 0.8rem 2.4rem;
+  border: 1px solid var(--color-grey-800);
+
+  display: flex;
+  justify-content: space-between;
+
+  transition: var(--animation-fast);
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-grey-800);
+  }
+`;
+
+const StyledP = styled.p`
+  text-align: center;
+  font-weight: 300;
+`;
+
+const PaginationBox = styled.div`
+  padding: 2.4rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export default function User() {
   const { user, isLoading: isLoadingUser } = useUser();
   const { register, formState, reset, handleSubmit } = useForm();
   const { editUser, isPending } = useEditUser();
+  const { orders, count, isLoading: isLoadingOrders } = useUserOrders();
 
   const { errors } = formState;
 
@@ -165,6 +210,32 @@ export default function User() {
             </StyledButton>
           </Form>
           <HeadingThin $variation="tertiary">Orders</HeadingThin>
+          <OrdersBox>
+            {!isLoadingOrders ? (
+              orders.length ? (
+                orders.map((order) => (
+                  <OrderItem to={`/order/${order.id}`} key={order.id}>
+                    <span>
+                      <Price price={order.totalPrice} size="normal" />
+                    </span>
+                    <span>
+                      <span>{order.status}</span> &mdash;{" "}
+                      <span>{format(order.dateOrdered, "dd/MM/yyyy")}</span>
+                    </span>
+                  </OrderItem>
+                ))
+              ) : (
+                <StyledP>User has not made any orders</StyledP>
+              )
+            ) : (
+              <Loader />
+            )}
+          </OrdersBox>
+          {isLoadingOrders || count < USERS_PAGE_SIZE ? null : (
+            <PaginationBox>
+              <Pagination count={count} pageSize={USERS_PAGE_SIZE} />
+            </PaginationBox>
+          )}
         </>
       )}
     </>

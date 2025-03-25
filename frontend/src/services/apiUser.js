@@ -87,3 +87,21 @@ export async function editUser(user) {
     throw new Error(data.message);
   return data;
 }
+
+export async function getUserOrders(userId, page = 1) {
+  const res = await fetch(
+    `http://localhost:8000/api/v1/orders/user/${userId}?page=${page}`,
+    {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const data = await res.json();
+  if (data.status === "error" || data.status === "fail")
+    throw new Error(data.message);
+  return data;
+}

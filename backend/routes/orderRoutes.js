@@ -5,7 +5,10 @@ const {
   getOrder,
   getCheckoutSession,
 } = require("../controllers/orderController");
-const { protect } = require("../controllers/authController");
+
+const { getUserOrders } = require("../controllers/userController");
+
+const { protect, restrictTo } = require("../controllers/authController");
 
 const router = express.Router();
 
@@ -14,5 +17,7 @@ router.use(protect);
 router.route("/").get(getOrders).post(createOrder);
 router.route("/:id").get(getOrder);
 router.route("/checkout-session/:id").get(getCheckoutSession);
+
+router.route("/user/:id").get(restrictTo("admin"), getUserOrders);
 
 module.exports = router;

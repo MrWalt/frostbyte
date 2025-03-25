@@ -6,6 +6,10 @@ const {
   updateOne,
   deleteOne,
 } = require("./handlerFactory");
+const multer = require("multer");
+const AppError = require("../utils/AppError");
+const catchAsync = require("../utils/catchAsync");
+const sharp = require("sharp");
 
 // READ
 const getAllProducts = getAll(
@@ -17,13 +21,66 @@ const getAllProducts = getAll(
 const getProduct = getOne(Product);
 
 // CREATE
-const createProduct = createOne(Product);
+const createProduct = catchAsync(async function (req, res, next) {
+  const newProduct = await Product.create(req.body);
+
+  if (req.file) {
+    newProduct.image = req.file.filename;
+    await newProduct.save();
+  }
+
+  res.status(201).json({ status: "success", data: { newProduct } });
+});
 
 // UPDATE
-const updateProduct = updateOne(Product);
+const updateProduct = catchAsync(async function (req, res, next) {
+  if (req.file) {
+    req.body.image = req.file.filename;
+  }
+
+  const updatedProduct = await Product.findByIdAndUpdate(
+    req.params.id,
+    req.body
+  );
+
+  res.status(201).json({ status: "success", data: { updatedProduct } });
+});
 
 // DELETE
 const deleteProduct = deleteOne(Product);
+
+// This is for image uploads
+const multerStorage = multer.memoryStorage();
+
+const multerFilter = function (req, file, callBack) {
+  if (file.mimetype.startsWith("image")) callBack(null, true);
+  else callBack(new AppError("Not an image. Please only upload images", 400));
+};
+
+const upload = multer({
+  storage: multerStorage,
+  fileFilter: multerFilter,
+});
+
+const uploadImage = upload.single("image");
+
+const resizeImage = catchAsync(async function (req, res, next) {
+  if (!req.file) next();
+
+  req.file.filename = `product-${
+    Date.now() * (Math.random() * 10 + 1).toFixed(0)
+  }.webp`;
+
+  await sharp(req.file.buffer)
+    .resize(900, 900, {
+      fit: "contain",
+      background: { r: 255, g: 255, b: 255, alpha: 0 },
+    })
+    .webp({ quality: 80 })
+    .toFile(`public/img/${req.file.filename}`);
+
+  next();
+});
 
 module.exports = {
   getAllProducts,
@@ -31,4 +88,6 @@ module.exports = {
   getProduct,
   updateProduct,
   deleteProduct,
+  uploadImage,
+  resizeImage,
 };

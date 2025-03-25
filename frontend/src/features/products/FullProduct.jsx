@@ -207,7 +207,7 @@ export default function FullProduct() {
           Back
         </FlexButton>
         <ImageBox>
-          <Image src={`/img/${image}`} />
+          <Image src={`http://localhost:8000/public/img/${image}`} />
         </ImageBox>
 
         <ProductTitle $variation="secondary">{title}</ProductTitle>

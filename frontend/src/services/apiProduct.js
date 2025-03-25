@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export async function getProducts(page, category, filter, sortBy) {
   let filterQuery = Object.keys(filter)
     .map((item) => {
@@ -8,72 +10,57 @@ export async function getProducts(page, category, filter, sortBy) {
 
   filterQuery = `&` + filterQuery.join("&");
 
+  const url = `http://localhost:8000/api/v1/products?page=${page}${
+    category ? `&category=${category}` : ""
+  }${sortBy ? `&sort=${sortBy}` : ""}${filterQuery !== "&" ? filterQuery : ""}`;
+
   // Will change this horrid sight later
-  const res = await fetch(
-    `http://localhost:8000/api/v1/products?page=${page}${
-      category ? `&category=${category}` : ""
-    }${sortBy ? `&sort=${sortBy}` : ""}${
-      filterQuery !== "&" ? filterQuery : ""
-    }`
-  );
+  const res = await axios({
+    method: "GET",
+    url,
+  });
 
-  const data = await res.json();
-
-  return data;
+  return res.data;
 }
 
 export async function getProduct(id) {
   if (!id) return null;
 
-  const res = await fetch(`http://localhost:8000/api/v1/products/${id}`);
-
-  const { data } = await res.json();
-
-  return data;
-}
-
-export async function createProduct(newProduct) {
-  const res = await fetch(`http://localhost:8000/api/v1/products`, {
-    method: "POST",
-    body: JSON.stringify(newProduct),
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
+  const res = await axios({
+    method: "GET",
+    url: `http://localhost:8000/api/v1/products/${id}`,
   });
 
-  const { data } = await res.json();
-  return data;
+  return res.data;
 }
 
-export async function editProduct(updatedProduct) {
-  const res = await fetch(
-    `http://localhost:8000/api/v1/products/${updatedProduct.id}`,
-    {
-      method: "PATCH",
-      body: JSON.stringify(updatedProduct),
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
+export async function createProduct(data) {
+  const res = await axios({
+    url: "http://localhost:8000/api/v1/products",
+    method: "POST",
+    data,
+    withCredentials: true,
+  });
 
-  const { data } = await res.json();
+  return res.data;
+}
 
-  if (data.status === "error" || data.status === "fail")
-    throw new Error(data.message);
+export async function editProduct(data) {
+  const res = await axios({
+    url: `http://localhost:8000/api/v1/products/${data.get("id")}`,
+    method: "PATCH",
+    data,
+    withCredentials: true,
+  });
 
-  return data;
+  return res.data;
 }
 
 export async function deleteProduct(id) {
-  await fetch(`http://localhost:8000/api/v1/products/${id}`, {
+  await axios({
+    url: `http://localhost:8000/api/v1/products/${id}`,
     method: "DELETE",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    withCredentials: true,
   });
 
   return 1;

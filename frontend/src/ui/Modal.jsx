@@ -114,24 +114,26 @@ function AddProduct() {
     specifications = specifications.map((item) =>
       item.at(0) === " " ? item.slice(1) : item
     );
-    const structuredData = {
-      title: data.title,
-      manufacturer: data.manufacturer,
-      description: data.description,
-      specifications,
-      stock: Number(data.stock),
-      category: data.category,
-      warranty: data.warranty,
-      price: Number(data.price.replace(",", ".")),
-      discount: Number(data.discount),
-      speed: data.speed,
-      capacity: data.capacity,
-      ddr: data.ddr,
-      type: data.type,
-      socket: data.socket,
-    };
 
-    createProduct(structuredData);
+    const formData = new FormData();
+
+    specifications.forEach((spec) => formData.append("specifications[]", spec));
+    formData.append("title", data.title);
+    formData.append("manufacturer", data.manufacturer);
+    formData.append("description", data.description);
+    formData.append("stock", Number(data.stock));
+    formData.append("category", data.category);
+    formData.append("warranty", data.warranty);
+    formData.append("price", Number(data.price.replace(",", ".")));
+    formData.append("discount", Number(data.discount));
+    formData.append("speed", data.speed);
+    formData.append("capacity", data.capacity);
+    formData.append("ddr", data.ddr);
+    formData.append("type", data.type);
+    formData.append("socket", data.socket);
+    formData.append("image", data.image[0]);
+
+    createProduct(formData);
   }
 
   return (
@@ -159,24 +161,26 @@ function EditProduct() {
       item.at(0) === " " ? item.slice(1) : item
     );
 
-    const structuredData = {
-      title: data.title,
-      manufacturer: data.manufacturer,
-      description: data.description,
-      specifications,
-      stock: Number(data.stock),
-      category: data.category,
-      warranty: data.warranty,
-      price: Number(String(data.price).replace(",", ".")),
-      discount: Number(data.discount),
-      socket: data.socket,
-      type: data.type,
-      speed: data.speed,
-      ddr: data.ddr,
-      id: data._id,
-    };
+    const formData = new FormData();
 
-    editProduct(structuredData);
+    specifications.forEach((spec) => formData.append("specifications[]", spec));
+    formData.append("title", data.title);
+    formData.append("manufacturer", data.manufacturer);
+    formData.append("description", data.description);
+    formData.append("stock", Number(data.stock));
+    formData.append("category", data.category);
+    formData.append("warranty", data.warranty);
+    formData.append("price", Number(data.price.replace(",", ".")));
+    formData.append("discount", Number(data.discount));
+    formData.append("speed", data.speed);
+    formData.append("capacity", data.capacity);
+    formData.append("ddr", data.ddr);
+    formData.append("type", data.type);
+    formData.append("socket", data.socket);
+    formData.append("image", data.image[0]);
+    formData.append("id", data._id);
+
+    editProduct(formData);
   }
 
   if (isLoading) return;

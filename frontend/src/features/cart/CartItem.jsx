@@ -157,7 +157,7 @@ export default function CartItem({
         <HiXMark />
       </DeleteButton>
       <Link to={`/product/${id}`}>
-        <Image src={`/img/${image}`} />
+        <Image src={`http://localhost:8000/public/img/${image}`} />
       </Link>
       <InfoBox>
         <ItemName>{title}</ItemName>

@@ -14,7 +14,7 @@ export function useUpdatePassword() {
       toast.success("Succesfully updated password");
     },
     onError(err) {
-      toast.error(err.message);
+      toast.error(err.response.data.message);
     },
   });
 

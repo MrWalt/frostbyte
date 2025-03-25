@@ -1,72 +1,52 @@
-export async function login({ email, password }) {
-  const res = await fetch("http://localhost:8000/api/v1/auth/login", {
+import axios from "axios";
+
+export async function login(data) {
+  const res = await axios({
     method: "POST",
-    body: JSON.stringify({ email, password }),
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    url: "http://localhost:8000/api/v1/auth/login",
+    data,
+    withCredentials: true,
   });
 
-  const data = await res.json();
-
-  if (data.status === "error" || data.status === "fail")
-    throw new Error(data.message);
-
-  return data;
+  return res.data;
 }
 
-export async function signup({ email, password, passwordConfirm }) {
-  const res = await fetch("http://localhost:8000/api/v1/auth/signup", {
+export async function signup(data) {
+  const res = await axios({
+    url: "http://localhost:8000/api/v1/auth/signup",
     method: "POST",
-    body: JSON.stringify({ email, password, passwordConfirm }),
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    data,
+    withCredentials: true,
   });
 
-  const data = await res.json();
-
-  if (data.status === "error" && data.message.startsWith("E11000"))
-    throw new Error("Email already exists");
-
-  if (data.status === "error") throw new Error("Passwords must match");
-
-  return data;
+  return res.data;
 }
 
 export async function logout() {
-  await fetch("http://localhost:8000/api/v1/auth/logout", {
+  await axios({
+    url: "http://localhost:8000/api/v1/auth/logout",
     method: "GET",
-    credentials: "include",
+    withCredentials: true,
   });
 }
 
 export async function isLoggedin() {
-  const res = await fetch("http://localhost:8000/api/v1/auth/is-logged-in", {
+  const res = await axios({
+    url: "http://localhost:8000/api/v1/auth/is-logged-in",
     method: "GET",
-    credentials: "include",
+    withCredentials: true,
   });
 
-  const data = await res.json();
-  return data;
+  return res.data;
 }
 
-export async function updatePassword(passwordData) {
-  const res = await fetch("http://localhost:8000/api/v1/auth/update-password", {
+export async function updatePassword(data) {
+  const res = await axios({
+    url: "http://localhost:8000/api/v1/auth/update-password",
     method: "POST",
-    body: JSON.stringify(passwordData),
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    withCredentials: true,
+    data,
   });
 
-  const data = await res.json();
-
-  if (data.status === "fail") throw new Error(data.message);
-  if (data.status === "error") throw new Error("Passwords must match");
-
-  return data;
+  return res.data;
 }

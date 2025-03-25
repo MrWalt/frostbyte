@@ -114,7 +114,7 @@ export default function WishListItem({
         <HiXMark className={`${isPending ? "spin" : ""}`} />
       </DeleteButton>
       <Link to={`/product/${id}`}>
-        <Image src={`/img/${image}`} />
+        <Image src={`http://localhost:8000/public/img/${image}`} />
       </Link>
 
       <InfoBox>

@@ -226,7 +226,7 @@ export default function Card({
         <ImageBox>
           <Image
             loading="lazy"
-            src={`/img/${image}`}
+            src={`http://localhost:8000/public/img/${image}`}
             className={`${stock === 0 ? "sold-out" : ""}`}
           />
         </ImageBox>

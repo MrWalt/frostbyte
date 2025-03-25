@@ -17,7 +17,7 @@ export function useSignup() {
       navigate("/account/profile");
     },
     onError: (err) => {
-      toast.error(err.message);
+      toast.error(err.response.data.message);
     },
   });
 

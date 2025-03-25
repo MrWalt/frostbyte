@@ -15,7 +15,7 @@ export function useUpdateUser() {
       toast.success(`Successfully updated data`);
     },
     onError: (err) => {
-      toast.error(err.message);
+      toast.error(err.response.data.message);
     },
   });
 

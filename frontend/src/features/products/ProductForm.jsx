@@ -43,7 +43,6 @@ const Box = styled.div`
   display: flex;
   gap: 4.8rem;
   padding: 2.5rem 2.4rem 2.4rem 2.4rem;
-
   margin-bottom: 1.8rem;
 
   font-size: 1.4rem;
@@ -63,7 +62,7 @@ const StyledLabel = styled.label`
 `;
 
 const StyledDiv = styled.div`
-  flex: 1 1 0%;
+  flex: 1 1 100%;
   display: flex;
   flex-direction: column;
 `;
@@ -98,6 +97,10 @@ const StyledTextArea = styled.textarea`
 `;
 
 const ImageInput = styled.input`
+  width: 30rem;
+  overflow: hidden;
+  white-space: nowrap;
+
   &::file-selector-button {
     border-radius: 0;
     outline: none;
@@ -108,7 +111,6 @@ const ImageInput = styled.input`
 
     font-family: inherit;
     font-weight: 400;
-
     text-transform: uppercase;
     padding: 0.8rem 2rem;
 
@@ -133,6 +135,7 @@ export default function ProductForm({
   const { register, formState, handleSubmit, reset } = useForm({
     defaultValues: {
       ...defaultValues,
+      price: String(defaultValues?.price),
       specifications: defaultValues?.specifications?.join(","),
     },
   });
@@ -141,6 +144,7 @@ export default function ProductForm({
     function () {
       reset({
         ...defaultValues,
+        price: String(defaultValues?.price),
         specifications: defaultValues?.specifications?.join(","),
       });
     },

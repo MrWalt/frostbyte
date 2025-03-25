@@ -117,7 +117,7 @@ export default function SummaryItem({
   return (
     <Box>
       <ImageLink to={`/product/${id}`}>
-        <Image src={`/img/${image}`} />
+        <Image src={`http://localhost:8000/public/img/${image}`} />
       </ImageLink>
       <ProductInfoBox>
         <Title>{title}</Title>

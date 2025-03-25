@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Button from "../../ui/Button";
 import { useEffect, useState } from "react";
 import useRefundOrder from "./useRefundOrder";
+import { useUser } from "../authentication/UserContext";
 
 const Container = styled.div`
   display: flex;
@@ -204,6 +205,7 @@ const RefundBanner = styled.div`
 `;
 
 export default function OrderFullPage({ orderId }) {
+  const { user } = useUser();
   const { order, isLoading } = useOrder();
   const [isRefunded, setIsRefunded] = useState(order?.isRefunded || false);
   const { refundOrder, isPending } = useRefundOrder();
@@ -288,7 +290,7 @@ export default function OrderFullPage({ orderId }) {
           </SupportText>
         </div>
       </Box>
-      {!order.isRefunded && (
+      {!order.isRefunded && user.role === "admin" && (
         <RefundBox>
           <InputBox>
             {!isRefunded ? (

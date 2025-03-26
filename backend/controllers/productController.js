@@ -24,7 +24,7 @@ const getProduct = getOne(Product);
 const createProduct = catchAsync(async function (req, res, next) {
   const newProduct = await Product.create(req.body);
 
-  if (req.file) {
+  if (req.file !== undefined) {
     newProduct.image = req.file.filename;
     await newProduct.save();
   }
@@ -34,9 +34,10 @@ const createProduct = catchAsync(async function (req, res, next) {
 
 // UPDATE
 const updateProduct = catchAsync(async function (req, res, next) {
-  if (req.file) {
+  console.log(req.body);
+  if (req.file !== undefined) {
     req.body.image = req.file.filename;
-  }
+  } else delete req.body.image;
 
   const updatedProduct = await Product.findByIdAndUpdate(
     req.params.id,
@@ -65,7 +66,7 @@ const upload = multer({
 const uploadImage = upload.single("image");
 
 const resizeImage = catchAsync(async function (req, res, next) {
-  if (!req.file) next();
+  if (req.file === undefined) return next();
 
   req.file.filename = `product-${
     Date.now() * (Math.random() * 10 + 1).toFixed(0)

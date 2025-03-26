@@ -251,7 +251,10 @@ export default function OrderFullPage({ orderId }) {
         <ProductImagesBox>
           {order.items.map((item) => (
             <Link to={`/product/${item.item.id}`} key={item.item.image}>
-              <ProductImage loading="lazy" src={`/img/${item.item.image}`} />
+              <ProductImage
+                loading="lazy"
+                src={`http://localhost:8000/public/img/${item.item.image}`}
+              />
             </Link>
           ))}
         </ProductImagesBox>

@@ -135,7 +135,6 @@ export default function ProductForm({
   const { register, formState, handleSubmit, reset } = useForm({
     defaultValues: {
       ...defaultValues,
-      price: String(defaultValues?.price),
       specifications: defaultValues?.specifications?.join(","),
     },
   });
@@ -144,7 +143,6 @@ export default function ProductForm({
     function () {
       reset({
         ...defaultValues,
-        price: String(defaultValues?.price),
         specifications: defaultValues?.specifications?.join(","),
       });
     },

@@ -114,7 +114,7 @@ function AddProduct() {
     specifications = specifications.map((item) =>
       item.at(0) === " " ? item.slice(1) : item
     );
-
+    const price = String(data.price).replace(",", ".");
     const formData = new FormData();
 
     specifications.forEach((spec) => formData.append("specifications[]", spec));
@@ -124,14 +124,15 @@ function AddProduct() {
     formData.append("stock", Number(data.stock));
     formData.append("category", data.category);
     formData.append("warranty", data.warranty);
-    formData.append("price", Number(data.price.replace(",", ".")));
+    formData.append("price", Number(price));
     formData.append("discount", Number(data.discount));
-    formData.append("speed", data.speed);
-    formData.append("capacity", data.capacity);
-    formData.append("ddr", data.ddr);
-    formData.append("type", data.type);
-    formData.append("socket", data.socket);
+    data.speed !== "" && formData.append("speed", data.speed);
+    data.capacity !== "" && formData.append("capacity", data.capacity);
+    data.ddr !== "" && formData.append("ddr", data.ddr);
+    data.type !== "" && formData.append("type", data.type);
+    data.socket !== "" && formData.append("socket", data.socket);
     formData.append("image", data.image[0]);
+    formData.append("id", data._id);
 
     createProduct(formData);
   }
@@ -161,6 +162,8 @@ function EditProduct() {
       item.at(0) === " " ? item.slice(1) : item
     );
 
+    const price = String(data.price).replace(",", ".");
+
     const formData = new FormData();
 
     specifications.forEach((spec) => formData.append("specifications[]", spec));
@@ -170,13 +173,13 @@ function EditProduct() {
     formData.append("stock", Number(data.stock));
     formData.append("category", data.category);
     formData.append("warranty", data.warranty);
-    formData.append("price", Number(data.price.replace(",", ".")));
+    formData.append("price", Number(price));
     formData.append("discount", Number(data.discount));
-    formData.append("speed", data.speed);
-    formData.append("capacity", data.capacity);
-    formData.append("ddr", data.ddr);
-    formData.append("type", data.type);
-    formData.append("socket", data.socket);
+    data.speed !== "" && formData.append("speed", data.speed);
+    data.capacity !== "" && formData.append("capacity", data.capacity);
+    data.ddr !== "" && formData.append("ddr", data.ddr);
+    data.type !== "" && formData.append("type", data.type);
+    data.socket !== "" && formData.append("socket", data.socket);
     formData.append("image", data.image[0]);
     formData.append("id", data._id);
 

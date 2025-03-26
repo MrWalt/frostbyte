@@ -5,7 +5,6 @@ const Section = styled.section`
   min-height: calc(100vh - 8rem - 10rem);
 
   width: 100%;
-  height: 100%;
 `;
 
 export default Section;

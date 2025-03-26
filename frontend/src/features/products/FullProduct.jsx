@@ -10,18 +10,7 @@ import Price from "../../ui/Price";
 import { useCart } from "../cart/CartContext";
 import { useModal } from "../../contexts/ModalContext";
 import { useUser } from "../authentication/UserContext";
-
-const Background = styled.div`
-  width: 100%;
-  height: 100%;
-
-  padding-top: 4.8rem;
-  padding-bottom: 6.4rem;
-
-  background-color: var(--color-grey-transparent);
-  backdrop-filter: blur(2px);
-`;
-
+import Background from "../../ui/Background";
 const Container = styled.div`
   max-width: 110rem;
   margin: 0 auto;
@@ -172,6 +161,22 @@ const DeleteButton = styled(Button)`
   }
 `;
 
+const UnavailableHeading = styled(Heading)`
+  font-weight: 300;
+  border-bottom: 1px solid var(--color-grey-800);
+  padding: 0.4rem 0.8rem;
+`;
+
+const CenterDiv = styled.div`
+  margin: 0 auto;
+  width: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.4rem;
+`;
+
 export default function FullProduct() {
   const { user } = useUser();
   const { product, isLoading } = useProduct();
@@ -181,11 +186,29 @@ export default function FullProduct() {
 
   if (isLoading)
     return (
-      <LoaderContainer>
-        <Loader size={80} />
-      </LoaderContainer>
+      <Background>
+        <LoaderContainer>
+          <Loader size={80} />
+        </LoaderContainer>
+      </Background>
     );
 
+  if (!product)
+    return (
+      <Background>
+        <CenterDiv>
+          <UnavailableHeading $variation="secondary">
+            This product is unavailable
+          </UnavailableHeading>
+          <FlexButton $variation="medium" onClick={moveBack}>
+            <HiArrowLongLeft />
+            Back
+          </FlexButton>
+        </CenterDiv>
+      </Background>
+    );
+
+  console.log(product);
   const {
     title,
     price,
